@@ -4,11 +4,13 @@
 
 from tkinter import *
 # from tkinter import ttk
+from tkinter import messagebox
 import tkinter.messagebox
 import os
+import subprocess
 import time
 import datetime
-import pymysql
+# import pymysql
 
 
 class ScrollCanvas(Frame):
@@ -39,7 +41,6 @@ class MenuBar(Frame):
             font=("Times 14"), bg='grey30', relief=GROOVE)
         new_text=StringVar()
 
-
         fileMenu.pack(side=LEFT, padx=3)
         # Partie déroulante du menu 1st
         me1 = Menu(fileMenu, tearoff=0)
@@ -47,10 +48,6 @@ class MenuBar(Frame):
             background='black',activebackground='aquamarine',
             foreground='aquamarine', activeforeground='black',
             command=boss.upDateAll)
-        me1.add_command(label="Residents", underline=0, font=("Times 14 bold"),
-            background='black', activebackground='cyan',
-            foreground='aquamarine', activeforeground='black',
-            command=boss.showPatients)
         me1.add_command(label='Quit', font=("Times 14 bold"),
             background='black', activebackground='red',
             foreground='red', activeforeground='white',
@@ -58,14 +55,6 @@ class MenuBar(Frame):
         # Integration of 1st menu
         fileMenu.configure(activeforeground='black', activebackground='cyan',
             menu=me1)
-
-        # For label below (in me2.add_command)
-        try:
-            with open('./newpatient/entryfile.txt', 'r') as namefile:
-                line1=namefile.readline()
-                new_text=line1
-        except FileNotFoundError as fileout:
-            print("No file entryfile.txt exist", fileout)
 
 # Main app
 class Application(Frame):
@@ -86,39 +75,128 @@ class Application(Frame):
         #self.can.pack(side=LEFT, fill=BOTH, expand=YES)
         self.can.create_window((4,4), window=self.frame, anchor=NW, tags="self.frame")
         # Insertion of picture
-        self.photo = PhotoImage(file='./syno_gif/fondcolorbg.png')
-        self.item = self.can.create_image(625, 400, image=self.photo)
+        #self.photo = PhotoImage(file='./syno_gif/fondcolorbg.png')
+        #self.item = self.can.create_image(625, 400, image=self.photo)
         # Insertion of text
-        self.can.create_text(625, 420, anchor=CENTER, 
-            text="Python 3.6 - Tkinter 8.6 - GIMP 2.8",
-            font=('Times New Roman', 18, 'bold'), fill='turquoise')
-        self.can.create_text(1240, 770, anchor=NE, text="ko@l@tr33",
-            font=('Times', 12), fill='turquoise')
+        #self.can.create_text(625, 420, anchor=CENTER, 
+        #    text="Python 3.6 - Tkinter 8.6 - GIMP 2.8",
+        #    font=('Times New Roman', 18, 'bold'), fill='turquoise')
+        #self.can.create_text(1240, 770, anchor=NE, text="ko@l@tr33",
+        #    font=('Times', 12), fill='turquoise')
         # Configuration de la Scrollbar sur le Frame
         self.frame.bind("<Configure>", self.onFrameConfigure)
         self.can.pack(side=LEFT, fill=BOTH, expand=YES)
         # 3 buttons on welcome page.
         # Info button
-        self.button1 = Button(self, text="Info", font=('Times 14 bold'),
-            bg='RoyalBlue3', fg='cyan', command = self.frameInfo)
-        self.button1.configure(width=10, bd=3, highlightbackground='blue',
-            activebackground='dark turquoise')
-        self.button1_window = self.can.create_window(75, 30, anchor=CENTER,
-            window=self.button1)
-        # Synopsis button
-        self.button2 = Button(self, text="TEXTBOX", font=('Times 18 bold'),
-            bg='RoyalBlue3', fg='cyan', command = self.showSynopsis)
-        self.button2.configure(width=15, bd=3, highlightbackground='blue',
-            activebackground='dark turquoise')
-        self.button2_window = self.can.create_window(450, 550, anchor=CENTER,
-            window=self.button2)
-        # Psychotabs button
-        self.button3 = Button(self, text="RESIDENTS", font=('Times 18 bold'),
-            bg='RoyalBlue3', fg='cyan', command = self.showPatients)
-        self.button3.configure(width=15, bd=3, highlightbackground='blue', 
-            activebackground='dark turquoise')
-        self.button3_window = self.can.create_window(790, 550, anchor=CENTER,
-            window=self.button3)
+
+        """
+        # To backup (main file)
+        self.updateFiletxt()
+        dispAgBox()
+        dispTttBox()
+        dispResFunc()
+        """
+
+        # Display date
+        self.x1, self.y1 = 1065, 70
+        self.Date_write=Entry(self.can)
+        self.data_time=StringVar()
+        self.Date_write=Entry(self.can, textvariable=self.data_time, width=10,
+            highlightbackground='grey', bd=4)
+        self.data_time.set(time.strftime("%d/%m/%Y"))
+        self.Date_write=self.can.create_window(self.x1, self.y1,
+            window=self.Date_write)
+
+        # Static time
+        self.x2, self.y2 = 1165, 70
+        self.Date_write2 = Entry(self.can)
+        self.data_time2 = StringVar()
+        self.Date_write2 = Entry(self.can, width=10, textvariable=self.data_time2,
+            highlightbackground='grey', bd=4)
+        self.data_time2.set(time.strftime("%H:%M:%S %p"))
+        self.Date_write2=self.can.create_window(self.x2, self.y2,
+            window=self.Date_write2)
+
+        # To display time dynamically à revoir (new_file.py)
+        # To introduce a new pytient
+        self.x3, self.y3 = 200, 160
+        self.b3=Button(self.can, width=10, font=16, bd=3, highlightbackground='blue',
+            bg='RoyalBlue3', fg='white', activebackground='dark turquoise',
+            activeforeground='white', text="New Entry", command=self.callPatient1)
+        self.fb3=self.can.create_window(self.x3, self.y3, window=self.b3)
+
+        # To add one patient and files
+        self.x4, self.y4 = 400, 160
+        self.b4=Button(self.can, width=10, font=16, bd=3, highlightbackground='blue',
+            bg='RoyalBlue3', fg='cyan', activebackground='dark turquoise',
+            activeforeground='white', text="Add patient", command=self.addPatientAfter)
+        self.fb4=self.can.create_window(self.x4, self.y4, window=self.b4)
+        
+        # To refresh canvas + menu bar
+        self.x5, self.y5 = 600, 160
+        self.b5=Button(self.can, width=10, font=16, bd=3, bg='RoyalBlue3',
+            fg='SpringGreen2', highlightbackground='blue',
+            activebackground='yellow', activeforeground='SpringGreen2',
+            text="Refresh", command=self.upDateAll)
+        self.fb5=self.can.create_window(self.x5, self.y5, window=self.b5)
+
+        # To delete one patient and all files
+        self.x6, self.y6 = 800, 160
+        self.b6=Button(self.can, width=10, font=16, bd=3, highlightbackground='blue',
+            bg='RoyalBlue3', fg='coral', activebackground='red', 
+            activeforeground='white', text="Delete patient", command=self.delEverPat)
+        self.fb6=self.can.create_window(self.x6, self.y6, window=self.b6)
+
+        """
+        # Interact with database to add
+        def addData():
+            if StudentID.get() == "" or Firstname.get() == "" or Surname.get() == "":
+                tkinter.messagebox.showerror("MySQL Connection", "Enter Correct Details.")
+            else:
+                sqlCon = pymysql.connect(host='127.0.0.1', user='koala', password='', database='con_trackdb')
+                cur = sqlCon.cursor()
+                cur.execute("INSERT into con_trackdb values (%s,%s,%s,%s,%s,%s)",(
+
+                StudentID.get(),
+                Firstname.get(),
+                Surname.get(),
+                Address.get(),
+                Gender.get(),
+                Mobile.get(),
+                ))
+                sqlCon.commit()
+                sqlCon.close()
+                tkinter.messagebox.showinfo("MySQL connection", "Record Entered Successfully !")
+        """
+
+        # To convert and for reading in my DB mysql
+        try:
+            with open('./newpatient/entryfile.txt', 'r') as namefile:
+                line1 = namefile.readline()
+        except FileNotFoundError as callfile:
+            print("File entryfile.txt doesn't exist !", callfile)
+
+        self.new_data1 = line1
+        self.x10, self.y10 = 129, 230
+        self.Data_write = Entry(self.can)
+        self.new_data1 = StringVar()
+        self.Data_write = Entry(self.can, textvariable=self.new_data1,
+            highlightbackground='grey', bd=4)
+        self.new_data1.set(line1)
+        self.Data_write = self.can.create_window(self.x10, self.y10,
+            window = self.Data_write)
+
+        self.x11, self.y11 = 271, 230
+        self.b11=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
+            activebackground='aquamarine', text="Allergy",
+            command=self.allergyLink)
+        self.fb11=self.can.create_window(self.x11, self.y11, window=self.b11)
+
+        self.x12, self.y12 = 429, 230
+        self.b12=Button(self.can, width=18, font=16, bg='RoyalBlue3', fg='cyan',
+            activebackground='aquamarine', text="Diagnostic + ATCD",
+            command='') #self.diag1)
+        self.fb12=self.can.create_window(self.x12, self.y12, window=self.b12)
         self.pack()
         
     # Method to reconfigure scrollbar every time.
@@ -141,7 +219,7 @@ class Application(Frame):
         else:
             messagebox.showinfo('Return', 'You will now return to the'
                 'application screen')
-
+    """
     #------------------
 
     StudentID = StringVar()
@@ -261,15 +339,7 @@ class Application(Frame):
             Reset()
 
         sqlCon.close()
-
-    # Main page
-    def showPatients(self):
-        #def callResident(self):
-        self.can.delete(ALL)
-        self.can.configure(background='cyan')
-        self.photo=PhotoImage(file='./syno_gif/title_tt.png')
-        self.item=self.can.create_image(625, 85, image=self.photo)
-
+    """
 
     def callPatient1(self):
         """
@@ -277,13 +347,21 @@ class Application(Frame):
         """
         subprocess.run('./newpatient/entrypytientfile.py', check=True)
 
+    def callRecord(self):
+        subprocess.run('./newpatient/torecord.py', check=True)
 
     def addPatientAfter(self):
         """
             To add new patient after delete one of them
         """
         messagebox.showwarning("Warning", "Don't forget to enter allergy too ! ;)")
-        subprocess.run('./newpatient/torecord.py', check=True)
+        self.callRecord()
+
+    def delEverPat(self):
+        """
+            To delete patient
+        """
+        subprocess.run('./deletepatient/deleverything.py', check=True)
 
     def allergyLink(self):
         """
@@ -291,94 +369,6 @@ class Application(Frame):
         """
         subprocess.run('./allergy/allerpatient1.py', check=True)
 
-    """
-    # To backup (main file)
-    self.updateFiletxt()
-    dispAgBox()
-    dispTttBox()
-    dispResFunc()
-    """
-
-    # Display date
-    self.x1, self.y1 = 1065, 70
-    self.Date_write=Entry(self.can)
-    self.data_time=StringVar()
-    self.Date_write=Entry(self.can, textvariable=self.data_time, width=10,
-        highlightbackground='grey', bd=4)
-    self.data_time.set(time.strftime("%d/%m/%Y"))
-    self.Date_write=self.can.create_window(self.x1, self.y1,
-        window=self.Date_write)
-
-    # Static time
-    self.x2, self.y2 = 1165, 70
-    self.Date_write2 = Entry(self.can)
-    self.data_time2 = StringVar()
-    self.Date_write2 = Entry(self.can, width=10, textvariable=self.data_time2,
-        highlightbackground='grey', bd=4)
-    self.data_time2.set(time.strftime("%H:%M:%S %p"))
-    self.Date_write2=self.can.create_window(self.x2, self.y2,
-        window=self.Date_write2)
-
-    # To display time dynamically à revoir (new_file.py)
-    # To introduce a new pytient
-    self.x3, self.y3 = 200, 160
-    self.b3=Button(self.can, width=10, font=16, bd=3, highlightbackground='blue',
-        bg='RoyalBlue3', fg='white', activebackground='dark turquoise',
-        activeforeground='white', text="New Entry", command=self.callPatient1)
-    self.fb3=self.can.create_window(self.x3, self.y3, window=self.b3)
-
-    # To add one patient and files
-    self.x4, self.y4 = 400, 160
-    self.b4=Button(self.can, width=10, font=16, bd=3, highlightbackground='blue',
-        bg='RoyalBlue3', fg='cyan', activebackground='dark turquoise',
-        activeforeground='white', text="Add patient", command=self.addPatientAfter)
-    self.fb4=self.can.create_window(self.x4, self.y4, window=self.b4)
-    
-    # To refresh canvas + menu bar
-    self.x5, self.y5 = 600, 160
-    self.b5=Button(self.can, width=10, font=16, bd=3, bg='RoyalBlue3',
-        fg='SpringGreen2', highlightbackground='blue',
-        activebackground='yellow', activeforeground='SpringGreen2',
-        text="Refresh", command=self.upDateAll)
-    self.fb5=self.can.create_window(self.x5, self.y5, window=self.b5)
-
-    # To delete one patient and all files
-    self.x6, self.y6 = 800, 160
-    self.b6=Button(self.can, width=10, font=16, bd=3, highlightbackground='blue',
-        bg='RoyalBlue3', fg='coral', activebackground='red', 
-        activeforeground='white', text="Delete patient", command=self.delEverPat)
-    self.fb6=self.can.create_window(self.x6, self.y6, window=self.b6)
-
-    # Patient 1
-    try:
-        with open('./newpatient/entryfile.txt', 'r') as namefile:
-            line1=namefile.readline()
-    except FileNotFoundError as callfile:
-        print("File entryfile.txt doesn't exist !", callfile)
-
-    self.data_time=line1
-    self.x10, self.y10 = 129, 230
-    self.Data_write=Entry(self.can)
-    self.new_data1=StringVar()
-    self.Data_write=Entry(self.can, textvariable=self.new_data1,
-        highlightbackground='grey', bd=4)
-    self.new_data1.set(line1)
-    self.Data_write=self.can.create_window(self.x10, self.y10,
-        window=self.Data_write)
-
-    self.x11, self.y11 = 271, 230
-    self.b11=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
-        activebackground='aquamarine', text="Allergy",
-        
-        command=self.allergyLink)
-    self.fb11=self.can.create_window(self.x11, self.y11, window=self.b11)
-
-    self.x12, self.y12 = 429, 230
-    self.b12=Button(self.can, width=18, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='aquamarine', text="Diagnostic + ATCD",
-        
-        command=self.diag1)
-    self.fb12=self.can.create_window(self.x12, self.y12, window=self.b12)
 
     def upDateAll(self):
         """
@@ -388,7 +378,7 @@ class Application(Frame):
             data.
         """
         self.master.destroy()
-        subprocess.run('./time_track.py', check=True)
+        subprocess.run('./connectheal.py', check=True)
 
 if __name__=='__main__':
     app = Application()

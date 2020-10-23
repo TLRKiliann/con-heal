@@ -3,15 +3,15 @@ A medical app to connect pymysql with MySQL (localhost connection!)
 
 # How to use MySQL
 
-> systemctl status mysql
-> systemctl start mysql
+> systemctl status mysql \
+> systemctl start mysql \
 > systemctl stop mysql
 
 # MySQL workbench (config + tricks)
 
-Create database
-Create table
-Create primary key
+Create database \
+Create table \
+Create primary key \
 Create id
 
 # pymysql

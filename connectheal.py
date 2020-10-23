@@ -11,112 +11,200 @@ import datetime
 import pymysql
 
 
-#------------------
+class ScrollCanvas(Frame):
+    """
+        To prepare ScrollBar for main application.
+    """
+    def __init__(self, boss=None):
+        Frame.__init__(self, borderwidth=borderwidth, relief=relief)
+        self.can = Canvas(self, width=width, height=height, bd=bd,
+            bg=bg, relief=relief)
+        self.frame = Frame(self.can)
+        self.vsb = Scrollbar(self, orient=VERTICAL, command=self.can.yview)
+        self.can.configure(yscrollcommand=self.vsb.set)
+        self.vsb.pack(side=RIGHT, fill=Y)
+        self.can.pack(side=LEFT, fill=BOTH, expand=YES)
+        self.can.create_window((4,4), window=self.frame, anchor=NW,
+                                  tags="self.frame")
+        self.frame.bind("<Configure>", self.onFrameConfigure)
 
-StudentID = StringVar()
-Firstname = StringVar()
-Surname = StringVar()
-Address = StringVar()
-Gender = StringVar()
-Mobile = StringVar()
+class MenuBar(Frame):
+    """
+        Menu down
+    """
+    def __init__(self, boss=None):
+        Frame.__init__(self, borderwidth=5, bg='RoyalBlue3', padx=0)
+        # 1st menu
+        fileMenu = Menubutton(self, text='Menu', fg='white',
+            font=("Times 14"), bg='grey30', relief=GROOVE)
+        new_text=StringVar()
 
-#------------------
 
-def iExit():
-    iExit = tkinter.messagebox.askyesno('MySQL Connection', 'Confirm if you want to exit ?')
-    if iExit > 0:
-        root.destroy()
-        return
+        fileMenu.pack(side=LEFT, padx=3)
+        # Partie déroulante du menu 1st
+        me1 = Menu(fileMenu, tearoff=0)
+        me1.add_command(label='Accueil', underline=0, font=("Times 14 bold"),
+            background='black',activebackground='aquamarine',
+            foreground='aquamarine', activeforeground='black',
+            command=boss.upDateAll)
+        me1.add_command(label="Residents", underline=0, font=("Times 14 bold"),
+            background='black', activebackground='cyan',
+            foreground='aquamarine', activeforeground='black',
+            command=boss.showPatients)
+        me1.add_command(label='Quit', font=("Times 14 bold"),
+            background='black', activebackground='red',
+            foreground='red', activeforeground='white',
+            command=boss.msgExit)
+        # Integration of 1st menu
+        fileMenu.configure(activeforeground='black', activebackground='cyan',
+            menu=me1)
 
-def Reset():
-    self.entStudentID.delete(0, END)
-    self.entFirstname.delete(0, END)
-    self.entSurname.delete(0, END)
-    self.entAddress.delete(0, END)
-    Gender.set("")
-    self.entMobile.delete(0, END)
+        # For label below (in me2.add_command)
+        try:
+            with open('./newpatient/entryfile.txt', 'r') as namefile:
+                line1=namefile.readline()
+                new_text=line1
+        except FileNotFoundError as fileout:
+            print("No file entryfile.txt exist", fileout)
 
-# Interact with database to add
-def addData():
-    if StudentID.get() == "" or Firstname.get() == "" or Surname.get() == "":
-        tkinter.messagebox.showerror("MySQL Connection", "Enter Correct Details.")
-    else:
+# Main app
+class Application(Frame):
+    """
+        Main app which content scrollbar and more...
+    """
+    def __init__(self, boss=None):
+        Frame.__init__(self, borderwidth=5, bg='RoyalBlue4', padx=20, pady=20, relief=GROOVE)
+        self.master.title('Time-Track- Developed by ko@l@tr33 - 2020')
+        mBar = MenuBar(self)
+        mBar.pack(side=TOP, fill=X, expand=YES)
+        # ScrollCanvas limite de la zone à parcourir avec la barre
+        self.can = Canvas(self, width=1250, height=800, bg='grey18')
+        self.frame = Frame(self.can)
+        self.vsb = Scrollbar(self, orient=VERTICAL, command=self.can.yview)
+        self.can.configure(yscrollcommand=self.vsb.set)
+        self.vsb.pack(side=RIGHT, fill=Y)
+        #self.can.pack(side=LEFT, fill=BOTH, expand=YES)
+        self.can.create_window((4,4), window=self.frame, anchor=NW, tags="self.frame")
+        # Insertion of picture
+        self.photo = PhotoImage(file='./syno_gif/fondcolorbg.png')
+        self.item = self.can.create_image(625, 400, image=self.photo)
+        # Insertion of text
+        self.can.create_text(625, 420, anchor=CENTER, 
+            text="Python 3.6 - Tkinter 8.6 - GIMP 2.8",
+            font=('Times New Roman', 18, 'bold'), fill='turquoise')
+        self.can.create_text(1240, 770, anchor=NE, text="ko@l@tr33",
+            font=('Times', 12), fill='turquoise')
+        # Configuration de la Scrollbar sur le Frame
+        self.frame.bind("<Configure>", self.onFrameConfigure)
+        self.can.pack(side=LEFT, fill=BOTH, expand=YES)
+        # 3 buttons on welcome page.
+        # Info button
+        self.button1 = Button(self, text="Info", font=('Times 14 bold'),
+            bg='RoyalBlue3', fg='cyan', command = self.frameInfo)
+        self.button1.configure(width=10, bd=3, highlightbackground='blue',
+            activebackground='dark turquoise')
+        self.button1_window = self.can.create_window(75, 30, anchor=CENTER,
+            window=self.button1)
+        # Synopsis button
+        self.button2 = Button(self, text="TEXTBOX", font=('Times 18 bold'),
+            bg='RoyalBlue3', fg='cyan', command = self.showSynopsis)
+        self.button2.configure(width=15, bd=3, highlightbackground='blue',
+            activebackground='dark turquoise')
+        self.button2_window = self.can.create_window(450, 550, anchor=CENTER,
+            window=self.button2)
+        # Psychotabs button
+        self.button3 = Button(self, text="RESIDENTS", font=('Times 18 bold'),
+            bg='RoyalBlue3', fg='cyan', command = self.showPatients)
+        self.button3.configure(width=15, bd=3, highlightbackground='blue', 
+            activebackground='dark turquoise')
+        self.button3_window = self.can.create_window(790, 550, anchor=CENTER,
+            window=self.button3)
+        self.pack()
+        
+    # Method to reconfigure scrollbar every time.
+    def onFrameConfigure(self, event):
+        '''Reset the scroll region to encompass the inner frame'''
+        self.can.configure(scrollregion=self.can.bbox(ALL))
+
+    def effacer(self):
+        '''Reinitialize canvas when we pass through another'''
+        self.can.delete(ALL)
+
+    def msgExit(self):
+        """
+            If usr want to quit, a question 
+            into a msgbox appear.
+        """
+        MsgBox = messagebox.askyesno('Quit system', 'Do you want to quit ?')
+        if MsgBox == 1:
+            self.master.destroy()
+        else:
+            messagebox.showinfo('Return', 'You will now return to the'
+                'application screen')
+
+    #------------------
+
+    StudentID = StringVar()
+    Firstname = StringVar()
+    Surname = StringVar()
+    Address = StringVar()
+    Gender = StringVar()
+    Mobile = StringVar()
+
+    #------------------
+
+    def iExit():
+        iExit = tkinter.messagebox.askyesno('MySQL Connection', 'Confirm if you want to exit ?')
+        if iExit > 0:
+            root.destroy()
+            return
+
+    def Reset():
+        self.entStudentID.delete(0, END)
+        self.entFirstname.delete(0, END)
+        self.entSurname.delete(0, END)
+        self.entAddress.delete(0, END)
+        Gender.set("")
+        self.entMobile.delete(0, END)
+
+    # Interact with database to add
+    def addData():
+        if StudentID.get() == "" or Firstname.get() == "" or Surname.get() == "":
+            tkinter.messagebox.showerror("MySQL Connection", "Enter Correct Details.")
+        else:
+            sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='pydatabase')
+            cur = sqlCon.cursor()
+            cur.execute("INSERT into pydatabase values (%s,%s,%s,%s,%s,%s)",(
+
+            StudentID.get(),
+            Firstname.get(),
+            Surname.get(),
+            Address.get(),
+            Gender.get(),
+            Mobile.get(),
+            ))
+            sqlCon.commit()
+            sqlCon.close()
+            tkinter.messagebox.showinfo("MySQL connection", "Record Entered Successfully !")
+
+    # Interact with database to display
+    def DisplayData():
         sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='pydatabase')
         cur = sqlCon.cursor()
-        cur.execute("INSERT into pydatabase values (%s,%s,%s,%s,%s,%s)",(
-
-        StudentID.get(),
-        Firstname.get(),
-        Surname.get(),
-        Address.get(),
-        Gender.get(),
-        Mobile.get(),
-        ))
-        sqlCon.commit()
+        cur.execute("SELECT * from pydatabase")
+        result = cur.fetchall()
+        if len(result) != 0:
+            self.student_records.delete(*self.student_records.get_children())
+            for row in result:
+                self.student_records.insert('',END,values =row)
+            sqlCon.commit()
         sqlCon.close()
-        tkinter.messagebox.showinfo("MySQL connection", "Record Entered Successfully !")
 
-# Interact with database to display
-def DisplayData():
-    sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='pydatabase')
-    cur = sqlCon.cursor()
-    cur.execute("SELECT * from pydatabase")
-    result = cur.fetchall()
-    if len(result) != 0:
-        self.student_records.delete(*self.student_records.get_children())
-        for row in result:
-            self.student_records.insert('',END,values =row)
-        sqlCon.commit()
-    sqlCon.close()
-
-# Interact with database to diplay database in frame
-def PyDataBaseInfo(ev):
-    viewInfo = self.student_records.focus()
-    learnerData = self.student_records.item(viewInfo)
-    row = learnerData['values']
-    StudentID.set(row[0])
-    Firstname.set(row[1])
-    Surname.set(row[2])
-    Address.set(row[3])
-    Gender.set(row[4])
-    Mobile.set(row[5])
-
-# Interact with database to update
-def update():
-    sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='pydatabase')
-    cur = sqlCon.cursor()
-    cur.execute("UPDATE pydatabase set firstname=%s, surname=%s, address=%s, gender=%s, mobile=%s where stdid=%s",(
-    Firstname.get(),
-    Surname.get(),
-    Address.get(),
-    Gender.get(),
-    Mobile.get(),
-    StudentID.get()
-    ))
-    sqlCon.commit()
-    DisplayData()
-    sqlCon.close()
-    tkinter.messagebox.showinfo("Data Entry Form", "Record Updated Successfully !")
-
-# Interact with database to delete
-def deleteDB():
-    sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='pydatabase')
-    cur = sqlCon.cursor()
-    cur.execute("DELETE from pydatabase where stdid=%s", StudentID.get())
-    sqlCon.commit()
-    DisplayData()
-    sqlCon.close()
-    tkinter.messagebox.showinfo("Data Entry Form", "Record Successfully Deleted !")
-    Reset()
-
-# Interact with database to search
-def searchDB():
-    try:
-        sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='pydatabase')
-        cur = sqlCon.cursor()
-        cur.execute("SELECT * from pydatabase where stdid=%s", StudentID.get())
-        row = cur.fetchone()
-
+    # Interact with database to diplay database in frame
+    def PyDataBaseInfo(ev):
+        viewInfo = self.student_records.focus()
+        learnerData = self.student_records.item(viewInfo)
+        row = learnerData['values']
         StudentID.set(row[0])
         Firstname.set(row[1])
         Surname.set(row[2])
@@ -124,32 +212,84 @@ def searchDB():
         Gender.set(row[4])
         Mobile.set(row[5])
 
+    # Interact with database to update
+    def update():
+        sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='pydatabase')
+        cur = sqlCon.cursor()
+        cur.execute("UPDATE pydatabase set firstname=%s, surname=%s, address=%s, gender=%s, mobile=%s where stdid=%s",(
+        Firstname.get(),
+        Surname.get(),
+        Address.get(),
+        Gender.get(),
+        Mobile.get(),
+        StudentID.get()
+        ))
         sqlCon.commit()
-    except:
-        tkinter.messagebox.showinfo("Data Entry Form", "No Such Record Found !")
+        DisplayData()
+        sqlCon.close()
+        tkinter.messagebox.showinfo("Data Entry Form", "Record Updated Successfully !")
+
+    # Interact with database to delete
+    def deleteDB():
+        sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='pydatabase')
+        cur = sqlCon.cursor()
+        cur.execute("DELETE from pydatabase where stdid=%s", StudentID.get())
+        sqlCon.commit()
+        DisplayData()
+        sqlCon.close()
+        tkinter.messagebox.showinfo("Data Entry Form", "Record Successfully Deleted !")
         Reset()
 
-    sqlCon.close()
+    # Interact with database to search
+    def searchDB():
+        try:
+            sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='pydatabase')
+            cur = sqlCon.cursor()
+            cur.execute("SELECT * from pydatabase where stdid=%s", StudentID.get())
+            row = cur.fetchone()
+
+            StudentID.set(row[0])
+            Firstname.set(row[1])
+            Surname.set(row[2])
+            Address.set(row[3])
+            Gender.set(row[4])
+            Mobile.set(row[5])
+
+            sqlCon.commit()
+        except:
+            tkinter.messagebox.showinfo("Data Entry Form", "No Such Record Found !")
+            Reset()
+
+        sqlCon.close()
+
+    # Main page
+    def showPatients(self):
+        #def callResident(self):
+        self.can.delete(ALL)
+        self.can.configure(background='cyan')
+        self.photo=PhotoImage(file='./syno_gif/title_tt.png')
+        self.item=self.can.create_image(625, 85, image=self.photo)
 
 
+    def callPatient1(self):
+        """
+            To enter a new patient.
+        """
+        subprocess.run('./newpatient/entrypytientfile.py', check=True)
 
 
+    def addPatientAfter(self):
+        """
+            To add new patient after delete one of them
+        """
+        messagebox.showwarning("Warning", "Don't forget to enter allergy too ! ;)")
+        subprocess.run('./newpatient/torecord.py', check=True)
 
-
-
-
-
-
-
-
-
-
-# Main page
-def callResident(self):
-    self.can.delete(ALL)
-    self.can.configure(background='cyan')
-    self.photo=PhotoImage(file='./syno_gif/title_tt.png')
-    self.item=self.can.create_image(625, 85, image=self.photo)
+    def allergyLink(self):
+        """
+            To add allergy to new patient 1
+        """
+        subprocess.run('./allergy/allerpatient1.py', check=True)
 
     """
     # To backup (main file)
@@ -209,7 +349,6 @@ def callResident(self):
         activeforeground='white', text="Delete patient", command=self.delEverPat)
     self.fb6=self.can.create_window(self.x6, self.y6, window=self.b6)
 
-
     # Patient 1
     try:
         with open('./newpatient/entryfile.txt', 'r') as namefile:
@@ -230,43 +369,27 @@ def callResident(self):
     self.x11, self.y11 = 271, 230
     self.b11=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
         activebackground='aquamarine', text="Allergy",
+        
         command=self.allergyLink)
     self.fb11=self.can.create_window(self.x11, self.y11, window=self.b11)
 
     self.x12, self.y12 = 429, 230
     self.b12=Button(self.can, width=18, font=16, bg='RoyalBlue3', fg='cyan',
         activebackground='aquamarine', text="Diagnostic + ATCD",
+        
         command=self.diag1)
     self.fb12=self.can.create_window(self.x12, self.y12, window=self.b12)
 
-    self.x13, self.y13 = 597, 230
-    self.b13=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='aquamarine', text="Treatments",
-        command=self.tttMed1)
-    self.fb13=self.can.create_window(self.x13, self.y13, window=self.b13)
+    def upDateAll(self):
+        """
+            To reset app by pressing 
+            refresh button. Close,
+            open directly and update
+            data.
+        """
+        self.master.destroy()
+        subprocess.run('./time_track.py', check=True)
 
-    self.x14, self.y14 = 725, 230
-    self.b14=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='aquamarine', text="Laboratory",
-        command=self.laboResult)
-    self.fb14=self.can.create_window(self.x14, self.y14, window=self.b14)
-
-    self.x15, self.y15 = 853, 230
-    self.b15=Button(self.can, width=10, font=15, bg='RoyalBlue3', fg='cyan',
-        activebackground='aquamarine', text="Medical Visit",
-        command=self.visitMed)
-    self.fb15=self.can.create_window(self.x15, self.y15, window=self.b15)
-
-    self.x16, self.y16 = 981, 230
-    self.b16=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='aquamarine', text="Intolerance",
-        command=self.nutritionMenu)
-    self.fb16=self.can.create_window(self.x16, self.y16, window=self.b16)
-
-    self.x17, self.y17 = 1109, 230
-    self.b17=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='aquamarine', text="BMI",
-        command=self.calculB)
-    self.fb17=self.can.create_window(self.x17, self.y17, window=self.b17)
-
-    self.can.configure(scrollregion=self.can.bbox(ALL))
+if __name__=='__main__':
+    app = Application()
+    app.mainloop()

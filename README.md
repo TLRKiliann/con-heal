@@ -1,5 +1,5 @@
 # con-heal
-A medical app to connect pymysql with MySQL (localhost connection!)
+A medical app (time-track) to connect pymysql with MySQL (localhost connection!)
 
 # How to use MySQL
 

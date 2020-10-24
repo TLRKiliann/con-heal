@@ -148,25 +148,31 @@ class Application(Frame):
         self.fb6=self.can.create_window(self.x6, self.y6, window=self.b6)
 
         """
-        # Interact with database to add
-        def addData():
-            if StudentID.get() == "" or Firstname.get() == "" or Surname.get() == "":
-                tkinter.messagebox.showerror("MySQL Connection", "Enter Correct Details.")
-            else:
-                sqlCon = pymysql.connect(host='127.0.0.1', user='koala', password='', database='con_trackdb')
-                cur = sqlCon.cursor()
-                cur.execute("INSERT into con_trackdb values (%s,%s,%s,%s,%s,%s)",(
-
-                StudentID.get(),
-                Firstname.get(),
-                Surname.get(),
-                Address.get(),
-                Gender.get(),
-                Mobile.get(),
-                ))
+        # Interact with database to display
+        def DisplayData():
+            sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='pydatabase')
+            cur = sqlCon.cursor()
+            cur.execute("SELECT * from pydatabase")
+            result = cur.fetchall()
+            if len(result) != 0:
+                self.student_records.delete(*self.student_records.get_children())
+                for row in result:
+                    self.student_records.insert('',END,values =row)
                 sqlCon.commit()
-                sqlCon.close()
-                tkinter.messagebox.showinfo("MySQL connection", "Record Entered Successfully !")
+            sqlCon.close()
+
+        # Interact with database to diplay database in frame
+        def PyDataBaseInfo(ev):
+            viewInfo = self.student_records.focus()
+            learnerData = self.student_records.item(viewInfo)
+            row = learnerData['values']
+            StudentID.set(row[0])
+            Firstname.set(row[1])
+            Surname.set(row[2])
+            Address.set(row[3])
+            Gender.set(row[4])
+            Mobile.set(row[5])
+
         """
 
         # To convert and for reading in my DB mysql
@@ -244,6 +250,26 @@ class Application(Frame):
         self.entAddress.delete(0, END)
         Gender.set("")
         self.entMobile.delete(0, END)
+
+        # Interact with database to add
+        def addData():
+            if StudentID.get() == "" or Firstname.get() == "" or Surname.get() == "":
+                tkinter.messagebox.showerror("MySQL Connection", "Enter Correct Details.")
+            else:
+                sqlCon = pymysql.connect(host='127.0.0.1', user='koala', password='', database='con_trackdb')
+                cur = sqlCon.cursor()
+                cur.execute("INSERT into con_trackdb values (%s,%s,%s,%s,%s,%s)",(
+
+                StudentID.get(),
+                Firstname.get(),
+                Surname.get(),
+                Address.get(),
+                Gender.get(),
+                Mobile.get(),
+                ))
+                sqlCon.commit()
+                sqlCon.close()
+                tkinter.messagebox.showinfo("MySQL connection", "Record Entered Successfully !")
 
     # Interact with database to add
     def addData():
@@ -353,6 +379,7 @@ class Application(Frame):
     def addPatientAfter(self):
         """
             To add new patient after delete one of them
+            and help to remind to enter allergy
         """
         messagebox.showwarning("Warning", "Don't forget to enter allergy too ! ;)")
         self.callRecord()

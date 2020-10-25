@@ -50,12 +50,12 @@ class ConnectorDB:
         #------------------
 
         # stdid = StudentID !!!
-        StudentID = StringVar()
+        PatientID = StringVar()
         Firstname = StringVar()
         Surname = StringVar()
-        Address = StringVar()
-        Gender = StringVar()
-        Mobile = StringVar()
+        Allergy = StringVar()
+        Born = StringVar()
+        Diagnostic = StringVar()
 
         #------------------
 
@@ -67,28 +67,28 @@ class ConnectorDB:
 
         # Interact with GUI to reset data
         def Reset():
-            self.entStudentID.delete(0, END)
+            self.entPatientID.delete(0, END)
             self.entFirstname.delete(0, END)
             self.entSurname.delete(0, END)
-            self.entAddress.delete(0, END)
-            Gender.set("")
-            self.entMobile.delete(0, END)
+            self.entAllergy.delete(0, END)
+            self.entBorn.delete(0, END)
+            self.entDiagnostic.delete(0, END)
         
         # Interact with database to add and record data
         def addData():
-            if StudentID.get() == "" or Firstname.get() == "" or Surname.get() == "":
+            if PatientID.get() == "" or Firstname.get() == "" or Surname.get() == "":
                 tkinter.messagebox.showerror("MySQL Connection", "Enter Correct Details.")
             else:
                 sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='timetrackconn')
                 cur = sqlCon.cursor()
                 cur.execute("INSERT into timetrackconn values (%s,%s,%s,%s,%s,%s)",(
 
-                StudentID.get(),
+                PatientID.get(),
                 Firstname.get(),
                 Surname.get(),
-                Address.get(),
-                Gender.get(),
-                Mobile.get(),
+                Allergy.get(),
+                Born.get(),
+                Diagnostic.get(),
                 ))
                 sqlCon.commit()
                 sqlCon.close()
@@ -112,24 +112,24 @@ class ConnectorDB:
             viewInfo = self.student_records.focus()
             learnerData = self.student_records.item(viewInfo)
             row = learnerData['values']
-            StudentID.set(row[0])
+            PatientID.set(row[0])
             Firstname.set(row[1])
             Surname.set(row[2])
-            Address.set(row[3])
-            Gender.set(row[4])
-            Mobile.set(row[5])
+            Allergy.set(row[3])
+            Born.set(row[4])
+            Diagnostic.set(row[5])
 
         # Interact with database to update data
         def update():
             sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='timetrackconn')
             cur = sqlCon.cursor()
-            cur.execute("UPDATE timetrackconn set firstname=%s, surname=%s, address=%s, gender=%s, mobile=%s where stdid=%s",(
+            cur.execute("UPDATE timetrackconn set firstname=%s, surname=%s, allergy=%s, born=%s, maindiagnostic=%s where stdid=%s",(
             Firstname.get(),
             Surname.get(),
-            Address.get(),
-            Gender.get(),
-            Mobile.get(),
-            StudentID.get()
+            Allergy.get(),
+            Born.get(),
+            Diagnostic.get(),
+            PatientID.get()
             ))
             sqlCon.commit()
             DisplayData()
@@ -158,9 +158,9 @@ class ConnectorDB:
                 StudentID.set(row[0])
                 Firstname.set(row[1])
                 Surname.set(row[2])
-                Address.set(row[3])
-                Gender.set(row[4])
-                Mobile.set(row[5])
+                Allergy.set(row[3])
+                Born.set(row[4])
+                Diagnostic.set(row[5])
 
                 sqlCon.commit()
             except:
@@ -174,12 +174,12 @@ class ConnectorDB:
         self.lbltitle = Label(TitleFrame, font=('arial', 40, 'bold'), text='MySQL Connection', bd=7)
         self.lbltitle.grid(row=0, column=0, padx=132)
 
-        self.lblStudentID = Label(LeftFrame1, font=('arial', 12, 'bold'), text="Student ID", bd=7)
-        self.lblStudentID.grid(row=0, column=0, sticky=W, padx=5)
+        self.lblPatientID = Label(LeftFrame1, font=('arial', 12, 'bold'), text="Patient ID", bd=7)
+        self.lblPatientID.grid(row=0, column=0, sticky=W, padx=5)
 
-        self.entStudentID = Entry(LeftFrame1, font=('arial', 12, 'bold'), bd=5, width=44, justify='left',
-            textvariable=StudentID)
-        self.entStudentID.grid(row=0, column=1, sticky=W, padx=5)
+        self.entPatientID = Entry(LeftFrame1, font=('arial', 12, 'bold'), bd=5, width=44, justify='left',
+            textvariable=PatientID)
+        self.entPatientID.grid(row=0, column=1, sticky=W, padx=5)
 
         self.lblFirstname = Label(LeftFrame1, font=('arial', 12, 'bold'), text="Firstname", bd=7)
         self.lblFirstname.grid(row=1, column=0, sticky=W, padx=5)
@@ -195,52 +195,50 @@ class ConnectorDB:
             textvariable=Surname)
         self.entSurname.grid(row=2, column=1, sticky=W, padx=5)
 
-        self.lblAddress = Label(LeftFrame1, font=('arial', 12, 'bold'), text="Address", bd=7)
-        self.lblAddress.grid(row=3, column=0, sticky=W, padx=5)
+        self.lblAllergy = Label(LeftFrame1, font=('arial', 12, 'bold'), text="Allergy", bd=7)
+        self.lblAllergy.grid(row=3, column=0, sticky=W, padx=5)
 
-        self.entAddress = Entry(LeftFrame1, font=('arial', 12, 'bold'), bd=5, width=44, justify='left',
-            textvariable=Address)
-        self.entAddress.grid(row=3, column=1, sticky=W, padx=5)
+        self.entAllergy = Entry(LeftFrame1, font=('arial', 12, 'bold'), bd=5, width=44, justify='left',
+            textvariable=Allergy)
+        self.entAllergy.grid(row=3, column=1, sticky=W, padx=5)
 
-        self.lblGender = Label(LeftFrame1, font=('arial', 12, 'bold'), text="Gender", bd=7)
-        self.lblGender.grid(row=4, column=0, sticky=W, padx=5)
+        self.lblBorn = Label(LeftFrame1, font=('arial', 12, 'bold'), text="Born", bd=7)
+        self.lblBorn.grid(row=4, column=0, sticky=W, padx=5)
 
-        self.cboGender = ttk.Combobox(LeftFrame1, font=('arial', 12, 'bold'), width=43, state="readonly",
-            textvariable=Gender)
-        self.cboGender['values'] = ('', 'Female', 'Male')
-        self.cboGender.current(0)
-        self.cboGender.grid(row=4, column=1, sticky=W, padx=5)
+        self.entBorn = Entry(LeftFrame1, font=('arial', 12, 'bold'), bd=5, width=44, justify='left',
+            textvariable=Born)
+        self.entBorn.grid(row=4, column=1, sticky=W, padx=5)
 
-        self.lblMobile = Label(LeftFrame1, font=('arial', 12, 'bold'), text="Mobile", bd=7)
-        self.lblMobile.grid(row=5, column=0, sticky=W, padx=5)
+        self.lblDiagnostic = Label(LeftFrame1, font=('arial', 12, 'bold'), text="Diagnostic", bd=7)
+        self.lblDiagnostic.grid(row=5, column=0, sticky=W, padx=5)
 
-        self.entMobile = Entry(LeftFrame1, font=('arial', 12, 'bold'), bd=5, width=44, justify='left',
-            textvariable=Mobile)
-        self.entMobile.grid(row=5, column=1, sticky=W, padx=5)
+        self.entDiagnostic = Entry(LeftFrame1, font=('arial', 12, 'bold'), bd=5, width=44, justify='left',
+            textvariable=Diagnostic)
+        self.entDiagnostic.grid(row=5, column=1, sticky=W, padx=5)
 
         #------------------
 
         scroll_y=Scrollbar(LeftFrame, orient=VERTICAL)
 
         self.student_records=ttk.Treeview(LeftFrame, height=12, columns=("stdid",
-            "firstname", "surname", "address", "gender", "mobile"),yscrollcommand=scroll_y.set)
+            "firstname", "surname", "allergy", "born", "maindiagnostic"),yscrollcommand=scroll_y.set)
         scroll_y.pack(side=RIGHT, fill=Y)
 
-        self.student_records.heading("stdid", text="StudentID.")
+        self.student_records.heading("stdid", text="PatientID")
         self.student_records.heading("firstname", text="Firstname")
         self.student_records.heading("surname", text="Surname")
-        self.student_records.heading("address", text="Address")
-        self.student_records.heading("gender", text="Gender")
-        self.student_records.heading("mobile", text="Mobile")
+        self.student_records.heading("allergy", text="Allergy")
+        self.student_records.heading("born", text="Born")
+        self.student_records.heading("maindiagnostic", text="Diagnostic")
 
         self.student_records['show']="headings"
 
-        self.student_records.column("stdid", width=70)
-        self.student_records.column("firstname", width=70)
-        self.student_records.column("surname", width=70)
-        self.student_records.column("address", width=70)
-        self.student_records.column("gender", width=70)
-        self.student_records.column("mobile", width=70)
+        self.student_records.column("stdid", width=100)
+        self.student_records.column("firstname", width=100)
+        self.student_records.column("surname", width=100)
+        self.student_records.column("allergy", width=100)
+        self.student_records.column("born", width=100)
+        self.student_records.column("maindiagnostic", width=100)
 
         self.student_records.pack(fill=BOTH, expand=1)
         self.student_records.bind("<ButtonRelease-1>", PyDataBaseInfo)

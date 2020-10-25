@@ -3,7 +3,6 @@
 
 
 from tkinter import *
-from tkinter import ttk
 from tkinter import messagebox
 import time
 import subprocess
@@ -1252,6 +1251,9 @@ class Application(Frame):
         callBox(self)
 
     def funcPyCon(self):
+        """
+            To display data from database
+        """
         showDbPatient(self)
 
 
@@ -2163,7 +2165,7 @@ class Application(Frame):
             data.
         """
         self.master.destroy()
-        subprocess.run('./heal_track.py', check=True)
+        subprocess.call('./heal_track.py')
 
 if __name__=='__main__':
     app = Application()

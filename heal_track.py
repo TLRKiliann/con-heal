@@ -3,6 +3,7 @@
 
 
 from tkinter import *
+from tkinter import ttk
 from tkinter import messagebox
 #from tkinter import filedialog
 import time
@@ -67,6 +68,39 @@ class MenuBar(Frame):
         new_text23=StringVar()
         new_text24=StringVar()
 
+        PatientID = StringVar()
+        Firstname = StringVar()
+        Surname = StringVar()
+
+        def searchDB():
+            sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='timetrackconn')
+            cur = sqlCon.cursor()
+            cur.execute("SELECT * from timetrackconn where stdid=1")
+            result = cur.fetchall()
+            if len(result) != 0:
+                self.student_records.delete(*self.student_records.get_children())
+                for row in result:
+                    self.student_records.insert('', END, values = row)
+                sqlCon.commit()
+            sqlCon.close()
+
+        self.student_records=ttk.Treeview(self, height=1, columns=("stdid", "firstname", "surname"))
+
+        self.student_records.heading("stdid", text="PatientID")
+        self.student_records.heading("firstname", text="Firstname")
+        self.student_records.heading("surname", text="Surname")
+
+        self.student_records['show']="headings"
+
+        self.student_records.column("stdid", width=10)
+        self.student_records.column("firstname", width=10)
+        self.student_records.column("surname", width=10)
+
+        self.student_records.pack(fill=BOTH, expand=YES)
+        #self.student_records.bind("<ButtonRelease-1>", PyDataBaseInfo)
+        self.btnSearch = Button(self, font=('arial', 12, 'bold'), text="Search", bd=4, 
+            padx=8, pady=1, width=8, height=1, command=searchDB).pack()
+
         fileMenu.pack(side=LEFT, padx=3)
         # Partie déroulante du menu 1st
         me1 = Menu(fileMenu, tearoff=0)
@@ -97,21 +131,15 @@ class MenuBar(Frame):
         # Integration of 1st menu
         fileMenu.configure(activeforeground='black', activebackground='cyan',
             menu=me1)
-
-        try:
-            sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='timetrackconn')
-            cur = sqlCon.cursor()
-            cur.execute("SELECT * from timetrackconn where stdid=1")
-            row = cur.fetchone()
-            new_text.set(row[2])
-            sqlCon.commit()
-            sqlCon.close()
-        except:
-            messagebox.showinfo("Data Entry Form", "No Such Record Found !")
-            sqlCon.close()
-            #Reset()
-
-
+        """
+        def PyDataBaseInfo(ev):
+            viewInfo = self.student_records.focus()
+            learnerData = self.student_records.item(viewInfo)
+            row = learnerData['values']
+            StudentID.set(row[0])
+            Firstname.set(row[1])
+            Surname.set(row[2])
+        """
         # Agenda menu
         self.cmd_agenda=Menubutton(self, text='Agenda', font=("Times 14"),
             fg='cyan', bg='grey30', relief=GROOVE)
@@ -981,6 +1009,8 @@ class Application(Frame):
         self.frame.bind("<Configure>", self.onFrameConfigure)
         self.can.pack(side=LEFT, fill=BOTH, expand=YES)
         # 3 buttons on welcome page.
+        # Search
+
         # Info button
         self.button1 = Button(self, text="Info", font=('Times 14 bold'),
             bg='RoyalBlue3', fg='cyan', command = self.frameInfo)
@@ -988,19 +1018,27 @@ class Application(Frame):
             activebackground='dark turquoise')
         self.button1_window = self.can.create_window(75, 30, anchor=CENTER,
             window=self.button1)
+        
+        # Pycon button
+        self.button2 = Button(self, text="Pycon", font=('Times 18 bold'),
+            bg='RoyalBlue3', fg='cyan', command = self.funcPyCon)
+        self.button2.configure(width=15, bd=3, highlightbackground='blue',
+            activebackground='dark turquoise')
+        self.button2_window = self.can.create_window(300, 550, anchor=CENTER,
+            window=self.button2)
         # Synopsis button
         self.button2 = Button(self, text="TEXTBOX", font=('Times 18 bold'),
             bg='RoyalBlue3', fg='cyan', command = self.showSynopsis)
         self.button2.configure(width=15, bd=3, highlightbackground='blue',
             activebackground='dark turquoise')
-        self.button2_window = self.can.create_window(450, 550, anchor=CENTER,
+        self.button2_window = self.can.create_window(625, 550, anchor=CENTER,
             window=self.button2)
         # Psychotabs button
         self.button3 = Button(self, text="RESIDENTS", font=('Times 18 bold'),
             bg='RoyalBlue3', fg='cyan', command = self.showPatients)
         self.button3.configure(width=15, bd=3, highlightbackground='blue', 
             activebackground='dark turquoise')
-        self.button3_window = self.can.create_window(790, 550, anchor=CENTER,
+        self.button3_window = self.can.create_window(950, 550, anchor=CENTER,
             window=self.button3)
         self.pack()
         
@@ -1117,6 +1155,9 @@ class Application(Frame):
         self.lab6=Label(self.labFra, justify=LEFT, fg='cyan',
             bg='grey22', font=('Times', 14),
             text="Path : Menu Bar --> Menu --> MapApp").pack(padx=10, pady=10)
+
+    def funcPyCon(self):
+        subprocess.run('./connectheal.py', check=False)
 
     def callPatient1(self):
         """

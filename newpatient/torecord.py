@@ -39,7 +39,18 @@ def get(Nompatient, entree, Birthvalue, Birth_entree):
                     if mot in line:
                         searchLine1(Nompatient, Birthvalue)
     else:
-        print("There is no file to edit as entryfile")
+        print("There is no file to edit as entryfile.txt")
+
+    if mot == '--':
+        if os.path.getsize('./newpatient/entryfile2.txt'):
+            with open('./newpatient/entryfile2.txt', 'r') as file:
+                lines = file.readlines()
+                for i in range(0, len(lines)):
+                    line = lines[i]
+                    if mot in line:
+                        searchLine1(Nompatient, Birthvalue)
+    else:
+        print("There is no file to edit as entryfile2.txt")
 
     gui.destroy()
 

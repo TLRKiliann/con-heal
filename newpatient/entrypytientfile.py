@@ -31,38 +31,12 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
         IDpatient = Patient_num.get()
         Patientname = Firstname_pat.get()
         Surname = Sur_pat.get()
-        Allergia = Patient_allergy.get()
         Birthvalue = Birth_entree.get()
+        Allergia = Patient_allergy.get()
         Diagnostic = Diagnos_pat.get()
         print(Patientname)
         print(Birthvalue)
-        """
-        try:
-            if os.path.getsize('./newpatient/entryfile.txt'):
-                print("+ File 'entryfile.txt' exist !")
-                if Patient_num.get() == "" or Firstname_pat.get() == "" or Sur_pat.get() == "":
-                    messagebox.showerror("MySQL Connection", "Enter Correct Details.")
-        except FileNotFoundError as outcom5:
-            print("+ Sorry, file 'entryfile.txt' not exist !")
-            print(str(outcom5))
-            print("+ File 'entryfile.txt' created !")
-            with open('./newpatient/entryfile.txt', 'w') as namefile:
-                namefile.write(Patientname + Surname + '\n')
-                namefile.write(Birthvalue + '\n')
-            sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='timetrackconn')
-            cur = sqlCon.cursor()
-            cur.execute("INSERT into timetrackconn values (%s, %s, %s, %s, %s, %s)",(
-            Patient_num.get(),
-            Firstname_pat.get(),
-            Sur_pat.get(),
-            Patient_allergy.get(),
-            Birth_entree.get(),
-            Diagnos_pat.get(),
-            ))
-            sqlCon.commit()
-            sqlCon.close()
-            messagebox.showinfo("MySQL connection", "Record Entered Successfully !")
-        """
+
         try:
             if os.path.getsize('./newpatient/entryfile.txt'):
                 print("+ File 'entryfile.txt' exist !")
@@ -73,32 +47,61 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
             with open('./newpatient/entryfile.txt', 'w') as namefile:
                 namefile.write(Patientname + " " + Surname + '\n')
                 namefile.write(Birthvalue + '\n')
+                namefile.write(Allergia + '\n')
+                namefile.write(Diagnostic + '\n')
 
-            # Interact with database to add
-            if Patient_num.get() == "" or Firstname_pat.get() == "" or Sur_pat.get() == "":
-                messagebox.showerror("MySQL Connection", "Enter Correct Details.")
-            else:
-                sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='timetrackconn')
-                cur = sqlCon.cursor()
-                cur.execute("INSERT into timetrackconn values (%s, %s, %s, %s, %s, %s)",(
-                Patient_num.get(),
-                Firstname_pat.get(),
-                Sur_pat.get(),
-                Patient_allergy.get(),
-                Birth_entree.get(),
-                Diagnos_pat.get(),
-                ))
-                sqlCon.commit()
-                sqlCon.close()
-                messagebox.showinfo("MySQL connection", "Record Entered Successfully !")
+        try:
+            if os.path.getsize('./newpatient/entryfile2.txt'):
+                print("+ File 'entryfile2.txt' exist !")
+                pass
+        except FileNotFoundError as outcom5:
+            print("+ Sorry, file 'entryfile2.txt' not exist !")
+            print(str(outcom5))
+            print("+ File 'entryfile2.txt' created !")
+            with open('./newpatient/entryfile2.txt', 'w') as namefile:
+                namefile.write(Patientname + " " + Surname + '\n')
+                namefile.write(Birthvalue + '\n')
+                namefile.write(Allergia + '\n')
+                namefile.write(Diagnostic + '\n')
 
+        try:
+            if os.path.getsize('./newpatient/entryfile3.txt'):
+                print("+ File 'entryfile3.txt' exist !")
+                pass
+        except FileNotFoundError as outcom5:
+            print("+ Sorry, file 'entryfile3.txt' not exist !")
+            print(str(outcom5))
+            print("+ File 'entryfile3.txt' created !")
+            with open('./newpatient/entryfile3.txt', 'w') as namefile:
+                namefile.write(Patientname + " " + Surname + '\n')
+                namefile.write(Birthvalue + '\n')
+                namefile.write(Allergia + '\n')
+                namefile.write(Diagnostic + '\n')
+
+        # Interact with database to add
+        if Patient_num.get() == "" or Firstname_pat.get() == "" or Sur_pat.get() == "":
+            messagebox.showerror("MySQL Connection", "Enter Correct Details.")
+        else:
+            sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='timetrackconn')
+            cur = sqlCon.cursor()
+            cur.execute("INSERT into timetrackconn values (%s, %s, %s, %s, %s, %s)",(
+            Patient_num.get(),
+            Firstname_pat.get(),
+            Sur_pat.get(),
+            Birth_entree.get(),
+            Patient_allergy.get(),
+            Diagnos_pat.get(),
+            ))
+            sqlCon.commit()
+            sqlCon.close()
+            messagebox.showinfo("MySQL connection", "Record Entered Successfully !")
 
     gui.destroy()
 
 labelName = Label(gui)
 labelName = Label(text='Enter NAME : ',
     font="Times 14 bold",
-    fg='RoyalBlue3', bg='cyan')
+    fg='RoyalBlue4', bg='cyan')
 labelName.pack(pady=10)
 
 IDpatient = StringVar()
@@ -122,6 +125,12 @@ Sur_pat = Entry(gui, textvariable=Surname,
     bd=4)
 Sur_pat.pack()
 
+labelAller = Label(gui)
+labelAller = Label(text='Enter Allergy : ',
+    font="Times 14 bold",
+    fg='RoyalBlue4', bg='cyan')
+labelAller.pack(pady=10)
+
 Allergia=StringVar()
 Allergia.set('Allergy')
 Patient_allergy = Entry(gui, textvariable=Allergia,
@@ -139,6 +148,12 @@ Birthvalue.set('Format: 00/00/0000')
 Birth_entree = Entry(gui, textvariable=Birthvalue,
     highlightbackground='light sky blue', bd=4)
 Birth_entree.pack()
+
+labelDiag = Label(gui)
+labelDiag = Label(text='Diagnosis : ',
+    font="Times 14 bold",
+    fg='RoyalBlue4', bg='cyan')
+labelDiag.pack(pady=10)
 
 Diagnosis = StringVar()
 Diagnosis.set('Diagnostic (main)')

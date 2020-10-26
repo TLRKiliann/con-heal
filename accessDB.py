@@ -68,8 +68,8 @@ def showDbPatient(self):
     self.student_records.heading("stdid", text="PatientID")
     self.student_records.heading("firstname", text="Firstname")
     self.student_records.heading("surname", text="Surname")
-    self.student_records.heading("allergy", text="Allergy")
     self.student_records.heading("born", text="Born")
+    self.student_records.heading("allergy", text="Allergy")
     self.student_records.heading("maindiagnostic", text="Diagnostic")
 
     self.student_records['show']="headings"
@@ -77,8 +77,8 @@ def showDbPatient(self):
     self.student_records.column("stdid", width=100)
     self.student_records.column("firstname", width=150)
     self.student_records.column("surname", width=150)
-    self.student_records.column("allergy", width=200)
     self.student_records.column("born", width=100)
+    self.student_records.column("allergy", width=200)
     self.student_records.column("maindiagnostic", width=200)
 
     self.student_records.pack(fill=BOTH, expand=YES)

@@ -8,6 +8,9 @@
     My first one.
     Install python3-pymysql on your workstation
     not in your virtualenv (otherwise doesn't work)!
+    > sudo apt install python3-pymysql
+    then install pymysql into your virtualenv.
+    > pip3 install pymysql or PyMySQL
 """
 
 

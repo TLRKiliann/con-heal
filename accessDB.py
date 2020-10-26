@@ -53,7 +53,7 @@ def showDbPatient(self):
     def searchDB():
         sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='timetrackconn')
         cur = sqlCon.cursor()
-        cur.execute("SELECT * from timetrackconn where stdid=1")
+        cur.execute("SELECT * from timetrackconn")
         result = cur.fetchall()
         if len(result) != 0:
             self.student_records.delete(*self.student_records.get_children())
@@ -62,7 +62,7 @@ def showDbPatient(self):
             sqlCon.commit()
         sqlCon.close()
 
-    self.student_records=ttk.Treeview(self.can, height=12, columns=("stdid", 
+    self.student_records=ttk.Treeview(self.can, height=24, columns=("stdid", 
         "firstname", "surname", "allergy", "born", "maindiagnostic"))
 
     self.student_records.heading("stdid", text="PatientID")
@@ -75,10 +75,10 @@ def showDbPatient(self):
     self.student_records['show']="headings"
 
     self.student_records.column("stdid", width=100)
-    self.student_records.column("firstname", width=100)
-    self.student_records.column("surname", width=100)
+    self.student_records.column("firstname", width=150)
+    self.student_records.column("surname", width=150)
     self.student_records.column("allergy", width=200)
-    self.student_records.column("born", width=200)
+    self.student_records.column("born", width=100)
     self.student_records.column("maindiagnostic", width=200)
 
     self.student_records.pack(fill=BOTH, expand=YES)

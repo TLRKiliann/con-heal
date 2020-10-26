@@ -8,8 +8,8 @@ import os
 try:
     import pymysql
     pymysql.install_as_MySQLdb()
-except ImportError as err_report:
-    print("+ An error occured about pymysql !", err_report)
+except ImportError as err_report2:
+    print("+ An error occured about pymysql !", err_report2)
     pass
 
 

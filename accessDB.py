@@ -45,8 +45,8 @@ def showDbPatient(self):
     PatientID = StringVar()
     Firstname = StringVar()
     Surname = StringVar()
-    Allergy = StringVar()
     Born = StringVar()
+    Allergy = StringVar()
     Diagnostic = StringVar()
 
     def searchDB():
@@ -62,7 +62,7 @@ def showDbPatient(self):
         sqlCon.close()
 
     self.student_records=ttk.Treeview(self.can, height=24, columns=("stdid", 
-        "firstname", "surname", "allergy", "born", "maindiagnostic"))
+        "firstname", "surname", "born", "allergy", "maindiagnostic"))
 
     self.student_records.heading("stdid", text="PatientID")
     self.student_records.heading("firstname", text="Firstname")

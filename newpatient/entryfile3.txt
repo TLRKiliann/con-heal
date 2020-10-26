@@ -1,4 +1,0 @@
-Firstname Lastname
-Format: 00/00/0000
-Allergy
-Diagnostic (main)

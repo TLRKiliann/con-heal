@@ -16,7 +16,6 @@
 
 from tkinter import *
 from tkinter import ttk
-import tkinter.messagebox
 import os
 import time
 import datetime

@@ -5,7 +5,9 @@
 """
     App for many doing severals interactions
     with a MySQL database in python code.
-    My first one 
+    My first one.
+    Install python3-pymysql on your workstation
+    not in your virtualenv (otherwise doesn't work)!
 """
 
 
@@ -19,7 +21,12 @@ from backapp import *
 from agendapp import dispAgBox
 from tttapp import dispTttBox
 from resapp import dispResFunc
-import pymysql
+try:
+    import pymysql
+    pymysql.install_as_MySQLdb()
+except ImportError as err_report:
+    print("+ An error occured about pymysql !", err_report)
+    pass
 
 
 def showDbPatient(self):

@@ -3,7 +3,8 @@
 
 
 from tkinter import *
-from tkinter import ttk
+#from tkinter import ttk
+import subprocess
 import os
 import time
 import datetime
@@ -12,12 +13,13 @@ from agendapp import dispAgBox
 from tttapp import dispTttBox
 from resapp import dispResFunc
 from patcaps import callResident
-#from accessDB import showDbPatient
 
+#master.destroy()
+#subprocess.call('./boxapp.py')
 # Main page
 def callBox(self):
     self.can.delete(ALL)
-    # ttk.Treeview.delete(*items)
+    #self.ttk.delete(*items)
     #self.student_records.delete(*self.student_records.get_children())
     self.can.configure(background='cyan')
     self.photo=PhotoImage(file='./syno_gif/title_tt.png')

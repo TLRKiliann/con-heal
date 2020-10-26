@@ -16,6 +16,7 @@
 
 from tkinter import *
 from tkinter import ttk
+import subprocess
 import os
 import time
 import datetime
@@ -23,6 +24,7 @@ from backapp import *
 from agendapp import dispAgBox
 from tttapp import dispTttBox
 from resapp import dispResFunc
+from boxapp import callBox
 try:
     import pymysql
     pymysql.install_as_MySQLdb()
@@ -39,7 +41,7 @@ def showDbPatient(self):
     self.can.delete(ALL)
     self.can.configure(background='cyan')
     self.photo=PhotoImage(file='./syno_gif/title_tt.png')
-    self.item=self.can.create_image(625, 85, image=self.photo)
+    self.item=self.can.create_image(625, 400, image=self.photo)
 
 
     PatientID = StringVar()
@@ -83,8 +85,17 @@ def showDbPatient(self):
     self.student_records.pack(fill=BOTH, expand=YES)
 
     #self.student_records.bind("<ButtonRelease-1>", PyDataBaseInfo)
-    self.btnSearch = Button(self.can, font=('arial', 12, 'bold'), text="Display", bd=4, 
-        padx=8, pady=1, width=8, height=1, command=searchDB)
-    self.btnSearch.pack()
+    self.btnSearch = Button(self.can, font=('arial', 12, 'bold'), text="Display All", bd=4, 
+        padx=8, pady=1, width=16, height=1, command=searchDB)
+    self.btnSearch.pack(side=LEFT)
+
+    def showBox():
+        self.student_records.delete(*self.student_records.get_children())
+        self.master.destroy()
+        subprocess.run('./heal_track.py', check=True)
+
+    self.butBox = Button(self.can, font=('arial', 12, 'bold'), text="Box", bd=4, 
+        padx=8, pady=1, width=16, height=1, command=showBox)
+    self.butBox.pack(side=RIGHT)
 
     self.can.configure(scrollregion=self.can.bbox(ALL))

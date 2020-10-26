@@ -1150,7 +1150,7 @@ class Application(Frame):
             window=self.button1)
         
         # Pycon button
-        self.button2 = Button(self, text="Pycon", font=('Times 18 bold'),
+        self.button2 = Button(self, text="DATABASE", font=('Times 18 bold'),
             bg='RoyalBlue3', fg='cyan', command = self.funcPyCon)
         self.button2.configure(width=15, bd=3, highlightbackground='blue',
             activebackground='dark turquoise')

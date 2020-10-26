@@ -22,7 +22,7 @@ Install python3-pymysql :
 Install pymysql in virtualenv :
 > pip3 install pymysql (or PyMySQL)
 
-Already done... (requirements.txt)
+Already done... (look at requirements.txt)
 
 # Still under development !
 

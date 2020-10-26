@@ -14,10 +14,15 @@ Create table \
 Create primary key \
 Create id
 
-# pymysql
+# How to install pymysql
 
-Main cmd
+Install python3-pymysql :
+> sudo apt install python3-pymysql
 
-# In development !
+Install pymysql in virtualenv :
+> pip3 install pymysql (or PyMySQL)
+Already done (requirements.txt)
+
+# Still under development !
 
 ko@l@tr33

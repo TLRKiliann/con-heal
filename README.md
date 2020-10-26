@@ -10,14 +10,14 @@ A medical app (time-track) to connect pymysql with MySQL (localhost connection!)
 # MySQL workbench (config)
 
 Create database : \
-- MYSQL Connections --> click '+' \
+* MYSQL Connections --> click '+' \
 Enter connection name and password \
 Click on 'Test connection' \
 + Password required
 Create a table \
 - Latin-1 or Utf-8
 Create columns \
-- Save model
+-- Save model
 Return to 'home' and click on your new connection
 
 # How to install pymysql

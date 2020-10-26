@@ -18,7 +18,7 @@ gui.title("Enter new patient")
 gui.configure(bg='cyan')
 #gui.geometry('300x200')
 
-def get(IDpatient, Patient_num, Patientname, Patient_entree, Surname, Sur_pat,
+def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
     Allergia, Patient_allergy, Birthvalue, Birth_entree, Diagnostic, Diagnos_pat):
     """
         Entry at first time a patient
@@ -29,30 +29,31 @@ def get(IDpatient, Patient_num, Patientname, Patient_entree, Surname, Sur_pat,
     MsgBox = messagebox.askyesno('Save data', 'Do you want to save ?')
     if MsgBox == 1:
         IDpatient = Patient_num.get()
-        Patientname = Patient_entree.get()
+        Patientname = Firstname_pat.get()
         Surname = Sur_pat.get()
         Allergia = Patient_allergy.get()
         Birthvalue = Birth_entree.get()
         Diagnostic = Diagnos_pat.get()
         print(Patientname)
         print(Birthvalue)
+        """
         try:
             if os.path.getsize('./newpatient/entryfile.txt'):
                 print("+ File 'entryfile.txt' exist !")
-            if Patient_num.get() == "" or Birth_entree.get() == "":
-                messagebox.showerror("MySQL Connection", "Enter Correct Details.")
+                if Patient_num.get() == "" or Firstname_pat.get() == "" or Sur_pat.get() == "":
+                    messagebox.showerror("MySQL Connection", "Enter Correct Details.")
         except FileNotFoundError as outcom5:
             print("+ Sorry, file 'entryfile.txt' not exist !")
             print(str(outcom5))
             print("+ File 'entryfile.txt' created !")
             with open('./newpatient/entryfile.txt', 'w') as namefile:
-                namefile.write(Patientname + '\n')
+                namefile.write(Patientname + Surname + '\n')
                 namefile.write(Birthvalue + '\n')
             sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='timetrackconn')
             cur = sqlCon.cursor()
             cur.execute("INSERT into timetrackconn values (%s, %s, %s, %s, %s, %s)",(
             Patient_num.get(),
-            Patient_entree.get(),
+            Firstname_pat.get(),
             Sur_pat.get(),
             Patient_allergy.get(),
             Birth_entree.get(),
@@ -61,6 +62,36 @@ def get(IDpatient, Patient_num, Patientname, Patient_entree, Surname, Sur_pat,
             sqlCon.commit()
             sqlCon.close()
             messagebox.showinfo("MySQL connection", "Record Entered Successfully !")
+        """
+        try:
+            if os.path.getsize('./newpatient/entryfile.txt'):
+                print("+ File 'entryfile.txt' exist !")
+        except FileNotFoundError as outcom5:
+            print("+ Sorry, file 'entryfile.txt' not exist !")
+            print(str(outcom5))
+            print("+ File 'entryfile.txt' created !")
+            with open('./newpatient/entryfile.txt', 'w') as namefile:
+                namefile.write(Patientname + " " + Surname + '\n')
+                namefile.write(Birthvalue + '\n')
+
+            # Interact with database to add
+            if Patient_num.get() == "" or Firstname_pat.get() == "" or Sur_pat.get() == "":
+                messagebox.showerror("MySQL Connection", "Enter Correct Details.")
+            else:
+                sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='timetrackconn')
+                cur = sqlCon.cursor()
+                cur.execute("INSERT into timetrackconn values (%s, %s, %s, %s, %s, %s)",(
+                Patient_num.get(),
+                Firstname_pat.get(),
+                Sur_pat.get(),
+                Patient_allergy.get(),
+                Birth_entree.get(),
+                Diagnos_pat.get(),
+                ))
+                sqlCon.commit()
+                sqlCon.close()
+                messagebox.showinfo("MySQL connection", "Record Entered Successfully !")
+
 
     gui.destroy()
 
@@ -78,14 +109,14 @@ Patient_num = Entry(gui, textvariable=IDpatient,
 Patient_num.pack()
 
 Patientname = StringVar()
-Patientname.set('Firstname + Lastname')
-Patient_entree = Entry(gui, textvariable=Patientname,
+Patientname.set('Firstname')
+Firstname_pat = Entry(gui, textvariable=Patientname,
     highlightbackground='light sky blue',
     bd=4)
-Patient_entree.pack()
+Firstname_pat.pack()
 
 Surname = StringVar()
-Surname.set("Nom de famile")
+Surname.set("Lastname")
 Sur_pat = Entry(gui, textvariable=Surname,
     highlightbackground='light sky blue',
     bd=4)
@@ -110,7 +141,7 @@ Birth_entree = Entry(gui, textvariable=Birthvalue,
 Birth_entree.pack()
 
 Diagnosis = StringVar()
-Diagnosis.set('Diagnostic')
+Diagnosis.set('Diagnostic (main)')
 Diagnos_pat = Entry(gui, textvariable=Diagnosis,
     highlightbackground='light sky blue',
     bd=4)
@@ -120,7 +151,7 @@ bouton1 = Button(gui, text="Enter", width=8, bd=3,
     fg='yellow', bg='RoyalBlue3', highlightbackground='light sky blue',
     activebackground='dark turquoise',
     command = lambda: get(IDpatient, Patient_num,
-        Patientname, Patient_entree,
+        Patientname, Firstname_pat,
         Surname, Sur_pat,
         Allergia, Patient_allergy,
         Birthvalue, Birth_entree, Diagnosis, Diagnos_pat))

@@ -9,7 +9,6 @@ import time
 import subprocess
 from boxapp import callBox
 from patcaps import callResident
-#from accessDB import showDbPatient
 from backapp import *
 
 
@@ -248,6 +247,10 @@ class MenuBar(Frame):
             background='black', activebackground='cyan',
             foreground='aquamarine', activeforeground='black',
             command=boss.showPatients)
+        me1.add_command(label='DataBase', font=("Times 14 bold"),
+            background='black', activebackground='aquamarine',
+            foreground='yellow', activeforeground='black',
+            command=boss.funcPyCon)
         me1.add_command(label='MapApp', font=("Times 14 bold"),
             background='black', activebackground='aquamarine',
             foreground='yellow', activeforeground='black',

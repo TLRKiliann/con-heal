@@ -16,14 +16,6 @@
 
 from tkinter import *
 from tkinter import ttk
-import subprocess
-import os
-import time
-import datetime
-from backapp import *
-from agendapp import dispAgBox
-from tttapp import dispTttBox
-from resapp import dispResFunc
 try:
     import pymysql
     pymysql.install_as_MySQLdb()
@@ -41,7 +33,6 @@ def showDbPatient(self):
     self.can.configure(background='cyan')
     self.photo=PhotoImage(file='./syno_gif/title_tt.png')
     self.item=self.can.create_image(625, 400, image=self.photo)
-
 
     PatientID = StringVar()
     Firstname = StringVar()
@@ -88,24 +79,24 @@ def showDbPatient(self):
         padx=8, pady=1, width=16, height=1, command=searchDB)
     self.btnSearch.pack(side=LEFT)
 
-    def hideTree():
+    #def hideTree():
         """
             To test how to delete ttk.Treeview() 
             on next interface (callBox or rescap)
-        """
-        """
+
         self.student_records.column("stdid", stretch=NO, minwidth=0, width=0)
         self.student_records.column("firstname", stretch=NO, minwidth=0, width=0)
         self.student_records.column("surname", stretch=NO, minwidth=0, width=0)
         self.student_records.column("born", stretch=NO, minwidth=0, width=0)
         self.student_records.column("allergy", stretch=NO, minwidth=0, width=0)
         self.student_records.column("maindiagnostic", stretch=NO, minwidth=0, width=0)
-        """
+        
         self.student_records.delete(*self.student_records.get_children())
         self.showSynopsis()
+        """
 
     self.butBox = Button(self.can, font=('arial', 12, 'bold'), text="Box", bd=4, 
-        padx=8, pady=1, width=16, height=1, command=hideTree)
+        padx=8, pady=1, width=16, height=1, command=quit)
     self.butBox.pack(side=RIGHT)
 
     self.can.configure(scrollregion=self.can.bbox(ALL))

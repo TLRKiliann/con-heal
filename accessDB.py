@@ -49,16 +49,12 @@ class TrackDB(Frame):
         Frame.__init__(self, borderwidth=5, bg='RoyalBlue4', padx=20, pady=20, relief=GROOVE)
         self.master.title('Time-Track- Developed by ko@l@tr33 - 2020')
         # ScrollCanvas limite de la zone à parcourir avec la barre
-        self.can = Canvas(self, width=1250, height=800, bg='cyan')
+        self.can = Canvas(self, width=1250, height=800, bg='RoyalBlue2')
         self.frame = Frame(self.can)
         self.vsb = Scrollbar(self, orient=VERTICAL, command=self.can.yview)
         self.can.configure(yscrollcommand=self.vsb.set)
         self.vsb.pack(side=RIGHT, fill=Y)
-        #self.can.pack(side=LEFT, fill=BOTH, expand=YES)
         self.can.create_window((4,4), window=self.frame, anchor=NW, tags="self.frame")
-        # Insertion of picture
-        self.photo = PhotoImage(file='./syno_gif/title_tt.png')
-        self.item = self.can.create_image(625, 400, image=self.photo)
         self.frame.bind("<Configure>", self.onFrameConfigure)
         self.can.pack(side=LEFT, fill=BOTH, expand=YES)
 
@@ -81,7 +77,7 @@ class TrackDB(Frame):
                 sqlCon.commit()
             sqlCon.close()
 
-        self.student_records=ttk.Treeview(self.can, height=24, columns=("stdid", 
+        self.student_records=ttk.Treeview(self.can, height=24,columns=("stdid", 
             "firstname", "surname", "born", "allergy", "maindiagnostic"))
 
         self.student_records.heading("stdid", text="ID")
@@ -104,11 +100,13 @@ class TrackDB(Frame):
 
         #self.student_records.bind("<ButtonRelease-1>", PyDataBaseInfo)
         self.btnSearch = Button(self.can, font=('arial', 12, 'bold'), text="Display All", bd=4, 
-            padx=8, pady=1, width=16, height=1, command=searchDB)
+            padx=8, pady=1, width=16, height=1, fg='white', bg='RoyalBlue3',
+            activebackground='cyan', activeforeground='RoyalBlue3', command=searchDB)
         self.btnSearch.pack(side=LEFT)
 
         self.butBox = Button(self.can, font=('arial', 12, 'bold'), text="Quit", bd=4, 
-            padx=8, pady=1, width=16, height=1, command=quit)
+            padx=8, pady=1, width=16, height=1, fg='white', bg='RoyalBlue3',
+            activebackground='cyan', activeforeground='RoyalBlue3', command=quit)
         self.butBox.pack(side=RIGHT)
 
         self.pack()

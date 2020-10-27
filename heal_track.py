@@ -247,9 +247,9 @@ class MenuBar(Frame):
             background='black', activebackground='cyan',
             foreground='aquamarine', activeforeground='black',
             command=boss.showPatients)
-        me1.add_command(label='DataBase', font=("Times 14 bold"),
+        me1.add_command(label='DataBase', underline=0, font=("Times 14 bold"),
             background='black', activebackground='aquamarine',
-            foreground='yellow', activeforeground='black',
+            foreground='white', activeforeground='black',
             command=boss.funcPyCon)
         me1.add_command(label='MapApp', font=("Times 14 bold"),
             background='black', activebackground='aquamarine',
@@ -1112,6 +1112,7 @@ class Application(Frame):
         mBar = MenuBar(self)
         mBar.pack(side=TOP, fill=X, expand=YES)
         # ScrollCanvas limite de la zone à parcourir avec la barre
+        # 1250 - 800
         self.can = Canvas(self, width=1250, height=800, bg='grey18')
         self.frame = Frame(self.can)
         self.vsb = Scrollbar(self, orient=VERTICAL, command=self.can.yview)

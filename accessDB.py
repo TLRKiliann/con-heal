@@ -16,6 +16,9 @@
 
 from tkinter import *
 from tkinter import ttk
+from boxapp import callBox
+from patcaps import callResident
+from backapp import *
 try:
     import pymysql
     pymysql.install_as_MySQLdb()
@@ -34,7 +37,7 @@ def showDbPatient(self):
     self.photo=PhotoImage(file='./syno_gif/title_tt.png')
     self.item=self.can.create_image(625, 400, image=self.photo)
 
-    PatientID = StringVar()
+    ID = StringVar()
     Firstname = StringVar()
     Surname = StringVar()
     Born = StringVar()
@@ -56,7 +59,7 @@ def showDbPatient(self):
     self.student_records=ttk.Treeview(self.can, height=24, columns=("stdid", 
         "firstname", "surname", "born", "allergy", "maindiagnostic"))
 
-    self.student_records.heading("stdid", text="PatientID")
+    self.student_records.heading("stdid", text="ID")
     self.student_records.heading("firstname", text="Firstname")
     self.student_records.heading("surname", text="Surname")
     self.student_records.heading("born", text="Born")
@@ -65,10 +68,10 @@ def showDbPatient(self):
 
     self.student_records['show']="headings"
 
-    self.student_records.column("stdid", width=100)
+    self.student_records.column("stdid", width=75)
     self.student_records.column("firstname", width=150)
     self.student_records.column("surname", width=150)
-    self.student_records.column("born", width=100)
+    self.student_records.column("born", width=125)
     self.student_records.column("allergy", width=200)
     self.student_records.column("maindiagnostic", width=200)
 
@@ -79,23 +82,7 @@ def showDbPatient(self):
         padx=8, pady=1, width=16, height=1, command=searchDB)
     self.btnSearch.pack(side=LEFT)
 
-    #def hideTree():
-        """
-            To test how to delete ttk.Treeview() 
-            on next interface (callBox or rescap)
-
-        self.student_records.column("stdid", stretch=NO, minwidth=0, width=0)
-        self.student_records.column("firstname", stretch=NO, minwidth=0, width=0)
-        self.student_records.column("surname", stretch=NO, minwidth=0, width=0)
-        self.student_records.column("born", stretch=NO, minwidth=0, width=0)
-        self.student_records.column("allergy", stretch=NO, minwidth=0, width=0)
-        self.student_records.column("maindiagnostic", stretch=NO, minwidth=0, width=0)
-        
-        self.student_records.delete(*self.student_records.get_children())
-        self.showSynopsis()
-        """
-
-    self.butBox = Button(self.can, font=('arial', 12, 'bold'), text="Box", bd=4, 
+    self.butBox = Button(self.can, font=('arial', 12, 'bold'), text="Quit", bd=4, 
         padx=8, pady=1, width=16, height=1, command=quit)
     self.butBox.pack(side=RIGHT)
 

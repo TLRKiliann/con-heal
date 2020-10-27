@@ -248,10 +248,6 @@ class MenuBar(Frame):
             background='black', activebackground='cyan',
             foreground='aquamarine', activeforeground='black',
             command=boss.showPatients)
-        me1.add_command(label="Psychotabs", underline=0, font=("Times 14 bold"),
-            background='black',  activebackground='cyan',
-            foreground='aquamarine', activeforeground='black',
-            command=boss.launchPsycho)
         me1.add_command(label='MapApp', font=("Times 14 bold"),
             background='black', activebackground='aquamarine',
             foreground='yellow', activeforeground='black',
@@ -263,15 +259,7 @@ class MenuBar(Frame):
         # Integration of 1st menu
         fileMenu.configure(activeforeground='black', activebackground='cyan',
             menu=me1)
-        """
-        def PyDataBaseInfo(ev):
-            viewInfo = self.student_records.focus()
-            learnerData = self.student_records.item(viewInfo)
-            row = learnerData['values']
-            StudentID.set(row[0])
-            Firstname.set(row[1])
-            Surname.set(row[2])
-        """
+
         # Agenda menu
         self.cmd_agenda=Menubutton(self, text='Agenda', font=("Times 14"),
             fg='cyan', bg='grey30', relief=GROOVE)
@@ -1141,7 +1129,6 @@ class Application(Frame):
         self.frame.bind("<Configure>", self.onFrameConfigure)
         self.can.pack(side=LEFT, fill=BOTH, expand=YES)
         # 3 buttons on welcome page.
-
         # Info button
         self.button1 = Button(self, text="Info", font=('Times 14 bold'),
             bg='RoyalBlue3', fg='cyan', command = self.frameInfo)
@@ -1159,20 +1146,20 @@ class Application(Frame):
             window=self.button2)
 
         # Synopsis button
-        self.button2 = Button(self, text="TEXTBOX", font=('Times 18 bold'),
+        self.button3 = Button(self, text="TEXTBOX", font=('Times 18 bold'),
             bg='RoyalBlue3', fg='cyan', command = self.showSynopsis)
-        self.button2.configure(width=15, bd=3, highlightbackground='blue',
+        self.button3.configure(width=15, bd=3, highlightbackground='blue',
             activebackground='dark turquoise')
-        self.button2_window = self.can.create_window(625, 550, anchor=CENTER,
-            window=self.button2)
+        self.button3_window = self.can.create_window(625, 550, anchor=CENTER,
+            window=self.button3)
 
         # Psychotabs button
-        self.button3 = Button(self, text="RESIDENTS", font=('Times 18 bold'),
+        self.button4 = Button(self, text="RESIDENTS", font=('Times 18 bold'),
             bg='RoyalBlue3', fg='cyan', command = self.showPatients)
-        self.button3.configure(width=15, bd=3, highlightbackground='blue', 
+        self.button4.configure(width=15, bd=3, highlightbackground='blue', 
             activebackground='dark turquoise')
-        self.button3_window = self.can.create_window(950, 550, anchor=CENTER,
-            window=self.button3)
+        self.button4_window = self.can.create_window(950, 550, anchor=CENTER,
+            window=self.button4)
         self.pack()
         
     # Method to reconfigure scrollbar every time.
@@ -1255,8 +1242,8 @@ class Application(Frame):
         """
             To display data from database
         """
+        #subprocess.run('./accessDB.py', check=True)
         showDbPatient(self)
-
 
     def showPatients(self):
         """

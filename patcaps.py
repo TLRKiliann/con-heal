@@ -155,10 +155,10 @@ def callResident(self):
     self.Data_write=Entry(self.can)
     self.new_data2=StringVar()
     self.Data_write=Entry(self.can, textvariable=self.new_data2,
-      highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=4)
     self.new_data2.set(line2)
     self.Data_write=self.can.create_window(self.x20, self.y20,
-      window=self.Data_write)
+        window=self.Data_write)
 
     self.x21, self.y21 = 271, 262
     self.b21=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
@@ -214,10 +214,10 @@ def callResident(self):
     self.Data_write=Entry(self.can)
     self.new_data3=StringVar()
     self.Data_write=Entry(self.can, textvariable=self.new_data3,
-      highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=4)
     self.new_data3.set(line3)
     self.Data_write=self.can.create_window(self.x30, self.y30,
-      window=self.Data_write)
+        window=self.Data_write)
 
     self.x31, self.y31 = 271, 294
     self.b31=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
@@ -273,10 +273,10 @@ def callResident(self):
     self.Data_write=Entry(self.can)
     self.new_data4=StringVar()
     self.Data_write=Entry(self.can, textvariable=self.new_data4,
-      highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=4)
     self.new_data4.set(line4)
     self.Data_write=self.can.create_window(self.x40, self.y40,
-      window=self.Data_write)
+        window=self.Data_write)
 
     self.x41, self.y41 = 271, 326
     self.b41=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
@@ -332,10 +332,10 @@ def callResident(self):
     self.Data_write=Entry(self.can)
     self.new_data5=StringVar()
     self.Data_write=Entry(self.can, textvariable=self.new_data5,
-      highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=4)
     self.new_data5.set(line5)
     self.Data_write=self.can.create_window(self.x50, self.y50,
-      window=self.Data_write)
+        window=self.Data_write)
 
     self.x51, self.y51 = 271, 358
     self.b51=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
@@ -391,10 +391,10 @@ def callResident(self):
     self.Data_write=Entry(self.can)
     self.new_data6=StringVar()
     self.Data_write=Entry(self.can, textvariable=self.new_data6,
-      highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=4)
     self.new_data6.set(line6)
     self.Data_write=self.can.create_window(self.x60, self.y60,
-      window=self.Data_write)
+        window=self.Data_write)
 
     self.x61, self.y61 = 271, 390
     self.b61=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
@@ -450,7 +450,7 @@ def callResident(self):
     self.Data_write=Entry(self.can)
     self.new_data7=StringVar()
     self.Data_write=Entry(self.can, textvariable=self.new_data7,
-      highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=4)
     self.new_data7.set(line7)
     self.Data_write=self.can.create_window(self.x70, self.y70,
       window=self.Data_write)
@@ -509,10 +509,10 @@ def callResident(self):
     self.Data_write=Entry(self.can)
     self.new_data8=StringVar()
     self.Data_write=Entry(self.can, textvariable=self.new_data8,
-      highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=4)
     self.new_data8.set(line8)
     self.Data_write=self.can.create_window(self.x80, self.y80,
-      window=self.Data_write)
+        window=self.Data_write)
 
     self.x81, self.y81 = 271, 454
     self.b81=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
@@ -568,10 +568,10 @@ def callResident(self):
     self.Data_write=Entry(self.can)
     self.new_data9=StringVar()
     self.Data_write=Entry(self.can, textvariable=self.new_data9,
-      highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=4)
     self.new_data9.set(line9)
     self.Data_write=self.can.create_window(self.x90, self.y90,
-      window=self.Data_write)
+        window=self.Data_write)
 
     self.x91, self.y91 = 271, 486
     self.b91=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
@@ -627,10 +627,10 @@ def callResident(self):
     self.Data_write=Entry(self.can)
     self.new_data10=StringVar()
     self.Data_write=Entry(self.can, textvariable=self.new_data10,
-      highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=4)
     self.new_data10.set(line10)
     self.Data_write=self.can.create_window(self.x100, self.y100,
-      window=self.Data_write)
+        window=self.Data_write)
 
     self.x101, self.y101 = 271, 518
     self.b101=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
@@ -686,10 +686,10 @@ def callResident(self):
     self.Data_write=Entry(self.can)
     self.new_data11=StringVar()
     self.Data_write=Entry(self.can, textvariable=self.new_data11,
-      highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=4)
     self.new_data11.set(line11)
     self.Data_write=self.can.create_window(self.x110, self.y110,
-      window=self.Data_write)
+        window=self.Data_write)
 
     self.x111, self.y111 = 271, 550
     self.b111=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
@@ -745,10 +745,10 @@ def callResident(self):
     self.Data_write=Entry(self.can)
     self.new_data12=StringVar()
     self.Data_write=Entry(self.can, textvariable=self.new_data12,
-      highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=4)
     self.new_data12.set(line12)
     self.Data_write=self.can.create_window(self.x120, self.y120,
-      window=self.Data_write)
+        window=self.Data_write)
 
     self.x121, self.y121 = 271, 582
     self.b121=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
@@ -804,10 +804,10 @@ def callResident(self):
     self.Data_write=Entry(self.can)
     self.new_data13=StringVar()
     self.Data_write=Entry(self.can, textvariable=self.new_data13,
-      highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=4)
     self.new_data13.set(line13)
     self.Data_write=self.can.create_window(self.x130, self.y130,
-      window=self.Data_write)
+        window=self.Data_write)
 
     self.x131, self.y131 = 271, 614
     self.b131=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
@@ -863,10 +863,10 @@ def callResident(self):
     self.Data_write=Entry(self.can)
     self.new_data14=StringVar()
     self.Data_write=Entry(self.can, textvariable=self.new_data14,
-      highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=4)
     self.new_data14.set(line14)
     self.Data_write=self.can.create_window(self.x140, self.y140,
-      window=self.Data_write)
+        window=self.Data_write)
 
     self.x141, self.y141 = 271, 646
     self.b141=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
@@ -922,10 +922,10 @@ def callResident(self):
     self.Data_write=Entry(self.can)
     self.new_data15=StringVar()
     self.Data_write=Entry(self.can, textvariable=self.new_data15,
-      highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=4)
     self.new_data15.set(line15)
     self.Data_write=self.can.create_window(self.x150, self.y150,
-      window=self.Data_write)
+        window=self.Data_write)
 
     self.x151, self.y151 = 271, 678
     self.b151=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
@@ -981,10 +981,10 @@ def callResident(self):
     self.Data_write=Entry(self.can)
     self.new_data16=StringVar()
     self.Data_write=Entry(self.can, textvariable=self.new_data16,
-      highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=4)
     self.new_data16.set(line16)
     self.Data_write=self.can.create_window(self.x160, self.y160,
-      window=self.Data_write)
+        window=self.Data_write)
 
     self.x161, self.y161 = 271, 710
     self.b161=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
@@ -1040,10 +1040,10 @@ def callResident(self):
     self.Data_write=Entry(self.can)
     self.new_data17=StringVar()
     self.Data_write=Entry(self.can, textvariable=self.new_data17,
-      highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=4)
     self.new_data17.set(line17)
     self.Data_write=self.can.create_window(self.x170, self.y170,
-      window=self.Data_write)
+        window=self.Data_write)
 
     self.x171, self.y171 = 271, 742
     self.b171=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
@@ -1099,10 +1099,10 @@ def callResident(self):
     self.Data_write=Entry(self.can)
     self.new_data18=StringVar()
     self.Data_write=Entry(self.can, textvariable=self.new_data18,
-      highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=4)
     self.new_data18.set(line18)
     self.Data_write=self.can.create_window(self.x180, self.y180,
-      window=self.Data_write)
+        window=self.Data_write)
 
     self.x181, self.y181 = 271, 774
     self.b181=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
@@ -1158,10 +1158,10 @@ def callResident(self):
     self.Data_write=Entry(self.can)
     self.new_data19=StringVar()
     self.Data_write=Entry(self.can, textvariable=self.new_data19,
-      highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=4)
     self.new_data19.set(line19)
     self.Data_write=self.can.create_window(self.x190, self.y190,
-      window=self.Data_write)
+        window=self.Data_write)
 
     self.x191, self.y191 = 271, 806
     self.b191=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
@@ -1217,10 +1217,10 @@ def callResident(self):
     self.Data_write=Entry(self.can)
     self.new_data20=StringVar()
     self.Data_write=Entry(self.can, textvariable=self.new_data20,
-      highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=4)
     self.new_data20.set(line20)
     self.Data_write=self.can.create_window(self.x200, self.y200,
-      window=self.Data_write)
+        window=self.Data_write)
 
     self.x201, self.y201 = 271, 838
     self.b201=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
@@ -1276,10 +1276,10 @@ def callResident(self):
     self.Data_write=Entry(self.can)
     self.new_data21=StringVar()
     self.Data_write=Entry(self.can, textvariable=self.new_data21,
-      highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=4)
     self.new_data21.set(line21)
     self.Data_write=self.can.create_window(self.x210, self.y210,
-      window=self.Data_write)
+        window=self.Data_write)
 
     self.x211, self.y211 = 271, 870
     self.b211=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
@@ -1335,10 +1335,10 @@ def callResident(self):
     self.Data_write=Entry(self.can)
     self.new_data22=StringVar()
     self.Data_write=Entry(self.can, textvariable=self.new_data22,
-      highlightbackground='grey', bd=4)
+        highlightbackground='grey', bd=4)
     self.new_data22.set(line22)
     self.Data_write=self.can.create_window(self.x220, self.y220,
-      window=self.Data_write)
+        window=self.Data_write)
 
     self.x221, self.y221 = 271, 902
     self.b221=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
@@ -1388,16 +1388,19 @@ def callResident(self):
             line23=namefile.readline()
     except FileNotFoundError as callfile23:
         print("File entryfile23.txt doesn't exist !", callfile23)
-
-    self.new_data23=line23
-    self.x230, self.y230 = 129, 934
-    self.Data_write=Entry(self.can)
-    self.new_data23=StringVar()
-    self.Data_write=Entry(self.can, textvariable=self.new_data23,
-      highlightbackground='grey', bd=4)
-    self.new_data23.set(line23)
-    self.Data_write=self.can.create_window(self.x230, self.y230,
-      window=self.Data_write)
+    
+    try:
+        self.new_data23=line23
+        self.x230, self.y230 = 129, 934
+        self.Data_write=Entry(self.can)
+        self.new_data23=StringVar()
+        self.Data_write=Entry(self.can, textvariable=self.new_data23,
+            highlightbackground='grey', bd=4)
+        self.new_data23.set(line23)
+        self.Data_write=self.can.create_window(self.x230, self.y230,
+            window=self.Data_write)
+    except UnboundLocalError as ub_error:
+        print("+ File 23 not found !", ub_error)
 
     self.x231, self.y231 = 271, 934
     self.b231=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
@@ -1448,15 +1451,18 @@ def callResident(self):
     except FileNotFoundError as callfile24:
         print("File entryfile24.txt doesn't exist !", callfile24)
 
-    self.new_data24=line24
-    self.x240, self.y240 = 129, 966
-    self.Data_write=Entry(self.can)
-    self.new_data24=StringVar()
-    self.Data_write=Entry(self.can, textvariable=self.new_data24,
-      highlightbackground='grey', bd=4)
-    self.new_data24.set(line24)
-    self.Data_write=self.can.create_window(self.x240, self.y240,
-      window=self.Data_write)
+    try:
+        self.new_data24=line24
+        self.x240, self.y240 = 129, 966
+        self.Data_write=Entry(self.can)
+        self.new_data24=StringVar()
+        self.Data_write=Entry(self.can, textvariable=self.new_data24,
+          highlightbackground='grey', bd=4)
+        self.new_data24.set(line24)
+        self.Data_write=self.can.create_window(self.x240, self.y240,
+            window=self.Data_write)
+    except UnboundLocalError as ub_error:
+        print("+ File 23 not found !", ub_error)
 
     self.x241, self.y241 = 271, 966
     self.b241=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',

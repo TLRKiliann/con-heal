@@ -414,10 +414,10 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
             if os.path.getsize('./newpatient/entryfile24.txt'):
                 return
 
-    gui.destroy()
+    #gui.destroy()
 
 labelName = Label(gui)
-labelName = Label(text='Enter NAME : ',
+labelName = Label(text='Enter Name : ',
     font="Times 14 bold",
     fg='RoyalBlue4', bg='cyan')
 labelName.pack(pady=10)

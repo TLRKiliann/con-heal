@@ -101,6 +101,7 @@ def showDbPatient(self):
         self.student_records.column("allergy", stretch=NO, minwidth=0, width=0)
         self.student_records.column("maindiagnostic", stretch=NO, minwidth=0, width=0)
         """
+        self.student_records.delete(*self.student_records.get_children())
         self.showSynopsis()
 
     self.butBox = Button(self.can, font=('arial', 12, 'bold'), text="Box", bd=4, 

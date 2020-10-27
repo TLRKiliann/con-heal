@@ -30,6 +30,9 @@ Install pymysql in virtualenv :
 
 Already done... (look at requirements.txt)
 
+@ Launch app with :
+> python3 heal_track.py
+
 # Still under development !
 
 ko@l@tr33

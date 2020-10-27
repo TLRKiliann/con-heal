@@ -93,12 +93,14 @@ def showDbPatient(self):
             To test how to delete ttk.Treeview() 
             on next interface (callBox or rescap)
         """
+        """
         self.student_records.column("stdid", stretch=NO, minwidth=0, width=0)
         self.student_records.column("firstname", stretch=NO, minwidth=0, width=0)
         self.student_records.column("surname", stretch=NO, minwidth=0, width=0)
         self.student_records.column("born", stretch=NO, minwidth=0, width=0)
         self.student_records.column("allergy", stretch=NO, minwidth=0, width=0)
         self.student_records.column("maindiagnostic", stretch=NO, minwidth=0, width=0)
+        """
         self.showSynopsis()
 
     self.butBox = Button(self.can, font=('arial', 12, 'bold'), text="Box", bd=4, 

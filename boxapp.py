@@ -14,9 +14,7 @@ from tttapp import dispTttBox
 from resapp import dispResFunc
 from patcaps import callResident
 
-#master.destroy()
-#subprocess.call('./boxapp.py')
-# Main page
+
 def callBox(self):
     self.can.delete(ALL)
     #self.ttk.delete(*items)

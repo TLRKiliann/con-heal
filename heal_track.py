@@ -9,7 +9,7 @@ import time
 import subprocess
 from boxapp import callBox
 from patcaps import callResident
-from accessDB import showDbPatient
+#from accessDB import showDbPatient
 from backapp import *
 
 
@@ -1242,8 +1242,8 @@ class Application(Frame):
         """
             To display data from database
         """
-        #subprocess.run('./accessDB.py', check=True)
-        showDbPatient(self)
+        subprocess.run('./accessDB.py', check=True)
+        #showDbPatient(self)
 
     def showPatients(self):
         """
@@ -1302,12 +1302,6 @@ class Application(Frame):
         messagebox.showwarning("Warning", "Don't forget to enter allergy too ! ;)")
         subprocess.run('./newpatient/torecord.py', check=True)
 
-    def launchPsycho(self):
-        """
-            To launch psychotabs.py
-        """
-        subprocess.run('./psychotabs.py', check=True)
-
     def patientAgenda(self):
         """
             To call agenda app for patient 1
@@ -1315,21 +1309,13 @@ class Application(Frame):
         subprocess.run('./patient_agenda/origin_agenda.py', check=True)
 
     def patientAgenda2(self):
-        """
-            To call agenda app for patient 2
-        """
         subprocess.run('./patient_agenda/origin_agenda2.py', check=True)
 
     def patientAgenda3(self):
-        """
-            To call agenda app for patient 3
-        """
+
         subprocess.run('./patient_agenda/origin_agenda3.py', check=True)
 
     def patientAgenda4(self):
-        """
-            To call agenda app for patient 4
-        """
         subprocess.run('./patient_agenda/origin_agenda4.py', check=True)
 
     def patientAgenda5(self):

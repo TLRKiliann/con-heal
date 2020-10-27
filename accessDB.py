@@ -24,7 +24,6 @@ from backapp import *
 from agendapp import dispAgBox
 from tttapp import dispTttBox
 from resapp import dispResFunc
-from boxapp import callBox
 try:
     import pymysql
     pymysql.install_as_MySQLdb()
@@ -89,13 +88,21 @@ def showDbPatient(self):
         padx=8, pady=1, width=16, height=1, command=searchDB)
     self.btnSearch.pack(side=LEFT)
 
-    def showBox():
-        self.student_records.delete(*self.student_records.get_children())
-        self.master.destroy()
-        subprocess.run('./heal_track.py', check=True)
+    def hideTree():
+        """
+            To test how to delete ttk.Treeview() 
+            on next interface (callBox or rescap)
+        """
+        self.student_records.column("stdid", stretch=NO, minwidth=0, width=0)
+        self.student_records.column("firstname", stretch=NO, minwidth=0, width=0)
+        self.student_records.column("surname", stretch=NO, minwidth=0, width=0)
+        self.student_records.column("born", stretch=NO, minwidth=0, width=0)
+        self.student_records.column("allergy", stretch=NO, minwidth=0, width=0)
+        self.student_records.column("maindiagnostic", stretch=NO, minwidth=0, width=0)
+        self.showSynopsis()
 
     self.butBox = Button(self.can, font=('arial', 12, 'bold'), text="Box", bd=4, 
-        padx=8, pady=1, width=16, height=1, command=showBox)
+        padx=8, pady=1, width=16, height=1, command=hideTree)
     self.butBox.pack(side=RIGHT)
 
     self.can.configure(scrollregion=self.can.bbox(ALL))

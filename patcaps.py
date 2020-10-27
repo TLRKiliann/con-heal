@@ -622,15 +622,18 @@ def callResident(self):
     except FileNotFoundError as callfile10:
         print("File entryfile10.txt doesn't exist !", callfile10)
 
-    self.new_data10=line10
-    self.x100, self.y100 = 129, 518
-    self.Data_write=Entry(self.can)
-    self.new_data10=StringVar()
-    self.Data_write=Entry(self.can, textvariable=self.new_data10,
-        highlightbackground='grey', bd=4)
-    self.new_data10.set(line10)
-    self.Data_write=self.can.create_window(self.x100, self.y100,
-        window=self.Data_write)
+    try:
+        self.new_data10=line10
+        self.x100, self.y100 = 129, 518
+        self.Data_write=Entry(self.can)
+        self.new_data10=StringVar()
+        self.Data_write=Entry(self.can, textvariable=self.new_data10,
+            highlightbackground='grey', bd=4)
+        self.new_data10.set(line10)
+        self.Data_write=self.can.create_window(self.x100, self.y100,
+            window=self.Data_write)
+    except UnboundLocalError as ub_error10:
+        print("+ File 10 not created !", ub_error10)
 
     self.x101, self.y101 = 271, 518
     self.b101=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
@@ -681,15 +684,18 @@ def callResident(self):
     except FileNotFoundError as callfile11:
         print("File entryfile11.txt doesn't exist !", callfile11)
 
-    self.new_data11=line11
-    self.x110, self.y110 = 129, 550
-    self.Data_write=Entry(self.can)
-    self.new_data11=StringVar()
-    self.Data_write=Entry(self.can, textvariable=self.new_data11,
-        highlightbackground='grey', bd=4)
-    self.new_data11.set(line11)
-    self.Data_write=self.can.create_window(self.x110, self.y110,
-        window=self.Data_write)
+    try:
+        self.new_data11=line11
+        self.x110, self.y110 = 129, 550
+        self.Data_write=Entry(self.can)
+        self.new_data11=StringVar()
+        self.Data_write=Entry(self.can, textvariable=self.new_data11,
+            highlightbackground='grey', bd=4)
+        self.new_data11.set(line11)
+        self.Data_write=self.can.create_window(self.x110, self.y110,
+            window=self.Data_write)
+    except UnboundLocalError as ub_error11:
+        print("+ File 11 not created !", ub_error11)
 
     self.x111, self.y111 = 271, 550
     self.b111=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
@@ -740,15 +746,18 @@ def callResident(self):
     except FileNotFoundError as callfile12:
         print("File entryfile12.txt doesn't exist !", callfile12)
 
-    self.new_data12=line12
-    self.x120, self.y120 = 129, 582
-    self.Data_write=Entry(self.can)
-    self.new_data12=StringVar()
-    self.Data_write=Entry(self.can, textvariable=self.new_data12,
-        highlightbackground='grey', bd=4)
-    self.new_data12.set(line12)
-    self.Data_write=self.can.create_window(self.x120, self.y120,
-        window=self.Data_write)
+    try:
+        self.new_data12=line12
+        self.x120, self.y120 = 129, 582
+        self.Data_write=Entry(self.can)
+        self.new_data12=StringVar()
+        self.Data_write=Entry(self.can, textvariable=self.new_data12,
+            highlightbackground='grey', bd=4)
+        self.new_data12.set(line12)
+        self.Data_write=self.can.create_window(self.x120, self.y120,
+            window=self.Data_write)
+    except UnboundLocalError as ub_error12:
+        print("+ File 12 not created !", ub_error12)
 
     self.x121, self.y121 = 271, 582
     self.b121=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
@@ -799,15 +808,18 @@ def callResident(self):
     except FileNotFoundError as callfile13:
         print("File entryfile13.txt doesn't exist !", callfile13)
 
-    self.new_data13=line13
-    self.x130, self.y130 = 129, 614
-    self.Data_write=Entry(self.can)
-    self.new_data13=StringVar()
-    self.Data_write=Entry(self.can, textvariable=self.new_data13,
-        highlightbackground='grey', bd=4)
-    self.new_data13.set(line13)
-    self.Data_write=self.can.create_window(self.x130, self.y130,
-        window=self.Data_write)
+    try:
+        self.new_data13=line13
+        self.x130, self.y130 = 129, 614
+        self.Data_write=Entry(self.can)
+        self.new_data13=StringVar()
+        self.Data_write=Entry(self.can, textvariable=self.new_data13,
+            highlightbackground='grey', bd=4)
+        self.new_data13.set(line13)
+        self.Data_write=self.can.create_window(self.x130, self.y130,
+            window=self.Data_write)
+    except UnboundLocalError as ub_error13:
+        print("+ File 13 not created !", ub_error13)
 
     self.x131, self.y131 = 271, 614
     self.b131=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
@@ -858,15 +870,18 @@ def callResident(self):
     except FileNotFoundError as callfile14:
         print("File entryfile14.txt doesn't exist !", callfile14)
 
-    self.new_data14=line14
-    self.x140, self.y140 = 129, 646
-    self.Data_write=Entry(self.can)
-    self.new_data14=StringVar()
-    self.Data_write=Entry(self.can, textvariable=self.new_data14,
-        highlightbackground='grey', bd=4)
-    self.new_data14.set(line14)
-    self.Data_write=self.can.create_window(self.x140, self.y140,
-        window=self.Data_write)
+    try:
+        self.new_data14=line14
+        self.x140, self.y140 = 129, 646
+        self.Data_write=Entry(self.can)
+        self.new_data14=StringVar()
+        self.Data_write=Entry(self.can, textvariable=self.new_data14,
+            highlightbackground='grey', bd=4)
+        self.new_data14.set(line14)
+        self.Data_write=self.can.create_window(self.x140, self.y140,
+            window=self.Data_write)
+    except UnboundLocalError as ub_error14:
+        print("+ File 14 not created !", ub_error14)
 
     self.x141, self.y141 = 271, 646
     self.b141=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
@@ -916,16 +931,19 @@ def callResident(self):
             line15=namefile.readline()
     except FileNotFoundError as callfile15:
         print("File entryfile15.txt doesn't exist !", callfile15)
-
-    self.new_data15=line15
-    self.x150, self.y150 = 129, 678
-    self.Data_write=Entry(self.can)
-    self.new_data15=StringVar()
-    self.Data_write=Entry(self.can, textvariable=self.new_data15,
-        highlightbackground='grey', bd=4)
-    self.new_data15.set(line15)
-    self.Data_write=self.can.create_window(self.x150, self.y150,
-        window=self.Data_write)
+    
+    try:
+        self.new_data15=line15
+        self.x150, self.y150 = 129, 678
+        self.Data_write=Entry(self.can)
+        self.new_data15=StringVar()
+        self.Data_write=Entry(self.can, textvariable=self.new_data15,
+            highlightbackground='grey', bd=4)
+        self.new_data15.set(line15)
+        self.Data_write=self.can.create_window(self.x150, self.y150,
+            window=self.Data_write)
+    except UnboundLocalError as ub_error15:
+        print("+ File 15 not created !", ub_error15)
 
     self.x151, self.y151 = 271, 678
     self.b151=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
@@ -976,15 +994,18 @@ def callResident(self):
     except FileNotFoundError as callfile16:
         print("File entryfile16.txt doesn't exist !", callfile16)
 
-    self.new_data16=line16
-    self.x160, self.y160 = 129, 710
-    self.Data_write=Entry(self.can)
-    self.new_data16=StringVar()
-    self.Data_write=Entry(self.can, textvariable=self.new_data16,
-        highlightbackground='grey', bd=4)
-    self.new_data16.set(line16)
-    self.Data_write=self.can.create_window(self.x160, self.y160,
-        window=self.Data_write)
+    try:
+        self.new_data16=line16
+        self.x160, self.y160 = 129, 710
+        self.Data_write=Entry(self.can)
+        self.new_data16=StringVar()
+        self.Data_write=Entry(self.can, textvariable=self.new_data16,
+            highlightbackground='grey', bd=4)
+        self.new_data16.set(line16)
+        self.Data_write=self.can.create_window(self.x160, self.y160,
+            window=self.Data_write)
+    except UnboundLocalError as ub_error16:
+        print("+ File 16 not created !", ub_error16)
 
     self.x161, self.y161 = 271, 710
     self.b161=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
@@ -1035,15 +1056,18 @@ def callResident(self):
     except FileNotFoundError as callfile17:
         print("File entryfile17.txt doesn't exist !", callfile17)
 
-    self.new_data17=line17
-    self.x170, self.y170 = 129, 742
-    self.Data_write=Entry(self.can)
-    self.new_data17=StringVar()
-    self.Data_write=Entry(self.can, textvariable=self.new_data17,
-        highlightbackground='grey', bd=4)
-    self.new_data17.set(line17)
-    self.Data_write=self.can.create_window(self.x170, self.y170,
-        window=self.Data_write)
+    try:
+        self.new_data17=line17
+        self.x170, self.y170 = 129, 742
+        self.Data_write=Entry(self.can)
+        self.new_data17=StringVar()
+        self.Data_write=Entry(self.can, textvariable=self.new_data17,
+            highlightbackground='grey', bd=4)
+        self.new_data17.set(line17)
+        self.Data_write=self.can.create_window(self.x170, self.y170,
+            window=self.Data_write)
+    except UnboundLocalError as ub_error17:
+        print("+ File 17 not created !", ub_error17)
 
     self.x171, self.y171 = 271, 742
     self.b171=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
@@ -1094,15 +1118,18 @@ def callResident(self):
     except FileNotFoundError as callfile18:
         print("File entryfile18.txt doesn't exist !", callfile18)
 
-    self.new_data18=line18
-    self.x180, self.y180 = 129, 774
-    self.Data_write=Entry(self.can)
-    self.new_data18=StringVar()
-    self.Data_write=Entry(self.can, textvariable=self.new_data18,
-        highlightbackground='grey', bd=4)
-    self.new_data18.set(line18)
-    self.Data_write=self.can.create_window(self.x180, self.y180,
-        window=self.Data_write)
+    try:
+        self.new_data18=line18
+        self.x180, self.y180 = 129, 774
+        self.Data_write=Entry(self.can)
+        self.new_data18=StringVar()
+        self.Data_write=Entry(self.can, textvariable=self.new_data18,
+            highlightbackground='grey', bd=4)
+        self.new_data18.set(line18)
+        self.Data_write=self.can.create_window(self.x180, self.y180,
+            window=self.Data_write)
+    except UnboundLocalError as ub_error18:
+        print("+ File 18 not created !", ub_error18)
 
     self.x181, self.y181 = 271, 774
     self.b181=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
@@ -1153,15 +1180,18 @@ def callResident(self):
     except FileNotFoundError as callfile19:
         print("File entryfile19.txt doesn't exist !", callfile19)
 
-    self.new_data19=line19
-    self.x190, self.y190 = 129, 806
-    self.Data_write=Entry(self.can)
-    self.new_data19=StringVar()
-    self.Data_write=Entry(self.can, textvariable=self.new_data19,
-        highlightbackground='grey', bd=4)
-    self.new_data19.set(line19)
-    self.Data_write=self.can.create_window(self.x190, self.y190,
-        window=self.Data_write)
+    try:
+        self.new_data19=line19
+        self.x190, self.y190 = 129, 806
+        self.Data_write=Entry(self.can)
+        self.new_data19=StringVar()
+        self.Data_write=Entry(self.can, textvariable=self.new_data19,
+            highlightbackground='grey', bd=4)
+        self.new_data19.set(line19)
+        self.Data_write=self.can.create_window(self.x190, self.y190,
+            window=self.Data_write)
+    except UnboundLocalError as ub_error19:
+        print("+ File 19 not created !", ub_error19)
 
     self.x191, self.y191 = 271, 806
     self.b191=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
@@ -1212,15 +1242,18 @@ def callResident(self):
     except FileNotFoundError as callfile20:
         print("File entryfile20.txt doesn't exist !", callfile20)
 
-    self.new_data20=line20
-    self.x200, self.y200 = 129, 838
-    self.Data_write=Entry(self.can)
-    self.new_data20=StringVar()
-    self.Data_write=Entry(self.can, textvariable=self.new_data20,
-        highlightbackground='grey', bd=4)
-    self.new_data20.set(line20)
-    self.Data_write=self.can.create_window(self.x200, self.y200,
-        window=self.Data_write)
+    try:
+        self.new_data20=line20
+        self.x200, self.y200 = 129, 838
+        self.Data_write=Entry(self.can)
+        self.new_data20=StringVar()
+        self.Data_write=Entry(self.can, textvariable=self.new_data20,
+            highlightbackground='grey', bd=4)
+        self.new_data20.set(line20)
+        self.Data_write=self.can.create_window(self.x200, self.y200,
+            window=self.Data_write)
+    except UnboundLocalError as ub_error20:
+        print("+ File 20 not created !", ub_error20)
 
     self.x201, self.y201 = 271, 838
     self.b201=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
@@ -1271,15 +1304,18 @@ def callResident(self):
     except FileNotFoundError as callfile21:
         print("File entryfile21.txt doesn't exist !", callfile21)
 
-    self.new_data21=line21
-    self.x210, self.y210 = 129, 870
-    self.Data_write=Entry(self.can)
-    self.new_data21=StringVar()
-    self.Data_write=Entry(self.can, textvariable=self.new_data21,
-        highlightbackground='grey', bd=4)
-    self.new_data21.set(line21)
-    self.Data_write=self.can.create_window(self.x210, self.y210,
-        window=self.Data_write)
+    try:
+        self.new_data21=line21
+        self.x210, self.y210 = 129, 870
+        self.Data_write=Entry(self.can)
+        self.new_data21=StringVar()
+        self.Data_write=Entry(self.can, textvariable=self.new_data21,
+            highlightbackground='grey', bd=4)
+        self.new_data21.set(line21)
+        self.Data_write=self.can.create_window(self.x210, self.y210,
+            window=self.Data_write)
+    except UnboundLocalError as ub_error21:
+        print("+ File 21 not created !", ub_error21)
 
     self.x211, self.y211 = 271, 870
     self.b211=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
@@ -1329,16 +1365,19 @@ def callResident(self):
             line22=namefile.readline()
     except FileNotFoundError as callfile22:
         print("File entryfile22.txt doesn't exist !", callfile22)
-
-    self.new_data22=line22
-    self.x220, self.y220 = 129, 902
-    self.Data_write=Entry(self.can)
-    self.new_data22=StringVar()
-    self.Data_write=Entry(self.can, textvariable=self.new_data22,
-        highlightbackground='grey', bd=4)
-    self.new_data22.set(line22)
-    self.Data_write=self.can.create_window(self.x220, self.y220,
-        window=self.Data_write)
+    
+    try:
+        self.new_data22=line22
+        self.x220, self.y220 = 129, 902
+        self.Data_write=Entry(self.can)
+        self.new_data22=StringVar()
+        self.Data_write=Entry(self.can, textvariable=self.new_data22,
+            highlightbackground='grey', bd=4)
+        self.new_data22.set(line22)
+        self.Data_write=self.can.create_window(self.x220, self.y220,
+            window=self.Data_write)
+    except UnboundLocalError as ub_error22:
+        print("+ File 22 not created !", ub_error22)
 
     self.x221, self.y221 = 271, 902
     self.b221=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
@@ -1399,8 +1438,8 @@ def callResident(self):
         self.new_data23.set(line23)
         self.Data_write=self.can.create_window(self.x230, self.y230,
             window=self.Data_write)
-    except UnboundLocalError as ub_error:
-        print("+ File 23 not found !", ub_error)
+    except UnboundLocalError as ub_error23:
+        print("+ File 23 not created !", ub_error23)
 
     self.x231, self.y231 = 271, 934
     self.b231=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
@@ -1461,8 +1500,8 @@ def callResident(self):
         self.new_data24.set(line24)
         self.Data_write=self.can.create_window(self.x240, self.y240,
             window=self.Data_write)
-    except UnboundLocalError as ub_error:
-        print("+ File 23 not found !", ub_error)
+    except UnboundLocalError as ub_erro24:
+        print("+ File 24 not created !", ub_error24)
 
     self.x241, self.y241 = 271, 966
     self.b241=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',

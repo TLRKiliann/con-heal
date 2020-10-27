@@ -16,7 +16,6 @@ from patcaps import callResident
 
 
 def callBox(self):
-    self.frame.delete(ALL)
     self.can.delete(ALL)
     #self.ttk.delete(*items)
     #self.student_records.delete(*self.student_records.get_children())

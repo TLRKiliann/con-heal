@@ -1,0 +1,8 @@
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
+
+En date du : 28/10/2020 à 23:34:06 :
+Patient name : Aaron Schwartz
++ Surveillance du sommeil requise
++ Accompagnement ou aide dans se recréer requis
+---
+

@@ -1,0 +1,9 @@
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
+
+En date du : 28/10/2020 à 21:59:53 :
+Patient name : Edward Snowden
++ Surveillance respiratoire requise
++ Surveillance du sommeil requise
++ Surveillance propreté et/ou téguments requise
+---
+

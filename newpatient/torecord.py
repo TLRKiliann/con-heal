@@ -644,7 +644,7 @@ labelAller = Label(text='Allergy : ',
 labelAller.pack(pady=10)
 
 Allergia=StringVar()
-Allergia.set('Allergy')
+Allergia.set('None')
 Patient_allergy = Entry(gui, textvariable=Allergia,
     highlightbackground='light sky blue',
     bd=4)
@@ -657,7 +657,7 @@ labelTrans = Label(text='Transmissible Disease : ',
 labelTrans.pack(pady=10)
 
 TransDisVal = StringVar()
-TransDisVal.set('Transmissible Disease')
+TransDisVal.set('None')
 TransDisease = Entry(gui, textvariable=TransDisVal,
     highlightbackground='light sky blue',
     bd=4)
@@ -682,7 +682,7 @@ bouton1 = Button(gui, text="Enter", width=8, bd=4,
     activebackground='dark turquoise',
     command = lambda: get(PatientID, patientnum, Firstname, labelfirst,
         Surname, lblsurname, Birthvalue, Birth_entree, Allergia,
-        Patient_allergy, Diagnosis, Diagnos_pat))
+        Patient_allergy, TransDisVal, TransDisease, Diagnosis, Diagnos_pat))
 bouton1.pack(side=LEFT, padx=10, pady=20)
 
 buttQuit=Button(gui, text="Quit", width=8, bd=4,

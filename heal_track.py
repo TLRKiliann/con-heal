@@ -1108,7 +1108,7 @@ class Application(Frame):
     """
     def __init__(self, boss=None):
         Frame.__init__(self, borderwidth=5, bg='RoyalBlue4', padx=20, pady=20, relief=GROOVE)
-        self.master.title('Time-Track- Developed by ko@l@tr33 - 2020')
+        self.master.title('Heal-Track Developed by ko@l@tr33 - 2020')
         mBar = MenuBar(self)
         mBar.pack(side=TOP, fill=X, expand=YES)
         # ScrollCanvas limite de la zone à parcourir avec la barre
@@ -1205,14 +1205,14 @@ class Application(Frame):
             "---> Agenda is verified every day and pop-up"
             "to show you if an appointment is fixed for tomorrow\n\n"
 
-            "How to use time-track :\n\n"
+            "How to use heal-track :\n\n"
 
             "Entry + Add patient ---> Allergy + Intolerance ---> 14 Needs ---> Care and Monitoring :\n"
             "---------------------------------------------------------------------------------------------------------\n"
             "Use 'Entry' button to enter for first time new patient. Use 'Add "
             "patient' once time all patients were enter \n"
             "(button to replace a patient who's left with delete button).\n"
-            "Once time, patient had added use 'allergy' button to enter an allaergy "
+            "Once time, patient had added use 'allergy' button to enter an allergy "
             "if none, write and enter 'none'!\n"
             "You can also use 'Intolerance' in the Menu Bar to complete 'allergy'.\n"
             "After it, Care and Monitoring is available only if you have entered one "
@@ -1228,9 +1228,6 @@ class Application(Frame):
             "+ 14 Needs\n"
             "+ Labo + Comburtest (urinary stix)\n"
             "+ Agenda\n\n"
-
-            "PSYCHOTABS\n\n"
-            "Psychotabs is an application only for consulting neurleptics treatments.\n\n"
 
             "\nDevelopped on Linux Xubuntu (xfce4) Voyager 18.04 by Cédric Kuchen - alias ko@l@tr33\n",
             font=('Times', 13), fill='aquamarine')
@@ -1276,7 +1273,7 @@ class Application(Frame):
 
         self.lab5=Label(self.labFra, justify=LEFT, fg='cyan',
             bg='grey22', font=('Times', 14),
-            text="\nMenu Bar and Synopsis are the most usefull skills\n"
+            text="\nMenu Bar, DB, Textbox and Residents are the most usefull skills\n"
             "to perform onto this app ! If you need help, you\n" 
             "can go to MapApp to access map of this app and\n" 
             "understand how the app is used.\n\n"

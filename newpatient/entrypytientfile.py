@@ -416,11 +416,11 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
 
     #gui.destroy()
 
-labelName = Label(gui)
-labelName = Label(text='Enter Name : ',
+labelID = Label(gui)
+labelID = Label(text='ID : ',
     font="Times 14 bold",
     fg='RoyalBlue4', bg='cyan')
-labelName.pack(pady=10)
+labelID.pack(pady=10)
 
 IDpatient = StringVar()
 IDpatient.set('ID of patient')
@@ -428,6 +428,12 @@ Patient_num = Entry(gui, textvariable=IDpatient,
     highlightbackground='light sky blue',
     bd=4)
 Patient_num.pack()
+
+labelName = Label(gui)
+labelName = Label(text='Name : ',
+    font="Times 14 bold",
+    fg='RoyalBlue4', bg='cyan')
+labelName.pack(pady=10)
 
 Patientname = StringVar()
 Patientname.set('Firstname')
@@ -444,7 +450,7 @@ Sur_pat = Entry(gui, textvariable=Surname,
 Sur_pat.pack()
 
 labelAller = Label(gui)
-labelAller = Label(text='Enter Allergy : ',
+labelAller = Label(text='Allergy : ',
     font="Times 14 bold",
     fg='RoyalBlue4', bg='cyan')
 labelAller.pack(pady=10)

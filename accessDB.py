@@ -47,7 +47,7 @@ class TrackDB(Frame):
     """
     def __init__(self, boss=None):
         Frame.__init__(self, borderwidth=5, bg='RoyalBlue4', padx=20, pady=20, relief=GROOVE)
-        self.master.title('Time-Track- Developed by ko@l@tr33 - 2020')
+        self.master.title('Heal-Track Developed by ko@l@tr33 - 2020')
         # ScrollCanvas limite de la zone à parcourir avec la barre
         self.can = Canvas(self, width=1250, height=800, bg='RoyalBlue2')
         self.frame = Frame(self.can)

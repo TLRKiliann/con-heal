@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# -*-encoding:Utf-8-*-
+# -*- coding: utf-8 -*-
 
 
 """
@@ -319,7 +319,6 @@ Num_pat.set('number ID')
 PatientID = Entry(gui, textvariable=Num_pat,
     highlightbackground='light sky blue', bd=4)
 PatientID.pack()
-
 
 labelName = Label(gui)
 labelName = Label(text='Enter NAME to delete : ',

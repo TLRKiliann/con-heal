@@ -568,6 +568,12 @@ def searchLine24(Firstname, Surname, Birthvalue, Allergia, Diagnosis):
             file24.write(Allergia + '\n')
             file24.write(Diagnosis + '\n')
 
+labelID = Label(gui)
+labelID = Label(text='ID : ',
+    font="Times 14 bold",
+    fg='RoyalBlue4', bg='cyan')
+labelID.pack(pady=10)
+
 PatientID=StringVar()
 PatientID.set('PatientID')
 patientnum = Entry(gui, textvariable=PatientID,

@@ -464,17 +464,13 @@ labelallergy=tk.Label(app, text="Allergy",
 labelallergy.grid(row=1, column=0, columnspan=4)
 
 # To read allergy for entry widget
-with open('./allergy/allergyfile4.txt', 'r') as filename2:
+with open('./newpatient/entryfile4.txt', 'r') as filename2:
     line1=filename2.readline()
     line2=filename2.readline()
     line3=filename2.readline()
-    line4=filename2.readline()
-    line5=filename2.readline()
-    line6=filename2.readline()
-    line7=filename2.readline()
 
 entrytext=tk.StringVar()
-entrytext.set(line1 + ', ' + line3 + ', ' + line5 + ', ' + line7)
+entrytext.set(line3)
 entryName=tk.Entry(app, textvariable=entrytext, width=60)
 entryName.grid(row=2, column=0, columnspan=4, pady=10)
 

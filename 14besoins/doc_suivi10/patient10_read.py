@@ -35,17 +35,13 @@ Entryname=Entry(fen, textvariable=text_name)
 Entryname.pack(in_=top, side=LEFT, padx=10, pady=20)
 
 # To read allergy in Entry widget
-with open('./allergy/allergyfile10.txt', 'r') as allerfile:
+with open('./newpatient/entryfile10.txt', 'r') as allerfile:
     lineA1=allerfile.readline()
     lineA2=allerfile.readline()
     lineA3=allerfile.readline()
-    lineA4=allerfile.readline()
-    lineA5=allerfile.readline()
-    lineA6=allerfile.readline()
-    lineA7=allerfile.readline()
 
 text_all=StringVar()
-text_all.set(lineA1 + ', ' + lineA3 + ', ' + lineA5 + ', ' + lineA7)
+text_all.set(lineA3)
 Entryall=Entry(fen, textvariable=text_all, width=60)
 Entryall.pack(padx=10, pady=5)
 

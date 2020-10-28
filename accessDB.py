@@ -61,8 +61,9 @@ class TrackDB(Frame):
         ID = StringVar()
         Firstname = StringVar()
         Surname = StringVar()
-        Born = StringVar()
+        Date_of_Birth = StringVar()
         Allergy = StringVar()
+        Transmissible_Disease = StringVar()
         Diagnostic = StringVar()
         
         def searchDB():
@@ -78,13 +79,14 @@ class TrackDB(Frame):
             sqlCon.close()
 
         self.student_records=ttk.Treeview(self.can, height=24,columns=("stdid", 
-            "firstname", "surname", "born", "allergy", "maindiagnostic"))
+            "firstname", "surname", "birth", "allergy", "disease", "maindiagnostic"))
 
         self.student_records.heading("stdid", text="ID")
         self.student_records.heading("firstname", text="Firstname")
         self.student_records.heading("surname", text="Surname")
-        self.student_records.heading("born", text="Born")
+        self.student_records.heading("birth", text="Date_of_Birth")
         self.student_records.heading("allergy", text="Allergy")
+        self.student_records.heading("disease", text="Transmissible_Disease")
         self.student_records.heading("maindiagnostic", text="Diagnostic")
 
         self.student_records['show']="headings"
@@ -92,8 +94,9 @@ class TrackDB(Frame):
         self.student_records.column("stdid", width=75)
         self.student_records.column("firstname", width=150)
         self.student_records.column("surname", width=150)
-        self.student_records.column("born", width=125)
+        self.student_records.column("birth", width=125)
         self.student_records.column("allergy", width=200)
+        self.student_records.column("disease", width=200)
         self.student_records.column("maindiagnostic", width=200)
 
         self.student_records.pack(fill=BOTH, expand=YES)

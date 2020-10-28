@@ -19,7 +19,8 @@ gui.configure(bg='cyan')
 #gui.geometry('300x200')
 
 def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
-    Allergia, Patient_allergy, Birthvalue, Birth_entree, Diagnostic, Diagnos_pat):
+    Birthvalue, Birth_entree, Allergia, Patient_allergy, TransDisVal, TransDisease,
+    Diagnostic, Diagnos_pat):
     """
         Entry at first time a patient
         (when program is open for the
@@ -33,21 +34,21 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
         Surname = Sur_pat.get()
         Birthvalue = Birth_entree.get()
         Allergia = Patient_allergy.get()
+        TransDisVal = TransDisease.get()
         Diagnostic = Diagnos_pat.get()
-        print(Patientname)
-        print(Birthvalue)
 
         if Patient_num.get() == "" or Firstname_pat.get() == "" or Sur_pat.get() == "":
             messagebox.showerror("MySQL Connection", "Enter Correct Details.")
         else:
             sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='timetrackconn')
             cur = sqlCon.cursor()
-            cur.execute("INSERT into timetrackconn values (%s, %s, %s, %s, %s, %s)",(
+            cur.execute("INSERT into timetrackconn values (%s, %s, %s, %s, %s, %s, %s)",(
             Patient_num.get(),
             Firstname_pat.get(),
             Sur_pat.get(),
             Birth_entree.get(),
             Patient_allergy.get(),
+            TransDisease.get(),
             Diagnos_pat.get(),
             ))
             sqlCon.commit()
@@ -65,6 +66,7 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Patientname + " " + Surname + '\n')
                 namefile.write(Birthvalue + '\n')
                 namefile.write(Allergia + '\n')
+                namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
             if os.path.getsize('./newpatient/entryfile.txt'):
                 return
@@ -80,6 +82,7 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Patientname + " " + Surname + '\n')
                 namefile.write(Birthvalue + '\n')
                 namefile.write(Allergia + '\n')
+                namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
             if os.path.getsize('./newpatient/entryfile2.txt'):
                 return
@@ -95,6 +98,7 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Patientname + " " + Surname + '\n')
                 namefile.write(Birthvalue + '\n')
                 namefile.write(Allergia + '\n')
+                namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
             if os.path.getsize('./newpatient/entryfile3.txt'):
                 return
@@ -110,6 +114,7 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Patientname + " " + Surname + '\n')
                 namefile.write(Birthvalue + '\n')
                 namefile.write(Allergia + '\n')
+                namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
             if os.path.getsize('./newpatient/entryfile4.txt'):
                 return
@@ -125,6 +130,7 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Patientname + " " + Surname + '\n')
                 namefile.write(Birthvalue + '\n')
                 namefile.write(Allergia + '\n')
+                namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
             if os.path.getsize('./newpatient/entryfile5.txt'):
                 return
@@ -140,6 +146,7 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Patientname + " " + Surname + '\n')
                 namefile.write(Birthvalue + '\n')
                 namefile.write(Allergia + '\n')
+                namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
             if os.path.getsize('./newpatient/entryfile6.txt'):
                 return
@@ -155,6 +162,7 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Patientname + " " + Surname + '\n')
                 namefile.write(Birthvalue + '\n')
                 namefile.write(Allergia + '\n')
+                namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
             if os.path.getsize('./newpatient/entryfile7.txt'):
                 return
@@ -170,6 +178,7 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Patientname + " " + Surname + '\n')
                 namefile.write(Birthvalue + '\n')
                 namefile.write(Allergia + '\n')
+                namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
             if os.path.getsize('./newpatient/entryfile8.txt'):
                 return
@@ -185,6 +194,7 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Patientname + " " + Surname + '\n')
                 namefile.write(Birthvalue + '\n')
                 namefile.write(Allergia + '\n')
+                namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
             if os.path.getsize('./newpatient/entryfile9.txt'):
                 return
@@ -200,6 +210,7 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Patientname + " " + Surname + '\n')
                 namefile.write(Birthvalue + '\n')
                 namefile.write(Allergia + '\n')
+                namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
             if os.path.getsize('./newpatient/entryfile10.txt'):
                 return
@@ -215,6 +226,7 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Patientname + " " + Surname + '\n')
                 namefile.write(Birthvalue + '\n')
                 namefile.write(Allergia + '\n')
+                namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
             if os.path.getsize('./newpatient/entryfile11.txt'):
                 return
@@ -230,6 +242,7 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Patientname + " " + Surname + '\n')
                 namefile.write(Birthvalue + '\n')
                 namefile.write(Allergia + '\n')
+                namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
             if os.path.getsize('./newpatient/entryfile12.txt'):
                 return
@@ -245,6 +258,7 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Patientname + " " + Surname + '\n')
                 namefile.write(Birthvalue + '\n')
                 namefile.write(Allergia + '\n')
+                namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
             if os.path.getsize('./newpatient/entryfile13.txt'):
                 return
@@ -260,6 +274,7 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Patientname + " " + Surname + '\n')
                 namefile.write(Birthvalue + '\n')
                 namefile.write(Allergia + '\n')
+                namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
             if os.path.getsize('./newpatient/entryfile14.txt'):
                 return
@@ -275,6 +290,7 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Patientname + " " + Surname + '\n')
                 namefile.write(Birthvalue + '\n')
                 namefile.write(Allergia + '\n')
+                namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
             if os.path.getsize('./newpatient/entryfile15.txt'):
                 return
@@ -290,6 +306,7 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Patientname + " " + Surname + '\n')
                 namefile.write(Birthvalue + '\n')
                 namefile.write(Allergia + '\n')
+                namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
             if os.path.getsize('./newpatient/entryfile16.txt'):
                 return
@@ -305,6 +322,7 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Patientname + " " + Surname + '\n')
                 namefile.write(Birthvalue + '\n')
                 namefile.write(Allergia + '\n')
+                namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
             if os.path.getsize('./newpatient/entryfile17.txt'):
                 return
@@ -320,6 +338,7 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Patientname + " " + Surname + '\n')
                 namefile.write(Birthvalue + '\n')
                 namefile.write(Allergia + '\n')
+                namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
             if os.path.getsize('./newpatient/entryfile18.txt'):
                 return
@@ -335,6 +354,7 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Patientname + " " + Surname + '\n')
                 namefile.write(Birthvalue + '\n')
                 namefile.write(Allergia + '\n')
+                namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
             if os.path.getsize('./newpatient/entryfile19.txt'):
                 return
@@ -350,6 +370,7 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Patientname + " " + Surname + '\n')
                 namefile.write(Birthvalue + '\n')
                 namefile.write(Allergia + '\n')
+                namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
             if os.path.getsize('./newpatient/entryfile20.txt'):
                 return
@@ -365,6 +386,7 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Patientname + " " + Surname + '\n')
                 namefile.write(Birthvalue + '\n')
                 namefile.write(Allergia + '\n')
+                namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
             if os.path.getsize('./newpatient/entryfile21.txt'):
                 return
@@ -380,6 +402,7 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Patientname + " " + Surname + '\n')
                 namefile.write(Birthvalue + '\n')
                 namefile.write(Allergia + '\n')
+                namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
             if os.path.getsize('./newpatient/entryfile22.txt'):
                 return
@@ -395,6 +418,7 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Patientname + " " + Surname + '\n')
                 namefile.write(Birthvalue + '\n')
                 namefile.write(Allergia + '\n')
+                namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
             if os.path.getsize('./newpatient/entryfile23.txt'):
                 return
@@ -410,6 +434,7 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Patientname + " " + Surname + '\n')
                 namefile.write(Birthvalue + '\n')
                 namefile.write(Allergia + '\n')
+                namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
             if os.path.getsize('./newpatient/entryfile24.txt'):
                 return
@@ -449,19 +474,6 @@ Sur_pat = Entry(gui, textvariable=Surname,
     bd=4)
 Sur_pat.pack()
 
-labelAller = Label(gui)
-labelAller = Label(text='Allergy : ',
-    font="Times 14 bold",
-    fg='RoyalBlue4', bg='cyan')
-labelAller.pack(pady=10)
-
-Allergia=StringVar()
-Allergia.set('Allergy')
-Patient_allergy = Entry(gui, textvariable=Allergia,
-    highlightbackground='light sky blue',
-    bd=4)
-Patient_allergy.pack()
-
 labelBirth = Label(gui)
 labelBirth = Label(text='Birth Date : ', font="Times 14 bold",
     fg='RoyalBlue4', bg='cyan')
@@ -472,6 +484,32 @@ Birthvalue.set('Format: 00/00/0000')
 Birth_entree = Entry(gui, textvariable=Birthvalue,
     highlightbackground='light sky blue', bd=4)
 Birth_entree.pack()
+
+labelAller = Label(gui)
+labelAller = Label(text='Allergy : ',
+    font="Times 14 bold",
+    fg='RoyalBlue4', bg='cyan')
+labelAller.pack(pady=10)
+
+Allergia = StringVar()
+Allergia.set('Allergy')
+Patient_allergy = Entry(gui, textvariable=Allergia,
+    highlightbackground='light sky blue',
+    bd=4)
+Patient_allergy.pack()
+
+labelTrans = Label(gui)
+labelTrans = Label(text='Transmissible Disease : ',
+    font="Times 14 bold",
+    fg='RoyalBlue4', bg='cyan')
+labelTrans.pack(pady=10)
+
+TransDisVal = StringVar()
+TransDisVal.set('Transmissible Disease')
+TransDisease = Entry(gui, textvariable=TransDisVal,
+    highlightbackground='light sky blue',
+    bd=4)
+TransDisease.pack()
 
 labelDiag = Label(gui)
 labelDiag = Label(text='Diagnosis : ',

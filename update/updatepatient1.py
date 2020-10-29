@@ -33,48 +33,38 @@ def uptopat(idpatient, patient_num, firstpat, firstname_pat,
     transdisval = diseasetrans.get()
     diagnosis = diagnos_pat.get()
 
-
-    if patientnum.get() == "" or labelfirst.get() == "" or lblsurname.get() == "":
+    # Interact with database to update
+    if patient_num.get() == "" or firstname_pat.get() == "" or sur_pat.get() == "":
         messagebox.showerror("MySQL Connection", "Enter Correct Details.")
     else:
         sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='timetrackconn')
         cur = sqlCon.cursor()
-        cur.execute("INSERT into timetrackconn values (%s, %s, %s, %s, %s, %s, %s)",(
-        patient_num.get(),
+        cur.execute("UPDATE timetrackconn set firstname=%s, surname=%s, birth=%s, allergia=%s, disease=%s, maindiagnostic=%s where stdid=%s",(
         firstname_pat.get(),
         sur_pat.get(),
         birth_entree.get(),
         allergy_pat.get(),
         diseasetrans.get(),
         diagnos_pat.get(),
+        patient_num.get()
         ))
         sqlCon.commit()
         sqlCon.close()
-        messagebox.showinfo("MySQL connection", "Record Entered Successfully !")
-    
-    if idpatient == 1:
-        try:
-            if os.path.getsize('./newpatient/entryfile.txt'):
-                print("+ File 'entryfile.txt' exist !")
-                os.remove('./newpatient/entryfile.txt')
-                searchLineName(firstpat, surname, birthvalue, allergia, transdisval, diagnosis)
-        except FileNotFoundError as outcom1:
-            print("+ Sorry, file 'entryfile.txt' not exist !")
-            print(str(outcom1))
-            messagebox.showwarning("Warning", "File entryfile.txt not found !")
+        messagebox.showinfo("Data Entry Form", "Record Updated Successfully !")
+
+    if idpatient == '1':
+        if os.path.getsize('./newpatient/entryfile.txt'):
+            print("+ File 'entryfile.txt' exist !")
+            os.remove('./newpatient/entryfile.txt')
+            searchLineName(firstpat, surname, birthvalue, allergia, transdisval, diagnosis)
     else:
         pass
 
-    if idpatient == 2:
-        try:
-            if os.path.getsize('./newpatient/entryfile2.txt'):
-                print("+ File 'entryfile2.txt' exist !")
-                os.remove('./newpatient/entryfile2.txt')
-                searchLineName2(firstpat, surname, birthvalue, allergia, transdisval, diagnosis)
-        except FileNotFoundError as outcom1:
-            print("+ Sorry, file 'entryfile2.txt' not exist !")
-            print(str(outcom1))
-            messagebox.showwarning("Warning", "File entryfile2.txt not found !")
+    if idpatient == '2':
+        if os.path.getsize('./newpatient/entryfile2.txt'):
+            print("+ File 'entryfile2.txt' exist !")
+            os.remove('./newpatient/entryfile2.txt')
+            searchLineName2(firstpat, surname, birthvalue, allergia, transdisval, diagnosis)
     else:
         pass
 
@@ -92,7 +82,7 @@ def searchLineName(firstpat, surname, birthvalue, allergia, transdisval, diagnos
             file.write(firstpat + " " + surname + '\n')
             file.write(birthvalue + '\n')
             file.write(allergia + '\n')
-            file.write(transDisVal + '\n')
+            file.write(transdisval + '\n')
             file.write(diagnosis + '\n')
             file.close()
     messagebox.showinfo("Info", "Data was updated for entryfile.txt !")
@@ -104,7 +94,7 @@ def searchLineName2(firstpat, surname, birthvalue, allergia, transdisval, diagno
             file2.write(firstpat + " " + surname + '\n')
             file2.write(birthvalue + '\n')
             file2.write(allergia + '\n')
-            file2.write(transDisVal + '\n')
+            file2.write(transdisval + '\n')
             file2.write(diagnosis + '\n')
             file2.close()
     messagebox.showinfo("Info", "Data was updated for entryfile2.txt !")

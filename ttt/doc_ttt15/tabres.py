@@ -204,17 +204,13 @@ class app(Frame):
         self.labelallergy=Label(master, text="Allergy : ",
             font='Arial 18 bold', fg='coral', bg='RoyalBlue4')
         self.labelallergy.grid(row=0, column=0, padx=10, pady=5)
-        with open('./allergy/allergyfile15.txt', 'r') as allerfile:
+        with open('./newpatient/entryfile15.txt', 'r') as allerfile:
             lineA1=allerfile.readline()
             lineA2=allerfile.readline()
             lineA3=allerfile.readline()
-            lineA4=allerfile.readline()
-            lineA5=allerfile.readline()
-            lineA6=allerfile.readline()
-            lineA7=allerfile.readline()
 
         self.text_all=StringVar()
-        self.text_all.set(lineA1 + ', ' + lineA3 + ', ' + lineA5 + ', ' + lineA7)
+        self.text_all.set(lineA3)
         self.Entryall=Entry(master, textvariable=self.text_all, width=60)
         self.Entryall.grid(sticky='e', row=0, column=0, padx=120, pady=5)
         self.buttQuit=Button(master, text="Close", bg='RoyalBlue3', fg='cyan',

@@ -106,7 +106,7 @@ def callResident(self):
 
     self.x11, self.y11 = 271, 230
     self.b11=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
-        activebackground='aquamarine', text="Allergy",
+        activebackground='aquamarine', text="Update",
         command=self.allergyLink)
     self.fb11=self.can.create_window(self.x11, self.y11, window=self.b11)
 
@@ -168,7 +168,7 @@ def callResident(self):
 
     self.x21, self.y21 = 271, 262
     self.b21=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
-        activebackground='dark turquoise', text="Allergy",
+        activebackground='dark turquoise', text="Update",
         command=self.allergyLink2)
     self.fb21=self.can.create_window(self.x21, self.y21, window=self.b21)
 
@@ -230,7 +230,7 @@ def callResident(self):
 
     self.x31, self.y31 = 271, 294
     self.b31=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
-        activebackground='aquamarine', text="Allergy",
+        activebackground='aquamarine', text="Update",
         command=self.allergyLink3)
     self.fb31=self.can.create_window(self.x31, self.y31, window=self.b31)
 
@@ -292,7 +292,7 @@ def callResident(self):
 
     self.x41, self.y41 = 271, 326
     self.b41=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
-        activebackground='dark turquoise', text="Allergy",
+        activebackground='dark turquoise', text="Update",
         command=self.allergyLink4)
     self.fb41=self.can.create_window(self.x41, self.y41, window=self.b41)
 
@@ -354,7 +354,7 @@ def callResident(self):
 
     self.x51, self.y51 = 271, 358
     self.b51=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
-        activebackground='aquamarine', text="Allergy",
+        activebackground='aquamarine', text="Update",
         command=self.allergyLink5)
     self.fb51=self.can.create_window(self.x51, self.y51, window=self.b51)
 
@@ -416,7 +416,7 @@ def callResident(self):
 
     self.x61, self.y61 = 271, 390
     self.b61=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
-        activebackground='dark turquoise', text="Allergy",
+        activebackground='dark turquoise', text="Update",
         command=self.allergyLink6)
     self.fb61=self.can.create_window(self.x61, self.y61, window=self.b61)
 
@@ -478,7 +478,7 @@ def callResident(self):
 
     self.x71, self.y71 = 271, 422
     self.b71=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
-        activebackground='aquamarine', text="Allergy",
+        activebackground='aquamarine', text="Update",
         command=self.allergyLink7)
     self.fb71=self.can.create_window(self.x71, self.y71, window=self.b71)
 
@@ -540,7 +540,7 @@ def callResident(self):
 
     self.x81, self.y81 = 271, 454
     self.b81=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
-        activebackground='dark turquoise', text="Allergy",
+        activebackground='dark turquoise', text="Update",
         command=self.allergyLink8)
     self.fb81=self.can.create_window(self.x81, self.y81, window=self.b81)
 
@@ -602,7 +602,7 @@ def callResident(self):
 
     self.x91, self.y91 = 271, 486
     self.b91=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
-        activebackground='aquamarine', text="Allergy",
+        activebackground='aquamarine', text="Update",
         command=self.allergyLink9)
     self.fb91=self.can.create_window(self.x91, self.y91, window=self.b91)
 
@@ -664,7 +664,7 @@ def callResident(self):
 
     self.x101, self.y101 = 271, 518
     self.b101=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
-        activebackground='dark turquoise', text="Allergy",
+        activebackground='dark turquoise', text="Update",
         command=self.allergyLink10)
     self.fb101=self.can.create_window(self.x101, self.y101, window=self.b101)
 
@@ -726,7 +726,7 @@ def callResident(self):
 
     self.x111, self.y111 = 271, 550
     self.b111=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
-        activebackground='aquamarine', text="Allergy",
+        activebackground='aquamarine', text="Update",
         command=self.allergyLink11)
     self.fb111=self.can.create_window(self.x111, self.y111, window=self.b111)
 
@@ -788,7 +788,7 @@ def callResident(self):
 
     self.x121, self.y121 = 271, 582
     self.b121=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
-        activebackground='dark turquoise', text="Allergy",
+        activebackground='dark turquoise', text="Update",
         command=self.allergyLink12)
     self.fb121=self.can.create_window(self.x121, self.y121, window=self.b121)
 
@@ -850,7 +850,7 @@ def callResident(self):
 
     self.x131, self.y131 = 271, 614
     self.b131=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
-        activebackground='aquamarine', text="Allergy",
+        activebackground='aquamarine', text="Update",
         command=self.allergyLink13)
     self.fb131=self.can.create_window(self.x131, self.y131, window=self.b131)
 
@@ -912,7 +912,7 @@ def callResident(self):
 
     self.x141, self.y141 = 271, 646
     self.b141=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
-        activebackground='dark turquoise', text="Allergy",
+        activebackground='dark turquoise', text="Update",
         command=self.allergyLink14)
     self.fb141=self.can.create_window(self.x141, self.y141, window=self.b141)
 
@@ -974,7 +974,7 @@ def callResident(self):
 
     self.x151, self.y151 = 271, 678
     self.b151=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
-        activebackground='aquamarine', text="Allergy",
+        activebackground='aquamarine', text="Update",
         command=self.allergyLink15)
     self.fb151=self.can.create_window(self.x151, self.y151, window=self.b151)
 
@@ -1036,7 +1036,7 @@ def callResident(self):
 
     self.x161, self.y161 = 271, 710
     self.b161=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
-        activebackground='dark turquoise', text="Allergy",
+        activebackground='dark turquoise', text="Update",
         command=self.allergyLink16)
     self.fb161=self.can.create_window(self.x161, self.y161, window=self.b161)
 
@@ -1098,7 +1098,7 @@ def callResident(self):
 
     self.x171, self.y171 = 271, 742
     self.b171=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
-        activebackground='aquamarine', text="Allergy",
+        activebackground='aquamarine', text="Update",
         command=self.allergyLink17)
     self.fb171=self.can.create_window(self.x171, self.y171, window=self.b171)
 
@@ -1160,7 +1160,7 @@ def callResident(self):
 
     self.x181, self.y181 = 271, 774
     self.b181=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
-        activebackground='dark turquoise', text="Allergy",
+        activebackground='dark turquoise', text="Update",
         command=self.allergyLink18)
     self.fb181=self.can.create_window(self.x181, self.y181, window=self.b181)
 
@@ -1222,7 +1222,7 @@ def callResident(self):
 
     self.x191, self.y191 = 271, 806
     self.b191=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
-        activebackground='aquamarine', text="Allergy",
+        activebackground='aquamarine', text="Update",
         command=self.allergyLink19)
     self.fb191=self.can.create_window(self.x191, self.y191, window=self.b191)
 
@@ -1284,7 +1284,7 @@ def callResident(self):
 
     self.x201, self.y201 = 271, 838
     self.b201=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
-        activebackground='dark turquoise', text="Allergy",
+        activebackground='dark turquoise', text="Update",
         command=self.allergyLink20)
     self.fb201=self.can.create_window(self.x201, self.y201, window=self.b201)
 
@@ -1346,7 +1346,7 @@ def callResident(self):
 
     self.x211, self.y211 = 271, 870
     self.b211=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
-        activebackground='aquamarine', text="Allergy",
+        activebackground='aquamarine', text="Update",
         command=self.allergyLink21)
     self.fb211=self.can.create_window(self.x211, self.y211, window=self.b211)
 
@@ -1408,7 +1408,7 @@ def callResident(self):
 
     self.x221, self.y221 = 271, 902
     self.b221=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
-        activebackground='dark turquoise', text="Allergy",
+        activebackground='dark turquoise', text="Update",
         command=self.allergyLink22)
     self.fb221=self.can.create_window(self.x221, self.y221, window=self.b221)
 
@@ -1470,7 +1470,7 @@ def callResident(self):
 
     self.x231, self.y231 = 271, 934
     self.b231=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
-        activebackground='aquamarine', text="Allergy",
+        activebackground='aquamarine', text="Update",
         command=self.allergyLink23)
     self.fb231=self.can.create_window(self.x231, self.y231, window=self.b231)
 
@@ -1532,7 +1532,7 @@ def callResident(self):
 
     self.x241, self.y241 = 271, 966
     self.b241=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
-        activebackground='dark turquoise', text="Allergy",
+        activebackground='dark turquoise', text="Update",
         command=self.allergyLink24)
     self.fb241=self.can.create_window(self.x241, self.y241, window=self.b241)
 

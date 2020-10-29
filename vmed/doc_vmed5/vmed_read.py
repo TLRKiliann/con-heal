@@ -36,17 +36,13 @@ labelallergy=Label(fen, text="Allergy",
 labelallergy.pack(padx=5, pady=5)
 
 # To display allergy in Entry widget
-with open('./allergy/allergyfile5.txt', 'r') as allerfile:
+with open('./newpatient/entryfile5.txt', 'r') as allerfile:
     lineA1=allerfile.readline()
     lineA2=allerfile.readline()
     lineA3=allerfile.readline()
-    lineA4=allerfile.readline()
-    lineA5=allerfile.readline()
-    lineA6=allerfile.readline()
-    lineA7=allerfile.readline()
 
 text_aller=StringVar()
-text_aller.set(lineA1 + ', ' + lineA3 + ', ' + lineA5 + ', ' + lineA7)
+text_aller.set(lineA3)
 Entryall=Entry(fen, textvariable=text_aller, width=60)
 Entryall.pack(padx=10, pady=5)
 

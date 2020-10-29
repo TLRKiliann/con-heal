@@ -1300,7 +1300,6 @@ class Application(Frame):
         """
             To add new patient after delete one of them
         """
-        messagebox.showwarning("Warning", "Don't forget to enter allergy too ! ;)")
         subprocess.run('./newpatient/torecord.py', check=True)
 
     def patientAgenda(self):
@@ -1745,77 +1744,77 @@ class Application(Frame):
         subprocess.run("./vmed/vm_patient24.py", check=True)
 
     # Allergy OK
-    def allergyLink(self):
-        subprocess.run('./allergy/allerpatient1.py', check=True)
+    def updateLink(self):
+        subprocess.run('./update/updatepatient1.py', check=True)
 
-    def allergyLink2(self):
-        subprocess.run('./allergy/allerpatient2.py', check=True)
+    def updateLink2(self):
+        subprocess.run('./update/updatepatient2.py', check=True)
 
-    def allergyLink3(self):
-        subprocess.run('./allergy/allerpatient3.py', check=True)
+    def updateLink3(self):
+        subprocess.run('./update/updatepatient3.py', check=True)
 
-    def allergyLink4(self):
-        subprocess.run('./allergy/allerpatient4.py', check=True)
+    def updateLink4(self):
+        subprocess.run('./update/updatepatient4.py', check=True)
 
-    def allergyLink5(self):
-        subprocess.run('./allergy/allerpatient5.py', check=True)
+    def updateLink5(self):
+        subprocess.run('./update/updatepatient5.py', check=True)
 
-    def allergyLink6(self):
-        subprocess.run('./allergy/allerpatient6.py', check=True)
+    def updateLink6(self):
+        subprocess.run('./update/updatepatient6.py', check=True)
 
-    def allergyLink7(self):
-        subprocess.run('./allergy/allerpatient7.py', check=True)
+    def updateLink7(self):
+        subprocess.run('./update/updatepatient7.py', check=True)
 
-    def allergyLink8(self):
-        subprocess.run('./allergy/allerpatient8.py', check=True)
+    def updateLink8(self):
+        subprocess.run('./update/updatepatient8.py', check=True)
 
-    def allergyLink9(self):
-        subprocess.run('./allergy/allerpatient9.py', check=True)
+    def updateLink9(self):
+        subprocess.run('./update/updatepatient9.py', check=True)
 
-    def allergyLink10(self):
-        subprocess.run('./allergy/allerpatient10.py', check=True)
+    def updateLink10(self):
+        subprocess.run('./update/updatepatient10.py', check=True)
 
-    def allergyLink11(self):
-        subprocess.run('./allergy/allerpatient11.py', check=True)
+    def updateLink11(self):
+        subprocess.run('./update/updatepatient11.py', check=True)
 
-    def allergyLink12(self):
-        subprocess.run('./allergy/allerpatient12.py', check=True)
+    def updateLink12(self):
+        subprocess.run('./update/updatepatient12.py', check=True)
 
-    def allergyLink13(self):
-        subprocess.run('./allergy/allerpatient13.py', check=True)
+    def updateLink13(self):
+        subprocess.run('./update/updatepatient13.py', check=True)
 
-    def allergyLink14(self):
-        subprocess.run('./allergy/allerpatient14.py', check=True)
+    def updateLink14(self):
+        subprocess.run('./update/updatepatient14.py', check=True)
 
-    def allergyLink15(self):
-        subprocess.run('./allergy/allerpatient15.py', check=True)
+    def updateLink15(self):
+        subprocess.run('./update/updatepatient15.py', check=True)
 
-    def allergyLink16(self):
-        subprocess.run('./allergy/allerpatient16.py', check=True)
+    def updateLink16(self):
+        subprocess.run('./update/updatepatient16.py', check=True)
 
-    def allergyLink17(self):
-        subprocess.run('./allergy/allerpatient17.py', check=True)
+    def updateLink17(self):
+        subprocess.run('./update/updatepatient17.py', check=True)
 
-    def allergyLink18(self):
-        subprocess.run('./allergy/allerpatient18.py', check=True)
+    def updateLink18(self):
+        subprocess.run('./update/updatepatient18.py', check=True)
 
-    def allergyLink19(self):
-        subprocess.run('./allergy/allerpatient19.py', check=True)
+    def updateLink19(self):
+        subprocess.run('./update/updatepatient19.py', check=True)
 
-    def allergyLink20(self):
-        subprocess.run('./allergy/allerpatient20.py', check=True)
+    def updateLink20(self):
+        subprocess.run('./update/updatepatient20.py', check=True)
 
-    def allergyLink21(self):
-        subprocess.run('./allergy/allerpatient21.py', check=True)
+    def updateLink21(self):
+        subprocess.run('./update/updatepatient21.py', check=True)
 
-    def allergyLink22(self):
-        subprocess.run('./allergy/allerpatient22.py', check=True)
+    def updateLink22(self):
+        subprocess.run('./update/updatepatient22.py', check=True)
 
-    def allergyLink23(self):
-        subprocess.run('./allergy/allerpatient23.py', check=True)
+    def updateLink23(self):
+        subprocess.run('./update/updatepatient23.py', check=True)
 
-    def allergyLink24(self):
-        subprocess.run('./allergy/allerpatient24.py', check=True)
+    def updateLink24(self):
+        subprocess.run('./update/updatepatient24.py', check=True)
 
     # Func Diagnostic
     def diag1(self):

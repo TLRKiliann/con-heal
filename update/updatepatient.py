@@ -653,7 +653,7 @@ buttonsearch = Button(gui, text="Search ID", width=8, bd=3,
 buttonsearch.pack(side=LEFT, padx=10, pady=20)
 
 buttonupdate = Button(gui, text="Enter", width=8, bd=3,
-    fg='yellow', bg='RoyalBlue3', highlightbackground='light sky blue',
+    fg='orange', bg='RoyalBlue3', highlightbackground='light sky blue',
     activebackground='dark turquoise',
     command = lambda: uptopat(idpatient, patient_num, firstpat, firstname_pat,
         surname, sur_pat, birthvalue, birth_entree, allergia, allergy_pat,

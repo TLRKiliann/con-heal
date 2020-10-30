@@ -17,6 +17,31 @@ gui=Tk()
 gui.title("Enter new patient")
 gui.configure(bg='cyan')
 
+# Interact with database to search data
+def searchDB():
+    """
+        To search patient by ID
+        and display data into 
+        each GUI entree.
+    """
+    try:
+        sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='timetrackconn')
+        cur = sqlCon.cursor()
+        cur.execute("SELECT * from timetrackconn where stdid=%s", patient_num.get())
+        row = cur.fetchone()
+        idpatient.set(row[0])
+        firstpat.set(row[1])
+        surname.set(row[2])
+        birthvalue.set(row[3])
+        allergia.set(row[4])
+        transdisval.set(row[5])
+        diagnosis.set(row[6])
+        sqlCon.commit()
+    except:
+        print("Error with search function in DB")
+        messagebox.showinfo("Data Entry Form", "No Such Record Found !")
+    sqlCon.close()
+
 def uptopat(idpatient, patient_num, firstpat, firstname_pat,
     surname, sur_pat, birthvalue, birth_entree, allergia, allergy_pat,
     transdisval, diseasetrans, diagnosis, diagnos_pat):
@@ -24,7 +49,6 @@ def uptopat(idpatient, patient_num, firstpat, firstname_pat,
         Update data for patients
         in function of their id
     """
-
     idpatient = patient_num.get()
     firstpat = firstname_pat.get()
     surname = sur_pat.get()
@@ -546,7 +570,7 @@ labelID = Label(text='ID : ',
 labelID.pack(pady=10)
 
 idpatient = StringVar()
-idpatient.set('ID of patient')
+#idpatient.set('ID of patient')
 patient_num = Entry(gui, textvariable=idpatient,
     highlightbackground='light sky blue',
     bd=4)
@@ -559,14 +583,14 @@ labelname = Label(text='Name : ',
 labelname.pack(pady=10)
 
 firstpat = StringVar()
-firstpat.set('Firstname')
+#firstpat.set('Firstname')
 firstname_pat = Entry(gui, textvariable=firstpat,
     highlightbackground='light sky blue',
     bd=4)
 firstname_pat.pack()
 
 surname = StringVar()
-surname.set("Lastname")
+#surname.set("Lastname")
 sur_pat = Entry(gui, textvariable=surname,
     highlightbackground='light sky blue',
     bd=4)
@@ -578,7 +602,7 @@ labelbirth = Label(text='Birth Date : ', font="Times 14 bold",
 labelbirth.pack(pady=10)
 
 birthvalue=StringVar()
-birthvalue.set('Format: 00/00/0000')
+#birthvalue.set('Format: 00/00/0000')
 birth_entree = Entry(gui, textvariable=birthvalue,
     highlightbackground='light sky blue', bd=4)
 birth_entree.pack()
@@ -590,7 +614,7 @@ labelaller = Label(text='Allergy : ',
 labelaller.pack(pady=10)
 
 allergia = StringVar()
-allergia.set('None')
+#allergia.set('None')
 allergy_pat = Entry(gui, textvariable=allergia,
     highlightbackground='light sky blue',
     bd=4)
@@ -603,7 +627,7 @@ labeltrans = Label(text='Transmissible Disease : ',
 labeltrans.pack(pady=10)
 
 transdisval = StringVar()
-transdisval.set('None')
+#transdisval.set('None')
 diseasetrans = Entry(gui, textvariable=transdisval,
     highlightbackground='light sky blue',
     bd=4)
@@ -616,19 +640,25 @@ labeldiag = Label(text='Diagnosis : ',
 labeldiag.pack(pady=10)
 
 diagnosis = StringVar()
-diagnosis.set('Diagnostic (main)')
+#diagnosis.set('Diagnostic (main)')
 diagnos_pat = Entry(gui, textvariable=diagnosis,
     highlightbackground='light sky blue',
     bd=4)
 diagnos_pat.pack()
 
-bouton1 = Button(gui, text="Enter", width=8, bd=3,
+buttonsearch = Button(gui, text="Search ID", width=8, bd=3,
+    fg='yellow', bg='RoyalBlue3', highlightbackground='light sky blue',
+    activebackground='dark turquoise',
+    command = searchDB)
+buttonsearch.pack(side=LEFT, padx=10, pady=20)
+
+buttonupdate = Button(gui, text="Enter", width=8, bd=3,
     fg='yellow', bg='RoyalBlue3', highlightbackground='light sky blue',
     activebackground='dark turquoise',
     command = lambda: uptopat(idpatient, patient_num, firstpat, firstname_pat,
         surname, sur_pat, birthvalue, birth_entree, allergia, allergy_pat,
         transdisval, diseasetrans, diagnosis, diagnos_pat))
-bouton1.pack(side=LEFT, padx=10, pady=20)
+buttonupdate.pack(side=LEFT, padx=10, pady=20)
 
 buttQuit=Button(gui, text="Quit", width=8, bd=3,
     fg='cyan', bg='RoyalBlue3', highlightbackground='light sky blue',

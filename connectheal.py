@@ -103,7 +103,7 @@ class ConnectorDB:
             if len(result) != 0:
                 self.student_records.delete(*self.student_records.get_children())
                 for row in result:
-                    self.student_records.insert('',END,values =row)
+                    self.student_records.insert('',END, values=row)
                 sqlCon.commit()
             sqlCon.close()
 
@@ -140,7 +140,7 @@ class ConnectorDB:
         def deleteDB():
             sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='timetrackconn')
             cur = sqlCon.cursor()
-            cur.execute("DELETE from timetrackconn where stdid=%s", StudentID.get())
+            cur.execute("DELETE from timetrackconn where stdid=%s", PatientID.get())
             sqlCon.commit()
             DisplayData()
             sqlCon.close()
@@ -152,10 +152,10 @@ class ConnectorDB:
             try:
                 sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='timetrackconn')
                 cur = sqlCon.cursor()
-                cur.execute("SELECT * from timetrackconn where stdid=%s", StudentID.get())
+                cur.execute("SELECT * from timetrackconn where stdid=%s", PatientID.get())
                 row = cur.fetchone()
 
-                StudentID.set(row[0])
+                PatientID.set(row[0])
                 Firstname.set(row[1])
                 Surname.set(row[2])
                 Allergy.set(row[3])

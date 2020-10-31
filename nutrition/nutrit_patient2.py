@@ -18,7 +18,7 @@ def saveCheck():
         confRec()
         gui.destroy()
     else:
-        NoforQ = messagebox.showinfo('Return', 'Data not saved')
+        messagebox.showinfo('Return', 'Data not saved')
 
 def recordOption():
     """

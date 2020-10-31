@@ -27,13 +27,13 @@ def searchDB():
     try:
         sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='timetrackconn')
         cur = sqlCon.cursor()
-        cur.execute("SELECT * from timetrackconn where stdid=1")
+        cur.execute("SELECT * from timetrackconn where stdid=%s", patient_num.get())
         row = cur.fetchone()
         idpatient.set(row[0])
         firstpat.set(row[1])
         surname.set(row[2])
         birthvalue.set(row[3])
-        allergia.set(row[4])
+        #allergia.set(row[4]) 
         transdisval.set(row[5])
         diagnosis.set(row[6])
         sqlCon.commit()
@@ -63,7 +63,7 @@ def uptopat(idpatient, patient_num, firstpat, firstname_pat,
     else:
         sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='timetrackconn')
         cur = sqlCon.cursor()
-        cur.execute("UPDATE timetrackconn set firstname=%s, surname=%s, birth=%s, allergia=%s, disease=%s, maindiagnostic=%s where stdid=1",(
+        cur.execute("UPDATE timetrackconn set firstname=%s, surname=%s, birth=%s, allergia=%s, disease=%s, maindiagnostic=%s where stdid=%s",(
         firstname_pat.get(),
         sur_pat.get(),
         birth_entree.get(),
@@ -563,6 +563,9 @@ def searchLineName24(firstpat, surname, birthvalue, allergia, transdisval, diagn
             file24.close()
     messagebox.showinfo("Info", "Data was updated for entryfile24.txt !")
 
+with open('./allergy/allergyfile.txt', 'r') as patfile:
+    linea = patfile.readline()
+
 labelID = Label(gui)
 labelID = Label(text='ID : ',
     font="Times 14 bold",
@@ -570,7 +573,7 @@ labelID = Label(text='ID : ',
 labelID.pack(pady=10)
 
 idpatient = StringVar()
-#idpatient.set('ID of patient')
+idpatient.set('1')
 patient_num = Entry(gui, textvariable=idpatient,
     highlightbackground='light sky blue',
     bd=4)
@@ -614,10 +617,10 @@ labelaller = Label(text='Allergy : ',
 labelaller.pack(pady=10)
 
 allergia = StringVar()
-#allergia.set('None')
+allergia.set(linea)
 allergy_pat = Entry(gui, textvariable=allergia,
     highlightbackground='light sky blue',
-    bd=4)
+    bd=4, width=40)
 allergy_pat.pack()
 
 labeltrans = Label(gui)

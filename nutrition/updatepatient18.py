@@ -76,17 +76,17 @@ def uptopat(idpatient, patient_num, firstpat, firstname_pat,
         sqlCon.close()
         messagebox.showinfo("Data Entry Form", "Record Updated Successfully !")
 
-    if idpatient == '3':
-        if os.path.getsize('./newpatient/entryfile3.txt'):
-            print("+ File 'entryfile3.txt' exist !")
-            os.remove('./newpatient/entryfile3.txt')
-            searchLineName3(firstpat, surname, birthvalue, allergia, transdisval, diagnosis)
+    if idpatient == '18':
+        if os.path.getsize('./newpatient/entryfile18.txt'):
+            print("+ File 'entryfile18.txt' exist !")
+            os.remove('./newpatient/entryfile18.txt')
+            searchLineName18(firstpat, surname, birthvalue, allergia, transdisval, diagnosis)
     else:
         pass
 
     gui.destroy()
 
-def searchLineName3(firstpat, surname, birthvalue, allergia, transdisval, diagnosis):
+def searchLineName18(firstpat, surname, birthvalue, allergia, transdisval, diagnosis):
     """
         To save changing data for 
         entryfile.txt and display
@@ -94,15 +94,15 @@ def searchLineName3(firstpat, surname, birthvalue, allergia, transdisval, diagno
     """
     MsgBox2 = messagebox.askyesno('Save data', 'Do you want to save ?')
     if MsgBox2 == 1:
-        with open('./newpatient/entryfile3.txt', 'w') as file2:
+        with open('./newpatient/entryfile18.txt', 'w') as file2:
             file2.write(firstpat + " " + surname + '\n')
             file2.write(birthvalue + '\n')
             file2.write(allergia + '\n')
             file2.write(transdisval + '\n')
             file2.write(diagnosis + '\n')
-    messagebox.showinfo("Info", "Data was updated for entryfile3.txt !")
+    messagebox.showinfo("Info", "Data was updated for entryfile18.txt !")
 
-with open('./allergy/allergyfile3.txt', 'r') as patfile:
+with open('./allergy/allergyfile18.txt', 'r') as patfile:
     linea = patfile.readline()
 
 labelID = Label(gui)
@@ -112,7 +112,7 @@ labelID = Label(text='ID : ',
 labelID.pack(pady=10)
 
 idpatient = StringVar()
-idpatient.set('3')
+idpatient.set('18')
 patient_num = Entry(gui, textvariable=idpatient,
     highlightbackground='light sky blue',
     bd=4)
@@ -208,3 +208,4 @@ buttQuit=Button(gui, text="Quit", width=8, bd=3,
 buttQuit.pack(side=LEFT, padx=10, pady=20)
 
 gui.mainloop()
+

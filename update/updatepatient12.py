@@ -76,34 +76,35 @@ def uptopat(idpatient, patient_num, firstpat, firstname_pat,
         sqlCon.close()
         messagebox.showinfo("Data Entry Form", "Record Updated Successfully !")
 
-    if idpatient == '1':
-        if os.path.getsize('./newpatient/entryfile.txt'):
-            print("+ File 'entryfile.txt' exist !")
-            os.remove('./newpatient/entryfile.txt')
-            os.remove('./allergy/allergyfile.txt')
-            searchLineName(firstpat, surname, birthvalue, allergia, transdisval, diagnosis)
+    if idpatient == '12':
+        if os.path.getsize('./newpatient/entryfile12.txt'):
+            print("+ File 'entryfile12.txt' exist !")
+            os.remove('./newpatient/entryfile12.txt')
+            os.remove('./allergy/allergyfile12.txt')
+            searchLineName12(firstpat, surname, birthvalue, allergia, transdisval, diagnosis)
     else:
         pass
 
     gui.destroy()
 
-def searchLineName(firstpat, surname, birthvalue, allergia, transdisval, diagnosis):
+def searchLineName12(firstpat, surname, birthvalue, allergia, transdisval, diagnosis):
     """
         To save changing data for 
-        entryfile.txt and display
+        entryfile12.txt and display
         messagebox.
     """
     MsgBox = messagebox.askyesno('Save data', 'Do you want to save ?')
     if MsgBox == 1:
-        with open('./newpatient/entryfile.txt', 'w') as fullfile:
-            with open('./allergy/allergyfile.txt', 'w') as filealler:
+        with open('./newpatient/entryfile12.txt', 'w') as fullfile:
+            with open('./allergy/allergyfile12.txt', 'w') as filealler:
                 fullfile.write(firstpat + " " + surname + '\n')
                 fullfile.write(birthvalue + '\n')
                 fullfile.write(allergia + '\n')
                 fullfile.write(transdisval + '\n')
                 fullfile.write(diagnosis + '\n')
                 filealler.write(allergia + ", ")
-    messagebox.showinfo("Info", "Data was updated for entryfile.txt !")
+    messagebox.showinfo("Info", "Data was updated for entryfile12.txt " \
+        "and for allergyfile12.txt !")
 
 labelID = Label(gui)
 labelID = Label(text='ID : ',
@@ -112,7 +113,7 @@ labelID = Label(text='ID : ',
 labelID.pack(pady=10)
 
 idpatient = StringVar()
-idpatient.set('1')
+idpatient.set('12')
 patient_num = Entry(gui, textvariable=idpatient,
     highlightbackground='light sky blue',
     bd=4)

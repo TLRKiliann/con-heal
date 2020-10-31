@@ -284,7 +284,6 @@ def searchLineName(firstpat, surname, birthvalue, allergia, transdisval, diagnos
             file.write(allergia + '\n')
             file.write(transdisval + '\n')
             file.write(diagnosis + '\n')
-            file.close()
     messagebox.showinfo("Info", "Data was updated for entryfile.txt !")
 
 def searchLineName2(firstpat, surname, birthvalue, allergia, transdisval, diagnosis):
@@ -296,7 +295,6 @@ def searchLineName2(firstpat, surname, birthvalue, allergia, transdisval, diagno
             file2.write(allergia + '\n')
             file2.write(transdisval + '\n')
             file2.write(diagnosis + '\n')
-            file2.close()
     messagebox.showinfo("Info", "Data was updated for entryfile2.txt !")
 
 def searchLineName3(firstpat, surname, birthvalue, allergia, transdisval, diagnosis):
@@ -308,7 +306,6 @@ def searchLineName3(firstpat, surname, birthvalue, allergia, transdisval, diagno
             file3.write(allergia + '\n')
             file3.write(transdisval + '\n')
             file3.write(diagnosis + '\n')
-            file3.close()
     messagebox.showinfo("Info", "Data was updated for entryfile3.txt !")
 
 def searchLineName4(firstpat, surname, birthvalue, allergia, transdisval, diagnosis):
@@ -320,7 +317,6 @@ def searchLineName4(firstpat, surname, birthvalue, allergia, transdisval, diagno
             file4.write(allergia + '\n')
             file4.write(transdisval + '\n')
             file4.write(diagnosis + '\n')
-            file4.close()
     messagebox.showinfo("Info", "Data was updated for entryfile4.txt !")
 
 def searchLineName5(firstpat, surname, birthvalue, allergia, transdisval, diagnosis):
@@ -332,7 +328,6 @@ def searchLineName5(firstpat, surname, birthvalue, allergia, transdisval, diagno
             file5.write(allergia + '\n')
             file5.write(transdisval + '\n')
             file5.write(diagnosis + '\n')
-            file5.close()
     messagebox.showinfo("Info", "Data was updated for entryfile5.txt !")
 
 def searchLineName6(firstpat, surname, birthvalue, allergia, transdisval, diagnosis):
@@ -344,7 +339,6 @@ def searchLineName6(firstpat, surname, birthvalue, allergia, transdisval, diagno
             file6.write(allergia + '\n')
             file6.write(transdisval + '\n')
             file6.write(diagnosis + '\n')
-            file6.close()
     messagebox.showinfo("Info", "Data was updated for entryfile6.txt !")
 
 def searchLineName7(firstpat, surname, birthvalue, allergia, transdisval, diagnosis):
@@ -356,7 +350,6 @@ def searchLineName7(firstpat, surname, birthvalue, allergia, transdisval, diagno
             file7.write(allergia + '\n')
             file7.write(transdisval + '\n')
             file7.write(diagnosis + '\n')
-            file7.close()
     messagebox.showinfo("Info", "Data was updated for entryfile7.txt !")
 
 def searchLineName8(firstpat, surname, birthvalue, allergia, transdisval, diagnosis):
@@ -368,7 +361,6 @@ def searchLineName8(firstpat, surname, birthvalue, allergia, transdisval, diagno
             file8.write(allergia + '\n')
             file8.write(transdisval + '\n')
             file8.write(diagnosis + '\n')
-            file8.close()
     messagebox.showinfo("Info", "Data was updated for entryfile8.txt !")
 
 def searchLineName9(firstpat, surname, birthvalue, allergia, transdisval, diagnosis):
@@ -380,7 +372,6 @@ def searchLineName9(firstpat, surname, birthvalue, allergia, transdisval, diagno
             file9.write(allergia + '\n')
             file9.write(transdisval + '\n')
             file9.write(diagnosis + '\n')
-            file9.close()
     messagebox.showinfo("Info", "Data was updated for entryfile9.txt !")
 
 def searchLineName10(firstpat, surname, birthvalue, allergia, transdisval, diagnosis):
@@ -392,7 +383,6 @@ def searchLineName10(firstpat, surname, birthvalue, allergia, transdisval, diagn
             file10.write(allergia + '\n')
             file10.write(transdisval + '\n')
             file10.write(diagnosis + '\n')
-            file10.close()
     messagebox.showinfo("Info", "Data was updated for entryfile10.txt !")
 
 def searchLineName11(firstpat, surname, birthvalue, allergia, transdisval, diagnosis):
@@ -404,7 +394,6 @@ def searchLineName11(firstpat, surname, birthvalue, allergia, transdisval, diagn
             file11.write(allergia + '\n')
             file11.write(transdisval + '\n')
             file11.write(diagnosis + '\n')
-            file11.close()
     messagebox.showinfo("Info", "Data was updated for entryfile11.txt !")
 
 def searchLineName12(firstpat, surname, birthvalue, allergia, transdisval, diagnosis):
@@ -416,7 +405,6 @@ def searchLineName12(firstpat, surname, birthvalue, allergia, transdisval, diagn
             file12.write(allergia + '\n')
             file12.write(transdisval + '\n')
             file12.write(diagnosis + '\n')
-            file12.close()
     messagebox.showinfo("Info", "Data was updated for entryfile12.txt !")
 
 def searchLineName13(firstpat, surname, birthvalue, allergia, transdisval, diagnosis):
@@ -428,7 +416,6 @@ def searchLineName13(firstpat, surname, birthvalue, allergia, transdisval, diagn
             file13.write(allergia + '\n')
             file13.write(transdisval + '\n')
             file13.write(diagnosis + '\n')
-            file13.close()
     messagebox.showinfo("Info", "Data was updated for entryfile13.txt !")
 
 def searchLineName14(firstpat, surname, birthvalue, allergia, transdisval, diagnosis):
@@ -440,7 +427,6 @@ def searchLineName14(firstpat, surname, birthvalue, allergia, transdisval, diagn
             file14.write(allergia + '\n')
             file14.write(transdisval + '\n')
             file14.write(diagnosis + '\n')
-            file14.close()
     messagebox.showinfo("Info", "Data was updated for entryfile14.txt !")
 
 def searchLineName15(firstpat, surname, birthvalue, allergia, transdisval, diagnosis):
@@ -452,7 +438,6 @@ def searchLineName15(firstpat, surname, birthvalue, allergia, transdisval, diagn
             file15.write(allergia + '\n')
             file15.write(transdisval + '\n')
             file15.write(diagnosis + '\n')
-            file15.close()
     messagebox.showinfo("Info", "Data was updated for entryfile15.txt !")
 
 def searchLineName16(firstpat, surname, birthvalue, allergia, transdisval, diagnosis):
@@ -464,7 +449,6 @@ def searchLineName16(firstpat, surname, birthvalue, allergia, transdisval, diagn
             file16.write(allergia + '\n')
             file16.write(transdisval + '\n')
             file16.write(diagnosis + '\n')
-            file16.close()
     messagebox.showinfo("Info", "Data was updated for entryfile16.txt !")
 
 def searchLineName17(firstpat, surname, birthvalue, allergia, transdisval, diagnosis):
@@ -476,7 +460,6 @@ def searchLineName17(firstpat, surname, birthvalue, allergia, transdisval, diagn
             file17.write(allergia + '\n')
             file17.write(transdisval + '\n')
             file17.write(diagnosis + '\n')
-            file17.close()
     messagebox.showinfo("Info", "Data was updated for entryfile17.txt !")
 
 def searchLineName18(firstpat, surname, birthvalue, allergia, transdisval, diagnosis):
@@ -488,7 +471,6 @@ def searchLineName18(firstpat, surname, birthvalue, allergia, transdisval, diagn
             file18.write(allergia + '\n')
             file18.write(transdisval + '\n')
             file18.write(diagnosis + '\n')
-            file18.close()
     messagebox.showinfo("Info", "Data was updated for entryfile18.txt !")
 
 def searchLineName19(firstpat, surname, birthvalue, allergia, transdisval, diagnosis):
@@ -500,7 +482,6 @@ def searchLineName19(firstpat, surname, birthvalue, allergia, transdisval, diagn
             file19.write(allergia + '\n')
             file19.write(transdisval + '\n')
             file19.write(diagnosis + '\n')
-            file19.close()
     messagebox.showinfo("Info", "Data was updated for entryfile19.txt !")
 
 def searchLineName20(firstpat, surname, birthvalue, allergia, transdisval, diagnosis):
@@ -512,7 +493,6 @@ def searchLineName20(firstpat, surname, birthvalue, allergia, transdisval, diagn
             file20.write(allergia + '\n')
             file20.write(transdisval + '\n')
             file20.write(diagnosis + '\n')
-            file20.close()
     messagebox.showinfo("Info", "Data was updated for entryfile20.txt !")
 
 def searchLineName21(firstpat, surname, birthvalue, allergia, transdisval, diagnosis):
@@ -524,7 +504,6 @@ def searchLineName21(firstpat, surname, birthvalue, allergia, transdisval, diagn
             file21.write(allergia + '\n')
             file21.write(transdisval + '\n')
             file21.write(diagnosis + '\n')
-            file21.close()
     messagebox.showinfo("Info", "Data was updated for entryfile21.txt !")
 
 def searchLineName22(firstpat, surname, birthvalue, allergia, transdisval, diagnosis):
@@ -536,7 +515,6 @@ def searchLineName22(firstpat, surname, birthvalue, allergia, transdisval, diagn
             file22.write(allergia + '\n')
             file22.write(transdisval + '\n')
             file22.write(diagnosis + '\n')
-            file22.close()
     messagebox.showinfo("Info", "Data was updated for entryfile22.txt !")
 
 def searchLineName23(firstpat, surname, birthvalue, allergia, transdisval, diagnosis):
@@ -548,7 +526,6 @@ def searchLineName23(firstpat, surname, birthvalue, allergia, transdisval, diagn
             file23.write(allergia + '\n')
             file23.write(transdisval + '\n')
             file23.write(diagnosis + '\n')
-            file23.close()
     messagebox.showinfo("Info", "Data was updated for entryfile23.txt !")
 
 def searchLineName24(firstpat, surname, birthvalue, allergia, transdisval, diagnosis):
@@ -560,7 +537,6 @@ def searchLineName24(firstpat, surname, birthvalue, allergia, transdisval, diagn
             file24.write(allergia + '\n')
             file24.write(transdisval + '\n')
             file24.write(diagnosis + '\n')
-            file24.close()
     messagebox.showinfo("Info", "Data was updated for entryfile24.txt !")
 
 with open('./allergy/allergyfile.txt', 'r') as patfile:

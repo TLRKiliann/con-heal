@@ -1748,7 +1748,7 @@ class Application(Frame):
             To update data for patient 
             in txt entryfile and for DB.
         """
-        subprocess.run('./update/updatepatient.py', check=True)
+        subprocess.run('./update/updatepatient1.py', check=True)
 
     # Func Diagnostic
     def diag1(self):

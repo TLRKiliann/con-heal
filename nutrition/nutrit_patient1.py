@@ -11,11 +11,36 @@
 
 from tkinter import *
 from tkinter import messagebox
+import subprocess
+try:
+    import pymysql
+    pymysql.install_as_MySQLdb()
+except ImportError as err_report:
+    print("+ An error occured about pymysql !", err_report)
+    pass
 
 
 gui = Tk()
 gui.title("Intolerances")
 gui.configure(bg='RoyalBlue4')
+
+def searchDB():
+    """
+        To search patient by ID
+        and display data into 
+        each GUI entree.
+    """
+    try:
+        sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='timetrackconn')
+        cur = sqlCon.cursor()
+        cur.execute("SELECT * from timetrackconn where stdid=1")
+        row = cur.fetchone()
+        allergia.set(row[4])
+        sqlCon.commit()
+    except:
+        print("Error with search function in DB")
+        messagebox.showinfo("Data Entry Form", "No Such Record Found !")
+    sqlCon.close()
 
 def saveCheck():
     """
@@ -34,153 +59,134 @@ def recordOption():
     """
     To save checkbox options
     """
+    allergy_pat = StringVar()
+
     print(CheckVar1.get())
     if CheckVar1.get() == 1:
         print("Gluten intolerance")
-        with open('./newpatient/entryfile.txt', 'r') as file:
-            with open('./newpatient/entryfile.txt', 'w') as file2:
-                line1 = file.readline()
-                line2 = file.readline()
-                line3 = file.readline()
-                file2.write("Gluten intolerance\n")
+        allergy_pat.set("Gluten intolerance")
     else:
         print("Nothing to do")
 
     print(CheckVar2.get())
     if CheckVar2.get() == 1:
         print("Lactose intolerance")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
-            file.write("Lactose intolerance\n")
-            file.write(str('----------------\n'))
+        allergy_pat.set("Lactose intolerance")
     else:
         print("Nothing to do")
 
     print(CheckVar3.get())
+
     if CheckVar3.get() == 1:
         print("Saccharose intolerance")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
-            file.write("Saccharose intolerance\n")
-            file.write(str('----------------\n'))
+        allergy_pat.set("Saccharose intolerance")
     else:
         print("Nothing to do")
 
     print(CheckVar4.get())
     if CheckVar4.get() == 1:
         print("Fructose intolerance")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
-            file.write("Fructose intolerance\n")
-            file.write(str('----------------\n'))
+        allergy_pat.set("Fructose intolerance")
     else:
         print("Nothing to do")
 
     print(CheckVar5.get())
     if CheckVar5.get() == 1:
         print("Eggs")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
-            file.write("Eggs\n")
-            file.write(str('----------------\n'))
+        allergy_pat.set("Eggs")
     else:
         print("Nothing to do")
 
     print(CheckVar6.get())
     if CheckVar6.get() == 1:
         print("Fish")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
-            file.write("Fish\n")
-            file.write(str('----------------\n'))
+        allergy_pat.set("Fish")
     else:
         print("Nothing to do")
-
 
     print(CheckVar7.get())
     if CheckVar7.get() == 1:
         print("Shellfish")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
-            file.write("Shellfish\n")
-            file.write(str('----------------\n'))
+        allergy_pat.set("Shellfish")
     else:
         print("Nothing to do")
 
     print(CheckVar8.get())
     if CheckVar8.get() == 1:
         print("Molluscs")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
-            file.write("Molluscs\n")
-            file.write(str('----------------\n'))
+        allergy_pat.set("Molluscs")
     else:
         print("Nothing to do")
 
     print(CheckVar9.get())
     if CheckVar9.get() == 1:
         print("Groundnut")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
-            file.write("Groundnut\n")
-            file.write(str('----------------\n'))
+        allergy_pat.set("Groundnut")
     else:
         print("Nothing to do")
 
     print(CheckVar10.get())
     if CheckVar10.get() == 1:
         print("Oleaginous")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
-            file.write("Oleaginous\n")
-            file.write(str('----------------\n'))
+        allergy_pat.set("Oleaginous")
     else:
         print("Nothing to do")
 
     print(CheckVar11.get())
     if CheckVar11.get() == 1:
         print("Sesame")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
-            file.write("Sesame\n")
-            file.write(str('----------------\n'))
+        allergy_pat.set("Sesame")
     else:
         print("Nothing to do")
 
     print(CheckVar12.get())
     if CheckVar12.get() == 1:
         print("Soya")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
-            file.write("Soya\n")
-            file.write(str('----------------\n'))
+        allergy_pat.set("Soya")
     else:
         print("Nothing to do")
 
     print(CheckVar13.get())
     if CheckVar13.get() == 1:
         print("Cereals")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
-            file.write("Cereals\n")
-            file.write(str('----------------\n'))
+        allergy_pat.set("Cereals")
     else:
         print("Nothing to do")
 
     print(CheckVar14.get())
     if CheckVar14.get() == 1:
         print("Latex")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
-            file.write("Latex\n")
-            file.write(str('----------------\n'))
+        allergy_pat.set("Latex")
     else:
         print("Nothing to do")
 
     print(CheckVar15.get())
     if CheckVar15.get() == 1:
         print("Rosacea")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
-            file.write("Rosacea\n")
-            file.write(str('----------------\n'))
+        allergy_pat.set("Rosacea")
     else:
         print("Nothing to do")
 
     print(CheckVar16.get())
     if CheckVar16.get() == 1:
         print("Umbellifers")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
-            file.write("Umbellifers\n")
-            file.write(str('----------------\n'))
+        allergy_pat.set("Umbellifers")
     else:
         print("Nothing to do")
+
+    if allergy_pat.get() == "":
+        messagebox.showerror("MySQL Connection", "Enter Correct Details.")
+    else:
+        sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='timetrackconn')
+        cur = sqlCon.cursor()
+        cur.execute("UPDATE timetrackconn set allergia=%s where stdid=1",(
+        allergy_pat.get(),
+        ))
+        sqlCon.commit()
+        sqlCon.close()
+        messagebox.showinfo("Data Entry Form", "Record Updated Successfully !")
+
+    subprocess.run('./nutrition/updatepatient.py', check=True)
 
 def confRec():
     """
@@ -195,6 +201,7 @@ Intolabel.grid(sticky='w', row=0, column=0, pady=10)
 # To read name in Entry widget
 with open('./newpatient/entryfile.txt', 'r') as filename:
     line1=filename.readline()
+
 text_entry = StringVar()
 text_entry.set(line1)
 entryName = Entry(gui, textvariable=text_entry)

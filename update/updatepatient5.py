@@ -80,7 +80,6 @@ def uptopat(idpatient, patient_num, firstpat, firstname_pat,
         if os.path.getsize('./newpatient/entryfile5.txt'):
             print("+ File 'entryfile5.txt' exist !")
             os.remove('./newpatient/entryfile5.txt')
-            os.remove('./allergy/allergyfile5.txt')
             searchLineName5(firstpat, surname, birthvalue, allergia, transdisval, diagnosis)
     else:
         pass
@@ -102,7 +101,7 @@ def searchLineName5(firstpat, surname, birthvalue, allergia, transdisval, diagno
                 fullfile.write(allergia + '\n')
                 fullfile.write(transdisval + '\n')
                 fullfile.write(diagnosis + '\n')
-                filealler.write(allergia + ", ")
+                filealler.write(allergia + " ")
     messagebox.showinfo("Info", "Data was updated for entryfile5.txt " \
         "and for allergyfile5.txt !")
 

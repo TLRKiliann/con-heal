@@ -79,9 +79,7 @@ def uptopat(idpatient, patient_num, firstpat, firstname_pat,
     if idpatient == '2':
         if os.path.getsize('./newpatient/entryfile2.txt'):
             print("+ File 'entryfile2.txt' deleted !")
-            print("+ File 'allergyfile2.txt' deleted !")
             os.remove('./newpatient/entryfile2.txt')
-            os.remove('./allergy/allergyfile2.txt')
             searchLineName2(firstpat, surname, birthvalue, allergia, transdisval, diagnosis)
     else:
         pass
@@ -96,14 +94,14 @@ def searchLineName2(firstpat, surname, birthvalue, allergia, transdisval, diagno
     """
     MsgBox = messagebox.askyesno('Save data', 'Do you want to save ?')
     if MsgBox == 1:
-        with open('./newpatient/entryfile2.txt', 'w') as fullfile:
-            with open('./allergy/allergyfile2.txt', 'w') as filealler:
+        with open('./newpatient/entryfile2.txt', 'w') as fullfile, \
+            open('./allergy/allergyfile2.txt', 'w') as filealler:
                 fullfile.write(firstpat + " " + surname + '\n')
                 fullfile.write(birthvalue + '\n')
                 fullfile.write(allergia + '\n')
                 fullfile.write(transdisval + '\n')
                 fullfile.write(diagnosis + '\n')
-                filealler.write(allergia + ", ")
+                filealler.write(allergia + " ")
     messagebox.showinfo("Info", "Data was updated for entryfile2.txt " \
         "and for allergyfile2.txt !")
 

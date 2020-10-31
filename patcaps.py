@@ -169,7 +169,7 @@ def callResident(self):
     self.x21, self.y21 = 271, 262
     self.b21=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
         activebackground='dark turquoise', text="Update",
-        command=self.updateLink)
+        command=self.updateLink2)
     self.fb21=self.can.create_window(self.x21, self.y21, window=self.b21)
 
     self.x22, self.y22 = 429, 262
@@ -231,7 +231,7 @@ def callResident(self):
     self.x31, self.y31 = 271, 294
     self.b31=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
         activebackground='aquamarine', text="Update",
-        command=self.updateLink)
+        command=self.updateLink3)
     self.fb31=self.can.create_window(self.x31, self.y31, window=self.b31)
 
     self.x32, self.y32 = 429, 294
@@ -293,7 +293,7 @@ def callResident(self):
     self.x41, self.y41 = 271, 326
     self.b41=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
         activebackground='dark turquoise', text="Update",
-        command=self.updateLink)
+        command=self.updateLink4)
     self.fb41=self.can.create_window(self.x41, self.y41, window=self.b41)
 
     self.x42, self.y42 = 429, 326
@@ -355,7 +355,7 @@ def callResident(self):
     self.x51, self.y51 = 271, 358
     self.b51=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
         activebackground='aquamarine', text="Update",
-        command=self.updateLink)
+        command=self.updateLink5)
     self.fb51=self.can.create_window(self.x51, self.y51, window=self.b51)
 
     self.x52, self.y52 = 429, 358
@@ -417,7 +417,7 @@ def callResident(self):
     self.x61, self.y61 = 271, 390
     self.b61=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
         activebackground='dark turquoise', text="Update",
-        command=self.updateLink)
+        command=self.updateLink6)
     self.fb61=self.can.create_window(self.x61, self.y61, window=self.b61)
 
     self.x62, self.y62 = 429, 390
@@ -479,7 +479,7 @@ def callResident(self):
     self.x71, self.y71 = 271, 422
     self.b71=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
         activebackground='aquamarine', text="Update",
-        command=self.updateLink)
+        command=self.updateLink7)
     self.fb71=self.can.create_window(self.x71, self.y71, window=self.b71)
 
     self.x72, self.y72 = 429, 422
@@ -541,7 +541,7 @@ def callResident(self):
     self.x81, self.y81 = 271, 454
     self.b81=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
         activebackground='dark turquoise', text="Update",
-        command=self.updateLink)
+        command=self.updateLink8)
     self.fb81=self.can.create_window(self.x81, self.y81, window=self.b81)
 
     self.x82, self.y82 = 429, 454
@@ -603,7 +603,7 @@ def callResident(self):
     self.x91, self.y91 = 271, 486
     self.b91=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
         activebackground='aquamarine', text="Update",
-        command=self.updateLink)
+        command=self.updateLink9)
     self.fb91=self.can.create_window(self.x91, self.y91, window=self.b91)
 
     self.x92, self.y92 = 429, 486
@@ -665,7 +665,7 @@ def callResident(self):
     self.x101, self.y101 = 271, 518
     self.b101=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
         activebackground='dark turquoise', text="Update",
-        command=self.updateLink)
+        command=self.updateLink10)
     self.fb101=self.can.create_window(self.x101, self.y101, window=self.b101)
 
     self.x102, self.y102 = 429, 518
@@ -727,7 +727,7 @@ def callResident(self):
     self.x111, self.y111 = 271, 550
     self.b111=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
         activebackground='aquamarine', text="Update",
-        command=self.updateLink)
+        command=self.updateLink11)
     self.fb111=self.can.create_window(self.x111, self.y111, window=self.b111)
 
     self.x112, self.y112 = 429, 550
@@ -789,7 +789,7 @@ def callResident(self):
     self.x121, self.y121 = 271, 582
     self.b121=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
         activebackground='dark turquoise', text="Update",
-        command=self.updateLink)
+        command=self.updateLink12)
     self.fb121=self.can.create_window(self.x121, self.y121, window=self.b121)
 
     self.x122, self.y122 = 429, 582
@@ -851,7 +851,7 @@ def callResident(self):
     self.x131, self.y131 = 271, 614
     self.b131=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
         activebackground='aquamarine', text="Update",
-        command=self.updateLink)
+        command=self.updateLink13)
     self.fb131=self.can.create_window(self.x131, self.y131, window=self.b131)
 
     self.x132, self.y132 = 429, 614
@@ -913,7 +913,7 @@ def callResident(self):
     self.x141, self.y141 = 271, 646
     self.b141=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
         activebackground='dark turquoise', text="Update",
-        command=self.updateLink)
+        command=self.updateLink14)
     self.fb141=self.can.create_window(self.x141, self.y141, window=self.b141)
 
     self.x142, self.y142 = 429, 646
@@ -975,7 +975,7 @@ def callResident(self):
     self.x151, self.y151 = 271, 678
     self.b151=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
         activebackground='aquamarine', text="Update",
-        command=self.updateLink)
+        command=self.updateLink15)
     self.fb151=self.can.create_window(self.x151, self.y151, window=self.b151)
 
     self.x152, self.y152 = 429, 678
@@ -1037,7 +1037,7 @@ def callResident(self):
     self.x161, self.y161 = 271, 710
     self.b161=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
         activebackground='dark turquoise', text="Update",
-        command=self.updateLink)
+        command=self.updateLink16)
     self.fb161=self.can.create_window(self.x161, self.y161, window=self.b161)
 
     self.x162, self.y162 = 429, 710
@@ -1099,7 +1099,7 @@ def callResident(self):
     self.x171, self.y171 = 271, 742
     self.b171=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
         activebackground='aquamarine', text="Update",
-        command=self.updateLink)
+        command=self.updateLink17)
     self.fb171=self.can.create_window(self.x171, self.y171, window=self.b171)
 
     self.x172, self.y172 = 429, 742
@@ -1161,7 +1161,7 @@ def callResident(self):
     self.x181, self.y181 = 271, 774
     self.b181=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
         activebackground='dark turquoise', text="Update",
-        command=self.updateLink)
+        command=self.updateLink18)
     self.fb181=self.can.create_window(self.x181, self.y181, window=self.b181)
 
     self.x182, self.y182 = 429, 774
@@ -1223,7 +1223,7 @@ def callResident(self):
     self.x191, self.y191 = 271, 806
     self.b191=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
         activebackground='aquamarine', text="Update",
-        command=self.updateLink)
+        command=self.updateLink19)
     self.fb191=self.can.create_window(self.x191, self.y191, window=self.b191)
 
     self.x192, self.y192 = 429, 806
@@ -1285,7 +1285,7 @@ def callResident(self):
     self.x201, self.y201 = 271, 838
     self.b201=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
         activebackground='dark turquoise', text="Update",
-        command=self.updateLink)
+        command=self.updateLink20)
     self.fb201=self.can.create_window(self.x201, self.y201, window=self.b201)
 
     self.x202, self.y202 = 429, 838
@@ -1347,7 +1347,7 @@ def callResident(self):
     self.x211, self.y211 = 271, 870
     self.b211=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
         activebackground='aquamarine', text="Update",
-        command=self.updateLink)
+        command=self.updateLink21)
     self.fb211=self.can.create_window(self.x211, self.y211, window=self.b211)
 
     self.x212, self.y212 = 429, 870
@@ -1409,7 +1409,7 @@ def callResident(self):
     self.x221, self.y221 = 271, 902
     self.b221=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
         activebackground='dark turquoise', text="Update",
-        command=self.updateLink)
+        command=self.updateLink22)
     self.fb221=self.can.create_window(self.x221, self.y221, window=self.b221)
 
     self.x222, self.y222 = 429, 902
@@ -1471,7 +1471,7 @@ def callResident(self):
     self.x231, self.y231 = 271, 934
     self.b231=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
         activebackground='aquamarine', text="Update",
-        command=self.updateLink)
+        command=self.updateLink23)
     self.fb231=self.can.create_window(self.x231, self.y231, window=self.b231)
 
     self.x232, self.y232 = 429, 934
@@ -1533,7 +1533,7 @@ def callResident(self):
     self.x241, self.y241 = 271, 966
     self.b241=Button(self.can, width=8, font=16, bg='blue violet', fg='cyan',
         activebackground='dark turquoise', text="Update",
-        command=self.updateLink)
+        command=self.updateLink24)
     self.fb241=self.can.create_window(self.x241, self.y241, window=self.b241)
 
     self.x242, self.y242 = 429, 966

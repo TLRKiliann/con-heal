@@ -1750,6 +1750,75 @@ class Application(Frame):
         """
         subprocess.run('./update/updatepatient1.py', check=True)
 
+    def updateLink2(self):
+        subprocess.run('./update/updatepatient2.py', check=True)
+
+    def updateLink3(self):
+        subprocess.run('./update/updatepatient3.py', check=True)
+
+    def updateLink4(self):
+        subprocess.run('./update/updatepatient4.py', check=True)
+
+    def updateLink5(self):
+        subprocess.run('./update/updatepatient5.py', check=True)
+
+    def updateLink6(self):
+        subprocess.run('./update/updatepatient6.py', check=True)
+
+    def updateLink7(self):
+        subprocess.run('./update/updatepatient7.py', check=True)
+
+    def updateLink8(self):
+        subprocess.run('./update/updatepatient8.py', check=True)
+
+    def updateLink9(self):
+        subprocess.run('./update/updatepatient9.py', check=True)
+
+    def updateLink10(self):
+        subprocess.run('./update/updatepatient10.py', check=True)
+
+    def updateLink11(self):
+        subprocess.run('./update/updatepatient11.py', check=True)
+
+    def updateLink12(self):
+        subprocess.run('./update/updatepatient12.py', check=True)
+
+    def updateLink13(self):
+        subprocess.run('./update/updatepatient13.py', check=True)
+
+    def updateLink14(self):
+        subprocess.run('./update/updatepatient14.py', check=True)
+
+    def updateLink15(self):
+        subprocess.run('./update/updatepatient15.py', check=True)
+
+    def updateLink16(self):
+        subprocess.run('./update/updatepatient16.py', check=True)
+
+    def updateLink17(self):
+        subprocess.run('./update/updatepatient17.py', check=True)
+
+    def updateLink18(self):
+        subprocess.run('./update/updatepatient18.py', check=True)
+
+    def updateLink19(self):
+        subprocess.run('./update/updatepatient19.py', check=True)
+
+    def updateLink20(self):
+        subprocess.run('./update/updatepatient20.py', check=True)
+
+    def updateLink21(self):
+        subprocess.run('./update/updatepatient21.py', check=True)
+
+    def updateLink22(self):
+        subprocess.run('./update/updatepatient22.py', check=True)
+
+    def updateLink23(self):
+        subprocess.run('./update/updatepatient23.py', check=True)
+
+    def updateLink24(self):
+        subprocess.run('./update/updatepatient24.py', check=True)
+
     # Func Diagnostic
     def diag1(self):
         subprocess.run("./diag/diag_patient1.py", check=True)

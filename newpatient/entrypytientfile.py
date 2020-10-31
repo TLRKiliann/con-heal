@@ -528,7 +528,7 @@ bouton1 = Button(gui, text="Enter", width=8, bd=3,
     fg='yellow', bg='RoyalBlue3', highlightbackground='light sky blue',
     activebackground='dark turquoise',
     command = lambda: get(IDpatient, Patient_num, Patientname, Firstname_pat,
-        Surname, Sur_pat, Allergia, Patient_allergy, Birthvalue, Birth_entree, 
+        Surname, Sur_pat, Birthvalue, Birth_entree, Allergia, Patient_allergy, 
         TransDisVal, TransDisease, Diagnosis, Diagnos_pat))
 bouton1.pack(side=LEFT, padx=10, pady=20)
 

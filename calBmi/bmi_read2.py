@@ -57,7 +57,7 @@ Entryall.pack(padx=10, pady=5)
 textBox=Text(fen, height=15, width=60, font=18)
 textBox.pack(padx=30, pady=30)
 
-buttonClose=Button(fen, text="Quit", width=10, fg='cyan', 
+buttonClose=Button(fen, text="Quit", width=10, fg='cyan',
     bg='gray30', activebackground='dark turquoise', 
     activeforeground='navy', command=quit)
 buttonClose.pack(side='right', padx=10, pady=10)
@@ -65,7 +65,7 @@ buttonClose.pack(side='right', padx=10, pady=10)
 try:
     importationFile('./calBmi/bmi2.txt', encodage="Utf-8")
 except FileNotFoundError as error_call:
-    print("+ importationFile bmi2.txt " + line1 + " failed !")
+    print("+ Import bmi2.txt for " + line1 + " failed !")
     msgBox()
 
 fen.mainloop()

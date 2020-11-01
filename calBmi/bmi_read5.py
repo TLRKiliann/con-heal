@@ -65,7 +65,7 @@ buttonClose.pack(side='right', padx=10, pady=10)
 try:
     importationFile('./calBmi/bmi5.txt', encodage="Utf-8")
 except FileNotFoundError as error_call:
-    print("+ importationFile bmi5.txt " + line1 + " failed !")
+    print("+ Import bmi5.txt for " + line1 + " failed !")
     msgBox()
 
 fen.mainloop()

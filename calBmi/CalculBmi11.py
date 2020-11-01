@@ -47,6 +47,7 @@ def buttRecord():
     num1 = float((number1.get()))
     num2 = float((number2.get()))
     result = (num1)/(num2*num2)
+    bypass = round(result, 3)
 
     with open('./calBmi/bmi11.txt', 'a+') as file:
         file.write(str("Date : "))
@@ -60,7 +61,7 @@ def buttRecord():
         file.write(str("Taille : "))
         file.write(number2.get() + "\n")
         file.write(str("BMI : "))
-        file.write(str(result))
+        file.write(str(bypass))
         file.write("\n\n")
         file.close()
 
@@ -71,7 +72,7 @@ def buttRecord():
                 datastore = json.load(datafile)
                 print(datastore)
             dataBmi = datastore
-            dataBmi['data'].append({'Date' : textDate.get(), 'BMI' : result})
+            dataBmi['data'].append({'Date' : textDate.get(), 'BMI' : bypass})
             with open('./calBmi/doc_BMI11/file_bmi.json', 'w') as datafile2:
                 json.dump(dataBmi, datafile2, indent=4)
     except FileNotFoundError as outcom:
@@ -80,7 +81,7 @@ def buttRecord():
         print("+ File file_bmi.json created !")
         dataBmi = {}
         dataBmi['data'] = []
-        dataBmi['data'].append({'Date' : textDate.get(), 'BMI' : result})
+        dataBmi['data'].append({'Date' : textDate.get(), 'BMI' : bypass})
         with open('./calBmi/doc_BMI11/file_bmi.json', 'w') as datafile:
             json.dump(dataBmi, datafile, indent=4)
 

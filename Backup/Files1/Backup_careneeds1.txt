@@ -1,32 +1,16 @@
-En date du : 10/10/2020 à 10:50:46 :
-Patient name : exec tech
+En date du : 31/10/2020 à 02:14:21 :
+Patient name : Erald Roll
 + Surveillance posturale et/ou des déplacements requise
----
-
----####-|--- Affichage des besoins du patient à surveiller ---|-####---
-
-En date du : 10/10/2020 à 10:50:46 :
-Patient name : exec tech
-+ Surveillance posturale et/ou des déplacements requise
-truc 1
++ Surveillance ou aide pour l'habillage/déshabillage requise
++ Accompagner ou aider la personne à se réaliser
 ---
 
 
-
-En date du : 10/10/2020 à 10:51:13 :
-Patient name : exec tech
-+ Surveillance pour éviter les dangers requise
-+ Surveillance propreté et/ou téguments requise
----
-
-En date du : 10/10/2020 à 10:51:31 :
-Patient name : exec tech
-+ Surveillance pour éviter les dangers requise
-truc 2
-+ Surveillance propreté et/ou téguments requise
-truc 3
-
-En date du : 09/10/2020 à 11:33:07 :
-test pour nouveau rdv chez Dr Truc
-Il va faire tel truc.
+----------------------------------------------------------
+Date : 31/10/2020
+Patient name : Jean-Christophe Roll
+# Sabril : (add result of dosage here)
+# Taloxa : (add result of dosage here)
+# Topamax : (add result of dosage here)
+---------------------------------------------------------
 

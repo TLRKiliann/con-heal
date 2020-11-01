@@ -14,7 +14,7 @@ def importationFile(fichier, encodage="Utf-8"):
         textBox.insert(END, li)
 
 def msgBox():
-    MSB = messagebox.showinfo('Info', 'File bmi3.txt does not exist')
+    messagebox.showinfo('Info', 'File bmi3.txt does not exist')
 
 fen = Tk()
 fen.title("BMI results")

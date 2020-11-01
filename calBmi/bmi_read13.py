@@ -8,15 +8,15 @@ from tkinter import messagebox
 
 def importationFile(fichier, encodage="Utf-8"):
     file = open(fichier, 'r', encoding=encodage)
-    content=file.readlines()
+    content = file.readlines()
     file.close()
     for li in content:
         textBox.insert(END, li)
 
 def msgBox():
-    MSB = messagebox.showinfo('Info', 'File bmi13.txt does not exist')
+    messagebox.showinfo('Info', 'File bmi13.txt does not exist')
 
-fen=Tk()
+fen = Tk()
 fen.title("BMI results")
 fen.configure(background='RoyalBlue4')
 
@@ -26,38 +26,38 @@ bottom = Frame(fen, bg='RoyalBlue4')
 top.pack(side=TOP)
 bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
 
-labelo=Label(fen, text="BMI results : ", width=15,
+labelo = Label(fen, text="BMI results : ", width=15,
     font='Times 18 bold', fg='cyan', bg='RoyalBlue4')
 labelo.pack(in_=top, side=LEFT, pady=20)
 
-labelallergy=Label(fen, text="Allergy",
+labelallergy = Label(fen, text="Allergy",
     font='Arial 18 bold', fg='coral', bg='RoyalBlue4')
 labelallergy.pack(padx=5, pady=5)
 
 # To read name in Entry widget
 with open('./newpatient/entryfile13.txt', 'r') as filename:
-    line1=filename.readline()
+    line1 = filename.readline()
 
-text_name=StringVar()
+text_name = StringVar()
 text_name.set(line1)
-Entryname=Entry(fen, textvariable=text_name)
+Entryname = Entry(fen, textvariable=text_name)
 Entryname.pack(in_=top, side=LEFT, pady=20)
 
 # To read allergy in Entry widget
 with open('./newpatient/entryfile13.txt', 'r') as allerfile:
-    lineA1=allerfile.readline()
-    lineA2=allerfile.readline()
-    lineA3=allerfile.readline()
+    lineA1 = allerfile.readline()
+    lineA2 = allerfile.readline()
+    lineA3 = allerfile.readline()
 
-text_all=StringVar()
+text_all = StringVar()
 text_all.set(lineA3)
-Entryall=Entry(fen, textvariable=text_all, width=60)
+Entryall = Entry(fen, textvariable=text_all, width=60)
 Entryall.pack(padx=10, pady=5)
 
-textBox=Text(fen, height=15, width=60, font=18)
+textBox = Text(fen, height=15, width=60, font=18)
 textBox.pack(padx=30, pady=30)
 
-buttonClose=Button(fen, text="Quit", width=10, fg='cyan', 
+buttonClose = Button(fen, text="Quit", width=10, fg='cyan', 
     bg='gray30', activebackground='dark turquoise', 
     activeforeground='navy', command=quit)
 buttonClose.pack(side='right', padx=10, pady=10)

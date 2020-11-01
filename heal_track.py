@@ -342,7 +342,7 @@ class MenuBar(Frame):
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda24)
         # Integration of agenda menu
-        self.cmd_agenda.configure(activeforeground='black', activebackground='cyan', 
+        self.cmd_agenda.configure(activeforeground='black', activebackground='cyan',
             menu=me3)
 
         # 14 besoins menu
@@ -906,7 +906,7 @@ class MenuBar(Frame):
         self.cmd_Print.configure(activeforeground='black', activebackground='cyan',
             menu=mePrint)
 
-        # Menu for showing all Graphs togather per patient 
+        # Menu for showing all Graphs togather per patient
         self.cmd_backup=Menubutton(self, text='Global', font=("Times 14"), fg='cyan',
             bg='grey30', relief=GROOVE)
         self.cmd_backup.pack(side=LEFT, padx=3)
@@ -1160,7 +1160,7 @@ class Application(Frame):
         # Psychotabs button
         self.button4 = Button(self, text="RESIDENTS", font=('Times 18 bold'),
             bg='RoyalBlue3', fg='cyan', command = self.showPatients)
-        self.button4.configure(width=15, bd=3, highlightbackground='blue', 
+        self.button4.configure(width=15, bd=3, highlightbackground='blue',
             activebackground='dark turquoise')
         self.button4_window = self.can.create_window(950, 550, anchor=CENTER,
             window=self.button4)
@@ -1177,7 +1177,7 @@ class Application(Frame):
 
     def msgExit(self):
         """
-            If usr want to quit, a question 
+            If usr want to quit, a question
             into a msgbox appear.
         """
         MsgBox = messagebox.askyesno('Quit system', 'Do you want to quit ?')
@@ -1189,7 +1189,7 @@ class Application(Frame):
 
     def instalpy(self):
         """
-            Explanation about skills 
+            Explanation about skills
             and how to use app
         """
         self.can.delete(ALL)
@@ -1199,16 +1199,20 @@ class Application(Frame):
             text="- MAPAPP -\n\n"
 
             "Usefull functionalities :\n"
-            "--------------------------------\n"
-            "---> Backup has been programed for every first day of each month\n"
+            "----------------------------\n"
+            "---> A backup is preview for every first day of each month\n"
             "---> Display if a treatment or reserve ends the next day\n"
             "---> Agenda is verified every day and pop-up"
             "to show you if an appointment is fixed for tomorrow\n\n"
 
             "How to use heal-track :\n\n"
 
-            "Entry + Add patient ---> Allergy + Intolerance ---> 14 Needs ---> Care and Monitoring :\n"
-            "---------------------------------------------------------------------------------------------------------\n"
+            "To make a patient entry : \n"
+
+            "Entry or Add patient (read below) ---> Allergy + Intolerance --->"
+            " 14 Needs ---> Care and Monitoring :\n"
+            "-----------------------------------------------------------------"
+            "---------------------------------------------------------\n"
             "Use 'Entry' button to enter for first time new patient. Use 'Add "
             "patient' once time all patients were enter \n"
             "(button to replace a patient who's left with delete button).\n"
@@ -1217,19 +1221,18 @@ class Application(Frame):
             "You can also use 'Intolerance' in the Menu Bar to complete 'allergy'.\n"
             "After it, Care and Monitoring is available only if you have entered one "
             "or more needs of patient.\n"
-            "1 ---> Name\n"
-            "2 ---> Refresh (button)\n"
-            "3 ---> Allergy\n"
+            "1 ---> Enter data of patient\n"
+            "2 ---> Use Refresh (button)\n"
+            "3 ---> Intolerances\n"
             "4 ---> 14 Needs\n"
             "5 ---> Care and monitoring\n\n"
 
             "Care and monitoring retrieve all data from :\n"
             "----------------------------------------------------\n"
-            "+ 14 Needs\n"
-            "+ Labo + Comburtest (urinary stix)\n"
-            "+ Agenda\n\n"
+            "+ 14 Needs (V. Henderson)\n"
+            "+ Labo (dosage of neuroleptic)\n"
 
-            "\nDevelopped on Linux Xubuntu (xfce4) Voyager 18.04 by Cédric Kuchen - alias ko@l@tr33\n",
+            "\nDevelopped on Linux Xubuntu (xfce4) Voyager 18.04 by ko@l@tr33\n",
             font=('Times', 13), fill='aquamarine')
         self.can.configure(scrollregion=self.can.bbox(ALL))
 
@@ -1274,8 +1277,8 @@ class Application(Frame):
         self.lab5=Label(self.labFra, justify=LEFT, fg='cyan',
             bg='grey22', font=('Times', 14),
             text="\nMenu Bar, DB, Textbox and Residents are the most usefull skills\n"
-            "to perform onto this app ! If you need help, you\n" 
-            "can go to MapApp to access map of this app and\n" 
+            "to perform onto this app ! If you need help, you\n"
+            "can go to MapApp to access map of this app and\n"
             "understand how the app is used.\n\n"
             "Enjoy it ! ;)\n").pack(padx=10)
         self.separator = Frame(self.labFra, height=2, bd=1, relief=SUNKEN)
@@ -1303,9 +1306,6 @@ class Application(Frame):
         subprocess.run('./newpatient/torecord.py', check=True)
 
     def patientAgenda(self):
-        """
-            To call agenda app for patient 1
-        """
         subprocess.run('./patient_agenda/origin_agenda.py', check=True)
 
     def patientAgenda2(self):
@@ -1745,7 +1745,7 @@ class Application(Frame):
 
     def updateLink(self):
         """
-            To update data for patient 
+            To update data for patient
             in txt entryfile and for DB.
         """
         subprocess.run('./update/updatepatient1.py', check=True)
@@ -2037,11 +2037,6 @@ class Application(Frame):
 
     def nutritionMenu24(self):
         subprocess.run('./nutrition/nutrit_patient24.py', check=True)
-    
-    """
-    def newsTextBox(self):
-        self.can.textBox = Text(app, text = "")
-    """
 
     # To acces files into Backup folder
     def allFilesBackup(self):

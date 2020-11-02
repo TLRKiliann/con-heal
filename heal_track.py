@@ -3,7 +3,7 @@
 
 
 from tkinter import *
-import tkinter as ttk
+#import tkinter as ttk
 from tkinter import messagebox
 import time
 import subprocess

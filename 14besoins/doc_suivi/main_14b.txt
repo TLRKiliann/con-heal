@@ -1,0 +1,22 @@
+En date du : 02/11/2020 à 23:09:49 :
+Patient name : Edward Snowden
++ Surveillance respiratoire requise
++ Surveillance de la température requise
+---
+
+En date du : 02/11/2020 à 23:10:09 :
+Patient name : Edward Snowden
++ Surveillance respiratoire requise
+truc1
++ Surveillance de la température requise
+truc2
+
+
+----------------------------------------------------------
+Date : 02/11/2020
+Patient name : Edward Snowden
+# Briviact : (add result of dosage here)
+# Ethosuximide : (add result of dosage here)
+# Gabitril : (add result of dosage here)
+---------------------------------------------------------
+

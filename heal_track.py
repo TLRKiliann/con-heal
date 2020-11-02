@@ -1173,7 +1173,6 @@ class Application(Frame):
             activebackground='dark turquoise')
         self.button4_window = self.can.create_window(950, 550, anchor=CENTER,
             window=self.button4)
-        self.pack()
         
         def display_time():
             current_time = time.strftime("%H:%M:%S %p")
@@ -1181,6 +1180,7 @@ class Application(Frame):
             self.clock_label.after(200, display_time)
 
         display_time()
+        self.pack()
 
     # Method to reconfigure scrollbar every time.
     def onFrameConfigure(self, event):

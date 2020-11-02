@@ -95,7 +95,6 @@ def callResident(self):
     try:
         self.data_time=line1
         self.x10, self.y10 = 129, 230
-        #self.Data_write=Entry(self.can)
         self.new_data1=StringVar()
         self.Data_write=Entry(self.can, textvariable=self.new_data1,
             highlightbackground='grey', bd=4)
@@ -157,7 +156,6 @@ def callResident(self):
     try:
         self.new_data2=line2
         self.x20, self.y20 = 129, 262
-        #self.Data_write=Entry(self.can)
         self.new_data2=StringVar()
         self.Data_write=Entry(self.can, textvariable=self.new_data2,
             highlightbackground='grey', bd=4)
@@ -219,7 +217,6 @@ def callResident(self):
     try:
         self.new_data3=line3
         self.x30, self.y30 = 129, 294
-        #self.Data_write=Entry(self.can)
         self.new_data3=StringVar()
         self.Data_write=Entry(self.can, textvariable=self.new_data3,
             highlightbackground='grey', bd=4)
@@ -281,7 +278,6 @@ def callResident(self):
     try:
         self.new_data4=line4
         self.x40, self.y40 = 129, 326
-        #self.Data_write=Entry(self.can)
         self.new_data4=StringVar()
         self.Data_write=Entry(self.can, textvariable=self.new_data4,
             highlightbackground='grey', bd=4)
@@ -343,7 +339,6 @@ def callResident(self):
     try:
         self.new_data5=line5
         self.x50, self.y50 = 129, 358
-        #self.Data_write=Entry(self.can)
         self.new_data5=StringVar()
         self.Data_write=Entry(self.can, textvariable=self.new_data5,
             highlightbackground='grey', bd=4)
@@ -405,7 +400,6 @@ def callResident(self):
     try:
         self.new_data6=line6
         self.x60, self.y60 = 129, 390
-        #self.Data_write=Entry(self.can)
         self.new_data6=StringVar()
         self.Data_write=Entry(self.can, textvariable=self.new_data6,
             highlightbackground='grey', bd=4)
@@ -467,7 +461,6 @@ def callResident(self):
     try:
         self.new_data7=line7
         self.x70, self.y70 = 129, 422
-        #self.Data_write=Entry(self.can)
         self.new_data7=StringVar()
         self.Data_write=Entry(self.can, textvariable=self.new_data7,
             highlightbackground='grey', bd=4)
@@ -529,7 +522,6 @@ def callResident(self):
     try:
         self.new_data8=line8
         self.x80, self.y80 = 129, 454
-        #self.Data_write=Entry(self.can)
         self.new_data8=StringVar()
         self.Data_write=Entry(self.can, textvariable=self.new_data8,
             highlightbackground='grey', bd=4)
@@ -591,7 +583,6 @@ def callResident(self):
     try:
         self.new_data9=line9
         self.x90, self.y90 = 129, 486
-        #self.Data_write=Entry(self.can)
         self.new_data9=StringVar()
         self.Data_write=Entry(self.can, textvariable=self.new_data9,
             highlightbackground='grey', bd=4)
@@ -653,7 +644,6 @@ def callResident(self):
     try:
         self.new_data10=line10
         self.x100, self.y100 = 129, 518
-        #self.Data_write=Entry(self.can)
         self.new_data10=StringVar()
         self.Data_write=Entry(self.can, textvariable=self.new_data10,
             highlightbackground='grey', bd=4)
@@ -715,7 +705,6 @@ def callResident(self):
     try:
         self.new_data11=line11
         self.x110, self.y110 = 129, 550
-        #self.Data_write=Entry(self.can)
         self.new_data11=StringVar()
         self.Data_write=Entry(self.can, textvariable=self.new_data11,
             highlightbackground='grey', bd=4)
@@ -777,7 +766,6 @@ def callResident(self):
     try:
         self.new_data12=line12
         self.x120, self.y120 = 129, 582
-        #self.Data_write=Entry(self.can)
         self.new_data12=StringVar()
         self.Data_write=Entry(self.can, textvariable=self.new_data12,
             highlightbackground='grey', bd=4)
@@ -839,7 +827,6 @@ def callResident(self):
     try:
         self.new_data13=line13
         self.x130, self.y130 = 129, 614
-        #self.Data_write=Entry(self.can)
         self.new_data13=StringVar()
         self.Data_write=Entry(self.can, textvariable=self.new_data13,
             highlightbackground='grey', bd=4)
@@ -901,7 +888,6 @@ def callResident(self):
     try:
         self.new_data14=line14
         self.x140, self.y140 = 129, 646
-        #self.Data_write=Entry(self.can)
         self.new_data14=StringVar()
         self.Data_write=Entry(self.can, textvariable=self.new_data14,
             highlightbackground='grey', bd=4)
@@ -963,7 +949,6 @@ def callResident(self):
     try:
         self.new_data15=line15
         self.x150, self.y150 = 129, 678
-        #self.Data_write=Entry(self.can)
         self.new_data15=StringVar()
         self.Data_write=Entry(self.can, textvariable=self.new_data15,
             highlightbackground='grey', bd=4)
@@ -1025,7 +1010,6 @@ def callResident(self):
     try:
         self.new_data16=line16
         self.x160, self.y160 = 129, 710
-        #self.Data_write=Entry(self.can)
         self.new_data16=StringVar()
         self.Data_write=Entry(self.can, textvariable=self.new_data16,
             highlightbackground='grey', bd=4)
@@ -1087,7 +1071,6 @@ def callResident(self):
     try:
         self.new_data17=line17
         self.x170, self.y170 = 129, 742
-        #self.Data_write=Entry(self.can)
         self.new_data17=StringVar()
         self.Data_write=Entry(self.can, textvariable=self.new_data17,
             highlightbackground='grey', bd=4)
@@ -1149,7 +1132,6 @@ def callResident(self):
     try:
         self.new_data18=line18
         self.x180, self.y180 = 129, 774
-        ##self.Data_write=Entry(self.can)
         self.new_data18=StringVar()
         self.Data_write=Entry(self.can, textvariable=self.new_data18,
             highlightbackground='grey', bd=4)
@@ -1211,7 +1193,6 @@ def callResident(self):
     try:
         self.new_data19=line19
         self.x190, self.y190 = 129, 806
-        ##self.Data_write=Entry(self.can)
         self.new_data19=StringVar()
         self.Data_write=Entry(self.can, textvariable=self.new_data19,
             highlightbackground='grey', bd=4)
@@ -1273,7 +1254,6 @@ def callResident(self):
     try:
         self.new_data20=line20
         self.x200, self.y200 = 129, 838
-        ##self.Data_write=Entry(self.can)
         self.new_data20=StringVar()
         self.Data_write=Entry(self.can, textvariable=self.new_data20,
             highlightbackground='grey', bd=4)
@@ -1335,7 +1315,6 @@ def callResident(self):
     try:
         self.new_data21=line21
         self.x210, self.y210 = 129, 870
-        ##self.Data_write=Entry(self.can)
         self.new_data21=StringVar()
         self.Data_write=Entry(self.can, textvariable=self.new_data21,
             highlightbackground='grey', bd=4)
@@ -1397,7 +1376,6 @@ def callResident(self):
     try:
         self.new_data22=line22
         self.x220, self.y220 = 129, 902
-        ##self.Data_write=Entry(self.can)
         self.new_data22=StringVar()
         self.Data_write=Entry(self.can, textvariable=self.new_data22,
             highlightbackground='grey', bd=4)
@@ -1459,7 +1437,6 @@ def callResident(self):
     try:
         self.new_data23=line23
         self.x230, self.y230 = 129, 934
-        ##self.Data_write=Entry(self.can)
         self.new_data23=StringVar()
         self.Data_write=Entry(self.can, textvariable=self.new_data23,
             highlightbackground='grey', bd=4)
@@ -1521,7 +1498,6 @@ def callResident(self):
     try:
         self.new_data24=line24
         self.x240, self.y240 = 129, 966
-        #self.Data_write=Entry(self.can)
         self.new_data24=StringVar()
         self.Data_write=Entry(self.can, textvariable=self.new_data24,
           highlightbackground='grey', bd=4)

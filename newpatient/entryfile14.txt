@@ -1,4 +1,5 @@
 Bill Gate
-09/03/1945
-Linux, Mac
-Narcissic
+00/00/0000
+None
+None
+Diagnostic (main)

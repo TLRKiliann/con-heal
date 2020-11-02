@@ -1,4 +1,5 @@
 Clint Eastwood
-07/06/1954
-gun
-Meloncolia
+00/00/0000
+None
+None
+Diagnostic (main)

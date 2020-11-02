@@ -1,5 +1,5 @@
-example example2
-01/02/2020
-test1, test2, test3
-test1, test2
-testdiag
+Firstname Lastname
+00/00/0000
+None
+None
+Diagnostic (main)

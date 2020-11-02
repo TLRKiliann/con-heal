@@ -1,0 +1,22 @@
+En date du : 02/11/2020 à 23:13:17 :
+Patient name : Terry McGuire
++ Surveillance ou aide pour l'habillage/déshabillage requise
++ Accompagner ou aider la personne à se réaliser
+---
+
+En date du : 02/11/2020 à 23:13:32 :
+Patient name : Terry McGuire
++ Surveillance ou aide pour l'habillage/déshabillage requise
+truc1
++ Accompagner ou aider la personne à se réaliser
+truc2
+
+
+----------------------------------------------------------
+Date : 02/11/2020
+Patient name : Terry McGuire
+# Lyrica : (add result of dosage here)
+# Trileptal : (add result of dosage here)
+# Remeron : (add result of dosage here)
+---------------------------------------------------------
+

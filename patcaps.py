@@ -20,17 +20,6 @@ def callResident(self):
     self.item=self.can.create_image(625, 85, image=self.photo)
 
     """
-    def display_time():
-        current_time = time.strftime("%H:%M:%S %p")
-        clock_label['text'] = current_time
-        clock_label.after(200, display_time)
-    # use self or self.master
-    clock_label = Label(self, width=12) 
-    clock_label.pack(padx=10, pady=20)
-    """
-    display_time()
-
-    """
     # To backup (main file)
     self.updateFiletxt()
     dispAgBox()

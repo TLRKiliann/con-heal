@@ -30,7 +30,7 @@ def callBox(self):
     dispResFunc()
 
     # Display date
-    self.x1, self.y1 = 1065, 70
+    self.x1, self.y1 = 1165, 70
     self.Date_write=Entry(self.can)
     self.data_time=StringVar()
     self.Date_write=Entry(self.can, textvariable=self.data_time, width=10,
@@ -38,7 +38,8 @@ def callBox(self):
     self.data_time.set(time.strftime("%d/%m/%Y"))
     self.Date_write=self.can.create_window(self.x1, self.y1,
         window=self.Date_write)
-
+    
+    """
     # Static time
     self.x2, self.y2 = 1165, 70
     self.Date_write2 = Entry(self.can)
@@ -48,6 +49,7 @@ def callBox(self):
     self.data_time2.set(time.strftime("%H:%M:%S %p"))
     self.Date_write2=self.can.create_window(self.x2, self.y2,
         window=self.Date_write2)
+    """
 
     # To go to resident page
     self.x6, self.y6 = 115, 75

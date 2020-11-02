@@ -28,7 +28,7 @@ def callResident(self):
     """
 
     # Display date
-    self.x1, self.y1 = 1065, 70
+    self.x1, self.y1 = 1165, 70
     #self.Date_write=Entry(self.can)
     self.data_time=StringVar()
     self.Date_write=Entry(self.can, textvariable=self.data_time, width=10,

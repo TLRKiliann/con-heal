@@ -1113,17 +1113,27 @@ class Application(Frame):
         mBar.pack(side=TOP, fill=X, expand=YES)
         # ScrollCanvas limite de la zone à parcourir avec la barre
         # 1250 - 800
+        self.clock_label = Label(self.master, fg='white', bg='RoyalBlue4', anchor='e') 
+        self.clock_label.pack(side=TOP, fill=X, expand=YES)
+
         self.can = Canvas(self, width=1250, height=800, bg='grey18')
         self.frame = Frame(self.can)
+
         self.vsb = Scrollbar(self, orient=VERTICAL, command=self.can.yview)
         self.can.configure(yscrollcommand=self.vsb.set)
         self.vsb.pack(side=RIGHT, fill=Y)
         #self.can.pack(side=LEFT, fill=BOTH, expand=YES)
         self.can.create_window((4,4), window=self.frame, anchor=NW, tags="self.frame")
+
+
         # Insertion of picture
         self.photo = PhotoImage(file='./syno_gif/fondcolorbg.png')
         self.item = self.can.create_image(625, 400, image=self.photo)
         # Insertion of text
+
+        #self.can.clock_label = Label(self.frame) 
+        #self.can.clock_label.pack(padx=100, pady=200)
+
         self.can.create_text(625, 420, anchor=CENTER, 
             text="Python 3.6 - Tkinter 8.6 - GIMP 2.8",
             font=('Times New Roman', 18, 'bold'), fill='turquoise')
@@ -1134,6 +1144,12 @@ class Application(Frame):
         self.can.pack(side=LEFT, fill=BOTH, expand=YES)
         # 3 buttons on welcome page.
         # Info button
+
+
+        #self.clock_label = Label(self.frame, width=12, height=1, padx=200, pady=10) 
+        #self.clock_label.pack()
+
+
         self.button1 = Button(self, text="Info", font=('Times 14 bold'),
             bg='RoyalBlue3', fg='cyan', command = self.frameInfo)
         self.button1.configure(width=10, bd=3, highlightbackground='blue',
@@ -1166,6 +1182,13 @@ class Application(Frame):
             window=self.button4)
         self.pack()
         
+        def display_time():
+            current_time = time.strftime("%H:%M:%S %p")
+            self.clock_label['text'] = current_time
+            self.clock_label.after(200, display_time)
+
+        display_time()
+
     # Method to reconfigure scrollbar every time.
     def onFrameConfigure(self, event):
         '''Reset the scroll region to encompass the inner frame'''

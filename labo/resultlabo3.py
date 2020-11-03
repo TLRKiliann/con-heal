@@ -68,7 +68,7 @@ def recordTofile():
 def recordOption():
     print("Date : " + time.strftime("%d/%m/%Y"))
     print("Nom du patient : ", entrytext.get())
-    with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+    with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
         with open('./labo/doc_labo/result3.txt', 'a+') as file2:
             file.write("\n----------------------------------------------------------\n")
             file.write("Date : ")
@@ -84,7 +84,7 @@ def recordOption():
     print(CheckVar1.get())
     if CheckVar1.get()==1:
         print("+ Abilify was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Abilify : (add result of dosage here)\n")
                 file2.write("# Abilify : (add result of dosage here)\n")
@@ -94,7 +94,7 @@ def recordOption():
     print(CheckVar2.get())
     if CheckVar2.get()==1:
         print("+ Clopixol was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Clopixol : (add result of dosage here)\n")
                 file2.write("# Clopixol : (add result of dosage here)\n")
@@ -104,7 +104,7 @@ def recordOption():
     print(CheckVar3.get())
     if CheckVar3.get()==1:
         print("+ Clozapine was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Clozapine : (add result of dosage here)\n")
                 file2.write("# Clozapine : (add result of dosage here)\n")
@@ -114,7 +114,7 @@ def recordOption():
     print(CheckVar4.get())
     if CheckVar4.get()==1:
         print("+ Dogmatil was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Dogmatil : (add result of dosage here)\n")
                 file2.write("# Dogmatil : (add result of dosage here)\n")
@@ -124,7 +124,7 @@ def recordOption():
     print(CheckVar5.get())
     if CheckVar5.get()==1:
         print("+ Entumine was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Entumine : (add result of dosage here)\n")
                 file2.write("# Entumine : (add result of dosage here)\n")
@@ -134,7 +134,7 @@ def recordOption():
     print(CheckVar6.get())
     if CheckVar6.get()==1:
         print("+ Fluanxol was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Fluanxol : (add result of dosage here)\n")
                 file2.write("# Fluanxol : (add result of dosage here)\n")
@@ -144,7 +144,7 @@ def recordOption():
     print(CheckVar7.get())
     if CheckVar7.get()==1:
         print("+ Haldol was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Haldol : (add result of dosage here)\n")
                 file2.write("# Haldol : (add result of dosage here)\n")
@@ -154,7 +154,7 @@ def recordOption():
     print(CheckVar8.get())
     if CheckVar8.get()==1:
         print("+ Invega was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Invega : (add result of dosage here)\n")
                 file2.write("# Invega : (add result of dosage here)\n")
@@ -164,7 +164,7 @@ def recordOption():
     print(CheckVar9.get())
     if CheckVar9.get()==1:
         print("+ Nozinan was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Nozinan : (add result of dosage here)\n")
                 file2.write("# Nozinan : (add result of dosage here)\n")
@@ -174,7 +174,7 @@ def recordOption():
     print(CheckVar10.get())
     if CheckVar10.get()==1:
         print("+ Prazine was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Prazine : (add result of dosage here)\n")
                 file2.write("# Prazine : (add result of dosage here)\n")
@@ -184,7 +184,7 @@ def recordOption():
     print(CheckVar12.get())
     if CheckVar12.get()==1:
         print("+ Quetiapine was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Quetiapine : (add result of dosage here)\n")
                 file2.write("# Quetiapine : (add result of dosage here)\n")
@@ -194,7 +194,7 @@ def recordOption():
     print(CheckVar13.get())
     if CheckVar13.get()==1:
         print("+ Risperdal was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Risperdal : (add result of dosage here)\n")
                 file2.write("# Risperdal : (add result of dosage here)\n")
@@ -204,7 +204,7 @@ def recordOption():
     print(CheckVar14.get())
     if CheckVar14.get()==1:
         print("+ Serdolect was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Serdolect : (add result of dosage here)\n")
                 file2.write("# Serdolect : (add result of dosage here)\n")
@@ -214,7 +214,7 @@ def recordOption():
     print(CheckVar15.get())
     if CheckVar15.get()==1:
         print("+ Solian was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Solian : (add result of dosage here)\n")
                 file2.write("# Solian : (add result of dosage here)\n")
@@ -224,7 +224,7 @@ def recordOption():
     print(CheckVar16.get())
     if CheckVar16.get()==1:
         print("+ Tiapridal was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Tiapridal : (add result of dosage here)\n")
                 file2.write("# Tiapridal : (add result of dosage here)\n")
@@ -234,7 +234,7 @@ def recordOption():
     print(CheckVar17.get())
     if CheckVar17.get()==1:
         print("+ Truxal was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Truxal : (add result of dosage here)\n")
                 file2.write("# Truxal : (add result of dosage here)\n")
@@ -244,7 +244,7 @@ def recordOption():
     print(CheckVar18.get())
     if CheckVar18.get()==1:
         print("+ Zyprexa was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Zyprexa : (add result of dosage here)\n")
                 file2.write("# Zyprexa : (add result of dosage here)\n")
@@ -254,7 +254,7 @@ def recordOption():
     print(CheckVar19.get())
     if CheckVar19.get()==1:
         print("+ Briviact was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Briviact : (add result of dosage here)\n")
                 file2.write("# Briviact : (add result of dosage here)\n")
@@ -264,7 +264,7 @@ def recordOption():
     print(CheckVar20.get())
     if CheckVar20.get()==1:
         print("+ Carbamazepine was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Carbamazepine : (add result of dosage here)\n")
                 file2.write("# Carbamazepine : (add result of dosage here)\n")
@@ -274,7 +274,7 @@ def recordOption():
     print(CheckVar21.get())
     if CheckVar21.get()==1:
         print("+ Depakine was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Depakine : (add result of dosage here)\n")
                 file2.write("# Depakine : (add result of dosage here)\n")
@@ -284,7 +284,7 @@ def recordOption():
     print(CheckVar22.get())
     if CheckVar22.get()==1:
         print("+ Ethosuximide was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Ethosuximide : (add result of dosage here)\n")
                 file2.write("# Ethosuximide : (add result of dosage here)\n")
@@ -294,7 +294,7 @@ def recordOption():
     print(CheckVar23.get())
     if CheckVar23.get()==1:
         print("+ Fycompa was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Fycompa : (add result of dosage here)\n")
                 file2.write("# Fycompa : (add result of dosage here)\n")
@@ -304,7 +304,7 @@ def recordOption():
     print(CheckVar24.get())
     if CheckVar24.get()==1:
         print("+ Gabitril was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Gabitril : (add result of dosage here)\n")
                 file2.write("# Gabitril : (add result of dosage here)\n")
@@ -314,7 +314,7 @@ def recordOption():
     print(CheckVar25.get())
     if CheckVar25.get()==1:
         print("+ Inovelon was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Inovelon : (add result of dosage here)\n")
                 file2.write("# Inovelon : (add result of dosage here)\n")
@@ -324,7 +324,7 @@ def recordOption():
     print(CheckVar26.get())
     if CheckVar26.get()==1:
         print("+ Keppra was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Keppra : (add result of dosage here)\n")
                 file2.write("# Keppra : (add result of dosage here)\n")
@@ -334,7 +334,7 @@ def recordOption():
     print(CheckVar27.get())
     if CheckVar27.get()==1:
         print("+ Lamictal was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Lamictal : (add result of dosage here)\n")
                 file2.write("# Lamictal : (add result of dosage here)\n")
@@ -344,7 +344,7 @@ def recordOption():
     print(CheckVar28.get())
     if CheckVar28.get()==1:
         print("+ Lyrica was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Lyrica : (add result of dosage here)\n")
                 file2.write("# Lyrica : (add result of dosage here)\n")
@@ -354,7 +354,7 @@ def recordOption():
     print(CheckVar29.get())
     if CheckVar29.get()==1:
         print("+ Myzoline was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Myzoline : (add result of dosage here)\n")
                 file2.write("# Myzoline : (add result of dosage here)\n")
@@ -364,7 +364,7 @@ def recordOption():
     print(CheckVar30.get())
     if CheckVar30.get()==1:
         print("+ Neurontin was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Neurontin : (add result of dosage here)\n")
                 file2.write("# Neurontin : (add result of dosage here)\n")
@@ -374,7 +374,7 @@ def recordOption():
     print(CheckVar31.get())
     if CheckVar31.get()==1:
         print("+ Phenobarbital was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Phenobarbital : (add result of dosage here)\n")
                 file2.write("# Phenobarbital : (add result of dosage here)\n")
@@ -384,7 +384,7 @@ def recordOption():
     print(CheckVar32.get())
     if CheckVar32.get()==1:
         print("+ Phenytoine was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Phenytoine : (add result of dosage here)\n")
                 file2.write("# Phenytoine : (add result of dosage here)\n")
@@ -394,7 +394,7 @@ def recordOption():
     print(CheckVar33.get())
     if CheckVar33.get()==1:
         print("+ Sabril was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Sabril : (add result of dosage here)\n")
                 file2.write("# Sabril : (add result of dosage here)\n")
@@ -404,7 +404,7 @@ def recordOption():
     print(CheckVar34.get())
     if CheckVar34.get()==1:
         print("+ Taloxa was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Taloxa : (add result of dosage here)\n")
                 file2.write("# Taloxa : (add result of dosage here)\n")
@@ -414,7 +414,7 @@ def recordOption():
     print(CheckVar35.get())
     if CheckVar35.get()==1:
         print("+ Topamax was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Topamax : (add result of dosage here)\n")
                 file2.write("# Topamax : (add result of dosage here)\n")
@@ -424,7 +424,7 @@ def recordOption():
     print(CheckVar36.get())
     if CheckVar36.get()==1:
         print("+ Trileptal was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Trileptal : (add result of dosage here)\n")
                 file2.write("# Trileptal : (add result of dosage here)\n")
@@ -434,7 +434,7 @@ def recordOption():
     print(CheckVar37.get())
     if CheckVar37.get()==1:
         print("+ Trobalt was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Trobalt : (add result of dosage here)\n")
                 file2.write("# Trobalt : (add result of dosage here)\n")
@@ -444,7 +444,7 @@ def recordOption():
     print(CheckVar38.get())
     if CheckVar38.get()==1:
         print("+ Vimpat was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Vimpat : (add result of dosage here)\n")
                 file2.write("# Vimpat : (add result of dosage here)\n")
@@ -454,7 +454,7 @@ def recordOption():
     print(CheckVar39.get())
     if CheckVar39.get()==1:
         print("+ Zonegran was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Zonegran : (add result of dosage here)\n")
                 file2.write("# Zonegran : (add result of dosage here)\n")
@@ -464,7 +464,7 @@ def recordOption():
     print(CheckVar40.get())
     if CheckVar40.get()==1:
         print("+ Anafranil was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Anafranil : (add result of dosage here)\n")
                 file2.write("# Anafranil : (add result of dosage here)\n")
@@ -474,7 +474,7 @@ def recordOption():
     print(CheckVar41.get())
     if CheckVar41.get()==1:
         print("+ Citalopram was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Citalopram : (add result of dosage here)\n")
                 file2.write("# Citalopram : (add result of dosage here)\n")
@@ -484,7 +484,7 @@ def recordOption():
     print(CheckVar42.get())
     if CheckVar42.get()==1:
         print("+ Cipralex was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Cipralex : (add result of dosage here)\n")
                 file2.write("# Cipralex : (add result of dosage here)\n")
@@ -494,7 +494,7 @@ def recordOption():
     print(CheckVar43.get())
     if CheckVar43.get()==1:
         print("+ Cymbalta was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Cymbalta : (add result of dosage here)\n")
                 file2.write("# Cymbalta : (add result of dosage here)\n")
@@ -504,7 +504,7 @@ def recordOption():
     print(CheckVar44.get())
     if CheckVar44.get()==1:
         print("+ Deroxat was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Deroxat : (add result of dosage here)\n")
                 file2.write("# Deroxat : (add result of dosage here)\n")
@@ -514,7 +514,7 @@ def recordOption():
     print(CheckVar45.get())
     if CheckVar45.get()==1:
         print("+ Effexor was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Effexor : (add result of dosage here)\n")
                 file2.write("# Effexor : (add result of dosage here)\n")
@@ -524,7 +524,7 @@ def recordOption():
     print(CheckVar46.get())
     if CheckVar46.get()==1:
         print("+ Floxifral was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Floxifral : (add result of dosage here)\n")
                 file2.write("# Floxifral : (add result of dosage here)\n")
@@ -534,7 +534,7 @@ def recordOption():
     print(CheckVar47.get())
     if CheckVar47.get()==1:
         print("+ Fluctine was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Fluctine : (add result of dosage here)\n")
                 file2.write("# Fluctine : (add result of dosage here)\n")
@@ -544,7 +544,7 @@ def recordOption():
     print(CheckVar48.get())
     if CheckVar48.get()==1:
         print("+ Ludiomil was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Ludiomil : (add result of dosage here)\n")
                 file2.write("# Ludiomil : (add result of dosage here)\n")
@@ -554,7 +554,7 @@ def recordOption():
     print(CheckVar49.get())
     if CheckVar49.get()==1:
         print("+ Remeron was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Remeron : (add result of dosage here)\n")
                 file2.write("# Remeron : (add result of dosage here)\n")
@@ -564,7 +564,7 @@ def recordOption():
     print(CheckVar50.get())
     if CheckVar50.get()==1:
         print("+ Saroten was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Saroten : (add result of dosage here)\n")
                 file2.write("# Saroten : (add result of dosage here)\n")
@@ -574,7 +574,7 @@ def recordOption():
     print(CheckVar51.get())
     if CheckVar51.get()==1:
         print("+ Sertraline was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Sertraline : (add result of dosage here)\n")
                 file2.write("# Sertraline : (add result of dosage here)\n")
@@ -584,7 +584,7 @@ def recordOption():
     print(CheckVar52.get())
     if CheckVar52.get()==1:
         print("+ Surmontil was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Surmontil : (add result of dosage here)\n")
                 file2.write("# Surmontil : (add result of dosage here)\n")
@@ -594,7 +594,7 @@ def recordOption():
     print(CheckVar53.get())
     if CheckVar53.get()==1:
         print("+ Wellbutrin was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Wellbutrin : (add result of dosage here)\n")
                 file2.write("# Wellbutrin : (add result of dosage here)\n")
@@ -604,14 +604,14 @@ def recordOption():
     print(CheckVar54.get())
     if CheckVar54.get()==1:
         print("+ Lithium was checked !")
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as file:
+        with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result3.txt', 'a+') as file2:
                 file.write("# Lithium : (add result of dosage here)\n")
                 file2.write("# Lithium : (add result of dosage here)\n")
     else:
         print("+ Lithium ok, nothing to do")
 
-    with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as endfile:
+    with open('./14besoins/doc_suivi3/patient3_14b.txt', 'a+') as endfile:
         with open('./labo/doc_labo/result3.txt', 'a+') as endfile2:
             endfile.write("---------------------------------------------------------\n\n")
             endfile2.write("---------------------------------------------------------\n\n")

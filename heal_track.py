@@ -1111,38 +1111,45 @@ class Application(Frame):
         self.master.title('Heal-Track Developed by ko@l@tr33 - 2020')
         mBar = MenuBar(self)
         mBar.pack(side=TOP, fill=X, expand=YES)
-        # ScrollCanvas limite de la zone à parcourir avec la barre
-        # 1250 - 800
-
-        self.clock_label = Label(self, font=('Times New Roman', 14, 'bold'),
-            fg='white', bg='RoyalBlue4')
-        self.clock_label.pack()
 
         self.can = Canvas(self, width=1250, height=800, bg='grey18')
         self.frame = Frame(self.can)
 
+        # ScrollCanvas limite de la zone à parcourir avec la barre 1250 - 800
         self.vsb = Scrollbar(self, orient=VERTICAL, command=self.can.yview)
         self.can.configure(yscrollcommand=self.vsb.set)
         self.vsb.pack(side=RIGHT, fill=Y)
         #self.can.pack(side=LEFT, fill=BOTH, expand=YES)
         self.can.create_window((4,4), window=self.frame, anchor=NW, tags="self.frame")
 
+        self.can.clock_label = Label(self, font=('Times New Roman', 18, 'bold'),
+            fg='cyan', bg='RoyalBlue3', padx=560)
+        self.can.clock_label.pack(side=TOP)
+
+        def display_time():
+            current_time = time.strftime("%H:%M:%S %p")
+            self.can.clock_label['text'] = current_time
+            self.can.clock_label.after(200, display_time)
+
+        display_time()
+
         # Insertion of picture
         self.photo = PhotoImage(file='./syno_gif/fondcolorbg.png')
         self.item = self.can.create_image(625, 400, image=self.photo)
-        # Insertion of text
 
+        # Insertion of text
         self.can.create_text(625, 420, anchor=CENTER, 
             text="Python 3.6 - Tkinter 8.6 - GIMP 2.8",
             font=('Times New Roman', 18, 'bold'), fill='turquoise')
         self.can.create_text(1240, 770, anchor=NE, text="ko@l@tr33",
             font=('Times', 12), fill='turquoise')
+
         # Configuration de la Scrollbar sur le Frame
         self.frame.bind("<Configure>", self.onFrameConfigure)
         self.can.pack(side=LEFT, fill=BOTH, expand=YES)
+    
         # 3 buttons on welcome page.
         # Info button
-
         self.button1 = Button(self, text="Info", font=('Times 14 bold'),
             bg='RoyalBlue3', fg='cyan', command = self.frameInfo)
         self.button1.configure(width=10, bd=3, highlightbackground='blue',
@@ -1173,13 +1180,7 @@ class Application(Frame):
             activebackground='dark turquoise')
         self.button4_window = self.can.create_window(950, 550, anchor=CENTER,
             window=self.button4)
-        
-        def display_time():
-            current_time = time.strftime("%H:%M:%S %p")
-            self.clock_label['text'] = current_time
-            self.clock_label.after(200, display_time)
 
-        display_time()
         self.pack()
 
     # Method to reconfigure scrollbar every time.

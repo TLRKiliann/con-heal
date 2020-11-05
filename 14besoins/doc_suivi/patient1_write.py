@@ -55,6 +55,10 @@ def ajouterText():
     textBox.update()
 
 def suiteBackup():
+    """
+        To save data into file patienx_14b.txt
+        'ajouterText()' function is called at the end.
+    """
     with open('./14besoins/doc_suivi/patient1_14b.txt', 'w') as namefile:
         namefile.write("En date du : ")
         namefile.write(time.strftime("%d/%m/%Y à %H:%M:%S :\n"))
@@ -64,9 +68,10 @@ def suiteBackup():
 
 def saveData():
     """
-        To record data from result.txt
-        and from patient1_14b.txt into 
-        txt main file
+        Test if file main_14b.txt exist and write data.
+        A msg into textbox appear to informate user that
+        data have been saved.
+        'suiteBackup()' function is called at the end.
     """
     try:        
         if os.path.getsize('./14besoins/doc_suivi/main_14b.txt'):
@@ -83,6 +88,13 @@ def saveData():
     suiteBackup()
 
 def messFromSafeButt():
+    """
+        To save data with button 'save'
+        and to get function 'saveData()'
+        if user wish to save. Else, user
+        will be informed that data aren't 
+        saved.
+    """
     MsgBox = messagebox.askquestion("Confirm","Are you sure ?\n"
         "It will save all data !")
     if MsgBox == 'yes':
@@ -92,14 +104,16 @@ def messFromSafeButt():
         print("+ Nothing has been saved !")
 
 def lectureFic():
+    """
+        To read file.
+    """
     with open('./14besoins/doc_suivi/patient1_14b.txt', 'r') as f1read:
         print(f1read.read())
     subprocess.run('./14besoins/doc_suivi/patient1_read.py', check=True)
 
 def importationFile(fichier, encodage="Utf-8"):
     """
-        To test if txt
-        patient exist
+        Import patientx_14b.txt file and read it.
     """
     try:        
         if os.path.getsize(fichier):
@@ -117,23 +131,29 @@ textBox=Text(root, height=15, width=60, font=18, relief=SUNKEN)
 #textBox.insert(END, time.strftime("%d/%m/%Y à %H:%M:%S :"))
 textBox.pack(padx=30, pady=30)
 
-buttonLire=Button(root, text="Read", fg='cyan', bg='RoyalBlue3',
-    activebackground='dark turquoise', activeforeground='navy',
-    bd=3, width=10, highlightbackground='light sky blue', command=lectureFic)
+buttonLire=Button(root, text="Read", bd=3, width=10, 
+    fg='cyan', bg='RoyalBlue3', activebackground='dark turquoise',
+    activeforeground='navy', highlightbackground='light sky blue',
+    command=lectureFic)
 buttonLire.pack(side='left', padx=10, pady=10)
 
-buttonEnter=Button(root, text="Save", fg='yellow', bg='RoyalBlue3',
-    activebackground='dark turquoise', activeforeground='navy',
-    bd=3, width=10, highlightbackground='light sky blue', command=messFromSafeButt)
+buttonEnter=Button(root, text="Save", bd=3, width=10,
+    fg='yellow', bg='RoyalBlue3', activebackground='dark turquoise',
+    activeforeground='navy', highlightbackground='light sky blue',
+    command=messFromSafeButt)
 buttonEnter.pack(side='left', padx=10, pady=10)
 
-buttonQuitter=Button(root, text="Quit", fg='white', bg='RoyalBlue3',
-    width=10, activebackground='cyan', activeforeground='navy',
-    bd=3, highlightbackground='light sky blue', command=quit)
+buttonQuitter=Button(root, text="Quit", bd=3, width=10,
+    fg='white', bg='RoyalBlue3', activebackground='cyan',
+    activeforeground='navy', highlightbackground='light sky blue',
+    command=quit)
 buttonQuitter.pack(side='right', padx=10, pady=10)
 
 try:
     if os.path.getsize('./14besoins/doc_suivi/patient1_14b.txt'):
+        with open('./14besoins/doc_suivi/patient1_14b.txt', 'w') as namefile:
+            namefile.write("En date du : ")
+            namefile.write(time.strftime("%d/%m/%Y à %H:%M:%S :\n"))
         importationFile('./14besoins/doc_suivi/patient1_14b.txt', encodage='Utf-8')
 except FileNotFoundError as err_nffile:
     print("+ File not found !")

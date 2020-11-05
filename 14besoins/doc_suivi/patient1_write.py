@@ -151,9 +151,9 @@ buttonQuitter.pack(side='right', padx=10, pady=10)
 
 try:
     if os.path.getsize('./14besoins/doc_suivi/patient1_14b.txt'):
-        with open('./14besoins/doc_suivi/patient1_14b.txt', 'w') as namefile:
-            namefile.write("En date du : ")
-            namefile.write(time.strftime("%d/%m/%Y à %H:%M:%S :\n"))
+        #with open('./14besoins/doc_suivi/patient1_14b.txt', 'w') as namefile:
+            #namefile.write("En date du : ")
+            #namefile.write(time.strftime("%d/%m/%Y à %H:%M:%S :\n"))
         importationFile('./14besoins/doc_suivi/patient1_14b.txt', encodage='Utf-8')
 except FileNotFoundError as err_nffile:
     print("+ File not found !")

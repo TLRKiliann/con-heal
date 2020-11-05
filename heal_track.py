@@ -1122,14 +1122,14 @@ class Application(Frame):
         #self.can.pack(side=LEFT, fill=BOTH, expand=YES)
         self.can.create_window((4,4), window=self.frame, anchor=NW, tags="self.frame")
 
-        self.can.clock_label = Label(self, font=('Times New Roman', 18, 'bold'),
+        self.clock_label = Label(self, font=('Times New Roman', 18, 'bold'),
             fg='cyan', bg='RoyalBlue3', padx=560)
-        self.can.clock_label.pack(side=TOP)
+        self.clock_label.pack(side=TOP)
 
         def display_time():
             current_time = time.strftime("%H:%M:%S %p")
-            self.can.clock_label['text'] = current_time
-            self.can.clock_label.after(200, display_time)
+            self.clock_label['text'] = current_time
+            self.clock_label.after(200, display_time)
 
         display_time()
 

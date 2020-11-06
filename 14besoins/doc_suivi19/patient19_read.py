@@ -21,27 +21,23 @@ labelo=Label(fen, text="Care and monitoring : ",
     font='Times 18 bold', fg='navy', bg='cyan')
 labelo.pack(in_=top, side=LEFT, padx=5, pady=20)
 
+# To read name in Entry widget
+with open('./newpatient/entryfile19.txt', 'r') as filename:
+    line_a=filename.readline()
+    line_b=filename.readline()
+    line_c=filename.readline()
+
+text_name=StringVar()
+text_name.set(line_a)
+Entryname=Entry(fen, textvariable=text_name)
+Entryname.pack(in_=top, side=LEFT, padx=10, pady=20)
+
 labelallergy=Label(fen, text="Allergy",
     font='Arial 18 bold', fg='coral', bg='cyan')
 labelallergy.pack(padx=5, pady=5)
 
-# To read name in Entry widget
-with open('./newpatient/entryfile19.txt', 'r') as filename:
-    line1=filename.readline()
-
-text_name=StringVar()
-text_name.set(line1)
-Entryname=Entry(fen, textvariable=text_name)
-Entryname.pack(in_=top, side=LEFT, padx=10, pady=20)
-
-# To read allergy in Entry widget
-with open('./newpatient/entryfile19.txt', 'r') as allerfile:
-    lineA1=allerfile.readline()
-    lineA2=allerfile.readline()
-    lineA3=allerfile.readline()
-
 text_all=StringVar()
-text_all.set(lineA3)
+text_all.set(line_c)
 Entryall=Entry(fen, textvariable=text_all, width=60)
 Entryall.pack(padx=10, pady=5)
 
@@ -55,16 +51,18 @@ def importationFile(fichier, encodage="Utf-8"):
 textBox=Text(fen, height=15, width=60, font=18, relief=SUNKEN)
 textBox.pack(padx=30, pady=30)
 
-buttonClose=Button(fen, text="Quit", fg='white', width=10, bd=3,
-    bg='navy', activebackground='dark turquoise', activeforeground='navy', 
-    highlightbackground='grey17', command=quit)
+buttonClose=Button(fen, text="Quit", width=10, bd=3,
+    fg='white', bg='RoyalBlue3',
+    activebackground='dark turquoise', activeforeground='navy',
+    highlightbackground='light sky blue', command=quit)
 buttonClose.pack(side='right', padx=10, pady=10)
 
 try:
     if os.path.getsize('./14besoins/doc_suivi19/main_14b.txt'):
         importationFile('./14besoins/doc_suivi19/main_14b.txt', encodage="Utf-8")
 except FileNotFoundError as file_reach:
-    print("+ File not found !", file_reach)
+    print("+ File not found !")
+    print(str(file_reach))
     messagebox.showwarning("WARNING", "File does not exist or file not found !")
 
 fen.mainloop()

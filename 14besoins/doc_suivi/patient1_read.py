@@ -51,8 +51,9 @@ def importationFile(fichier, encodage="Utf-8"):
 textBox=Text(fen, height=15, width=60, font=18, relief=SUNKEN)
 textBox.pack(padx=30, pady=30)
 
-buttonClose=Button(fen, text="Quit", fg='white', width=10, bd=3,
-    bg='RoyalBlue3', activebackground='dark turquoise', activeforeground='navy', 
+buttonClose=Button(fen, text="Quit", width=10, bd=3,
+    fg='white', bg='RoyalBlue3',
+    activebackground='dark turquoise', activeforeground='navy',
     highlightbackground='light sky blue', command=quit)
 buttonClose.pack(side='right', padx=10, pady=10)
 

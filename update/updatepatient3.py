@@ -9,7 +9,8 @@ try:
     import pymysql
     pymysql.install_as_MySQLdb()
 except ImportError as err_report:
-    print("+ An error occured about pymysql !", err_report)
+    print("+ An error occured about pymysql !")
+    print(str(err_report))
     pass
 
 

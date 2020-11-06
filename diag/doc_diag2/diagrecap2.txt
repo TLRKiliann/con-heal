@@ -1,6 +1,10 @@
 --- DIAGNOSTICS ---
 diagno_test
-En date du : 06/11/2020 à 10:40:11 :
-zut
-
 diagno_test, test2
+diag 3
+diag 4
+
+
+
+
+

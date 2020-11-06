@@ -103,8 +103,8 @@ class Application(Frame):
             self.commentFileRecNeeds()
 
     def commentFileRecNeeds(self):
-        self.MsgBox1msg = messagebox.showinfo("Warning", "File '14 needs'"
-            "was not created. Check options to '14 needs' !")
+        self.MsgBox1msg = messagebox.showwarning("Warning", "File '14 needs' "
+            "doesn't exist. Check options to '14 needs' before !")
 
 if __name__=='__main__':
     app = Application()

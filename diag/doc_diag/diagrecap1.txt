@@ -1,3 +1,2 @@
 --- DIAGNOSTICS ---
-test2 diag
-test3 diag
+diagnotest

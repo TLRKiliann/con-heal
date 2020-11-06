@@ -18,12 +18,12 @@ gui=Tk()
 gui.title("Enter new patient")
 gui.configure(bg='cyan')
 
-# Interact with database to search data
+
 def searchDB():
     """
         To search patient by ID
         and display data into 
-        each GUI entree.
+        each GUI entree from DB.
     """
     try:
         sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='timetrackconn')
@@ -42,6 +42,19 @@ def searchDB():
         print("Error with search function in DB")
         messagebox.showinfo("Data Entry Form", "No Such Record Found !")
     sqlCon.close()
+
+def diagRecapt(diagnosis):
+    try:
+        if os.path.getsize('./diag/doc_diag/diagrecap1.txt'):
+            with open('./diag/doc_diag/diagrecap1.txt', 'a+') as filediag:
+                filediag.write(diagnosis + '\n')
+
+            messagebox.showinfo("Info", "Data was updated for entryfile.txt, " \
+                "allergyfile.txt, diagrecap1.txt !")
+    except FileNotFoundError as not_ffile:
+        print("- diagrecap1.txt not found, plz create file clicking on diagnostic -")
+        messagebox.showwarning("WARNING", "File diagrecap1.txt not found ! " \
+            "Please, create one by clicking on diagnostic 'add'.")
 
 def uptopat(idpatient, patient_num, firstpat, firstname_pat,
     surname, sur_pat, birthvalue, birth_entree, allergia, allergy_pat,
@@ -105,12 +118,9 @@ def searchLineName(firstpat, surname, birthvalue, allergia, transdisval, diagnos
 
         with open('./allergy/allergyfile.txt', 'w') as filealler:
             filealler.write(allergia + " ")
-
-        with open('./diag/doc_diag/diagrecap1.txt', 'a+') as filediag:
-            filediag.write(diagnosis + '\n')
-
-    messagebox.showinfo("Info", "Data was updated for entryfile.txt, " \
-        "allergyfile.txt, diagrecap1.txt !")
+    else:
+        messagebox.showinfo("INFO", "! Nothing has been saved !")
+    diagRecapt(diagnosis)
 
 labelID = Label(gui)
 labelID = Label(text='ID : ',

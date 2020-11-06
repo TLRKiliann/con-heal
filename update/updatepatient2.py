@@ -53,6 +53,7 @@ def diagRecapt(diagnosis):
                 "allergyfile2.txt, diagrecap2.txt !")
     except FileNotFoundError as not_ffile:
         print("- diagrecap2.txt not found, plz create file clicking on diagnostic -")
+        print(str(not_ffile))
         messagebox.showwarning("WARNING", "File diagrecap2.txt not found ! " \
             "Please, create one by clicking on diagnostic 'add'.")
 
@@ -90,19 +91,22 @@ def uptopat(idpatient, patient_num, firstpat, firstname_pat,
         ))
         sqlCon.commit()
         sqlCon.close()
-        messagebox.showinfo("Data Entry Form", "Record Updated Successfully !")
+        messagebox.showinfo("Data Entry Form",
+            "Record Updated Successfully !")
 
     if idpatient == '2':
         if os.path.getsize('./newpatient/entryfile2.txt'):
             print("+ File 'entryfile2.txt' deleted !")
             os.remove('./newpatient/entryfile2.txt')
-            searchLineName2(firstpat, surname, birthvalue, allergia, transdisval, diagnosis)
+            searchLineName2(firstpat, surname, birthvalue,
+                allergia, transdisval, diagnosis)
     else:
         pass
 
     gui.destroy()
 
-def searchLineName2(firstpat, surname, birthvalue, allergia, transdisval, diagnosis):
+def searchLineName2(firstpat, surname, birthvalue,
+    allergia, transdisval, diagnosis):
     """
         To save changing data for 
         entryfile2.txt and display

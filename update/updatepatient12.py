@@ -9,8 +9,8 @@ try:
     import pymysql
     pymysql.install_as_MySQLdb()
 except ImportError as err_report:
-    print("+ An error occured about pymysql !", err_report)
-    pass
+    print("+ An error occured about pymysql !")
+    print(str(err_report))
 
 
 gui=Tk()
@@ -25,7 +25,8 @@ def searchDB():
         each GUI entree.
     """
     try:
-        sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='timetrackconn')
+        sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379',
+            database='timetrackconn')
         cur = sqlCon.cursor()
         cur.execute("SELECT * from timetrackconn where stdid=%s", patient_num.get())
         row = cur.fetchone()
@@ -41,6 +42,20 @@ def searchDB():
         print("Error with search function in DB")
         messagebox.showinfo("Data Entry Form", "No Such Record Found !")
     sqlCon.close()
+
+def diagRecapt(diagnosis):
+    try:
+        if os.path.getsize('./diag/doc_diag12/diagrecap12.txt'):
+            with open('./diag/doc_diag12/diagrecap12.txt', 'a+') as filediag:
+                filediag.write(diagnosis + '\n')
+
+            messagebox.showinfo("Info", "Data was updated for entryfile12.txt, " \
+                "allergyfile12.txt, diagrecap12.txt !")
+    except FileNotFoundError as not_ffile:
+        print("- diagrecap12.txt not found, plz create file clicking on diagnostic -")
+        print(str(not_ffile))
+        messagebox.showwarning("WARNING", "File diagrecap12.txt not found ! " \
+            "Please, create one by clicking on diagnostic 'add'.")
 
 def uptopat(idpatient, patient_num, firstpat, firstname_pat,
     surname, sur_pat, birthvalue, birth_entree, allergia, allergy_pat,
@@ -61,9 +76,11 @@ def uptopat(idpatient, patient_num, firstpat, firstname_pat,
     if patient_num.get() == "" or firstname_pat.get() == "" or sur_pat.get() == "":
         messagebox.showerror("MySQL Connection", "Enter Correct Details.")
     else:
-        sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='timetrackconn')
+        sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379',
+            database='timetrackconn')
         cur = sqlCon.cursor()
-        cur.execute("UPDATE timetrackconn set firstname=%s, surname=%s, birth=%s, allergia=%s, disease=%s, maindiagnostic=%s where stdid=%s",(
+        cur.execute("UPDATE timetrackconn set firstname=%s, surname=%s, birth=%s, " \
+            "allergia=%s, disease=%s, maindiagnostic=%s where stdid=%s",(
         firstname_pat.get(),
         sur_pat.get(),
         birth_entree.get(),
@@ -80,13 +97,15 @@ def uptopat(idpatient, patient_num, firstpat, firstname_pat,
         if os.path.getsize('./newpatient/entryfile12.txt'):
             print("+ File 'entryfile12.txt' exist !")
             os.remove('./newpatient/entryfile12.txt')
-            searchLineName12(firstpat, surname, birthvalue, allergia, transdisval, diagnosis)
+            searchLineName12(firstpat, surname, birthvalue,
+                allergia, transdisval, diagnosis)
     else:
         pass
 
     gui.destroy()
 
-def searchLineName12(firstpat, surname, birthvalue, allergia, transdisval, diagnosis):
+def searchLineName12(firstpat, surname, birthvalue,
+    allergia, transdisval, diagnosis):
     """
         To save changing data for 
         entryfile12.txt and display
@@ -95,15 +114,17 @@ def searchLineName12(firstpat, surname, birthvalue, allergia, transdisval, diagn
     MsgBox = messagebox.askyesno('Save data', 'Do you want to save ?')
     if MsgBox == 1:
         with open('./newpatient/entryfile12.txt', 'w') as fullfile:
-            with open('./allergy/allergyfile12.txt', 'w') as filealler:
-                fullfile.write(firstpat + " " + surname + '\n')
-                fullfile.write(birthvalue + '\n')
-                fullfile.write(allergia + '\n')
-                fullfile.write(transdisval + '\n')
-                fullfile.write(diagnosis + '\n')
-                filealler.write(allergia + " ")
-    messagebox.showinfo("Info", "Data was updated for entryfile12.txt " \
-        "and for allergyfile12.txt !")
+            fullfile.write(firstpat + " " + surname + '\n')
+            fullfile.write(birthvalue + '\n')
+            fullfile.write(allergia + '\n')
+            fullfile.write(transdisval + '\n')
+            fullfile.write(diagnosis + '\n')
+
+        with open('./allergy/allergyfile12.txt', 'w') as filealler:
+            filealler.write(allergia + " ")
+    else:
+        messagebox.showinfo("INFO", "! Nothing has been saved !")
+    diagRecapt(diagnosis)
 
 labelID = Label(gui)
 labelID = Label(text='ID : ',

@@ -2,4 +2,4 @@ Aaron Schwartz
 04/06/1989
 None
 None
-Diagnostic (main)
+diagnotest

@@ -154,7 +154,6 @@ def confRec():
 
 def recordTofile():
     MsgBox = messagebox.askyesno('Record', 'Results will be saved into Care and Monitoring, ok ?')
-
     if MsgBox == 1:
         print("Ok data saved")
         recordOption()

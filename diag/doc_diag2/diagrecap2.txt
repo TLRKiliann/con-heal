@@ -1,10 +1,2 @@
 --- DIAGNOSTICS ---
-diagno_test
-diagno_test, test2
-diag 3
-diag 4
-
-
-
-
-
+diagno_test1

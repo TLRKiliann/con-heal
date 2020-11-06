@@ -49,6 +49,7 @@ def uptopat(idpatient, patient_num, firstpat, firstname_pat,
     """
         Update data for patients
         in function of their id
+        in database.
     """
     idpatient = patient_num.get()
     firstpat = firstname_pat.get()

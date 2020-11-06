@@ -617,7 +617,7 @@ def recordOption():
             endfile2.write("---------------------------------------------------------\n\n")
 
 def confRec():
-    MsgBox2msg = messagebox.showinfo("Confirmation", "Record confirmed and finished !")
+    messagebox.showinfo("Confirmation", "Record confirmed and finished !")
 
 def comburTips():
     subprocess.call('./labo/combtest.py')

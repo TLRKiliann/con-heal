@@ -2,4 +2,4 @@ Terry McGuire
 07/12/1984
 None
 None
-Diagnostic (main)
+diagno_test

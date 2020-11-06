@@ -24,24 +24,21 @@ labelo=Label(root, text="Diagnostics and ATCD for : ",
 labelo.pack(in_=top, side=LEFT, padx=5, pady=20)
 
 with open('./newpatient/entryfile.txt', 'r') as filename:
-    line1=filename.readline()
+    line_a=filename.readline()
+    line_b=filename.readline()
+    line_c=filename.readline()
 
 textname=StringVar()
 entryName=Entry(root, textvariable=textname)
-textname.set(line1)
+textname.set(line_a)
 entryName.pack(in_=top, side=LEFT, padx=10, pady=20)
 
 labelallergy=Label(root, text="Allergy",
     font='Arial 18 bold', fg='coral', bg='cyan')
 labelallergy.pack(padx=5, pady=10)
 
-with open('./newpatient/entryfile.txt', 'r') as filename:
-    lineA1=filename.readline()
-    lineA2=filename.readline()
-    lineA3=filename.readline()
-
 entrytext=StringVar()
-entrytext.set(lineA3)
+entrytext.set(line_c)
 entryName=Entry(root, textvariable=entrytext, width=60)
 entryName.pack(padx=10, pady=10)
 
@@ -110,7 +107,8 @@ try:
         importationFile('./diag/doc_diag/diagrecap1.txt', 
             encodage="Utf-8")
 except FileNotFoundError as err_file:
-    print("+ File not found !", err_file)
+    print("+ File not found !")
+    print(str(err_file))
     messagebox.showwarning("WARNING", "File does not exist or " 
         "file not found !")
 

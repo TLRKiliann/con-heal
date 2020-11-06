@@ -18,7 +18,6 @@ gui=Tk()
 gui.title("Enter new patient")
 gui.configure(bg='cyan')
 
-
 def searchDB():
     """
         To search patient by ID

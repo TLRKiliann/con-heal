@@ -12,42 +12,25 @@ from tttapp import dispTttBox
 from resapp import dispResFunc
 
 
-# Main page
 def callResident(self):
+    """
+        Main function called since main app
+        heal_track.py for displaying patients
+        with theirs names and more.
+    """
     self.can.delete(ALL)
     self.can.configure(background='cyan')
     self.photo=PhotoImage(file='./syno_gif/title_tt.png')
     self.item=self.can.create_image(625, 85, image=self.photo)
 
-    """
-    # To backup (main file)
-    self.updateFiletxt()
-    dispAgBox()
-    dispTttBox()
-    dispResFunc()
-    """
-
     # Display date
     self.x1, self.y1 = 1165, 70
-    #self.Date_write=Entry(self.can)
     self.data_time=StringVar()
     self.Date_write=Entry(self.can, textvariable=self.data_time, width=10,
         highlightbackground='grey', bd=4)
     self.data_time.set(time.strftime("%d/%m/%Y"))
     self.Date_write=self.can.create_window(self.x1, self.y1,
         window=self.Date_write)
-
-    """
-    # Static time
-    self.x2, self.y2 = 1165, 70
-    self.Date_write2 = Entry(self.can)
-    self.data_time2 = StringVar()
-    self.Date_write2 = Entry(self.can, width=10, textvariable=self.data_time2,
-        highlightbackground='grey', bd=4)
-    self.data_time2.set(time.strftime("%H:%M:%S %p")) #%H:%M:%S
-    self.Date_write2=self.can.create_window(self.x2, self.y2,
-        window=self.Date_write2)
-    """
 
     # To introduce a new pytient
     self.x3, self.y3 = 200, 160

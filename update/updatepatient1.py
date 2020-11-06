@@ -9,7 +9,8 @@ try:
     import pymysql
     pymysql.install_as_MySQLdb()
 except ImportError as err_report:
-    print("+ An error occured about pymysql !", err_report)
+    print("+ An error occured about pymysql !")
+    print(str(err_report))
     pass
 
 
@@ -95,15 +96,20 @@ def searchLineName(firstpat, surname, birthvalue, allergia, transdisval, diagnos
     MsgBox = messagebox.askyesno('Save data', 'Do you want to save ?')
     if MsgBox == 1:
         with open('./newpatient/entryfile.txt', 'w') as fullfile:
-            with open('./allergy/allergyfile.txt', 'w') as filealler:
-                fullfile.write(firstpat + " " + surname + '\n')
-                fullfile.write(birthvalue + '\n')
-                fullfile.write(allergia + '\n')
-                fullfile.write(transdisval + '\n')
-                fullfile.write(diagnosis + '\n')
-                filealler.write(allergia + " ")
-    messagebox.showinfo("Info", "Data was updated for entryfile.txt " \
-        "and for allergyfile.txt !")
+            fullfile.write(firstpat + " " + surname + '\n')
+            fullfile.write(birthvalue + '\n')
+            fullfile.write(allergia + '\n')
+            fullfile.write(transdisval + '\n')
+            fullfile.write(diagnosis + '\n')
+
+        with open('./allergy/allergyfile.txt', 'w') as filealler:
+            filealler.write(allergia + " ")
+
+        with open('./diag/doc_diag/diagrecap1.txt', 'a+') as filediag:
+            filediag.write(diagnosis + '\n')
+
+    messagebox.showinfo("Info", "Data was updated for entryfile.txt, " \
+        "allergyfile.txt, diagrecap1.txt !")
 
 labelID = Label(gui)
 labelID = Label(text='ID : ',

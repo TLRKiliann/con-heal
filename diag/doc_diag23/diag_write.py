@@ -46,7 +46,7 @@ entryName=Entry(root, textvariable=entrytext, width=60)
 entryName.pack(padx=10, pady=10)
 
 def retrieve_input():
-    file = open('./diag/doc_diag23/diagrecap23.txt', 'a+')
+    file = open('./diag/doc_diag23/diagrecap23.txt', 'w')
     file.write(textBox.get("1.0","end-1c") + "\n\n")
     file.close()
 
@@ -67,12 +67,6 @@ def lectureFic():
     file.close()
     subprocess.call('./diag/doc_diag23/diag_read.py')
 
-def ajouterText():
-    textBox.delete('1.0', END)
-    textBox.insert(INSERT, "En date du : ")
-    textBox.insert(END, time.strftime("%d/%m/%Y à %H:%M:%S :") + '\n')
-    textBox.update()
-
 def importationFile(fichier, encodage="Utf-8"):
     file = open(fichier, 'r', encoding=encodage)
     content=file.readlines()
@@ -85,24 +79,22 @@ textBox=Text(root, height=15, width=60, font=18, relief=SUNKEN)
 #textBox.insert(END, time.strftime("%d/%m/%Y à %H:%M:%S :\n"))
 textBox.pack(padx=30, pady=30)
 
-buttonLire=Button(root, text="Read", fg='cyan', bg='navy',
+buttonLire=Button(root, text="Read", width=10, bd=3,
+    fg='cyan', bg='RoyalBlue3',
     activebackground='dark turquoise', activeforeground='navy',
-    bd=3, highlightbackground='grey17', command=lectureFic)
+    highlightbackground='light sky blue', command=lectureFic)
 buttonLire.pack(side='left', padx=10, pady=10)
 
-buttonAjouter=Button(root, text="1-Add", fg='yellow', bg='navy',
+buttonEnter=Button(root, text="Save", width=10, bd=3,
+    fg='yellow', bg='RoyalBlue3',
     activebackground='dark turquoise', activeforeground='navy',
-    bd=3, highlightbackground='grey17', command=ajouterText)
-buttonAjouter.pack(side='left', padx=10, pady=10)
-
-buttonEnter=Button(root, text="2-Save", fg='yellow', bg='navy',
-    activebackground='dark turquoise', activeforeground='navy',
-    bd=3, highlightbackground='grey17', command=messFromSafeButt)
+    highlightbackground='light sky blue', command=messFromSafeButt)
 buttonEnter.pack(side='left', padx=10, pady=10)
 
-buttonQuitter=Button(root, text="Quit", fg='white', bg='navy',
-    width=10, activebackground='cyan', activeforeground='navy',
-    bd=3, highlightbackground='grey17', command=quit)
+buttonQuitter=Button(root, text="Quit", width=10, bd=3,
+    fg='white', bg='RoyalBlue3',
+    activebackground='cyan', activeforeground='navy',
+    highlightbackground='light sky blue', command=quit)
 buttonQuitter.pack(side='right', padx=10, pady=10)
 
 try:

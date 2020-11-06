@@ -1,2 +1,2 @@
 --- DIAGNOSTICS ---
-Diagnostic 24
+Diagnostic 19

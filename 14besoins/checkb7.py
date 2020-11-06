@@ -19,17 +19,6 @@ entryName=Entry(fen, textvariable=textname)
 textname.set(line1)
 entryName.grid(sticky='e', row=0, column=0, padx=30, pady=20)
 
-def recordTofile():
-    MsgBox = messagebox.askyesno('Record', 'Results will be saved into Care and Monitoring, ok ?')
-
-    if MsgBox == 1:
-        print("Ok data saved")
-        recordOption()
-        confRec()
-        fen.destroy()
-    else:
-        messagebox.showinfo('Return', 'You will return back')
-
 def recordOption():
     print("+ Date : " + time.strftime("%d/%m/%Y"))
     print("+ Nom du patient : ", entryName.get())
@@ -157,6 +146,16 @@ def recordOption():
 
 def confRec():
     messagebox.showinfo("Confirmation", "Record confirmed and finished !")
+
+def recordTofile():
+    MsgBox = messagebox.askyesno('Record', 'Results will be saved into Care and Monitoring, ok ?')
+    if MsgBox == 1:
+        print("Ok data saved")
+        recordOption()
+        confRec()
+        fen.destroy()
+    else:
+        messagebox.showinfo('Return', 'You will return back')
 
 labeltite=Label(fen, text='14 NEEDS', 
     font="Times 16 bold", width=10,

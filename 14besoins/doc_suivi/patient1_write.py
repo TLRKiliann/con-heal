@@ -24,10 +24,6 @@ labelo=Label(root, text="Care and monitoring : ",
     font='Times 18 bold', fg='navy', bg='cyan')
 labelo.pack(in_=top, side=LEFT, padx=5, pady=20)
 
-labelallergy=Label(root, text="Allergy",
-    font='Arial 18 bold', fg='coral', bg='cyan')
-labelallergy.pack(padx=5, pady=5)
-
 # To read name and allergy in Entry widget
 with open('./newpatient/entryfile.txt', 'r') as filename:
     line_a=filename.readline()
@@ -38,6 +34,10 @@ text_name=StringVar()
 Entryname=Entry(root, textvariable=text_name)
 text_name.set(line_a)
 Entryname.pack(in_=top, side=LEFT, padx=10, pady=20)
+
+labelallergy=Label(root, text="Allergy",
+    font='Arial 18 bold', fg='coral', bg='cyan')
+labelallergy.pack(padx=5, pady=5)
 
 text_aller=StringVar()
 text_aller.set(line_c)

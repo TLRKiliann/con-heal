@@ -1,22 +1,14 @@
-En date du : 02/11/2020 à 23:13:17 :
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
+
+En date du : 06/11/2020 à 21:15:10 :
 Patient name : Terry McGuire
-+ Surveillance ou aide pour l'habillage/déshabillage requise
-+ Accompagner ou aider la personne à se réaliser
++ Surveillance du sommeil requise
+3x/n
++ Surveillance posturale et/ou des déplacements requise
+acc à la mob
++ Surveillance pour éviter les dangers requise
+mettre un truc
 ---
 
-En date du : 02/11/2020 à 23:13:32 :
-Patient name : Terry McGuire
-+ Surveillance ou aide pour l'habillage/déshabillage requise
-truc1
-+ Accompagner ou aider la personne à se réaliser
-truc2
 
-
-----------------------------------------------------------
-Date : 02/11/2020
-Patient name : Terry McGuire
-# Lyrica : (add result of dosage here)
-# Trileptal : (add result of dosage here)
-# Remeron : (add result of dosage here)
----------------------------------------------------------
 

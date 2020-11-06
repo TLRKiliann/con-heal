@@ -60,7 +60,8 @@ try:
     if os.path.getsize('./14besoins/doc_suivi/main_14b.txt'):
         importationFile('./14besoins/doc_suivi/main_14b.txt', encodage="Utf-8")
 except FileNotFoundError as file_reach:
-    print("+ File not found !", file_reach)
+    print("+ File not found !")
+    print(str(file_reach))
     messagebox.showwarning("WARNING", "File does not exist or file not found !")
 
 fen.mainloop()

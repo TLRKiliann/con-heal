@@ -84,7 +84,8 @@ class Application(Frame):
                 print("+ File '14 needs' exist (add)!")
                 subprocess.run('./14besoins/doc_suivi8/patient8_write.py', check=True)
         except FileNotFoundError as outmsg:
-            print("+ Sorry, file '14 needs' not exist !", outmsg)
+            print("+ Sorry, file '14 needs' not exist !")
+            print(str(outmsg))
             self.commentFileRecNeeds()
 
     def lectureFic(self):
@@ -97,7 +98,8 @@ class Application(Frame):
                 print("+ File '14 needs' exist (read)!")
                 subprocess.run('./14besoins/doc_suivi8/patient8_read.py', check=True)
         except FileNotFoundError as outnote:
-            print("+ Sorry, file '14 needs' not exist !", outnote)
+            print("+ Sorry, file '14 needs' not exist !")
+            print(str(outnote))
             self.commentFileRecNeeds()
 
     def commentFileRecNeeds(self):

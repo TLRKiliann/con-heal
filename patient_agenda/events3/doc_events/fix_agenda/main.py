@@ -6,6 +6,7 @@ import tkinter
 from tkinter import *
 import time
 import json
+import os
 import subprocess
 from tkinter import messagebox
 from itertools import *
@@ -39,29 +40,20 @@ def searchExpress():
         To read in 2 files simultaneously
     """
     mot = regexpi_var.get()
-    with open('./patient_agenda/events3/doc_events/fix_agenda/fixed_rdv.txt', 'r') as textfile1:
-        lines = textfile1.readlines()
-        for i in range(len(lines)):
-            line = lines[i]
-            if mot in line:
-                print("Nous y voici !") 
-                print(lines[i])
-                print(lines[i+1])
-                textBox.insert(INSERT, lines[i])
-                textBox.insert(INSERT, lines[i+1])
-                textBox.insert(INSERT, lines[i+2])
-                    
-    with open('./patient_agenda/events3/doc_events/fix_agenda/modifrdv.txt', 'r') as textfile2:
-        lines = textfile2.readlines()
-        for a in range(len(lines)):
-            line = lines[a]
-            if mot in line:
-                print(lines[a])
-                print(lines[a+1])
-                textBox.insert(INSERT, "\nWith modification of appointment :\n")
-                textBox.insert(INSERT, lines[a])
-                textBox.insert(INSERT, lines[a+1])
-                textBox.insert(INSERT, lines[a+2])
+    for path, dirs, files in os.walk('./patient_agenda/events3/doc_events'
+        '/fix_agenda/agenda_saved/'):
+        for file in files:
+            read_f = open(os.path.join(path,file),'r')
+            lines = read_f.readlines()
+            for i in range(len(lines)):
+                line = lines[i]
+                if mot in line:
+                    print("Nous y voici !") 
+                    print(lines[i])
+                    print(lines[i+1])
+                    textBox.insert(INSERT, lines[i])
+                    textBox.insert(INSERT, lines[i+1])
+                    textBox.insert(INSERT, lines[i+2])
 
 def save_input():
     """
@@ -71,15 +63,18 @@ def save_input():
         by lines ;) !
     """
     magicword = regexpi_var.get()
-    with open('./patient_agenda/events3/doc_events/fix_agenda/fixed_rdv.txt', 'r') as original_file:
-        with open('./patient_agenda/events3/doc_events/fix_agenda/modifrdv.txt', 'a+') as fw1:
-            with open('./patient_agenda/events3/doc_events/fix_agenda/fixed_rdv.txt', 'a+') as fw2:
-                for line in original_file.readlines():
+    for path, dirs, files in os.walk('./patient_agenda/events3/doc_events'
+        '/fix_agenda/agenda_saved/'):
+        for file in files:
+            read_f = open(os.path.join(path,file),'r')
+            lines = read_f.readlines()
+            write_f = open(os.path.join(path,file),'a+')
+            for i in range(len(lines)):
+                line = lines[i]
+                for line in read_f.readlines():
                     if magicword in line:
-                        fw1.writelines(str("+++ Changes about rdv +++\n"))
-                        fw1.writelines(textBox.get("0.0", "end-1c") + "\n")
-                        fw2.writelines(str("+++ Changes about rdv +++\n"))
-                        fw2.writelines(textBox.get("0.0", "end-1c") + "\n")
+                        write_f.writelines(str("+++ Changes about rdv +++\n"))
+                        write_f.writelines(textBox.get("0.0", "end-1c") + "\n")
                         print("Modification finish")
                         break
                     else:

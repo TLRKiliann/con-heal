@@ -37,13 +37,13 @@ entryName.grid(row=0, column=2, pady=10)
 
 def searchExpress():
     """
-        To read in 2 files simultaneously
+        To read multiples files in a directory
     """
     mot = regexpi_var.get()
-    for path, dirs, files in os.walk('./patient_agenda/events3/doc_events'
-        '/fix_agenda/agenda_saved/'):
+    for path, dirs, files in os.walk('./patient_agenda/events3/doc_events/'
+        'fix_agenda/agenda_saved/'):
         for file in files:
-            read_f = open(os.path.join(path,file),'r')
+            read_f = open(os.path.join(path, file), 'r')
             lines = read_f.readlines()
             for i in range(len(lines)):
                 line = lines[i]
@@ -58,22 +58,26 @@ def searchExpress():
 def save_input():
     """
         Save data from modification rdv textbox !
-        To copy in 2 txt file simultaneously 
+        To copy to a txt file of a directory
         since a read file and from text widget
         by lines ;) !
     """
     magicword = regexpi_var.get()
-    for path, dirs, files in os.walk('./patient_agenda/events3/doc_events'
-        '/fix_agenda/agenda_saved/'):
+    for path, dirs, files in os.walk('./patient_agenda/events3/doc_events/'
+        'fix_agenda/agenda_saved/'):
         for file in files:
-            read_f = open(os.path.join(path,file),'r')
-            lines = read_f.readlines()
-            write_f = open(os.path.join(path,file),'a+')
-            for i in range(len(lines)):
-                line = lines[i]
-                for line in read_f.readlines():
-                    if magicword in line:
-                        write_f.writelines(str("+++ Changes about rdv +++\n"))
+            read_f = open(os.path.join(path, file), 'r')
+            for line in read_f:
+                for i in line:
+                    noway = "Fixed on :"
+                    if line[0:10] == noway:
+                        print("+ There is noway : ")
+                        print(line[0:10])
+                        write_f = open(os.path.join(path, file), 'a+')
+                    elif magicword in line:
+                        print("+ It is magicword : ")
+                        print(line[0:10])
+                        write_f = open(os.path.join(path, file), 'a+')
                         write_f.writelines(textBox.get("0.0", "end-1c") + "\n")
                         print("Modification finish")
                         break
@@ -96,7 +100,8 @@ def modifList():
     """
         To read file modifrdv.txt
     """
-    subprocess.run('./patient_agenda/events3/doc_events/fix_agenda/read_filemodif.py', check=True)
+    subprocess.run('./patient_agenda/events3/doc_events/fix_agenda/'
+        'read_filemodif.py', check=True)
 
 def deleteTextbox():
     textBox.delete('0.0', "end-1c")

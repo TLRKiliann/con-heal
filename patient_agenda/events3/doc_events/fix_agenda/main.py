@@ -73,7 +73,6 @@ def save_input():
                     if line[0:10] == noway:
                         print("+ There is noway : ")
                         print(line[0:10])
-                        write_f = open(os.path.join(path, file), 'a+')
                     elif magicword in line:
                         print("+ It is magicword : ")
                         print(line[0:10])

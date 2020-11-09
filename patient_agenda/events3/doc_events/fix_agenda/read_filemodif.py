@@ -37,9 +37,10 @@ def importFilesFromDir():
     for path, dirs, files in os.walk('./patient_agenda/events3/doc_events'
         '/fix_agenda/agenda_saved/'):
         for file in files:
-            read_f = open(os.path.join(path,file),'r')
-            content = read_f.readlines()
-            textBox.insert(END, content)
+            for i in file:
+                read_f = open(os.path.join(path,file),'r')
+                content = read_f.readlines()
+                textBox.insert(END, content)
 
 textBox=Text(fen, height=15, width=60, font=18)
 textBox.pack(padx=30, pady=30)

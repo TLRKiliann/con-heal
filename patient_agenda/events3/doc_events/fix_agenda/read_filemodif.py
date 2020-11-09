@@ -34,13 +34,15 @@ def msgBox():
         'Error during function call for : ' + line1)
 
 def importFilesFromDir():
-    for path, dirs, files in os.walk('./patient_agenda/events3/doc_events'
-        '/fix_agenda/agenda_saved/'):
+    for path, dirs, files in os.walk('./patient_agenda/events3/doc_events/'
+        'fix_agenda/agenda_saved/'):
         for file in files:
-            for i in file:
-                read_f = open(os.path.join(path,file),'r')
-                content = read_f.readlines()
-                textBox.insert(END, content)
+            read_f = open(os.path.join(path,file),'r')
+            content = read_f.readlines()
+            for li in content:
+                li.replace('{', '')
+                li.replace('}', '')
+                textBox.insert(END, li)
 
 textBox=Text(fen, height=15, width=60, font=18)
 textBox.pack(padx=30, pady=30)

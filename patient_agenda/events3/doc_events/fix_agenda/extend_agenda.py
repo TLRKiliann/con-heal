@@ -34,40 +34,30 @@ def retrieve_input():
     file.write(textBox.get("1.0", "end-1c") + '\n\n')
     file.close()
     
-    print("Là on a un listdir : ")
+    print("+ To test os.listdir(): ")
     print(os.listdir('./patient_agenda/events3/doc_events/fix_agenda/agenda_saved/'))
     
     origin_path = './patient_agenda/events3/doc_events/fix_agenda/fixed_rdv.txt'
     main_path = './patient_agenda/events3/doc_events/fix_agenda/agenda_saved/'
-    #file1_path = './patient_agenda/events3/doc_events/fix_agenda/agenda_saved/file1.txt'
 
     files = [None] * 100
     for x in range(0, 100):
         files[x] = "file" + str(x) + ".txt"
-        #["file1.txt", "file2.txt", "file3.txt", "file4.txt"]
-
-    for file in files:
-        print(str(file))
-        if not os.path.exists(main_path + files[0]):
-            shutil.copy(origin_path, main_path + files[0])
+        if not os.path.exists(main_path + files[x]):
+            shutil.copy(origin_path, main_path + files[x])
             break
-        if not os.path.exists(main_path + files[1]):
-            shutil.copy(origin_path, main_path + files[1])
-            break
-        if not os.path.exists(main_path + files[2]):
-            shutil.copy(origin_path, main_path + files[2])
-            break
+        elif os.path.exists(main_path + files[x]):
+            x += 1
         else:
+            print("+ Out of range !!! (more than 100 files)")
             break
-
-    #os.mkdir(os.path.join(main_path, file))
 
     os.remove('./patient_agenda/events3/doc_events/fix_agenda/fixed_rdv.txt')
     os.remove('./patient_agenda/events3/doc_events/fix_agenda/patient_value.json')
     os.remove('./patient_agenda/events3/doc_events/patient_rdv.json')
     os.remove('./patient_agenda/events3/patient_calendar.txt')
 
-    print("Là on a un listdir : ")
+    print("+ os.listdir after new file created : ")
     print(os.listdir('./patient_agenda/events3/doc_events/fix_agenda/agenda_saved/'))
     
 def messFromSafeButt():
@@ -90,9 +80,9 @@ def lectureFic():
         To read file, app open
         file fixed rdv to read on it.
     """
-    file = open('./patient_agenda/events3/doc_events/fix_agenda/agenda_saved/fixed_rdv.txt', 'r')
-    print(file.read())
-    file.close()
+    #file = open('./patient_agenda/events3/doc_events/fix_agenda/agenda_saved/fixed_rdv.txt', 'r')
+    #print(file.read())
+    #file.close()
     subprocess.run('./patient_agenda/events3/doc_events/fix_agenda/read_file.py', check=True)
 
 def rdvChanged():

@@ -13,6 +13,11 @@ import tkinter as tk
 
 
 class Calendar:
+    """
+        Class agenda with all attributes from module
+        (don't give name : "calendar to this file,
+        otherwise, you will get surprise...")
+    """
     def __init__(self, parent, values):
         self.values = values
         self.parent = parent
@@ -113,21 +118,22 @@ class Calendar:
     def kill_and_save(self):
         self.parent.destroy()
 
-
 if __name__ == '__main__':
 
     class Control:
         def __init__(self, parent):
+            self.parent = parent.title("Time-Track")
             self.parent = parent.configure(background='cyan')
             self.labelo = tk.Label(self.parent, text='Agenda',
-                font='Times 18 bold', width=17, height=2, fg='cyan', bg='navy')
+                font='Times 18 bold', width=17, height=2, fg='cyan', bg='RoyalBlue4')
 
             with open('./newpatient/entryfile3.txt', 'r') as file_r:
                 line_a = file_r.readline()
 
             self.data_time = StringVar()
             self.entryname = tk.Entry(self.parent, textvariable=self.data_time,
-                font='Times 12 bold', width=25, fg='RoyalBlue4', bg='white')
+                font='Times 14', width=22, fg='navy', bg='light sky blue', bd=2,
+                justify=CENTER)
             self.data_time.set(line_a)
 
             self.choose_btn = tk.Button(self.parent, text="1 - Choice a date",
@@ -143,8 +149,8 @@ if __name__ == '__main__':
                 width=20, height=1, fg='cyan', bg='RoyalBlue3', activebackground='dark turquoise',
                 command=self.accessLook)
             self.butQuit = tk.Button(self.parent, text='Quit', font="Times 14", width=20,
-                height=1, fg='white', bg='RoyalBlue3', activebackground='coral',
-                activeforeground='navy', command=quit)
+                height=1, fg='white', bg='RoyalBlue3', activebackground='dark turquoise',
+                activeforeground='red', command=quit)
             self.labelo.grid()
             self.entryname.grid()
             self.choose_btn.grid()

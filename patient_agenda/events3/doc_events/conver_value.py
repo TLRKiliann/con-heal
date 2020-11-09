@@ -44,8 +44,6 @@ try:
 except ValueError as valout:
     print("Value of mounth is a problem", valout)
 
-# initword = "Appointment set for :"
-# initword +' '+ 
 final_data = extraday +'/'+ extramounth +'/'+ str(data_year) +' :'
 print(final_data)
 
@@ -59,4 +57,4 @@ except FileNotFoundError as msg:
     with open('./patient_agenda/events3/doc_events/fix_agenda/patient_value.json','w') as partyleft:
     	json.dump(final_data, partyleft)
 
-subprocess.call('./patient_agenda/events3/doc_events/fix_agenda/extend_agenda.py')
+subprocess.run('./patient_agenda/events3/doc_events/fix_agenda/extend_agenda.py', check=True)

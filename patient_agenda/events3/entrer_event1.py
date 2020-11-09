@@ -42,4 +42,4 @@ for (key, value) in data.items():
     print(key, value)
     print("\n")
 
-subprocess.call('./patient_agenda/events3/doc_events/conver_value.py')
+subprocess.run('./patient_agenda/events3/doc_events/conver_value.py', check=True)

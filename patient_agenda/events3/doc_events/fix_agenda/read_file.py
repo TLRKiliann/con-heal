@@ -48,9 +48,19 @@ buttonClose=Button(fen, text="Quit", width=8, bd=3,
 buttonClose.pack(side='right', padx=10, pady=10)
 
 try:
-    importationFile('./patient_agenda/events3/doc_events/fix_agenda/fixed_rdv.txt')
+    importationFile('./patient_agenda/events3/doc_events/fix_agenda/agenda_saved/fixed_rdv.txt')
+    importationFile('./patient_agenda/events3/doc_events/fix_agenda/agenda_saved/fixed_rdv2.txt')
+    importationFile('./patient_agenda/events3/doc_events/fix_agenda/agenda_saved/fixed_rdv3.txt')
+    importationFile('./patient_agenda/events3/doc_events/fix_agenda/agenda_saved/fixed_rdv4.txt')
+    importationFile('./patient_agenda/events3/doc_events/fix_agenda/agenda_saved/fixed_rdv5.txt')
+    importationFile('./patient_agenda/events3/doc_events/fix_agenda/agenda_saved/fixed_rdv6.txt')
+    importationFile('./patient_agenda/events3/doc_events/fix_agenda/agenda_saved/fixed_rdv7.txt')
+    importationFile('./patient_agenda/events3/doc_events/fix_agenda/agenda_saved/fixed_rdv8.txt')
+    importationFile('./patient_agenda/events3/doc_events/fix_agenda/agenda_saved/fixed_rdv9.txt')
+    importationFile('./patient_agenda/events3/doc_events/fix_agenda/agenda_saved/fixed_rdv10.txt')
 except FileNotFoundError as fixed:
-    print("+ No fixed_rdv.txt file exist !", fixed)
+    print("+ No fixed_rdv.txt file exist !")
+    print(str(fixed))
     msgBox()
 
 fen.mainloop()

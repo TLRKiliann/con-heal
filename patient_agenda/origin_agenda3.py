@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# -*- coding:utf-8 -*-
+# -*- coding: utf-8 -*-
 
 
 import calendar
@@ -117,19 +117,19 @@ if __name__ == '__main__':
 
     class Control:
         def __init__(self, parent):
-            self.parent=parent
-            self.labelo=tk.Label(self.parent, text='Agenda',
+            self.parent = parent
+            self.labelo = tk.Label(self.parent, text='Agenda',
                 font='Times 18 bold', width=17, height=2, fg='navy', bg='cyan')
-            self.choose_btn=tk.Button(self.parent, text="1 - Choice a date",
+            self.choose_btn = tk.Button(self.parent, text="1 - Choice a date",
                 font="Times 14", width=20, height=1, fg='cyan', bg='navy',
                 activebackground='dark turquoise', command=self.popup)
-            self.show_btn=tk.Button(self.parent, text='2 - Set up appointment',
+            self.show_btn = tk.Button(self.parent, text='2 - Set up appointment',
                 font="Times 14", width=20, height=1,fg='cyan', bg='navy',
                 activebackground='dark turquoise', command=self.print_selected_date)
-            self.buttAgenda=tk.Button(self.parent, text='Agenda', font="Times 14",
+            self.buttAgenda = tk.Button(self.parent, text='Agenda', font="Times 14",
                 width=20, height=1, fg='cyan', bg='navy', activebackground='dark turquoise',
                 command=self.accessDate)
-            self.butQuit=tk.Button(self.parent, text='Quit', font="Times 14", width=20,
+            self.butQuit = tk.Button(self.parent, text='Quit', font="Times 14", width=20,
                 height=1, fg='white', bg='navy', activebackground='red', command=quit)
             self.labelo.grid()
             self.choose_btn.grid()
@@ -143,6 +143,11 @@ if __name__ == '__main__':
             cal = Calendar(child, self.data)
 
         def print_selected_date(self):
+            """
+                To write in binary into file
+                patient_calendar.txt if it
+                does not exist.
+            """
             print(self.data)
             try:
                 if os.path.getsize('./patient_agenda/events3/patient_calendar.txt'):
@@ -150,20 +155,22 @@ if __name__ == '__main__':
                     file=open('./patient_agenda/events3/patient_calendar.txt','wb')
                     dump(self.data, file)
                     file.close()
-                    subprocess.call('./patient_agenda/events3/entrer_event1.py')
-            except FileNotFoundError as pret:
-                    print("+ File not existing!", pret)
+                    subprocess.run('./patient_agenda/events3/entrer_event1.py', check=True)
+            except FileNotFoundError as file_creat:
+                    print("+ File not existing!")
+                    print(str(file_creat))
                     print("+ File 'patient_calendar.txt' created !")
                     file=open('./patient_agenda/events3/patient_calendar.txt','wb')
                     dump(self.data, file)
                     file.close()
-                    subprocess.call('./patient_agenda/events3/entrer_event1.py')
+                    subprocess.run('./patient_agenda/events3/entrer_event1.py', check=True)
 
         def accessDate(self):
             try:
-                subprocess.call('./patient_agenda/events3/doc_events/fix_agenda/read_file.py')
+                subprocess.run('./patient_agenda/events3/doc_events/fix_agenda/read_file.py', check=True)
             except FileNotFoundError as notegenda:
-                print("+ Agenda not created !", notegenda)
+                print("+ Agenda not created !")
+                print(str(notegenda))
 
     root = tk.Tk()
     app = Control(root)

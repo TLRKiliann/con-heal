@@ -5,16 +5,38 @@
 import tkinter
 from tkinter import *
 import time
-#import re
 import json
 import subprocess
 from tkinter import messagebox
 from itertools import *
 
 
+gui = Tk()
+
+gui.title("Save changes !")
+gui.configure(bg='cyan')
+
+labelTit = Label(gui)
+labelTit = Label(text="Save changes !", font=("Arial 16 bold"),
+    fg='navy', bg='cyan')
+labelTit.grid(sticky='e', row=0, column=1, pady=10)
+
+labelDate = Label(gui)
+labelDate = Label(text='Search date to modify : ', font='12', 
+    fg='navy', bg='cyan')
+labelDate.grid(sticky='e', row=1, column=1)
+
+with open('./newpatient/entryfile3.txt', 'r') as filename:
+    line1 = filename.readline()
+
+textname = StringVar()
+entryName = Entry(gui, textvariable=textname)
+textname.set(line1)
+entryName.grid(row=0, column=2, pady=10)
+
 def searchExpress():
     """
-    To read in 2 files simultaneously
+        To read in 2 files simultaneously
     """
     mot = regexpi_var.get()
     with open('./patient_agenda/events3/doc_events/fix_agenda/fixed_rdv.txt', 'r') as textfile1:
@@ -41,6 +63,29 @@ def searchExpress():
                 textBox.insert(INSERT, lines[a+1])
                 textBox.insert(INSERT, lines[a+2])
 
+def save_input():
+    """
+        Save data from modification rdv textbox !
+        To copy in 2 txt file simultaneously 
+        since a read file and from text widget
+        by lines ;) !
+    """
+    magicword = regexpi_var.get()
+    with open('./patient_agenda/events3/doc_events/fix_agenda/fixed_rdv.txt', 'r') as original_file:
+        with open('./patient_agenda/events3/doc_events/fix_agenda/modifrdv.txt', 'a+') as fw1:
+            with open('./patient_agenda/events3/doc_events/fix_agenda/fixed_rdv.txt', 'a+') as fw2:
+                for line in original_file.readlines():
+                    if magicword in line:
+                        fw1.writelines(str("+++ Changes about rdv +++\n"))
+                        fw1.writelines(textBox.get("0.0", "end-1c") + "\n")
+                        fw2.writelines(str("+++ Changes about rdv +++\n"))
+                        fw2.writelines(textBox.get("0.0", "end-1c") + "\n")
+                        print("Modification finish")
+                        break
+                    else:
+                        print("None file has been writted")
+                        break
+
 def messFromSafeButt():
     MsgBox = messagebox.askquestion("Confirm","Are you sure ?\n"
         "It will save all data !")
@@ -52,59 +97,14 @@ def messFromSafeButt():
         textBox.insert(INSERT, "Nothing has been saved !")
         print("+ Nothing has been saved !")
 
-def save_input():
-    """
-    Save data from modification rdv textbox !
-    To copy in 2 txt file simultaneously 
-    since a read file and from text widget
-    by lines ;) !
-    """
-    magicword = regexpi_var.get()
-    with open('./patient_agenda/events3/doc_events/fix_agenda/fixed_rdv.txt', 'r') as fr:
-        with open('./patient_agenda/events3/doc_events/fix_agenda/modifrdv.txt', 'a+') as fw1:
-            with open('./patient_agenda/events3/doc_events/fix_agenda/fixed_rdv.txt', 'a+') as fw2:
-                for line in fr.readlines():
-                    if magicword in line:
-                        fw1.writelines(str("+++ Changes about rdv +++\n"))
-                        fw1.writelines(textBox.get("0.0", "end-1c") + "\n")
-                        fw2.writelines(str("+++ Changes about rdv +++\n"))
-                        fw2.writelines(textBox.get("0.0", "end-1c") + "\n")
-                        print("Modification finish")
-                        break
-                    else:
-                        print("None file has been writted")
-
 def modifList():
     """
-    To read file modifrdv.txt
+        To read file modifrdv.txt
     """
-    subprocess.call('./patient_agenda/events3/doc_events/fix_agenda/read_filemodif.py')
+    subprocess.run('./patient_agenda/events3/doc_events/fix_agenda/read_filemodif.py', check=True)
 
 def deleteTextbox():
     textBox.delete('0.0', "end-1c")
-
-with open('./newpatient/entryfile3.txt', 'r') as filename:
-    line1 = filename.readline()
-
-gui = Tk()
-
-gui.title("Save changes !")
-gui.configure(bg='cyan')
-
-labelTit = Label(gui)
-labelTit = Label(text="Save changes !", font=("Arial 16 bold"),
-    fg='navy', bg='cyan')
-labelTit.grid(sticky='e', row=0, column=1, pady=10)
-
-labelDate = Label(gui)
-labelDate = Label(text='Search date to modify : ', font='12', 
-    fg='navy', bg='cyan')
-labelDate.grid(sticky='e', row=1, column=1)
-
-textname = StringVar()
-entryName = Entry(gui, textvariable=textname)
-textname.set(line1)
-entryName.grid(row=0, column=2, pady=10)
 
 reachDate = Entry(gui)
 regexpi_var = StringVar()

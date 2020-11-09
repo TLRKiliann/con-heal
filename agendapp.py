@@ -19,14 +19,14 @@ def dispAgBox():
     # Patient 1
     try:
         with open('./newpatient/entryfile.txt', 'r') as namefile:
-            new_text1=namefile.readline()
+            new_text1 = namefile.readline()
     except FileNotFoundError as callfile:
         print("File entryfile.txt doesn't exist !", callfile)
         
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
         with open('./patient_agenda/events/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines=filedate.readlines()
+            lines = filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if dateagenda in line:
@@ -45,15 +45,15 @@ def dispAgBox():
 
     try:
         with open('./newpatient/entryfile2.txt', 'r') as namefile:
-            line2=namefile.readline()
-            new_text2=line2
+            line2 = namefile.readline()
+            new_text2 = line2
     except FileNotFoundError as fileout2:
         print("No file entryfile2.txt exist", fileout2)
 
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
         with open('./patient_agenda/events2/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines=filedate.readlines()
+            lines = filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if dateagenda in line:
@@ -72,15 +72,15 @@ def dispAgBox():
 
     try:
         with open('./newpatient/entryfile3.txt', 'r') as namefile:
-            line3=namefile.readline()
-            new_text3=line3
+            line3 = namefile.readline()
+            new_text3 = line3
     except FileNotFoundError as fileout3:
         print("No file entryfile3.txt exist", fileout3)
 
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
         with open('./patient_agenda/events3/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines=filedate.readlines()
+            lines = filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if dateagenda in line:
@@ -99,15 +99,15 @@ def dispAgBox():
 
     try:
         with open('./newpatient/entryfile4.txt', 'r') as namefile:
-            line4=namefile.readline()
-            new_text4=line4
+            line4 = namefile.readline()
+            new_text4 = line4
     except FileNotFoundError as fileout4:
         print("No file entryfile4.txt exist", fileout4)
 
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
         with open('./patient_agenda/events4/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines=filedate.readlines()
+            lines = filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if dateagenda in line:
@@ -126,15 +126,15 @@ def dispAgBox():
 
     try:
         with open('./newpatient/entryfile5.txt', 'r') as namefile:
-            line5=namefile.readline()
-            new_text5=line5
+            line5 = namefile.readline()
+            new_text5 = line5
     except FileNotFoundError as fileout5:
         print("No file entryfile5.txt exist", fileout5)
 
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
         with open('./patient_agenda/events5/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines=filedate.readlines()
+            lines = filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if dateagenda in line:
@@ -153,15 +153,15 @@ def dispAgBox():
 
     try:
         with open('./newpatient/entryfile6.txt', 'r') as namefile:
-            line6=namefile.readline()
-            new_text6=line6
+            line6 = namefile.readline()
+            new_text6 = line6
     except FileNotFoundError as fileout6:
         print("No file entryfile6.txt exist", fileout6)
 
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
         with open('./patient_agenda/events6/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines=filedate.readlines()
+            lines = filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if dateagenda in line:
@@ -180,15 +180,15 @@ def dispAgBox():
 
     try:
         with open('./newpatient/entryfile7.txt', 'r') as namefile:
-            line7=namefile.readline()
-            new_text7=line7
+            line7 = namefile.readline()
+            new_text7 = line7
     except FileNotFoundError as fileout7:
         print("No file entryfile7.txt exist", fileout7)
 
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
         with open('./patient_agenda/events7/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines=filedate.readlines()
+            lines = filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if dateagenda in line:
@@ -207,15 +207,15 @@ def dispAgBox():
 
     try:
         with open('./newpatient/entryfile8.txt', 'r') as namefile:
-            line8=namefile.readline()
-            new_text8=line8
+            line8 = namefile.readline()
+            new_text8 = line8
     except FileNotFoundError as fileout8:
         print("No file entryfile8.txt exist", fileout8)
 
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
         with open('./patient_agenda/events8/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines=filedate.readlines()
+            lines = filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if dateagenda in line:
@@ -234,15 +234,15 @@ def dispAgBox():
 
     try:
         with open('./newpatient/entryfile9.txt', 'r') as namefile:
-            line9=namefile.readline()
-            new_text9=line9
+            line9 = namefile.readline()
+            new_text9 = line9
     except FileNotFoundError as fileout9:
         print("No file entryfile9.txt exist", fileout9)
 
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
         with open('./patient_agenda/events9/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines=filedate.readlines()
+            lines = filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if dateagenda in line:
@@ -261,15 +261,15 @@ def dispAgBox():
 
     try:
         with open('./newpatient/entryfile10.txt', 'r') as namefile:
-            line10=namefile.readline()
-            new_text10=line10
+            line10 = namefile.readline()
+            new_text10 = line10
     except FileNotFoundError as fileout10:
         print("No file entryfile10.txt exist", fileout10)
 
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
         with open('./patient_agenda/events10/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines=filedate.readlines()
+            lines = filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if dateagenda in line:
@@ -288,15 +288,15 @@ def dispAgBox():
 
     try:
         with open('./newpatient/entryfile11.txt', 'r') as namefile:
-            line11=namefile.readline()
-            new_text11=line11
+            line11 = namefile.readline()
+            new_text11 = line11
     except FileNotFoundError as fileout11:
         print("No file entryfile11.txt exist", fileout11)
 
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
         with open('./patient_agenda/events11/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines=filedate.readlines()
+            lines = filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if dateagenda in line:
@@ -315,15 +315,15 @@ def dispAgBox():
 
     try:
         with open('./newpatient/entryfile12.txt', 'r') as namefile:
-            line12=namefile.readline()
-            new_text12=line12
+            line12 = namefile.readline()
+            new_text12 = line12
     except FileNotFoundError as fileout12:
         print("No file entryfile12.txt exist", fileout12)
 
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
         with open('./patient_agenda/events12/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines=filedate.readlines()
+            lines = filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if dateagenda in line:
@@ -342,15 +342,15 @@ def dispAgBox():
 
     try:
         with open('./newpatient/entryfile13.txt', 'r') as namefile:
-            line13=namefile.readline()
-            new_text13=line13
+            line13 = namefile.readline()
+            new_text13 = line13
     except FileNotFoundError as fileout13:
         print("No file entryfile13.txt exist", fileout13)
 
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
         with open('./patient_agenda/events13/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines=filedate.readlines()
+            lines = filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if dateagenda in line:
@@ -369,15 +369,15 @@ def dispAgBox():
 
     try:
         with open('./newpatient/entryfile14.txt', 'r') as namefile:
-            line14=namefile.readline()
-            new_text14=line14
+            line14 = namefile.readline()
+            new_text14 = line14
     except FileNotFoundError as fileout14:
         print("No file entryfile14.txt exist", fileout14)
 
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
         with open('./patient_agenda/events14/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines=filedate.readlines()
+            lines = filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if dateagenda in line:
@@ -396,15 +396,15 @@ def dispAgBox():
 
     try:
         with open('./newpatient/entryfile15.txt', 'r') as namefile:
-            line15=namefile.readline()
-            new_text15=line15
+            line15 = namefile.readline()
+            new_text15 = line15
     except FileNotFoundError as fileout15:
         print("No file entryfile15.txt exist", fileout15)
 
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
         with open('./patient_agenda/events15/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines=filedate.readlines()
+            lines = filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if dateagenda in line:
@@ -423,15 +423,15 @@ def dispAgBox():
 
     try:
         with open('./newpatient/entryfile16.txt', 'r') as namefile:
-            line16=namefile.readline()
-            new_text16=line16
+            line16 = namefile.readline()
+            new_text16 = line16
     except FileNotFoundError as fileout16:
         print("No file entryfile16.txt exist", fileout16)
 
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
         with open('./patient_agenda/events16/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines=filedate.readlines()
+            lines = filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if dateagenda in line:
@@ -450,15 +450,15 @@ def dispAgBox():
 
     try:
         with open('./newpatient/entryfile17.txt', 'r') as namefile:
-            line17=namefile.readline()
-            new_text17=line17
+            line17 = namefile.readline()
+            new_text17 = line17
     except FileNotFoundError as fileout17:
         print("No file entryfile17.txt exist", fileout17)
 
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
         with open('./patient_agenda/events17/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines=filedate.readlines()
+            lines = filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if dateagenda in line:
@@ -477,15 +477,15 @@ def dispAgBox():
 
     try:
         with open('./newpatient/entryfile18.txt', 'r') as namefile:
-            line18=namefile.readline()
-            new_text18=line18
+            line18 = namefile.readline()
+            new_text18 = line18
     except FileNotFoundError as fileout18:
         print("No file entryfile18.txt exist", fileout18)
 
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
         with open('./patient_agenda/events18/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines=filedate.readlines()
+            lines = filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if dateagenda in line:
@@ -504,15 +504,15 @@ def dispAgBox():
 
     try:
         with open('./newpatient/entryfile19.txt', 'r') as namefile:
-            line19=namefile.readline()
-            new_text19=line19
+            line19 = namefile.readline()
+            new_text19 = line19
     except FileNotFoundError as fileout19:
         print("No file entryfile19.txt exist", fileout19)
 
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
         with open('./patient_agenda/events19/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines=filedate.readlines()
+            lines = filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if dateagenda in line:
@@ -531,15 +531,15 @@ def dispAgBox():
 
     try:
         with open('./newpatient/entryfile20.txt', 'r') as namefile:
-            line20=namefile.readline()
-            new_text20=line20
+            line20 = namefile.readline()
+            new_text20 = line20
     except FileNotFoundError as fileout20:
         print("No file entryfile20.txt exist", fileout20)
 
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
         with open('./patient_agenda/events20/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines=filedate.readlines()
+            lines = filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if dateagenda in line:
@@ -558,15 +558,15 @@ def dispAgBox():
 
     try:
         with open('./newpatient/entryfile21.txt', 'r') as namefile:
-            line21=namefile.readline()
-            new_text21=line21
+            line21 = namefile.readline()
+            new_text21 = line21
     except FileNotFoundError as fileout21:
         print("No file entryfile21.txt exist", fileout21)
 
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
         with open('./patient_agenda/events21/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines=filedate.readlines()
+            lines = filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if dateagenda in line:
@@ -585,15 +585,15 @@ def dispAgBox():
 
     try:
         with open('./newpatient/entryfile22.txt', 'r') as namefile:
-            line22=namefile.readline()
-            new_text22=line22
+            line22 = namefile.readline()
+            new_text22 = line22
     except FileNotFoundError as fileout22:
         print("No file entryfile22.txt exist", fileout22)
 
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
         with open('./patient_agenda/events22/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines=filedate.readlines()
+            lines = filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if dateagenda in line:
@@ -612,15 +612,15 @@ def dispAgBox():
 
     try:
         with open('./newpatient/entryfile23.txt', 'r') as namefile:
-            line23=namefile.readline()
-            new_text23=line23
+            line23 = namefile.readline()
+            new_text23 = line23
     except FileNotFoundError as fileout23:
         print("No file entryfile23.txt exist", fileout23)
 
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
         with open('./patient_agenda/events23/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines=filedate.readlines()
+            lines = filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if dateagenda in line:
@@ -639,15 +639,15 @@ def dispAgBox():
 
     try:
         with open('./newpatient/entryfile24.txt', 'r') as namefile:
-            line24=namefile.readline()
-            new_text24=line24
+            line24 = namefile.readline()
+            new_text24 = line24
     except FileNotFoundError as fileout24:
         print("No file entryfile24.txt exist", fileout24)
 
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
         with open('./patient_agenda/events24/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines=filedate.readlines()
+            lines = filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if dateagenda in line:

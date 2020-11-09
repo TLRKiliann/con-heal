@@ -33,7 +33,7 @@ def dispAgBox():
                     print(line)
                     print(lines[i+1])
                     print(lines[i+2])
-                    MSB2 = messagebox.showwarning('Info',
+                    messagebox.showwarning('Info',
                         'Look at AGENDA, there is an appointment tomorrow for : ' + new_text1 + lines[i] + \
                         lines[i+1] + lines[i+2])
                 else:
@@ -60,7 +60,7 @@ def dispAgBox():
                     print(line)
                     print(lines[i+1])
                     print(lines[i+2])
-                    MSB2 = messagebox.showwarning('Info',
+                    messagebox.showwarning('Info',
                         'Look at AGENDA, there is an appointment tomorrow for : ' + new_text2 + lines[i] + \
                         lines[i+1] + lines[i+2])
                 else:
@@ -70,6 +70,7 @@ def dispAgBox():
     else:
         ("Error unknow")
 
+    # Patient 3
     try:
         with open('./newpatient/entryfile3.txt', 'r') as namefile:
             line3 = namefile.readline()
@@ -78,18 +79,28 @@ def dispAgBox():
         print("No file entryfile3.txt exist", fileout3)
 
     try:
-        dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
-        with open('./patient_agenda/events3/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines = filedate.readlines()
-            for i in range(0, len(lines)):
-                line = lines[i]
-                if dateagenda in line:
-                    print(line)
-                    print(lines[i+1])
-                    print(lines[i+2])
-                    MSB2 = messagebox.showwarning('Info',
-                        'Look at AGENDA, there is an appointment tomorrow for : ' + new_text3 + lines[i] + \
-                        lines[i+1] + lines[i+2])
+        dateagenda = (datetime.datetime.now() + datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
+
+        for path, dirs, files in os.walk('./patient_agenda/events3/'
+            'doc_events/fix_agenda/agenda_saved/'):
+            for file in files:
+                with open(os.path.join(path, file), 'r') as read_f:
+                    lines = read_f.readlines()
+                    for i in range(0, len(lines)):
+                        line = lines[i]
+                        if dateagenda in line:
+                            print("Nous y voici !") 
+                            print(lines[i])
+                            print(lines[i+1])
+                            print(lines[i+2])
+                            textBox.insert(INSERT, lines[i]) # Pas sûr !
+                            textBox.insert(INSERT, lines[i+1])
+                            textBox.insert(INSERT, lines[i+2])
+                            messagebox.showwarning('Info', 'Look at AGENDA, '
+                                'there is an appointment tomorrow for : '\
+                                + new_text3 + lines[i] + \
+                                lines[i+1] + lines[i+2])
                 else:
                     pass
     except FileNotFoundError as infofile3:
@@ -114,7 +125,7 @@ def dispAgBox():
                     print(line)
                     print(lines[i+1])
                     print(lines[i+2])
-                    MSB2 = messagebox.showwarning('Info',
+                    messagebox.showwarning('Info',
                         'Look at AGENDA, there is an appointment tomorrow for : ' + new_text4 + lines[i] + \
                         lines[i+1] + lines[i+2])
                 else:
@@ -123,7 +134,8 @@ def dispAgBox():
         print("File 4 has not been found", infofile4)
     else:
         ("Error unknow")
-
+    
+    # Patient 5
     try:
         with open('./newpatient/entryfile5.txt', 'r') as namefile:
             line5 = namefile.readline()
@@ -141,7 +153,7 @@ def dispAgBox():
                     print(line)
                     print(lines[i+1])
                     print(lines[i+2])
-                    MSB2 = messagebox.showwarning('Info',
+                    messagebox.showwarning('Info',
                         'Look at AGENDA, there is an appointment tomorrow for : ' + new_text5 + lines[i] + \
                         lines[i+1] + lines[i+2])
                 else:
@@ -168,7 +180,7 @@ def dispAgBox():
                     print(line)
                     print(lines[i+1])
                     print(lines[i+2])
-                    MSB2 = messagebox.showwarning('Info',
+                    messagebox.showwarning('Info',
                         'Look at AGENDA, there is an appointment tomorrow for : ' + new_text6 + lines[i] + \
                         lines[i+1] + lines[i+2])
                 else:
@@ -195,7 +207,7 @@ def dispAgBox():
                     print(line)
                     print(lines[i+1])
                     print(lines[i+2])
-                    MSB2 = messagebox.showwarning('Info',
+                    messagebox.showwarning('Info',
                         'Look at AGENDA, there is an appointment tomorrow for : ' + new_text7 + lines[i] + \
                         lines[i+1] + lines[i+2])
                 else:
@@ -222,7 +234,7 @@ def dispAgBox():
                     print(line)
                     print(lines[i+1])
                     print(lines[i+2])
-                    MSB2 = messagebox.showwarning('Info',
+                    messagebox.showwarning('Info',
                         'Look at AGENDA, there is an appointment tomorrow for : ' + new_text8 + lines[i] + \
                         lines[i+1] + lines[i+2])
                 else:
@@ -249,7 +261,7 @@ def dispAgBox():
                     print(line)
                     print(lines[i+1])
                     print(lines[i+2])
-                    MSB2 = messagebox.showwarning('Info',
+                    messagebox.showwarning('Info',
                         'Look at AGENDA, there is an appointment tomorrow for : ' + new_text9 + lines[i] + \
                         lines[i+1] + lines[i+2])
                 else:
@@ -276,7 +288,7 @@ def dispAgBox():
                     print(line)
                     print(lines[i+1])
                     print(lines[i+2])
-                    MSB2 = messagebox.showwarning('Info',
+                    messagebox.showwarning('Info',
                         'Look at AGENDA, there is an appointment tomorrow for : ' + new_text10 + lines[i] + \
                         lines[i+1] + lines[i+2])
                 else:
@@ -303,7 +315,7 @@ def dispAgBox():
                     print(line)
                     print(lines[i+1])
                     print(lines[i+2])
-                    MSB2 = messagebox.showwarning('Info',
+                    messagebox.showwarning('Info',
                         'Look at AGENDA, there is an appointment tomorrow for : ' + new_text11 + lines[i] + \
                         lines[i+1] + lines[i+2])
                 else:
@@ -330,7 +342,7 @@ def dispAgBox():
                     print(line)
                     print(lines[i+1])
                     print(lines[i+2])
-                    MSB2 = messagebox.showwarning('Info',
+                    messagebox.showwarning('Info',
                         'Look at AGENDA, there is an appointment tomorrow for : ' + new_text12 + lines[i] + \
                         lines[i+1] + lines[i+2])
                 else:
@@ -357,7 +369,7 @@ def dispAgBox():
                     print(line)
                     print(lines[i+1])
                     print(lines[i+2])
-                    MSB2 = messagebox.showwarning('Info',
+                    messagebox.showwarning('Info',
                         'Look at AGENDA, there is an appointment tomorrow for : ' + new_text13 + lines[i] + \
                         lines[i+1] + lines[i+2])
                 else:
@@ -384,7 +396,7 @@ def dispAgBox():
                     print(line)
                     print(lines[i+1])
                     print(lines[i+2])
-                    MSB2 = messagebox.showwarning('Info',
+                    messagebox.showwarning('Info',
                         'Look at AGENDA, there is an appointment tomorrow for : ' + new_text14 + lines[i] + \
                         lines[i+1] + lines[i+2])
                 else:
@@ -411,7 +423,7 @@ def dispAgBox():
                     print(line)
                     print(lines[i+1])
                     print(lines[i+2])
-                    MSB2 = messagebox.showwarning('Info',
+                    messagebox.showwarning('Info',
                         'Look at AGENDA, there is an appointment tomorrow for : ' + new_text15 + lines[i] + \
                         lines[i+1] + lines[i+2])
                 else:
@@ -438,7 +450,7 @@ def dispAgBox():
                     print(line)
                     print(lines[i+1])
                     print(lines[i+2])
-                    MSB2 = messagebox.showwarning('Info',
+                    messagebox.showwarning('Info',
                         'Look at AGENDA, there is an appointment tomorrow for : ' + new_text16 + lines[i] + \
                         lines[i+1] + lines[i+2])
                 else:
@@ -465,7 +477,7 @@ def dispAgBox():
                     print(line)
                     print(lines[i+1])
                     print(lines[i+2])
-                    MSB2 = messagebox.showwarning('Info',
+                    messagebox.showwarning('Info',
                         'Look at AGENDA, there is an appointment tomorrow for : ' + new_text17 + lines[i] + \
                         lines[i+1] + lines[i+2])
                 else:
@@ -492,7 +504,7 @@ def dispAgBox():
                     print(line)
                     print(lines[i+1])
                     print(lines[i+2])
-                    MSB2 = messagebox.showwarning('Info',
+                    messagebox.showwarning('Info',
                         'Look at AGENDA, there is an appointment tomorrow for : ' + new_text18 + lines[i] + \
                         lines[i+1] + lines[i+2])
                 else:
@@ -519,7 +531,7 @@ def dispAgBox():
                     print(line)
                     print(lines[i+1])
                     print(lines[i+2])
-                    MSB2 = messagebox.showwarning('Info',
+                    messagebox.showwarning('Info',
                         'Look at AGENDA, there is an appointment tomorrow for : ' + new_text19 + lines[i] + \
                         lines[i+1] + lines[i+2])
                 else:
@@ -546,7 +558,7 @@ def dispAgBox():
                     print(line)
                     print(lines[i+1])
                     print(lines[i+2])
-                    MSB2 = messagebox.showwarning('Info',
+                    messagebox.showwarning('Info',
                         'Look at AGENDA, there is an appointment tomorrow for : ' + new_text20 + lines[i] + \
                         lines[i+1] + lines[i+2])
                 else:
@@ -573,7 +585,7 @@ def dispAgBox():
                     print(line)
                     print(lines[i+1])
                     print(lines[i+2])
-                    MSB2 = messagebox.showwarning('Info',
+                    messagebox.showwarning('Info',
                         'Look at AGENDA, there is an appointment tomorrow for : ' + new_text21 + lines[i] + \
                         lines[i+1] + lines[i+2])
                 else:
@@ -600,7 +612,7 @@ def dispAgBox():
                     print(line)
                     print(lines[i+1])
                     print(lines[i+2])
-                    MSB2 = messagebox.showwarning('Info',
+                    messagebox.showwarning('Info',
                         'Look at AGENDA, there is an appointment tomorrow for : ' + new_text22 + lines[i] + \
                         lines[i+1] + lines[i+2])
                 else:
@@ -627,7 +639,7 @@ def dispAgBox():
                     print(line)
                     print(lines[i+1])
                     print(lines[i+2])
-                    MSB2 = messagebox.showwarning('Info',
+                    messagebox.showwarning('Info',
                         'Look at AGENDA, there is an appointment tomorrow for : ' + new_text23 + lines[i] + \
                         lines[i+1] + lines[i+2])
                 else:
@@ -654,7 +666,7 @@ def dispAgBox():
                     print(line)
                     print(lines[i+1])
                     print(lines[i+2])
-                    MSB2 = messagebox.showwarning('Info',
+                    messagebox.showwarning('Info',
                         'Look at AGENDA, there is an appointment tomorrow for : ' + new_text24 + lines[i] + \
                         lines[i+1] + lines[i+2])
                 else:

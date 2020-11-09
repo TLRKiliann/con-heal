@@ -25,7 +25,7 @@ def importationFile(fichier):
 def retrieve_input():
     """
         To retrieve data from messFromSafeButt() function
-        create a copy after backup and remove all files 
+        to create a copy after backup and remove all files 
         that were used to create it.
     """
     inputValue = textBox.get("1.0", "end-1c" + '\n')

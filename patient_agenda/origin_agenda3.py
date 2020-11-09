@@ -123,18 +123,22 @@ if __name__ == '__main__':
             self.choose_btn = tk.Button(self.parent, text="1 - Choice a date",
                 font="Times 14", width=20, height=1, fg='cyan', bg='navy',
                 activebackground='dark turquoise', command=self.popup)
-            self.show_btn = tk.Button(self.parent, text='2 - Set up appointment',
+            self.show_btn = tk.Button(self.parent, text='2 - Fix appointment',
                 font="Times 14", width=20, height=1,fg='cyan', bg='navy',
                 activebackground='dark turquoise', command=self.print_selected_date)
             self.buttAgenda = tk.Button(self.parent, text='Agenda', font="Times 14",
                 width=20, height=1, fg='cyan', bg='navy', activebackground='dark turquoise',
                 command=self.accessDate)
+            self.buttLook = tk.Button(self.parent, text='To change', font="Times 14",
+                width=20, height=1, fg='cyan', bg='navy', activebackground='dark turquoise',
+                command=self.accessLook)
             self.butQuit = tk.Button(self.parent, text='Quit', font="Times 14", width=20,
                 height=1, fg='white', bg='navy', activebackground='red', command=quit)
             self.labelo.grid()
             self.choose_btn.grid()
             self.show_btn.grid()
             self.buttAgenda.grid()
+            self.buttLook.grid()
             self.butQuit.grid()
             self.data = {}
 
@@ -152,7 +156,7 @@ if __name__ == '__main__':
             try:
                 if os.path.getsize('./patient_agenda/events3/patient_calendar.txt'):
                     print("+ File 'patient_calendar.txt' exist !")
-                    file=open('./patient_agenda/events3/patient_calendar.txt','wb')
+                    file = open('./patient_agenda/events3/patient_calendar.txt','wb')
                     dump(self.data, file)
                     file.close()
                     subprocess.run('./patient_agenda/events3/entrer_event1.py', check=True)
@@ -160,7 +164,7 @@ if __name__ == '__main__':
                     print("+ File not existing!")
                     print(str(file_creat))
                     print("+ File 'patient_calendar.txt' created !")
-                    file=open('./patient_agenda/events3/patient_calendar.txt','wb')
+                    file = open('./patient_agenda/events3/patient_calendar.txt','wb')
                     dump(self.data, file)
                     file.close()
                     subprocess.run('./patient_agenda/events3/entrer_event1.py', check=True)
@@ -168,9 +172,16 @@ if __name__ == '__main__':
         def accessDate(self):
             try:
                 subprocess.run('./patient_agenda/events3/doc_events/fix_agenda/read_file.py', check=True)
-            except FileNotFoundError as notegenda:
+            except FileNotFoundError as note_agenda:
                 print("+ Agenda not created !")
-                print(str(notegenda))
+                print(str(note_agenda))
+
+        def accessLook(self):
+            try:
+                subprocess.run('./patient_agenda/events3/doc_events/fix_agenda/main.py', check=True)
+            except FileNotFoundError as note_change:
+                print("+ Agenda not created !")
+                print(str(note_change))
 
     root = tk.Tk()
     app = Control(root)

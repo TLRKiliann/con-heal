@@ -24,24 +24,32 @@ labelo.pack(in_=top, side=LEFT, padx=5, pady=20)
 with open('./newpatient/entryfile3.txt', 'r') as filename:
     line1 = filename.readline()
 
-def msgBox():
-    messagebox.showwarning('WARNING',
-        'No fixed_rdv.txt file exist for : ' + line1)
-
 textentry = StringVar()
 textentry.set(line1)
 entrylab = Entry(fen, textvariable=textentry)
 entrylab.pack(in_=top, side=LEFT, padx=10, pady=20)
 
+def msgBox():
+    messagebox.showwarning('WARNING',
+        'Error during function call for : ' + line1)
+
+def importFilesFromDir():
+    for path, dirs, files in os.walk('./patient_agenda/events3/doc_events'
+        '/fix_agenda/agenda_saved/'):
+        for file in files:
+            read_f = open(os.path.join(path,file),'r')
+            content = read_f.readlines()
+            textBox.insert(END, content)
+
 textBox = Text(fen, height=15, width=60, font=18)
 textBox.pack(padx=30, pady=30)
 
-for path, dirs, files in os.walk('./patient_agenda/events3/doc_events'
-    '/fix_agenda/agenda_saved/'):
-    for file in files:
-        read_f = open(os.path.join(path,file),'r')
-        content = read_f.readlines()
-        textBox.insert(END, content)
+try:
+    importFilesFromDir()
+except IOError as io_err:
+    print("+ Error for calling function !")
+    print(str(io_err))
+    msgBox()
 
 buttonClose = Button(fen, text="Quit", width=8, bd=3,
     fg='white', bg='navy', highlightbackground='light sky blue',

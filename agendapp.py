@@ -94,15 +94,12 @@ def dispAgBox():
                             print(lines[i])
                             print(lines[i+1])
                             print(lines[i+2])
-                            textBox.insert(INSERT, lines[i]) # Pas sûr !
-                            textBox.insert(INSERT, lines[i+1])
-                            textBox.insert(INSERT, lines[i+2])
                             messagebox.showwarning('Info', 'Look at AGENDA, '
                                 'there is an appointment tomorrow for : '\
                                 + new_text3 + lines[i] + \
                                 lines[i+1] + lines[i+2])
-                else:
-                    pass
+                        else:
+                            pass
     except FileNotFoundError as infofile3:
         print("File 3 has not been found", infofile3)
     else:

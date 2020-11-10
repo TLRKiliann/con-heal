@@ -62,8 +62,7 @@ try:
         importationFile('./diag/doc_diag9/diagrecap9.txt',
             encodage="Utf-8")
 except FileNotFoundError as err_file:
-    print("+ File not found !")
-    print(str(err_file))
+    print(err_file)
     messagebox.showwarning("WARNING", "File does not exist or "
         "file not found !")
 

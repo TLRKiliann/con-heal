@@ -30,7 +30,8 @@ def retrieve_input():
     """
     inputValue = textBox.get("1.0", "end-1c" + '\n')
     print(inputValue)
-    file = open('./patient_agenda/events3/doc_events/fix_agenda/fixed_rdv.txt', 'w')
+    file = open('./patient_agenda/events3/doc_events/'
+        'fix_agenda/fixed_rdv.txt', 'w')
     file.write(textBox.get("1.0", "end-1c") + '\n\n')
     file.close()
 
@@ -38,7 +39,8 @@ def retrieve_input():
     # 'agenda_saved' in 
     # './patient_agenda/events3/doc_events/fix_agenda' 
 
-    path = './patient_agenda/events3/doc_events/fix_agenda/agenda_saved'
+    path = './patient_agenda/events3/doc_events/'
+    'fix_agenda/agenda_saved'
 
     try:
         os.mkdir(path)
@@ -46,10 +48,13 @@ def retrieve_input():
         print(err_alert)
     
     print("+ To test os.listdir(): ")
-    print(os.listdir('./patient_agenda/events3/doc_events/fix_agenda/agenda_saved/'))
+    print(os.listdir('./patient_agenda/events3/doc_events/'
+        'fix_agenda/agenda_saved/'))
     
-    origin_path = './patient_agenda/events3/doc_events/fix_agenda/fixed_rdv.txt'
-    main_path = './patient_agenda/events3/doc_events/fix_agenda/agenda_saved/'
+    origin_path = './patient_agenda/events3/doc_events/'
+    'fix_agenda/fixed_rdv.txt'
+    main_path = './patient_agenda/events3/doc_events/'
+    'fix_agenda/agenda_saved/'
 
     files = [None] * 100
     for x in range(0, 100):
@@ -69,7 +74,8 @@ def retrieve_input():
     os.remove('./patient_agenda/events3/patient_calendar.txt')
 
     print("+ os.listdir after new file created : ")
-    print(os.listdir('./patient_agenda/events3/doc_events/fix_agenda/agenda_saved/'))
+    print(os.listdir('./patient_agenda/events3/doc_events/'
+        'fix_agenda/agenda_saved/'))
     
 def messFromSafeButt():
     """
@@ -91,20 +97,20 @@ def lectureFic():
         To read file, app open
         file fixed rdv to read on it.
     """
-    #file = open('./patient_agenda/events3/doc_events/fix_agenda/agenda_saved/fixed_rdv.txt', 'r')
-    #print(file.read())
-    #file.close()
-    subprocess.run('./patient_agenda/events3/doc_events/fix_agenda/read_file.py', check=True)
+    subprocess.run('./patient_agenda/events3/doc_events/'
+        'fix_agenda/read_file.py', check=True)
 
 def rdvChanged():
     """
         To change data
         in a date entered
     """
-    subprocess.run('./patient_agenda/events3/doc_events/fix_agenda/read_filemodif.py', check=True)
+    subprocess.run('./patient_agenda/events3/doc_events/'
+        'fix_agenda/read_filemodif.py', check=True)
 
 def changeText():
-    subprocess.run('./patient_agenda/events3/doc_events/fix_agenda/main.py', check=True)
+    subprocess.run('./patient_agenda/events3/doc_events/'
+        'fix_agenda/main.py', check=True)
 
 with open('./newpatient/entryfile3.txt', 'r') as filename:
     line1=filename.readline()
@@ -160,9 +166,11 @@ buttonClose=Button(fen, text="Quit", width=8, bd=3,
 buttonClose.pack(side='right', padx=10, pady=10)
 
 try:
-    if os.path.getsize('./patient_agenda/events3/doc_events/fix_agenda/patient_value.json'):
+    if os.path.getsize('./patient_agenda/events3/doc_events/'
+        'fix_agenda/patient_value.json'):
         print("+ File 'patient_value.json exist' !")
-        importationFile('./patient_agenda/events3/doc_events/fix_agenda/patient_value.json')
+        importationFile('./patient_agenda/events3/doc_events/'
+            'fix_agenda/patient_value.json')
 except FileNotFoundError as nf_file:
     print("+ File 'patient_value.json' does not exist !")
     print(nf_file)

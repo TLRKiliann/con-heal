@@ -1,29 +1,26 @@
 #!/usr/bin/python3
-# -*- coding:utf-8 -*-
+# -*- coding: utf-8 -*-
 
 
 import tkinter
 from tkinter import *
-import time
+from tkinter import messagebox
 import json
+import time
 import os
 import subprocess
-from tkinter import messagebox
 from itertools import *
 
 
 gui = Tk()
-
 gui.title("Save changes !")
 gui.configure(bg='cyan')
 
-labelTit = Label(gui)
-labelTit = Label(text="Save changes !", font=("Arial 16 bold"),
+labelTit = Label(gui, text="Save changes !", font=("Arial 16 bold"),
     fg='navy', bg='cyan')
 labelTit.grid(sticky='e', row=0, column=1, pady=10)
 
-labelDate = Label(gui)
-labelDate = Label(text='Search date to modify : ', font='12', 
+labelDate = Label(gui, text='Search date to modify : ', font='12', 
     fg='navy', bg='cyan')
 labelDate.grid(sticky='e', row=1, column=1)
 
@@ -40,8 +37,8 @@ def searchExpress():
         To read multiples files in a directory
     """
     mot = regexpi_var.get()
-    for path, dirs, files in os.walk('./patient_agenda/events3/doc_events/'
-        'fix_agenda/agenda_saved/'):
+    for path, dirs, files in os.walk('./patient_agenda/events3/'\
+        'doc_events/fix_agenda/agenda_saved/'):
         for file in files:
             read_f = open(os.path.join(path, file), 'r')
             lines = read_f.readlines()
@@ -63,8 +60,8 @@ def save_input():
         by lines ;) !
     """
     magicword = regexpi_var.get()
-    for path, dirs, files in os.walk('./patient_agenda/events3/doc_events/'
-        'fix_agenda/agenda_saved/'):
+    for path, dirs, files in os.walk('./patient_agenda/events3/'\
+        'doc_events/fix_agenda/agenda_saved/'):
         for file in files:
             read_f = open(os.path.join(path, file), 'r')
             for line in read_f:
@@ -99,44 +96,41 @@ def modifList():
     """
         To read file modifrdv.txt
     """
-    subprocess.run('./patient_agenda/events3/doc_events/fix_agenda/'
-        'read_filemodif.py', check=True)
+    subprocess.run('./patient_agenda/events3/doc_events/'\
+        'fix_agenda/read_filemodif.py', check=True)
 
 def deleteTextbox():
     textBox.delete('0.0', "end-1c")
 
-reachDate = Entry(gui)
 regexpi_var = StringVar()
-reachDate = Entry(textvariable=regexpi_var)
-reachDate.grid(row=1, column=2, padx=5, pady=10)
-
-buttonSearch = Button(gui)
-buttonSearch = Button(text='Search', width=8, bd=3,
-    fg='yellow', bg='navy', highlightbackground='light sky blue',
-    activebackground='dark turquoise', command=searchExpress)
-buttonSearch.grid(row=1, column=3, padx=5)
+reachDate = Entry(gui, textvariable=regexpi_var)
+reachDate.grid(row=1, column=2, pady=10)
 
 textBox = Text(gui, height=15, width=60, font=18)
 textBox.grid(row=4, column=1, columnspan=3, padx=30, pady=30)
 
-buttonSave = Button(gui, text="1-Save", width=8, bd=3,
-    fg='yellow', bg='navy', highlightbackground='light sky blue',
+buttonSearch = Button(gui, text='Search', width=8, bd=3,
+    fg='yellow', bg='RoyalBlue3', highlightbackground='light sky blue',
+    activebackground='dark turquoise', command=searchExpress)
+buttonSearch.grid(row=1, column=3, padx=5)
+
+buttonSave = Button(gui, text="Save", width=8, bd=3,
+    fg='yellow', bg='RoyalBlue3', highlightbackground='light sky blue',
     activebackground='dark turquoise', command = messFromSafeButt)
 buttonSave.grid(sticky='w', row=5, column=1, padx=10, pady=10)
 
-buttonModif = Button(gui, text="2-Read changes", width=12, bd=3,
-    fg='yellow', bg='navy', highlightbackground='light sky blue',
+buttonModif = Button(gui, text="Read", width=8, bd=3,
+    fg='cyan', bg='RoyalBlue3', highlightbackground='light sky blue',
     activebackground='dark turquoise', command = modifList)
 buttonModif.grid(sticky='e', row=5, column=1, padx=10, pady=10)
 
 buttonDelete = Button(gui, text="Clear", width=8, bd=3,
-    fg='cyan', bg='navy', highlightbackground='light sky blue',
+    fg='cyan', bg='RoyalBlue3', highlightbackground='light sky blue',
     activebackground='dark turquoise', command = deleteTextbox)
 buttonDelete.grid(sticky='w', row=5, column=2, padx=10, pady=10)
 
-buttonQuit = Button(gui)
-buttonQuit = Button(text='Quit', width=8, bd=3,
-    fg='white', bg='navy', highlightbackground='light sky blue',
+buttonQuit = Button(gui, text='Quit', width=8, bd=3,
+    fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
     activebackground='dark turquoise', command=quit)
 buttonQuit.grid(sticky='e', row=5, column=3, padx=10, pady=10)
 

@@ -1,24 +1,11 @@
 #!/usr/bin/python3
-#!-*-encoding:Utf-8-*-
+# -*- coding: utf-8 -*-
 
 
 from tkinter import *
 from tkinter import messagebox
+import os
 
-
-with open('./newpatient/entryfile6.txt', 'r') as filename:
-    line1=filename.readline()
-
-def importationFile(fichier):
-    file = open(fichier, 'r')
-    content=file.readlines()
-    file.close()
-    for li in content:
-        textBox.insert(END, li)
-
-def msgBox():
-    messagebox.showwarning('WARNING',
-        'No fixed_rdv.txt file exist for : ' + line1)
 
 fen=Tk()
 fen.title("RDV set up")
@@ -30,27 +17,46 @@ bottom = Frame(fen, bg='cyan')
 top.pack(side=TOP)
 bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
 
-labelo=Label(fen, text="RDV set up",
+labelo = Label(fen, text="RDV set up",
     font='Arial 18 bold', fg='navy', bg='cyan')
 labelo.pack(in_=top, side=LEFT, padx=5, pady=20)
 
-textentry=StringVar()
+with open('./newpatient/entryfile6.txt', 'r') as filename:
+    line1 = filename.readline()
+
+textentry = StringVar()
 textentry.set(line1)
-entrylab=Entry(fen, textvariable=textentry)
+entrylab = Entry(fen, textvariable=textentry)
 entrylab.pack(in_=top, side=LEFT, padx=10, pady=20)
 
-textBox=Text(fen, height=15, width=60, font=18)
+def msgBox():
+    messagebox.showwarning('WARNING',
+        'Error during function call for : ' + line1)
+
+def importFilesFromDir():
+    for path, dirs, files in os.walk('./patient_agenda/'
+        'events6/doc_events/fix_agenda/agenda_saved/'):
+        for file in files:
+            read_f = open(os.path.join(path, file),'r')
+            content = read_f.readlines()
+            for li in content:
+                li.replace('{', '')
+                li.replace('}', '')
+                textBox.insert(END, li)
+
+textBox = Text(fen, height=15, width=60, font=18)
 textBox.pack(padx=30, pady=30)
 
-buttonClose=Button(fen, text="Quit", width=8, bd=3,
+try:
+    importFilesFromDir()
+except OSError as io_err:
+    print("+ Error for calling function !")
+    print(io_err)
+    msgBox()
+
+buttonClose = Button(fen, text="Quit", width=8, bd=3,
     fg='white', bg='navy', highlightbackground='light sky blue',
     activebackground='dark turquoise', command=quit)
 buttonClose.pack(side='right', padx=10, pady=10)
-
-try:
-    importationFile('./patient_agenda/events6/doc_events/fix_agenda/fixed_rdv.txt')
-except FileNotFoundError as fixed:
-    print("+ No fixed_rdv.txt file exist !", fixed)
-    msgBox()
 
 fen.mainloop()

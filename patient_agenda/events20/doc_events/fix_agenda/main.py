@@ -97,7 +97,7 @@ def modifList():
         To read file modifrdv.txt
     """
     subprocess.run('./patient_agenda/events20/doc_events/'\
-        'fix_agenda/read_filemodif.py', check=True)
+        'fix_agenda/read_file.py', check=True)
 
 def deleteTextbox():
     textBox.delete('0.0', "end-1c")

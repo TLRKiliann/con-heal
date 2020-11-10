@@ -69,11 +69,7 @@ def retrieve_input():
         os.mkdir(topath)
     except OSError as err_alert:
         print(err_alert)
-    
-    print("+ To test os.listdir(): ")
-    print(os.listdir('./patient_agenda/events6/doc_events/'\
-        'fix_agenda/agenda_saved/'))
-    
+
     origin_path = './patient_agenda/events6/doc_events/'\
     'fix_agenda/fixed_rdv.txt'
     main_path = './patient_agenda/events6/doc_events/'\

@@ -45,15 +45,15 @@ def searchExpress():
         for file in files:
             read_f = open(os.path.join(path, file), 'r')
             lines = read_f.readlines()
-            for i in range(len(lines)):
+            for i in range(0, len(lines)):
                 line = lines[i]
                 if mot in line:
                     print("Nous y voici !") 
                     print(lines[i])
                     print(lines[i+1])
+                    textBox.insert(INSERT, lines[i-1])
                     textBox.insert(INSERT, lines[i])
                     textBox.insert(INSERT, lines[i+1])
-                    textBox.insert(INSERT, lines[i+2])
 
 def save_input():
     """
@@ -76,7 +76,7 @@ def save_input():
                     elif magicword in line:
                         print("+ It is magicword : ")
                         print(line[0:10])
-                        write_f = open(os.path.join(path, file), 'a+')
+                        write_f = open(os.path.join(path, file), 'w')
                         write_f.writelines(textBox.get("0.0", "end-1c") + "\n")
                         print("Modification finish")
                         break

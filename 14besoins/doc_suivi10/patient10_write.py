@@ -78,8 +78,7 @@ def saveData():
             with open('./14besoins/doc_suivi10/main_14b.txt', 'a+') as namefile:
                 namefile.write(textBox.get("0.0", "end-1c") + '\n\n')
     except FileNotFoundError as outcom:
-        print("+ Sorry, file 'main_14b.txt' not exist !")
-        print(str(outcom))
+        print("+ Sorry, file 'main_14b.txt' not exist !", outcom)
         print("+ File 'main_14b.txt' created !")
         with open('./14besoins/doc_suivi10/main_14b.txt', 'a+') as namefile:
             namefile.write(textBox.get("0.0", "end-1c") + '\n\n')
@@ -121,13 +120,10 @@ def importationFile(fichier, encodage="Utf-8"):
                 content=fileneeds.readlines()
                 for li in content:
                     textBox.insert(END, li)
-    except FileNotFoundError as outcom:
-        print("+ Sorry, file 'main_14b.txt' not exist !")
-        print(str(outcom))
+    except FileNotFoundError as out_err:
+        print("+ Sorry, file 'main_14b.txt' not exist !", out_err)
 
 textBox=Text(root, height=15, width=60, font=18, relief=SUNKEN)
-#textBox.insert(INSERT, "En date du : ")
-#textBox.insert(END, time.strftime("%d/%m/%Y à %H:%M:%S :"))
 textBox.pack(padx=30, pady=30)
 
 buttonLire=Button(root, text="Read", bd=3, width=10, 
@@ -150,13 +146,11 @@ buttonQuitter.pack(side='right', padx=10, pady=10)
 
 try:
     if os.path.getsize('./14besoins/doc_suivi10/patient10_14b.txt'):
-        #with open('./14besoins/doc_suivi10/patient10_14b.txt', 'w') as namefile:
-            #namefile.write("En date du : ")
-            #namefile.write(time.strftime("%d/%m/%Y à %H:%M:%S :\n"))
-        importationFile('./14besoins/doc_suivi10/patient10_14b.txt', encodage='Utf-8')
+        importationFile('./14besoins/doc_suivi10/patient10_14b.txt',
+            encodage='Utf-8')
 except FileNotFoundError as err_nffile:
-    print("+ File not found !")
-    print(str(err_nffile))
-    messagebox.showwarning("WARNING", "File does not exist or file not found !")
+    print(err_nffile)
+    messagebox.showwarning("WARNING", "File does not exist or "
+        "file not found !")
 
 mainloop()

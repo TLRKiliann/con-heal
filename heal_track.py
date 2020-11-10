@@ -1112,7 +1112,7 @@ class Application(Frame):
         mBar = MenuBar(self)
         mBar.pack(side=TOP, fill=X, expand=YES)
 
-        self.can = Canvas(self, width=1250, height=800, bg='grey18')
+        self.can = Canvas(self, width=1250, height=700, bg='grey18')
         self.frame = Frame(self.can)
 
         # ScrollCanvas limite de la zone à parcourir avec la barre 1250 - 800
@@ -1138,7 +1138,7 @@ class Application(Frame):
         self.item = self.can.create_image(625, 400, image=self.photo)
 
         # Insertion of text
-        self.can.create_text(625, 420, anchor=CENTER, 
+        self.can.create_text(625, 350, anchor=CENTER, 
             text="Python 3.6 - Tkinter 8.6 - GIMP 2.8",
             font=('Times New Roman', 18, 'bold'), fill='turquoise')
         self.can.create_text(1240, 770, anchor=NE, text="ko@l@tr33",
@@ -1162,7 +1162,7 @@ class Application(Frame):
             bg='RoyalBlue3', fg='cyan', command = self.funcPyCon)
         self.button2.configure(width=15, bd=3, highlightbackground='blue',
             activebackground='dark turquoise')
-        self.button2_window = self.can.create_window(300, 550, anchor=CENTER,
+        self.button2_window = self.can.create_window(300, 450, anchor=CENTER,
             window=self.button2)
 
         # Synopsis button
@@ -1170,7 +1170,7 @@ class Application(Frame):
             bg='RoyalBlue3', fg='cyan', command = self.showSynopsis)
         self.button3.configure(width=15, bd=3, highlightbackground='blue',
             activebackground='dark turquoise')
-        self.button3_window = self.can.create_window(625, 550, anchor=CENTER,
+        self.button3_window = self.can.create_window(625, 450, anchor=CENTER,
             window=self.button3)
 
         # Psychotabs button
@@ -1178,7 +1178,7 @@ class Application(Frame):
             bg='RoyalBlue3', fg='cyan', command = self.showPatients)
         self.button4.configure(width=15, bd=3, highlightbackground='blue',
             activebackground='dark turquoise')
-        self.button4_window = self.can.create_window(950, 550, anchor=CENTER,
+        self.button4_window = self.can.create_window(950, 450, anchor=CENTER,
             window=self.button4)
 
         self.pack()

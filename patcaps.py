@@ -24,7 +24,7 @@ def callResident(self):
     self.item=self.can.create_image(625, 85, image=self.photo)
 
     # Display date
-    self.x1, self.y1 = 1185, 20
+    self.x1, self.y1 = 1185, 40
     self.data_time=StringVar()
     self.Date_write=Entry(self.can, textvariable=self.data_time, 
         width=10, bd=3, highlightbackground='grey')

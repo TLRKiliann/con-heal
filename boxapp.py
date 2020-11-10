@@ -17,8 +17,8 @@ from patcaps import callResident
 def callBox(self):
     self.can.delete(ALL)
     self.can.configure(background='cyan')
-    self.photo=PhotoImage(file='./syno_gif/title_tt.png')
-    self.item=self.can.create_image(625, 85, image=self.photo)
+    #self.photo=PhotoImage(file='./syno_gif/title_tt.png')
+    #self.item=self.can.create_image(625, 85, image=self.photo)
 
     # To backup (main file)
     self.updateFiletxt()
@@ -27,7 +27,7 @@ def callBox(self):
     dispResFunc()
 
     # Display date
-    self.x1, self.y1 = 1185, 20
+    self.x1, self.y1 = 1185, 40
     self.Date_write=Entry(self.can)
     self.data_time=StringVar()
     self.Date_write=Entry(self.can, textvariable=self.data_time, 
@@ -37,19 +37,18 @@ def callBox(self):
         window=self.Date_write)
 
     # To go to resident page
-    self.x6, self.y6 = 115, 75
+    self.x6, self.y6 = 100, 40
     self.b6=Button(self.can, width=10, font=16, bd=3, bg='RoyalBlue3', fg='white', 
         highlightbackground='blue', activebackground='dark turquoise',
         activeforeground='white', text="Resident page", command=self.showPatients)
     self.fb6=self.can.create_window(self.x6, self.y6, window=self.b6)
 
     # TextBox
-    self.x63, self.y63 = 625, 450
+    self.x63, self.y63 = 625, 350
     self.t63=Text(self.can, height=30, width=80, font=18, relief=SUNKEN)
     self.t63.insert(INSERT, "Previously (yesterday last infos) : ")
     self.t63.insert(END, (datetime.datetime.now() + \
         datetime.timedelta(days=-1)).strftime('%d/%m/%Y'))
-        #time.strftime("%d/%m/%Y at %H:%M:%S :\n"))
     self.ft63=self.can.create_window(self.x63, self.y63, window=self.t63)
 
     # Patient 1

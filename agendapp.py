@@ -19,30 +19,39 @@ def dispAgBox():
     # Patient 1
     try:
         with open('./newpatient/entryfile.txt', 'r') as namefile:
-            new_text1 = namefile.readline()
-    except FileNotFoundError as callfile:
-        print("File entryfile.txt doesn't exist !", callfile)
-        
+            line1 = namefile.readline()
+            new_text1 = line1
+    except FileNotFoundError as fileout1:
+        print("No file entryfile.txt exist", fileout1)
+
     try:
-        dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
-        with open('./patient_agenda/events/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines = filedate.readlines()
-            for i in range(0, len(lines)):
-                line = lines[i]
-                if dateagenda in line:
-                    print(line)
-                    print(lines[i+1])
-                    print(lines[i+2])
-                    messagebox.showwarning('Info',
-                        'Look at AGENDA, there is an appointment tomorrow for : ' + new_text1 + lines[i] + \
-                        lines[i+1] + lines[i+2])
-                else:
-                    pass
+        dateagenda = (datetime.datetime.now() + datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
+
+        for path, dirs, files in os.walk('./patient_agenda/events/'
+            'doc_events/fix_agenda/agenda_saved/'):
+            for file in files:
+                with open(os.path.join(path, file), 'r') as read_f:
+                    lines = read_f.readlines()
+                    for i in range(0, len(lines)):
+                        line = lines[i]
+                        if dateagenda in line:
+                            print("Nous y voici !") 
+                            print(lines[i])
+                            print(lines[i+1])
+                            print(lines[i+2])
+                            messagebox.showwarning('Info', 'Look at AGENDA, '
+                                'there is an appointment tomorrow for : ' \
+                                + new_text1 + lines[i] + lines[i+1] + \
+                                lines[i+2])
+                        else:
+                            pass
     except FileNotFoundError as infofile1:
         print("File 1 has not been found", infofile1)
     else:
-        ("Error unknow 1")
+        ("Error unknow")
 
+    # Patient 2
     try:
         with open('./newpatient/entryfile2.txt', 'r') as namefile:
             line2 = namefile.readline()
@@ -51,20 +60,27 @@ def dispAgBox():
         print("No file entryfile2.txt exist", fileout2)
 
     try:
-        dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
-        with open('./patient_agenda/events2/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines = filedate.readlines()
-            for i in range(0, len(lines)):
-                line = lines[i]
-                if dateagenda in line:
-                    print(line)
-                    print(lines[i+1])
-                    print(lines[i+2])
-                    messagebox.showwarning('Info',
-                        'Look at AGENDA, there is an appointment tomorrow for : ' + new_text2 + lines[i] + \
-                        lines[i+1] + lines[i+2])
-                else:
-                    pass
+        dateagenda = (datetime.datetime.now() + datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
+
+        for path, dirs, files in os.walk('./patient_agenda/events2/'
+            'doc_events/fix_agenda/agenda_saved/'):
+            for file in files:
+                with open(os.path.join(path, file), 'r') as read_f:
+                    lines = read_f.readlines()
+                    for i in range(0, len(lines)):
+                        line = lines[i]
+                        if dateagenda in line:
+                            print("Nous y voici !") 
+                            print(lines[i])
+                            print(lines[i+1])
+                            print(lines[i+2])
+                            messagebox.showwarning('Info', 'Look at AGENDA, '
+                                'there is an appointment tomorrow for : ' \
+                                + new_text2 + lines[i] + lines[i+1] + \
+                                lines[i+2])
+                        else:
+                            pass
     except FileNotFoundError as infofile2:
         print("File 2 has not been found", infofile2)
     else:
@@ -95,9 +111,9 @@ def dispAgBox():
                             print(lines[i+1])
                             print(lines[i+2])
                             messagebox.showwarning('Info', 'Look at AGENDA, '
-                                'there is an appointment tomorrow for : '\
-                                + new_text3 + lines[i] + \
-                                lines[i+1] + lines[i+2])
+                                'there is an appointment tomorrow for : ' \
+                                + new_text3 + lines[i] + lines[i+1] + \
+                                lines[i+2])
                         else:
                             pass
     except FileNotFoundError as infofile3:
@@ -105,6 +121,7 @@ def dispAgBox():
     else:
         ("Error unknow")
 
+    # Patient 4
     try:
         with open('./newpatient/entryfile4.txt', 'r') as namefile:
             line4 = namefile.readline()
@@ -113,20 +130,27 @@ def dispAgBox():
         print("No file entryfile4.txt exist", fileout4)
 
     try:
-        dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
-        with open('./patient_agenda/events4/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines = filedate.readlines()
-            for i in range(0, len(lines)):
-                line = lines[i]
-                if dateagenda in line:
-                    print(line)
-                    print(lines[i+1])
-                    print(lines[i+2])
-                    messagebox.showwarning('Info',
-                        'Look at AGENDA, there is an appointment tomorrow for : ' + new_text4 + lines[i] + \
-                        lines[i+1] + lines[i+2])
-                else:
-                    pass
+        dateagenda = (datetime.datetime.now() + datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
+
+        for path, dirs, files in os.walk('./patient_agenda/events4/'
+            'doc_events/fix_agenda/agenda_saved/'):
+            for file in files:
+                with open(os.path.join(path, file), 'r') as read_f:
+                    lines = read_f.readlines()
+                    for i in range(0, len(lines)):
+                        line = lines[i]
+                        if dateagenda in line:
+                            print("Nous y voici !") 
+                            print(lines[i])
+                            print(lines[i+1])
+                            print(lines[i+2])
+                            messagebox.showwarning('Info', 'Look at AGENDA, '
+                                'there is an appointment tomorrow for : ' \
+                                + new_text4 + lines[i] + lines[i+1] + \
+                                lines[i+2])
+                        else:
+                            pass
     except FileNotFoundError as infofile4:
         print("File 4 has not been found", infofile4)
     else:
@@ -141,25 +165,33 @@ def dispAgBox():
         print("No file entryfile5.txt exist", fileout5)
 
     try:
-        dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
-        with open('./patient_agenda/events5/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines = filedate.readlines()
-            for i in range(0, len(lines)):
-                line = lines[i]
-                if dateagenda in line:
-                    print(line)
-                    print(lines[i+1])
-                    print(lines[i+2])
-                    messagebox.showwarning('Info',
-                        'Look at AGENDA, there is an appointment tomorrow for : ' + new_text5 + lines[i] + \
-                        lines[i+1] + lines[i+2])
-                else:
-                    pass
+        dateagenda = (datetime.datetime.now() + datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
+
+        for path, dirs, files in os.walk('./patient_agenda/events5/'
+            'doc_events/fix_agenda/agenda_saved/'):
+            for file in files:
+                with open(os.path.join(path, file), 'r') as read_f:
+                    lines = read_f.readlines()
+                    for i in range(0, len(lines)):
+                        line = lines[i]
+                        if dateagenda in line:
+                            print("Nous y voici !") 
+                            print(lines[i])
+                            print(lines[i+1])
+                            print(lines[i+2])
+                            messagebox.showwarning('Info', 'Look at AGENDA, '
+                                'there is an appointment tomorrow for : ' \
+                                + new_text5 + lines[i] + lines[i+1] + \
+                                lines[i+2])
+                        else:
+                            pass
     except FileNotFoundError as infofile5:
         print("File 5 has not been found", infofile5)
     else:
         ("Error unknow")
 
+    # Patient 6
     try:
         with open('./newpatient/entryfile6.txt', 'r') as namefile:
             line6 = namefile.readline()
@@ -168,25 +200,33 @@ def dispAgBox():
         print("No file entryfile6.txt exist", fileout6)
 
     try:
-        dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
-        with open('./patient_agenda/events6/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines = filedate.readlines()
-            for i in range(0, len(lines)):
-                line = lines[i]
-                if dateagenda in line:
-                    print(line)
-                    print(lines[i+1])
-                    print(lines[i+2])
-                    messagebox.showwarning('Info',
-                        'Look at AGENDA, there is an appointment tomorrow for : ' + new_text6 + lines[i] + \
-                        lines[i+1] + lines[i+2])
-                else:
-                    pass
+        dateagenda = (datetime.datetime.now() + datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
+
+        for path, dirs, files in os.walk('./patient_agenda/events6/'
+            'doc_events/fix_agenda/agenda_saved/'):
+            for file in files:
+                with open(os.path.join(path, file), 'r') as read_f:
+                    lines = read_f.readlines()
+                    for i in range(0, len(lines)):
+                        line = lines[i]
+                        if dateagenda in line:
+                            print("Nous y voici !") 
+                            print(lines[i])
+                            print(lines[i+1])
+                            print(lines[i+2])
+                            messagebox.showwarning('Info', 'Look at AGENDA, '
+                                'there is an appointment tomorrow for : ' \
+                                + new_text6 + lines[i] + lines[i+1] + \
+                                lines[i+2])
+                        else:
+                            pass
     except FileNotFoundError as infofile6:
         print("File 6 has not been found", infofile6)
     else:
         ("Error unknow")
 
+    # Patient 7
     try:
         with open('./newpatient/entryfile7.txt', 'r') as namefile:
             line7 = namefile.readline()
@@ -195,25 +235,33 @@ def dispAgBox():
         print("No file entryfile7.txt exist", fileout7)
 
     try:
-        dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
-        with open('./patient_agenda/events7/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines = filedate.readlines()
-            for i in range(0, len(lines)):
-                line = lines[i]
-                if dateagenda in line:
-                    print(line)
-                    print(lines[i+1])
-                    print(lines[i+2])
-                    messagebox.showwarning('Info',
-                        'Look at AGENDA, there is an appointment tomorrow for : ' + new_text7 + lines[i] + \
-                        lines[i+1] + lines[i+2])
-                else:
-                    pass
+        dateagenda = (datetime.datetime.now() + datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
+
+        for path, dirs, files in os.walk('./patient_agenda/events7/'
+            'doc_events/fix_agenda/agenda_saved/'):
+            for file in files:
+                with open(os.path.join(path, file), 'r') as read_f:
+                    lines = read_f.readlines()
+                    for i in range(0, len(lines)):
+                        line = lines[i]
+                        if dateagenda in line:
+                            print("Nous y voici !") 
+                            print(lines[i])
+                            print(lines[i+1])
+                            print(lines[i+2])
+                            messagebox.showwarning('Info', 'Look at AGENDA, '
+                                'there is an appointment tomorrow for : ' \
+                                + new_text7 + lines[i] + lines[i+1] + \
+                                lines[i+2])
+                        else:
+                            pass
     except FileNotFoundError as infofile7:
         print("File 7 has not been found", infofile7)
     else:
         ("Error unknow")
 
+    # Patient 8
     try:
         with open('./newpatient/entryfile8.txt', 'r') as namefile:
             line8 = namefile.readline()
@@ -222,25 +270,33 @@ def dispAgBox():
         print("No file entryfile8.txt exist", fileout8)
 
     try:
-        dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
-        with open('./patient_agenda/events8/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines = filedate.readlines()
-            for i in range(0, len(lines)):
-                line = lines[i]
-                if dateagenda in line:
-                    print(line)
-                    print(lines[i+1])
-                    print(lines[i+2])
-                    messagebox.showwarning('Info',
-                        'Look at AGENDA, there is an appointment tomorrow for : ' + new_text8 + lines[i] + \
-                        lines[i+1] + lines[i+2])
-                else:
-                    pass
+        dateagenda = (datetime.datetime.now() + datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
+
+        for path, dirs, files in os.walk('./patient_agenda/events8/'
+            'doc_events/fix_agenda/agenda_saved/'):
+            for file in files:
+                with open(os.path.join(path, file), 'r') as read_f:
+                    lines = read_f.readlines()
+                    for i in range(0, len(lines)):
+                        line = lines[i]
+                        if dateagenda in line:
+                            print("Nous y voici !") 
+                            print(lines[i])
+                            print(lines[i+1])
+                            print(lines[i+2])
+                            messagebox.showwarning('Info', 'Look at AGENDA, '
+                                'there is an appointment tomorrow for : ' \
+                                + new_text8 + lines[i] + lines[i+1] + \
+                                lines[i+2])
+                        else:
+                            pass
     except FileNotFoundError as infofile8:
         print("File 8 has not been found", infofile8)
     else:
         ("Error unknow")
 
+    # Patient 9
     try:
         with open('./newpatient/entryfile9.txt', 'r') as namefile:
             line9 = namefile.readline()
@@ -249,25 +305,33 @@ def dispAgBox():
         print("No file entryfile9.txt exist", fileout9)
 
     try:
-        dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
-        with open('./patient_agenda/events9/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines = filedate.readlines()
-            for i in range(0, len(lines)):
-                line = lines[i]
-                if dateagenda in line:
-                    print(line)
-                    print(lines[i+1])
-                    print(lines[i+2])
-                    messagebox.showwarning('Info',
-                        'Look at AGENDA, there is an appointment tomorrow for : ' + new_text9 + lines[i] + \
-                        lines[i+1] + lines[i+2])
-                else:
-                    pass
+        dateagenda = (datetime.datetime.now() + datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
+
+        for path, dirs, files in os.walk('./patient_agenda/events9/'
+            'doc_events/fix_agenda/agenda_saved/'):
+            for file in files:
+                with open(os.path.join(path, file), 'r') as read_f:
+                    lines = read_f.readlines()
+                    for i in range(0, len(lines)):
+                        line = lines[i]
+                        if dateagenda in line:
+                            print("Nous y voici !") 
+                            print(lines[i])
+                            print(lines[i+1])
+                            print(lines[i+2])
+                            messagebox.showwarning('Info', 'Look at AGENDA, '
+                                'there is an appointment tomorrow for : ' \
+                                + new_text9 + lines[i] + lines[i+1] + \
+                                lines[i+2])
+                        else:
+                            pass
     except FileNotFoundError as infofile9:
         print("File 9 has not been found", infofile9)
     else:
         ("Error unknow")
 
+    # Patient 10
     try:
         with open('./newpatient/entryfile10.txt', 'r') as namefile:
             line10 = namefile.readline()
@@ -276,25 +340,33 @@ def dispAgBox():
         print("No file entryfile10.txt exist", fileout10)
 
     try:
-        dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
-        with open('./patient_agenda/events10/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines = filedate.readlines()
-            for i in range(0, len(lines)):
-                line = lines[i]
-                if dateagenda in line:
-                    print(line)
-                    print(lines[i+1])
-                    print(lines[i+2])
-                    messagebox.showwarning('Info',
-                        'Look at AGENDA, there is an appointment tomorrow for : ' + new_text10 + lines[i] + \
-                        lines[i+1] + lines[i+2])
-                else:
-                    pass
+        dateagenda = (datetime.datetime.now() + datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
+
+        for path, dirs, files in os.walk('./patient_agenda/events10/'
+            'doc_events/fix_agenda/agenda_saved/'):
+            for file in files:
+                with open(os.path.join(path, file), 'r') as read_f:
+                    lines = read_f.readlines()
+                    for i in range(0, len(lines)):
+                        line = lines[i]
+                        if dateagenda in line:
+                            print("Nous y voici !") 
+                            print(lines[i])
+                            print(lines[i+1])
+                            print(lines[i+2])
+                            messagebox.showwarning('Info', 'Look at AGENDA, '
+                                'there is an appointment tomorrow for : ' \
+                                + new_text10 + lines[i] + lines[i+1] + \
+                                lines[i+2])
+                        else:
+                            pass
     except FileNotFoundError as infofile10:
         print("File 10 has not been found", infofile10)
     else:
         ("Error unknow")
 
+    # Patient 11
     try:
         with open('./newpatient/entryfile11.txt', 'r') as namefile:
             line11 = namefile.readline()
@@ -303,25 +375,33 @@ def dispAgBox():
         print("No file entryfile11.txt exist", fileout11)
 
     try:
-        dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
-        with open('./patient_agenda/events11/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines = filedate.readlines()
-            for i in range(0, len(lines)):
-                line = lines[i]
-                if dateagenda in line:
-                    print(line)
-                    print(lines[i+1])
-                    print(lines[i+2])
-                    messagebox.showwarning('Info',
-                        'Look at AGENDA, there is an appointment tomorrow for : ' + new_text11 + lines[i] + \
-                        lines[i+1] + lines[i+2])
-                else:
-                    pass
+        dateagenda = (datetime.datetime.now() + datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
+
+        for path, dirs, files in os.walk('./patient_agenda/events11/'
+            'doc_events/fix_agenda/agenda_saved/'):
+            for file in files:
+                with open(os.path.join(path, file), 'r') as read_f:
+                    lines = read_f.readlines()
+                    for i in range(0, len(lines)):
+                        line = lines[i]
+                        if dateagenda in line:
+                            print("Nous y voici !") 
+                            print(lines[i])
+                            print(lines[i+1])
+                            print(lines[i+2])
+                            messagebox.showwarning('Info', 'Look at AGENDA, '
+                                'there is an appointment tomorrow for : ' \
+                                + new_text11 + lines[i] + lines[i+1] + \
+                                lines[i+2])
+                        else:
+                            pass
     except FileNotFoundError as infofile11:
         print("File 11 has not been found", infofile11)
     else:
         ("Error unknow")
 
+    # Patient 12
     try:
         with open('./newpatient/entryfile12.txt', 'r') as namefile:
             line12 = namefile.readline()
@@ -330,25 +410,33 @@ def dispAgBox():
         print("No file entryfile12.txt exist", fileout12)
 
     try:
-        dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
-        with open('./patient_agenda/events12/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines = filedate.readlines()
-            for i in range(0, len(lines)):
-                line = lines[i]
-                if dateagenda in line:
-                    print(line)
-                    print(lines[i+1])
-                    print(lines[i+2])
-                    messagebox.showwarning('Info',
-                        'Look at AGENDA, there is an appointment tomorrow for : ' + new_text12 + lines[i] + \
-                        lines[i+1] + lines[i+2])
-                else:
-                    pass
+        dateagenda = (datetime.datetime.now() + datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
+
+        for path, dirs, files in os.walk('./patient_agenda/events12/'
+            'doc_events/fix_agenda/agenda_saved/'):
+            for file in files:
+                with open(os.path.join(path, file), 'r') as read_f:
+                    lines = read_f.readlines()
+                    for i in range(0, len(lines)):
+                        line = lines[i]
+                        if dateagenda in line:
+                            print("Nous y voici !") 
+                            print(lines[i])
+                            print(lines[i+1])
+                            print(lines[i+2])
+                            messagebox.showwarning('Info', 'Look at AGENDA, '
+                                'there is an appointment tomorrow for : ' \
+                                + new_text12 + lines[i] + lines[i+1] + \
+                                lines[i+2])
+                        else:
+                            pass
     except FileNotFoundError as infofile12:
         print("File 12 has not been found", infofile12)
     else:
         ("Error unknow")
 
+    # Patient 13
     try:
         with open('./newpatient/entryfile13.txt', 'r') as namefile:
             line13 = namefile.readline()
@@ -357,25 +445,33 @@ def dispAgBox():
         print("No file entryfile13.txt exist", fileout13)
 
     try:
-        dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
-        with open('./patient_agenda/events13/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines = filedate.readlines()
-            for i in range(0, len(lines)):
-                line = lines[i]
-                if dateagenda in line:
-                    print(line)
-                    print(lines[i+1])
-                    print(lines[i+2])
-                    messagebox.showwarning('Info',
-                        'Look at AGENDA, there is an appointment tomorrow for : ' + new_text13 + lines[i] + \
-                        lines[i+1] + lines[i+2])
-                else:
-                    pass
+        dateagenda = (datetime.datetime.now() + datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
+
+        for path, dirs, files in os.walk('./patient_agenda/events13/'
+            'doc_events/fix_agenda/agenda_saved/'):
+            for file in files:
+                with open(os.path.join(path, file), 'r') as read_f:
+                    lines = read_f.readlines()
+                    for i in range(0, len(lines)):
+                        line = lines[i]
+                        if dateagenda in line:
+                            print("Nous y voici !") 
+                            print(lines[i])
+                            print(lines[i+1])
+                            print(lines[i+2])
+                            messagebox.showwarning('Info', 'Look at AGENDA, '
+                                'there is an appointment tomorrow for : ' \
+                                + new_text13 + lines[i] + lines[i+1] + \
+                                lines[i+2])
+                        else:
+                            pass
     except FileNotFoundError as infofile13:
         print("File 13 has not been found", infofile13)
     else:
         ("Error unknow")
 
+    # Patient 14
     try:
         with open('./newpatient/entryfile14.txt', 'r') as namefile:
             line14 = namefile.readline()
@@ -384,25 +480,33 @@ def dispAgBox():
         print("No file entryfile14.txt exist", fileout14)
 
     try:
-        dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
-        with open('./patient_agenda/events14/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines = filedate.readlines()
-            for i in range(0, len(lines)):
-                line = lines[i]
-                if dateagenda in line:
-                    print(line)
-                    print(lines[i+1])
-                    print(lines[i+2])
-                    messagebox.showwarning('Info',
-                        'Look at AGENDA, there is an appointment tomorrow for : ' + new_text14 + lines[i] + \
-                        lines[i+1] + lines[i+2])
-                else:
-                    pass
+        dateagenda = (datetime.datetime.now() + datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
+
+        for path, dirs, files in os.walk('./patient_agenda/events14/'
+            'doc_events/fix_agenda/agenda_saved/'):
+            for file in files:
+                with open(os.path.join(path, file), 'r') as read_f:
+                    lines = read_f.readlines()
+                    for i in range(0, len(lines)):
+                        line = lines[i]
+                        if dateagenda in line:
+                            print("Nous y voici !") 
+                            print(lines[i])
+                            print(lines[i+1])
+                            print(lines[i+2])
+                            messagebox.showwarning('Info', 'Look at AGENDA, '
+                                'there is an appointment tomorrow for : ' \
+                                + new_text14 + lines[i] + lines[i+1] + \
+                                lines[i+2])
+                        else:
+                            pass
     except FileNotFoundError as infofile14:
         print("File 14 has not been found", infofile14)
     else:
         ("Error unknow")
 
+    # Patient 15
     try:
         with open('./newpatient/entryfile15.txt', 'r') as namefile:
             line15 = namefile.readline()
@@ -411,25 +515,33 @@ def dispAgBox():
         print("No file entryfile15.txt exist", fileout15)
 
     try:
-        dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
-        with open('./patient_agenda/events15/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines = filedate.readlines()
-            for i in range(0, len(lines)):
-                line = lines[i]
-                if dateagenda in line:
-                    print(line)
-                    print(lines[i+1])
-                    print(lines[i+2])
-                    messagebox.showwarning('Info',
-                        'Look at AGENDA, there is an appointment tomorrow for : ' + new_text15 + lines[i] + \
-                        lines[i+1] + lines[i+2])
-                else:
-                    pass
+        dateagenda = (datetime.datetime.now() + datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
+
+        for path, dirs, files in os.walk('./patient_agenda/events15/'
+            'doc_events/fix_agenda/agenda_saved/'):
+            for file in files:
+                with open(os.path.join(path, file), 'r') as read_f:
+                    lines = read_f.readlines()
+                    for i in range(0, len(lines)):
+                        line = lines[i]
+                        if dateagenda in line:
+                            print("Nous y voici !") 
+                            print(lines[i])
+                            print(lines[i+1])
+                            print(lines[i+2])
+                            messagebox.showwarning('Info', 'Look at AGENDA, '
+                                'there is an appointment tomorrow for : ' \
+                                + new_text15 + lines[i] + lines[i+1] + \
+                                lines[i+2])
+                        else:
+                            pass
     except FileNotFoundError as infofile15:
         print("File 15 has not been found", infofile15)
     else:
         ("Error unknow")
 
+    # Patient 16
     try:
         with open('./newpatient/entryfile16.txt', 'r') as namefile:
             line16 = namefile.readline()
@@ -438,25 +550,33 @@ def dispAgBox():
         print("No file entryfile16.txt exist", fileout16)
 
     try:
-        dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
-        with open('./patient_agenda/events16/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines = filedate.readlines()
-            for i in range(0, len(lines)):
-                line = lines[i]
-                if dateagenda in line:
-                    print(line)
-                    print(lines[i+1])
-                    print(lines[i+2])
-                    messagebox.showwarning('Info',
-                        'Look at AGENDA, there is an appointment tomorrow for : ' + new_text16 + lines[i] + \
-                        lines[i+1] + lines[i+2])
-                else:
-                    pass
+        dateagenda = (datetime.datetime.now() + datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
+
+        for path, dirs, files in os.walk('./patient_agenda/events16/'
+            'doc_events/fix_agenda/agenda_saved/'):
+            for file in files:
+                with open(os.path.join(path, file), 'r') as read_f:
+                    lines = read_f.readlines()
+                    for i in range(0, len(lines)):
+                        line = lines[i]
+                        if dateagenda in line:
+                            print("Nous y voici !") 
+                            print(lines[i])
+                            print(lines[i+1])
+                            print(lines[i+2])
+                            messagebox.showwarning('Info', 'Look at AGENDA, '
+                                'there is an appointment tomorrow for : ' \
+                                + new_text16 + lines[i] + lines[i+1] + \
+                                lines[i+2])
+                        else:
+                            pass
     except FileNotFoundError as infofile16:
         print("File 16 has not been found", infofile16)
     else:
         ("Error unknow")
 
+    # Patient 17
     try:
         with open('./newpatient/entryfile17.txt', 'r') as namefile:
             line17 = namefile.readline()
@@ -465,25 +585,33 @@ def dispAgBox():
         print("No file entryfile17.txt exist", fileout17)
 
     try:
-        dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
-        with open('./patient_agenda/events17/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines = filedate.readlines()
-            for i in range(0, len(lines)):
-                line = lines[i]
-                if dateagenda in line:
-                    print(line)
-                    print(lines[i+1])
-                    print(lines[i+2])
-                    messagebox.showwarning('Info',
-                        'Look at AGENDA, there is an appointment tomorrow for : ' + new_text17 + lines[i] + \
-                        lines[i+1] + lines[i+2])
-                else:
-                    pass
+        dateagenda = (datetime.datetime.now() + datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
+
+        for path, dirs, files in os.walk('./patient_agenda/events17/'
+            'doc_events/fix_agenda/agenda_saved/'):
+            for file in files:
+                with open(os.path.join(path, file), 'r') as read_f:
+                    lines = read_f.readlines()
+                    for i in range(0, len(lines)):
+                        line = lines[i]
+                        if dateagenda in line:
+                            print("Nous y voici !") 
+                            print(lines[i])
+                            print(lines[i+1])
+                            print(lines[i+2])
+                            messagebox.showwarning('Info', 'Look at AGENDA, '
+                                'there is an appointment tomorrow for : ' \
+                                + new_text17 + lines[i] + lines[i+1] + \
+                                lines[i+2])
+                        else:
+                            pass
     except FileNotFoundError as infofile17:
         print("File 17 has not been found", infofile17)
     else:
         ("Error unknow")
 
+    # Patient 18
     try:
         with open('./newpatient/entryfile18.txt', 'r') as namefile:
             line18 = namefile.readline()
@@ -492,25 +620,33 @@ def dispAgBox():
         print("No file entryfile18.txt exist", fileout18)
 
     try:
-        dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
-        with open('./patient_agenda/events18/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines = filedate.readlines()
-            for i in range(0, len(lines)):
-                line = lines[i]
-                if dateagenda in line:
-                    print(line)
-                    print(lines[i+1])
-                    print(lines[i+2])
-                    messagebox.showwarning('Info',
-                        'Look at AGENDA, there is an appointment tomorrow for : ' + new_text18 + lines[i] + \
-                        lines[i+1] + lines[i+2])
-                else:
-                    pass
+        dateagenda = (datetime.datetime.now() + datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
+
+        for path, dirs, files in os.walk('./patient_agenda/events18/'
+            'doc_events/fix_agenda/agenda_saved/'):
+            for file in files:
+                with open(os.path.join(path, file), 'r') as read_f:
+                    lines = read_f.readlines()
+                    for i in range(0, len(lines)):
+                        line = lines[i]
+                        if dateagenda in line:
+                            print("Nous y voici !") 
+                            print(lines[i])
+                            print(lines[i+1])
+                            print(lines[i+2])
+                            messagebox.showwarning('Info', 'Look at AGENDA, '
+                                'there is an appointment tomorrow for : ' \
+                                + new_text18 + lines[i] + lines[i+1] + \
+                                lines[i+2])
+                        else:
+                            pass
     except FileNotFoundError as infofile18:
         print("File 18 has not been found", infofile18)
     else:
         ("Error unknow")
 
+    # Patient 19
     try:
         with open('./newpatient/entryfile19.txt', 'r') as namefile:
             line19 = namefile.readline()
@@ -519,25 +655,33 @@ def dispAgBox():
         print("No file entryfile19.txt exist", fileout19)
 
     try:
-        dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
-        with open('./patient_agenda/events19/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines = filedate.readlines()
-            for i in range(0, len(lines)):
-                line = lines[i]
-                if dateagenda in line:
-                    print(line)
-                    print(lines[i+1])
-                    print(lines[i+2])
-                    messagebox.showwarning('Info',
-                        'Look at AGENDA, there is an appointment tomorrow for : ' + new_text19 + lines[i] + \
-                        lines[i+1] + lines[i+2])
-                else:
-                    pass
+        dateagenda = (datetime.datetime.now() + datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
+
+        for path, dirs, files in os.walk('./patient_agenda/events19/'
+            'doc_events/fix_agenda/agenda_saved/'):
+            for file in files:
+                with open(os.path.join(path, file), 'r') as read_f:
+                    lines = read_f.readlines()
+                    for i in range(0, len(lines)):
+                        line = lines[i]
+                        if dateagenda in line:
+                            print("Nous y voici !") 
+                            print(lines[i])
+                            print(lines[i+1])
+                            print(lines[i+2])
+                            messagebox.showwarning('Info', 'Look at AGENDA, '
+                                'there is an appointment tomorrow for : ' \
+                                + new_text19 + lines[i] + lines[i+1] + \
+                                lines[i+2])
+                        else:
+                            pass
     except FileNotFoundError as infofile19:
         print("File 19 has not been found", infofile19)
     else:
         ("Error unknow")
 
+    # Patient 20
     try:
         with open('./newpatient/entryfile20.txt', 'r') as namefile:
             line20 = namefile.readline()
@@ -546,25 +690,33 @@ def dispAgBox():
         print("No file entryfile20.txt exist", fileout20)
 
     try:
-        dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
-        with open('./patient_agenda/events20/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines = filedate.readlines()
-            for i in range(0, len(lines)):
-                line = lines[i]
-                if dateagenda in line:
-                    print(line)
-                    print(lines[i+1])
-                    print(lines[i+2])
-                    messagebox.showwarning('Info',
-                        'Look at AGENDA, there is an appointment tomorrow for : ' + new_text20 + lines[i] + \
-                        lines[i+1] + lines[i+2])
-                else:
-                    pass
+        dateagenda = (datetime.datetime.now() + datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
+
+        for path, dirs, files in os.walk('./patient_agenda/events20/'
+            'doc_events/fix_agenda/agenda_saved/'):
+            for file in files:
+                with open(os.path.join(path, file), 'r') as read_f:
+                    lines = read_f.readlines()
+                    for i in range(0, len(lines)):
+                        line = lines[i]
+                        if dateagenda in line:
+                            print("Nous y voici !") 
+                            print(lines[i])
+                            print(lines[i+1])
+                            print(lines[i+2])
+                            messagebox.showwarning('Info', 'Look at AGENDA, '
+                                'there is an appointment tomorrow for : ' \
+                                + new_text20 + lines[i] + lines[i+1] + \
+                                lines[i+2])
+                        else:
+                            pass
     except FileNotFoundError as infofile20:
         print("File 20 has not been found", infofile20)
     else:
         ("Error unknow")
 
+    # Patient 21
     try:
         with open('./newpatient/entryfile21.txt', 'r') as namefile:
             line21 = namefile.readline()
@@ -573,25 +725,33 @@ def dispAgBox():
         print("No file entryfile21.txt exist", fileout21)
 
     try:
-        dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
-        with open('./patient_agenda/events21/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines = filedate.readlines()
-            for i in range(0, len(lines)):
-                line = lines[i]
-                if dateagenda in line:
-                    print(line)
-                    print(lines[i+1])
-                    print(lines[i+2])
-                    messagebox.showwarning('Info',
-                        'Look at AGENDA, there is an appointment tomorrow for : ' + new_text21 + lines[i] + \
-                        lines[i+1] + lines[i+2])
-                else:
-                    pass
+        dateagenda = (datetime.datetime.now() + datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
+
+        for path, dirs, files in os.walk('./patient_agenda/events21/'
+            'doc_events/fix_agenda/agenda_saved/'):
+            for file in files:
+                with open(os.path.join(path, file), 'r') as read_f:
+                    lines = read_f.readlines()
+                    for i in range(0, len(lines)):
+                        line = lines[i]
+                        if dateagenda in line:
+                            print("Nous y voici !") 
+                            print(lines[i])
+                            print(lines[i+1])
+                            print(lines[i+2])
+                            messagebox.showwarning('Info', 'Look at AGENDA, '
+                                'there is an appointment tomorrow for : ' \
+                                + new_text21 + lines[i] + lines[i+1] + \
+                                lines[i+2])
+                        else:
+                            pass
     except FileNotFoundError as infofile21:
         print("File 21 has not been found", infofile21)
     else:
         ("Error unknow")
 
+    # Patient 22
     try:
         with open('./newpatient/entryfile22.txt', 'r') as namefile:
             line22 = namefile.readline()
@@ -600,25 +760,33 @@ def dispAgBox():
         print("No file entryfile22.txt exist", fileout22)
 
     try:
-        dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
-        with open('./patient_agenda/events22/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines = filedate.readlines()
-            for i in range(0, len(lines)):
-                line = lines[i]
-                if dateagenda in line:
-                    print(line)
-                    print(lines[i+1])
-                    print(lines[i+2])
-                    messagebox.showwarning('Info',
-                        'Look at AGENDA, there is an appointment tomorrow for : ' + new_text22 + lines[i] + \
-                        lines[i+1] + lines[i+2])
-                else:
-                    pass
+        dateagenda = (datetime.datetime.now() + datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
+
+        for path, dirs, files in os.walk('./patient_agenda/events22/'
+            'doc_events/fix_agenda/agenda_saved/'):
+            for file in files:
+                with open(os.path.join(path, file), 'r') as read_f:
+                    lines = read_f.readlines()
+                    for i in range(0, len(lines)):
+                        line = lines[i]
+                        if dateagenda in line:
+                            print("Nous y voici !") 
+                            print(lines[i])
+                            print(lines[i+1])
+                            print(lines[i+2])
+                            messagebox.showwarning('Info', 'Look at AGENDA, '
+                                'there is an appointment tomorrow for : ' \
+                                + new_text22 + lines[i] + lines[i+1] + \
+                                lines[i+2])
+                        else:
+                            pass
     except FileNotFoundError as infofile22:
         print("File 22 has not been found", infofile22)
     else:
         ("Error unknow")
 
+    # Patient 23
     try:
         with open('./newpatient/entryfile23.txt', 'r') as namefile:
             line23 = namefile.readline()
@@ -627,25 +795,33 @@ def dispAgBox():
         print("No file entryfile23.txt exist", fileout23)
 
     try:
-        dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
-        with open('./patient_agenda/events23/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines = filedate.readlines()
-            for i in range(0, len(lines)):
-                line = lines[i]
-                if dateagenda in line:
-                    print(line)
-                    print(lines[i+1])
-                    print(lines[i+2])
-                    messagebox.showwarning('Info',
-                        'Look at AGENDA, there is an appointment tomorrow for : ' + new_text23 + lines[i] + \
-                        lines[i+1] + lines[i+2])
-                else:
-                    pass
+        dateagenda = (datetime.datetime.now() + datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
+
+        for path, dirs, files in os.walk('./patient_agenda/events23/'
+            'doc_events/fix_agenda/agenda_saved/'):
+            for file in files:
+                with open(os.path.join(path, file), 'r') as read_f:
+                    lines = read_f.readlines()
+                    for i in range(0, len(lines)):
+                        line = lines[i]
+                        if dateagenda in line:
+                            print("Nous y voici !") 
+                            print(lines[i])
+                            print(lines[i+1])
+                            print(lines[i+2])
+                            messagebox.showwarning('Info', 'Look at AGENDA, '
+                                'there is an appointment tomorrow for : ' \
+                                + new_text23 + lines[i] + lines[i+1] + \
+                                lines[i+2])
+                        else:
+                            pass
     except FileNotFoundError as infofile23:
         print("File 23 has not been found", infofile23)
     else:
         ("Error unknow")
 
+    # Patient 24
     try:
         with open('./newpatient/entryfile24.txt', 'r') as namefile:
             line24 = namefile.readline()
@@ -654,20 +830,27 @@ def dispAgBox():
         print("No file entryfile24.txt exist", fileout24)
 
     try:
-        dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
-        with open('./patient_agenda/events24/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
-            lines = filedate.readlines()
-            for i in range(0, len(lines)):
-                line = lines[i]
-                if dateagenda in line:
-                    print(line)
-                    print(lines[i+1])
-                    print(lines[i+2])
-                    messagebox.showwarning('Info',
-                        'Look at AGENDA, there is an appointment tomorrow for : ' + new_text24 + lines[i] + \
-                        lines[i+1] + lines[i+2])
-                else:
-                    pass
+        dateagenda = (datetime.datetime.now() + datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
+
+        for path, dirs, files in os.walk('./patient_agenda/events24/'
+            'doc_events/fix_agenda/agenda_saved/'):
+            for file in files:
+                with open(os.path.join(path, file), 'r') as read_f:
+                    lines = read_f.readlines()
+                    for i in range(0, len(lines)):
+                        line = lines[i]
+                        if dateagenda in line:
+                            print("Nous y voici !") 
+                            print(lines[i])
+                            print(lines[i+1])
+                            print(lines[i+2])
+                            messagebox.showwarning('Info', 'Look at AGENDA, '
+                                'there is an appointment tomorrow for : ' \
+                                + new_text24 + lines[i] + lines[i+1] + \
+                                lines[i+2])
+                        else:
+                            pass
     except FileNotFoundError as infofile24:
         print("File 24 has not been found", infofile24)
     else:

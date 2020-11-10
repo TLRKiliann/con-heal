@@ -79,8 +79,7 @@ def saveData():
             with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as namefile:
                 namefile.write(textBox.get("0.0", "end-1c") + '\n\n')
     except FileNotFoundError as outcom:
-        print("+ Sorry, file 'main_14b.txt' not exist !")
-        print(str(outcom))
+        print("+ Sorry, file 'main_14b.txt' not exist !", outcom)
         print("+ File 'main_14b.txt' created !")
         with open('./14besoins/doc_suivi3/main_14b.txt', 'a+') as namefile:
             namefile.write(textBox.get("0.0", "end-1c") + '\n\n')
@@ -122,8 +121,8 @@ def importationFile(fichier, encodage="Utf-8"):
                 content=fileneeds.readlines()
                 for li in content:
                     textBox.insert(END, li)
-    except FileNotFoundError as outcom:
-        print("+ Sorry, file 'main_14b.txt' not exist !", outcom)
+    except FileNotFoundError as out_err:
+        print("+ Sorry, file 'main_14b.txt' not exist !", out_err)
 
 textBox=Text(root, height=15, width=60, font=18, relief=SUNKEN)
 #textBox.insert(INSERT, "En date du : ")
@@ -150,10 +149,11 @@ buttonQuitter.pack(side='right', padx=10, pady=10)
 
 try:
     if os.path.getsize('./14besoins/doc_suivi3/patient3_14b.txt'):
-        importationFile('./14besoins/doc_suivi3/patient3_14b.txt', encodage='Utf-8')
+        importationFile('./14besoins/doc_suivi3/patient3_14b.txt',
+            encodage='Utf-8')
 except FileNotFoundError as err_nffile:
-    print("+ File not found !")
-    print(str(err_nffile))
-    messagebox.showwarning("WARNING", "File does not exist or file not found !")
+    print(err_nffile)
+    messagebox.showwarning("WARNING", "File does not exist or "
+        "file not found !")
 
 mainloop()

@@ -34,8 +34,8 @@ def msgBox():
         'Error during function call for : ' + line1)
 
 def importFilesFromDir():
-    for path, dirs, files in os.walk('./patient_agenda/events3/doc_events/'
-        'fix_agenda/agenda_saved/'):
+    for path, dirs, files in os.walk('./patient_agenda/events3/'
+        'doc_events/fix_agenda/agenda_saved/'):
         for file in files:
             read_f = open(os.path.join(path,file),'r')
             content = read_f.readlines()

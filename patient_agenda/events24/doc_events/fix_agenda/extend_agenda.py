@@ -1,11 +1,13 @@
 #!/usr/bin/python3
-# -*- coding:utf-8 -*-
+# -*- coding: utf-8 -*-
 
 
 import tkinter
 from tkinter import *
+import os
 import subprocess
 import time
+import shutil
 from tkinter import messagebox
 
 
@@ -21,13 +23,65 @@ def importationFile(fichier):
         textBox.update()
 
 def retrieve_input():
+    """
+        To retrieve data from messFromSafeButt() function
+        to create a copy after backup and remove all files 
+        that were used to create it.
+    """
     inputValue = textBox.get("1.0", "end-1c" + '\n')
     print(inputValue)
-    file = open('./patient_agenda/events24/doc_events/fix_agenda/fixed_rdv.txt', 'a+')
+    file = open('./patient_agenda/events24/doc_events/'
+        'fix_agenda/fixed_rdv.txt', 'w')
     file.write(textBox.get("1.0", "end-1c") + '\n\n')
     file.close()
+
+    # Create the directory 
+    # 'agenda_saved' in 
+    # './patient_agenda/events24/doc_events/fix_agenda' 
+
+    path = './patient_agenda/events24/doc_events/'
+    'fix_agenda/agenda_saved'
+
+    try:
+        os.mkdir(path)
+    except OSError as err_alert:
+        print(err_alert)
+    
+    print("+ To test os.listdir(): ")
+    print(os.listdir('./patient_agenda/events24/doc_events/'
+        'fix_agenda/agenda_saved/'))
+    
+    origin_path = './patient_agenda/events24/doc_events/'
+    'fix_agenda/fixed_rdv.txt'
+    main_path = './patient_agenda/events24/doc_events/'
+    'fix_agenda/agenda_saved/'
+
+    files = [None] * 100
+    for x in range(0, 100):
+        files[x] = "file" + str(x) + ".txt"
+        if not os.path.exists(main_path + files[x]):
+            shutil.copy(origin_path, main_path + files[x])
+            break
+        elif os.path.exists(main_path + files[x]):
+            x += 1
+        else:
+            print("+ Out of range !!! (more than 100 files)")
+            break
+
+    os.remove('./patient_agenda/events24/doc_events/fix_agenda/fixed_rdv.txt')
+    os.remove('./patient_agenda/events24/doc_events/fix_agenda/patient_value.json')
+    os.remove('./patient_agenda/events24/doc_events/patient_rdv.json')
+    os.remove('./patient_agenda/events24/patient_calendar.txt')
+
+    print("+ os.listdir after new file created : ")
+    print(os.listdir('./patient_agenda/events24/doc_events/'
+        'fix_agenda/agenda_saved/'))
     
 def messFromSafeButt():
+    """
+        To save data when user
+        click button save.
+    """
     MsgBox = messagebox.askquestion("Confirm","Are you sure ?\n"
         "It will save all data !")
     if MsgBox == 'yes':
@@ -39,19 +93,24 @@ def messFromSafeButt():
         print("+ Nothing has been saved !")
 
 def lectureFic():
-    file = open('./patient_agenda/events24/doc_events/fix_agenda/fixed_rdv.txt', 'r')
-    print(file.read())
-    file.close()
-    subprocess.call('./patient_agenda/events24/doc_events/fix_agenda/read_file.py')
+    """
+        To read file, app open
+        file fixed rdv to read on it.
+    """
+    subprocess.run('./patient_agenda/events24/doc_events/'
+        'fix_agenda/read_file.py', check=True)
 
 def rdvChanged():
     """
-    To read file modifrdv.txt
+        To change data
+        in a date entered
     """
-    subprocess.call('./patient_agenda/events24/doc_events/fix_agenda/read_filemodif.py')
+    subprocess.run('./patient_agenda/events24/doc_events/'
+        'fix_agenda/read_filemodif.py', check=True)
 
 def changeText():
-    subprocess.call('./patient_agenda/events24/doc_events/fix_agenda/main.py')
+    subprocess.run('./patient_agenda/events24/doc_events/'
+        'fix_agenda/main.py', check=True)
 
 with open('./newpatient/entryfile24.txt', 'r') as filename:
     line1=filename.readline()
@@ -77,35 +136,43 @@ textname.set(line1)
 entryName.pack(in_=top, side=LEFT, padx=10, pady=20)
 
 textBox=Text(fen, height=15, width=60, font=18)
-textBox.insert(INSERT, "Current date : ")
+textBox.insert(INSERT, "Fixed on : ")
 textBox.insert(END, time.strftime("%d/%m/%Y, %H:%M:%S") + ' :\n')
 textBox.pack(padx=30, pady=30)
 
-buttonEnter=Button(fen, text="Save", width=8, bd=3,
+buttonSave=Button(fen, text="Save", width=8, bd=3,
     fg='yellow', bg='navy',activebackground='dark turquoise',
     highlightbackground='light sky blue', command=messFromSafeButt)
-buttonEnter.pack(side='left', padx=10, pady=10)
+buttonSave.pack(side='left', padx=10, pady=10)
 
-buttonLire=Button(fen, text="Read", width=8, bd=3,
+buttonRead=Button(fen, text="Read", width=8, bd=3,
     fg='cyan', bg='navy', activebackground='dark turquoise',
     highlightbackground='light sky blue', command=lectureFic)
-buttonLire.pack(side='left', padx=10, pady=10)
+buttonRead.pack(side='left', padx=10, pady=10)
 
-buttonLire=Button(fen, text="RDV Changed", width=10, bd=3,
+buttonChange=Button(fen, text="RDV Changed", width=10, bd=3,
     fg='cyan', bg='navy', activebackground='dark turquoise',
     highlightbackground='light sky blue', command=rdvChanged)
-buttonLire.pack(side='left', padx=10, pady=10)
+buttonChange.pack(side='left', padx=10, pady=10)
 
-buttonEffacer=Button(fen, text="Modify RDV", width=10, bd=3,
+buttonDel=Button(fen, text="Modify RDV", width=10, bd=3,
     fg='cyan', bg='navy', highlightbackground='light sky blue',
     activebackground='dark turquoise', command=changeText)
-buttonEffacer.pack(side='left', padx=10, pady=10)
+buttonDel.pack(side='left', padx=10, pady=10)
 
 buttonClose=Button(fen, text="Quit", width=8, bd=3,
     fg='white', bg='navy', highlightbackground='light sky blue',
     activebackground='dark turquoise', command=quit)
 buttonClose.pack(side='right', padx=10, pady=10)
 
-importationFile('./patient_agenda/events24/doc_events/fix_agenda/patient_value.json')
+try:
+    if os.path.getsize('./patient_agenda/events24/doc_events/'
+        'fix_agenda/patient_value.json'):
+        print("+ File 'patient_value.json exist' !")
+        importationFile('./patient_agenda/events24/doc_events/'
+            'fix_agenda/patient_value.json')
+except FileNotFoundError as nf_file:
+    print("+ File 'patient_value.json' does not exist !")
+    print(nf_file)
 
 fen.mainloop()

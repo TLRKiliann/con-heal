@@ -33,6 +33,17 @@ def retrieve_input():
     file = open('./patient_agenda/events3/doc_events/fix_agenda/fixed_rdv.txt', 'w')
     file.write(textBox.get("1.0", "end-1c") + '\n\n')
     file.close()
+
+    # Create the directory 
+    # 'agenda_saved' in 
+    # './patient_agenda/events3/doc_events/fix_agenda' 
+
+    path = './patient_agenda/events3/doc_events/fix_agenda/agenda_saved'
+
+    try:
+        os.mkdir(path)
+    except OSError as err_alert:
+        print(err_alert)
     
     print("+ To test os.listdir(): ")
     print(os.listdir('./patient_agenda/events3/doc_events/fix_agenda/agenda_saved/'))
@@ -154,6 +165,6 @@ try:
         importationFile('./patient_agenda/events3/doc_events/fix_agenda/patient_value.json')
 except FileNotFoundError as nf_file:
     print("+ File 'patient_value.json' does not exist !")
-    print(str(nf_file))
+    print(nf_file)
 
 fen.mainloop()

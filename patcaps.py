@@ -24,10 +24,10 @@ def callResident(self):
     self.item=self.can.create_image(625, 85, image=self.photo)
 
     # Display date
-    self.x1, self.y1 = 1165, 70
+    self.x1, self.y1 = 1185, 20
     self.data_time=StringVar()
-    self.Date_write=Entry(self.can, textvariable=self.data_time, width=10,
-        highlightbackground='grey', bd=4)
+    self.Date_write=Entry(self.can, textvariable=self.data_time, 
+        width=10, bd=3, highlightbackground='grey')
     self.data_time.set(time.strftime("%d/%m/%Y"))
     self.Date_write=self.can.create_window(self.x1, self.y1,
         window=self.Date_write)

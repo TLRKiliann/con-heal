@@ -3,7 +3,6 @@
 
 
 from tkinter import *
-#from tkinter import ttk
 import subprocess
 import os
 import time
@@ -28,26 +27,14 @@ def callBox(self):
     dispResFunc()
 
     # Display date
-    self.x1, self.y1 = 1165, 70
+    self.x1, self.y1 = 1185, 20
     self.Date_write=Entry(self.can)
     self.data_time=StringVar()
-    self.Date_write=Entry(self.can, textvariable=self.data_time, width=10,
-        highlightbackground='grey', bd=4)
+    self.Date_write=Entry(self.can, textvariable=self.data_time, 
+        width=10, bd=3, highlightbackground='grey')
     self.data_time.set(time.strftime("%d/%m/%Y"))
     self.Date_write=self.can.create_window(self.x1, self.y1,
         window=self.Date_write)
-    
-    """
-    # Static time
-    self.x2, self.y2 = 1165, 70
-    self.Date_write2 = Entry(self.can)
-    self.data_time2 = StringVar()
-    self.Date_write2 = Entry(self.can, width=10, textvariable=self.data_time2,
-        highlightbackground='grey', bd=4)
-    self.data_time2.set(time.strftime("%H:%M:%S %p"))
-    self.Date_write2=self.can.create_window(self.x2, self.y2,
-        window=self.Date_write2)
-    """
 
     # To go to resident page
     self.x6, self.y6 = 115, 75
@@ -60,7 +47,8 @@ def callBox(self):
     self.x63, self.y63 = 625, 450
     self.t63=Text(self.can, height=30, width=80, font=18, relief=SUNKEN)
     self.t63.insert(INSERT, "Previously (yesterday last infos) : ")
-    self.t63.insert(END, (datetime.datetime.now() + datetime.timedelta(days=-1)).strftime('%d/%m/%Y'))
+    self.t63.insert(END, (datetime.datetime.now() + \
+        datetime.timedelta(days=-1)).strftime('%d/%m/%Y'))
         #time.strftime("%d/%m/%Y at %H:%M:%S :\n"))
     self.ft63=self.can.create_window(self.x63, self.y63, window=self.t63)
 
@@ -73,7 +61,8 @@ def callBox(self):
 
     # Display text in textbox from 14 Needs files
     try:
-        datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
+        datesearch = (datetime.datetime.now() - datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
         with open('./14besoins/doc_suivi/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
@@ -83,7 +72,8 @@ def callBox(self):
                     self.t63.insert(INSERT, line)
                     self.t63.insert(INSERT, lines[i+1])
                     self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT, "Lire suite dans care and monitoring...")
+                    self.t63.insert(INSERT,
+                        "Lire suite dans care and monitoring...")
                 else:
                     pass
     except FileNotFoundError as infofileout:
@@ -101,7 +91,8 @@ def callBox(self):
         print("File entryfile2.txt doesn't exist !", callfile2)
 
     try:
-        datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
+        datesearch = (datetime.datetime.now() - datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
         with open('./14besoins/doc_suivi2/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
@@ -111,7 +102,8 @@ def callBox(self):
                     self.t63.insert(INSERT, line)
                     self.t63.insert(INSERT, lines[i+1])
                     self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT, "Lire suite dans care and monitoring...")
+                    self.t63.insert(INSERT,
+                        "Lire suite dans care and monitoring...")
                 else:
                     pass
     except FileNotFoundError as infofileout1:
@@ -129,7 +121,8 @@ def callBox(self):
         print("File entryfile3.txt doesn't exist !", callfile3)
 
     try:
-        datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
+        datesearch = (datetime.datetime.now() - datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
         with open('./14besoins/doc_suivi3/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
@@ -139,7 +132,8 @@ def callBox(self):
                     self.t63.insert(INSERT, line)
                     self.t63.insert(INSERT, lines[i+1])
                     self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT, "Lire suite dans care and monitoring...")
+                    self.t63.insert(INSERT,
+                        "Lire suite dans care and monitoring...")
                 else:
                     pass
     except FileNotFoundError as infofileout3:
@@ -157,7 +151,8 @@ def callBox(self):
         print("File entryfile4.txt doesn't exist !", callfile4)
 
     try:
-        datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
+        datesearch = (datetime.datetime.now() - datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
         with open('./14besoins/doc_suivi4/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
@@ -167,7 +162,8 @@ def callBox(self):
                     self.t63.insert(INSERT, line)
                     self.t63.insert(INSERT, lines[i+1])
                     self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT, "Lire suite dans care and monitoring...")
+                    self.t63.insert(INSERT,
+                        "Lire suite dans care and monitoring...")
                 else:
                     pass
     except FileNotFoundError as infofileout4:
@@ -185,7 +181,8 @@ def callBox(self):
         print("File entryfile5.txt doesn't exist !", callfile5)
 
     try:
-        datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
+        datesearch = (datetime.datetime.now() - datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
         with open('./14besoins/doc_suivi5/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
@@ -195,7 +192,8 @@ def callBox(self):
                     self.t63.insert(INSERT, line)
                     self.t63.insert(INSERT, lines[i+1])
                     self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT, "Lire suite dans care and monitoring...")
+                    self.t63.insert(INSERT,
+                        "Lire suite dans care and monitoring...")
                 else:
                     pass
     except FileNotFoundError as infofileout5:
@@ -213,7 +211,8 @@ def callBox(self):
         print("File entryfile6.txt doesn't exist !", callfile6)
 
     try:
-        datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
+        datesearch = (datetime.datetime.now() - datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
         with open('./14besoins/doc_suivi6/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
@@ -223,7 +222,8 @@ def callBox(self):
                     self.t63.insert(INSERT, line)
                     self.t63.insert(INSERT, lines[i+1])
                     self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT, "Lire suite dans care and monitoring...")
+                    self.t63.insert(INSERT,
+                        "Lire suite dans care and monitoring...")
                 else:
                     pass
     except FileNotFoundError as infofileout6:
@@ -241,7 +241,8 @@ def callBox(self):
         print("File entryfile7.txt doesn't exist !", callfile7)
 
     try:
-        datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
+        datesearch = (datetime.datetime.now() - datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
         with open('./14besoins/doc_suivi7/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
@@ -251,7 +252,8 @@ def callBox(self):
                     self.t63.insert(INSERT, line)
                     self.t63.insert(INSERT, lines[i+1])
                     self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT, "Lire suite dans care and monitoring...")
+                    self.t63.insert(INSERT,
+                        "Lire suite dans care and monitoring...")
                 else:
                     pass
     except FileNotFoundError as infofileout7:
@@ -269,7 +271,8 @@ def callBox(self):
         print("File entryfile8.txt doesn't exist !", callfile8)
 
     try:
-        datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
+        datesearch = (datetime.datetime.now() - datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
         with open('./14besoins/doc_suivi8/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
@@ -279,7 +282,8 @@ def callBox(self):
                     self.t63.insert(INSERT, line)
                     self.t63.insert(INSERT, lines[i+1])
                     self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT, "Lire suite dans care and monitoring...")
+                    self.t63.insert(INSERT,
+                        "Lire suite dans care and monitoring...")
                 else:
                     pass
     except FileNotFoundError as infofileout8:
@@ -297,7 +301,8 @@ def callBox(self):
         print("File entryfile9.txt doesn't exist !", callfile9)
 
     try:
-        datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
+        datesearch = (datetime.datetime.now() - datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
         with open('./14besoins/doc_suivi9/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
@@ -307,7 +312,8 @@ def callBox(self):
                     self.t63.insert(INSERT, line)
                     self.t63.insert(INSERT, lines[i+1])
                     self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT, "Lire suite dans care and monitoring...")
+                    self.t63.insert(INSERT,
+                        "Lire suite dans care and monitoring...")
                 else:
                     pass
     except FileNotFoundError as infofileout9:
@@ -325,7 +331,8 @@ def callBox(self):
         print("File entryfile10.txt doesn't exist !", callfile10)
 
     try:
-        datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
+        datesearch = (datetime.datetime.now() - datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
         with open('./14besoins/doc_suivi10/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
@@ -335,7 +342,8 @@ def callBox(self):
                     self.t63.insert(INSERT, line)
                     self.t63.insert(INSERT, lines[i+1])
                     self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT, "Lire suite dans care and monitoring...")
+                    self.t63.insert(INSERT,
+                        "Lire suite dans care and monitoring...")
                 else:
                     pass
     except FileNotFoundError as infofileout10:
@@ -353,7 +361,8 @@ def callBox(self):
         print("File entryfile11.txt doesn't exist !", callfile11)
 
     try:
-        datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
+        datesearch = (datetime.datetime.now() - datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
         with open('./14besoins/doc_suivi11/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
@@ -363,7 +372,8 @@ def callBox(self):
                     self.t63.insert(INSERT, line)
                     self.t63.insert(INSERT, lines[i+1])
                     self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT, "Lire suite dans care and monitoring...")
+                    self.t63.insert(INSERT,
+                        "Lire suite dans care and monitoring...")
                 else:
                     pass
     except FileNotFoundError as infofileout11:
@@ -381,7 +391,8 @@ def callBox(self):
         print("File entryfile12.txt doesn't exist !", callfile12)
 
     try:
-        datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
+        datesearch = (datetime.datetime.now() - datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
         with open('./14besoins/doc_suivi12/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
@@ -391,7 +402,8 @@ def callBox(self):
                     self.t63.insert(INSERT, line)
                     self.t63.insert(INSERT, lines[i+1])
                     self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT, "Lire suite dans care and monitoring...")
+                    self.t63.insert(INSERT,
+                        "Lire suite dans care and monitoring...")
                 else:
                     pass
     except FileNotFoundError as infofileout12:
@@ -409,7 +421,8 @@ def callBox(self):
         print("File entryfile13.txt doesn't exist !", callfile13)
 
     try:
-        datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
+        datesearch = (datetime.datetime.now() - datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
         with open('./14besoins/doc_suivi13/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
@@ -419,7 +432,8 @@ def callBox(self):
                     self.t63.insert(INSERT, line)
                     self.t63.insert(INSERT, lines[i+1])
                     self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT, "Lire suite dans care and monitoring...")
+                    self.t63.insert(INSERT,
+                        "Lire suite dans care and monitoring...")
                 else:
                     pass
     except FileNotFoundError as infofileout13:
@@ -437,7 +451,8 @@ def callBox(self):
         print("File entryfile14.txt doesn't exist !", callfile14)
 
     try:
-        datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
+        datesearch = (datetime.datetime.now() - datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
         with open('./14besoins/doc_suivi14/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
@@ -447,7 +462,8 @@ def callBox(self):
                     self.t63.insert(INSERT, line)
                     self.t63.insert(INSERT, lines[i+1])
                     self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT, "Lire suite dans care and monitoring...")
+                    self.t63.insert(INSERT,
+                        "Lire suite dans care and monitoring...")
                 else:
                     pass
     except FileNotFoundError as infofileout14:
@@ -465,7 +481,8 @@ def callBox(self):
         print("File entryfile15.txt doesn't exist !", callfile15)
 
     try:
-        datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
+        datesearch = (datetime.datetime.now() - datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
         with open('./14besoins/doc_suivi15/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
@@ -475,7 +492,8 @@ def callBox(self):
                     self.t63.insert(INSERT, line)
                     self.t63.insert(INSERT, lines[i+1])
                     self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT, "Lire suite dans care and monitoring...")
+                    self.t63.insert(INSERT,
+                        "Lire suite dans care and monitoring...")
                 else:
                     pass
     except FileNotFoundError as infofileout15:
@@ -493,7 +511,8 @@ def callBox(self):
         print("File entryfile16.txt doesn't exist !", callfile16)
 
     try:
-        datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
+        datesearch = (datetime.datetime.now() - datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
         with open('./14besoins/doc_suivi16/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
@@ -503,7 +522,8 @@ def callBox(self):
                     self.t63.insert(INSERT, line)
                     self.t63.insert(INSERT, lines[i+1])
                     self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT, "Lire suite dans care and monitoring...")
+                    self.t63.insert(INSERT,
+                        "Lire suite dans care and monitoring...")
                 else:
                     pass
     except FileNotFoundError as infofileout16:
@@ -521,7 +541,8 @@ def callBox(self):
         print("File entryfile17.txt doesn't exist !", callfile17)
 
     try:
-        datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
+        datesearch = (datetime.datetime.now() - datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
         with open('./14besoins/doc_suivi17/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
@@ -531,7 +552,8 @@ def callBox(self):
                     self.t63.insert(INSERT, line)
                     self.t63.insert(INSERT, lines[i+1])
                     self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT, "Lire suite dans care and monitoring...")
+                    self.t63.insert(INSERT,
+                        "Lire suite dans care and monitoring...")
                 else:
                     pass
     except FileNotFoundError as infofileout17:
@@ -549,7 +571,8 @@ def callBox(self):
         print("File entryfile18.txt doesn't exist !", callfile18)
 
     try:
-        datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
+        datesearch = (datetime.datetime.now() - datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
         with open('./14besoins/doc_suivi18/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
@@ -559,7 +582,8 @@ def callBox(self):
                     self.t63.insert(INSERT, line)
                     self.t63.insert(INSERT, lines[i+1])
                     self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT, "Lire suite dans care and monitoring...")
+                    self.t63.insert(INSERT,
+                        "Lire suite dans care and monitoring...")
                 else:
                     pass
     except FileNotFoundError as infofileout18:
@@ -577,7 +601,8 @@ def callBox(self):
         print("File entryfile19.txt doesn't exist !", callfile19)
 
     try:
-        datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
+        datesearch = (datetime.datetime.now() - datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
         with open('./14besoins/doc_suivi19/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
@@ -587,7 +612,8 @@ def callBox(self):
                     self.t63.insert(INSERT, line)
                     self.t63.insert(INSERT, lines[i+1])
                     self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT, "Lire suite dans care and monitoring...")
+                    self.t63.insert(INSERT,
+                        "Lire suite dans care and monitoring...")
                 else:
                     pass
     except FileNotFoundError as infofileout19:
@@ -605,7 +631,8 @@ def callBox(self):
         print("File entryfile20.txt doesn't exist !", callfile20)
 
     try:
-        datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
+        datesearch = (datetime.datetime.now() - datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
         with open('./14besoins/doc_suivi20/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
@@ -615,7 +642,8 @@ def callBox(self):
                     self.t63.insert(INSERT, line)
                     self.t63.insert(INSERT, lines[i+1])
                     self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT, "Lire suite dans care and monitoring...")
+                    self.t63.insert(INSERT,
+                        "Lire suite dans care and monitoring...")
                 else:
                     pass
     except FileNotFoundError as infofileout20:
@@ -633,7 +661,8 @@ def callBox(self):
         print("File entryfile21.txt doesn't exist !", callfile21)
 
     try:
-        datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
+        datesearch = (datetime.datetime.now() - datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
         with open('./14besoins/doc_suivi21/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
@@ -643,7 +672,8 @@ def callBox(self):
                     self.t63.insert(INSERT, line)
                     self.t63.insert(INSERT, lines[i+1])
                     self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT, "Lire suite dans care and monitoring...")
+                    self.t63.insert(INSERT,
+                        "Lire suite dans care and monitoring...")
                 else:
                     pass
     except FileNotFoundError as infofileout21:
@@ -661,7 +691,8 @@ def callBox(self):
         print("File entryfile22.txt doesn't exist !", callfile22)
 
     try:
-        datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
+        datesearch = (datetime.datetime.now() - datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
         with open('./14besoins/doc_suivi22/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
@@ -671,7 +702,8 @@ def callBox(self):
                     self.t63.insert(INSERT, line)
                     self.t63.insert(INSERT, lines[i+1])
                     self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT, "Lire suite dans care and monitoring...")
+                    self.t63.insert(INSERT,
+                        "Lire suite dans care and monitoring...")
                 else:
                     pass
     except FileNotFoundError as infofileout22:
@@ -689,7 +721,8 @@ def callBox(self):
         print("File entryfile23.txt doesn't exist !", callfile23)
 
     try:
-        datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
+        datesearch = (datetime.datetime.now() - datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
         with open('./14besoins/doc_suivi23/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
@@ -699,7 +732,8 @@ def callBox(self):
                     self.t63.insert(INSERT, line)
                     self.t63.insert(INSERT, lines[i+1])
                     self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT, "Lire suite dans care and monitoring...")
+                    self.t63.insert(INSERT,
+                        "Lire suite dans care and monitoring...")
                 else:
                     pass
     except FileNotFoundError as infofileout23:
@@ -717,7 +751,8 @@ def callBox(self):
         print("File entryfile24.txt doesn't exist !", callfile24)
 
     try:
-        datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
+        datesearch = (datetime.datetime.now() - datetime.timedelta(\
+            days=1)).strftime('%d/%m/%Y')
         with open('./14besoins/doc_suivi24/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
@@ -727,7 +762,8 @@ def callBox(self):
                     self.t63.insert(INSERT, line)
                     self.t63.insert(INSERT, lines[i+1])
                     self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT, "Lire suite dans care and monitoring...")
+                    self.t63.insert(INSERT,
+                        "Lire suite dans care and monitoring...")
                 else:
                     pass
     except FileNotFoundError as infofileout24:

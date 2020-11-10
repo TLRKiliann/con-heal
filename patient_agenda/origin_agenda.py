@@ -180,7 +180,7 @@ if __name__ == '__main__':
                     subprocess.run('./patient_agenda/events/entrer_event1.py', check=True)
             except FileNotFoundError as file_creat:
                     print("+ File not existing!")
-                    print(str(file_creat))
+                    print(file_creat)
                     print("+ File 'patient_calendar.txt' created !")
                     file = open('./patient_agenda/events/patient_calendar.txt','wb')
                     dump(self.data, file)
@@ -192,14 +192,14 @@ if __name__ == '__main__':
                 subprocess.run('./patient_agenda/events/doc_events/fix_agenda/read_file.py', check=True)
             except FileNotFoundError as note_agenda:
                 print("+ Agenda not created !")
-                print(str(note_agenda))
+                print(note_agenda)
 
         def accessLook(self):
             try:
                 subprocess.run('./patient_agenda/events/doc_events/fix_agenda/main.py', check=True)
             except FileNotFoundError as note_change:
                 print("+ Agenda not created !")
-                print(str(note_change))
+                print(note_change)
 
     root = tk.Tk()
     app = Control(root)

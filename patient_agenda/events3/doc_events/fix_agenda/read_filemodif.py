@@ -49,9 +49,9 @@ textBox.pack(padx=30, pady=30)
 
 try:
     importFilesFromDir()
-except IOError as io_err:
+except OSError as io_err:
     print("+ Error for calling function !")
-    print(str(io_err))
+    print(io_err)
     msgBox()
 
 def saveData():

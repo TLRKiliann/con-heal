@@ -76,8 +76,8 @@ class Application(Frame):
 
     def lienDirect(self):
         """
-        Add button check
-        if files exist.
+            Add button check
+            if files exist.
         """
         try:
             if os.path.getsize('./14besoins/doc_suivi18/patient18_14b.txt'):
@@ -85,13 +85,13 @@ class Application(Frame):
                 subprocess.run('./14besoins/doc_suivi18/patient18_write.py', check=True)
         except FileNotFoundError as outmsg:
             print("+ Sorry, file '14 needs' not exist !")
-            print(str(outmsg))
+            print(outmsg)
             self.commentFileRecNeeds()
 
     def lectureFic(self):
         """
-        Read button check
-        if files exist.
+            Read button check
+            if files exist.
         """
         try:
             if os.path.getsize('./14besoins/doc_suivi18/patient18_14b.txt'):
@@ -99,7 +99,7 @@ class Application(Frame):
                 subprocess.run('./14besoins/doc_suivi18/patient18_read.py', check=True)
         except FileNotFoundError as outnote:
             print("+ Sorry, file '14 needs' not exist !")
-            print(str(outnote))
+            print(outnote)
             self.commentFileRecNeeds()
 
     def commentFileRecNeeds(self):

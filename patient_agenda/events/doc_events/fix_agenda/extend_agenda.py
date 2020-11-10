@@ -30,7 +30,7 @@ def retrieve_input():
     """
     inputValue = textBox.get("1.0", "end-1c" + '\n')
     print(inputValue)
-    file = open('./patient_agenda/events/doc_events/'
+    file = open('./patient_agenda/events/doc_events/'\
         'fix_agenda/fixed_rdv.txt', 'w')
     file.write(textBox.get("1.0", "end-1c") + '\n\n')
     file.close()
@@ -39,7 +39,7 @@ def retrieve_input():
     # 'agenda_saved' in 
     # './patient_agenda/events/doc_events/fix_agenda' 
 
-    path = './patient_agenda/events/doc_events/'
+    path = './patient_agenda/events/doc_events/'\
     'fix_agenda/agenda_saved'
 
     try:
@@ -48,12 +48,12 @@ def retrieve_input():
         print(err_alert)
     
     print("+ To test os.listdir(): ")
-    print(os.listdir('./patient_agenda/events/doc_events/'
+    print(os.listdir('./patient_agenda/events/doc_events/'\
         'fix_agenda/agenda_saved/'))
     
-    origin_path = './patient_agenda/events/doc_events/'
+    origin_path = './patient_agenda/events/doc_events/'\
     'fix_agenda/fixed_rdv.txt'
-    main_path = './patient_agenda/events/doc_events/'
+    main_path = './patient_agenda/events/doc_events/'\
     'fix_agenda/agenda_saved/'
 
     files = [None] * 100
@@ -74,7 +74,7 @@ def retrieve_input():
     os.remove('./patient_agenda/events/patient_calendar.txt')
 
     print("+ os.listdir after new file created : ")
-    print(os.listdir('./patient_agenda/events/doc_events/'
+    print(os.listdir('./patient_agenda/events/doc_events/'\
         'fix_agenda/agenda_saved/'))
     
 def messFromSafeButt():
@@ -97,7 +97,7 @@ def lectureFic():
         To read file, app open
         file fixed rdv to read on it.
     """
-    subprocess.run('./patient_agenda/events/doc_events/'
+    subprocess.run('./patient_agenda/events/doc_events/'\
         'fix_agenda/read_file.py', check=True)
 
 def rdvChanged():
@@ -105,11 +105,11 @@ def rdvChanged():
         To change data
         in a date entered
     """
-    subprocess.run('./patient_agenda/events/doc_events/'
+    subprocess.run('./patient_agenda/events/doc_events/'\
         'fix_agenda/read_filemodif.py', check=True)
 
 def changeText():
-    subprocess.run('./patient_agenda/events/doc_events/'
+    subprocess.run('./patient_agenda/events/doc_events/'\
         'fix_agenda/main.py', check=True)
 
 with open('./newpatient/entryfile.txt', 'r') as filename:
@@ -141,35 +141,30 @@ textBox.insert(END, time.strftime("%d/%m/%Y, %H:%M:%S") + ' :\n')
 textBox.pack(padx=30, pady=30)
 
 buttonSave=Button(fen, text="Save", width=8, bd=3,
-    fg='yellow', bg='navy',activebackground='dark turquoise',
+    fg='yellow', bg='RoyalBlue3',activebackground='dark turquoise',
     highlightbackground='light sky blue', command=messFromSafeButt)
 buttonSave.pack(side='left', padx=10, pady=10)
 
 buttonRead=Button(fen, text="Read", width=8, bd=3,
-    fg='cyan', bg='navy', activebackground='dark turquoise',
+    fg='cyan', bg='RoyalBlue3', activebackground='dark turquoise',
     highlightbackground='light sky blue', command=lectureFic)
 buttonRead.pack(side='left', padx=10, pady=10)
 
-buttonChange=Button(fen, text="RDV Changed", width=10, bd=3,
-    fg='cyan', bg='navy', activebackground='dark turquoise',
-    highlightbackground='light sky blue', command=rdvChanged)
-buttonChange.pack(side='left', padx=10, pady=10)
-
 buttonDel=Button(fen, text="Modify RDV", width=10, bd=3,
-    fg='cyan', bg='navy', highlightbackground='light sky blue',
+    fg='cyan', bg='RoyalBlue3', highlightbackground='light sky blue',
     activebackground='dark turquoise', command=changeText)
 buttonDel.pack(side='left', padx=10, pady=10)
 
 buttonClose=Button(fen, text="Quit", width=8, bd=3,
-    fg='white', bg='navy', highlightbackground='light sky blue',
+    fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
     activebackground='dark turquoise', command=quit)
 buttonClose.pack(side='right', padx=10, pady=10)
 
 try:
-    if os.path.getsize('./patient_agenda/events/doc_events/'
+    if os.path.getsize('./patient_agenda/events/doc_events/'\
         'fix_agenda/patient_value.json'):
         print("+ File 'patient_value.json exist' !")
-        importationFile('./patient_agenda/events/doc_events/'
+        importationFile('./patient_agenda/events/doc_events/'\
             'fix_agenda/patient_value.json')
 except FileNotFoundError as nf_file:
     print("+ File 'patient_value.json' does not exist !")

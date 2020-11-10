@@ -59,7 +59,8 @@ buttonClose.pack(side='right', padx=10, pady=10)
 
 try:
     if os.path.getsize('./14besoins/doc_suivi7/main_14b.txt'):
-        importationFile('./14besoins/doc_suivi7/main_14b.txt', encodage="Utf-8")
+        importationFile('./14besoins/doc_suivi7/main_14b.txt',
+            encodage="Utf-8")
 except FileNotFoundError as err_nffile:
     print(err_nffile)
     messagebox.showwarning("WARNING", "File does not exist or "

@@ -125,8 +125,6 @@ def importationFile(fichier, encodage="Utf-8"):
         print("+ Sorry, file 'main_14b.txt' not exist !", out_err)
 
 textBox=Text(root, height=15, width=60, font=18, relief=SUNKEN)
-#textBox.insert(INSERT, "En date du : ")
-#textBox.insert(END, time.strftime("%d/%m/%Y à %H:%M:%S :"))
 textBox.pack(padx=30, pady=30)
 
 buttonLire=Button(root, text="Read", bd=3, width=10, 
@@ -149,9 +147,11 @@ buttonQuitter.pack(side='right', padx=10, pady=10)
 
 try:
     if os.path.getsize('./14besoins/doc_suivi4/patient4_14b.txt'):
-        importationFile('./14besoins/doc_suivi4/patient4_14b.txt', encodage='Utf-8')
+        importationFile('./14besoins/doc_suivi4/patient4_14b.txt',
+            encodage='Utf-8')
 except FileNotFoundError as err_nffile:
     print(err_nffile)
-    messagebox.showwarning("WARNING", "File does not exist or file not found !")
+    messagebox.showwarning("WARNING", "File does not exist or "
+        "file not found !")
 
 mainloop()

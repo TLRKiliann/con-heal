@@ -55,7 +55,8 @@ except OSError as io_err:
     msgBox()
 
 buttonClose = Button(fen, text="Quit", width=8, bd=3,
-    fg='white', bg='navy', highlightbackground='light sky blue',
+    fg='white', bg='RoyalBlue3',
+    highlightbackground='light sky blue',
     activebackground='dark turquoise', command=quit)
 buttonClose.pack(side='right', padx=10, pady=10)
 

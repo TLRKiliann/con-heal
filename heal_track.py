@@ -1123,7 +1123,7 @@ class Application(Frame):
         self.can.create_window((4,4), window=self.frame, anchor=NW, tags="self.frame")
 
         self.clock_label = Label(self, font=('Times New Roman', 18, 'bold'),
-            fg='cyan', bg='RoyalBlue3', padx=560)
+            fg='snow', bg='RoyalBlue3', padx=560)
         self.clock_label.pack(side=TOP)
 
         def display_time():

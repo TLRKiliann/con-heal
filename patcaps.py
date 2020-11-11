@@ -19,7 +19,7 @@ def callResident(self):
         with theirs names and more.
     """
     self.can.delete(ALL)
-    self.can.configure(background='black')
+    self.can.configure(background='DodgerBlue2')
     self.photo=PhotoImage(file='./syno_gif/title_tt2.png')
     self.item=self.can.create_image(625, 85, image=self.photo)
 

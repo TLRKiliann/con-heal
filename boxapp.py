@@ -16,7 +16,7 @@ from patcaps import callResident
 
 def callBox(self):
     self.can.delete(ALL)
-    self.can.configure(background='black')
+    self.can.configure(background='DodgerBlue2')
     #self.photo=PhotoImage(file='./syno_gif/title_tt.png')
     #self.item=self.can.create_image(625, 85, image=self.photo)
 

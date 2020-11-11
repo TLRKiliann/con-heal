@@ -230,4 +230,6 @@ buttQuit=Button(gui, text="Quit", width=8, bd=3,
     activebackground='dark turquoise', command=quit)
 buttQuit.pack(side=LEFT, padx=10, pady=20)
 
+searchDB()
+
 gui.mainloop()

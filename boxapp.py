@@ -16,7 +16,7 @@ from patcaps import callResident
 
 def callBox(self):
     self.can.delete(ALL)
-    self.can.configure(background='cyan')
+    self.can.configure(background='black')
     #self.photo=PhotoImage(file='./syno_gif/title_tt.png')
     #self.item=self.can.create_image(625, 85, image=self.photo)
 
@@ -27,7 +27,7 @@ def callBox(self):
     dispResFunc()
 
     # Display date
-    self.x1, self.y1 = 1185, 40
+    self.x1, self.y1 = 1140, 40
     self.Date_write=Entry(self.can)
     self.data_time=StringVar()
     self.Date_write=Entry(self.can, textvariable=self.data_time, 

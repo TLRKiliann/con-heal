@@ -3,15 +3,14 @@
 
 
 from tkinter import *
-from tkinter.ttk import *
 from tkinter import messagebox
 from subprocess import run
-from heal_track import Application
+#from heal_track import Application
 
 
 window = Tk()
 window.title('ACCESS')
-window.configure(bg='DodgerBlue2')
+window.configure(bg='RoyalBlue3')
 
 def closeWindow():
     """
@@ -19,7 +18,7 @@ def closeWindow():
         heal_track.py !
     """
     window.destroy()
-    Application()
+    #Application()
 
 def validentry():
     """
@@ -39,7 +38,7 @@ def validentry():
 
 labelname = Label(window, text='Enter username :',
     font=('Times New Roman', 14, 'bold'),
-    foreground="white", background="DodgerBlue2")
+    foreground="white", background="RoyalBlue3")
 labelname.pack(pady=10)
 
 entryname = StringVar()
@@ -48,7 +47,7 @@ namenter.pack(padx=10)
 
 labelpass = Label(window, text='Enter password :',
     font=('Times New Roman', 14, 'bold'),
-    foreground="white", background="DodgerBlue2")
+    foreground="white", background="RoyalBlue3")
 labelpass.pack(pady=10)
 
 entrypass = StringVar()

@@ -9,6 +9,7 @@ import subprocess
 from boxapp import callBox
 from patcaps import callResident
 from backapp import *
+import passw
 
 
 class ScrollCanvas(Frame):
@@ -1110,27 +1111,19 @@ class Application(Frame):
         self.master.title('Heal-Track Developed by ko@l@tr33 - 2020')
         mBar = MenuBar(self)
         mBar.pack(side=TOP, fill=X, expand=YES)
-
         self.can = Canvas(self, width=1250, height=700, bg='grey18')
         self.frame = Frame(self.can)
-
         # ScrollCanvas limite de la zone à parcourir avec la barre 1250 - 800
         self.vsb = Scrollbar(self, orient=VERTICAL, command=self.can.yview)
         self.can.configure(yscrollcommand=self.vsb.set)
         self.vsb.pack(side=RIGHT, fill=Y)
-        #self.can.pack(side=LEFT, fill=BOTH, expand=YES)
+
         self.can.create_window((4,4), window=self.frame, anchor=NW, tags="self.frame")
 
-        self.clock_label = Label(self, font=('Times New Roman', 18, 'bold'),
+        self.clock_label = Label(self, text="", font=('Times New Roman', 18, 'bold'),
             fg='snow', bg='RoyalBlue3', padx=560)
         self.clock_label.pack(side=TOP)
-
-        def display_time():
-            current_time = time.strftime("%H:%M:%S %p")
-            self.clock_label['text'] = current_time
-            self.clock_label.after(200, display_time)
-
-        display_time()
+        self.display_time()
 
         # Insertion of picture
         self.photo = PhotoImage(file='./syno_gif/fondcolorbg.png')
@@ -1148,14 +1141,13 @@ class Application(Frame):
         self.can.pack(side=LEFT, fill=BOTH, expand=YES)
 
         # 3 buttons on welcome page.
-        # Info button
         self.button1 = Button(self, text="Info", font=('Times 14 bold'),
             bg='grey17', fg='cyan', command = self.frameInfo)
         self.button1.configure(width=10, bd=3, highlightbackground='grey10',
             activebackground='dark turquoise')
         self.button1_window = self.can.create_window(75, 30, anchor=CENTER,
             window=self.button1)
-        
+
         # Pycon button
         self.button2 = Button(self, text="DATABASE", font=('Times 18 bold'),
             bg='grey17', fg='cyan', command = self.funcPyCon)
@@ -1191,17 +1183,60 @@ class Application(Frame):
         '''Reinitialize canvas when we pass through another'''
         self.can.delete(ALL)
 
+    def display_time(self):
+        try:
+            current_time = time.strftime("%H:%M:%S %p")
+            self.clock_label.configure(text=current_time)
+            self.master.after(200, self.display_time)
+        except:
+            ("Error : time to fucking time !!!")
+
     def msgExit(self):
         """
             If usr want to quit, a question
             into a msgbox appear.
         """
         MsgBox = messagebox.askyesno('Quit system', 'Do you want to quit ?')
-        if MsgBox == 1:
-            self.master.destroy()
-        else:
-            NoforQ = messagebox.showinfo('Return', 'You will now return to the'
+        try:
+            if MsgBox == 1:
+                self.master.destroy()
+        except OSError as fuckingtime:
+            print("Error 2 : time to fucking time !!!", fuckingtime)
+            messagebox.showinfo('Return', 'You will now return to the'
                 'application screen')
+            #self.master.destroy()
+
+    def frameInfo(self):
+        """
+            Info for button on first page
+        """
+        self.lab=Tk()
+        self.lab.title("ATCD")
+        self.lab.configure(bg="grey22")
+
+        self.labFra=LabelFrame(self.lab, text="\nWelcome !",
+            font=("Arial 12"),fg='cyan', bg='grey22')
+        self.labFra.pack(padx=5, pady=5)
+        self.separator = Frame(self.labFra, height=2, bd=1,
+            relief=SUNKEN)
+
+        self.lab4=Label(self.labFra, text="\nInfo",
+            font=('Times 16 bold'), fg='cyan', bg='grey22').pack()
+        self.separator = Frame(self.labFra, height=2, bd=1, relief=SUNKEN)
+        self.separator.pack(fill=X, padx=100, pady=3)
+
+        self.lab5=Label(self.labFra, justify=LEFT, fg='cyan',
+            bg='grey22', font=('Times', 14),
+            text="\nMenu Bar, DB, Textbox and Residents are the most usefull skills\n"
+            "to perform onto this app ! If you need help, you\n"
+            "can go to MapApp to access map of this app and\n"
+            "understand how the app is used ;)\n\n"
+            "Enjoy it !\n").pack(padx=10)
+        self.separator = Frame(self.labFra, height=2, bd=1, relief=SUNKEN)
+        self.separator.pack(fill=X, padx=30, pady=3)
+        self.lab6=Label(self.labFra, justify=LEFT, fg='cyan',
+            bg='grey22', font=('Times', 14),
+            text="Path : Menu Bar --> Menu --> MapApp").pack(padx=10, pady=10)
 
     def instalpy(self):
         """
@@ -1270,38 +1305,6 @@ class Application(Frame):
             To call func in patcaps.py
         """
         callResident(self)
-
-    def frameInfo(self):
-        """
-            Info for button on first page
-        """
-        self.lab=Tk()
-        self.lab.title("ATCD")
-        self.lab.configure(bg="grey22")
-
-        self.labFra=LabelFrame(self.lab, text="\nWelcome !",
-            font=("Arial 12"),fg='cyan', bg='grey22')
-        self.labFra.pack(padx=5, pady=5)
-        self.separator = Frame(self.labFra, height=2, bd=1,
-            relief=SUNKEN)
-
-        self.lab4=Label(self.labFra, text="\nInfo",
-            font=('Times 16 bold'), fg='cyan', bg='grey22').pack()
-        self.separator = Frame(self.labFra, height=2, bd=1, relief=SUNKEN)
-        self.separator.pack(fill=X, padx=100, pady=3)
-
-        self.lab5=Label(self.labFra, justify=LEFT, fg='cyan',
-            bg='grey22', font=('Times', 14),
-            text="\nMenu Bar, DB, Textbox and Residents are the most usefull skills\n"
-            "to perform onto this app ! If you need help, you\n"
-            "can go to MapApp to access map of this app and\n"
-            "understand how the app is used ;)\n\n"
-            "Enjoy it !\n").pack(padx=10)
-        self.separator = Frame(self.labFra, height=2, bd=1, relief=SUNKEN)
-        self.separator.pack(fill=X, padx=30, pady=3)
-        self.lab6=Label(self.labFra, justify=LEFT, fg='cyan',
-            bg='grey22', font=('Times', 14),
-            text="Path : Menu Bar --> Menu --> MapApp").pack(padx=10, pady=10)
 
     def callPatient1(self):
         """

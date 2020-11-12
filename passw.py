@@ -3,6 +3,7 @@
 
 
 from tkinter import *
+from tkinter import ttk
 from tkinter import messagebox
 from subprocess import run
 #from heal_track import Application
@@ -10,7 +11,7 @@ from subprocess import run
 
 window = Tk()
 window.title('ACCESS')
-window.configure(bg='RoyalBlue3')
+window.configure(bg='RoyalBlue4')
 
 def closeWindow():
     """
@@ -34,27 +35,26 @@ def validentry():
             closeWindow()
         else:
             messagebox.showinfo('INFO', 'Password or Username failed !')
-            window.destroy()
 
-labelname = Label(window, text='Enter username :',
+labelname = ttk.Label(window, text='Enter username :',
     font=('Times New Roman', 14, 'bold'),
-    foreground="white", background="RoyalBlue3")
+    foreground="white", background="RoyalBlue4")
 labelname.pack(pady=10)
 
 entryname = StringVar()
-namenter = Entry(window, textvariable=entryname)
+namenter = ttk.Entry(window, textvariable=entryname)
 namenter.pack(padx=10)
 
-labelpass = Label(window, text='Enter password :',
+labelpass = ttk.Label(window, text='Enter password :',
     font=('Times New Roman', 14, 'bold'),
-    foreground="white", background="RoyalBlue3")
+    foreground="white", background="RoyalBlue4")
 labelpass.pack(pady=10)
 
 entrypass = StringVar()
-passentry = Entry(window, textvariable=entrypass)
+passentry = ttk.Entry(window, textvariable=entrypass)
 passentry.pack(padx=10)
 
-buttonvalidate = Button(window, text='Validate',
+buttonvalidate = ttk.Button(window, text='Validate',
     command=validentry)
 buttonvalidate.pack(pady=10)
 

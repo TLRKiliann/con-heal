@@ -1204,7 +1204,6 @@ class Application(Frame):
             print("Error 2 : time to fucking time !!!", fuckingtime)
             messagebox.showinfo('Return', 'You will now return to the'
                 'application screen')
-            #self.master.destroy()
 
     def frameInfo(self):
         """

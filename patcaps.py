@@ -292,37 +292,37 @@ def callResident(self):
 
     self.x42, self.y42 = 429, 326
     self.b42=Button(self.can, width=18, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='aquamarine', text="Diagnostic + ATCD",
+        activebackground='dark turquoise', text="Diagnostic + ATCD",
         command=self.diag4)
     self.fb42=self.can.create_window(self.x42, self.y42, window=self.b42)
 
     self.x43, self.y43 = 597, 326
     self.b43=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='aquamarine', text="Treatments",
+        activebackground='dark turquoise', text="Treatments",
         command=self.tttMed4)
     self.fb43=self.can.create_window(self.x43, self.y43, window=self.b43)
 
     self.x44, self.y44 = 725, 326
     self.b44=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='aquamarine', text="Laboratory",
+        activebackground='dark turquoise', text="Laboratory",
         command=self.laboResult4)
     self.fb44=self.can.create_window(self.x44, self.y44, window=self.b44)
 
     self.x45, self.y45 = 853, 326
     self.b45=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='aquamarine', text="Medical Visit",
+        activebackground='dark turquoise', text="Medical Visit",
         command=self.visitMed4)
     self.fb45=self.can.create_window(self.x45, self.y45, window=self.b45)
 
     self.x46, self.y46 = 981, 326
     self.b46=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='aquamarine', text="Intolerance",
+        activebackground='dark turquoise', text="Intolerance",
         command=self.nutritionMenu4)
     self.fb46=self.can.create_window(self.x46, self.y46, window=self.b46)
 
     self.x47, self.y47 = 1109, 326
     self.b47=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='aquamarine', text="BMI",
+        activebackground='dark turquoise', text="BMI",
         command=self.calculB4)
     self.fb47=self.can.create_window(self.x47, self.y47, window=self.b47)
 
@@ -414,37 +414,37 @@ def callResident(self):
 
     self.x62, self.y62 = 429, 390
     self.b62=Button(self.can, width=18, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='aquamarine', text="Diagnostic + ATCD",
+        activebackground='dark turquoise', text="Diagnostic + ATCD",
         command=self.diag6)
     self.fb62=self.can.create_window(self.x62, self.y62, window=self.b62)
 
     self.x64, self.y64 = 597, 390
     self.b64=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='aquamarine', text="Treatments",
+        activebackground='dark turquoise', text="Treatments",
         command=self.tttMed6)
     self.fb64=self.can.create_window(self.x64, self.y64, window=self.b64)
 
     self.x65, self.y65 = 725, 390
     self.b65=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='aquamarine', text="Laboratory",
+        activebackground='dark turquoise', text="Laboratory",
         command=self.laboResult6)
     self.fb65=self.can.create_window(self.x65, self.y65, window=self.b65)
 
     self.x66, self.y66 = 853, 390
     self.b66=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='aquamarine', text="Medical Visit",
+        activebackground='dark turquoise', text="Medical Visit",
         command=self.visitMed6)
     self.fb66=self.can.create_window(self.x66, self.y66, window=self.b66)
 
     self.x67, self.y67 = 981, 390
     self.b67=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='aquamarine', text="Intolerance",
+        activebackground='dark turquoise', text="Intolerance",
         command=self.nutritionMenu6)
     self.fb67=self.can.create_window(self.x67, self.y67, window=self.b67)
 
     self.x68, self.y68 = 1109, 390
     self.b68=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='aquamarine', text="BMI",
+        activebackground='dark turquoise', text="BMI",
         command=self.calculB6)
     self.fb68=self.can.create_window(self.x68, self.y68, window=self.b68)
 
@@ -475,37 +475,37 @@ def callResident(self):
 
     self.x72, self.y72 = 429, 422
     self.b72=Button(self.can, width=18, font=16, bg='RoyalBlue4', fg='snow',
-        activebackground='MediumOrchid1', text="Diagnostic + ATCD",
+        activebackground='dark turquoise', text="Diagnostic + ATCD",
         command=self.diag7)
     self.fb72=self.can.create_window(self.x72, self.y72, window=self.b72)
 
     self.x73, self.y73 = 597, 422
     self.b73=Button(self.can, width=10, font=16, bg='RoyalBlue4', fg='snow',
-        activebackground='MediumOrchid1', text="Treatments",
+        activebackground='dark turquoise', text="Treatments",
         command=self.tttMed7)
     self.fb73=self.can.create_window(self.x73, self.y73, window=self.b73)
 
     self.x74, self.y74 = 725, 422
     self.b74=Button(self.can, width=10, font=16, bg='RoyalBlue4', fg='snow',
-        activebackground='MediumOrchid1', text="Laboratory",
+        activebackground='dark turquoise', text="Laboratory",
         command=self.laboResult7)
     self.fb74=self.can.create_window(self.x74, self.y74, window=self.b74)
 
     self.x75, self.y75 = 853, 422
     self.b75=Button(self.can, width=10, font=16, bg='RoyalBlue4', fg='snow',
-        activebackground='MediumOrchid1', text="Medical Visit",
+        activebackground='dark turquoise', text="Medical Visit",
         command=self.visitMed7)
     self.fb75=self.can.create_window(self.x75, self.y75, window=self.b75)
 
     self.x76, self.y76 = 981, 422
     self.b76=Button(self.can, width=10, font=16, bg='RoyalBlue4', fg='snow',
-        activebackground='MediumOrchid1', text="Intolerance",
+        activebackground='dark turquoise', text="Intolerance",
         command=self.nutritionMenu7)
     self.fb76=self.can.create_window(self.x76, self.y76, window=self.b76)
 
     self.x77, self.y77 = 1109, 422
     self.b77=Button(self.can, width=10, font=16, bg='RoyalBlue4', fg='snow',
-        activebackground='MediumOrchid1', text="BMI",
+        activebackground='dark turquoise', text="BMI",
         command=self.calculB7)
     self.fb77=self.can.create_window(self.x77, self.y77, window=self.b77)
 
@@ -597,37 +597,37 @@ def callResident(self):
 
     self.x92, self.y92 = 429, 486
     self.b92=Button(self.can, width=18, font=16, bg='RoyalBlue4', fg='white',
-        activebackground='yellow', text="Diagnostic + ATCD",
+        activebackground='dark turquoise', text="Diagnostic + ATCD",
         command=self.diag9)
     self.fb92=self.can.create_window(self.x92, self.y92, window=self.b92)
 
     self.x93, self.y93 = 597, 486
     self.b93=Button(self.can, width=10, font=16, bg='RoyalBlue4', fg='white',
-        activebackground='yellow', text="Treatments",
+        activebackground='dark turquoise', text="Treatments",
         command=self.tttMed9)
     self.fb93=self.can.create_window(self.x93, self.y93, window=self.b93)
 
     self.x94, self.y94 = 725, 486
     self.b94=Button(self.can, width=10, font=16, bg='RoyalBlue4', fg='white',
-        activebackground='yellow', text="Laboratory",
+        activebackground='dark turquoise', text="Laboratory",
         command=self.laboResult9)
     self.fb94=self.can.create_window(self.x94, self.y94, window=self.b94)
 
     self.x95, self.y95 = 853, 486
     self.b95=Button(self.can, width=10, font=16, bg='RoyalBlue4', fg='white',
-        activebackground='yellow', text="Medical Visit",
+        activebackground='dark turquoise', text="Medical Visit",
         command=self.visitMed9)
     self.fb95=self.can.create_window(self.x95, self.y95, window=self.b95)
 
     self.x96, self.y96 = 981, 486
     self.b96=Button(self.can, width=10, font=16, bg='RoyalBlue4', fg='white',
-        activebackground='yellow', text="Intolerance",
+        activebackground='dark turquoise', text="Intolerance",
         command=self.nutritionMenu9)
     self.fb96=self.can.create_window(self.x96, self.y96, window=self.b96)
 
     self.x97, self.y97 = 1109, 486
     self.b97=Button(self.can, width=10, font=16, bg='RoyalBlue4', fg='white',
-        activebackground='yellow', text="BMI",
+        activebackground='dark turquoise', text="BMI",
         command=self.calculB9)
     self.fb97=self.can.create_window(self.x97, self.y97, window=self.b97)
 
@@ -658,37 +658,37 @@ def callResident(self):
 
     self.x102, self.y102 = 429, 518
     self.b102=Button(self.can, width=18, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='MediumOrchid1', text="Diagnostic + ATCD",
+        activebackground='dark turquoise', text="Diagnostic + ATCD",
         command=self.diag10)
     self.fb102=self.can.create_window(self.x102, self.y102, window=self.b102)
 
     self.x103, self.y103 = 597, 518
     self.b103=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='MediumOrchid1', text="Treatments",
+        activebackground='dark turquoise', text="Treatments",
         command=self.tttMed10)
     self.fb103=self.can.create_window(self.x103, self.y103, window=self.b103)
 
     self.x104, self.y104 = 725, 518
     self.b104=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='MediumOrchid1', text="Laboratory",
+        activebackground='dark turquoise', text="Laboratory",
         command=self.laboResult10)
     self.fb104=self.can.create_window(self.x104, self.y104, window=self.b104)
 
     self.x105, self.y105 = 853, 518
     self.b105=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='MediumOrchid1', text="Medical Visit",
+        activebackground='dark turquoise', text="Medical Visit",
         command=self.visitMed10)
     self.fb105=self.can.create_window(self.x105, self.y105, window=self.b105)
 
     self.x106, self.y106 = 981, 518
     self.b106=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='MediumOrchid1', text="Intolerance",
+        activebackground='dark turquoise', text="Intolerance",
         command=self.nutritionMenu10)
     self.fb106=self.can.create_window(self.x106, self.y106, window=self.b106)
 
     self.x107, self.y107 = 1109, 518
     self.b107=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='MediumOrchid1', text="BMI",
+        activebackground='dark turquoise', text="BMI",
         command=self.calculB10)
     self.fb107=self.can.create_window(self.x107, self.y107, window=self.b107)
 
@@ -780,37 +780,37 @@ def callResident(self):
 
     self.x122, self.y122 = 429, 582
     self.b122=Button(self.can, width=18, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='yellow', text="Diagnostic + ATCD",
+        activebackground='dark turquoise', text="Diagnostic + ATCD",
         command=self.diag12)
     self.fb122=self.can.create_window(self.x122, self.y122, window=self.b122)
 
     self.x123, self.y123 = 597, 582
     self.b123=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='yellow', text="Treatments",
+        activebackground='dark turquoise', text="Treatments",
         command=self.tttMed12)
     self.fb123=self.can.create_window(self.x123, self.y123, window=self.b123)
 
     self.x124, self.y124 = 725, 582
     self.b124=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='yellow', text="Laboratory",
+        activebackground='dark turquoise', text="Laboratory",
         command=self.laboResult12)
     self.fb124=self.can.create_window(self.x124, self.y124, window=self.b124)
 
     self.x125, self.y125 = 853, 582
     self.b125=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='yellow', text="Medical Visit",
+        activebackground='dark turquoise', text="Medical Visit",
         command=self.visitMed12)
     self.fb125=self.can.create_window(self.x125, self.y125, window=self.b125)
 
     self.x126, self.y126 = 981, 582
     self.b126=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='yellow', text="Intolerance",
+        activebackground='dark turquoise', text="Intolerance",
         command=self.nutritionMenu12)
     self.fb126=self.can.create_window(self.x126, self.y126, window=self.b126)
 
     self.x127, self.y127 = 1109, 582
     self.b127=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='yellow', text="BMI",
+        activebackground='dark turquoise', text="BMI",
         command=self.calculB12)
     self.fb127=self.can.create_window(self.x127, self.y127, window=self.b127)
 
@@ -841,37 +841,37 @@ def callResident(self):
 
     self.x132, self.y132 = 429, 614
     self.b132=Button(self.can, width=18, font=16, bg='RoyalBlue4', fg='white',
-        activebackground='MediumOrchid1', text="Diagnostic + ATCD",
+        activebackground='dark turquoise', text="Diagnostic + ATCD",
         command=self.diag13)
     self.fb132=self.can.create_window(self.x132, self.y132, window=self.b132)
 
     self.x133, self.y133 = 597, 614
     self.b133=Button(self.can, width=10, font=16, bg='RoyalBlue4', fg='white',
-        activebackground='MediumOrchid1', text="Treatments",
+        activebackground='dark turquoise', text="Treatments",
         command=self.tttMed13)
     self.fb133=self.can.create_window(self.x133, self.y133, window=self.b133)
 
     self.x134, self.y134 = 725, 614
     self.b134=Button(self.can, width=10, font=16, bg='RoyalBlue4', fg='white',
-        activebackground='MediumOrchid1', text="Laboratory",
+        activebackground='dark turquoise', text="Laboratory",
         command=self.laboResult13)
     self.fb134=self.can.create_window(self.x134, self.y134, window=self.b134)
 
     self.x135, self.y135 = 853, 614
     self.b135=Button(self.can, width=10, font=16, bg='RoyalBlue4', fg='white',
-        activebackground='MediumOrchid1', text="Medical Visit",
+        activebackground='dark turquoise', text="Medical Visit",
         command=self.visitMed13)
     self.fb135=self.can.create_window(self.x135, self.y135, window=self.b135)
 
     self.x136, self.y136 = 981, 614
     self.b136=Button(self.can, width=10, font=16, bg='RoyalBlue4', fg='white',
-        activebackground='MediumOrchid1', text="Intolerance",
+        activebackground='dark turquoise', text="Intolerance",
         command=self.nutritionMenu13)
     self.fb136=self.can.create_window(self.x136, self.y136, window=self.b136)
 
     self.x137, self.y137 = 1109, 614
     self.b137=Button(self.can, width=10, font=16, bg='RoyalBlue4', fg='white',
-        activebackground='MediumOrchid1', text="BMI",
+        activebackground='dark turquoise', text="BMI",
         command=self.calculB13)
     self.fb137=self.can.create_window(self.x137, self.y137, window=self.b137)
 
@@ -963,37 +963,37 @@ def callResident(self):
 
     self.x152, self.y152 = 429, 678
     self.b152=Button(self.can, width=18, font=16, bg='RoyalBlue4', fg='white',
-        activebackground='yellow', text="Diagnostic + ATCD",
+        activebackground='dark turquoise', text="Diagnostic + ATCD",
         command=self.diag15)
     self.fb152=self.can.create_window(self.x152, self.y152, window=self.b152)
 
     self.x153, self.y153 = 597, 678
     self.b153=Button(self.can, width=10, font=16, bg='RoyalBlue4', fg='white',
-        activebackground='yellow', text="Treatments",
+        activebackground='dark turquoise', text="Treatments",
         command=self.tttMed15)
     self.fb153=self.can.create_window(self.x153, self.y153, window=self.b153)
 
     self.x154, self.y154 = 725, 678
     self.b154=Button(self.can, width=10, font=16, bg='RoyalBlue4', fg='white',
-        activebackground='yellow', text="Laboratory",
+        activebackground='dark turquoise', text="Laboratory",
         command=self.laboResult15)
     self.fb154=self.can.create_window(self.x154, self.y154, window=self.b154)
 
     self.x155, self.y155 = 853, 678
     self.b155=Button(self.can, width=10, font=16, bg='RoyalBlue4', fg='white',
-        activebackground='yellow', text="Medical Visit",
+        activebackground='dark turquoise', text="Medical Visit",
         command=self.visitMed15)
     self.fb155=self.can.create_window(self.x155, self.y155, window=self.b155)
 
     self.x156, self.y156 = 981, 678
     self.b156=Button(self.can, width=10, font=16, bg='RoyalBlue4', fg='white',
-        activebackground='yellow', text="Intolerance",
+        activebackground='dark turquoise', text="Intolerance",
         command=self.nutritionMenu15)
     self.fb156=self.can.create_window(self.x156, self.y156, window=self.b156)
 
     self.x157, self.y157 = 1109, 678
     self.b157=Button(self.can, width=10, font=16, bg='RoyalBlue4', fg='white',
-        activebackground='yellow', text="BMI",
+        activebackground='dark turquoise', text="BMI",
         command=self.calculB15)
     self.fb157=self.can.create_window(self.x157, self.y157, window=self.b157)
 
@@ -1024,37 +1024,37 @@ def callResident(self):
 
     self.x162, self.y162 = 429, 710
     self.b162=Button(self.can, width=18, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='MediumOrchid1', text="Diagnostic + ATCD",
+        activebackground='dark turquoise', text="Diagnostic + ATCD",
         command=self.diag16)
     self.fb162=self.can.create_window(self.x162, self.y162, window=self.b162)
 
     self.x163, self.y163 = 597, 710
     self.b163=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='MediumOrchid1', text="Treatments",
+        activebackground='dark turquoise', text="Treatments",
         command=self.tttMed16)
     self.fb163=self.can.create_window(self.x163, self.y163, window=self.b163)
 
     self.x164, self.y164 = 725, 710
     self.b164=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='MediumOrchid1', text="Laboratory",
+        activebackground='dark turquoise', text="Laboratory",
         command=self.laboResult16)
     self.fb164=self.can.create_window(self.x164, self.y164, window=self.b164)
 
     self.x165, self.y165 = 853, 710
     self.b165=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='MediumOrchid1', text="Medical Visit",
+        activebackground='dark turquoise', text="Medical Visit",
         command=self.visitMed16)
     self.fb165=self.can.create_window(self.x165, self.y165, window=self.b165)
 
     self.x166, self.y166 = 981, 710
     self.b166=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='MediumOrchid1', text="Intolerance",
+        activebackground='dark turquoise', text="Intolerance",
         command=self.nutritionMenu16)
     self.fb166=self.can.create_window(self.x166, self.y166, window=self.b166)
 
     self.x167, self.y167 = 1109, 710
     self.b167=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='MediumOrchid1', text="BMI",
+        activebackground='dark turquoise', text="BMI",
         command=self.calculB16)
     self.fb167=self.can.create_window(self.x167, self.y167, window=self.b167)
 
@@ -1146,37 +1146,37 @@ def callResident(self):
 
     self.x182, self.y182 = 429, 774
     self.b182=Button(self.can, width=18, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='yellow', text="Diagnostic + ATCD",
+        activebackground='dark turquoise', text="Diagnostic + ATCD",
         command=self.diag18)
     self.fb182=self.can.create_window(self.x182, self.y182, window=self.b182)
 
     self.x183, self.y183 = 597, 774
     self.b183=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='yellow', text="Treatments",
+        activebackground='dark turquoise', text="Treatments",
         command=self.tttMed18)
     self.fb183=self.can.create_window(self.x183, self.y183, window=self.b183)
 
     self.x184, self.y184 = 725, 774
     self.b184=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='yellow', text="Laboratory",
+        activebackground='dark turquoise', text="Laboratory",
         command=self.laboResult18)
     self.fb184=self.can.create_window(self.x184, self.y184, window=self.b184)
 
     self.x185, self.y185 = 853, 774
     self.b185=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='yellow', text="Medical Visit",
+        activebackground='dark turquoise', text="Medical Visit",
         command=self.visitMed18)
     self.fb185=self.can.create_window(self.x185, self.y185, window=self.b185)
 
     self.x186, self.y186 = 981, 774
     self.b186=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='yellow', text="Intolerance",
+        activebackground='dark turquoise', text="Intolerance",
         command=self.nutritionMenu18)
     self.fb186=self.can.create_window(self.x186, self.y186, window=self.b186)
 
     self.x187, self.y187 = 1109, 774
     self.b187=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='yellow', text="BMI",
+        activebackground='dark turquoise', text="BMI",
         command=self.calculB18)
     self.fb187=self.can.create_window(self.x187, self.y187, window=self.b187)
 
@@ -1207,37 +1207,37 @@ def callResident(self):
 
     self.x192, self.y192 = 429, 806
     self.b192=Button(self.can, width=18, font=16, bg='RoyalBlue4', fg='white',
-        activebackground='MediumOrchid1', text="Diagnostic + ATCD",
+        activebackground='dark turquoise', text="Diagnostic + ATCD",
         command=self.diag19)
     self.fb192=self.can.create_window(self.x192, self.y192, window=self.b192)
 
     self.x193, self.y193 = 597, 806
     self.b193=Button(self.can, width=10, font=16, bg='RoyalBlue4', fg='white',
-        activebackground='MediumOrchid1', text="Treatments",
+        activebackground='dark turquoise', text="Treatments",
         command=self.tttMed19)
     self.fb193=self.can.create_window(self.x193, self.y193, window=self.b193)
 
     self.x194, self.y194 = 725, 806
     self.b194=Button(self.can, width=10, font=16, bg='RoyalBlue4', fg='white',
-        activebackground='MediumOrchid1', text="Laboratory",
+        activebackground='dark turquoise', text="Laboratory",
         command=self.laboResult19)
     self.fb194=self.can.create_window(self.x194, self.y194, window=self.b194)
 
     self.x195, self.y195 = 853, 806
     self.b195=Button(self.can, width=10, font=16, bg='RoyalBlue4', fg='white',
-        activebackground='MediumOrchid1', text="Medical Visit",
+        activebackground='dark turquoise', text="Medical Visit",
         command=self.visitMed19)
     self.fb195=self.can.create_window(self.x195, self.y195, window=self.b195)
 
     self.x196, self.y196 = 981, 806
     self.b196=Button(self.can, width=10, font=16, bg='RoyalBlue4', fg='white',
-        activebackground='MediumOrchid1', text="Intolerance",
+        activebackground='dark turquoise', text="Intolerance",
         command=self.nutritionMenu19)
     self.fb196=self.can.create_window(self.x196, self.y196, window=self.b196)
 
     self.x197, self.y197 = 1109, 806
     self.b197=Button(self.can, width=10, font=16, bg='RoyalBlue4', fg='white',
-        activebackground='MediumOrchid1', text="BMI",
+        activebackground='dark turquoise', text="BMI",
         command=self.calculB19)
     self.fb197=self.can.create_window(self.x197, self.y197, window=self.b197)
 
@@ -1329,37 +1329,37 @@ def callResident(self):
 
     self.x212, self.y212 = 429, 870
     self.b212=Button(self.can, width=18, font=16, bg='RoyalBlue4', fg='white',
-        activebackground='yellow', text="Diagnostic + ATCD",
+        activebackground='dark turquoise', text="Diagnostic + ATCD",
         command=self.diag21)
     self.fb212=self.can.create_window(self.x212, self.y212, window=self.b212)
 
     self.x213, self.y213 = 597, 870
     self.b213=Button(self.can, width=10, font=16, bg='RoyalBlue4', fg='white',
-        activebackground='yellow', text="Treatments",
+        activebackground='dark turquoise', text="Treatments",
         command=self.tttMed21)
     self.fb213=self.can.create_window(self.x213, self.y213, window=self.b213)
 
     self.x214, self.y214 = 725, 870
     self.b214=Button(self.can, width=10, font=16, bg='RoyalBlue4', fg='white',
-        activebackground='yellow', text="Laboratory",
+        activebackground='dark turquoise', text="Laboratory",
         command=self.laboResult21)
     self.fb214=self.can.create_window(self.x214, self.y214, window=self.b214)
 
     self.x215, self.y215 = 853, 870
     self.b215=Button(self.can, width=10, font=16, bg='RoyalBlue4', fg='white',
-        activebackground='yellow', text="Medical Visit",
+        activebackground='dark turquoise', text="Medical Visit",
         command=self.visitMed21)
     self.fb215=self.can.create_window(self.x215, self.y215, window=self.b215)
 
     self.x216, self.y216 = 981, 870
     self.b216=Button(self.can, width=10, font=16, bg='RoyalBlue4', fg='white',
-        activebackground='yellow', text="Intolerance",
+        activebackground='dark turquoise', text="Intolerance",
         command=self.nutritionMenu21)
     self.fb216=self.can.create_window(self.x216, self.y216, window=self.b216)
 
     self.x217, self.y217 = 1109, 870
     self.b217=Button(self.can, width=10, font=16, bg='RoyalBlue4', fg='white',
-        activebackground='yellow', text="BMI",
+        activebackground='dark turquoise', text="BMI",
         command=self.calculB21)
     self.fb217=self.can.create_window(self.x217, self.y217, window=self.b217)
 
@@ -1390,37 +1390,37 @@ def callResident(self):
 
     self.x222, self.y222 = 429, 902
     self.b222=Button(self.can, width=18, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='MediumOrchid1', text="Diagnostic + ATCD",
+        activebackground='dark turquoise', text="Diagnostic + ATCD",
         command=self.diag22)
     self.fb222=self.can.create_window(self.x222, self.y222, window=self.b222)
 
     self.x223, self.y223 = 597, 902
     self.b223=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='MediumOrchid1', text="Treatments",
+        activebackground='dark turquoise', text="Treatments",
         command=self.tttMed22)
     self.fb223=self.can.create_window(self.x223, self.y223, window=self.b223)
 
     self.x224, self.y224 = 725, 902
     self.b224=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='MediumOrchid1', text="Laboratory",
+        activebackground='dark turquoise', text="Laboratory",
         command=self.laboResult22)
     self.fb224=self.can.create_window(self.x224, self.y224, window=self.b224)
 
     self.x225, self.y225 = 853, 902
     self.b225=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='MediumOrchid1', text="Medical Visit",
+        activebackground='dark turquoise', text="Medical Visit",
         command=self.visitMed22)
     self.fb225=self.can.create_window(self.x225, self.y225, window=self.b225)
 
     self.x226, self.y226 = 981, 902
     self.b226=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='MediumOrchid1', text="Intolerance",
+        activebackground='dark turquoise', text="Intolerance",
         command=self.nutritionMenu22)
     self.fb226=self.can.create_window(self.x226, self.y226, window=self.b226)
 
     self.x227, self.y227 = 1109, 902
     self.b227=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='MediumOrchid1', text="BMI",
+        activebackground='dark turquoise', text="BMI",
         command=self.calculB22)
     self.fb227=self.can.create_window(self.x227, self.y227, window=self.b227)
 
@@ -1512,37 +1512,37 @@ def callResident(self):
 
     self.x242, self.y242 = 429, 966
     self.b242=Button(self.can, width=18, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='yellow', text="Diagnostic + ATCD",
+        activebackground='dark turquoise', text="Diagnostic + ATCD",
         command=self.diag24)
     self.fb242=self.can.create_window(self.x242, self.y242, window=self.b242)
 
     self.x243, self.y243 = 597, 966
     self.b243=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='yellow', text="Treatments",
+        activebackground='dark turquoise', text="Treatments",
         command=self.tttMed24)
     self.fb243=self.can.create_window(self.x243, self.y243, window=self.b243)
 
     self.x244, self.y244 = 725, 966
     self.b244=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='yellow', text="Laboratory",
+        activebackground='dark turquoise', text="Laboratory",
         command=self.laboResult24)
     self.fb244=self.can.create_window(self.x244, self.y244, window=self.b244)
 
     self.x245, self.y245 = 853, 966
     self.b245=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='yellow', text="Medical Visit",
+        activebackground='dark turquoise', text="Medical Visit",
         command=self.visitMed24)
     self.fb245=self.can.create_window(self.x245, self.y245, window=self.b245)
 
     self.x246, self.y246 = 981, 966
     self.b246=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='yellow', text="Intolerance",
+        activebackground='dark turquoise', text="Intolerance",
         command=self.nutritionMenu24)
     self.fb246=self.can.create_window(self.x246, self.y246, window=self.b246)
 
     self.x247, self.y247 = 1109, 966
     self.b247=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='cyan',
-        activebackground='yellow', text="BMI",
+        activebackground='dark turquoise', text="BMI",
         command=self.calculB24)
     self.fb247=self.can.create_window(self.x247, self.y247, window=self.b247)
 

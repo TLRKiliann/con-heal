@@ -6,7 +6,6 @@ from tkinter import *
 from tkinter import ttk
 from tkinter import messagebox
 from subprocess import run
-#from heal_track import Application
 
 
 window = Tk()
@@ -19,7 +18,6 @@ def closeWindow():
         heal_track.py !
     """
     window.destroy()
-    #Application()
 
 def validentry():
     """
@@ -31,7 +29,7 @@ def validentry():
     MSGBox = messagebox.askyesno('INFO', 'Do you want to validate for access ?')
     if MSGBox == 1:
         if entryname.get() == "ck" and entrypass.get() == "123":
-            messagebox.showinfo('INFO', 'Right, you get access !')
+            messagebox.showinfo('INFO', 'Ok ! You get access !')
             closeWindow()
         else:
             messagebox.showinfo('INFO', 'Password or Username failed !')

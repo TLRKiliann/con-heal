@@ -11,7 +11,6 @@ from patcaps import callResident
 from backapp import *
 import passw
 
-
 class ScrollCanvas(Frame):
     """
         To prepare ScrollBar for main application.

@@ -1,11 +1,13 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
+
 """
 Interface pour calculer le BMI
 Avec indication si trop haut ou
 trop bas
 """
+
 
 from tkinter import *
 import tkinter
@@ -19,31 +21,62 @@ import io
 import shutil
 
 
+gui = Tk()
+gui.title('BMI calculator')
+gui.configure(background='RoyalBlue4')
+
+labelTitle = Label(gui, text="BMI calculator", font='Arial 18 bold', 
+    fg='aquamarine', bg='RoyalBlue4')
+labelTitle.grid(row=0, column=1, columnspan=2, pady=10)
+
+textDate = Label(gui, text="Date : ",
+    font=18, width=20, fg='cyan', bg='RoyalBlue4', anchor='e')
+textDate.grid(row=1, column=1)
+
+textHour = Label(gui, text="Heure : ",
+    font=18, width=20, fg='cyan', bg='RoyalBlue4', anchor='e')
+textHour.grid(row=2, column=1)
+
+textName = Label(gui, text="Nom du patient : ",
+    font=18, width=20, fg='cyan', bg='RoyalBlue4', anchor='e')
+textName.grid(row=3, column=1)
+
+labelNum1 = Label(gui, text="Entrez le poids en Kg : ",
+    font=18, width=20, fg='cyan', bg='RoyalBlue4', anchor='e')
+labelNum1.grid(row=4, column=1)
+
+labelNum2 = Label(gui, text="Entrez la taille en M : ",
+    font=18, width=20, fg='cyan', bg='RoyalBlue4', anchor='e')
+labelNum2.grid(row=5, column=1)
+
 def call_result(textBox, number1, number2):
-    textBox.delete("0.0", END)
-    num1 = float(number1.get())
-    num2 = float(number2.get())
-    result = (num1)/(num2*num2)
-    if result <= 18.5:
-        textBox.insert(INSERT, "Vous êtes en souspoids.\n"
-                                 "Votre BMI (IMC) est de : %d" % result)
-        return
-    elif result >= 18.5 and result <= 25:
-        textBox.insert(INSERT, "Votre BMI est dans les normes.\n"
-                                 "Votre BMI (IMC) est de : %d" % result)
-        return
-    elif result >= 18.5 and result <= 25:
-        textBox.insert(INSERT, "Votre BMI est dans les normes.\n"
-                                 "Votre BMI (IMC) est de : %d" % result)
-        return
-    else:
-        textBox.insert(INSERT, "Vous êtes en surpoids.\n"
-                                 "Votre BMI (IMC) est de : %d" % result)  
-        return
+    try:
+        textBox.delete("0.0", END)
+        num1 = float(number1.get())
+        num2 = float(number2.get())
+        result = (num1)/(num2*num2)
+        if result <= 18.5:
+            textBox.insert(INSERT, "Vous êtes en souspoids.\n"
+                                     "Votre BMI (IMC) est de : %d" % result)
+            return
+        elif result >= 18.5 and result <= 25:
+            textBox.insert(INSERT, "Votre BMI est dans les normes.\n"
+                                     "Votre BMI (IMC) est de : %d" % result)
+            return
+        elif result >= 18.5 and result <= 25:
+            textBox.insert(INSERT, "Votre BMI est dans les normes.\n"
+                                     "Votre BMI (IMC) est de : %d" % result)
+            return
+        else:
+            textBox.insert(INSERT, "Vous êtes en surpoids.\n"
+                                     "Votre BMI (IMC) est de : %d" % result)  
+            return
+    except ValueError as val_err:
+        print("+ An error has occured !", val_err)
 
 def buttRecord():
     """
-    To enter BMI in an text zone entry
+        To enter BMI in an text zone entry
     """
     num1 = float((number1.get()))
     num2 = float((number2.get()))
@@ -129,7 +162,7 @@ def readBmi():
 
 def buttdel():
     """
-    To earase last data if the usr would to delete it.
+        To earase last data if the usr would to delete it.
     """
     messagebox.showwarning("Warning", "Are you sure to delete last record !")
     MSB_War = messagebox.askyesno('Warning', '!!! Warning !!! If you' \
@@ -165,41 +198,6 @@ def buttdel():
     else:
         MSBSHOW = messagebox.showinfo('Info', 'Ok, no data was deleted.')
 
-# To read name of patient for entry widget
-with open('./newpatient/entryfile2.txt', 'r') as filename:
-    line1=filename.readline()
-
-gui = Tk()
-gui.title('BMI calculator')
-gui.configure(background='RoyalBlue4')
-
-labelTitle = Label(gui, text="BMI calculator", font='Arial 18 bold', 
-    fg='aquamarine', bg='RoyalBlue4')
-labelTitle.grid(row=0, column=1, columnspan=2, pady=10)
-
-number1 = StringVar()
-number2 = StringVar()
-
-textDate = Label(gui, text="Date : ",
-    font=18, width=20, fg='cyan', bg='RoyalBlue4', anchor='e')
-textDate.grid(row=1, column=1)
-
-textHour = Label(gui, text="Heure : ",
-    font=18, width=20, fg='cyan', bg='RoyalBlue4', anchor='e')
-textHour.grid(row=2, column=1)
-
-textName = Label(gui, text="Nom du patient : ",
-    font=18, width=20, fg='cyan', bg='RoyalBlue4', anchor='e')
-textName.grid(row=3, column=1)
-
-labelNum1 = Label(gui, text="Entrez le poids en Kg : ",
-    font=18, width=20, fg='cyan', bg='RoyalBlue4', anchor='e')
-labelNum1.grid(row=4, column=1)
-
-labelNum2 = Label(gui, text="Entrez la taille en M : ",
-    font=18, width=20, fg='cyan', bg='RoyalBlue4', anchor='e')
-labelNum2.grid(row=5, column=1)
-
 textDate = Entry(gui)
 time_string = IntVar() 
 textDate = Entry(textvariable=time_string, highlightbackground='gray', bd=4)
@@ -212,16 +210,24 @@ textHour = Entry(textvariable=time_Htring, highlightbackground='gray', bd=4)
 time_Htring.set(time.strftime("%H:%M:%S"))
 textHour.grid(row=2, column=2, padx=10)
 
+# To read name of patient for entry widget
+with open('./newpatient/entryfile2.txt', 'r') as filename:
+    line1=filename.readline()
+
 textName = Entry(gui)
 name_text = StringVar()
 textName = Entry(textvariable=name_text, highlightbackground='gray', bd=4)
 name_text.set(line1)
 textName.grid(row=3, column=2, padx=10)
 
+number1 = StringVar()
+
 entryNum1 = Entry(gui)
 number1 = StringVar()
 entryNum1 = Entry(gui, textvariable=number1, highlightbackground='gray', bd=4)
 entryNum1.grid(row=4, column=2, padx=10)
+
+number2 = StringVar()
 
 entryNum2 = Entry(gui)
 number2 = StringVar()

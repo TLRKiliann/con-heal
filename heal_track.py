@@ -237,7 +237,7 @@ class MenuBar(Frame):
         me1.add_command(label='Accueil', underline=0, font=("Times 14 bold"),
             background='black',activebackground='aquamarine',
             foreground='aquamarine', activeforeground='black',
-            command=boss.upDateAll)
+            command=boss.framShow)
         me1.add_command(label="Textbox", underline=0, font=("Times 14 bold"),
             background='black', activebackground='cyan',
             foreground='aquamarine', activeforeground='black',
@@ -1173,6 +1173,15 @@ class Application(Frame):
 
         self.pack()
 
+    def framShow(self):
+        """
+            To update without
+            re-enter id and passwd
+        """
+        self.can.delete(ALL)
+        self.master.destroy()
+        Application.__init__(self)
+
     # Method to reconfigure scrollbar every time.
     def onFrameConfigure(self, event):
         '''Reset the scroll region to encompass the inner frame'''
@@ -1187,8 +1196,8 @@ class Application(Frame):
             current_time = time.strftime("%H:%M:%S %p")
             self.clock_label.configure(text=current_time)
             self.master.after(200, self.display_time)
-        except:
-            ("Error : time to fucking time !!!")
+        except OSError as os_err:
+            ("Error : time to fucking time !!!", os_err)
 
     def msgExit(self):
         """
@@ -2150,10 +2159,9 @@ class Application(Frame):
             To reset app by pressing 
             refresh button. Close,
             open directly and update
-            data.
+            data from patcaps.py !
         """
-        self.master.destroy()
-        subprocess.call('./heal_track.py')
+        self.showPatients()
 
 if __name__=='__main__':
     app = Application()

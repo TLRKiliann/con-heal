@@ -28,7 +28,7 @@ def validentry():
     passentry = entrypass.get()
     MSGBox = messagebox.askyesno('INFO', 'Do you want to validate for access ?')
     if MSGBox == 1:
-        if entryname.get() == "ck" and entrypass.get() == "123":
+        if entryname.get() == "root" and entrypass.get() == "root":
             messagebox.showinfo('INFO', 'Ok ! You get access !')
             closeWindow()
         # To escape close window...

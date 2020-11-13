@@ -12,6 +12,17 @@ window = Tk()
 window.title('ACCESS')
 window.configure(bg='RoyalBlue4')
 
+def hangonwin():
+	"""
+	    For security
+	    this function
+	    prevent to close
+	    window by x button
+	"""
+	window.update()
+
+window.protocol('WM_DELETE_WINDOW', hangonwin)
+
 def closeWindow():
     """
         Class call from 
@@ -25,15 +36,12 @@ def validentry():
         from user.
     """
     namenter = entryname.get()
-    passentry = entrypass.get()
+    passentry = getpass.get()
     MSGBox = messagebox.askyesno('INFO', 'Do you want to validate for access ?')
     if MSGBox == 1:
-        if entryname.get() == "root" and entrypass.get() == "root":
+        if entryname.get() == "root" and getpass.get() == "root":
             messagebox.showinfo('INFO', 'Ok ! You get access !')
             closeWindow()
-        # To escape close window...
-        elif window == 0:
-            messagebox.showwarning("Warning", "You couldn't close window !")
         else:
             messagebox.showwarning("Warning", "Password or Username failed !")
 
@@ -51,8 +59,8 @@ labelpass = ttk.Label(window, text='Enter password :',
     foreground="white", background="RoyalBlue4")
 labelpass.pack(pady=10)
 
-entrypass = StringVar()
-passentry = ttk.Entry(window, textvariable=entrypass)
+getpass = StringVar()
+passentry = ttk.Entry(window, textvariable=getpass, show='*')
 passentry.pack(padx=10)
 
 buttonvalidate = ttk.Button(window, text='Validate',

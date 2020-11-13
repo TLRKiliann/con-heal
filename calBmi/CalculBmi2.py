@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#!-*-encoding:utf-8-*-
+# -*- coding: utf-8 -*-
 
 """
 Interface pour calculer le BMI
@@ -20,23 +20,24 @@ import shutil
 
 
 def call_result(textBox, number1, number2):
-    num1 = float((number1.get()))
-    num2 = float((number2.get()))
+    textBox.delete("0.0", END)
+    num1 = float(number1.get())
+    num2 = float(number2.get())
     result = (num1)/(num2*num2)
-    if result<=18.5:
-        textBox.config(text="Vous êtes en souspoids.\n"
+    if result <= 18.5:
+        textBox.insert(INSERT, "Vous êtes en souspoids.\n"
                                  "Votre BMI (IMC) est de : %d" % result)
         return
     elif result >= 18.5 and result <= 25:
-        textBox.config(text="Votre BMI est dans les normes.\n"
+        textBox.insert(INSERT, "Votre BMI est dans les normes.\n"
                                  "Votre BMI (IMC) est de : %d" % result)
         return
     elif result >= 18.5 and result <= 25:
-        textBox.config(text="Votre BMI est dans les normes.\n"
+        textBox.insert(INSERT, "Votre BMI est dans les normes.\n"
                                  "Votre BMI (IMC) est de : %d" % result)
         return
     else:
-        textBox.config(text="Vous êtes en surpoids.\n"
+        textBox.insert(INSERT, "Vous êtes en surpoids.\n"
                                  "Votre BMI (IMC) est de : %d" % result)  
         return
 
@@ -130,6 +131,7 @@ def buttdel():
     """
     To earase last data if the usr would to delete it.
     """
+    messagebox.showwarning("Warning", "Are you sure to delete last record !")
     MSB_War = messagebox.askyesno('Warning', '!!! Warning !!! If you' \
         'continue, last result will be delete !!!')
     if MSB_War == 1:
@@ -168,10 +170,10 @@ with open('./newpatient/entryfile2.txt', 'r') as filename:
     line1=filename.readline()
 
 gui = Tk()
-gui.title('Simple BMI calculator')
+gui.title('BMI calculator')
 gui.configure(background='RoyalBlue4')
 
-labelTitle = Label(gui, text="Simple BMI", font='Arial 18 bold', 
+labelTitle = Label(gui, text="BMI calculator", font='Arial 18 bold', 
     fg='aquamarine', bg='RoyalBlue4')
 labelTitle.grid(row=0, column=1, columnspan=2, pady=10)
 
@@ -202,75 +204,74 @@ textDate = Entry(gui)
 time_string = IntVar() 
 textDate = Entry(textvariable=time_string, highlightbackground='gray', bd=4)
 time_string.set(time.strftime("%d-%m-%Y"))
-textDate.grid(row=1, column=2)
+textDate.grid(row=1, column=2, padx=10)
 
 textHour = Entry(gui)
 time_Htring = IntVar()
 textHour = Entry(textvariable=time_Htring, highlightbackground='gray', bd=4)
 time_Htring.set(time.strftime("%H:%M:%S"))
-textHour.grid(row=2, column=2)
+textHour.grid(row=2, column=2, padx=10)
 
 textName = Entry(gui)
 name_text = StringVar()
 textName = Entry(textvariable=name_text, highlightbackground='gray', bd=4)
 name_text.set(line1)
-textName.grid(row=3, column=2)
+textName.grid(row=3, column=2, padx=10)
 
 entryNum1 = Entry(gui)
 number1 = StringVar()
 entryNum1 = Entry(gui, textvariable=number1, highlightbackground='gray', bd=4)
-entryNum1.grid(row=4, column=2)
+entryNum1.grid(row=4, column=2, padx=10)
 
 entryNum2 = Entry(gui)
 number2 = StringVar()
 entryNum2 = Entry(gui, textvariable=number2, highlightbackground='gray', bd=4)
-entryNum2.grid(row=5, column=2)
+entryNum2.grid(row=5, column=2, padx=10)
 
-textBox = Label(gui, height=3, width=40, font=12, relief=SUNKEN)
-textBox.grid(row=6, column=1, columnspan=2, pady=10)
+textBox = Text(gui, height=3, width=30, font=12, relief=SUNKEN)
+textBox.grid(row=6, column=1, columnspan=2, padx=10, pady=10)
 
 call_result = partial(call_result, textBox, number1, number2)
 
-buttonCal = Button(gui, text="1-Calcul", width=12, bd=3,
-    fg='yellow', bg='RoyalBlue3', activeforeground='gray40',
+buttonCal = Button(gui, text="Calculate", width=35, bd=3,
+    fg='white', bg='RoyalBlue3', activeforeground='gray40',
     activebackground='turquoise2', highlightbackground='cyan',
     command=call_result)
-buttonCal.grid(sticky='w', row=10, column=1)
+buttonCal.grid(row=7, column=1, columnspan=2, padx=10)
 
-buttonSave = Button(gui, text="2-Save", width=12, bd=3, 
+buttonSave = Button(gui, text="Save", width=12, bd=3, 
     fg='yellow', bg='RoyalBlue3', activeforeground='gray40',
-    activebackground='turquoise2', highlightbackground='cyan',
+    activebackground='turquoise2', highlightbackground='RoyalBlue3',
     command=buttRecord)
-buttonSave.grid(sticky='w', row=11, column=1)
+buttonSave.grid(sticky='w', row=10, column=1, padx=10, pady=10)
 
 buttonCancel = Button(gui, text="Cancel last check", width=12,
-    bd=3, fg='white', bg='coral', activeforeground='white',
-    activebackground='red', highlightbackground='orange',
+    bd=3, fg='coral', bg='RoyalBlue3', activeforeground='white',
+    activebackground='red', highlightbackground='RoyalBlue3',
     command=buttdel)
-buttonCancel.grid(row=11, column=1, columnspan=2)
+buttonCancel.grid(sticky='w', row=11, column=1, padx=10)
 
 buttonRead = Button(gui, text="Read", width=12, bd=3,
-    fg='coral', bg='RoyalBlue3',
+    fg='cyan', bg='RoyalBlue3',
     activebackground='dark turquoise',
-    highlightbackground='cyan',
-    command=readBmi)
-buttonRead.grid(sticky='w', row=12, column=1)
+    highlightbackground='RoyalBlue3', command=readBmi)
+buttonRead.grid(sticky='w', row=12, column=1, padx=10, pady=10)
 
-buttonGraph1 = Button(gui, text="Graph BMI", width=12, bd=3,
+buttonBmi = Button(gui, text="Graph BMI", width=12, bd=3,
     fg='cyan', bg='RoyalBlue3', activeforeground='gray40',
-    activebackground='turquoise', highlightbackground='cyan',
+    activebackground='turquoise', highlightbackground='RoyalBlue3',
     command=viewGraphicBmi)
-buttonGraph1.grid(sticky='e', row=10, column=2, pady=10)
+buttonBmi.grid(sticky='e', row=10, column=2, padx=10, pady=10)
 
-buttonGraph2 = Button(gui, text="Graph Weight", width=12, bd=3,
+buttonWeight = Button(gui, text="Graph Weight", width=12, bd=3,
     fg='cyan', bg='RoyalBlue3', activeforeground='gray40',
-    activebackground='turquoise', highlightbackground='cyan',
+    activebackground='turquoise', highlightbackground='RoyalBlue3',
     command=viewGraphicKilo)
-buttonGraph2.grid(sticky='e', row=11, column=2)
+buttonWeight.grid(sticky='e', row=11, column=2, padx=10)
 
 buttonQuit = Button(gui, text="Quit", width=12, bd=3,
     fg='white', bg='RoyalBlue3', activebackground='turquoise',
-    highlightbackground='cyan', command=quit)
-buttonQuit.grid(sticky='e', row=12, column=2, pady=10)
+    highlightbackground='RoyalBlue3', command=quit)
+buttonQuit.grid(sticky='e', row=12, column=2, padx=10, pady=10)
 
 gui.mainloop()

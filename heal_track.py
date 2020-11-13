@@ -1227,9 +1227,8 @@ class Application(Frame):
         self.lab5=Label(self.labFra, justify=LEFT, fg='cyan',
             bg='grey22', font=('Times', 14),
             text="\nMenu Bar, DB, Textbox and Residents are the most usefull skills\n"
-            "to perform onto this app ! If you need help, you\n"
-            "can go to MapApp to access map of this app and\n"
-            "understand how the app is used ;)\n\n"
+            "to perform onto this app ! If you need help, you can go to MapApp to\n"
+            "access map of this app and understand how the app is used ;)\n\n"
             "Enjoy it !\n").pack(padx=10)
         self.separator = Frame(self.labFra, height=2, bd=1, relief=SUNKEN)
         self.separator.pack(fill=X, padx=30, pady=3)

@@ -31,8 +31,11 @@ def validentry():
         if entryname.get() == "ck" and entrypass.get() == "123":
             messagebox.showinfo('INFO', 'Ok ! You get access !')
             closeWindow()
+        # To escape close window...
+        elif window == 0:
+            messagebox.showwarning("Warning", "You couldn't close window !")
         else:
-            messagebox.showinfo('INFO', 'Password or Username failed !')
+            messagebox.showwarning("Warning", "Password or Username failed !")
 
 labelname = ttk.Label(window, text='Enter username :',
     font=('Times New Roman', 14, 'bold'),

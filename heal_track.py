@@ -1204,13 +1204,10 @@ class Application(Frame):
             into a msgbox appear.
         """
         MsgBox = messagebox.askyesno('Quit system', 'Do you want to quit ?')
-        try:
             if MsgBox == 1:
                 self.master.destroy()
         except OSError as fuckingtime:
             print("Error 2 : time to fucking time !!!", fuckingtime)
-            messagebox.showinfo('Return', 'You will now return to the'
-                'application screen')
 
     def frameInfo(self):
         """

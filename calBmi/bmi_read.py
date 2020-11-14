@@ -6,17 +6,6 @@ from tkinter import *
 from tkinter import messagebox
 import sys
 
-
-def importationFile(fichier, encodage="Utf-8"):
-    file = open(fichier, 'r', encoding=encodage)
-    content = file.readlines()
-    file.close()
-    for li in content:
-        textBox.insert(END, li)
-
-def msgBox():
-    messagebox.showinfo('Info', 'File bmi.txt does not exist')
-
 fen = Tk()
 fen.title("BMI results")
 fen.configure(background='RoyalBlue4')
@@ -55,12 +44,23 @@ text_all.set(lineA3)
 Entryall = Entry(fen, textvariable=text_all, width=60)
 Entryall.pack(padx=10, pady=5)
 
+def importationFile(fichier, encodage="Utf-8"):
+    file = open(fichier, 'r', encoding=encodage)
+    content = file.readlines()
+    file.close()
+    for li in content:
+        textBox.insert(END, li)
+
+def msgBox():
+    messagebox.showinfo('Info', 'File bmi.txt does not exist')
+
 textBox = Text(fen, height=15, width=60, font=18)
 textBox.pack(padx=30, pady=30)
 
-buttonClose = Button(fen, text="Quit", width=10, fg='cyan', 
-    bg='gray30', activebackground='dark turquoise', 
-    activeforeground='navy', command=quit)
+buttonClose = Button(fen, text="Quit", width=10, bd=3,
+    fg='cyan', bg='RoyalBlue3', activebackground='dark turquoise', 
+    activeforeground='navy', highlightbackground='RoyalBlue3',
+    command=quit)
 buttonClose.pack(side='right', padx=10, pady=10)
 
 try:

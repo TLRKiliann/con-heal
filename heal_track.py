@@ -2140,21 +2140,6 @@ class Application(Frame):
             To backup all files
         """
         dataBackToSave(self)
-        """
-        listeDate = ["01/05/2020", "18/06/2020", "01/07/2020",
-        "01/08/2020", "01/09/2020", "10/10/2020", "01/11/2020",
-        "01/12/2020"]
-
-        for i in listeDate:
-            try:
-                if time.strftime("%d/%m/%Y") == i:
-                    messagebox.showinfo('Info', 'Backup is done at the first of each month')
-                    subprocess.run('./Backup/backupfile.py', check=True)
-                    print("+ Backup is done !")
-            except FileNotFoundError as errout:
-                print("+ It is not the right date for backup, next will" \
-                    "be at the first of next month)", errout)
-        """
 
     def upDateAll(self):
         """

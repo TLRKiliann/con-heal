@@ -3,9 +3,11 @@
 
 
 """
-Interface pour calculer le BMI
-Avec indication si trop haut ou
-trop bas
+    To calculate BMI if indice
+    is too high or too low.
+    The weight is recording too.
+    It's possible to read results
+    in txt file.
 """
 
 
@@ -158,7 +160,7 @@ def viewGraphicKilo():
         messagebox.showinfo('INFO', 'Kg file not found !')
 
 def readBmi():
-    subprocess.call('./calBmi/bmi_read2.py')
+    subprocess.run('./calBmi/bmi_read2.py', check=True)
 
 def buttdel():
     """

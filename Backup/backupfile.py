@@ -23,7 +23,7 @@ def dataBackToSave(self):
                 print(x)
                 if time.strftime("%d/%m/%Y") == x:
                     print("------------------------------")
-                    print(x)
+                    print("Today : ", x)
                     print("------------------------------")
                     print("Backup of BMI files !")
                     try:

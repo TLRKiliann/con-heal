@@ -26,21 +26,17 @@ labelallergy.pack(padx=5, pady=5)
 
 # To read name in Entry widget
 with open('./newpatient/entryfile.txt', 'r') as filename:
-    line1 = filename.readline()
+    line_a = filename.readline()
+    line_b = filename.readline()
+    line_c = filename.readline()
 
 text_name = StringVar()
-text_name.set(line1)
+text_name.set(line_a)
 Entryname = Entry(fen, textvariable=text_name)
 Entryname.pack(in_=top, side=LEFT, pady=20)
 
-# To read allergy in Entry widget
-with open('./newpatient/entryfile.txt', 'r') as allerfile:
-    lineA1 = allerfile.readline()
-    lineA2 = allerfile.readline()
-    lineA3 = allerfile.readline()
-
 text_all = StringVar()
-text_all.set(lineA3)
+text_all.set(line_c)
 Entryall = Entry(fen, textvariable=text_all, width=60)
 Entryall.pack(padx=10, pady=5)
 
@@ -66,7 +62,7 @@ buttonClose.pack(side='right', padx=10, pady=10)
 try:
     importationFile('./calBmi/bmi.txt', encodage="Utf-8")
 except FileNotFoundError as error_call:
-    print("+ Import bmi.txt for " + line1 + " failed !")
+    print("+ Import bmi.txt for " + line_a + " failed !")
     msgBox()
 
 fen.mainloop()

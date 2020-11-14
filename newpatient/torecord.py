@@ -84,8 +84,8 @@ def get(PatientID, patientnum, Firstname, labelfirst, Surname, lblsurname,
 
     if mot == '-':
         if os.path.getsize('./newpatient/entryfile.txt'):
-            with open('./newpatient/entryfile.txt', 'r') as file:
-                lines = file.readlines()
+            with open('./newpatient/entryfile.txt', 'r') as file1:
+                lines = file1.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
                     if mot in line:
@@ -95,8 +95,8 @@ def get(PatientID, patientnum, Firstname, labelfirst, Surname, lblsurname,
 
     if mot2 == '--':
         if os.path.getsize('./newpatient/entryfile2.txt'):
-            with open('./newpatient/entryfile2.txt', 'r') as file:
-                lines = file.readlines()
+            with open('./newpatient/entryfile2.txt', 'r') as file2:
+                lines = file2.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
                     if mot2 in line:
@@ -106,8 +106,8 @@ def get(PatientID, patientnum, Firstname, labelfirst, Surname, lblsurname,
 
     if mot3 == '---':
         if os.path.getsize('./newpatient/entryfile3.txt'):
-            with open('./newpatient/entryfile3.txt', 'r') as file:
-                lines = file.readlines()
+            with open('./newpatient/entryfile3.txt', 'r') as file3:
+                lines = file3.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
                     if mot3 in line:
@@ -117,8 +117,8 @@ def get(PatientID, patientnum, Firstname, labelfirst, Surname, lblsurname,
 
     if mot4 == '----':
         if os.path.getsize('./newpatient/entryfile4.txt'):
-            with open('./newpatient/entryfile4.txt', 'r') as file:
-                lines = file.readlines()
+            with open('./newpatient/entryfile4.txt', 'r') as file4:
+                lines = file4.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
                     if mot4 in line:
@@ -128,8 +128,8 @@ def get(PatientID, patientnum, Firstname, labelfirst, Surname, lblsurname,
 
     if mot5 == '-----':
         if os.path.getsize('./newpatient/entryfile5.txt'):
-            with open('./newpatient/entryfile5.txt', 'r') as file:
-                lines = file.readlines()
+            with open('./newpatient/entryfile5.txt', 'r') as file5:
+                lines = file5.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
                     if mot5 in line:
@@ -139,8 +139,8 @@ def get(PatientID, patientnum, Firstname, labelfirst, Surname, lblsurname,
 
     if mot6 == '------':
         if os.path.getsize('./newpatient/entryfile6.txt'):
-            with open('./newpatient/entryfile6.txt', 'r') as file:
-                lines = file.readlines()
+            with open('./newpatient/entryfile6.txt', 'r') as file6:
+                lines = file6.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
                     if mot6 in line:
@@ -150,8 +150,8 @@ def get(PatientID, patientnum, Firstname, labelfirst, Surname, lblsurname,
 
     if mot7 == '-------':
         if os.path.getsize('./newpatient/entryfile7.txt'):
-            with open('./newpatient/entryfile7.txt', 'r') as file:
-                lines = file.readlines()
+            with open('./newpatient/entryfile7.txt', 'r') as file7:
+                lines = file7.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
                     if mot7 in line:
@@ -161,8 +161,8 @@ def get(PatientID, patientnum, Firstname, labelfirst, Surname, lblsurname,
 
     if mot8 == '--------':
         if os.path.getsize('./newpatient/entryfile8.txt'):
-            with open('./newpatient/entryfile8.txt', 'r') as file:
-                lines = file.readlines()
+            with open('./newpatient/entryfile8.txt', 'r') as file8:
+                lines = file8.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
                     if mot8 in line:
@@ -172,8 +172,8 @@ def get(PatientID, patientnum, Firstname, labelfirst, Surname, lblsurname,
 
     if mot9 == '---------':
         if os.path.getsize('./newpatient/entryfile9.txt'):
-            with open('./newpatient/entryfile9.txt', 'r') as file:
-                lines = file.readlines()
+            with open('./newpatient/entryfile9.txt', 'r') as file9:
+                lines = file9.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
                     if mot9 in line:
@@ -183,8 +183,8 @@ def get(PatientID, patientnum, Firstname, labelfirst, Surname, lblsurname,
 
     if mot10 == '----------':
         if os.path.getsize('./newpatient/entryfile10.txt'):
-            with open('./newpatient/entryfile10.txt', 'r') as file:
-                lines = file.readlines()
+            with open('./newpatient/entryfile10.txt', 'r') as file10:
+                lines = file10.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
                     if mot10 in line:
@@ -194,8 +194,8 @@ def get(PatientID, patientnum, Firstname, labelfirst, Surname, lblsurname,
 
     if mot11 == '-----------':
         if os.path.getsize('./newpatient/entryfile11.txt'):
-            with open('./newpatient/entryfile11.txt', 'r') as file:
-                lines = file.readlines()
+            with open('./newpatient/entryfile11.txt', 'r') as file11:
+                lines = file11.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
                     if mot11 in line:
@@ -205,8 +205,8 @@ def get(PatientID, patientnum, Firstname, labelfirst, Surname, lblsurname,
 
     if mot12 == '------------':
         if os.path.getsize('./newpatient/entryfile12.txt'):
-            with open('./newpatient/entryfile12.txt', 'r') as file:
-                lines = file.readlines()
+            with open('./newpatient/entryfile12.txt', 'r') as file12:
+                lines = file12.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
                     if mot12 in line:
@@ -216,8 +216,8 @@ def get(PatientID, patientnum, Firstname, labelfirst, Surname, lblsurname,
 
     if mot13 == '-------------':
         if os.path.getsize('./newpatient/entryfile13.txt'):
-            with open('./newpatient/entryfile13.txt', 'r') as file:
-                lines = file.readlines()
+            with open('./newpatient/entryfile13.txt', 'r') as file13:
+                lines = file13.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
                     if mot13 in line:
@@ -227,8 +227,8 @@ def get(PatientID, patientnum, Firstname, labelfirst, Surname, lblsurname,
 
     if mot14 == '--------------':
         if os.path.getsize('./newpatient/entryfile14.txt'):
-            with open('./newpatient/entryfile14.txt', 'r') as file:
-                lines = file.readlines()
+            with open('./newpatient/entryfile14.txt', 'r') as file14:
+                lines = file14.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
                     if mot14 in line:
@@ -238,8 +238,8 @@ def get(PatientID, patientnum, Firstname, labelfirst, Surname, lblsurname,
 
     if mot15 == '---------------':
         if os.path.getsize('./newpatient/entryfile15.txt'):
-            with open('./newpatient/entryfile15.txt', 'r') as file:
-                lines = file.readlines()
+            with open('./newpatient/entryfile15.txt', 'r') as file15:
+                lines = file15.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
                     if mot15 in line:
@@ -249,8 +249,8 @@ def get(PatientID, patientnum, Firstname, labelfirst, Surname, lblsurname,
 
     if mot16 == '----------------':
         if os.path.getsize('./newpatient/entryfile16.txt'):
-            with open('./newpatient/entryfile16.txt', 'r') as file:
-                lines = file.readlines()
+            with open('./newpatient/entryfile16.txt', 'r') as file16:
+                lines = file16.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
                     if mot16 in line:
@@ -260,8 +260,8 @@ def get(PatientID, patientnum, Firstname, labelfirst, Surname, lblsurname,
 
     if mot17 == '-----------------':
         if os.path.getsize('./newpatient/entryfile17.txt'):
-            with open('./newpatient/entryfile17.txt', 'r') as file:
-                lines = file.readlines()
+            with open('./newpatient/entryfile17.txt', 'r') as file17:
+                lines = file17.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
                     if mot17 in line:
@@ -271,8 +271,8 @@ def get(PatientID, patientnum, Firstname, labelfirst, Surname, lblsurname,
 
     if mot18 == '------------------':
         if os.path.getsize('./newpatient/entryfile18.txt'):
-            with open('./newpatient/entryfile18.txt', 'r') as file:
-                lines = file.readlines()
+            with open('./newpatient/entryfile18.txt', 'r') as file18:
+                lines = file18.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
                     if mot18 in line:
@@ -282,8 +282,8 @@ def get(PatientID, patientnum, Firstname, labelfirst, Surname, lblsurname,
 
     if mot19 == '-------------------':
         if os.path.getsize('./newpatient/entryfile19.txt'):
-            with open('./newpatient/entryfile19.txt', 'r') as file:
-                lines = file.readlines()
+            with open('./newpatient/entryfile19.txt', 'r') as file19:
+                lines = file19.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
                     if mot19 in line:
@@ -293,8 +293,8 @@ def get(PatientID, patientnum, Firstname, labelfirst, Surname, lblsurname,
 
     if mot20 == '--------------------':
         if os.path.getsize('./newpatient/entryfile20.txt'):
-            with open('./newpatient/entryfile20.txt', 'r') as file:
-                lines = file.readlines()
+            with open('./newpatient/entryfile20.txt', 'r') as file20:
+                lines = file20.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
                     if mot20 in line:
@@ -304,8 +304,8 @@ def get(PatientID, patientnum, Firstname, labelfirst, Surname, lblsurname,
 
     if mot21 == '---------------------':
         if os.path.getsize('./newpatient/entryfile21.txt'):
-            with open('./newpatient/entryfile21.txt', 'r') as file:
-                lines = file.readlines()
+            with open('./newpatient/entryfile21.txt', 'r') as file21:
+                lines = file21.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
                     if mot21 in line:
@@ -315,8 +315,8 @@ def get(PatientID, patientnum, Firstname, labelfirst, Surname, lblsurname,
 
     if mot22 == '----------------------':
         if os.path.getsize('./newpatient/entryfile22.txt'):
-            with open('./newpatient/entryfile22.txt', 'r') as file:
-                lines = file.readlines()
+            with open('./newpatient/entryfile22.txt', 'r') as file22:
+                lines = file22.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
                     if mot22 in line:
@@ -326,8 +326,8 @@ def get(PatientID, patientnum, Firstname, labelfirst, Surname, lblsurname,
 
     if mot23 == '-----------------------':
         if os.path.getsize('./newpatient/entryfile23.txt'):
-            with open('./newpatient/entryfile23.txt', 'r') as file:
-                lines = file.readlines()
+            with open('./newpatient/entryfile23.txt', 'r') as file23:
+                lines = file23.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
                     if mot23 in line:
@@ -337,8 +337,8 @@ def get(PatientID, patientnum, Firstname, labelfirst, Surname, lblsurname,
 
     if mot24 == '------------------------':
         if os.path.getsize('./newpatient/entryfile24.txt'):
-            with open('./newpatient/entryfile24.txt', 'r') as file:
-                lines = file.readlines()
+            with open('./newpatient/entryfile24.txt', 'r') as file24:
+                lines = file24.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
                     if mot24 in line:

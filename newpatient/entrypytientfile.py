@@ -441,8 +441,7 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
 
     #gui.destroy()
 
-labelID = Label(gui)
-labelID = Label(text='ID : ',
+labelID = Label(gui, text='ID : ',
     font="Times 14 bold",
     fg='RoyalBlue4', bg='cyan')
 labelID.pack(pady=10)
@@ -450,12 +449,10 @@ labelID.pack(pady=10)
 IDpatient = StringVar()
 IDpatient.set('ID of patient')
 Patient_num = Entry(gui, textvariable=IDpatient,
-    highlightbackground='light sky blue',
-    bd=4)
+    highlightbackground='light sky blue', bd=4)
 Patient_num.pack()
 
-labelName = Label(gui)
-labelName = Label(text='Name : ',
+labelName = Label(gui, text='Name : ',
     font="Times 14 bold",
     fg='RoyalBlue4', bg='cyan')
 labelName.pack(pady=10)
@@ -463,19 +460,16 @@ labelName.pack(pady=10)
 Patientname = StringVar()
 Patientname.set('Firstname')
 Firstname_pat = Entry(gui, textvariable=Patientname,
-    highlightbackground='light sky blue',
-    bd=4)
+    highlightbackground='light sky blue', bd=4)
 Firstname_pat.pack()
 
 Surname = StringVar()
 Surname.set("Lastname")
 Sur_pat = Entry(gui, textvariable=Surname,
-    highlightbackground='light sky blue',
-    bd=4)
+    highlightbackground='light sky blue', bd=4)
 Sur_pat.pack()
 
-labelBirth = Label(gui)
-labelBirth = Label(text='Birth Date : ', font="Times 14 bold",
+labelBirth = Label(gui, text='Birth Date : ', font="Times 14 bold",
     fg='RoyalBlue4', bg='cyan')
 labelBirth.pack(pady=10)
 
@@ -485,8 +479,7 @@ Birth_entree = Entry(gui, textvariable=Birthvalue,
     highlightbackground='light sky blue', bd=4)
 Birth_entree.pack()
 
-labelAller = Label(gui)
-labelAller = Label(text='Allergy : ',
+labelAller = Label(gui, text='Allergy : ',
     font="Times 14 bold",
     fg='RoyalBlue4', bg='cyan')
 labelAller.pack(pady=10)
@@ -494,12 +487,10 @@ labelAller.pack(pady=10)
 Allergia = StringVar()
 Allergia.set('None')
 Patient_allergy = Entry(gui, textvariable=Allergia,
-    highlightbackground='light sky blue',
-    bd=4)
+    highlightbackground='light sky blue', bd=4)
 Patient_allergy.pack()
 
-labelTrans = Label(gui)
-labelTrans = Label(text='Transmissible Disease : ',
+labelTrans = Label(gui, text='Transmissible Disease : ',
     font="Times 14 bold",
     fg='RoyalBlue4', bg='cyan')
 labelTrans.pack(pady=10)
@@ -507,12 +498,10 @@ labelTrans.pack(pady=10)
 TransDisVal = StringVar()
 TransDisVal.set('None')
 TransDisease = Entry(gui, textvariable=TransDisVal,
-    highlightbackground='light sky blue',
-    bd=4)
+    highlightbackground='light sky blue', bd=4)
 TransDisease.pack()
 
-labelDiag = Label(gui)
-labelDiag = Label(text='Diagnosis : ',
+labelDiag = Label(gui, text='Diagnosis : ',
     font="Times 14 bold",
     fg='RoyalBlue4', bg='cyan')
 labelDiag.pack(pady=10)
@@ -520,8 +509,7 @@ labelDiag.pack(pady=10)
 Diagnosis = StringVar()
 Diagnosis.set('Diagnostic (main)')
 Diagnos_pat = Entry(gui, textvariable=Diagnosis,
-    highlightbackground='light sky blue',
-    bd=4)
+    highlightbackground='light sky blue', bd=4)
 Diagnos_pat.pack()
 
 bouton1 = Button(gui, text="Enter", width=8, bd=3,

@@ -1173,15 +1173,6 @@ class Application(Frame):
 
         self.pack()
 
-    def framShow(self):
-        """
-            To update without
-            re-enter id and passwd
-        """
-        self.can.delete(ALL)
-        self.master.destroy()
-        Application.__init__(self)
-
     # Method to reconfigure scrollbar every time.
     def onFrameConfigure(self, event):
         '''Reset the scroll region to encompass the inner frame'''
@@ -1196,8 +1187,16 @@ class Application(Frame):
             current_time = time.strftime("%H:%M:%S %p")
             self.clock_label.configure(text=current_time)
             self.master.after(200, self.display_time)
-        except OSError as os_err:
+        except (ValueError, OSError) as os_err:
             ("Error : time to fucking time !!!", os_err)
+
+    def framShow(self):
+        """
+            To update without
+            re-enter id and passwd
+        """
+        self.master.destroy()
+        Application.__init__(self)
 
     def msgExit(self):
         """

@@ -26,6 +26,37 @@ def dataBackToSave(self):
                     print("Today : ", x)
                     print("------------------------------")
                     print("Backup of BMI files !")
+
+                    try:
+                        if os.path.exists('./newpatient/entryfile.txt'):
+                            print("+ entryfile 1 exist")
+                            shutil.copy('./newpatient/entryfile.txt', './Backup/Files1/Backup_patient.txt')
+                    except FileNotFoundError as nf_file:
+                        print("Not found", nf_file)
+
+                    try:
+                        if os.path.exists('./newpatient/entryfile2.txt'):
+                            print("+ entryfile 2 exist")
+                            shutil.copy('./newpatient/entryfile2.txt', './Backup/Files1/Backup_patient2.txt')
+                    except FileNotFoundError as nf_file2:
+                        print("Not found", nf_file2)
+
+                    try:
+                        if os.path.exists('./newpatient/entryfile3.txt'):
+                            print("+ entryfile 3 exist")
+                            shutil.copy('./newpatient/entryfile3.txt', './Backup/Files1/Backup_patient3.txt')
+                    except FileNotFoundError as nf_file3:
+                        print("Not found", nf_file3)
+
+                    try:
+                        if os.path.exists('./newpatient/entryfile4.txt'):
+                            print("+ entryfile 4 exist")
+                            shutil.copy('./newpatient/entryfile4.txt', './Backup/Files1/Backup_patient4.txt')
+                    except FileNotFoundError as nf_file4:
+                        print("Not found", nf_file4)
+
+
+
                     try:
                         if os.path.exists('./calBmi/bmi.txt'):
                             print("+ bmi 1 exist")

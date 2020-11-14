@@ -9,7 +9,9 @@ import subprocess
 from boxapp import callBox
 from patcaps import callResident
 from backapp import *
+from Backup.backupfile import dataBackToSave
 import passw
+
 
 class ScrollCanvas(Frame):
     """
@@ -1203,7 +1205,8 @@ class Application(Frame):
             If usr want to quit, a question
             into a msgbox appear.
         """
-        MsgBox = messagebox.askyesno('Quit system', 'Do you want to quit ?')
+        try:
+            MsgBox = messagebox.askyesno('Quit system', 'Do you want to quit ?')
             if MsgBox == 1:
                 self.master.destroy()
         except OSError as fuckingtime:
@@ -2136,6 +2139,8 @@ class Application(Frame):
         """
             To backup all files
         """
+        dataBackToSave(self)
+        """
         listeDate = ["01/05/2020", "18/06/2020", "01/07/2020",
         "01/08/2020", "01/09/2020", "10/10/2020", "01/11/2020",
         "01/12/2020"]
@@ -2144,11 +2149,12 @@ class Application(Frame):
             try:
                 if time.strftime("%d/%m/%Y") == i:
                     messagebox.showinfo('Info', 'Backup is done at the first of each month')
-                    subprocess.run('./Backup/backupfile.py')
+                    subprocess.run('./Backup/backupfile.py', check=True)
                     print("+ Backup is done !")
             except FileNotFoundError as errout:
                 print("+ It is not the right date for backup, next will" \
                     "be at the first of next month)", errout)
+        """
 
     def upDateAll(self):
         """

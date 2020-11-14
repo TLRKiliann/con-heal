@@ -1,7 +1,22 @@
-En date du : 28/10/2020 à 21:59:53 :
-Patient name : Edward Snowden
-+ Surveillance respiratoire requise
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
+
+En date du : 06/11/2020 à 21:43:06 :
+Patient name : Terry McGuire
 + Surveillance du sommeil requise
-+ Surveillance propreté et/ou téguments requise
+3x/N
++ Surveillance posturale et/ou des déplacements requise
+acc. à la mob
++ Surveillance pour éviter les dangers requise
+mettre un truc...
 ---
+
+
+
+En date du : 06/11/2020 à 21:43:38 :
+Aujourd'hui Monsieur a pris la tête à tout le monde.
+La police est arrivée pour le plaquer au sol et lui faire une injection.
+Il est ensuite aller dans sa chambre et dort encore.
+
+En date du : 05/11/2020 à 21:44:38 :
+Monsieur nous emmerde toute la nuit avec ses questions.
 

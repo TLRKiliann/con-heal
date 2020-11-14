@@ -1,1 +1,23 @@
 --- DIAGNOSTICS ---
+diagnotest
+diagnotest, dt2
+diag 3
+diag 4
+diag5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

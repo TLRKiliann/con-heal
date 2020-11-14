@@ -11,15 +11,15 @@ import shutil
 
 def dataBackToSave(self):
     """
-    with open("./Backup/xdate_file.txt", "r") as file_dateup:
-        lines = file_dateup.readlines()
+        To make backup if it's the
+        good day and delete the value
+        of date after backup.
     """
     listeDate = []
     with open("./Backup/xdate_file.json") as file_r:
         listeDate = json.load(file_r)
         for index, value in listeDate.items():
             for x in value:
-                #x = str(x)
                 print(x)
                 if time.strftime("%d/%m/%Y") == x:
                     print("------------------------------")
@@ -699,6 +699,6 @@ def dataBackToSave(self):
                         print("Not found", filenot)
                     x=str(x)
                     value.remove(x)
-                    file_w = open("./Backup/xdate_file2.json", "a+")
+                    file_w = open("./Backup/xdate_file.json", "w")
                     listeDate = json.dump(listeDate, file_w, indent=4)
                     print("Finish with x !!! ----")

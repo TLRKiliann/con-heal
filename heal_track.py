@@ -1125,7 +1125,7 @@ class Application(Frame):
         self.clock_label = Label(self, text="", font=('Times New Roman', 18, 'bold'),
             fg='snow', bg='RoyalBlue3', padx=560)
         self.clock_label.pack(side=TOP)
-        self.display_time()
+        self.clock_label.bind(self.display_time())
 
         # Insertion of picture
         self.photo = PhotoImage(file='./syno_gif/fondcolorbg.png')
@@ -1183,7 +1183,7 @@ class Application(Frame):
         try:
             current_time = time.strftime("%H:%M:%S %p")
             self.clock_label.configure(text=current_time)
-            self.master.after(200, self.display_time)
+            self.clock_label.after(200, self.display_time)
         except (ValueError, OSError) as os_err:
             ("Error : time to fucking time !!!", os_err)
 

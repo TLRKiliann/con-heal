@@ -113,7 +113,9 @@ class TrackDB(Frame):
         self.butBox.pack(side=RIGHT)
 
         self.pack()
-
+    
+        searchDB()
+    
     # Method to reconfigure scrollbar every time.
     def onFrameConfigure(self, event):
         '''Reset the scroll region to encompass the inner frame'''

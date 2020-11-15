@@ -1116,7 +1116,7 @@ class Application(Frame):
 
         self.can = Canvas(self, width=1250, height=700, bg='grey18')
         self.frame = Frame(self.can)
-        # ScrollCanvas limite de la zone à parcourir avec la barre 1250 - 800
+        # ScrollCanvas limite de la zone à parcourir avec la barre 1250 - 700
         self.vsb = Scrollbar(self, orient=VERTICAL, command=self.can.yview)
         self.can.configure(yscrollcommand=self.vsb.set)
         self.vsb.pack(side=RIGHT, fill=Y)

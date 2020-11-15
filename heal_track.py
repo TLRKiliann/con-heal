@@ -1110,15 +1110,16 @@ class Application(Frame):
     def __init__(self, boss=None):
         Frame.__init__(self, borderwidth=5, bg='RoyalBlue4', padx=20, pady=20, relief=GROOVE)
         self.master.title('Heal-Track Developed by ko@l@tr33 - 2020')
+
         mBar = MenuBar(self)
         mBar.pack(side=TOP, fill=X, expand=YES)
+
         self.can = Canvas(self, width=1250, height=700, bg='grey18')
         self.frame = Frame(self.can)
         # ScrollCanvas limite de la zone à parcourir avec la barre 1250 - 800
         self.vsb = Scrollbar(self, orient=VERTICAL, command=self.can.yview)
         self.can.configure(yscrollcommand=self.vsb.set)
         self.vsb.pack(side=RIGHT, fill=Y)
-
         self.can.create_window((4,4), window=self.frame, anchor=NW, tags="self.frame")
 
         self.clock_label = Label(self, text="", font=('Times New Roman', 18, 'bold'),
@@ -1129,18 +1130,15 @@ class Application(Frame):
         # Insertion of picture
         self.photo = PhotoImage(file='./syno_gif/fondcolorbg.png')
         self.item = self.can.create_image(625, 400, image=self.photo)
-
         # Insertion of text
         self.can.create_text(625, 350, anchor=CENTER, 
             text="Python 3.6 - Tkinter 8.6 - GIMP 2.8",
             font=('Times New Roman', 18, 'bold'), fill='turquoise')
         self.can.create_text(1240, 670, anchor=NE, text="ko@l@tr33",
             font=('Times', 12), fill='turquoise')
-
         # Configuration de la Scrollbar sur le Frame
         self.frame.bind("<Configure>", self.onFrameConfigure)
         self.can.pack(side=LEFT, fill=BOTH, expand=YES)
-
         # 3 buttons on welcome page.
         self.button1 = Button(self, text="Info", font=('Times 14 bold'),
             bg='grey17', fg='cyan', command = self.frameInfo)
@@ -1148,7 +1146,6 @@ class Application(Frame):
             activebackground='dark turquoise')
         self.button1_window = self.can.create_window(75, 30, anchor=CENTER,
             window=self.button1)
-
         # Pycon button
         self.button2 = Button(self, text="DATABASE", font=('Times 18 bold'),
             bg='grey17', fg='cyan', command = self.funcPyCon)
@@ -1156,7 +1153,6 @@ class Application(Frame):
             activebackground='dark turquoise')
         self.button2_window = self.can.create_window(300, 450, anchor=CENTER,
             window=self.button2)
-
         # Synopsis button
         self.button3 = Button(self, text="TEXTBOX", font=('Times 18 bold'),
             bg='grey17', fg='cyan', command = self.showSynopsis)
@@ -1164,7 +1160,6 @@ class Application(Frame):
             activebackground='dark turquoise')
         self.button3_window = self.can.create_window(625, 450, anchor=CENTER,
             window=self.button3)
-
         # Psychotabs button
         self.button4 = Button(self, text="RESIDENTS", font=('Times 18 bold'),
             bg='grey17', fg='cyan', command = self.showPatients)
@@ -1197,9 +1192,12 @@ class Application(Frame):
             To update without
             re-enter id and passwd
         """
-        self.master.destroy()
-        Application()
-        #Application.__init__(self)
+        try:
+            self.master.destroy()
+            Application()
+            #Application.__init__(self)
+        except (OSError, ValueError) as two_err:
+            print("OS or Val error", two_err)
 
     def msgExit(self):
         """
@@ -2151,14 +2149,10 @@ class Application(Frame):
             data from patcaps.py !
         """
         try:
-            #self.master.destroy()
-            #Application()
-            #Application(mbar)
-            #self.showPatients.Application()
-            MenuBar(self)
             self.showPatients()
-        except (OSError, ValueError) as ref_err:
-            print("Error to refresh", ref_err)
+        except:
+            print("Error --")
+
 
 if __name__=='__main__':
     app = Application()

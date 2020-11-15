@@ -67,7 +67,7 @@ def get(Nompatient, entree, PatientID, Num_pat):
                     if Nompatient in line:
                         delFuncFile1()
                     else:
-                        print("Patient's Name does not exist")
+                        print("End of test delete files 1.")
 
         if os.path.getsize('./newpatient/entryfile2.txt'):
             with open('./newpatient/entryfile2.txt', 'r') as file2:
@@ -77,7 +77,7 @@ def get(Nompatient, entree, PatientID, Num_pat):
                     if Nompatient in line:
                         delFuncFile2()
                     else:
-                        print("Patient's Name does not exist")
+                        print("End of test delete files 2.")
 
         if os.path.getsize('./newpatient/entryfile3.txt'):
             with open('./newpatient/entryfile3.txt', 'r') as file3:
@@ -87,7 +87,7 @@ def get(Nompatient, entree, PatientID, Num_pat):
                     if Nompatient in line:
                         delFuncFile3()
                     else:
-                        print("Patient's Name does not exist")
+                        print("End of test delete files 3.")
 
         if os.path.getsize('./newpatient/entryfile4.txt'):
             with open('./newpatient/entryfile4.txt', 'r') as file4:
@@ -97,7 +97,7 @@ def get(Nompatient, entree, PatientID, Num_pat):
                     if Nompatient in line:
                         delFuncFile4()
                     else:
-                        print("Patient's Name does not exist")
+                        print("End of test delete files 4.")
 
         if os.path.getsize('./newpatient/entryfile5.txt'):
             with open('./newpatient/entryfile5.txt', 'r') as file5:
@@ -107,7 +107,7 @@ def get(Nompatient, entree, PatientID, Num_pat):
                     if Nompatient in line:
                         delFuncFile5()
                     else:
-                        print("Patient's Name does not exist")
+                        print("End of test delete files 5.")
 
         if os.path.getsize('./newpatient/entryfile6.txt'):
             with open('./newpatient/entryfile6.txt', 'r') as file6:
@@ -117,7 +117,7 @@ def get(Nompatient, entree, PatientID, Num_pat):
                     if Nompatient in line:
                         delFuncFile6()
                     else:
-                        print("Patient's Name does not exist")
+                        print("End of test delete files 6.")
 
         if os.path.getsize('./newpatient/entryfile7.txt'):
             with open('./newpatient/entryfile7.txt', 'r') as file7:
@@ -127,7 +127,7 @@ def get(Nompatient, entree, PatientID, Num_pat):
                     if Nompatient in line:
                         delFuncFile7()
                     else:
-                        print("End of test delete files.")
+                        print("End of test delete files 7.")
 
         if os.path.getsize('./newpatient/entryfile8.txt'):
             with open('./newpatient/entryfile8.txt', 'r') as file8:
@@ -137,7 +137,7 @@ def get(Nompatient, entree, PatientID, Num_pat):
                     if Nompatient in line:
                         delFuncFile8()
                     else:
-                        print("End of test delete files.")
+                        print("End of test delete files 8.")
 
         if os.path.getsize('./newpatient/entryfile9.txt'):
             with open('./newpatient/entryfile9.txt', 'r') as file9:
@@ -147,7 +147,7 @@ def get(Nompatient, entree, PatientID, Num_pat):
                     if Nompatient in line:
                         delFuncFile9()
                     else:
-                        print("End of test delete files.")
+                        print("End of test delete files 9.")
 
         if os.path.getsize('./newpatient/entryfile10.txt'):
             with open('./newpatient/entryfile10.txt', 'r') as file10:
@@ -157,7 +157,7 @@ def get(Nompatient, entree, PatientID, Num_pat):
                     if Nompatient in line:
                         delFuncFile10()
                     else:
-                        print("End of test delete files.")
+                        print("End of test delete files 10.")
 
         if os.path.getsize('./newpatient/entryfile11.txt'):
             with open('./newpatient/entryfile11.txt', 'r') as file11:
@@ -167,7 +167,7 @@ def get(Nompatient, entree, PatientID, Num_pat):
                     if Nompatient in line:
                         delFuncFile11()
                     else:
-                        print("End of test delete files.")
+                        print("End of test delete files 11.")
 
         if os.path.getsize('./newpatient/entryfile12.txt'):
             with open('./newpatient/entryfile12.txt', 'r') as file12:
@@ -177,7 +177,7 @@ def get(Nompatient, entree, PatientID, Num_pat):
                     if Nompatient in line:
                         delFuncFile12()          
                     else:
-                        print("End of test delete files.")
+                        print("End of test delete files 12.")
 
         if os.path.getsize('./newpatient/entryfile13.txt'):
             with open('./newpatient/entryfile13.txt', 'r') as file13:
@@ -187,7 +187,7 @@ def get(Nompatient, entree, PatientID, Num_pat):
                     if Nompatient in line:
                         delFuncFile13()
                     else:
-                        print("End of test delete files.")
+                        print("End of test delete files 13.")
 
         if os.path.getsize('./newpatient/entryfile14.txt'):
             with open('./newpatient/entryfile14.txt', 'r') as file14:
@@ -197,7 +197,7 @@ def get(Nompatient, entree, PatientID, Num_pat):
                     if Nompatient in line:
                         delFuncFile14()
                     else:
-                        print("End of test delete files.")
+                        print("End of test delete files 14.")
 
         if os.path.getsize('./newpatient/entryfile15.txt'):
             with open('./newpatient/entryfile15.txt', 'r') as file15:
@@ -207,7 +207,7 @@ def get(Nompatient, entree, PatientID, Num_pat):
                     if Nompatient in line:
                         delFuncFile15()
                     else:
-                        print("End of test delete files.")
+                        print("End of test delete files 15.")
 
         if os.path.getsize('./newpatient/entryfile16.txt'):
             with open('./newpatient/entryfile16.txt', 'r') as file16:
@@ -217,7 +217,7 @@ def get(Nompatient, entree, PatientID, Num_pat):
                     if Nompatient in line:
                         delFuncFile16()
                     else:
-                        print("End of test delete files.")
+                        print("End of test delete files 16.")
 
         if os.path.getsize('./newpatient/entryfile17.txt'):
             with open('./newpatient/entryfile17.txt', 'r') as file17:
@@ -227,7 +227,7 @@ def get(Nompatient, entree, PatientID, Num_pat):
                     if Nompatient in line:
                         delFuncFile17()
                     else:
-                        print("End of test delete files.")
+                        print("End of test delete files 17.")
 
         if os.path.getsize('./newpatient/entryfile18.txt'):
             with open('./newpatient/entryfile18.txt', 'r') as file18:
@@ -237,7 +237,7 @@ def get(Nompatient, entree, PatientID, Num_pat):
                     if Nompatient in line:
                         delFuncFile18()
                     else:
-                        print("End of test delete files.")
+                        print("End of test delete files 18.")
 
         if os.path.getsize('./newpatient/entryfile19.txt'):
             with open('./newpatient/entryfile19.txt', 'r') as file19:
@@ -247,7 +247,7 @@ def get(Nompatient, entree, PatientID, Num_pat):
                     if Nompatient in line:
                         delFuncFile19()
                     else:
-                        print("End of test delete files.")
+                        print("End of test delete files 19.")
 
         if os.path.getsize('./newpatient/entryfile20.txt'):
             with open('./newpatient/entryfile20.txt', 'r') as file20:
@@ -257,7 +257,7 @@ def get(Nompatient, entree, PatientID, Num_pat):
                     if Nompatient in line:
                         delFuncFile20()
                     else:
-                        print("End of test delete files.")
+                        print("End of test delete files 20.")
 
         if os.path.getsize('./newpatient/entryfile21.txt'):
             with open('./newpatient/entryfile21.txt', 'r') as file20:
@@ -267,7 +267,7 @@ def get(Nompatient, entree, PatientID, Num_pat):
                     if Nompatient in line:
                         delFuncFile21()
                     else:
-                        print("End of test delete files.")
+                        print("End of test delete files 21.")
 
         if os.path.getsize('./newpatient/entryfile22.txt'):
             with open('./newpatient/entryfile22.txt', 'r') as file20:
@@ -277,7 +277,7 @@ def get(Nompatient, entree, PatientID, Num_pat):
                     if Nompatient in line:
                         delFuncFile22()
                     else:
-                        print("End of test delete files.")
+                        print("End of test delete files 22.")
 
         if os.path.getsize('./newpatient/entryfile23.txt'):
             with open('./newpatient/entryfile23.txt', 'r') as file20:
@@ -287,7 +287,7 @@ def get(Nompatient, entree, PatientID, Num_pat):
                     if Nompatient in line:
                         delFuncFile23()
                     else:
-                        print("End of test delete files.")
+                        print("End of test delete files 23.")
 
         if os.path.getsize('./newpatient/entryfile24.txt'):
             with open('./newpatient/entryfile24.txt', 'r') as file20:
@@ -297,7 +297,7 @@ def get(Nompatient, entree, PatientID, Num_pat):
                     if Nompatient in line:
                         delFuncFile24()
                     else:
-                        print("End of test delete files.")
+                        print("End of test delete files 24.")
     else:           
         messagebox.showinfo('Return', 'None file was found !')
 

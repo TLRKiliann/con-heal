@@ -1,5 +1,5 @@
-Monique Drouet
-06/04/1943
-Sugar, tomato, Shellfish
+Firstname Surname
+00/00/0000
 None
-Dt2
+None
+Diagnostic (main)

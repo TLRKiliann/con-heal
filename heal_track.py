@@ -1198,7 +1198,8 @@ class Application(Frame):
             re-enter id and passwd
         """
         self.master.destroy()
-        Application.__init__(self)
+        Application()
+        #Application.__init__(self)
 
     def msgExit(self):
         """
@@ -2149,7 +2150,15 @@ class Application(Frame):
             open directly and update
             data from patcaps.py !
         """
-        self.showPatients()
+        try:
+            #self.master.destroy()
+            #Application()
+            #Application(mbar)
+            #self.showPatients.Application()
+            MenuBar(self)
+            self.showPatients()
+        except (OSError, ValueError) as ref_err:
+            print("Error to refresh", ref_err)
 
 if __name__=='__main__':
     app = Application()

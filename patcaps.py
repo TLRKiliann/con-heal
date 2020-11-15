@@ -3,6 +3,7 @@
 
 
 from tkinter import *
+import sys
 import os
 import time
 import datetime as dt
@@ -18,11 +19,10 @@ def callResident(self):
         heal_track.py for displaying patients
         with theirs names and more.
     """
-
-    self.can.delete(ALL)
-    #self.mBar.destroy()
     self.mBar
-    self.mBar.pack(side=TOP, fill=X, expand=YES)
+    print("Size of mBar ",sys.getsizeof(self.mBar), " bits : ")
+    self.mBar.pack()
+    self.can.delete(ALL)
     self.can.configure(background='DodgerBlue2')
     self.photo=PhotoImage(file='./syno_gif/title_tt3.png')
     self.item=self.can.create_image(625, 85, image=self.photo)

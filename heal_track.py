@@ -2149,7 +2149,7 @@ class Application(Frame):
         """
         try:
             self.showPatients()
-            self.mBar.update()
+            self.mBar
         except:
             print("Error --")
 

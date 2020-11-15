@@ -1127,8 +1127,8 @@ class Application(Frame):
         self.clock_label.bind(self.display_time())
 
         # Insertion of picture
-        self.photo = PhotoImage(file='./syno_gif/fondcolorbg.png')
-        self.item = self.can.create_image(625, 400, image=self.photo)
+        self.photo = PhotoImage(file='./syno_gif/fondcolorbg4.png')
+        self.item = self.can.create_image(625, 350, image=self.photo)
         # Insertion of text
         self.can.create_text(625, 350, anchor=CENTER, 
             text="Python 3.6 - Tkinter 8.6 - GIMP 2.8",

@@ -3,6 +3,7 @@
 
 
 from tkinter import *
+from tkinter import messagebox
 import json
 import time
 import os
@@ -870,4 +871,5 @@ def dataBackToSave(self):
                     value.remove(x)
                     file_w = open("./Backup/xdate_file.json", "w")
                     listeDate = json.dump(listeDate, file_w, indent=4)
-                    print("Finish with x !!! ----")
+                    print("--- Backup done ---")
+                    messagebox.showinfo('INFO', 'BACKUP done !')

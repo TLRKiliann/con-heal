@@ -102,14 +102,16 @@ class TrackDB(Frame):
         self.student_records.pack(fill=BOTH, expand=YES)
 
         #self.student_records.bind("<ButtonRelease-1>", PyDataBaseInfo)
-        self.btnSearch = Button(self.can, font=('arial', 12, 'bold'), text="Display All",
-            padx=8, width=16, height=1, fg='white', bg='RoyalBlue3',
-            activebackground='cyan', activeforeground='RoyalBlue3', command=searchDB)
+        self.btnSearch = Button(self.can, text="Refresh", font=('arial', 12, 'bold'),
+            padx=8, width=16, height=1, fg='white', bg='RoyalBlue4', bd=3, 
+            activebackground='cyan', activeforeground='RoyalBlue3',
+            highlightbackground="white", command=searchDB)
         self.btnSearch.pack(side=LEFT)
 
-        self.butBox = Button(self.can, font=('arial', 12, 'bold'), text="Quit",
-            padx=8, width=16, height=1, fg='white', bg='RoyalBlue3',
-            activebackground='cyan', activeforeground='RoyalBlue3', command=quit)
+        self.butBox = Button(self.can, text="Quit", font=('arial', 12, 'bold'),
+            padx=8, width=16, height=1, fg='white', bg='RoyalBlue4', bd=3,
+            activebackground='cyan', activeforeground='RoyalBlue3',
+            highlightbackground="white", command=quit)
         self.butBox.pack(side=RIGHT)
 
         self.pack()

@@ -33,7 +33,7 @@ def callResident(self):
         window=self.Date_write)
 
     # To introduce a new pytient
-    self.x3, self.y3 = 200, 160
+    self.x3, self.y3 = 100, 160
     self.b3=Button(self.can, text="New Entry", width=10, font=16, bd=3,
         bg='grey17', fg='white', activebackground='dark turquoise',
         activeforeground='white', highlightbackground='grey10',
@@ -41,7 +41,7 @@ def callResident(self):
     self.fb3=self.can.create_window(self.x3, self.y3, window=self.b3)
 
     # To add one patient and files
-    self.x4, self.y4 = 400, 160
+    self.x4, self.y4 = 300, 160
     self.b4=Button(self.can, text="Add patient", width=10, font=16, bd=3,
         bg='grey17', fg='cyan', activebackground='dark turquoise',
         activeforeground='white', highlightbackground='grey10',
@@ -49,7 +49,7 @@ def callResident(self):
     self.fb4=self.can.create_window(self.x4, self.y4, window=self.b4)
     
     # To refresh canvas + menu bar
-    self.x5, self.y5 = 600, 160
+    self.x5, self.y5 = 500, 160
     self.b5=Button(self.can, text="Refresh", width=10, font=16, bd=3,
         bg='grey17', fg='SpringGreen2', activebackground='yellow',
         activeforeground='SpringGreen2', highlightbackground='grey10',
@@ -57,7 +57,7 @@ def callResident(self):
     self.fb5=self.can.create_window(self.x5, self.y5, window=self.b5)
 
     # To delete one patient and all files
-    self.x6, self.y6 = 800, 160
+    self.x6, self.y6 = 700, 160
     self.b6=Button(self.can, text="Delete patient", width=10, font=16, bd=3,
         bg='grey17', fg='coral', activebackground='red', 
         activeforeground='white', highlightbackground='grey10',
@@ -65,12 +65,20 @@ def callResident(self):
     self.fb6=self.can.create_window(self.x6, self.y6, window=self.b6)
 
     # To go to resident page
-    self.x6, self.y6 = 1000, 160
+    self.x6, self.y6 = 900, 160
     self.b6=Button(self.can, text="TextBox", width=10, font=16, bd=3,
         bg='grey17', fg='white', activebackground='dark turquoise',
         activeforeground='white', highlightbackground='grey10',
         command=self.showSynopsis)
     self.fb6=self.can.create_window(self.x6, self.y6, window=self.b6)
+
+    # DB
+    self.x7, self.y7 = 1100, 160
+    self.b7=Button(self.can, text="DataBase", width=10, font=16, bd=3,
+        bg='grey17', fg='white', activebackground='dark turquoise',
+        activeforeground='white', highlightbackground='grey10',
+        command=self.funcPyCon)
+    self.fb7=self.can.create_window(self.x7, self.y7, window=self.b7)
 
     # Patient 1
     try:

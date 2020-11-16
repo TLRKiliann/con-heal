@@ -62,7 +62,6 @@ def dispResFunc():
                                         value[x]['Date of end'] = "STOP-" + word_ttstop
                                     with open('./ttt/doc_ttt/convres.json', 'w') as re_file:
                                         json.dump(data, re_file, indent=4)
-
     except IndexError as error_ttt:
         print("No date of end has been found for reserve into file convres.json (patient 1)", error_ttt)
     except FileNotFoundError as info_ttt:
@@ -94,7 +93,28 @@ def dispResFunc():
                     MSBTTT2 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop2 + " " + \
                         'for : ' + "\n" + res_text2 + "Date of end : " + date_end2 + "\n" + name_treat2 + \
-                        "\n" + dose_ttt2) 
+                        "\n" + dose_ttt2)
+                    MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
+                        + name_treat2 + " " + dose_ttt2 + " of " + res_text2 + " ?")
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt2/convres.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP-" + word_ttstop
+                                    with open('./ttt/doc_ttt2/convres.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt2:
         print("No date of end has been found for reserve into file convres.json (patient 2)", error_ttt2)
     except FileNotFoundError as info_ttt2:
@@ -126,7 +146,28 @@ def dispResFunc():
                     MSBTTT3 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop3 + " " + \
                         'for : ' + "\n" + res_text3 + "Date of end : " + date_end3 + "\n" + name_treat3 + \
-                        "\n" + dose_ttt3) 
+                        "\n" + dose_ttt3)
+                    MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
+                        + name_treat3 + " " + dose_ttt3 + " of " + res_text3 + " ?")
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt3/convres.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP-" + word_ttstop
+                                    with open('./ttt/doc_ttt3/convres.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt3:
         print("No date of end has been found for reserve into file convres.json (patient 3)", error_ttt3)
     except FileNotFoundError as info_ttt3:
@@ -158,7 +199,28 @@ def dispResFunc():
                     MSBTTT4 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop4 + " " + \
                         'for : ' + "\n" + res_text4 + "Date of end : " + date_end4 + "\n" + name_treat4 + \
-                        "\n" + dose_ttt4) 
+                        "\n" + dose_ttt4)
+                    MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
+                        + name_treat4 + " " + dose_ttt4 + " of " + res_text4 + " ?")
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt4/convres.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP-" + word_ttstop
+                                    with open('./ttt/doc_ttt4/convres.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt4:
         print("No date of end has been found for reserve into file convres.json (patient 4)", error_ttt4)
     except FileNotFoundError as info_ttt4:
@@ -190,7 +252,28 @@ def dispResFunc():
                     MSBTTT5 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop5 + " " + \
                         'for : ' + "\n" + res_text5 + "Date of end : " + date_end5 + "\n" + name_treat5 + \
-                        "\n" + dose_ttt5) 
+                        "\n" + dose_ttt5)
+                    MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
+                        + name_treat5 + " " + dose_ttt5 + " of " + res_text5 + " ?")
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt5/convres.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP-" + word_ttstop
+                                    with open('./ttt/doc_ttt5/convres.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt5:
         print("No date of end has been found for reserve into file convres.json (patient 5)", error_ttt5)
     except FileNotFoundError as info_ttt5:
@@ -222,7 +305,28 @@ def dispResFunc():
                     MSBTTT6 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop6 + " " + \
                         'for : ' + "\n" + res_text6 + "Date of end : " + date_end6 + "\n" + name_treat6 + \
-                        "\n" + dose_ttt6) 
+                        "\n" + dose_ttt6)
+                    MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
+                        + name_treat6 + " " + dose_ttt6 + " of " + res_text6 + " ?")
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt6/convres.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP-" + word_ttstop
+                                    with open('./ttt/doc_ttt6/convres.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt6:
         print("No date of end has been found for reserve into file convres.json (patient 6)", error_ttt6)
     except FileNotFoundError as info_ttt6:
@@ -254,7 +358,28 @@ def dispResFunc():
                     MSBTTT7 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop7 + " " + \
                         'for : ' + "\n" + res_text7 + "Date of end : " + date_end7 + "\n" + name_treat7 + \
-                        "\n" + dose_ttt7) 
+                        "\n" + dose_ttt7)
+                    MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
+                        + name_treat7 + " " + dose_ttt7 + " of " + res_text7 + " ?")
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt7/convres.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP-" + word_ttstop
+                                    with open('./ttt/doc_ttt7/convres.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt7:
         print("No date of end has been found for reserve into file convres.json (patient 7)", error_ttt7)
     except FileNotFoundError as info_ttt7:
@@ -286,7 +411,28 @@ def dispResFunc():
                     MSBTTT8 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop8 + " " + \
                         'for : ' + "\n" + res_text8 + "Date of end : " + date_end8 + "\n" + name_treat8 + \
-                        "\n" + dose_ttt8) 
+                        "\n" + dose_ttt8)
+                    MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
+                        + name_treat8 + " " + dose_ttt8 + " of " + res_text8 + " ?")
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt8/convres.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP-" + word_ttstop
+                                    with open('./ttt/doc_ttt8/convres.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt8:
         print("No date of end has been found for reserve into file convres.json (patient 8)", error_ttt8)
     except FileNotFoundError as info_ttt8:
@@ -318,7 +464,28 @@ def dispResFunc():
                     MSBTTT9 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop9 + " " + \
                         'for : ' + "\n" + res_text9 + "Date of end : " + date_end9 + "\n" + name_treat9 + \
-                        "\n" + dose_ttt9) 
+                        "\n" + dose_ttt9)
+                    MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
+                        + name_treat9 + " " + dose_ttt9 + " of " + res_text9 + " ?")
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt9/convres.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP-" + word_ttstop
+                                    with open('./ttt/doc_ttt9/convres.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt9:
         print("No date of end has been found for reserve into file convres.json (patient 9)", error_ttt9)
     except FileNotFoundError as info_ttt9:
@@ -350,7 +517,28 @@ def dispResFunc():
                     MSBTTT10 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop10 + " " + \
                         'for : ' + "\n" + res_text10 + "Date of end : " + date_end10 + "\n" + name_treat10 + \
-                        "\n" + dose_ttt10) 
+                        "\n" + dose_ttt10)
+                    MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
+                        + name_treat10 + " " + dose_ttt10 + " of " + res_text10 + " ?")
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt10/convres.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP-" + word_ttstop
+                                    with open('./ttt/doc_ttt10/convres.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt10:
         print("No date of end has been found for reserve into file convres.json (patient 10)", error_ttt10)
     except FileNotFoundError as info_ttt10:
@@ -382,7 +570,28 @@ def dispResFunc():
                     MSBTTT11 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop11 + " " + \
                         'for : ' + "\n" + res_text11 + "Date of end : " + date_end11 + "\n" + name_treat11 + \
-                        "\n" + dose_ttt11) 
+                        "\n" + dose_ttt11)
+                    MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
+                        + name_treat11 + " " + dose_ttt11 + " of " + res_text11 + " ?")
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt11/convres.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP-" + word_ttstop
+                                    with open('./ttt/doc_ttt11/convres.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt11:
         print("No date of end has been found for reserve into file convres.json (patient 11)", error_ttt11)
     except FileNotFoundError as info_ttt11:
@@ -414,7 +623,28 @@ def dispResFunc():
                     MSBTTT12 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop12 + " " + \
                         'for : ' + "\n" + res_text12 + "Date of end : " + date_end12 + "\n" + name_treat12 + \
-                        "\n" + dose_ttt12) 
+                        "\n" + dose_ttt12)
+                    MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
+                        + name_treat12 + " " + dose_ttt12 + " of " + res_text12 + " ?")
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt12/convres.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP-" + word_ttstop
+                                    with open('./ttt/doc_ttt12/convres.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt12:
         print("No date of end has been found for reserve into file convres.json (patient 12)", error_ttt12)
     except FileNotFoundError as info_ttt12:
@@ -446,7 +676,28 @@ def dispResFunc():
                     MSBTTT13 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop13 + " " + \
                         'for : ' + "\n" + res_text13 + "Date of end : " + date_end13 + "\n" + name_treat13 + \
-                        "\n" + dose_ttt13) 
+                        "\n" + dose_ttt13)
+                    MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
+                        + name_treat13 + " " + dose_ttt13 + " of " + res_text13 + " ?")
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt13/convres.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP-" + word_ttstop
+                                    with open('./ttt/doc_ttt13/convres.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt13:
         print("No date of end has been found for reserve into file convres.json (patient 13)", error_ttt13)
     except FileNotFoundError as info_ttt13:
@@ -478,7 +729,28 @@ def dispResFunc():
                     MSBTTT14 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop14 + " " + \
                         'for : ' + "\n" + res_text14 + "Date of end : " + date_end14 + "\n" + name_treat14 + \
-                        "\n" + dose_ttt14) 
+                        "\n" + dose_ttt14)
+                    MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
+                        + name_treat14 + " " + dose_ttt14 + " of " + res_text14 + " ?")
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt14/convres.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP-" + word_ttstop
+                                    with open('./ttt/doc_ttt14/convres.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt14:
         print("No date of end has been found for reserve into file convres.json (patient 14)", error_ttt14)
     except FileNotFoundError as info_ttt14:
@@ -510,7 +782,28 @@ def dispResFunc():
                     MSBTTT15 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop15 + " " + \
                         'for : ' + "\n" + res_text15 + "Date of end : " + date_end15 + "\n" + name_treat15 + \
-                        "\n" + dose_ttt15) 
+                        "\n" + dose_ttt15)
+                    MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
+                        + name_treat15 + " " + dose_ttt15 + " of " + res_text15 + " ?")
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt15/convres.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP-" + word_ttstop
+                                    with open('./ttt/doc_ttt15/convres.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt15:
         print("No date of end has been found for reserve into file convres.json (patient 15)", error_ttt15)
     except FileNotFoundError as info_ttt15:
@@ -542,7 +835,28 @@ def dispResFunc():
                     MSBTTT16 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop16 + " " + \
                         'for : ' + "\n" + res_text16 + "Date of end : " + date_end16 + "\n" + name_treat16 + \
-                        "\n" + dose_ttt16) 
+                        "\n" + dose_ttt16)
+                    MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
+                        + name_treat16 + " " + dose_ttt16 + " of " + res_text16 + " ?")
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt16/convres.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP-" + word_ttstop
+                                    with open('./ttt/doc_ttt16/convres.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4) 
     except IndexError as error_ttt16:
         print("No date of end has been found for reserve into file convres.json (patient 16)", error_ttt16)
     except FileNotFoundError as info_ttt16:
@@ -574,7 +888,28 @@ def dispResFunc():
                     MSBTTT17 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop17 + " " + \
                         'for : ' + "\n" + res_text17 + "Date of end : " + date_end17 + "\n" + name_treat17 + \
-                        "\n" + dose_ttt17) 
+                        "\n" + dose_ttt17)
+                    MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
+                        + name_treat17 + " " + dose_ttt17 + " of " + res_text17 + " ?")
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt17/convres.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP-" + word_ttstop
+                                    with open('./ttt/doc_ttt17/convres.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt17:
         print("No date of end has been found for reserve into file convres.json (patient 17)", error_ttt17)
     except FileNotFoundError as info_ttt17:
@@ -606,7 +941,28 @@ def dispResFunc():
                     MSBTTT18 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop18 + " " + \
                         'for : ' + "\n" + res_text18 + "Date of end : " + date_end18 + "\n" + name_treat18 + \
-                        "\n" + dose_ttt18) 
+                        "\n" + dose_ttt18)
+                    MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
+                        + name_treat18 + " " + dose_ttt18 + " of " + res_text18 + " ?")
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt18/convres.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP-" + word_ttstop
+                                    with open('./ttt/doc_ttt18/convres.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt18:
         print("No date of end has been found for reserve into file convres.json (patient 18)", error_ttt18)
     except FileNotFoundError as info_ttt18:
@@ -638,7 +994,28 @@ def dispResFunc():
                     MSBTTT19 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop19 + " " + \
                         'for : ' + "\n" + res_text19 + "Date of end : " + date_end19 + "\n" + name_treat19 + \
-                        "\n" + dose_ttt19) 
+                        "\n" + dose_ttt19)
+                    MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
+                        + name_treat19 + " " + dose_ttt19 + " of " + res_text19 + " ?")
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt19/convres.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP-" + word_ttstop
+                                    with open('./ttt/doc_ttt19/convres.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt19:
         print("No date of end has been found for reserve into file convres.json (patient 19)", error_ttt19)
     except FileNotFoundError as info_ttt19:
@@ -671,7 +1048,28 @@ def dispResFunc():
                     MSBTTT20 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop20 + " " + \
                         'for : ' + "\n" + res_text20 + "Date of end : " + date_end20 + "\n" + name_treat20 + \
-                        "\n" + dose_ttt20) 
+                        "\n" + dose_ttt20)
+                    MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
+                        + name_treat20 + " " + dose_ttt20 + " of " + res_text20 + " ?")
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt20/convres.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP-" + word_ttstop
+                                    with open('./ttt/doc_ttt20/convres.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt20:
         print("No date of end has been found for reserve into file convres.json (patient 20)", error_ttt20)
     except FileNotFoundError as info_ttt20:
@@ -703,7 +1101,28 @@ def dispResFunc():
                     MSBTTT21 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop21 + " " + \
                         'for : ' + "\n" + res_text21 + "Date of end : " + date_end21 + "\n" + name_treat21 + \
-                        "\n" + dose_ttt21) 
+                        "\n" + dose_ttt21)
+                    MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
+                        + name_treat21 + " " + dose_ttt21 + " of " + res_text21 + " ?")
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt21/convres.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP-" + word_ttstop
+                                    with open('./ttt/doc_ttt21/convres.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt21:
         print("No date of end has been found for reserve into file convres.json (patient 21)", error_ttt21)
     except FileNotFoundError as info_ttt21:
@@ -735,7 +1154,28 @@ def dispResFunc():
                     MSBTTT22 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop22 + " " + \
                         'for : ' + "\n" + res_text22 + "Date of end : " + date_end22 + "\n" + name_treat22 + \
-                        "\n" + dose_ttt22) 
+                        "\n" + dose_ttt22)
+                    MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
+                        + name_treat22 + " " + dose_ttt22 + " of " + res_text22 + " ?")
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt22/convres.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP-" + word_ttstop
+                                    with open('./ttt/doc_ttt22/convres.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt22:
         print("No date of end has been found for reserve into file convres.json (patient 22)", error_ttt22)
     except FileNotFoundError as info_ttt22:
@@ -767,7 +1207,28 @@ def dispResFunc():
                     MSBTTT23 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop23 + " " + \
                         'for : ' + "\n" + res_text23 + "Date of end : " + date_end23 + "\n" + name_treat23 + \
-                        "\n" + dose_ttt23) 
+                        "\n" + dose_ttt23)
+                    MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
+                        + name_treat23 + " " + dose_ttt23 + " of " + res_text23 + " ?")
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt23/convres.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP-" + word_ttstop
+                                    with open('./ttt/doc_ttt23/convres.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt23:
         print("No date of end has been found for reserve into file convres.json (patient 23)", error_ttt23)
     except FileNotFoundError as info_ttt23:
@@ -799,7 +1260,28 @@ def dispResFunc():
                     MSBTTT24 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop24 + " " + \
                         'for : ' + "\n" + res_text24 + "Date of end : " + date_end24 + "\n" + name_treat24 + \
-                        "\n" + dose_ttt24) 
+                        "\n" + dose_ttt24)
+                    MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
+                        + name_treat24 + " " + dose_ttt24 + " of " + res_text24 + " ?")
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt24/convres.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP-" + word_ttstop
+                                    with open('./ttt/doc_ttt24/convres.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt24:
         print("No date of end has been found for reserve into file convres.json (patient 24)", error_ttt24)
     except FileNotFoundError as info_ttt24:

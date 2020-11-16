@@ -66,18 +66,9 @@ def dispTttBox():
                                     soir = (str(value[x]["Soir"]))
                                     nuit = (str(value[x]["Nuit"]))
                                     if value[x]["Date of end"] in word_ttstop:
-                                        value[x]['Date of end'] = "STOP"
-                                    #date_end.append(str(value[x]['Date of end']))
-                                    """
-                                    final_result = ("STOP " + "Nom et prenom : " + line_text1 + "\n" + \
-                                    "Date of introduction : " + intro_date + "\n" + "Date of end : " + \
-                                    date_end + "\n" + "Treatment : " + name_treat + "\n" + "Dosage : " + \
-                                    dose_ttt + "\n" + "Matin : " + matin + "\n" + "Midi : " + midi + "\n" + \
-                                    "Soir : " + soir + "\n" + "Nuit : " + nuit + "\n")
-                                    """
+                                        value[x]['Date of end'] = "STOP" + word_ttstop
                                     with open('./ttt/doc_ttt/convdose.json', 'w') as re_file:
                                         json.dump(data, re_file, indent=4)
-
     except IndexError as error_ttt:
         print("No date of end has been found for ttt into file convdose.json (patient 1)", error_ttt)
     except FileNotFoundError as info_ttt:

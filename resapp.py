@@ -39,8 +39,30 @@ def dispResFunc():
                     print(dose_ttt)
                     MSBTTT2 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop + " " + \
-                        'for : ' + "\n" + res_text1 + "Date of end : " + date_end + "\n" + name_treat + \
-                        "\n" + dose_ttt) 
+                        'for : ' + "\n" + res_text1 + "Date of end : " + date_end + "\n" + \
+                        name_treat + "\n" + dose_ttt)
+                    MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
+                        + name_treat + " " + dose_ttt + " of " + res_text1 + " ?")
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt/convres.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP-" + word_ttstop
+                                    with open('./ttt/doc_ttt/convres.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
+
     except IndexError as error_ttt:
         print("No date of end has been found for reserve into file convres.json (patient 1)", error_ttt)
     except FileNotFoundError as info_ttt:

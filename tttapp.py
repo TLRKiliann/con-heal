@@ -53,7 +53,6 @@ def dispTttBox():
                         for (key, value) in data.items():
                             listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
                             for x in listdata_x:
-                                print(str(value[x]["Date of end"]))
                                 date_end = (str(value[x]["Date of end"]))
                                 if date_end == word_ttstop:
                                     print(date_end)
@@ -66,8 +65,9 @@ def dispTttBox():
                                     midi = (str(value[x]["Midi"]))
                                     soir = (str(value[x]["Soir"]))
                                     nuit = (str(value[x]["Nuit"]))
-                                    date_end.pop() 
-                                    date_end.append(str(value[x]['Date of end']))
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP"
+                                    #date_end.append(str(value[x]['Date of end']))
                                     """
                                     final_result = ("STOP " + "Nom et prenom : " + line_text1 + "\n" + \
                                     "Date of introduction : " + intro_date + "\n" + "Date of end : " + \
@@ -75,8 +75,8 @@ def dispTttBox():
                                     dose_ttt + "\n" + "Matin : " + matin + "\n" + "Midi : " + midi + "\n" + \
                                     "Soir : " + soir + "\n" + "Nuit : " + nuit + "\n")
                                     """
-                                    re_file = open('./ttt/doc_ttt/convdose.json', 'w')
-                                    stop_remind = json.dump(final_result, re_file)
+                                    with open('./ttt/doc_ttt/convdose.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
 
     except IndexError as error_ttt:
         print("No date of end has been found for ttt into file convdose.json (patient 1)", error_ttt)

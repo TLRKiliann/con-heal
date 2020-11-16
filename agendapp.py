@@ -86,7 +86,6 @@ def dispAgBox():
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-
         for path, dirs, files in os.walk('./patient_agenda/events2/'
             'doc_events/fix_agenda/agenda_saved/'):
             for file in files:
@@ -103,9 +102,34 @@ def dispAgBox():
                                 'there is an appointment tomorrow for : ' \
                                 + new_text2 + lines[i] + lines[i+1] + \
                                 lines[i+2])
-                        else:
-                            pass
-    except FileNotFoundError as infofile2:
+
+                            MSGREM2 = messagebox.askyesno("Ask", "Do you want to stop reminders ?")
+                            if MSGREM2 == 1:
+                                magicword = (datetime.datetime.now() + datetime.timedelta(\
+                                    days=1)).strftime('%d/%m/%Y')
+                                for path, dirs, files in os.walk('./patient_agenda/events2/'\
+                                    'doc_events/fix_agenda/agenda_saved/'):
+                                    for file in files:
+                                        read_f = open(os.path.join(path, file), 'r')
+                                        for line in read_f:
+                                            for i in line:
+                                                noway = "Fixed on :"
+                                                if line[0:10] == noway:
+                                                    print("+ There is noway : ")
+                                                    print(line[0:10])
+                                                elif magicword in line:
+                                                    print("+ It is magicword : ")
+                                                    print(line[0:10])
+                                                    write_f = open(os.path.join(path, file), 'w')
+                                                    write_f.write("Rdv past-->" + line + "\n")
+                                                    print("Modification finish")
+                                                    break
+                                                else:
+                                                    print("None file has been writted")
+                                                    break
+                            else:
+                                pass
+    except (FileNotFoundError, IndexError) as infofile2:
         print("File 2 has not been found", infofile2)
     else:
         ("Error unknow")
@@ -121,7 +145,6 @@ def dispAgBox():
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-
         for path, dirs, files in os.walk('./patient_agenda/events3/'
             'doc_events/fix_agenda/agenda_saved/'):
             for file in files:
@@ -138,9 +161,34 @@ def dispAgBox():
                                 'there is an appointment tomorrow for : ' \
                                 + new_text3 + lines[i] + lines[i+1] + \
                                 lines[i+2])
-                        else:
-                            pass
-    except FileNotFoundError as infofile3:
+
+                            MSGREM3 = messagebox.askyesno("Ask", "Do you want to stop reminders ?")
+                            if MSGREM3 == 1:
+                                magicword = (datetime.datetime.now() + datetime.timedelta(\
+                                    days=1)).strftime('%d/%m/%Y')
+                                for path, dirs, files in os.walk('./patient_agenda/events3/'\
+                                    'doc_events/fix_agenda/agenda_saved/'):
+                                    for file in files:
+                                        read_f = open(os.path.join(path, file), 'r')
+                                        for line in read_f:
+                                            for i in line:
+                                                noway = "Fixed on :"
+                                                if line[0:10] == noway:
+                                                    print("+ There is noway : ")
+                                                    print(line[0:10])
+                                                elif magicword in line:
+                                                    print("+ It is magicword : ")
+                                                    print(line[0:10])
+                                                    write_f = open(os.path.join(path, file), 'w')
+                                                    write_f.write("Rdv past-->" + line + "\n")
+                                                    print("Modification finish")
+                                                    break
+                                                else:
+                                                    print("None file has been writted")
+                                                    break
+                            else:
+                                pass
+    except (FileNotFoundError, IndexError) as infofile3:
         print("File 3 has not been found", infofile3)
     else:
         ("Error unknow")
@@ -156,7 +204,6 @@ def dispAgBox():
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-
         for path, dirs, files in os.walk('./patient_agenda/events4/'
             'doc_events/fix_agenda/agenda_saved/'):
             for file in files:
@@ -173,9 +220,34 @@ def dispAgBox():
                                 'there is an appointment tomorrow for : ' \
                                 + new_text4 + lines[i] + lines[i+1] + \
                                 lines[i+2])
-                        else:
-                            pass
-    except FileNotFoundError as infofile4:
+
+                            MSGREM4 = messagebox.askyesno("Ask", "Do you want to stop reminders ?")
+                            if MSGREM4 == 1:
+                                magicword = (datetime.datetime.now() + datetime.timedelta(\
+                                    days=1)).strftime('%d/%m/%Y')
+                                for path, dirs, files in os.walk('./patient_agenda/events4/'\
+                                    'doc_events/fix_agenda/agenda_saved/'):
+                                    for file in files:
+                                        read_f = open(os.path.join(path, file), 'r')
+                                        for line in read_f:
+                                            for i in line:
+                                                noway = "Fixed on :"
+                                                if line[0:10] == noway:
+                                                    print("+ There is noway : ")
+                                                    print(line[0:10])
+                                                elif magicword in line:
+                                                    print("+ It is magicword : ")
+                                                    print(line[0:10])
+                                                    write_f = open(os.path.join(path, file), 'w')
+                                                    write_f.write("Rdv past-->" + line + "\n")
+                                                    print("Modification finish")
+                                                    break
+                                                else:
+                                                    print("None file has been writted")
+                                                    break
+                            else:
+                                pass
+    except (FileNotFoundError, IndexError) as infofile4:
         print("File 4 has not been found", infofile4)
     else:
         ("Error unknow")
@@ -191,7 +263,6 @@ def dispAgBox():
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-
         for path, dirs, files in os.walk('./patient_agenda/events5/'
             'doc_events/fix_agenda/agenda_saved/'):
             for file in files:
@@ -208,9 +279,34 @@ def dispAgBox():
                                 'there is an appointment tomorrow for : ' \
                                 + new_text5 + lines[i] + lines[i+1] + \
                                 lines[i+2])
-                        else:
-                            pass
-    except FileNotFoundError as infofile5:
+
+                            MSGREM5 = messagebox.askyesno("Ask", "Do you want to stop reminders ?")
+                            if MSGREM5 == 1:
+                                magicword = (datetime.datetime.now() + datetime.timedelta(\
+                                    days=1)).strftime('%d/%m/%Y')
+                                for path, dirs, files in os.walk('./patient_agenda/events5/'\
+                                    'doc_events/fix_agenda/agenda_saved/'):
+                                    for file in files:
+                                        read_f = open(os.path.join(path, file), 'r')
+                                        for line in read_f:
+                                            for i in line:
+                                                noway = "Fixed on :"
+                                                if line[0:10] == noway:
+                                                    print("+ There is noway : ")
+                                                    print(line[0:10])
+                                                elif magicword in line:
+                                                    print("+ It is magicword : ")
+                                                    print(line[0:10])
+                                                    write_f = open(os.path.join(path, file), 'w')
+                                                    write_f.write("Rdv past-->" + line + "\n")
+                                                    print("Modification finish")
+                                                    break
+                                                else:
+                                                    print("None file has been writted")
+                                                    break
+                            else:
+                                pass
+    except (FileNotFoundError, IndexError) as infofile5:
         print("File 5 has not been found", infofile5)
     else:
         ("Error unknow")
@@ -226,7 +322,6 @@ def dispAgBox():
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-
         for path, dirs, files in os.walk('./patient_agenda/events6/'
             'doc_events/fix_agenda/agenda_saved/'):
             for file in files:
@@ -243,9 +338,34 @@ def dispAgBox():
                                 'there is an appointment tomorrow for : ' \
                                 + new_text6 + lines[i] + lines[i+1] + \
                                 lines[i+2])
-                        else:
-                            pass
-    except FileNotFoundError as infofile6:
+
+                            MSGREM6 = messagebox.askyesno("Ask", "Do you want to stop reminders ?")
+                            if MSGREM6 == 1:
+                                magicword = (datetime.datetime.now() + datetime.timedelta(\
+                                    days=1)).strftime('%d/%m/%Y')
+                                for path, dirs, files in os.walk('./patient_agenda/events6/'\
+                                    'doc_events/fix_agenda/agenda_saved/'):
+                                    for file in files:
+                                        read_f = open(os.path.join(path, file), 'r')
+                                        for line in read_f:
+                                            for i in line:
+                                                noway = "Fixed on :"
+                                                if line[0:10] == noway:
+                                                    print("+ There is noway : ")
+                                                    print(line[0:10])
+                                                elif magicword in line:
+                                                    print("+ It is magicword : ")
+                                                    print(line[0:10])
+                                                    write_f = open(os.path.join(path, file), 'w')
+                                                    write_f.write("Rdv past-->" + line + "\n")
+                                                    print("Modification finish")
+                                                    break
+                                                else:
+                                                    print("None file has been writted")
+                                                    break
+                            else:
+                                pass
+    except (FileNotFoundError, IndexError) as infofile6:
         print("File 6 has not been found", infofile6)
     else:
         ("Error unknow")
@@ -261,7 +381,6 @@ def dispAgBox():
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-
         for path, dirs, files in os.walk('./patient_agenda/events7/'
             'doc_events/fix_agenda/agenda_saved/'):
             for file in files:
@@ -278,9 +397,34 @@ def dispAgBox():
                                 'there is an appointment tomorrow for : ' \
                                 + new_text7 + lines[i] + lines[i+1] + \
                                 lines[i+2])
-                        else:
-                            pass
-    except FileNotFoundError as infofile7:
+
+                            MSGREM7 = messagebox.askyesno("Ask", "Do you want to stop reminders ?")
+                            if MSGREM7 == 1:
+                                magicword = (datetime.datetime.now() + datetime.timedelta(\
+                                    days=1)).strftime('%d/%m/%Y')
+                                for path, dirs, files in os.walk('./patient_agenda/events7/'\
+                                    'doc_events/fix_agenda/agenda_saved/'):
+                                    for file in files:
+                                        read_f = open(os.path.join(path, file), 'r')
+                                        for line in read_f:
+                                            for i in line:
+                                                noway = "Fixed on :"
+                                                if line[0:10] == noway:
+                                                    print("+ There is noway : ")
+                                                    print(line[0:10])
+                                                elif magicword in line:
+                                                    print("+ It is magicword : ")
+                                                    print(line[0:10])
+                                                    write_f = open(os.path.join(path, file), 'w')
+                                                    write_f.write("Rdv past-->" + line + "\n")
+                                                    print("Modification finish")
+                                                    break
+                                                else:
+                                                    print("None file has been writted")
+                                                    break
+                            else:
+                                pass
+    except (FileNotFoundError, IndexError) as infofile7:
         print("File 7 has not been found", infofile7)
     else:
         ("Error unknow")
@@ -296,7 +440,6 @@ def dispAgBox():
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-
         for path, dirs, files in os.walk('./patient_agenda/events8/'
             'doc_events/fix_agenda/agenda_saved/'):
             for file in files:
@@ -313,9 +456,34 @@ def dispAgBox():
                                 'there is an appointment tomorrow for : ' \
                                 + new_text8 + lines[i] + lines[i+1] + \
                                 lines[i+2])
-                        else:
-                            pass
-    except FileNotFoundError as infofile8:
+
+                            MSGREM8 = messagebox.askyesno("Ask", "Do you want to stop reminders ?")
+                            if MSGREM8 == 1:
+                                magicword = (datetime.datetime.now() + datetime.timedelta(\
+                                    days=1)).strftime('%d/%m/%Y')
+                                for path, dirs, files in os.walk('./patient_agenda/events8/'\
+                                    'doc_events/fix_agenda/agenda_saved/'):
+                                    for file in files:
+                                        read_f = open(os.path.join(path, file), 'r')
+                                        for line in read_f:
+                                            for i in line:
+                                                noway = "Fixed on :"
+                                                if line[0:10] == noway:
+                                                    print("+ There is noway : ")
+                                                    print(line[0:10])
+                                                elif magicword in line:
+                                                    print("+ It is magicword : ")
+                                                    print(line[0:10])
+                                                    write_f = open(os.path.join(path, file), 'w')
+                                                    write_f.write("Rdv past-->" + line + "\n")
+                                                    print("Modification finish")
+                                                    break
+                                                else:
+                                                    print("None file has been writted")
+                                                    break
+                            else:
+                                pass
+    except (FileNotFoundError, IndexError) as infofile8:
         print("File 8 has not been found", infofile8)
     else:
         ("Error unknow")
@@ -331,7 +499,6 @@ def dispAgBox():
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-
         for path, dirs, files in os.walk('./patient_agenda/events9/'
             'doc_events/fix_agenda/agenda_saved/'):
             for file in files:
@@ -348,9 +515,34 @@ def dispAgBox():
                                 'there is an appointment tomorrow for : ' \
                                 + new_text9 + lines[i] + lines[i+1] + \
                                 lines[i+2])
-                        else:
-                            pass
-    except FileNotFoundError as infofile9:
+
+                            MSGREM9 = messagebox.askyesno("Ask", "Do you want to stop reminders ?")
+                            if MSGREM9 == 1:
+                                magicword = (datetime.datetime.now() + datetime.timedelta(\
+                                    days=1)).strftime('%d/%m/%Y')
+                                for path, dirs, files in os.walk('./patient_agenda/events9/'\
+                                    'doc_events/fix_agenda/agenda_saved/'):
+                                    for file in files:
+                                        read_f = open(os.path.join(path, file), 'r')
+                                        for line in read_f:
+                                            for i in line:
+                                                noway = "Fixed on :"
+                                                if line[0:10] == noway:
+                                                    print("+ There is noway : ")
+                                                    print(line[0:10])
+                                                elif magicword in line:
+                                                    print("+ It is magicword : ")
+                                                    print(line[0:10])
+                                                    write_f = open(os.path.join(path, file), 'w')
+                                                    write_f.write("Rdv past-->" + line + "\n")
+                                                    print("Modification finish")
+                                                    break
+                                                else:
+                                                    print("None file has been writted")
+                                                    break
+                            else:
+                                pass
+    except (FileNotFoundError, IndexError) as infofile9:
         print("File 9 has not been found", infofile9)
     else:
         ("Error unknow")
@@ -366,7 +558,6 @@ def dispAgBox():
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-
         for path, dirs, files in os.walk('./patient_agenda/events10/'
             'doc_events/fix_agenda/agenda_saved/'):
             for file in files:
@@ -383,9 +574,34 @@ def dispAgBox():
                                 'there is an appointment tomorrow for : ' \
                                 + new_text10 + lines[i] + lines[i+1] + \
                                 lines[i+2])
-                        else:
-                            pass
-    except FileNotFoundError as infofile10:
+
+                            MSGREM10 = messagebox.askyesno("Ask", "Do you want to stop reminders ?")
+                            if MSGREM10 == 1:
+                                magicword = (datetime.datetime.now() + datetime.timedelta(\
+                                    days=1)).strftime('%d/%m/%Y')
+                                for path, dirs, files in os.walk('./patient_agenda/events10/'\
+                                    'doc_events/fix_agenda/agenda_saved/'):
+                                    for file in files:
+                                        read_f = open(os.path.join(path, file), 'r')
+                                        for line in read_f:
+                                            for i in line:
+                                                noway = "Fixed on :"
+                                                if line[0:10] == noway:
+                                                    print("+ There is noway : ")
+                                                    print(line[0:10])
+                                                elif magicword in line:
+                                                    print("+ It is magicword : ")
+                                                    print(line[0:10])
+                                                    write_f = open(os.path.join(path, file), 'w')
+                                                    write_f.write("Rdv past-->" + line + "\n")
+                                                    print("Modification finish")
+                                                    break
+                                                else:
+                                                    print("None file has been writted")
+                                                    break
+                            else:
+                                pass
+    except (FileNotFoundError, IndexError) as infofile10:
         print("File 10 has not been found", infofile10)
     else:
         ("Error unknow")
@@ -401,7 +617,6 @@ def dispAgBox():
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-
         for path, dirs, files in os.walk('./patient_agenda/events11/'
             'doc_events/fix_agenda/agenda_saved/'):
             for file in files:
@@ -418,9 +633,34 @@ def dispAgBox():
                                 'there is an appointment tomorrow for : ' \
                                 + new_text11 + lines[i] + lines[i+1] + \
                                 lines[i+2])
-                        else:
-                            pass
-    except FileNotFoundError as infofile11:
+
+                            MSGREM11 = messagebox.askyesno("Ask", "Do you want to stop reminders ?")
+                            if MSGREM11 == 1:
+                                magicword = (datetime.datetime.now() + datetime.timedelta(\
+                                    days=1)).strftime('%d/%m/%Y')
+                                for path, dirs, files in os.walk('./patient_agenda/events11/'\
+                                    'doc_events/fix_agenda/agenda_saved/'):
+                                    for file in files:
+                                        read_f = open(os.path.join(path, file), 'r')
+                                        for line in read_f:
+                                            for i in line:
+                                                noway = "Fixed on :"
+                                                if line[0:10] == noway:
+                                                    print("+ There is noway : ")
+                                                    print(line[0:10])
+                                                elif magicword in line:
+                                                    print("+ It is magicword : ")
+                                                    print(line[0:10])
+                                                    write_f = open(os.path.join(path, file), 'w')
+                                                    write_f.write("Rdv past-->" + line + "\n")
+                                                    print("Modification finish")
+                                                    break
+                                                else:
+                                                    print("None file has been writted")
+                                                    break
+                            else:
+                                pass
+    except (FileNotFoundError, IndexError) as infofile11:
         print("File 11 has not been found", infofile11)
     else:
         ("Error unknow")
@@ -436,7 +676,6 @@ def dispAgBox():
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-
         for path, dirs, files in os.walk('./patient_agenda/events12/'
             'doc_events/fix_agenda/agenda_saved/'):
             for file in files:
@@ -453,9 +692,34 @@ def dispAgBox():
                                 'there is an appointment tomorrow for : ' \
                                 + new_text12 + lines[i] + lines[i+1] + \
                                 lines[i+2])
-                        else:
-                            pass
-    except FileNotFoundError as infofile12:
+
+                            MSGREM12 = messagebox.askyesno("Ask", "Do you want to stop reminders ?")
+                            if MSGREM12 == 1:
+                                magicword = (datetime.datetime.now() + datetime.timedelta(\
+                                    days=1)).strftime('%d/%m/%Y')
+                                for path, dirs, files in os.walk('./patient_agenda/events12/'\
+                                    'doc_events/fix_agenda/agenda_saved/'):
+                                    for file in files:
+                                        read_f = open(os.path.join(path, file), 'r')
+                                        for line in read_f:
+                                            for i in line:
+                                                noway = "Fixed on :"
+                                                if line[0:10] == noway:
+                                                    print("+ There is noway : ")
+                                                    print(line[0:10])
+                                                elif magicword in line:
+                                                    print("+ It is magicword : ")
+                                                    print(line[0:10])
+                                                    write_f = open(os.path.join(path, file), 'w')
+                                                    write_f.write("Rdv past-->" + line + "\n")
+                                                    print("Modification finish")
+                                                    break
+                                                else:
+                                                    print("None file has been writted")
+                                                    break
+                            else:
+                                pass
+    except (FileNotFoundError, IndexError) as infofile12:
         print("File 12 has not been found", infofile12)
     else:
         ("Error unknow")
@@ -471,7 +735,6 @@ def dispAgBox():
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-
         for path, dirs, files in os.walk('./patient_agenda/events13/'
             'doc_events/fix_agenda/agenda_saved/'):
             for file in files:
@@ -488,9 +751,34 @@ def dispAgBox():
                                 'there is an appointment tomorrow for : ' \
                                 + new_text13 + lines[i] + lines[i+1] + \
                                 lines[i+2])
-                        else:
-                            pass
-    except FileNotFoundError as infofile13:
+
+                            MSGREM13 = messagebox.askyesno("Ask", "Do you want to stop reminders ?")
+                            if MSGREM13 == 1:
+                                magicword = (datetime.datetime.now() + datetime.timedelta(\
+                                    days=1)).strftime('%d/%m/%Y')
+                                for path, dirs, files in os.walk('./patient_agenda/events13/'\
+                                    'doc_events/fix_agenda/agenda_saved/'):
+                                    for file in files:
+                                        read_f = open(os.path.join(path, file), 'r')
+                                        for line in read_f:
+                                            for i in line:
+                                                noway = "Fixed on :"
+                                                if line[0:10] == noway:
+                                                    print("+ There is noway : ")
+                                                    print(line[0:10])
+                                                elif magicword in line:
+                                                    print("+ It is magicword : ")
+                                                    print(line[0:10])
+                                                    write_f = open(os.path.join(path, file), 'w')
+                                                    write_f.write("Rdv past-->" + line + "\n")
+                                                    print("Modification finish")
+                                                    break
+                                                else:
+                                                    print("None file has been writted")
+                                                    break
+                            else:
+                                pass
+    except (FileNotFoundError, IndexError) as infofile13:
         print("File 13 has not been found", infofile13)
     else:
         ("Error unknow")
@@ -506,7 +794,6 @@ def dispAgBox():
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-
         for path, dirs, files in os.walk('./patient_agenda/events14/'
             'doc_events/fix_agenda/agenda_saved/'):
             for file in files:
@@ -523,9 +810,34 @@ def dispAgBox():
                                 'there is an appointment tomorrow for : ' \
                                 + new_text14 + lines[i] + lines[i+1] + \
                                 lines[i+2])
-                        else:
-                            pass
-    except FileNotFoundError as infofile14:
+
+                            MSGREM14 = messagebox.askyesno("Ask", "Do you want to stop reminders ?")
+                            if MSGREM14 == 1:
+                                magicword = (datetime.datetime.now() + datetime.timedelta(\
+                                    days=1)).strftime('%d/%m/%Y')
+                                for path, dirs, files in os.walk('./patient_agenda/events14/'\
+                                    'doc_events/fix_agenda/agenda_saved/'):
+                                    for file in files:
+                                        read_f = open(os.path.join(path, file), 'r')
+                                        for line in read_f:
+                                            for i in line:
+                                                noway = "Fixed on :"
+                                                if line[0:10] == noway:
+                                                    print("+ There is noway : ")
+                                                    print(line[0:10])
+                                                elif magicword in line:
+                                                    print("+ It is magicword : ")
+                                                    print(line[0:10])
+                                                    write_f = open(os.path.join(path, file), 'w')
+                                                    write_f.write("Rdv past-->" + line + "\n")
+                                                    print("Modification finish")
+                                                    break
+                                                else:
+                                                    print("None file has been writted")
+                                                    break
+                            else:
+                                pass
+    except (FileNotFoundError, IndexError) as infofile14:
         print("File 14 has not been found", infofile14)
     else:
         ("Error unknow")
@@ -541,7 +853,6 @@ def dispAgBox():
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-
         for path, dirs, files in os.walk('./patient_agenda/events15/'
             'doc_events/fix_agenda/agenda_saved/'):
             for file in files:
@@ -558,9 +869,34 @@ def dispAgBox():
                                 'there is an appointment tomorrow for : ' \
                                 + new_text15 + lines[i] + lines[i+1] + \
                                 lines[i+2])
-                        else:
-                            pass
-    except FileNotFoundError as infofile15:
+
+                            MSGREM15 = messagebox.askyesno("Ask", "Do you want to stop reminders ?")
+                            if MSGREM15 == 1:
+                                magicword = (datetime.datetime.now() + datetime.timedelta(\
+                                    days=1)).strftime('%d/%m/%Y')
+                                for path, dirs, files in os.walk('./patient_agenda/events15/'\
+                                    'doc_events/fix_agenda/agenda_saved/'):
+                                    for file in files:
+                                        read_f = open(os.path.join(path, file), 'r')
+                                        for line in read_f:
+                                            for i in line:
+                                                noway = "Fixed on :"
+                                                if line[0:10] == noway:
+                                                    print("+ There is noway : ")
+                                                    print(line[0:10])
+                                                elif magicword in line:
+                                                    print("+ It is magicword : ")
+                                                    print(line[0:10])
+                                                    write_f = open(os.path.join(path, file), 'w')
+                                                    write_f.write("Rdv past-->" + line + "\n")
+                                                    print("Modification finish")
+                                                    break
+                                                else:
+                                                    print("None file has been writted")
+                                                    break
+                            else:
+                                pass
+    except (FileNotFoundError, IndexError) as infofile15:
         print("File 15 has not been found", infofile15)
     else:
         ("Error unknow")
@@ -576,7 +912,6 @@ def dispAgBox():
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-
         for path, dirs, files in os.walk('./patient_agenda/events16/'
             'doc_events/fix_agenda/agenda_saved/'):
             for file in files:
@@ -593,9 +928,34 @@ def dispAgBox():
                                 'there is an appointment tomorrow for : ' \
                                 + new_text16 + lines[i] + lines[i+1] + \
                                 lines[i+2])
-                        else:
-                            pass
-    except FileNotFoundError as infofile16:
+
+                            MSGREM16 = messagebox.askyesno("Ask", "Do you want to stop reminders ?")
+                            if MSGREM16 == 1:
+                                magicword = (datetime.datetime.now() + datetime.timedelta(\
+                                    days=1)).strftime('%d/%m/%Y')
+                                for path, dirs, files in os.walk('./patient_agenda/events16/'\
+                                    'doc_events/fix_agenda/agenda_saved/'):
+                                    for file in files:
+                                        read_f = open(os.path.join(path, file), 'r')
+                                        for line in read_f:
+                                            for i in line:
+                                                noway = "Fixed on :"
+                                                if line[0:10] == noway:
+                                                    print("+ There is noway : ")
+                                                    print(line[0:10])
+                                                elif magicword in line:
+                                                    print("+ It is magicword : ")
+                                                    print(line[0:10])
+                                                    write_f = open(os.path.join(path, file), 'w')
+                                                    write_f.write("Rdv past-->" + line + "\n")
+                                                    print("Modification finish")
+                                                    break
+                                                else:
+                                                    print("None file has been writted")
+                                                    break
+                            else:
+                                pass
+    except (FileNotFoundError, IndexError) as infofile16:
         print("File 16 has not been found", infofile16)
     else:
         ("Error unknow")
@@ -611,7 +971,6 @@ def dispAgBox():
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-
         for path, dirs, files in os.walk('./patient_agenda/events17/'
             'doc_events/fix_agenda/agenda_saved/'):
             for file in files:
@@ -628,9 +987,34 @@ def dispAgBox():
                                 'there is an appointment tomorrow for : ' \
                                 + new_text17 + lines[i] + lines[i+1] + \
                                 lines[i+2])
-                        else:
-                            pass
-    except FileNotFoundError as infofile17:
+
+                            MSGREM17 = messagebox.askyesno("Ask", "Do you want to stop reminders ?")
+                            if MSGREM17 == 1:
+                                magicword = (datetime.datetime.now() + datetime.timedelta(\
+                                    days=1)).strftime('%d/%m/%Y')
+                                for path, dirs, files in os.walk('./patient_agenda/events17/'\
+                                    'doc_events/fix_agenda/agenda_saved/'):
+                                    for file in files:
+                                        read_f = open(os.path.join(path, file), 'r')
+                                        for line in read_f:
+                                            for i in line:
+                                                noway = "Fixed on :"
+                                                if line[0:10] == noway:
+                                                    print("+ There is noway : ")
+                                                    print(line[0:10])
+                                                elif magicword in line:
+                                                    print("+ It is magicword : ")
+                                                    print(line[0:10])
+                                                    write_f = open(os.path.join(path, file), 'w')
+                                                    write_f.write("Rdv past-->" + line + "\n")
+                                                    print("Modification finish")
+                                                    break
+                                                else:
+                                                    print("None file has been writted")
+                                                    break
+                            else:
+                                pass
+    except (FileNotFoundError, IndexError) as infofile17:
         print("File 17 has not been found", infofile17)
     else:
         ("Error unknow")
@@ -646,7 +1030,6 @@ def dispAgBox():
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-
         for path, dirs, files in os.walk('./patient_agenda/events18/'
             'doc_events/fix_agenda/agenda_saved/'):
             for file in files:
@@ -663,9 +1046,34 @@ def dispAgBox():
                                 'there is an appointment tomorrow for : ' \
                                 + new_text18 + lines[i] + lines[i+1] + \
                                 lines[i+2])
-                        else:
-                            pass
-    except FileNotFoundError as infofile18:
+
+                            MSGREM18 = messagebox.askyesno("Ask", "Do you want to stop reminders ?")
+                            if MSGREM18 == 1:
+                                magicword = (datetime.datetime.now() + datetime.timedelta(\
+                                    days=1)).strftime('%d/%m/%Y')
+                                for path, dirs, files in os.walk('./patient_agenda/events18/'\
+                                    'doc_events/fix_agenda/agenda_saved/'):
+                                    for file in files:
+                                        read_f = open(os.path.join(path, file), 'r')
+                                        for line in read_f:
+                                            for i in line:
+                                                noway = "Fixed on :"
+                                                if line[0:10] == noway:
+                                                    print("+ There is noway : ")
+                                                    print(line[0:10])
+                                                elif magicword in line:
+                                                    print("+ It is magicword : ")
+                                                    print(line[0:10])
+                                                    write_f = open(os.path.join(path, file), 'w')
+                                                    write_f.write("Rdv past-->" + line + "\n")
+                                                    print("Modification finish")
+                                                    break
+                                                else:
+                                                    print("None file has been writted")
+                                                    break
+                            else:
+                                pass
+    except (FileNotFoundError, IndexError) as infofile18:
         print("File 18 has not been found", infofile18)
     else:
         ("Error unknow")
@@ -681,7 +1089,6 @@ def dispAgBox():
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-
         for path, dirs, files in os.walk('./patient_agenda/events19/'
             'doc_events/fix_agenda/agenda_saved/'):
             for file in files:
@@ -698,9 +1105,34 @@ def dispAgBox():
                                 'there is an appointment tomorrow for : ' \
                                 + new_text19 + lines[i] + lines[i+1] + \
                                 lines[i+2])
-                        else:
-                            pass
-    except FileNotFoundError as infofile19:
+
+                            MSGREM19 = messagebox.askyesno("Ask", "Do you want to stop reminders ?")
+                            if MSGREM19 == 1:
+                                magicword = (datetime.datetime.now() + datetime.timedelta(\
+                                    days=1)).strftime('%d/%m/%Y')
+                                for path, dirs, files in os.walk('./patient_agenda/events19/'\
+                                    'doc_events/fix_agenda/agenda_saved/'):
+                                    for file in files:
+                                        read_f = open(os.path.join(path, file), 'r')
+                                        for line in read_f:
+                                            for i in line:
+                                                noway = "Fixed on :"
+                                                if line[0:10] == noway:
+                                                    print("+ There is noway : ")
+                                                    print(line[0:10])
+                                                elif magicword in line:
+                                                    print("+ It is magicword : ")
+                                                    print(line[0:10])
+                                                    write_f = open(os.path.join(path, file), 'w')
+                                                    write_f.write("Rdv past-->" + line + "\n")
+                                                    print("Modification finish")
+                                                    break
+                                                else:
+                                                    print("None file has been writted")
+                                                    break
+                            else:
+                                pass
+    except (FileNotFoundError, IndexError) as infofile19:
         print("File 19 has not been found", infofile19)
     else:
         ("Error unknow")
@@ -716,7 +1148,6 @@ def dispAgBox():
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-
         for path, dirs, files in os.walk('./patient_agenda/events20/'
             'doc_events/fix_agenda/agenda_saved/'):
             for file in files:
@@ -733,9 +1164,34 @@ def dispAgBox():
                                 'there is an appointment tomorrow for : ' \
                                 + new_text20 + lines[i] + lines[i+1] + \
                                 lines[i+2])
-                        else:
-                            pass
-    except FileNotFoundError as infofile20:
+
+                            MSGREM20 = messagebox.askyesno("Ask", "Do you want to stop reminders ?")
+                            if MSGREM20 == 1:
+                                magicword = (datetime.datetime.now() + datetime.timedelta(\
+                                    days=1)).strftime('%d/%m/%Y')
+                                for path, dirs, files in os.walk('./patient_agenda/events20/'\
+                                    'doc_events/fix_agenda/agenda_saved/'):
+                                    for file in files:
+                                        read_f = open(os.path.join(path, file), 'r')
+                                        for line in read_f:
+                                            for i in line:
+                                                noway = "Fixed on :"
+                                                if line[0:10] == noway:
+                                                    print("+ There is noway : ")
+                                                    print(line[0:10])
+                                                elif magicword in line:
+                                                    print("+ It is magicword : ")
+                                                    print(line[0:10])
+                                                    write_f = open(os.path.join(path, file), 'w')
+                                                    write_f.write("Rdv past-->" + line + "\n")
+                                                    print("Modification finish")
+                                                    break
+                                                else:
+                                                    print("None file has been writted")
+                                                    break
+                            else:
+                                pass
+    except (FileNotFoundError, IndexError) as infofile20:
         print("File 20 has not been found", infofile20)
     else:
         ("Error unknow")
@@ -751,7 +1207,6 @@ def dispAgBox():
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-
         for path, dirs, files in os.walk('./patient_agenda/events21/'
             'doc_events/fix_agenda/agenda_saved/'):
             for file in files:
@@ -768,9 +1223,34 @@ def dispAgBox():
                                 'there is an appointment tomorrow for : ' \
                                 + new_text21 + lines[i] + lines[i+1] + \
                                 lines[i+2])
-                        else:
-                            pass
-    except FileNotFoundError as infofile21:
+
+                            MSGREM21 = messagebox.askyesno("Ask", "Do you want to stop reminders ?")
+                            if MSGREM21 == 1:
+                                magicword = (datetime.datetime.now() + datetime.timedelta(\
+                                    days=1)).strftime('%d/%m/%Y')
+                                for path, dirs, files in os.walk('./patient_agenda/events21/'\
+                                    'doc_events/fix_agenda/agenda_saved/'):
+                                    for file in files:
+                                        read_f = open(os.path.join(path, file), 'r')
+                                        for line in read_f:
+                                            for i in line:
+                                                noway = "Fixed on :"
+                                                if line[0:10] == noway:
+                                                    print("+ There is noway : ")
+                                                    print(line[0:10])
+                                                elif magicword in line:
+                                                    print("+ It is magicword : ")
+                                                    print(line[0:10])
+                                                    write_f = open(os.path.join(path, file), 'w')
+                                                    write_f.write("Rdv past-->" + line + "\n")
+                                                    print("Modification finish")
+                                                    break
+                                                else:
+                                                    print("None file has been writted")
+                                                    break
+                            else:
+                                pass
+    except (FileNotFoundError, IndexError) as infofile21:
         print("File 21 has not been found", infofile21)
     else:
         ("Error unknow")
@@ -786,7 +1266,6 @@ def dispAgBox():
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-
         for path, dirs, files in os.walk('./patient_agenda/events22/'
             'doc_events/fix_agenda/agenda_saved/'):
             for file in files:
@@ -803,9 +1282,34 @@ def dispAgBox():
                                 'there is an appointment tomorrow for : ' \
                                 + new_text22 + lines[i] + lines[i+1] + \
                                 lines[i+2])
-                        else:
-                            pass
-    except FileNotFoundError as infofile22:
+
+                            MSGREM22 = messagebox.askyesno("Ask", "Do you want to stop reminders ?")
+                            if MSGREM22 == 1:
+                                magicword = (datetime.datetime.now() + datetime.timedelta(\
+                                    days=1)).strftime('%d/%m/%Y')
+                                for path, dirs, files in os.walk('./patient_agenda/events22/'\
+                                    'doc_events/fix_agenda/agenda_saved/'):
+                                    for file in files:
+                                        read_f = open(os.path.join(path, file), 'r')
+                                        for line in read_f:
+                                            for i in line:
+                                                noway = "Fixed on :"
+                                                if line[0:10] == noway:
+                                                    print("+ There is noway : ")
+                                                    print(line[0:10])
+                                                elif magicword in line:
+                                                    print("+ It is magicword : ")
+                                                    print(line[0:10])
+                                                    write_f = open(os.path.join(path, file), 'w')
+                                                    write_f.write("Rdv past-->" + line + "\n")
+                                                    print("Modification finish")
+                                                    break
+                                                else:
+                                                    print("None file has been writted")
+                                                    break
+                            else:
+                                pass
+    except (FileNotFoundError, IndexError) as infofile22:
         print("File 22 has not been found", infofile22)
     else:
         ("Error unknow")
@@ -821,7 +1325,6 @@ def dispAgBox():
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-
         for path, dirs, files in os.walk('./patient_agenda/events23/'
             'doc_events/fix_agenda/agenda_saved/'):
             for file in files:
@@ -838,9 +1341,34 @@ def dispAgBox():
                                 'there is an appointment tomorrow for : ' \
                                 + new_text23 + lines[i] + lines[i+1] + \
                                 lines[i+2])
-                        else:
-                            pass
-    except FileNotFoundError as infofile23:
+
+                            MSGREM23 = messagebox.askyesno("Ask", "Do you want to stop reminders ?")
+                            if MSGREM23 == 1:
+                                magicword = (datetime.datetime.now() + datetime.timedelta(\
+                                    days=1)).strftime('%d/%m/%Y')
+                                for path, dirs, files in os.walk('./patient_agenda/events23/'\
+                                    'doc_events/fix_agenda/agenda_saved/'):
+                                    for file in files:
+                                        read_f = open(os.path.join(path, file), 'r')
+                                        for line in read_f:
+                                            for i in line:
+                                                noway = "Fixed on :"
+                                                if line[0:10] == noway:
+                                                    print("+ There is noway : ")
+                                                    print(line[0:10])
+                                                elif magicword in line:
+                                                    print("+ It is magicword : ")
+                                                    print(line[0:10])
+                                                    write_f = open(os.path.join(path, file), 'w')
+                                                    write_f.write("Rdv past-->" + line + "\n")
+                                                    print("Modification finish")
+                                                    break
+                                                else:
+                                                    print("None file has been writted")
+                                                    break
+                            else:
+                                pass
+    except (FileNotFoundError, IndexError) as infofile23:
         print("File 23 has not been found", infofile23)
     else:
         ("Error unknow")
@@ -856,7 +1384,6 @@ def dispAgBox():
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-
         for path, dirs, files in os.walk('./patient_agenda/events24/'
             'doc_events/fix_agenda/agenda_saved/'):
             for file in files:
@@ -873,9 +1400,34 @@ def dispAgBox():
                                 'there is an appointment tomorrow for : ' \
                                 + new_text24 + lines[i] + lines[i+1] + \
                                 lines[i+2])
-                        else:
-                            pass
-    except FileNotFoundError as infofile24:
+
+                            MSGREM24 = messagebox.askyesno("Ask", "Do you want to stop reminders ?")
+                            if MSGREM24 == 1:
+                                magicword = (datetime.datetime.now() + datetime.timedelta(\
+                                    days=1)).strftime('%d/%m/%Y')
+                                for path, dirs, files in os.walk('./patient_agenda/events24/'\
+                                    'doc_events/fix_agenda/agenda_saved/'):
+                                    for file in files:
+                                        read_f = open(os.path.join(path, file), 'r')
+                                        for line in read_f:
+                                            for i in line:
+                                                noway = "Fixed on :"
+                                                if line[0:10] == noway:
+                                                    print("+ There is noway : ")
+                                                    print(line[0:10])
+                                                elif magicword in line:
+                                                    print("+ It is magicword : ")
+                                                    print(line[0:10])
+                                                    write_f = open(os.path.join(path, file), 'w')
+                                                    write_f.write("Rdv past-->" + line + "\n")
+                                                    print("Modification finish")
+                                                    break
+                                                else:
+                                                    print("None file has been writted")
+                                                    break
+                            else:
+                                pass
+    except (FileNotFoundError, IndexError) as infofile24:
         print("File 24 has not been found", infofile24)
     else:
         ("Error unknow")

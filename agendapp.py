@@ -7,7 +7,6 @@ from tkinter import messagebox
 import os
 import time
 import datetime
-import shutil
 
 
 def dispAgBox():

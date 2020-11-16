@@ -11,6 +11,12 @@ import datetime
 
 
 def dispTttBox():
+    """
+        Soit écrire à chaque fois dans
+        un fichier différent, soit reprendre
+        les value de l'agenda... A voir
+        (main.py searchexpress())
+    """
     # Patient 1
     try:
         with open('./newpatient/entryfile.txt', 'r') as namefile:
@@ -21,7 +27,7 @@ def dispTttBox():
     try:
         word_ttstop = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
         file = open('./ttt/doc_ttt/convdose.json')
-        data=json.load(file)
+        data = json.load(file)
         for (key, value) in data.items():
             listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
             for x in listdata_x:
@@ -36,7 +42,42 @@ def dispTttBox():
                     MSBTTT2 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop + " " + \
                         'for : ' + "\n" + line_text1 + "Date of end : " + date_end + "\n" + name_treat + \
-                        "\n" + dose_ttt) 
+                        "\n" + dose_ttt)
+                    MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the ttt : "\
+                        + name_treat + " " + dose_ttt + " of " + line_text1 + " ?")
+
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt/convdose.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                print(str(value[x]["Date of end"]))
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    matin = (str(value[x]["Matin"]))
+                                    midi = (str(value[x]["Midi"]))
+                                    soir = (str(value[x]["Soir"]))
+                                    nuit = (str(value[x]["Nuit"]))
+                                    date_end.pop() 
+                                    date_end.append(str(value[x]['Date of end']))
+                                    """
+                                    final_result = ("STOP " + "Nom et prenom : " + line_text1 + "\n" + \
+                                    "Date of introduction : " + intro_date + "\n" + "Date of end : " + \
+                                    date_end + "\n" + "Treatment : " + name_treat + "\n" + "Dosage : " + \
+                                    dose_ttt + "\n" + "Matin : " + matin + "\n" + "Midi : " + midi + "\n" + \
+                                    "Soir : " + soir + "\n" + "Nuit : " + nuit + "\n")
+                                    """
+                                    re_file = open('./ttt/doc_ttt/convdose.json', 'w')
+                                    stop_remind = json.dump(final_result, re_file)
+
     except IndexError as error_ttt:
         print("No date of end has been found for ttt into file convdose.json (patient 1)", error_ttt)
     except FileNotFoundError as info_ttt:

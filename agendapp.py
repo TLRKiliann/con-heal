@@ -7,6 +7,7 @@ from tkinter import messagebox
 import os
 import time
 import datetime
+import shutil
 
 
 def dispAgBox():
@@ -15,7 +16,6 @@ def dispAgBox():
     appointment has been fixed for tomorrow.
     Display nothing if rdv canceled
     """
-
     # Patient 1
     try:
         with open('./newpatient/entryfile.txt', 'r') as namefile:
@@ -27,7 +27,6 @@ def dispAgBox():
     try:
         dateagenda = (datetime.datetime.now() + datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-
         for path, dirs, files in os.walk('./patient_agenda/events/'
             'doc_events/fix_agenda/agenda_saved/'):
             for file in files:
@@ -44,6 +43,7 @@ def dispAgBox():
                                 'there is an appointment tomorrow for : ' \
                                 + new_text1 + lines[i] + lines[i+1] + \
                                 lines[i+2])
+
                             MSGREM = messagebox.askyesno("Ask", "Do you want to stop reminders ?")
                             if MSGREM == 1:
                                 magicword = (datetime.datetime.now() + datetime.timedelta(\
@@ -61,8 +61,8 @@ def dispAgBox():
                                                 elif magicword in line:
                                                     print("+ It is magicword : ")
                                                     print(line[0:10])
-                                                    write_f = open(os.path.join(path, file), 'a+')
-                                                    write_f.write(magicword + " Past\n")
+                                                    write_f = open(os.path.join(path, file), 'w')
+                                                    write_f.write("Rdv past-->" + line + "\n")
                                                     print("Modification finish")
                                                     break
                                                 else:
@@ -70,7 +70,7 @@ def dispAgBox():
                                                     break
                             else:
                                 pass
-    except FileNotFoundError as infofile1:
+    except (FileNotFoundError, IndexError) as infofile1:
         print("File 1 has not been found", infofile1)
     else:
         ("Error unknow")

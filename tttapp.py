@@ -100,7 +100,31 @@ def dispTttBox():
                     MSBTTT2 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop2 + " " + \
                         'for : ' + "\n" + ttt_text2 + "Date of end : " + date_end2 + "\n" + name_treat2 + \
-                        "\n" + dose_ttt2) 
+                        "\n" + dose_ttt2)
+
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt2/convdose.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    matin = (str(value[x]["Matin"]))
+                                    midi = (str(value[x]["Midi"]))
+                                    soir = (str(value[x]["Soir"]))
+                                    nuit = (str(value[x]["Nuit"]))
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP" + word_ttstop
+                                    with open('./ttt/doc_ttt2/convdose.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt2:
         print("No date of end has been found for ttt into file convdose.json (patient 2)", error_ttt2)
     except FileNotFoundError as info_ttt2:
@@ -132,7 +156,31 @@ def dispTttBox():
                     MSBTTT2 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop3 + " " + \
                         'for : ' + "\n" + ttt_text3 + "Date of end : " + date_end3 + "\n" + name_treat3 + \
-                        "\n" + dose_ttt3) 
+                        "\n" + dose_ttt3)
+
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt3/convdose.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    matin = (str(value[x]["Matin"]))
+                                    midi = (str(value[x]["Midi"]))
+                                    soir = (str(value[x]["Soir"]))
+                                    nuit = (str(value[x]["Nuit"]))
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP" + word_ttstop
+                                    with open('./ttt/doc_ttt3/convdose.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt3:
         print("No date of end has been found for ttt into file convdose.json (patient 3)", error_ttt3)
     except FileNotFoundError as info_ttt3:
@@ -164,7 +212,31 @@ def dispTttBox():
                     MSBTTT2 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop4 + " " + \
                         'for : ' + "\n" + ttt_text4 + "Date of end : " + date_end4 + "\n" + name_treat4 + \
-                        "\n" + dose_ttt4) 
+                        "\n" + dose_ttt4)
+
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt4/convdose.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    matin = (str(value[x]["Matin"]))
+                                    midi = (str(value[x]["Midi"]))
+                                    soir = (str(value[x]["Soir"]))
+                                    nuit = (str(value[x]["Nuit"]))
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP" + word_ttstop
+                                    with open('./ttt/doc_ttt4/convdose.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt4:
         print("No date of end has been found for ttt into file convdose.json (patient 4)", error_ttt4)
     except FileNotFoundError as info_ttt4:
@@ -196,7 +268,31 @@ def dispTttBox():
                     MSBTTT2 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop5 + " " + \
                         'for : ' + "\n" + ttt_text5 + "Date of end : " + date_end5 + "\n" + name_treat5 + \
-                        "\n" + dose_ttt5) 
+                        "\n" + dose_ttt5)
+
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt5/convdose.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    matin = (str(value[x]["Matin"]))
+                                    midi = (str(value[x]["Midi"]))
+                                    soir = (str(value[x]["Soir"]))
+                                    nuit = (str(value[x]["Nuit"]))
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP" + word_ttstop
+                                    with open('./ttt/doc_ttt5/convdose.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt5:
         print("No date of end has been found for ttt into file convdose.json (patient 5)", error_ttt5)
     except FileNotFoundError as info_ttt5:
@@ -228,7 +324,31 @@ def dispTttBox():
                     MSBTTT2 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop6 + " " + \
                         'for : ' + "\n" + ttt_text6 + "Date of end : " + date_end6 + "\n" + name_treat6 + \
-                        "\n" + dose_ttt6) 
+                        "\n" + dose_ttt6)
+
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt6/convdose.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    matin = (str(value[x]["Matin"]))
+                                    midi = (str(value[x]["Midi"]))
+                                    soir = (str(value[x]["Soir"]))
+                                    nuit = (str(value[x]["Nuit"]))
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP" + word_ttstop
+                                    with open('./ttt/doc_ttt6/convdose.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt6:
         print("No date of end has been found for ttt into file convdose.json (patient 6)", error_ttt6)
     except FileNotFoundError as info_ttt6:
@@ -260,7 +380,31 @@ def dispTttBox():
                     MSBTTT2 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop7 + " " + \
                         'for : ' + "\n" + ttt_text7 + "Date of end : " + date_end7 + "\n" + name_treat7 + \
-                        "\n" + dose_ttt7) 
+                        "\n" + dose_ttt7)
+
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt7/convdose.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    matin = (str(value[x]["Matin"]))
+                                    midi = (str(value[x]["Midi"]))
+                                    soir = (str(value[x]["Soir"]))
+                                    nuit = (str(value[x]["Nuit"]))
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP" + word_ttstop
+                                    with open('./ttt/doc_ttt7/convdose.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt7:
         print("No date of end has been found for ttt into file convdose.json (patient 7)", error_ttt7)
     except FileNotFoundError as info_ttt7:
@@ -292,7 +436,31 @@ def dispTttBox():
                     MSBTTT2 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop8 + " " + \
                         'for : ' + "\n" + ttt_text8 + "Date of end : " + date_end8 + "\n" + name_treat8 + \
-                        "\n" + dose_ttt8) 
+                        "\n" + dose_ttt8)
+
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt8/convdose.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    matin = (str(value[x]["Matin"]))
+                                    midi = (str(value[x]["Midi"]))
+                                    soir = (str(value[x]["Soir"]))
+                                    nuit = (str(value[x]["Nuit"]))
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP" + word_ttstop
+                                    with open('./ttt/doc_ttt8/convdose.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt8:
         print("No date of end has been found for ttt into file convdose.json (patient 8)", error_ttt8)
     except FileNotFoundError as info_ttt8:
@@ -324,7 +492,31 @@ def dispTttBox():
                     MSBTTT2 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop9 + " " + \
                         'for : ' + "\n" + ttt_text9 + "Date of end : " + date_end9 + "\n" + name_treat9 + \
-                        "\n" + dose_ttt9) 
+                        "\n" + dose_ttt9)
+
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt9/convdose.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    matin = (str(value[x]["Matin"]))
+                                    midi = (str(value[x]["Midi"]))
+                                    soir = (str(value[x]["Soir"]))
+                                    nuit = (str(value[x]["Nuit"]))
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP" + word_ttstop
+                                    with open('./ttt/doc_ttt9/convdose.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt9:
         print("No date of end has been found for ttt into file convdose.json (patient 9)", error_ttt9)
     except FileNotFoundError as info_ttt9:
@@ -356,7 +548,31 @@ def dispTttBox():
                     MSBTTT2 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop10 + " " + \
                         'for : ' + "\n" + ttt_text10 + "Date of end : " + date_end10 + "\n" + name_treat10 + \
-                        "\n" + dose_ttt10) 
+                        "\n" + dose_ttt10)
+
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt10/convdose.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    matin = (str(value[x]["Matin"]))
+                                    midi = (str(value[x]["Midi"]))
+                                    soir = (str(value[x]["Soir"]))
+                                    nuit = (str(value[x]["Nuit"]))
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP" + word_ttstop
+                                    with open('./ttt/doc_ttt10/convdose.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt10:
         print("No date of end has been found for ttt into file convdose.json (patient 10)", error_ttt10)
     except FileNotFoundError as info_ttt10:
@@ -388,7 +604,31 @@ def dispTttBox():
                     MSBTTT2 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop11 + " " + \
                         'for : ' + "\n" + ttt_text11 + "Date of end : " + date_end11 + "\n" + name_treat11 + \
-                        "\n" + dose_ttt11) 
+                        "\n" + dose_ttt11)
+
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt11/convdose.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    matin = (str(value[x]["Matin"]))
+                                    midi = (str(value[x]["Midi"]))
+                                    soir = (str(value[x]["Soir"]))
+                                    nuit = (str(value[x]["Nuit"]))
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP" + word_ttstop
+                                    with open('./ttt/doc_ttt11/convdose.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt11:
         print("No date of end has been found for ttt into file convdose.json (patient 11)", error_ttt11)
     except FileNotFoundError as info_ttt11:
@@ -420,7 +660,31 @@ def dispTttBox():
                     MSBTTT2 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop12 + " " + \
                         'for : ' + "\n" + ttt_text12 + "Date of end : " + date_end12 + "\n" + name_treat12 + \
-                        "\n" + dose_ttt12) 
+                        "\n" + dose_ttt12)
+
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt12/convdose.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    matin = (str(value[x]["Matin"]))
+                                    midi = (str(value[x]["Midi"]))
+                                    soir = (str(value[x]["Soir"]))
+                                    nuit = (str(value[x]["Nuit"]))
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP" + word_ttstop
+                                    with open('./ttt/doc_ttt12/convdose.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt12:
         print("No date of end has been found for ttt into file convdose.json (patient 12)", error_ttt12)
     except FileNotFoundError as info_ttt12:
@@ -452,7 +716,31 @@ def dispTttBox():
                     MSBTTT2 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop13 + " " + \
                         'for : ' + "\n" + ttt_text13 + "Date of end : " + date_end13 + "\n" + name_treat13 + \
-                        "\n" + dose_ttt13) 
+                        "\n" + dose_ttt13)
+
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt13/convdose.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    matin = (str(value[x]["Matin"]))
+                                    midi = (str(value[x]["Midi"]))
+                                    soir = (str(value[x]["Soir"]))
+                                    nuit = (str(value[x]["Nuit"]))
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP" + word_ttstop
+                                    with open('./ttt/doc_ttt13/convdose.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt13:
         print("No date of end has been found for ttt into file convdose.json (patient 13)", error_ttt13)
     except FileNotFoundError as info_ttt13:
@@ -484,7 +772,31 @@ def dispTttBox():
                     MSBTTT2 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop14 + " " + \
                         'for : ' + "\n" + ttt_text14 + "Date of end : " + date_end14 + "\n" + name_treat14 + \
-                        "\n" + dose_ttt14) 
+                        "\n" + dose_ttt14)
+
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt14/convdose.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    matin = (str(value[x]["Matin"]))
+                                    midi = (str(value[x]["Midi"]))
+                                    soir = (str(value[x]["Soir"]))
+                                    nuit = (str(value[x]["Nuit"]))
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP" + word_ttstop
+                                    with open('./ttt/doc_ttt14/convdose.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt14:
         print("No date of end has been found for ttt into file convdose.json (patient 14)", error_ttt14)
     except FileNotFoundError as info_ttt14:
@@ -516,7 +828,31 @@ def dispTttBox():
                     MSBTTT2 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop15 + " " + \
                         'for : ' + "\n" + ttt_text15 + "Date of end : " + date_end15 + "\n" + name_treat15 + \
-                        "\n" + dose_ttt15) 
+                        "\n" + dose_ttt15)
+
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt15/convdose.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    matin = (str(value[x]["Matin"]))
+                                    midi = (str(value[x]["Midi"]))
+                                    soir = (str(value[x]["Soir"]))
+                                    nuit = (str(value[x]["Nuit"]))
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP" + word_ttstop
+                                    with open('./ttt/doc_ttt15/convdose.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt15:
         print("No date of end has been found for ttt into file convdose.json (patient 15)", error_ttt15)
     except FileNotFoundError as info_ttt15:
@@ -548,7 +884,31 @@ def dispTttBox():
                     MSBTTT2 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop16 + " " + \
                         'for : ' + "\n" + ttt_text16 + "Date of end : " + date_end16 + "\n" + name_treat16 + \
-                        "\n" + dose_ttt16) 
+                        "\n" + dose_ttt16)
+
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt16/convdose.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    matin = (str(value[x]["Matin"]))
+                                    midi = (str(value[x]["Midi"]))
+                                    soir = (str(value[x]["Soir"]))
+                                    nuit = (str(value[x]["Nuit"]))
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP" + word_ttstop
+                                    with open('./ttt/doc_ttt16/convdose.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt16:
         print("No date of end has been found for ttt into file convdose.json (patient 16)", error_ttt16)
     except FileNotFoundError as info_ttt16:
@@ -580,7 +940,31 @@ def dispTttBox():
                     MSBTTT2 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop17 + " " + \
                         'for : ' + "\n" + ttt_text17 + "Date of end : " + date_end17 + "\n" + name_treat17 + \
-                        "\n" + dose_ttt17) 
+                        "\n" + dose_ttt17)
+
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt17/convdose.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    matin = (str(value[x]["Matin"]))
+                                    midi = (str(value[x]["Midi"]))
+                                    soir = (str(value[x]["Soir"]))
+                                    nuit = (str(value[x]["Nuit"]))
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP" + word_ttstop
+                                    with open('./ttt/doc_ttt17/convdose.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt17:
         print("No date of end has been found for ttt into file convdose.json (patient 17)", error_ttt17)
     except FileNotFoundError as info_ttt17:
@@ -612,7 +996,31 @@ def dispTttBox():
                     MSBTTT2 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop18 + " " + \
                         'for : ' + "\n" + ttt_text18 + "Date of end : " + date_end18 + "\n" + name_treat18 + \
-                        "\n" + dose_ttt18) 
+                        "\n" + dose_ttt18)
+
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt18/convdose.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    matin = (str(value[x]["Matin"]))
+                                    midi = (str(value[x]["Midi"]))
+                                    soir = (str(value[x]["Soir"]))
+                                    nuit = (str(value[x]["Nuit"]))
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP" + word_ttstop
+                                    with open('./ttt/doc_ttt18/convdose.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt18:
         print("No date of end has been found for ttt into file convdose.json (patient 18)", error_ttt18)
     except FileNotFoundError as info_ttt18:
@@ -644,7 +1052,31 @@ def dispTttBox():
                     MSBTTT2 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop19 + " " + \
                         'for : ' + "\n" + ttt_text19 + "Date of end : " + date_end19 + "\n" + name_treat19 + \
-                        "\n" + dose_ttt19) 
+                        "\n" + dose_ttt19)
+
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt19/convdose.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    matin = (str(value[x]["Matin"]))
+                                    midi = (str(value[x]["Midi"]))
+                                    soir = (str(value[x]["Soir"]))
+                                    nuit = (str(value[x]["Nuit"]))
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP" + word_ttstop
+                                    with open('./ttt/doc_ttt19/convdose.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt19:
         print("No date of end has been found for ttt into file convdose.json (patient 19)", error_ttt19)
     except FileNotFoundError as info_ttt19:
@@ -676,7 +1108,31 @@ def dispTttBox():
                     MSBTTT2 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop20 + " " + \
                         'for : ' + "\n" + ttt_text20 + "Date of end : " + date_end20 + "\n" + name_treat20 + \
-                        "\n" + dose_ttt20) 
+                        "\n" + dose_ttt20)
+
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt20/convdose.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    matin = (str(value[x]["Matin"]))
+                                    midi = (str(value[x]["Midi"]))
+                                    soir = (str(value[x]["Soir"]))
+                                    nuit = (str(value[x]["Nuit"]))
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP" + word_ttstop
+                                    with open('./ttt/doc_ttt20/convdose.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt20:
         print("No date of end has been found for ttt into file convdose.json (patient 20)", error_ttt20)
     except FileNotFoundError as info_ttt20:
@@ -708,7 +1164,31 @@ def dispTttBox():
                     MSBTTT2 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop21 + " " + \
                         'for : ' + "\n" + ttt_text21 + "Date of end : " + date_end21 + "\n" + name_treat21 + \
-                        "\n" + dose_ttt21) 
+                        "\n" + dose_ttt21)
+
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt20/convdose.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    matin = (str(value[x]["Matin"]))
+                                    midi = (str(value[x]["Midi"]))
+                                    soir = (str(value[x]["Soir"]))
+                                    nuit = (str(value[x]["Nuit"]))
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP" + word_ttstop
+                                    with open('./ttt/doc_ttt20/convdose.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt21:
         print("No date of end has been found for ttt into file convdose.json (patient 21)", error_ttt21)
     except FileNotFoundError as info_ttt21:
@@ -740,7 +1220,31 @@ def dispTttBox():
                     MSBTTT2 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop22 + " " + \
                         'for : ' + "\n" + ttt_text22 + "Date of end : " + date_end22 + "\n" + name_treat22 + \
-                        "\n" + dose_ttt22) 
+                        "\n" + dose_ttt22)
+
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt22/convdose.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    matin = (str(value[x]["Matin"]))
+                                    midi = (str(value[x]["Midi"]))
+                                    soir = (str(value[x]["Soir"]))
+                                    nuit = (str(value[x]["Nuit"]))
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP" + word_ttstop
+                                    with open('./ttt/doc_ttt22/convdose.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4) 
     except IndexError as error_ttt22:
         print("No date of end has been found for ttt into file convdose.json (patient 22)", error_ttt22)
     except FileNotFoundError as info_ttt22:
@@ -772,7 +1276,31 @@ def dispTttBox():
                     MSBTTT2 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop23 + " " + \
                         'for : ' + "\n" + ttt_text23 + "Date of end : " + date_end23 + "\n" + name_treat23 + \
-                        "\n" + dose_ttt23) 
+                        "\n" + dose_ttt23)
+
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt23/convdose.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    matin = (str(value[x]["Matin"]))
+                                    midi = (str(value[x]["Midi"]))
+                                    soir = (str(value[x]["Soir"]))
+                                    nuit = (str(value[x]["Nuit"]))
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP" + word_ttstop
+                                    with open('./ttt/doc_ttt23/convdose.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt23:
         print("No date of end has been found for ttt into file convdose.json (patient 23)", error_ttt23)
     except FileNotFoundError as info_ttt23:
@@ -804,7 +1332,31 @@ def dispTttBox():
                     MSBTTT2 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop24 + " " + \
                         'for : ' + "\n" + ttt_text24 + "Date of end : " + date_end24 + "\n" + name_treat24 + \
-                        "\n" + dose_ttt24) 
+                        "\n" + dose_ttt24)
+
+                    if MSGBOX == 1:
+                        print("Reminder stop !")
+                        file = open('./ttt/doc_ttt24/convdose.json')
+                        data = json.load(file)
+                        for (key, value) in data.items():
+                            listdata_x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                            for x in listdata_x:
+                                date_end = (str(value[x]["Date of end"]))
+                                if date_end == word_ttstop:
+                                    print(date_end)
+                                    intro_date = (str(value[x]["Date of introduction"]))
+                                    name_treat = (str(value[x]["Treatment"]))
+                                    print(name_treat)
+                                    dose_ttt = (str(value[x]["Dosage"]))
+                                    print(dose_ttt)
+                                    matin = (str(value[x]["Matin"]))
+                                    midi = (str(value[x]["Midi"]))
+                                    soir = (str(value[x]["Soir"]))
+                                    nuit = (str(value[x]["Nuit"]))
+                                    if value[x]["Date of end"] in word_ttstop:
+                                        value[x]['Date of end'] = "STOP" + word_ttstop
+                                    with open('./ttt/doc_ttt24/convdose.json', 'w') as re_file:
+                                        json.dump(data, re_file, indent=4)
     except IndexError as error_ttt24:
         print("No date of end has been found for ttt into file convdose.json (patient 24)", error_ttt24)
     except FileNotFoundError as info_ttt24:

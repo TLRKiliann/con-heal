@@ -13,13 +13,13 @@ window.title('ACCESS')
 window.configure(bg='RoyalBlue4')
 
 def hangonwin():
-	"""
-	    For security
-	    this function
-	    prevent to close
-	    window by x button
-	"""
-	window.update()
+    """
+        For security
+        this function
+        prevent to close
+        window by x button
+    """
+    window.update()
 
 window.protocol('WM_DELETE_WINDOW', hangonwin)
 
@@ -42,9 +42,11 @@ def validentry():
         if entryname.get() == "root" and getpass.get() == "root":
             messagebox.showinfo('INFO', 'Ok ! You get access !')
             closeWindow()
+        elif entryname.get() == "koa" and getpass.get() == "tree":
+            messagebox.showinfo('INFO', 'Ok ! You get access !')
+            closeWindow()
         else:
             messagebox.showwarning("Warning", "Password or Username failed !")
-            window.quit()
 
 labelname = ttk.Label(window, text='Enter username :',
     font=('Times New Roman', 14, 'bold'),

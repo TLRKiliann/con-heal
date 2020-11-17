@@ -12,7 +12,6 @@ from backapp import *
 from Backup.backupfile import dataBackToSave
 import passw
 
-
 class ScrollCanvas(Frame):
     """
         To prepare ScrollBar for main application.
@@ -2152,7 +2151,6 @@ class Application(Frame):
             self.mBar
         except:
             print("Error --")
-
 
 if __name__=='__main__':
     app = Application()

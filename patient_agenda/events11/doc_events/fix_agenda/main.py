@@ -36,21 +36,29 @@ def searchExpress():
     """
         To read multiples files in a directory
     """
-    mot = regexpi_var.get()
-    for path, dirs, files in os.walk('./patient_agenda/events11/'\
-        'doc_events/fix_agenda/agenda_saved/'):
-        for file in files:
-            read_f = open(os.path.join(path, file), 'r')
-            lines = read_f.readlines()
-            for i in range(0, len(lines)):
-                line = lines[i]
-                if mot in line:
-                    print("Nous y voici !") 
-                    print(lines[i])
-                    print(lines[i+1])
-                    textBox.insert(INSERT, lines[i-1])
-                    textBox.insert(INSERT, lines[i])
-                    textBox.insert(INSERT, lines[i+1])
+    try:
+        mot = regexpi_var.get()
+        for path, dirs, files in os.walk('./patient_agenda/events11/'\
+            'doc_events/fix_agenda/agenda_saved/'):
+            for file in files:
+                read_f = open(os.path.join(path, file), 'r')
+                lines = read_f.readlines()
+                for i in range(0, len(lines)):
+                    line = lines[i]
+                    if mot in line:
+                        print("Nous y voici !")
+                        print(lines[i-1])
+                        print(lines[i])
+                        print(lines[i+1])
+                        print(lines[i+2])
+                        print(lines[i+3])
+                        textBox.insert(INSERT, lines[i-1])
+                        textBox.insert(INSERT, lines[i])
+                        textBox.insert(INSERT, lines[i+1])
+                        textBox.insert(INSERT, lines[i+2])
+                        textBox.insert(INSERT, lines[i+3])
+    except IndexError as ind_err:
+        print("+ Index out of range", ind_err)
 
 def save_input():
     """

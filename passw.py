@@ -44,6 +44,7 @@ def validentry():
             closeWindow()
         else:
             messagebox.showwarning("Warning", "Password or Username failed !")
+            window.quit()
 
 labelname = ttk.Label(window, text='Enter username :',
     font=('Times New Roman', 14, 'bold'),

@@ -68,7 +68,6 @@ def save_input():
         by lines ;) !
     """
     magicword = regexpi_var.get()
-    secdatemark = "---"
     for path, dirs, files in os.walk('./patient_agenda/events/'\
         'doc_events/fix_agenda/agenda_saved/'):
         for file in files:
@@ -80,25 +79,12 @@ def save_input():
                         print("+ There is noway : ")
                         print(line[0:10])
                     elif magicword in line:
-                        for i in range(0, len(lines)):
-                            line = lines[i]
-                            if secdatemark in line:
-                                print("+ It is magicword : ")
-                                print(line[0:10])
-                                write_f = open(os.path.join(path, file), 'w')
-                                write_f.writelines(textBox.get("0.0", "end-1c") + "\n")
-                                print("Modification finish")
-                                break
-                    elif magicword in line:
-                        for i in range(0, len(lines)):
-                            line = lines[i]
-                            if not secdatemark in line:
-                                print("+ It is magicword : ")
-                                print(line[0:10])
-                                write_f = open(os.path.join(path, file), 'w')
-                                write_f.writelines(textBox.get("0.0", "end-1c") + "\n")
-                                print("Modification finish")
-                                break
+                        print("+ It is magicword : ")
+                        print(line[0:10])
+                        write_f = open(os.path.join(path, file), 'w')
+                        write_f.writelines(textBox.get("0.0", "end-1c") + "\n")
+                        print("Modification finish")
+                        break
                     else:
                         print("None file has been writted")
                         break

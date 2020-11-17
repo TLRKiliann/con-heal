@@ -19,9 +19,9 @@ def callResident(self):
         heal_track.py for displaying patients
         with theirs names and more.
     """
-    self.mBar
-    print("Size of mBar ",sys.getsizeof(self.mBar), " bits : ")
-    self.mBar.pack()
+    #self.mBar
+    #print("Size of mBar ",sys.getsizeof(self.mBar), " bits : ")
+    #self.mBar.pack()
     self.can.delete(ALL)
     self.can.configure(background='DodgerBlue2')
     self.photo=PhotoImage(file='./syno_gif/title_tt3.png')

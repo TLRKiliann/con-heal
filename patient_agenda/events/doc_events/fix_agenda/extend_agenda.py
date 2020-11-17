@@ -161,7 +161,7 @@ textBox.insert(END, time.strftime("%d/%m/%Y, %H:%M:%S") + ' :\n')
 textBox.pack(padx=30, pady=30)
 
 try:
-    if os.path.getsize('./patient_agenda/events/doc_events/'\
+    if os.path.exists('./patient_agenda/events/doc_events/'\
         'fix_agenda/patient_value.json'):
         print("+ File 'patient_value.json exist' !")
         importationFile('./patient_agenda/events/doc_events/'\

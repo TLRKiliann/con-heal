@@ -50,7 +50,7 @@ final_data = extraday +'/'+ extramounth +'/'+ str(data_year) +' :'
 print(final_data)
 
 try:
-    if os.path.getsize('./patient_agenda/events/doc_events/fix_agenda/patient_value.json'):
+    if os.path.exists('./patient_agenda/events/doc_events/fix_agenda/patient_value.json'):
         print("+ File 'value' exist !")   
         with open('./patient_agenda/events/doc_events/fix_agenda/patient_value.json','w') as partytime:
             json.dump(final_data, partytime)

@@ -59,4 +59,4 @@ except FileNotFoundError as msg:
     with open('./patient_agenda/events/doc_events/fix_agenda/patient_value.json','w') as partyleft:
         json.dump(final_data, partyleft)
 
-subprocess.call('./patient_agenda/events/doc_events/fix_agenda/extend_agenda.py')
+subprocess.run('./patient_agenda/events/doc_events/fix_agenda/extend_agenda.py', check=True)

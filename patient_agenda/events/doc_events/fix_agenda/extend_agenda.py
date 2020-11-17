@@ -53,11 +53,40 @@ def retrieve_input():
     """
     inputValue = textBox.get("1.0", "end-1c" + '\n')
     print(inputValue)
+    
+    # Need a loop to verify if an other file have got same date
+    magicword = regexpi_var.get()
+    for path, dirs, files in os.walk('./patient_agenda/events/'\
+        'doc_events/fix_agenda/agenda_saved/'):
+        for file in files:
+            read_f = open(os.path.join(path, file), 'r')
+            for line in read_f:
+                for i in line:
+                    noway = "Fixed on :"
+                    if line[0:10] == noway:
+                        print("+ There is noway : ")
+                        print(line[0:10])
+                    elif magicword in line:
+                        print("+ Same magicword !!! : ")
+                        print(line[0:10])
+                        file = open('./patient_agenda/events/doc_events/'\
+                            'fix_agenda/fixed_rdv.txt', 'w')
+                        file.write(textBox.get("1.0", "end-1c") + '---\n\n')
+                        file.close()
+                        break
+                    else:
+                        print("None file has been writted with same date")
+                        file = open('./patient_agenda/events/doc_events/'\
+                            'fix_agenda/fixed_rdv.txt', 'w')
+                        file.write(textBox.get("1.0", "end-1c") + '\n\n')
+                        file.close()
+                        break
+    """
     file = open('./patient_agenda/events/doc_events/'\
         'fix_agenda/fixed_rdv.txt', 'w')
     file.write(textBox.get("1.0", "end-1c") + '\n\n')
     file.close()
-
+    """
     # Create the directory 
     # 'agenda_saved' in 
     # './patient_agenda/events/doc_events/fix_agenda' 
@@ -103,7 +132,7 @@ def messFromSafeButt():
     """
     MsgBox = messagebox.askquestion("Confirm","Are you sure ?\n"
         "It will save all data !")
-    if MsgBox == 'yes':
+    if MsgBox == 1:
         retrieve_input()
         textBox.insert(INSERT, "\n---Data saved !---")
         print("+ Data saved !")

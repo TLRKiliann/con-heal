@@ -37,26 +37,25 @@ def searchExpress():
         To read multiples files in a directory
     """
     try:
-        mot = regexpi_var.get()
+        mot = reachDate.get()
         for path, dirs, files in os.walk('./patient_agenda/events/'\
             'doc_events/fix_agenda/agenda_saved/'):
             for file in files:
-                read_f = open(os.path.join(path, file), 'r')
-                lines = read_f.readlines()
-                for i in range(0, len(lines)):
-                    line = lines[i]
-                    if mot in line:
-                        print("Nous y voici !")
-                        print(lines[i-1])
-                        print(lines[i])
-                        print(lines[i+1])
-                        print(lines[i+2])
-                        print(lines[i+3])
-                        textBox.insert(INSERT, lines[i-1])
-                        textBox.insert(INSERT, lines[i])
-                        textBox.insert(INSERT, lines[i+1])
-                        textBox.insert(INSERT, lines[i+2])
-                        textBox.insert(INSERT, lines[i+3])
+                with open(os.path.join(path, file), 'r') as read_f:
+                    lines = read_f.readlines()
+                    for i in range(0, len(lines)):
+                        line = lines[i]
+                        if mot in line:
+                            print("Nous y voici !")
+                            print(lines[i-1])
+                            print(lines[i])
+                            print(lines[i+1])
+                            print(lines[i+2])
+                            textBox.insert(INSERT, lines[i-1])
+                            textBox.insert(INSERT, lines[i])
+                            textBox.insert(INSERT, lines[i+1])
+                            textBox.insert(INSERT, lines[i+2])
+
     except IndexError as ind_err:
         print("+ Index out of range", ind_err)
 
@@ -67,7 +66,7 @@ def save_input():
         since a read file and from text widget
         by lines ;) !
     """
-    magicword = regexpi_var.get()
+    magicword = reachDate.get()
     for path, dirs, files in os.walk('./patient_agenda/events/'\
         'doc_events/fix_agenda/agenda_saved/'):
         for file in files:
@@ -76,7 +75,7 @@ def save_input():
                 for i in line:
                     noway = "Fixed on :"
                     if line[0:10] == noway:
-                        print("+ There is noway : ")
+                        print("+ It is noway : ")
                         print(line[0:10])
                     elif magicword in line:
                         print("+ It is magicword : ")
@@ -97,7 +96,7 @@ def messFromSafeButt():
         textBox.insert(INSERT, "\n---Data saved !---")
         print("+ Data saved !")
     else:
-        textBox.insert(INSERT, "Nothing has been saved !")
+        textBox.insert(INSERT, "\n---Nothing has been saved !---")
         print("+ Nothing has been saved !")
 
 def modifList():

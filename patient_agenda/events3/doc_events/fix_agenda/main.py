@@ -50,17 +50,18 @@ def searchExpress():
         for path, dirs, files in os.walk('./patient_agenda/events3/'\
             'doc_events/fix_agenda/agenda_saved/'):
             for file in files:
-                read_f = open(os.path.join(path, file), 'r')
-                lines = read_f.readlines()
-                for i in range(0, len(lines)):
-                    for line in lines:
-                        line = lines[i]
-                        if mot in line:
-                            print("Nous y voici !")
-                            textBox.insert(INSERT, lines[i])
-                            textBox.insert(INSERT, lines[i+1])
-                            textBox.insert(INSERT, lines[i+2])
-                            break
+                with open(os.path.join(path, file), 'r') as read_f:
+                    lines = read_f.readlines()
+                    for i in range(0, len(lines)):
+                        for line in lines:
+                            line = lines[i]
+                            if mot in line:
+                                print("Nous y voici !")
+                                textBox.insert(INSERT, lines[i-1])
+                                textBox.insert(INSERT, lines[i])
+                                textBox.insert(INSERT, lines[i+1])
+                                textBox.insert(INSERT, lines[i+2])
+                                break
     except IndexError as ind_err:
         print("+ Index out of range", ind_err)
 
@@ -95,7 +96,8 @@ def save_input():
                     if line[0:10] == noway:
                         print("+ There is noway : ")
                         print(line[0:10])
-                    elif magicword == line[0:10] and magichour == line[14:24]:
+                    elif magicword == line[0:10] and \
+                    magichour == line[14:24]:
                         print("+ It is magicword : ")
                         print(line[0:10])
                         print(line[14:24])

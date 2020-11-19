@@ -19,7 +19,7 @@ bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
 
 labelo = Label(fen, text="RDV set up",
     font='Arial 18 bold', fg='navy', bg='cyan')
-labelo.pack(in_=top, side=LEFT, padx=5, pady=20)
+labelo.pack(in_=top, side=LEFT, pady=20)
 
 with open('./newpatient/entryfile3.txt', 'r') as filename:
     line1 = filename.readline()
@@ -44,8 +44,8 @@ def importFilesFromDir():
                 li.replace('}', '')
                 textBox.insert(END, li)
 
-textBox = Text(fen, height=15, width=60, font=18)
-textBox.pack(padx=30, pady=30)
+textBox = Text(fen, height=20, width=60, font=18)
+textBox.pack(padx=30, pady=10)
 
 try:
     importFilesFromDir()

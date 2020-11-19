@@ -68,22 +68,27 @@ def save_input():
         by lines ;) !
     """
     magicword = reachDate.get()
+    supertrix = textBox.get("0.0", "end-1c")
     for path, dirs, files in os.walk('./patient_agenda/events/'\
         'doc_events/fix_agenda/agenda_saved/'):
         for file in files:
-            with open(os.path.join(path, file), 'r') as read_f2:
-                for line in read_f2:
-                    for i in line:
-                        noway = "Fixed on :"
-                        if line[0:10] == noway:
-                            print("+ It is noway : ")
-                            print(line[0:10])
-                        elif magicword in line:
-                            print("+ It is magicword : ")
-                            print(line[0:10])
-                            write_f = open(os.path.join(path, file), 'w')
-                            write_f.writelines(textBox.get("0.0", "end-1c") + "\n")
-                            print("Modification finish")
+            read_f2 = open(os.path.join(path, file), 'r')
+            for line in read_f2:
+                for i in line:
+                    noway = "Fixed on :"
+                    if line[0:10] == noway:
+                        print("+ It is noway : ")
+                        print(line[0:10])
+                    elif magicword in line:
+                        print("+ It is magicword : ")
+                        print(line[0:10])
+                        print(line)
+                        write_f = open(os.path.join(path, file), 'w')
+                        write_f.writelines(textBox.get("0.0", "end-1c") + "\n")
+                        print("Modification finished")
+                        break
+                    else:
+                        print("None file has been writted")
                         break
 
 def messFromSafeButt():

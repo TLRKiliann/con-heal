@@ -51,29 +51,114 @@ def retrieve_input():
         to create a copy after backup and remove all files 
         that were used to create it.
     """
+    # Create the directory 
+    # 'agenda_saved' in 
+    # './patient_agenda/events/doc_events/fix_agenda' 
+
+    file = open('./patient_agenda/events/doc_events/'\
+        'fix_agenda/fixed_rdv.txt', 'w')
+    file.write(textBox.get("1.0", "end-1c") + '\n\n')
+    file.close()
+
+    topath = './patient_agenda/events/doc_events/'\
+    'fix_agenda/agenda_saved'
+
+    origin_path = './patient_agenda/events/doc_events/'\
+    'fix_agenda/fixed_rdv.txt'
+    main_path = './patient_agenda/events/doc_events/'\
+    'fix_agenda/agenda_saved/'
+    file_path = 'xrdv_file.txt'
+    modif_path = './patient_agenda/events/doc_events/'\
+    'fix_agenda/agenda_double/'
+
+    try:
+        os.mkdir(topath)
+    except OSError as err_alert:
+        print(err_alert)
+
+    try:
+        os.mkdir(modif_path)
+    except OSError as modir_alert:
+        print(modir_alert)
+
+    # To verify if unless one file exist
+    try:
+        if os.path.exists('./patient_agenda/events/doc_events/fix_agenda/'\
+            'agenda_saved/file0.txt'):
+            print("File0.txt exist !")
+        else:
+            createFile()
+    except (OSError, FileNotFoundError) as fnf:
+        print("File not found", fnf)
+
+    # If a file already get same date, copy new file in other directory
+    try:
+        inputValue = textBox.get(END, "1.0")
+        for path, dirs, files in os.walk('./patient_agenda/events/'\
+            'doc_events/fix_agenda/agenda_saved/'):
+            for file in files:
+                read_f2 = open(os.path.join(path, file), 'r')
+                lines = read_f2.readlines()
+                for line in lines:
+                    for i in range(0, len(lines)):
+                        line = lines[i]
+                        #samdate = line[0:10]
+                        #for samdate in line:
+                        if inputValue in line:
+                            print("+ It is inputValue : ")
+                            print(lines[i])
+                            print(lines[i+1])
+                            print(lines[i+2])
+                            with open(origin_path, 'w') as write_f:
+                                write_f.writelines(lines[i])
+                                write_f.writelines(lines[i+1])
+                                write_f.writelines(lines[i+2])
+                            print("Modification finished")
+                            # Modify here for new file +1
+                            shutil.copy(origin_path, modif_path + file_path)
+                            os.remove('./patient_agenda/events/doc_events/fix_agenda/fixed_rdv.txt')
+                            break
+                        elif inputValue != line in files:
+                            createFile()
+                            break
+                        else:
+                            print("None file has been writted")
+                            break
+    except:
+        print("+ Bad exception from xtend_agenda.py")
+
+    try:
+        #os.remove('./patient_agenda/events/doc_events/fix_agenda/fixed_rdv.txt')
+        os.remove('./patient_agenda/events/doc_events/fix_agenda/patient_value.json')
+        os.remove('./patient_agenda/events/doc_events/patient_rdv.json')
+        os.remove('./patient_agenda/events/patient_calendar.txt')
+    except (FileNotFoundError, OSError) as x_file:
+        print("Print x-files", x_files)
+
+    """
     inputValue = textBox.get("1.0", "end-1c" + '\n')
     print(inputValue)
     file = open('./patient_agenda/events/doc_events/'\
         'fix_agenda/fixed_rdv.txt', 'w')
     file.write(textBox.get("1.0", "end-1c") + '\n\n')
     file.close()
+    """
 
-    # Create the directory 
-    # 'agenda_saved' in 
-    # './patient_agenda/events/doc_events/fix_agenda' 
+def createFile():
+    """
+        To create a new file
+    """
+    file = open('./patient_agenda/events/doc_events/'\
+        'fix_agenda/fixed_rdv.txt', 'w')
+    file.write(textBox.get("1.0", "end-1c") + '\n\n')
+    file.close()
 
-    topath = './patient_agenda/events/doc_events/'\
-    'fix_agenda/agenda_saved'
-
-    try:
-        os.mkdir(topath)
-    except OSError as err_alert:
-        print(err_alert)
-    
     origin_path = './patient_agenda/events/doc_events/'\
     'fix_agenda/fixed_rdv.txt'
     main_path = './patient_agenda/events/doc_events/'\
     'fix_agenda/agenda_saved/'
+    modif_path = './patient_agenda/events/doc_events/'\
+    'fix_agenda/agenda_double/'
 
     files = [None] * 100
     for x in range(0, 100):
@@ -86,11 +171,6 @@ def retrieve_input():
         else:
             print("+ Out of range !!! (more than 100 files)")
             break
-
-    os.remove('./patient_agenda/events/doc_events/fix_agenda/fixed_rdv.txt')
-    os.remove('./patient_agenda/events/doc_events/fix_agenda/patient_value.json')
-    os.remove('./patient_agenda/events/doc_events/patient_rdv.json')
-    os.remove('./patient_agenda/events/patient_calendar.txt')
 
     print("+ os.listdir after new file created : ")
     print(os.listdir('./patient_agenda/events/doc_events/'\

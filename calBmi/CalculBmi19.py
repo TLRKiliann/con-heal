@@ -202,13 +202,13 @@ def buttdel():
 
 textDate = Entry(gui)
 time_string = IntVar() 
-textDate = Entry(textvariable=time_string, highlightbackground='gray', bd=4)
+textDate = Entry(textvariable=time_string, highlightbackground='grey', bd=4)
 time_string.set(time.strftime("%d-%m-%Y"))
 textDate.grid(row=1, column=2, padx=10)
 
 textHour = Entry(gui)
 time_Htring = IntVar()
-textHour = Entry(textvariable=time_Htring, highlightbackground='gray', bd=4)
+textHour = Entry(textvariable=time_Htring, highlightbackground='grey', bd=4)
 time_Htring.set(time.strftime("%H:%M:%S"))
 textHour.grid(row=2, column=2, padx=10)
 
@@ -218,7 +218,7 @@ with open('./newpatient/entryfile19.txt', 'r') as filename:
 
 textName = Entry(gui)
 name_text = StringVar()
-textName = Entry(textvariable=name_text, highlightbackground='gray', bd=4)
+textName = Entry(textvariable=name_text, highlightbackground='grey', bd=4)
 name_text.set(line1)
 textName.grid(row=3, column=2, padx=10)
 
@@ -226,14 +226,14 @@ number1 = StringVar()
 
 entryNum1 = Entry(gui)
 number1 = StringVar()
-entryNum1 = Entry(gui, textvariable=number1, highlightbackground='gray', bd=4)
+entryNum1 = Entry(gui, textvariable=number1, highlightbackground='grey', bd=4)
 entryNum1.grid(row=4, column=2, padx=10)
 
 number2 = StringVar()
 
 entryNum2 = Entry(gui)
 number2 = StringVar()
-entryNum2 = Entry(gui, textvariable=number2, highlightbackground='gray', bd=4)
+entryNum2 = Entry(gui, textvariable=number2, highlightbackground='grey', bd=4)
 entryNum2.grid(row=5, column=2, padx=10)
 
 textBox = Text(gui, height=3, width=30, font=12, relief=SUNKEN)
@@ -242,13 +242,13 @@ textBox.grid(row=6, column=1, columnspan=2, padx=10, pady=10)
 call_result = partial(call_result, textBox, number1, number2)
 
 buttonCal = Button(gui, text="Calculate", width=35, bd=3,
-    fg='white', bg='RoyalBlue3', activeforeground='gray40',
+    fg='white', bg='RoyalBlue3', activeforeground='grey40',
     activebackground='turquoise2', highlightbackground='cyan',
     command=call_result)
 buttonCal.grid(row=7, column=1, columnspan=2, padx=10)
 
 buttonSave = Button(gui, text="Save", width=12, bd=3, 
-    fg='yellow', bg='RoyalBlue3', activeforeground='gray40',
+    fg='yellow', bg='RoyalBlue3', activeforeground='grey40',
     activebackground='turquoise2', highlightbackground='RoyalBlue3',
     command=buttRecord)
 buttonSave.grid(sticky='w', row=10, column=1, padx=10, pady=10)
@@ -266,13 +266,13 @@ buttonRead = Button(gui, text="Read", width=12, bd=3,
 buttonRead.grid(sticky='w', row=12, column=1, padx=10, pady=10)
 
 buttonBmi = Button(gui, text="Graph BMI", width=12, bd=3,
-    fg='cyan', bg='RoyalBlue3', activeforeground='gray40',
+    fg='cyan', bg='RoyalBlue3', activeforeground='grey40',
     activebackground='turquoise', highlightbackground='RoyalBlue3',
     command=viewGraphicBmi)
 buttonBmi.grid(sticky='e', row=10, column=2, padx=10, pady=10)
 
 buttonWeight = Button(gui, text="Graph Weight", width=12, bd=3,
-    fg='cyan', bg='RoyalBlue3', activeforeground='gray40',
+    fg='cyan', bg='RoyalBlue3', activeforeground='grey40',
     activebackground='turquoise', highlightbackground='RoyalBlue3',
     command=viewGraphicKilo)
 buttonWeight.grid(sticky='e', row=11, column=2, padx=10)

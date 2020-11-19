@@ -52,7 +52,7 @@ entrimehour = Entry(fen, textvariable=hourentr, width=8,
 hourentr.set("00:00:00")
 entrimehour.pack(in_=top2, side=LEFT, pady=10)
 
-buttonhour = Button(fen, text="Enter", width=8,
+buttonhour = Button(fen, text="Enter", width=8, bd=3,
     fg="white", bg="RoyalBlue3",
     highlightbackground='light sky blue',
     activebackground='dark turquoise', command=callRefresh)

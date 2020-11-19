@@ -45,6 +45,8 @@ def searchExpress():
         To read multiples files in a directory
     """
     try:
+        hour_var = reachHour.get()
+        oclock = reachHour.get()
         regexpi_var = reachDate.get()
         mot = reachDate.get()
         for path, dirs, files in os.walk('./patient_agenda/events3/'\
@@ -56,20 +58,32 @@ def searchExpress():
                         for line in lines:
                             line = lines[i]
                             if mot in line:
-                                print("Nous y voici !")
-                                textBox.insert(INSERT, lines[i-1])
-                                textBox.insert(INSERT, lines[i])
-                                textBox.insert(INSERT, lines[i+1])
-                                textBox.insert(INSERT, lines[i+2])
-                                break
+                                if oclock in line:
+                                    print("Print line !")
+                                    textBox.insert(INSERT, lines[i-1])
+                                    textBox.insert(INSERT, lines[i])
+                                    textBox.insert(INSERT, lines[i+1])
+                                    textBox.insert(INSERT, lines[i+2])
+                                    textBox.insert(INSERT, '\n')
+                                    break
     except IndexError as ind_err:
         print("+ Index out of range", ind_err)
 
 regexpi_var = StringVar()
 reachDate = Entry(gui, textvariable=regexpi_var, width=10, 
     highlightbackground='grey', bd=3)
-regexpi_var.set("01/01/2020")
+regexpi_var.set("00/00/2020")
 reachDate.pack(in_=top2, side=LEFT, pady=10)
+
+labelhour = Label(gui, text='Hour : ',
+    font='Arial 14 bold', fg='RoyalBlue4', bg='cyan')
+labelhour.pack(in_=top2, side=LEFT, padx=10, pady=10)
+
+hour_var = IntVar()
+reachHour = Entry(gui, textvariable=hour_var, width=8,
+    highlightbackground='grey', bd=3)
+hour_var.set('00:00:00')
+reachHour.pack(in_=top2, side=LEFT, pady=10)
 
 buttonSearch = Button(gui, text='Search', width=8, bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
@@ -83,6 +97,8 @@ def save_input():
         since a read file and from text widget
         by lines ;) !
     """
+    hour_var = reachHour.get()
+    oclock = reachHour.get()
     regexpi_var = reachDate.get()
     magicword = reachDate.get()
     for path, dirs, files in os.walk('./patient_agenda/events3/'\
@@ -92,19 +108,18 @@ def save_input():
             for line in read_f:
                 for k in line:
                     noway = "Fixed on :"
-                    magichour = line[14:24]
                     if line[0:10] == noway:
                         print("+ There is noway : ")
                         print(line[0:10])
-                    elif magicword == line[0:10] and \
-                    magichour == line[14:24]:
-                        print("+ It is magicword : ")
-                        print(line[0:10])
-                        print(line[14:24])
-                        write_f = open(os.path.join(path, file), 'w')
-                        write_f.writelines(textBox.get("0.0", "end-1c") + "\n")
-                        print("Modification finish")
-                        break
+                    elif magicword in line:
+                        if oclock in line:
+                            print("+ It is magicword : ")
+                            print(line[0:10])
+                            print(line[13:21])
+                            write_f = open(os.path.join(path, file), 'w')
+                            write_f.writelines(textBox.get("0.0", "end-1c") + "\n")
+                            print("Modification finish")
+                            break
                     else:
                         print("None file has been writted")
                         break
@@ -117,7 +132,7 @@ def messFromSafeButt():
         textBox.insert(INSERT, "\n---Data saved !---")
         print("+ Data saved !")
     else:
-        textBox.insert(INSERT, "Nothing has been saved !")
+        textBox.insert(INSERT, "\n---Nothing has been saved !---")
         print("+ Nothing has been saved !")
 
 def modifList():

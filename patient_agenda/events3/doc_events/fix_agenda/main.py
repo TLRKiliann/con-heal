@@ -45,26 +45,22 @@ def searchExpress():
         To read multiples files in a directory
     """
     try:
-        mot = regexpi_var.get()
+        regexpi_var = reachDate.get()
+        mot = reachDate.get()
         for path, dirs, files in os.walk('./patient_agenda/events3/'\
             'doc_events/fix_agenda/agenda_saved/'):
             for file in files:
                 read_f = open(os.path.join(path, file), 'r')
                 lines = read_f.readlines()
                 for i in range(0, len(lines)):
-                    line = lines[i]
-                    if mot in line:
-                        print("Nous y voici !")
-                        print(lines[i-1])
-                        print(lines[i])
-                        print(lines[i+1])
-                        print(lines[i+2])
-                        print(lines[i+3])
-                        textBox.insert(INSERT, lines[i-1])
-                        textBox.insert(INSERT, lines[i])
-                        textBox.insert(INSERT, lines[i+1])
-                        textBox.insert(INSERT, lines[i+2])
-                        textBox.insert(INSERT, lines[i+3])
+                    for line in lines:
+                        line = lines[i]
+                        if mot in line:
+                            print("Nous y voici !")
+                            textBox.insert(INSERT, lines[i])
+                            textBox.insert(INSERT, lines[i+1])
+                            textBox.insert(INSERT, lines[i+2])
+                            break
     except IndexError as ind_err:
         print("+ Index out of range", ind_err)
 
@@ -95,12 +91,14 @@ def save_input():
             for line in read_f:
                 for k in line:
                     noway = "Fixed on :"
+                    magichour = line[14:24]
                     if line[0:10] == noway:
                         print("+ There is noway : ")
                         print(line[0:10])
-                    elif magicword in line:
+                    elif magicword == line[0:10] and magichour == line[14:24]:
                         print("+ It is magicword : ")
                         print(line[0:10])
+                        print(line[14:24])
                         write_f = open(os.path.join(path, file), 'w')
                         write_f.writelines(textBox.get("0.0", "end-1c") + "\n")
                         print("Modification finish")

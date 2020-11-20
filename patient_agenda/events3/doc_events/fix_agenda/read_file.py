@@ -15,10 +15,12 @@ fen.configure(background='cyan')
 top = Frame(fen, bg='cyan')
 top2 = Frame(fen, bg='cyan3')
 top3 = Frame(fen, bg='cyan3')
+top4 = Frame(fen, bg='cyan')
 bottom = Frame(fen, bg='cyan')
 top.pack(side=TOP)
 top2.pack(side=TOP)
 top3.pack(side=TOP)
+top4.pack(side=TOP)
 bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
 
 labelo = Label(fen, text="Appointments",
@@ -35,7 +37,28 @@ textentry.set(line1)
 entrylab.pack(in_=top, side=LEFT, padx=10, pady=10)
 
 def janSearch():
-    pass
+    """
+        To search by months and sort() date
+    """
+    #line[3:5].sort()
+    jandat = "01"
+    for path, dirs, files in os.walk('./patient_agenda/'\
+        'events3/doc_events/fix_agenda/agenda_saved/'):
+        for file in files:
+            with open(os.path.join(path, file),'r') as jan_read:
+                lines = jan_read.readlines()
+                for i in range(0, len(lines)):
+                    for line in lines:
+                        line.replace('{', '')
+                        line.replace('}', '')
+                        line = lines[i]
+                        if line[3:5] == jandat:
+                            textBox.insert(INSERT, lines[i-1])
+                            textBox.insert(INSERT, lines[i])
+                            textBox.insert(INSERT, lines[i+1])
+                            textBox.insert(INSERT, lines[i+2])
+                            textBox.insert(INSERT, '\n')
+                            break
 
 buttonJan = Button(fen, text="Jan", font='Arial 12 bold', bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
@@ -44,7 +67,23 @@ buttonJan = Button(fen, text="Jan", font='Arial 12 bold', bd=3,
 buttonJan.pack(in_=top2, side=LEFT, padx=10, pady=10)
 
 def febSearch():
-    pass
+    for path, dirs, files in os.walk('./patient_agenda/'\
+        'events3/doc_events/fix_agenda/agenda_saved/'):
+        for file in files:
+            with open(os.path.join(path, file),'r') as jan_read:
+                lines = jan_read.readlines()
+                for i in range(0, len(lines)):
+                    for line in lines:
+                        line.replace('{', '')
+                        line.replace('}', '')
+                        line = lines[i]
+                        if line[3:5] == "02":
+                            textBox.insert(INSERT, lines[i-1])
+                            textBox.insert(INSERT, lines[i])
+                            textBox.insert(INSERT, lines[i+1])
+                            textBox.insert(INSERT, lines[i+2])
+                            textBox.insert(INSERT, '\n')
+                            break
 
 buttonFeb = Button(fen, text="Feb", font='Arial 12 bold', bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
@@ -53,7 +92,23 @@ buttonFeb = Button(fen, text="Feb", font='Arial 12 bold', bd=3,
 buttonFeb.pack(in_=top2, side=LEFT, padx=10, pady=10)
 
 def marSearch():
-    pass
+    for path, dirs, files in os.walk('./patient_agenda/'\
+        'events3/doc_events/fix_agenda/agenda_saved/'):
+        for file in files:
+            with open(os.path.join(path, file),'r') as jan_read:
+                lines = jan_read.readlines()
+                for i in range(0, len(lines)):
+                    for line in lines:
+                        line.replace('{', '')
+                        line.replace('}', '')
+                        line = lines[i]
+                        if line[3:5] == "03":
+                            textBox.insert(INSERT, lines[i-1])
+                            textBox.insert(INSERT, lines[i])
+                            textBox.insert(INSERT, lines[i+1])
+                            textBox.insert(INSERT, lines[i+2])
+                            textBox.insert(INSERT, '\n')
+                            break
 
 buttonMar = Button(fen, text="Mar", font='Arial 12 bold', bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
@@ -62,7 +117,23 @@ buttonMar = Button(fen, text="Mar", font='Arial 12 bold', bd=3,
 buttonMar.pack(in_=top2, side=LEFT, padx=10, pady=10)
 
 def avrSearch():
-    pass
+    for path, dirs, files in os.walk('./patient_agenda/'\
+        'events3/doc_events/fix_agenda/agenda_saved/'):
+        for file in files:
+            with open(os.path.join(path, file),'r') as jan_read:
+                lines = jan_read.readlines()
+                for i in range(0, len(lines)):
+                    for line in lines:
+                        line.replace('{', '')
+                        line.replace('}', '')
+                        line = lines[i]
+                        if line[3:5] == "04":
+                            textBox.insert(INSERT, lines[i-1])
+                            textBox.insert(INSERT, lines[i])
+                            textBox.insert(INSERT, lines[i+1])
+                            textBox.insert(INSERT, lines[i+2])
+                            textBox.insert(INSERT, '\n')
+                            break
 
 buttonAvr = Button(fen, text="Avr", font='Arial 12 bold', bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
@@ -71,7 +142,23 @@ buttonAvr = Button(fen, text="Avr", font='Arial 12 bold', bd=3,
 buttonAvr.pack(in_=top2, side=LEFT, padx=10, pady=10)
 
 def maiSearch():
-    pass
+    for path, dirs, files in os.walk('./patient_agenda/'\
+        'events3/doc_events/fix_agenda/agenda_saved/'):
+        for file in files:
+            with open(os.path.join(path, file),'r') as jan_read:
+                lines = jan_read.readlines()
+                for i in range(0, len(lines)):
+                    for line in lines:
+                        line.replace('{', '')
+                        line.replace('}', '')
+                        line = lines[i]
+                        if line[3:5] == "05":
+                            textBox.insert(INSERT, lines[i-1])
+                            textBox.insert(INSERT, lines[i])
+                            textBox.insert(INSERT, lines[i+1])
+                            textBox.insert(INSERT, lines[i+2])
+                            textBox.insert(INSERT, '\n')
+                            break
 
 buttonMay = Button(fen, text="May", font='Arial 12 bold', bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
@@ -80,7 +167,23 @@ buttonMay = Button(fen, text="May", font='Arial 12 bold', bd=3,
 buttonMay.pack(in_=top2, side=LEFT, padx=10, pady=10)
 
 def junSearch():
-    pass
+    for path, dirs, files in os.walk('./patient_agenda/'\
+        'events3/doc_events/fix_agenda/agenda_saved/'):
+        for file in files:
+            with open(os.path.join(path, file),'r') as jan_read:
+                lines = jan_read.readlines()
+                for i in range(0, len(lines)):
+                    for line in lines:
+                        line.replace('{', '')
+                        line.replace('}', '')
+                        line = lines[i]
+                        if line[3:5] == "06":
+                            textBox.insert(INSERT, lines[i-1])
+                            textBox.insert(INSERT, lines[i])
+                            textBox.insert(INSERT, lines[i+1])
+                            textBox.insert(INSERT, lines[i+2])
+                            textBox.insert(INSERT, '\n')
+                            break
 
 buttonJun = Button(fen, text="Jun", font='Arial 12 bold', bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
@@ -89,7 +192,23 @@ buttonJun = Button(fen, text="Jun", font='Arial 12 bold', bd=3,
 buttonJun.pack(in_=top2, side=LEFT, padx=10, pady=10)
 
 def julSearch():
-    pass
+    for path, dirs, files in os.walk('./patient_agenda/'\
+        'events3/doc_events/fix_agenda/agenda_saved/'):
+        for file in files:
+            with open(os.path.join(path, file),'r') as jan_read:
+                lines = jan_read.readlines()
+                for i in range(0, len(lines)):
+                    for line in lines:
+                        line.replace('{', '')
+                        line.replace('}', '')
+                        line = lines[i]
+                        if line[3:5] == "07":
+                            textBox.insert(INSERT, lines[i-1])
+                            textBox.insert(INSERT, lines[i])
+                            textBox.insert(INSERT, lines[i+1])
+                            textBox.insert(INSERT, lines[i+2])
+                            textBox.insert(INSERT, '\n')
+                            break
 
 buttonJul = Button(fen, text="Jul", font='Arial 12 bold', bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
@@ -98,7 +217,23 @@ buttonJul = Button(fen, text="Jul", font='Arial 12 bold', bd=3,
 buttonJul.pack(in_=top3, side=LEFT, padx=10, pady=10)
 
 def augSearch():
-    pass
+    for path, dirs, files in os.walk('./patient_agenda/'\
+        'events3/doc_events/fix_agenda/agenda_saved/'):
+        for file in files:
+            with open(os.path.join(path, file),'r') as jan_read:
+                lines = jan_read.readlines()
+                for i in range(0, len(lines)):
+                    for line in lines:
+                        line.replace('{', '')
+                        line.replace('}', '')
+                        line = lines[i]
+                        if line[3:5] == "08":
+                            textBox.insert(INSERT, lines[i-1])
+                            textBox.insert(INSERT, lines[i])
+                            textBox.insert(INSERT, lines[i+1])
+                            textBox.insert(INSERT, lines[i+2])
+                            textBox.insert(INSERT, '\n')
+                            break
 
 buttonAug = Button(fen, text="Aug", font='Arial 12 bold', bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
@@ -107,7 +242,23 @@ buttonAug = Button(fen, text="Aug", font='Arial 12 bold', bd=3,
 buttonAug.pack(in_=top3, side=LEFT, padx=10, pady=10)
 
 def sepSearch():
-    pass
+    for path, dirs, files in os.walk('./patient_agenda/'\
+        'events3/doc_events/fix_agenda/agenda_saved/'):
+        for file in files:
+            with open(os.path.join(path, file),'r') as jan_read:
+                lines = jan_read.readlines()
+                for i in range(0, len(lines)):
+                    for line in lines:
+                        line.replace('{', '')
+                        line.replace('}', '')
+                        line = lines[i]
+                        if line[3:5] == "09":
+                            textBox.insert(INSERT, lines[i-1])
+                            textBox.insert(INSERT, lines[i])
+                            textBox.insert(INSERT, lines[i+1])
+                            textBox.insert(INSERT, lines[i+2])
+                            textBox.insert(INSERT, '\n')
+                            break
 
 buttonSep = Button(fen, text="Sep", font='Arial 12 bold', bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
@@ -116,7 +267,23 @@ buttonSep = Button(fen, text="Sep", font='Arial 12 bold', bd=3,
 buttonSep.pack(in_=top3, side=LEFT, padx=10, pady=10)
 
 def octSearch():
-    pass
+    for path, dirs, files in os.walk('./patient_agenda/'\
+        'events3/doc_events/fix_agenda/agenda_saved/'):
+        for file in files:
+            with open(os.path.join(path, file),'r') as jan_read:
+                lines = jan_read.readlines()
+                for i in range(0, len(lines)):
+                    for line in lines:
+                        line.replace('{', '')
+                        line.replace('}', '')
+                        line = lines[i]
+                        if line[3:5] == "10":
+                            textBox.insert(INSERT, lines[i-1])
+                            textBox.insert(INSERT, lines[i])
+                            textBox.insert(INSERT, lines[i+1])
+                            textBox.insert(INSERT, lines[i+2])
+                            textBox.insert(INSERT, '\n')
+                            break
 
 buttonOct = Button(fen, text="Oct", font='Arial 12 bold', bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
@@ -125,7 +292,23 @@ buttonOct = Button(fen, text="Oct", font='Arial 12 bold', bd=3,
 buttonOct.pack(in_=top3, side=LEFT, padx=10, pady=10)
 
 def novSearch():
-    pass
+    for path, dirs, files in os.walk('./patient_agenda/'\
+        'events3/doc_events/fix_agenda/agenda_saved/'):
+        for file in files:
+            with open(os.path.join(path, file),'r') as jan_read:
+                lines = jan_read.readlines()
+                for i in range(0, len(lines)):
+                    for line in lines:
+                        line.replace('{', '')
+                        line.replace('}', '')
+                        line = lines[i]
+                        if line[3:5] == "11":
+                            textBox.insert(INSERT, lines[i-1])
+                            textBox.insert(INSERT, lines[i])
+                            textBox.insert(INSERT, lines[i+1])
+                            textBox.insert(INSERT, lines[i+2])
+                            textBox.insert(INSERT, '\n')
+                            break
 
 buttonNov = Button(fen, text="Nov", font='Arial 12 bold', bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
@@ -134,13 +317,38 @@ buttonNov = Button(fen, text="Nov", font='Arial 12 bold', bd=3,
 buttonNov.pack(in_=top3, side=LEFT, padx=10, pady=10)
 
 def decSearch():
-    pass
+    for path, dirs, files in os.walk('./patient_agenda/'\
+        'events3/doc_events/fix_agenda/agenda_saved/'):
+        for file in files:
+            with open(os.path.join(path, file),'r') as jan_read:
+                lines = jan_read.readlines()
+                for i in range(0, len(lines)):
+                    for line in lines:
+                        line.replace('{', '')
+                        line.replace('}', '')
+                        line = lines[i]
+                        if line[3:5] == "12":
+                            textBox.insert(INSERT, lines[i-1])
+                            textBox.insert(INSERT, lines[i])
+                            textBox.insert(INSERT, lines[i+1])
+                            textBox.insert(INSERT, lines[i+2])
+                            textBox.insert(INSERT, '\n')
+                            break
 
 buttonDec = Button(fen, text="Dec", font='Arial 12 bold', bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
     activebackground='dark turquoise',
     command=decSearch)
 buttonDec.pack(in_=top3, side=LEFT, padx=10, pady=10)
+
+def clearTextbox():
+    textBox.delete('0.0', "end-1c")
+
+buttonClear = Button(fen, text="Clear", font='Arial 12 bold', 
+    width=50, bd=3, fg='white', bg='RoyalBlue3',
+    highlightbackground='light sky blue',
+    activebackground='dark turquoise', command = clearTextbox)
+buttonClear.pack(in_=top4, side=LEFT, padx=20, pady=10)
 
 def msgBox():
     messagebox.showwarning('WARNING',
@@ -158,7 +366,7 @@ def importFilesFromDir():
                 textBox.insert(END, li)
 
 textBox = Text(fen, height=20, width=60, font=18)
-textBox.pack(in_=bottom, padx=20, pady=10)
+textBox.pack(in_=bottom, padx=30, pady=10)
 
 try:
     importFilesFromDir()
@@ -171,6 +379,6 @@ buttonClose = Button(fen, text="Quit", width=8, bd=3,
     fg='white', bg='RoyalBlue3',
     highlightbackground='light sky blue',
     activebackground='dark turquoise', command=quit)
-buttonClose.pack(in_=bottom, side='right', padx=20, pady=10)
+buttonClose.pack(in_=bottom, side=RIGHT, padx=30, pady=10)
 
 fen.mainloop()

@@ -46,7 +46,7 @@ except ValueError as valout:
 
 # initword = "Appointment set for :"
 # initword +' '+ 
-final_data = extraday +'/'+ extramounth +'/'+ str(data_year) +' :'
+final_data = extraday +'/'+ extramounth +'/'+ str(data_year) +' : '
 print(final_data)
 
 try:

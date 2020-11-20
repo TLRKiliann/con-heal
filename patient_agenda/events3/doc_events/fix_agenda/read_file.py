@@ -40,8 +40,6 @@ def janSearch():
     """
         To search by months and sort() date
     """
-    #line[3:5].sort()
-    jandat = "01"
     for path, dirs, files in os.walk('./patient_agenda/'\
         'events3/doc_events/fix_agenda/agenda_saved/'):
         for file in files:
@@ -52,7 +50,7 @@ def janSearch():
                         line.replace('{', '')
                         line.replace('}', '')
                         line = lines[i]
-                        if line[3:5] == jandat:
+                        if line[3:5] == "01":
                             textBox.insert(INSERT, lines[i-1])
                             textBox.insert(INSERT, lines[i])
                             textBox.insert(INSERT, lines[i+1])

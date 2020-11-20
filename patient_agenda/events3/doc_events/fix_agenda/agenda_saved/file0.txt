@@ -1,6 +1,2 @@
-Fixed on : 20/11/2020, 09:58:59 :
-21/11/2020 : 14:00:00
-RDV chez Dr Truc.
-Prendre agenda avec.
-Demander prochain rdv.
+Rdv past-->21/11/2020 : 14:00:00
 

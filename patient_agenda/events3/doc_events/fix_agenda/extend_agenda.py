@@ -68,6 +68,7 @@ def importationFile(fichier):
         textBox.delete('2.0')
         textBox.delete('end-3c')
         textBox.insert('2.14', 'Change time and press enter !')
+        textBox.insert('3.0', "(Don't use more than 2 lines for writting !)")
         textBox.update()
 
 def retrieve_input():

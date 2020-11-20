@@ -117,7 +117,7 @@ def save_input():
                             print(line[0:10])
                             print(line[13:21])
                             write_f = open(os.path.join(path, file), 'w')
-                            write_f.writelines(textBox.get("0.0", "end-1c") + "\n")
+                            write_f.writelines(textBox.get("0.0", "end-1c"))
                             print("Modification finish")
                             break
                     else:

@@ -37,6 +37,7 @@ class Calendar:
             w.grid_forget()
             #w.destroy()
             self.wid.remove(w)
+
     def go_prev(self):
         if self.month > 1:
             self.month -= 1
@@ -100,7 +101,7 @@ class Calendar:
                     #print(calendar.day_name[day])
                     b = tk.Button(self.parent, width=1, text=day,
                         fg='white', bg='navy',
-                        command=lambda day=day:self.selection(day, calendar.day_name[(day) % 7]))
+                        command=lambda day=day:self.selection(day, calendar.day_name[(day-1) % 7]))
                     self.wid.append(b)
                     b.grid(row=w, column=d, rowspan=1, columnspan=1, padx=2, pady=2)
 

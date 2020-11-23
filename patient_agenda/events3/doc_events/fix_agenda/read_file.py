@@ -59,35 +59,31 @@ def janSearch():
                             textBox.insert(INSERT, '\n')
                             break
     """
-    fixed ="Fixed"
-    tap = "01"
+
+    fixed = 'Fixed on :'
+    tap = '01'
     for path, dirs, files in os.walk('./patient_agenda/'\
         'events3/doc_events/fix_agenda/agenda_saved/'):
         for file in files:
+            data = {} 
             with open(os.path.join(path, file), 'r') as jan_read:
-                lines = jan_read.readlines()
-                myDream = []
-                word = {}
-                word['trbdata'] = []
-                for i in range(0, len(lines)):
-                    for line in lines:                   
-                        myDream.append(line.strip().split())
-                        line = lines[i]
-                        if fixed in line:
-                            pass
-                        elif tap in line:
-                            wave_dream = lines[i].strip().split()
-                            print(line) # -- ok
-                            #print(wave_dream)
-                            word['trbdata'].append({'Date' : wave_dream})
-                            rude_f = open('./patient_agenda/events3/doc_events/fix_agenda/fixtrb.json', 'w')
-                            json.dump(word, rude_f, indent=4, sort_keys=True)
-                            break
+                dream = []
+                for line in jan_read:
+                    for i in line.strip().split():
+                        print(i)
+                        flop = dream.append(i)
+                        print(dream)
+                    
+# HOW TO LOOP OVER FILES !!!
+ 
+            data['fuck'] = []
+            data['fuck'].append({'Date' : dream})
+            with open("./patient_agenda/events3/doc_events/fix_agenda/fuck_f.json", "w") as out_file:
+                json.dump(data, out_file, indent = 4) 
 
 buttonJan = Button(fen, text="Jan", font='Arial 12 bold', bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
-    activebackground='dark turquoise',
-    command=janSearch)
+    activebackground='dark turquoise', command=janSearch)
 buttonJan.pack(in_=top2, side=LEFT, padx=10, pady=10)
 
 def febSearch():

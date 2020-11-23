@@ -59,27 +59,42 @@ def janSearch():
                             textBox.insert(INSERT, '\n')
                             break
     """
-
     fixed = 'Fixed on :'
     tap = '01'
-    for path, dirs, files in os.walk('./patient_agenda/'\
-        'events3/doc_events/fix_agenda/agenda_saved/'):
-        for file in files:
-            data = {} 
-            with open(os.path.join(path, file), 'r') as jan_read:
-                dream = []
-                for line in jan_read:
-                    for i in line.strip().split():
-                        print(i)
-                        flop = dream.append(i)
-                        print(dream)
-                    
-# HOW TO LOOP OVER FILES !!!
- 
-            data['fuck'] = []
-            data['fuck'].append({'Date' : dream})
+    path= './patient_agenda/events3/doc_events/fix_agenda/agenda_saved/'
+    filepaths  = [os.path.join(path, file) for file in os.listdir(path)]
+    all_files = []
+    data = {}
+    data['restlst'] = []
+    for path in filepaths:
+        with open(path, 'r') as f:
+            file = f.readlines()
+            all_files.append(file)
+            x=0
+            data['restlst'].append({'Date' : all_files})
             with open("./patient_agenda/events3/doc_events/fix_agenda/fuck_f.json", "w") as out_file:
-                json.dump(data, out_file, indent = 4) 
+                json.dump(data, out_file, indent = 4)
+
+    try:
+        with open('./patient_agenda/events3/doc_events/fix_agenda/fuck_f.json') as file:
+            data=json.loads(file)
+    except FileNotFoundError as fileout:
+        print("File 3 patient_rdv.json not created", fileout)
+
+
+    for key, value in data.items():
+        print("Date: " + str(value[0]['Date']))
+    """
+    data_list1 = []
+    for value in zip(value):
+        data_list1.append(value)
+        #print(data_list1)
+
+    data_list2 = []
+    for key, value in data.items():
+        for i in value[0]:
+            print(i)
+    """
 
 buttonJan = Button(fen, text="Jan", font='Arial 12 bold', bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',

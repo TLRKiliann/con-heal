@@ -5,6 +5,7 @@
 from tkinter import *
 from tkinter import messagebox
 import os
+import json
 
 
 fen=Tk()
@@ -58,46 +59,30 @@ def janSearch():
                             textBox.insert(INSERT, '\n')
                             break
     """
-    fixed ="Fixed on :"
+    fixed ="Fixed"
     tap = "01"
-    jamlist = ["18/01", "20/01", "29/01"]
     for path, dirs, files in os.walk('./patient_agenda/'\
         'events3/doc_events/fix_agenda/agenda_saved/'):
         for file in files:
-            with open(os.path.join(path, file),'r') as jan_read:
+            with open(os.path.join(path, file), 'r') as jan_read:
                 lines = jan_read.readlines()
-                words = []
+                myDream = []
+                word = {}
+                word['trbdata'] = []
                 for i in range(0, len(lines)):
-                    for line in lines:
+                    for line in lines:                   
+                        myDream.append(line.strip().split())
                         line = lines[i]
-                        if line[3:5] == tap:
-                            words += line[0:10].strip().split(line)
-                            if fixed in line[0:10]:
-                                pass
-                            elif line[0:10] in line:
-                                #print(line) # parfait
-                                #print(line[0:2].split()) # en liste
-                                print("-----")
-                                print(line)
-                                print("-----")
-                                kret = line[0:2]
-                                for kret in line:
-                                    print(line)
-                                    # Découpe les liste de [0:2]
-                                    #print(line[0:2])
-                                    #mage = line[0:2]
-                                    #print(sorted(mage))
-                                    break
-                                break
-                                #print(line.strip()) # en brute sans []
-                                #sorted(line)
-                                #textBox.insert(INSERT, sorted(words[0:2]))
-                                #textBox.insert(INSERT, lines[i-1])
-                                #textBox.insert(INSERT, lines[i])
-                                #textBox.insert(INSERT, lines[i+1])
-                                #textBox.insert(INSERT, lines[i+2])
-                                #textBox.insert(INSERT, '\n')
-                                #break
+                        if fixed in line:
+                            pass
+                        elif tap in line:
+                            wave_dream = lines[i].strip().split()
+                            print(line) # -- ok
+                            #print(wave_dream)
+                            word['trbdata'].append({'Date' : wave_dream})
+                            rude_f = open('./patient_agenda/events3/doc_events/fix_agenda/fixtrb.json', 'w')
+                            json.dump(word, rude_f, indent=4, sort_keys=True)
+                            break
 
 buttonJan = Button(fen, text="Jan", font='Arial 12 bold', bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',

@@ -168,9 +168,10 @@ def dispAgBox():
                                 for path, dirs, files in os.walk('./patient_agenda/events3/'\
                                     'doc_events/fix_agenda/agenda_saved/'):
                                     for file in files:
-                                        read_f = open(os.path.join(path, file), 'r')
-                                        for line in read_f:
-                                            for i in line:
+                                        with open(os.path.join(path, file), 'r') as read_f:
+                                            lines = read_f.readlines()
+                                            for line in lines:
+                                                line = lines[i]
                                                 noway = "Fixed on :"
                                                 if line[0:10] == noway:
                                                     print("+ There is noway : ")
@@ -179,7 +180,8 @@ def dispAgBox():
                                                     print("+ It is magicword : ")
                                                     print(line[0:10])
                                                     write_f = open(os.path.join(path, file), 'w')
-                                                    write_f.write("Rdv past-->" + line + "\n")
+                                                    write_f.write("Rdv past-->" + lines[i] + \
+                                                        lines[i+1] + "\n")
                                                     print("Modification finish")
                                                     break
                                                 else:

@@ -623,7 +623,7 @@ def comburTips():
     subprocess.call('./labo/combtest.py')
 
 app = Tk()
-app.title("Labo check")
+app.title("Time-Track")
 app.configure(bg='RoyalBlue4')
 
 #label_fra = LabelFrame(app, text="Patient 1",

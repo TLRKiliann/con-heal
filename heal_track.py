@@ -66,169 +66,169 @@ class MenuBar(Frame):
         # For label below (in me2.add_command)
         try:
             with open('./newpatient/entryfile.txt', 'r') as namefile:
-                line1=namefile.readline()
-                new_text=line1
+                line1 = namefile.readline()
+                new_text = line1
         except FileNotFoundError as fileout:
             print("No file entryfile.txt exist", fileout)
 
         try:
             with open('./newpatient/entryfile2.txt', 'r') as namefile2:
-                line2=namefile2.readline()
-                new_text2=line2
+                line2 = namefile2.readline()
+                new_text2 = line2
         except FileNotFoundError as fileout2:
             print("No file entryfile2.txt exist", fileout2)
 
         try:
             with open('./newpatient/entryfile3.txt', 'r') as namefile3:
-                line3=namefile3.readline()
-                new_text3=line3
+                line3 = namefile3.readline()
+                new_text3 = line3
         except FileNotFoundError as fileout3:
             print("No file entryfile3.txt exist", fileout3)
 
         try:
             with open('./newpatient/entryfile4.txt', 'r') as namefile4:
-                line4=namefile4.readline()
-                new_text4=line4
+                line4 = namefile4.readline()
+                new_text4 = line4
         except FileNotFoundError as fileout4:
             print("No file entryfile4.txt exist", fileout4)
 
         try:
             with open('./newpatient/entryfile5.txt', 'r') as namefile5:
-                line5=namefile5.readline()
-                new_text5=line5
+                line5 = namefile5.readline()
+                new_text5 = line5
         except FileNotFoundError as fileout5:
             print("No file entryfile5.txt exist", fileout5)
 
         try:
             with open('./newpatient/entryfile6.txt', 'r') as namefile6:
-                line6=namefile6.readline()
-                new_text6=line6
+                line6 = namefile6.readline()
+                new_text6 = line6
         except FileNotFoundError as fileout6:
             print("No file entryfile6.txt exist", fileout6)
 
         try:
             with open('./newpatient/entryfile7.txt', 'r') as namefile7:
-                line7=namefile7.readline()
-                new_text7=line7
+                line7 = namefile7.readline()
+                new_text7 = line7
         except FileNotFoundError as fileout7:
             print("No file entryfile7.txt exist", fileout7)
 
         try:
             with open('./newpatient/entryfile8.txt', 'r') as namefile8:
-                line8=namefile8.readline()
-                new_text8=line8
+                line8 = namefile8.readline()
+                new_text8 = line8
         except FileNotFoundError as fileout8:
             print("No file entryfile8.txt exist", fileout8)
 
         try:
             with open('./newpatient/entryfile9.txt', 'r') as namefile9:
-                line9=namefile9.readline()
-                new_text9=line9
+                line9 = namefile9.readline()
+                new_text9 = line9
         except FileNotFoundError as fileout9:
             print("No file entryfile9.txt exist", fileout9)
 
         try:
             with open('./newpatient/entryfile10.txt', 'r') as namefile10:
-                line10=namefile10.readline()
-                new_text10=line10
+                line10 = namefile10.readline()
+                new_text10 = line10
         except FileNotFoundError as fileout10:
             print("No file entryfile10.txt exist", fileout10)
 
         try:
             with open('./newpatient/entryfile11.txt', 'r') as namefile11:
-                line11=namefile11.readline()
-                new_text11=line11
+                line11 = namefile11.readline()
+                new_text11 = line11
         except FileNotFoundError as fileout11:
             print("No file entryfile11.txt exist", fileout11)
 
         try:
             with open('./newpatient/entryfile12.txt', 'r') as namefile12:
-                line12=namefile12.readline()
-                new_text12=line12
+                line12 = namefile12.readline()
+                new_text12 = line12
         except FileNotFoundError as fileout12:
             print("No file entryfile12.txt exist", fileout12)
 
         try:
             with open('./newpatient/entryfile13.txt', 'r') as namefile13:
-                line13=namefile13.readline()
-                new_text13=line13
+                line13 = namefile13.readline()
+                new_text13 = line13
         except FileNotFoundError as fileout13:
             print("No file entryfile13.txt exist", fileout13)
 
         try:
             with open('./newpatient/entryfile14.txt', 'r') as namefile14:
-                line14=namefile14.readline()
-                new_text14=line14
+                line14 = namefile14.readline()
+                new_text14 = line14
         except FileNotFoundError as fileout14:
             print("No file entryfile14.txt exist", fileout14)
 
         try:
             with open('./newpatient/entryfile15.txt', 'r') as namefile15:
-                line15=namefile15.readline()
-                new_text15=line15
+                line15 = namefile15.readline()
+                new_text15 = line15
         except FileNotFoundError as fileout15:
             print("No file entryfile15.txt exist", fileout15)
 
         try:
             with open('./newpatient/entryfile16.txt', 'r') as namefile16:
-                line16=namefile16.readline()
-                new_text16=line16
+                line16 = namefile16.readline()
+                new_text16 = line16
         except FileNotFoundError as fileout16:
             print("No file entryfile16.txt exist", fileout16)
 
         try:
             with open('./newpatient/entryfile17.txt', 'r') as namefile17:
-                line17=namefile17.readline()
-                new_text17=line17
+                line17 = namefile17.readline()
+                new_text17 = line17
         except FileNotFoundError as fileout17:
             print("No file entryfile17.txt exist", fileout17)
 
         try:
             with open('./newpatient/entryfile18.txt', 'r') as namefile18:
-                line18=namefile18.readline()
-                new_text18=line18
+                line18 = namefile18.readline()
+                new_text18 = line18
         except FileNotFoundError as fileout18:
             print("No file entryfile18.txt exist", fileout18)
 
         try:
             with open('./newpatient/entryfile19.txt', 'r') as namefile19:
-                line19=namefile19.readline()
-                new_text19=line19
+                line19 = namefile19.readline()
+                new_text19 = line19
         except FileNotFoundError as fileout19:
             print("No file entryfile19.txt exist", fileout19)
 
         try:
             with open('./newpatient/entryfile20.txt', 'r') as namefile20:
-                line20=namefile20.readline()
-                new_text20=line20
+                line20 = namefile20.readline()
+                new_text20 = line20
         except FileNotFoundError as fileout20:
             print("No file entryfile20.txt exist", fileout20)
 
         try:
             with open('./newpatient/entryfile21.txt', 'r') as namefile21:
-                line21=namefile21.readline()
-                new_text21=line21
+                line21 = namefile21.readline()
+                new_text21 = line21
         except FileNotFoundError as fileout21:
             print("No file entryfile21.txt exist", fileout21)
 
         try:
             with open('./newpatient/entryfile22.txt', 'r') as namefile22:
-                line22=namefile22.readline()
-                new_text22=line22
+                line22 = namefile22.readline()
+                new_text22 = line22
         except FileNotFoundError as fileout22:
             print("No file entryfile22.txt exist", fileout22)
 
         try:
             with open('./newpatient/entryfile23.txt', 'r') as namefile23:
-                line23=namefile23.readline()
-                new_text23=line23
+                line23 = namefile23.readline()
+                new_text23 = line23
         except FileNotFoundError as fileout23:
             print("No file entryfile23.txt exist", fileout23)
 
         try:
             with open('./newpatient/entryfile24.txt', 'r') as namefile24:
-                line24=namefile24.readline()
-                new_text24=line24
+                line24 = namefile24.readline()
+                new_text24 = line24
         except FileNotFoundError as fileout24:
             print("No file entryfile24.txt exist", fileout24)
 
@@ -264,7 +264,7 @@ class MenuBar(Frame):
             menu=me1)
 
         # Agenda menu
-        self.cmd_agenda=Menubutton(self, text='Agenda', font=("Times 14"),
+        self.cmd_agenda = Menubutton(self, text='Agenda', font=("Times 14"),
             fg='cyan', bg='grey30', relief=GROOVE)
         self.cmd_agenda.pack(side=LEFT, padx=3)
         me3 = Menu(self.cmd_agenda)
@@ -346,7 +346,7 @@ class MenuBar(Frame):
             menu=me3)
 
         # 14 besoins menu
-        self.cmd_Besoins=Menubutton(self, text='14 Needs', font=("Times 14"),
+        self.cmd_Besoins = Menubutton(self, text='14 Needs', font=("Times 14"),
             fg='cyan', bg='grey30', relief=GROOVE)
         self.cmd_Besoins.pack(side=LEFT, padx=3)
         # Partie déroulante du menu 14b
@@ -451,7 +451,7 @@ class MenuBar(Frame):
             menu=me4)
 
         # Helth and care menu
-        self.cmd_Soins=Menubutton(self, text='Care and monitoring', font=("Times 14"),
+        self.cmd_Soins = Menubutton(self, text='Care and monitoring', font=("Times 14"),
             fg='cyan', bg='grey30', relief=GROOVE)
         self.cmd_Soins.pack(side=LEFT, padx=3)
         # Partie déroulante du menu health and care
@@ -556,7 +556,7 @@ class MenuBar(Frame):
             menu=meSoins)
 
         # Treatments
-        self.cmd_ttt=Menubutton(self, text='Treatments', font=("Times 14"),
+        self.cmd_ttt = Menubutton(self, text='Treatments', font=("Times 14"),
             fg='cyan', bg='grey30', relief=GROOVE)
         self.cmd_ttt.pack(side=LEFT, padx=3)
         # Partie déroulante du menu health and care
@@ -661,7 +661,7 @@ class MenuBar(Frame):
             menu=meTtt)
 
         # BMI menu
-        self.cmd_BMI=Menubutton(self, text='Body Mass Indice', font=("Times 14"),
+        self.cmd_BMI = Menubutton(self, text='Body Mass Indice', font=("Times 14"),
             fg='cyan', bg='grey30', relief=GROOVE)
         self.cmd_BMI.pack(side=LEFT, padx=3)
         # drop-down portion of BMI menu
@@ -743,7 +743,7 @@ class MenuBar(Frame):
             menu=meBmi)
 
         # Medical Visite
-        self.cmd_Vmed=Menubutton(self, text='Medical Visit', font=("Times 14"),
+        self.cmd_Vmed = Menubutton(self, text='Medical Visit', font=("Times 14"),
             fg='cyan', bg='grey30', relief=GROOVE)
         self.cmd_Vmed.pack(side=LEFT, padx=3)
         # drop-down portion of vmed
@@ -825,7 +825,7 @@ class MenuBar(Frame):
             menu=meVmed)
 
         # Nutrition menu for intolerance and hate meals
-        self.cmd_Print=Menubutton(self, text='Intolerance All.', font=("Times 14"),
+        self.cmd_Print = Menubutton(self, text='Intolerance All.', font=("Times 14"),
             fg='cyan', bg='grey30', relief=GROOVE)
         self.cmd_Print.pack(side=LEFT, padx=3)
         # drop-down portion of nutrition
@@ -912,7 +912,7 @@ class MenuBar(Frame):
         self.cmd_backup.pack(side=LEFT, padx=3)
         # drop-down portion of Graphics menu
         me1 = Menu(self.cmd_backup)
-        me2=Menu(me1)
+        me2 = Menu(me1)
         me2.add_command(label='All Files.txt', underline=0, font=('Times 12'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.allFilesBackup)
@@ -1108,7 +1108,7 @@ class Application(Frame):
     """
     def __init__(self, boss=None):
         Frame.__init__(self, borderwidth=5, bg='RoyalBlue4', padx=20, pady=20, relief=GROOVE)
-        self.master.title('Heal-Track Developed by ko@l@tr33 - 2020')
+        self.master.title('Time-Track Developed by ko@l@tr33 - 2020')
         self.mBar = MenuBar(self)
         self.mBar.pack(side=TOP, fill=X, expand=YES)
 
@@ -1123,6 +1123,7 @@ class Application(Frame):
         self.clock_label = Label(self, text="", font=('Times New Roman', 18, 'bold'),
             fg='snow', bg='RoyalBlue3', padx=560)
         self.clock_label.pack(side=TOP)
+        # Read python - tkinter - self.master.Tk.call(func()) in effbot
         self.clock_label.bind(self.display_time())
 
         # Insertion of picture

@@ -24,7 +24,7 @@ import shutil
 
 
 gui = Tk()
-gui.title('BMI calculator')
+gui.title('Time-Track')
 gui.configure(background='RoyalBlue4')
 
 labelTitle = Label(gui, text="BMI calculator", font='Arial 18 bold', 
@@ -35,20 +35,20 @@ textDate = Label(gui, text="Date : ",
     font=18, width=20, fg='cyan', bg='RoyalBlue4', anchor='e')
 textDate.grid(row=1, column=1)
 
-textHour = Label(gui, text="Heure : ",
+textHour = Label(gui, text="Hour : ",
     font=18, width=20, fg='cyan', bg='RoyalBlue4', anchor='e')
 textHour.grid(row=2, column=1)
 
-textName = Label(gui, text="Nom du patient : ",
+textName = Label(gui, text="Patient Name : ",
     font=18, width=20, fg='cyan', bg='RoyalBlue4', anchor='e')
 textName.grid(row=3, column=1)
 
-labelNum1 = Label(gui, text="Entrez le poids en Kg : ",
-    font=18, width=20, fg='cyan', bg='RoyalBlue4', anchor='e')
+labelNum1 = Label(gui, text="Enter Weight (in kg) : ",
+    font=14, width=20, fg='white', bg='RoyalBlue4', anchor='e')
 labelNum1.grid(row=4, column=1)
 
-labelNum2 = Label(gui, text="Entrez la taille en M : ",
-    font=18, width=20, fg='cyan', bg='RoyalBlue4', anchor='e')
+labelNum2 = Label(gui, text="Enter Height (in m) : ",
+    font=14, width=20, fg='white', bg='RoyalBlue4', anchor='e')
 labelNum2.grid(row=5, column=1)
 
 def call_result(textBox, number1, number2):
@@ -218,23 +218,20 @@ with open('./newpatient/entryfile3.txt', 'r') as filename:
 
 textName = Entry(gui)
 name_text = StringVar()
-textName = Entry(textvariable=name_text, highlightbackground='gray', bd=4)
+textName = Entry(textvariable=name_text,
+    highlightbackground='gray', bd=4)
 name_text.set(line1)
 textName.grid(row=3, column=2, padx=10)
 
 number1 = StringVar()
-
-entryNum1 = Entry(gui)
-number1 = StringVar()
-entryNum1 = Entry(gui, textvariable=number1, highlightbackground='gray', bd=4)
-entryNum1.grid(row=4, column=2, padx=10)
+entryNum1 = Entry(gui, textvariable=number1, width=6,
+    highlightbackground='gray', bd=3)
+entryNum1.grid(sticky='w', row=4, column=2, padx=10)
 
 number2 = StringVar()
-
-entryNum2 = Entry(gui)
-number2 = StringVar()
-entryNum2 = Entry(gui, textvariable=number2, highlightbackground='gray', bd=4)
-entryNum2.grid(row=5, column=2, padx=10)
+entryNum2 = Entry(gui, textvariable=number2, width=6,
+    highlightbackground='gray', bd=3)
+entryNum2.grid(sticky='w', row=5, column=2, padx=10)
 
 textBox = Text(gui, height=3, width=30, font=12, relief=SUNKEN)
 textBox.grid(row=6, column=1, columnspan=2, padx=10, pady=10)

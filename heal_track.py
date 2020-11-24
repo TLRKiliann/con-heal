@@ -1246,8 +1246,8 @@ class Application(Frame):
             and how to use app
         """
         self.can.delete(ALL)
-        self.photo=PhotoImage(file='./syno_gif/pyt.gif')
-        self.item=self.can.create_image(700, 400, image=self.photo)
+        self.photo=PhotoImage(file='./syno_gif/pyt2.gif')
+        self.item=self.can.create_image(625, 350, image=self.photo)
         self.can.create_text(500, 20, anchor=NW,
             text="- MAPAPP -\n\n"
 

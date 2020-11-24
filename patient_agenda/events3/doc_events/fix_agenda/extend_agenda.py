@@ -45,7 +45,7 @@ def callRefresh():
     textBox.delete('2.13', END)
     textBox.update()
     textBox.insert('2.14', entrimehour.get() + \
-        ' --- RDV --- fixed !\n')
+        ' <--- RDV --- fixed !\n')
 
 hourentr = IntVar()
 entrimehour = Entry(fen, textvariable=hourentr, width=5, 

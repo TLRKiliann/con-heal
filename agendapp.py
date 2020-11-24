@@ -180,8 +180,8 @@ def dispAgBox():
                                                     print("+ It is magicword : ")
                                                     print(line[0:10])
                                                     write_f = open(os.path.join(path, file), 'w')
-                                                    write_f.write("Rdv past-->" + lines[i] + \
-                                                        lines[i+1] + "\n")
+                                                    write_f.write("Rdv past-->" + lines[i+1] + \
+                                                        lines[i+2] + "\n")
                                                     print("Modification finish")
                                                     break
                                                 else:

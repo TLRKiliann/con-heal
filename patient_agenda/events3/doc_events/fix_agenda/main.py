@@ -13,7 +13,7 @@ from itertools import *
 
 
 gui = Tk()
-gui.title("Time Track")
+gui.title("Time-Track")
 gui.configure(background='cyan')
 
 top = Frame(gui, bg='cyan')

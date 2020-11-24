@@ -12,7 +12,7 @@ from tkinter import messagebox
 
 
 fen = Tk()
-fen.title("Time Track")
+fen.title("Time-Track")
 fen.configure(background='cyan')
 
 # To place side by side labelo + entrylab

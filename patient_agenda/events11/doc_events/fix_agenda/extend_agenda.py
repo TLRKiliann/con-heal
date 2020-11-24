@@ -12,27 +12,52 @@ from tkinter import messagebox
 
 
 fen = Tk()
-fen.title("Agenda")
+fen.title("Time-Track")
 fen.configure(background='cyan')
 
 # To place side by side labelo + entrylab
 top = Frame(fen, bg='cyan')
+top2 = Frame(fen, bg='cyan3')
 bottom = Frame(fen, bg='cyan')
 top.pack(side=TOP)
+top2.pack(side=TOP)
 bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
 
 labelo = Label(fen, text="Agenda",
     font='Arial 18 bold',
     fg='navy', bg='cyan')
-labelo.pack(in_=top, side=LEFT, padx=5, pady=20)
+labelo.pack(in_=top, side=LEFT, pady=10)
 
 with open('./newpatient/entryfile11.txt', 'r') as filename:
     line1 = filename.readline()
 
 textname = StringVar()
-entryName = Entry(fen, textvariable=textname)
+entryName = Entry(fen, textvariable=textname, width=20, 
+    highlightbackground='grey', bd=3)
 textname.set(line1)
-entryName.pack(in_=top, side=LEFT, padx=10, pady=20)
+entryName.pack(in_=top, side=LEFT, padx=10, pady=5)
+
+labelhour = Label(fen, text="Appointment time : ",
+    font='Arial 14 bold', fg='RoyalBlue4', bg='cyan')
+labelhour.pack(in_=top2, side=LEFT, padx=10, pady=10)
+
+def callRefresh():
+    textBox.delete('2.13', END)
+    textBox.update()
+    textBox.insert('2.14', entrimehour.get() + \
+        ' <--- RDV --- fixed !\n')
+
+hourentr = IntVar()
+entrimehour = Entry(fen, textvariable=hourentr, width=5, 
+    highlightbackground='grey', bd=3)
+hourentr.set("00:00")
+entrimehour.pack(in_=top2, side=LEFT, pady=10)
+
+buttonhour = Button(fen, text="Enter", width=8, bd=3,
+    fg="white", bg="RoyalBlue3",
+    highlightbackground='light sky blue',
+    activebackground='dark turquoise', command=callRefresh)
+buttonhour.pack(in_=top2, side=LEFT, padx=10, pady=10)
 
 def importationFile(fichier):
     file = open(fichier, 'r')
@@ -43,6 +68,8 @@ def importationFile(fichier):
         textBox.insert(END, '\n')
         textBox.delete('2.0')
         textBox.delete('end-3c')
+        textBox.insert('2.14', 'Change time and press enter !')
+        textBox.insert('3.0', "(Don't use more than 2 lines for writting !)")
         textBox.update()
 
 def retrieve_input():
@@ -61,7 +88,6 @@ def retrieve_input():
     # Create the directory 
     # 'agenda_saved' in 
     # './patient_agenda/events11/doc_events/fix_agenda' 
-
     topath = './patient_agenda/events11/doc_events/'\
     'fix_agenda/agenda_saved'
 
@@ -108,10 +134,10 @@ def messFromSafeButt():
         textBox.insert(INSERT, "\n---Data saved !---")
         print("+ Data saved !")
     else:
-        textBox.insert(INSERT, "Nothing has been saved !")
+        textBox.insert(INSERT, "\n---Nothing has been saved !---")
         print("+ Nothing has been saved !")
 
-def lectureFic():
+def readerFile():
     """
         To read file, app open
         file fixed rdv to read on it.
@@ -129,7 +155,7 @@ def changeText():
 textBox = Text(fen, height=15, width=60, font=18)
 textBox.insert(INSERT, "Fixed on : ")
 textBox.insert(END, time.strftime("%d/%m/%Y, %H:%M:%S") + ' :\n')
-textBox.pack(padx=30, pady=30)
+textBox.pack(in_=bottom, padx=30, pady=10)
 
 try:
     if os.path.getsize('./patient_agenda/events11/doc_events/'\
@@ -144,21 +170,21 @@ except FileNotFoundError as nf_file:
 buttonSave = Button(fen, text="Save", width=8, bd=3,
     fg='yellow', bg='RoyalBlue3',activebackground='dark turquoise',
     highlightbackground='light sky blue', command=messFromSafeButt)
-buttonSave.pack(side='left', padx=10, pady=10)
+buttonSave.pack(in_=bottom, side=LEFT, padx=10, pady=10)
 
 buttonRead = Button(fen, text="Read", width=8, bd=3,
     fg='cyan', bg='RoyalBlue3', activebackground='dark turquoise',
-    highlightbackground='light sky blue', command=lectureFic)
-buttonRead.pack(side='left', padx=10, pady=10)
+    highlightbackground='light sky blue', command=readerFile)
+buttonRead.pack(in_=bottom, side=LEFT, padx=10, pady=10)
 
 buttonDel = Button(fen, text="Modify RDV", width=10, bd=3,
     fg='cyan', bg='RoyalBlue3', highlightbackground='light sky blue',
     activebackground='dark turquoise', command=changeText)
-buttonDel.pack(side='left', padx=10, pady=10)
+buttonDel.pack(in_=bottom, side=LEFT, padx=10, pady=10)
 
 buttonClose = Button(fen, text="Quit", width=8, bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
     activebackground='dark turquoise', command=quit)
-buttonClose.pack(side='right', padx=10, pady=10)
+buttonClose.pack(in_=bottom, side=RIGHT, padx=10, pady=10)
 
 fen.mainloop()

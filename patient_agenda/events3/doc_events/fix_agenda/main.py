@@ -13,7 +13,7 @@ from itertools import *
 
 
 gui = Tk()
-gui.title("Save changes !")
+gui.title("Time Track")
 gui.configure(background='cyan')
 
 top = Frame(gui, bg='cyan')
@@ -80,9 +80,9 @@ labelhour = Label(gui, text='Hour : ',
 labelhour.pack(in_=top2, side=LEFT, padx=10, pady=10)
 
 hour_var = IntVar()
-reachHour = Entry(gui, textvariable=hour_var, width=8,
+reachHour = Entry(gui, textvariable=hour_var, width=5,
     highlightbackground='grey', bd=3)
-hour_var.set('00:00:00')
+hour_var.set('00:00')
 reachHour.pack(in_=top2, side=LEFT, pady=10)
 
 buttonSearch = Button(gui, text='Search', width=8, bd=3,

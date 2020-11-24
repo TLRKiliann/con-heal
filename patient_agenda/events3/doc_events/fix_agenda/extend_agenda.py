@@ -12,7 +12,7 @@ from tkinter import messagebox
 
 
 fen = Tk()
-fen.title("Agenda")
+fen.title("Time Track")
 fen.configure(background='cyan')
 
 # To place side by side labelo + entrylab
@@ -44,12 +44,13 @@ labelhour.pack(in_=top2, side=LEFT, padx=10, pady=10)
 def callRefresh():
     textBox.delete('2.13', END)
     textBox.update()
-    textBox.insert('2.14', entrimehour.get() + '\n')
+    textBox.insert('2.14', entrimehour.get() + \
+        ' --- RDV --- fixed !\n')
 
 hourentr = IntVar()
-entrimehour = Entry(fen, textvariable=hourentr, width=8, 
+entrimehour = Entry(fen, textvariable=hourentr, width=5, 
     highlightbackground='grey', bd=3)
-hourentr.set("00:00:00")
+hourentr.set("00:00")
 entrimehour.pack(in_=top2, side=LEFT, pady=10)
 
 buttonhour = Button(fen, text="Enter", width=8, bd=3,

@@ -5,23 +5,25 @@
 from tkinter import *
 from tkinter import messagebox
 import os
-import json
+import posixpath
 
 
 fen=Tk()
-fen.title("RDV set up")
+fen.title("Time Track")
 fen.configure(background='cyan')
 
 # To place side by side labelo + entrylab
 top = Frame(fen, bg='cyan')
-top2 = Frame(fen, bg='cyan3')
+top2 = Frame(fen, bg='cyan')
 top3 = Frame(fen, bg='cyan3')
-top4 = Frame(fen, bg='cyan')
+top4 = Frame(fen, bg='cyan3')
+top5 = Frame(fen, bg='cyan')
 bottom = Frame(fen, bg='cyan')
 top.pack(side=TOP)
 top2.pack(side=TOP)
 top3.pack(side=TOP)
 top4.pack(side=TOP)
+top5.pack(side=TOP)
 bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
 
 labelo = Label(fen, text="Appointments",
@@ -35,12 +37,15 @@ textentry = StringVar()
 entrylab = Entry(fen, textvariable=textentry, width=20, 
     highlightbackground='grey', bd=3)
 textentry.set(line1)
-entrylab.pack(in_=top, side=LEFT, padx=10, pady=10)
+entrylab.pack(in_=top, side=RIGHT, padx=10, pady=10)
+
+textBox = Text(fen, height=20, width=60, font=18)
+textBox.pack(in_=top2, padx=30, pady=10)
 
 def janSearch():
     """
         To search by months and sort() date
-    
+    """
     for path, dirs, files in os.walk('./patient_agenda/'\
         'events3/doc_events/fix_agenda/agenda_saved/'):
         for file in files:
@@ -57,49 +62,13 @@ def janSearch():
                             textBox.insert(INSERT, lines[i+1])
                             textBox.insert(INSERT, lines[i+2])
                             textBox.insert(INSERT, '\n')
+                            print(lines[i])
                             break
-    """
-    fixed = 'Fixed on :'
-    tap = '01'
-    path= './patient_agenda/events3/doc_events/fix_agenda/agenda_saved/'
-    filepaths  = [os.path.join(path, file) for file in os.listdir(path)]
-    all_files = []
-    data = {}
-    data['restlst'] = []
-    for path in filepaths:
-        with open(path, 'r') as f:
-            file = f.readlines()
-            all_files.append(file)
-            x=0
-            data['restlst'].append({'Date' : all_files})
-            with open("./patient_agenda/events3/doc_events/fix_agenda/fuck_f.json", "w") as out_file:
-                json.dump(data, out_file, indent = 4)
-
-    try:
-        with open('./patient_agenda/events3/doc_events/fix_agenda/fuck_f.json') as file:
-            data=json.loads(file)
-    except FileNotFoundError as fileout:
-        print("File 3 patient_rdv.json not created", fileout)
-
-
-    for key, value in data.items():
-        print("Date: " + str(value[0]['Date']))
-    """
-    data_list1 = []
-    for value in zip(value):
-        data_list1.append(value)
-        #print(data_list1)
-
-    data_list2 = []
-    for key, value in data.items():
-        for i in value[0]:
-            print(i)
-    """
 
 buttonJan = Button(fen, text="Jan", font='Arial 12 bold', bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
     activebackground='dark turquoise', command=janSearch)
-buttonJan.pack(in_=top2, side=LEFT, padx=10, pady=10)
+buttonJan.pack(in_=top3, side=LEFT, padx=10, pady=10)
 
 def febSearch():
     for path, dirs, files in os.walk('./patient_agenda/'\
@@ -124,7 +93,7 @@ buttonFeb = Button(fen, text="Feb", font='Arial 12 bold', bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
     activebackground='dark turquoise',
     command=febSearch)
-buttonFeb.pack(in_=top2, side=LEFT, padx=10, pady=10)
+buttonFeb.pack(in_=top3, side=LEFT, padx=10, pady=10)
 
 def marSearch():
     for path, dirs, files in os.walk('./patient_agenda/'\
@@ -149,7 +118,7 @@ buttonMar = Button(fen, text="Mar", font='Arial 12 bold', bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
     activebackground='dark turquoise',
     command=marSearch)
-buttonMar.pack(in_=top2, side=LEFT, padx=10, pady=10)
+buttonMar.pack(in_=top3, side=LEFT, padx=10, pady=10)
 
 def avrSearch():
     for path, dirs, files in os.walk('./patient_agenda/'\
@@ -174,7 +143,7 @@ buttonAvr = Button(fen, text="Avr", font='Arial 12 bold', bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
     activebackground='dark turquoise',
     command=avrSearch)
-buttonAvr.pack(in_=top2, side=LEFT, padx=10, pady=10)
+buttonAvr.pack(in_=top3, side=LEFT, padx=10, pady=10)
 
 def maiSearch():
     for path, dirs, files in os.walk('./patient_agenda/'\
@@ -199,7 +168,7 @@ buttonMay = Button(fen, text="May", font='Arial 12 bold', bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
     activebackground='dark turquoise',
     command=maiSearch)
-buttonMay.pack(in_=top2, side=LEFT, padx=10, pady=10)
+buttonMay.pack(in_=top3, side=LEFT, padx=10, pady=10)
 
 def junSearch():
     for path, dirs, files in os.walk('./patient_agenda/'\
@@ -224,7 +193,7 @@ buttonJun = Button(fen, text="Jun", font='Arial 12 bold', bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
     activebackground='dark turquoise',
     command=junSearch)
-buttonJun.pack(in_=top2, side=LEFT, padx=10, pady=10)
+buttonJun.pack(in_=top3, side=LEFT, padx=10, pady=10)
 
 def julSearch():
     for path, dirs, files in os.walk('./patient_agenda/'\
@@ -249,7 +218,7 @@ buttonJul = Button(fen, text="Jul", font='Arial 12 bold', bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
     activebackground='dark turquoise',
     command=julSearch)
-buttonJul.pack(in_=top3, side=LEFT, padx=10, pady=10)
+buttonJul.pack(in_=top4, side=LEFT, padx=10, pady=10)
 
 def augSearch():
     for path, dirs, files in os.walk('./patient_agenda/'\
@@ -274,7 +243,7 @@ buttonAug = Button(fen, text="Aug", font='Arial 12 bold', bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
     activebackground='dark turquoise',
     command=augSearch)
-buttonAug.pack(in_=top3, side=LEFT, padx=10, pady=10)
+buttonAug.pack(in_=top4, side=LEFT, padx=10, pady=10)
 
 def sepSearch():
     for path, dirs, files in os.walk('./patient_agenda/'\
@@ -299,7 +268,7 @@ buttonSep = Button(fen, text="Sep", font='Arial 12 bold', bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
     activebackground='dark turquoise',
     command=sepSearch)
-buttonSep.pack(in_=top3, side=LEFT, padx=10, pady=10)
+buttonSep.pack(in_=top4, side=LEFT, padx=10, pady=10)
 
 def octSearch():
     for path, dirs, files in os.walk('./patient_agenda/'\
@@ -324,7 +293,7 @@ buttonOct = Button(fen, text="Oct", font='Arial 12 bold', bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
     activebackground='dark turquoise',
     command=octSearch)
-buttonOct.pack(in_=top3, side=LEFT, padx=10, pady=10)
+buttonOct.pack(in_=top4, side=LEFT, padx=10, pady=10)
 
 def novSearch():
     for path, dirs, files in os.walk('./patient_agenda/'\
@@ -349,7 +318,7 @@ buttonNov = Button(fen, text="Nov", font='Arial 12 bold', bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
     activebackground='dark turquoise',
     command=novSearch)
-buttonNov.pack(in_=top3, side=LEFT, padx=10, pady=10)
+buttonNov.pack(in_=top4, side=LEFT, padx=10, pady=10)
 
 def decSearch():
     for path, dirs, files in os.walk('./patient_agenda/'\
@@ -374,7 +343,7 @@ buttonDec = Button(fen, text="Dec", font='Arial 12 bold', bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
     activebackground='dark turquoise',
     command=decSearch)
-buttonDec.pack(in_=top3, side=LEFT, padx=10, pady=10)
+buttonDec.pack(in_=top4, side=LEFT, padx=10, pady=10)
 
 def clearTextbox():
     textBox.delete('0.0', "end-1c")
@@ -383,7 +352,7 @@ buttonClear = Button(fen, text="Clear", font='Arial 12 bold',
     width=50, bd=3, fg='white', bg='RoyalBlue3',
     highlightbackground='light sky blue',
     activebackground='dark turquoise', command = clearTextbox)
-buttonClear.pack(in_=top4, side=LEFT, padx=20, pady=10)
+buttonClear.pack(in_=top5, padx=10, pady=10)
 
 def msgBox():
     messagebox.showwarning('WARNING',
@@ -400,20 +369,11 @@ def importFilesFromDir():
                 li.replace('}', '')
                 textBox.insert(END, li)
 
-textBox = Text(fen, height=20, width=60, font=18)
-textBox.pack(in_=bottom, padx=30, pady=10)
-
 try:
     importFilesFromDir()
 except OSError as io_err:
     print("+ Error for calling function !")
     print(io_err)
     msgBox()
-
-buttonClose = Button(fen, text="Quit", width=8, bd=3,
-    fg='white', bg='RoyalBlue3',
-    highlightbackground='light sky blue',
-    activebackground='dark turquoise', command=quit)
-buttonClose.pack(in_=bottom, side=RIGHT, padx=30, pady=10)
 
 fen.mainloop()

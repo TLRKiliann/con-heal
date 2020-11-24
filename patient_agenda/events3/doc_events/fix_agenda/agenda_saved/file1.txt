@@ -1,5 +1,5 @@
-Fixed on : 21/11/2020, 09:54:11 :
-18/01/2021 : 11:00:00
-test 1 for fun and to see something
-test 2 for the lines in text
+Fixed on : 24/11/2020, 02:49:47 :
+27/01/2021 : 11:00 --- RDV --- fixed !
+test 1 -ok
+test 2 -ok
 

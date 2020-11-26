@@ -161,7 +161,7 @@ def viewGraphicKilo():
         messagebox.showinfo('INFO', 'Kg file not found !')
 
 def readBmi():
-    subprocess.run('./calBmi/bmi_read3.py', check=True)
+    subprocess.run('./calBmi/bmi_read16.py', check=True)
 
 def buttdel():
     """

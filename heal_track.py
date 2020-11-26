@@ -36,7 +36,7 @@ class MenuBar(Frame):
     def __init__(self, boss=None):
         Frame.__init__(self, borderwidth=5, bg='RoyalBlue3', padx=0)
         # 1st menu
-        fileMenu = Menubutton(self, text='Menu', fg='white',
+        self.fileMenu = Menubutton(self, text='Menu', fg='white',
             font=("Times 14"), bg='grey30', relief=GROOVE)
         new_text=StringVar()
         new_text2=StringVar()
@@ -232,9 +232,9 @@ class MenuBar(Frame):
         except FileNotFoundError as fileout24:
             print("No file entryfile24.txt exist", fileout24)
 
-        fileMenu.pack(side=LEFT, padx=3)
+        self.fileMenu.pack(side=LEFT, padx=3)
         # Partie déroulante du menu 1st
-        me1 = Menu(fileMenu, tearoff=0)
+        me1 = Menu(self.fileMenu, tearoff=0)
         me1.add_command(label='Accueil', underline=0, font=("Times 14 bold"),
             background='black',activebackground='aquamarine',
             foreground='aquamarine', activeforeground='black',
@@ -260,90 +260,90 @@ class MenuBar(Frame):
             foreground='red', activeforeground='white',
             command=boss.msgExit)
         # Integration of 1st menu
-        fileMenu.configure(activeforeground='black', activebackground='cyan',
+        self.fileMenu.configure(activeforeground='black', activebackground='cyan',
             menu=me1)
 
         # Agenda menu
         self.cmd_agenda = Menubutton(self, text='Agenda', font=("Times 14"),
             fg='cyan', bg='grey30', relief=GROOVE)
         self.cmd_agenda.pack(side=LEFT, padx=3)
-        me3 = Menu(self.cmd_agenda)
+        self.me3 = Menu(self.cmd_agenda)
         # Partie déroulante du menu agenda
-        me3.add_command(label=new_text, font=('Times 12'), background='black',
+        self.me3.add_command(label=new_text, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda)
-        me3.add_command(label=new_text2, font=('Times 12'), background='black',
+        self.me3.add_command(label=new_text2, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda2)
-        me3.add_command(label=new_text3, font=('Times 12'), background='black',
+        self.me3.add_command(label=new_text3, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda3)
-        me3.add_command(label=new_text4, font=('Times 12'), background='black',
+        self.me3.add_command(label=new_text4, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda4)
-        me3.add_command(label=new_text5, font=('Times 12'), background='black',
+        self.me3.add_command(label=new_text5, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda5)
-        me3.add_command(label=new_text6, font=('Times 12'), background='black',
+        self.me3.add_command(label=new_text6, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda6)
-        me3.add_command(label=new_text7, font=('Times 12'), background='black',
+        self.me3.add_command(label=new_text7, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda7)
-        me3.add_command(label=new_text8, font=('Times 12'), background='black',
+        self.me3.add_command(label=new_text8, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda8)
-        me3.add_command(label=new_text9, font=('Times 12'), background='black',
+        self.me3.add_command(label=new_text9, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda9)
-        me3.add_command(label=new_text10, font=('Times 12'), background='black',
+        self.me3.add_command(label=new_text10, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda10)
-        me3.add_command(label=new_text11, font=('Times 12'), background='black',
+        self.me3.add_command(label=new_text11, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda11)
-        me3.add_command(label=new_text12, font=('Times 12'), background='black',
+        self.me3.add_command(label=new_text12, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda12)
-        me3.add_command(label=new_text13, font=('Times 12'), background='black',
+        self.me3.add_command(label=new_text13, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda13)
-        me3.add_command(label=new_text14, font=('Times 12'), background='black',
+        self.me3.add_command(label=new_text14, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda14)
-        me3.add_command(label=new_text15, font=('Times 12'), background='black',
+        self.me3.add_command(label=new_text15, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda15)
-        me3.add_command(label=new_text16, font=('Times 12'), background='black',
+        self.me3.add_command(label=new_text16, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda16)
-        me3.add_command(label=new_text17, font=('Times 12'), background='black',
+        self.me3.add_command(label=new_text17, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda17)
-        me3.add_command(label=new_text18, font=('Times 12'), background='black',
+        self.me3.add_command(label=new_text18, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda18)
-        me3.add_command(label=new_text19, font=('Times 12'), background='black',
+        self.me3.add_command(label=new_text19, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda19)
-        me3.add_command(label=new_text20, font=('Times 12'), background='black',
+        self.me3.add_command(label=new_text20, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda20)
-        me3.add_command(label=new_text21, font=('Times 12'), background='black',
+        self.me3.add_command(label=new_text21, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda21)
-        me3.add_command(label=new_text22, font=('Times 12'), background='black',
+        self.me3.add_command(label=new_text22, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda22)
-        me3.add_command(label=new_text23, font=('Times 12'), background='black',
+        self.me3.add_command(label=new_text23, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda23)
-        me3.add_command(label=new_text24, font=('Times 12'), background='black',
+        self.me3.add_command(label=new_text24, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda24)
         # Integration of agenda menu
         self.cmd_agenda.configure(activeforeground='black', activebackground='cyan',
-            menu=me3)
+            menu=self.me3)
 
         # 14 besoins menu
         self.cmd_Besoins = Menubutton(self, text='14 Needs', font=("Times 14"),
@@ -2148,10 +2148,11 @@ class Application(Frame):
             data from patcaps.py !
         """
         try:
+            # A tester !!!
+            #self.mBar = MenuBar(self)
             self.showPatients()
-            self.mBar
-        except:
-            print("Error --")
+        except (OSError, ValueError) as p_out:
+            print("Error --", p_out)
 
 if __name__=='__main__':
     app = Application()

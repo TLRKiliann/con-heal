@@ -26,7 +26,7 @@ def callResident(self):
     self.mBar.meTtt.update()
     self.mBar.meBmi.update()
     self.mBar.meVmed.update()
-    self.mePrint.update()
+    self.mBar.mePrint.update()
 
     self.can.delete(ALL)
     self.can.configure(background='DodgerBlue2')

@@ -49,7 +49,7 @@ class TrackDB(Frame):
         Frame.__init__(self, borderwidth=5, bg='RoyalBlue4', padx=20, pady=20, relief=GROOVE)
         self.master.title('Heal-Track Developed by ko@l@tr33 - 2020')
         # ScrollCanvas limite de la zone à parcourir avec la barre
-        self.can = Canvas(self, width=1250, height=800, bg='RoyalBlue2')
+        self.can = Canvas(self, width=1250, height=800, bg='white')
         self.frame = Frame(self.can)
         self.vsb = Scrollbar(self, orient=VERTICAL, command=self.can.yview)
         self.can.configure(yscrollcommand=self.vsb.set)
@@ -78,7 +78,7 @@ class TrackDB(Frame):
                 sqlCon.commit()
             sqlCon.close()
 
-        self.student_records=ttk.Treeview(self.can, height=24,columns=("stdid", 
+        self.student_records=ttk.Treeview(self.can, height=24, columns=("stdid", 
             "firstname", "surname", "birth", "allergy", "disease", "maindiagnostic"))
 
         self.student_records.heading("stdid", text="ID")

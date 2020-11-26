@@ -31,37 +31,37 @@ class ScrollCanvas(Frame):
 
 class MenuBar(Frame):
     """
-        Menu down
+        Wrapp down
     """
     def __init__(self, boss=None):
         Frame.__init__(self, borderwidth=5, bg='RoyalBlue3', padx=0)
         # 1st menu
         self.fileMenu = Menubutton(self, text='Menu', fg='white',
             font=("Times 14"), bg='grey30', relief=GROOVE)
-        new_text=StringVar()
-        new_text2=StringVar()
-        new_text3=StringVar()
-        new_text4=StringVar()
-        new_text5=StringVar()
-        new_text6=StringVar()
-        new_text7=StringVar()
-        new_text8=StringVar()
-        new_text9=StringVar()
-        new_text10=StringVar()
-        new_text11=StringVar()
-        new_text12=StringVar()
-        new_text13=StringVar()
-        new_text14=StringVar()
-        new_text15=StringVar()
-        new_text16=StringVar()
-        new_text17=StringVar()
-        new_text18=StringVar()
-        new_text19=StringVar()
-        new_text20=StringVar()
-        new_text21=StringVar()
-        new_text22=StringVar()
-        new_text23=StringVar()
-        new_text24=StringVar()
+        new_text = StringVar()
+        new_text2 = StringVar()
+        new_text3 = StringVar()
+        new_text4 = StringVar()
+        new_text5 = StringVar()
+        new_text6 = StringVar()
+        new_text7 = StringVar()
+        new_text8 = StringVar()
+        new_text9 = StringVar()
+        new_text10 = StringVar()
+        new_text11 = StringVar()
+        new_text12 = StringVar()
+        new_text13 = StringVar()
+        new_text14 = StringVar()
+        new_text15 = StringVar()
+        new_text16 = StringVar()
+        new_text17 = StringVar()
+        new_text18 = StringVar()
+        new_text19 = StringVar()
+        new_text20 = StringVar()
+        new_text21 = StringVar()
+        new_text22 = StringVar()
+        new_text23 = StringVar()
+        new_text24 = StringVar()
 
         # For label below (in me2.add_command)
         try:
@@ -1192,10 +1192,8 @@ class Application(Frame):
             re-enter id and passwd
         """
         try:
-            self.mBar.destroy()
             self.master.destroy()
             Application()
-            self.mBar
             #Application.__init__(self)
         except (OSError, ValueError) as two_err:
             print("OS or Val error", two_err)
@@ -1309,6 +1307,7 @@ class Application(Frame):
         """
             To call func in patcaps.py
         """
+        self.mBar
         callResident(self)
 
     def callPatient1(self):
@@ -2151,8 +2150,9 @@ class Application(Frame):
         """
         try:
             # A tester !!!
-            #self.mBar = MenuBar(self)
+            self.mBar.destroy()
             self.showPatients()
+            #self.mBar=MenuBar(self)
         except (OSError, ValueError) as p_out:
             print("Error --", p_out)
 

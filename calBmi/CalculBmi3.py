@@ -43,11 +43,11 @@ textName = Label(gui, text="Patient Name : ",
     font=18, width=20, fg='cyan', bg='RoyalBlue4', anchor='e')
 textName.grid(row=3, column=1)
 
-labelNum1 = Label(gui, text="Enter Weight (in kg) : ",
+labelNum1 = Label(gui, text="Enter Weight (Kg) : ",
     font=14, width=20, fg='white', bg='RoyalBlue4', anchor='e')
 labelNum1.grid(row=4, column=1)
 
-labelNum2 = Label(gui, text="Enter Height (in m) : ",
+labelNum2 = Label(gui, text="Enter Height (M) : ",
     font=14, width=20, fg='white', bg='RoyalBlue4', anchor='e')
 labelNum2.grid(row=5, column=1)
 
@@ -216,9 +216,8 @@ textHour.grid(row=2, column=2, padx=10)
 with open('./newpatient/entryfile3.txt', 'r') as filename:
     line1=filename.readline()
 
-textName = Entry(gui)
 name_text = StringVar()
-textName = Entry(textvariable=name_text,
+textName = Entry(gui, textvariable=name_text,
     highlightbackground='gray', bd=4)
 name_text.set(line1)
 textName.grid(row=3, column=2, padx=10)

@@ -452,7 +452,7 @@ def noStory():
         no ttt has been introduced !") 
 
 app = tk.Tk()
-app.title("Introduction of treatements (ttt)")
+app.title("Time-Track")
 app.configure(bg='RoyalBlue4')
 
 textLab = tk.Label(app, text="Introduction of treatement (ttt)",

@@ -348,6 +348,112 @@ class MenuBar(Frame):
             menu=me3)
 
         # 14 besoins menu
+        contact = Menubutton(self, text='14 Needs', font=("Times 14"),
+            fg='cyan', bg='grey30', relief=GROOVE)
+        contact.pack(side=LEFT, padx=3)
+        # Partie déroulante du menu 14b
+        contchck = Menu(contact)
+        contchck.add_command(label=new_text, font=('Times 12'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.contact_num1)
+        #contchck.add_separator()
+        contchck.add_command(label=new_text2, font=('Times 12'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.contact_num2)
+        #contchck.add_separator()
+        contchck.add_command(label=new_text3, font=('Times 12'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.contact_num3)
+        #contchck.add_separator()
+        contchck.add_command(label=new_text4, font=('Times 12'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.contact_num4)
+        #contchck.add_separator()
+        contchck.add_command(label=new_text5, font=('Times 12'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.contact_num5)
+        #contchck.add_separator()
+        contchck.add_command(label=new_text6, font=('Times 12'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.contact_num6)
+        #contchck.add_separator()
+        contchck.add_command(label=new_text7, font=('Times 12'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.contact_num7)
+        #contchck.add_separator()
+        contchck.add_command(label=new_text8, font=('Times 12'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.contact_num8)
+        #contchck.add_separator()
+        contchck.add_command(label=new_text9, font=('Times 12'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.contact_num9)
+        #contchck.add_separator()
+        contchck.add_command(label=new_text10, font=('Times 12'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.contact_num10)
+        #contchck.add_separator()
+        contchck.add_command(label=new_text11, font=('Times 12'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.contact_num11)
+        #contchck.add_separator()
+        contchck.add_command(label=new_text12, font=('Times 12'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.contact_num12)
+        #contchck.add_separator()
+        contchck.add_command(label=new_text13, font=('Times 12'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.contact_num13)
+        #contchck.add_separator()
+        contchck.add_command(label=new_text14, font=('Times 12'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.contact_num14)
+        #contchck.add_separator()
+        contchck.add_command(label=new_text15, font=('Times 12'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.contact_num15)
+        #contchck.add_separator()
+        contchck.add_command(label=new_text16, font=('Times 12'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.contact_num16)
+        #contchck.add_separator()
+        contchck.add_command(label=new_text17, font=('Times 12'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.contact_num17)
+        #contchck.add_separator()
+        contchck.add_command(label=new_text18, font=('Times 12'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.contact_num18)
+        #contchck.add_separator()
+        contchck.add_command(label=new_text19, font=('Times 12'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.contact_num19)
+        #contchck.add_separator()
+        contchck.add_command(label=new_text20, font=('Times 12'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.contact_num20)
+        #contchck.add_separator()
+        contchck.add_command(label=new_text21, font=('Times 12'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.contact_num21)
+        #contchck.add_separator()
+        contchck.add_command(label=new_text22, font=('Times 12'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.contact_num22)
+        #contchck.add_separator()
+        contchck.add_command(label=new_text23, font=('Times 12'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.contact_num23)
+        #contchck.add_separator()
+        contchck.add_command(label=new_text24, font=('Times 12'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.contact_num24)
+        # Integration of 14b menu
+        contact.configure(activeforeground='black', activebackground='cyan',
+            menu=contchck)
+
+
+        # 14 besoins menu
         cmd_Besoins = Menubutton(self, text='14 Needs', font=("Times 14"),
             fg='cyan', bg='grey30', relief=GROOVE)
         cmd_Besoins.pack(side=LEFT, padx=3)
@@ -1409,6 +1515,79 @@ class Application(Frame):
 
     def patientAgenda24(self):
         subprocess.run('./patient_agenda/origin_agenda24.py', check=True)
+
+    # Contact
+    def contact_num1(self):
+        subprocess.run('./contact/pat_contact1.py', check=True)
+
+    def contact_num2(self):
+        subprocess.run('./contact/pat_contact2.py', check=True)
+
+    def contact_num3(self):
+        subprocess.run('./contact/pat_contact3.py', check=True)
+
+    def contact_num4(self):
+        subprocess.run('./contact/pat_contact4.py', check=True)
+
+    def contact_num5(self):
+        subprocess.run('./contact/pat_contact5.py', check=True)
+
+    def contact_num6(self):
+        subprocess.run('./contact/pat_contact6.py', check=True)
+
+    def contact_num7(self):
+        subprocess.run('./contact/pat_contact7.py', check=True)
+
+    def contact_num8(self):
+        subprocess.run('./contact/pat_contact8.py', check=True)
+
+    def contact_num9(self):
+        subprocess.run('./contact/pat_contact9.py', check=True)
+
+    def contact_num10(self):
+        subprocess.run('./contact/pat_contact10.py', check=True)
+
+    def contact_num11(self):
+        subprocess.run('./contact/pat_contact11.py', check=True)
+
+    def contact_num12(self):
+        subprocess.run('./contact/pat_contact12.py', check=True)
+
+    def contact_num13(self):
+        subprocess.run('./contact/pat_contact13.py', check=True)
+
+    def contact_num14(self):
+        subprocess.run('./contact/pat_contact14.py', check=True)
+
+    def contact_num15(self):
+        subprocess.run('./contact/pat_contact15.py', check=True)
+
+    def contact_num16(self):
+        subprocess.run('./contact/pat_contact16.py', check=True)
+
+    def contact_num17(self):
+        subprocess.run('./contact/pat_contact17.py', check=True)
+
+    def contact_num18(self):
+        subprocess.run('./contact/pat_contact18.py', check=True)
+
+    def contact_num19(self):
+        subprocess.run('./contact/pat_contact19.py', check=True)
+
+    def contact_num20(self):
+        subprocess.run('./contact/pat_contact20.py', check=True)
+
+    def contact_num21(self):
+        subprocess.run('./contact/pat_contact21.py', check=True)
+
+    def contact_num22(self):
+        subprocess.run('./contact/pat_contact22.py', check=True)
+
+    def contact_num23(self):
+        subprocess.run('./contact/pat_contact23.py', check=True)
+
+    def contact_num24(self):
+        subprocess.run('./contact/pat_contact24.py', check=True)
 
     # CheckBox 14 needs OK
     def besoinsCoche(self):

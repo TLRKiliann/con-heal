@@ -37,7 +37,7 @@ class MenuBar(Frame):
     def __init__(self, boss=None):
         Frame.__init__(self, borderwidth=5, bg='RoyalBlue3', padx=0)
         # 1st menu
-        self.fileMenu = Menubutton(self, text='Menu', fg='white',
+        fileMenu = Menubutton(self, text='Menu', fg='white',
             font=("Times 14"), bg='grey30', relief=GROOVE)
         new_text = StringVar()
         new_text2 = StringVar()
@@ -233,679 +233,679 @@ class MenuBar(Frame):
         except FileNotFoundError as fileout24:
             print("No file entryfile24.txt exist", fileout24)
 
-        self.fileMenu.pack(side=LEFT, padx=3)
+        fileMenu.pack(side=LEFT, padx=3)
         # Partie déroulante du menu 1st
-        self.me1 = Menu(self.fileMenu, tearoff=0)
-        self.me1.add_command(label='Intro', underline=0, font=("Times 14 bold"),
+        me1 = Menu(fileMenu, tearoff=0)
+        me1.add_command(label='Intro', underline=0, font=("Times 14 bold"),
             background='black',activebackground='aquamarine',
             foreground='aquamarine', activeforeground='black',
             command=boss.framShow)
-        self.me1.add_command(label="Textbox", underline=0, font=("Times 14 bold"),
+        me1.add_command(label="Textbox", underline=0, font=("Times 14 bold"),
             background='black', activebackground='cyan',
             foreground='aquamarine', activeforeground='black',
             command=boss.showSynopsis)
-        self.me1.add_command(label="Residents", underline=0, font=("Times 14 bold"),
+        me1.add_command(label="Residents", underline=0, font=("Times 14 bold"),
             background='black', activebackground='cyan',
             foreground='aquamarine', activeforeground='black',
             command=boss.showPatients)
-        self.me1.add_command(label='DataBase', underline=0, font=("Times 14 bold"),
+        me1.add_command(label='DataBase', underline=0, font=("Times 14 bold"),
             background='black', activebackground='aquamarine',
             foreground='white', activeforeground='black',
             command=boss.funcPyCon)
-        self.me1.add_command(label='MapApp', font=("Times 14 bold"),
+        me1.add_command(label='MapApp', font=("Times 14 bold"),
             background='black', activebackground='aquamarine',
             foreground='yellow', activeforeground='black',
             command=boss.instalpy)
-        self.me1.add_command(label='Quit', font=("Times 14 bold"),
+        me1.add_command(label='Quit', font=("Times 14 bold"),
             background='black', activebackground='red',
             foreground='red', activeforeground='white',
             command=boss.msgExit)
         # Integration of 1st menu
-        self.fileMenu.configure(activeforeground='black', activebackground='cyan',
-            menu=self.me1)
+        fileMenu.configure(activeforeground='black', activebackground='cyan',
+            menu=me1)
 
         # Agenda menu
-        self.cmd_agenda = Menubutton(self, text='Agenda', font=("Times 14"),
+        cmd_agenda = Menubutton(self, text='Agenda', font=("Times 14"),
             fg='cyan', bg='grey30', relief=GROOVE)
-        self.cmd_agenda.pack(side=LEFT, padx=3)
-        self.me3 = Menu(self.cmd_agenda)
+        cmd_agenda.pack(side=LEFT, padx=3)
+        me3 = Menu(cmd_agenda)
         # Partie déroulante du menu agenda
-        self.me3.add_command(label=new_text, font=('Times 12'), background='black',
+        me3.add_command(label=new_text, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda)
-        self.me3.add_command(label=new_text2, font=('Times 12'), background='black',
+        me3.add_command(label=new_text2, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda2)
-        self.me3.add_command(label=new_text3, font=('Times 12'), background='black',
+        me3.add_command(label=new_text3, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda3)
-        self.me3.add_command(label=new_text4, font=('Times 12'), background='black',
+        me3.add_command(label=new_text4, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda4)
-        self.me3.add_command(label=new_text5, font=('Times 12'), background='black',
+        me3.add_command(label=new_text5, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda5)
-        self.me3.add_command(label=new_text6, font=('Times 12'), background='black',
+        me3.add_command(label=new_text6, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda6)
-        self.me3.add_command(label=new_text7, font=('Times 12'), background='black',
+        me3.add_command(label=new_text7, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda7)
-        self.me3.add_command(label=new_text8, font=('Times 12'), background='black',
+        me3.add_command(label=new_text8, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda8)
-        self.me3.add_command(label=new_text9, font=('Times 12'), background='black',
+        me3.add_command(label=new_text9, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda9)
-        self.me3.add_command(label=new_text10, font=('Times 12'), background='black',
+        me3.add_command(label=new_text10, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda10)
-        self.me3.add_command(label=new_text11, font=('Times 12'), background='black',
+        me3.add_command(label=new_text11, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda11)
-        self.me3.add_command(label=new_text12, font=('Times 12'), background='black',
+        me3.add_command(label=new_text12, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda12)
-        self.me3.add_command(label=new_text13, font=('Times 12'), background='black',
+        me3.add_command(label=new_text13, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda13)
-        self.me3.add_command(label=new_text14, font=('Times 12'), background='black',
+        me3.add_command(label=new_text14, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda14)
-        self.me3.add_command(label=new_text15, font=('Times 12'), background='black',
+        me3.add_command(label=new_text15, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda15)
-        self.me3.add_command(label=new_text16, font=('Times 12'), background='black',
+        me3.add_command(label=new_text16, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda16)
-        self.me3.add_command(label=new_text17, font=('Times 12'), background='black',
+        me3.add_command(label=new_text17, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda17)
-        self.me3.add_command(label=new_text18, font=('Times 12'), background='black',
+        me3.add_command(label=new_text18, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda18)
-        self.me3.add_command(label=new_text19, font=('Times 12'), background='black',
+        me3.add_command(label=new_text19, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda19)
-        self.me3.add_command(label=new_text20, font=('Times 12'), background='black',
+        me3.add_command(label=new_text20, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda20)
-        self.me3.add_command(label=new_text21, font=('Times 12'), background='black',
+        me3.add_command(label=new_text21, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda21)
-        self.me3.add_command(label=new_text22, font=('Times 12'), background='black',
+        me3.add_command(label=new_text22, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda22)
-        self.me3.add_command(label=new_text23, font=('Times 12'), background='black',
+        me3.add_command(label=new_text23, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda23)
-        self.me3.add_command(label=new_text24, font=('Times 12'), background='black',
+        me3.add_command(label=new_text24, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.patientAgenda24)
         # Integration of agenda menu
-        self.cmd_agenda.configure(activeforeground='black', activebackground='cyan',
-            menu=self.me3)
+        cmd_agenda.configure(activeforeground='black', activebackground='cyan',
+            menu=me3)
 
         # 14 besoins menu
-        self.cmd_Besoins = Menubutton(self, text='14 Needs', font=("Times 14"),
+        cmd_Besoins = Menubutton(self, text='14 Needs', font=("Times 14"),
             fg='cyan', bg='grey30', relief=GROOVE)
-        self.cmd_Besoins.pack(side=LEFT, padx=3)
+        cmd_Besoins.pack(side=LEFT, padx=3)
         # Partie déroulante du menu 14b
-        self.me4 = Menu(self.cmd_Besoins)
-        self.me4.add_command(label=new_text, font=('Times 12'), background='black',
+        me4 = Menu(cmd_Besoins)
+        me4.add_command(label=new_text, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.besoinsCoche)
-        #self.me4.add_separator()
-        self.me4.add_command(label=new_text2, font=('Times 12'), background='black',
+        #me4.add_separator()
+        me4.add_command(label=new_text2, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.besoins2Coche)
-        #self.me4.add_separator()
-        self.me4.add_command(label=new_text3, font=('Times 12'), background='black',
+        #me4.add_separator()
+        me4.add_command(label=new_text3, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.besoins3Coche)
-        #self.me4.add_separator()
-        self.me4.add_command(label=new_text4, font=('Times 12'), background='black',
+        #me4.add_separator()
+        me4.add_command(label=new_text4, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.besoins4Coche)
-        #self.me4.add_separator()
-        self.me4.add_command(label=new_text5, font=('Times 12'), background='black',
+        #me4.add_separator()
+        me4.add_command(label=new_text5, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.besoins5Coche)
-        #self.me4.add_separator()
-        self.me4.add_command(label=new_text6, font=('Times 12'), background='black',
+        #me4.add_separator()
+        me4.add_command(label=new_text6, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.besoins6Coche)
-        #self.me4.add_separator()
-        self.me4.add_command(label=new_text7, font=('Times 12'), background='black',
+        #me4.add_separator()
+        me4.add_command(label=new_text7, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.besoins7Coche)
-        #self.me4.add_separator()
-        self.me4.add_command(label=new_text8, font=('Times 12'), background='black',
+        #me4.add_separator()
+        me4.add_command(label=new_text8, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.besoins8Coche)
-        #self.me4.add_separator()
-        self.me4.add_command(label=new_text9, font=('Times 12'), background='black',
+        #me4.add_separator()
+        me4.add_command(label=new_text9, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.besoins9Coche)
-        #self.me4.add_separator()
-        self.me4.add_command(label=new_text10, font=('Times 12'), background='black',
+        #me4.add_separator()
+        me4.add_command(label=new_text10, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.besoins10Coche)
-        #self.me4.add_separator()
-        self.me4.add_command(label=new_text11, font=('Times 12'), background='black',
+        #me4.add_separator()
+        me4.add_command(label=new_text11, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.besoins11Coche)
-        #self.me4.add_separator()
-        self.me4.add_command(label=new_text12, font=('Times 12'), background='black',
+        #me4.add_separator()
+        me4.add_command(label=new_text12, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.besoins12Coche)
-        #self.me4.add_separator()
-        self.me4.add_command(label=new_text13, font=('Times 12'), background='black',
+        #me4.add_separator()
+        me4.add_command(label=new_text13, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.besoins13Coche)
-        #self.me4.add_separator()
-        self.me4.add_command(label=new_text14, font=('Times 12'), background='black',
+        #me4.add_separator()
+        me4.add_command(label=new_text14, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.besoins14Coche)
-        #self.me4.add_separator()
-        self.me4.add_command(label=new_text15, font=('Times 12'), background='black',
+        #me4.add_separator()
+        me4.add_command(label=new_text15, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.besoins15Coche)
-        #self.me4.add_separator()
-        self.me4.add_command(label=new_text16, font=('Times 12'), background='black',
+        #me4.add_separator()
+        me4.add_command(label=new_text16, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.besoins16Coche)
-        #self.me4.add_separator()
-        self.me4.add_command(label=new_text17, font=('Times 12'), background='black',
+        #me4.add_separator()
+        me4.add_command(label=new_text17, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.besoins17Coche)
-        #self.me4.add_separator()
-        self.me4.add_command(label=new_text18, font=('Times 12'), background='black',
+        #me4.add_separator()
+        me4.add_command(label=new_text18, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.besoins18Coche)
-        #self.me4.add_separator()
-        self.me4.add_command(label=new_text19, font=('Times 12'), background='black',
+        #me4.add_separator()
+        me4.add_command(label=new_text19, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.besoins19Coche)
-        #self.me4.add_separator()
-        self.me4.add_command(label=new_text20, font=('Times 12'), background='black',
+        #me4.add_separator()
+        me4.add_command(label=new_text20, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.besoins20Coche)
-        #self.me4.add_separator()
-        self.me4.add_command(label=new_text21, font=('Times 12'), background='black',
+        #me4.add_separator()
+        me4.add_command(label=new_text21, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.besoins21Coche)
-        #self.me4.add_separator()
-        self.me4.add_command(label=new_text22, font=('Times 12'), background='black',
+        #me4.add_separator()
+        me4.add_command(label=new_text22, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.besoins22Coche)
-        #self.me4.add_separator()
-        self.me4.add_command(label=new_text23, font=('Times 12'), background='black',
+        #me4.add_separator()
+        me4.add_command(label=new_text23, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.besoins23Coche)
-        #self.me4.add_separator()
-        self.me4.add_command(label=new_text24, font=('Times 12'), background='black',
+        #me4.add_separator()
+        me4.add_command(label=new_text24, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.besoins24Coche)
         # Integration of 14b menu
-        self.cmd_Besoins.configure(activeforeground='black', activebackground='cyan',
-            menu=self.me4)
+        cmd_Besoins.configure(activeforeground='black', activebackground='cyan',
+            menu=me4)
 
         # Helth and care menu
-        self.cmd_Soins = Menubutton(self, text='Care and monitoring', font=("Times 14"),
+        cmd_Soins = Menubutton(self, text='Care and monitoring', font=("Times 14"),
             fg='cyan', bg='grey30', relief=GROOVE)
-        self.cmd_Soins.pack(side=LEFT, padx=3)
+        cmd_Soins.pack(side=LEFT, padx=3)
         # Partie déroulante du menu health and care
-        self.meSoins = Menu(self.cmd_Soins)
-        self.meSoins.add_command(label=new_text, font=('Times 12'), background='black',
+        meSoins = Menu(cmd_Soins)
+        meSoins.add_command(label=new_text, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.suiviSoins1)
-        #self.meSoins.add_separator()
-        self.meSoins.add_command(label=new_text2, font=('Times 12'), background='black',
+        #meSoins.add_separator()
+        meSoins.add_command(label=new_text2, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.suiviSoins2)
-        #self.meSoins.add_separator()
-        self.meSoins.add_command(label=new_text3, font=('Times 12'), background='black',
+        #meSoins.add_separator()
+        meSoins.add_command(label=new_text3, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.suiviSoins3)
-        #self.meSoins.add_separator()
-        self.meSoins.add_command(label=new_text4, font=('Times 12'), background='black',
+        #meSoins.add_separator()
+        meSoins.add_command(label=new_text4, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.suiviSoins4)
-        #self.meSoins.add_separator()
-        self.meSoins.add_command(label=new_text5, font=('Times 12'), background='black',
+        #meSoins.add_separator()
+        meSoins.add_command(label=new_text5, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.suiviSoins5)
-        #self.meSoins.add_separator()
-        self.meSoins.add_command(label=new_text6, font=('Times 12'), background='black',
+        #meSoins.add_separator()
+        meSoins.add_command(label=new_text6, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.suiviSoins6)
-        #self.meSoins.add_separator()
-        self.meSoins.add_command(label=new_text7, font=('Times 12'), background='black',
+        #meSoins.add_separator()
+        meSoins.add_command(label=new_text7, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.suiviSoins7)
-        #self.meSoins.add_separator()
-        self.meSoins.add_command(label=new_text8, font=('Times 12'), background='black',
+        #meSoins.add_separator()
+        meSoins.add_command(label=new_text8, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.suiviSoins8)
-        #self.meSoins.add_separator()
-        self.meSoins.add_command(label=new_text9, font=('Times 12'), background='black',
+        #meSoins.add_separator()
+        meSoins.add_command(label=new_text9, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.suiviSoins9)
-        #self.meSoins.add_separator()
-        self.meSoins.add_command(label=new_text10, font=('Times 12'), background='black',
+        #meSoins.add_separator()
+        meSoins.add_command(label=new_text10, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.suiviSoins10)
-        #self.meSoins.add_separator()
-        self.meSoins.add_command(label=new_text11, font=('Times 12'), background='black',
+        #meSoins.add_separator()
+        meSoins.add_command(label=new_text11, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.suiviSoins11)
-        #self.meSoins.add_separator()
-        self.meSoins.add_command(label=new_text12, font=('Times 12'), background='black',
+        #meSoins.add_separator()
+        meSoins.add_command(label=new_text12, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.suiviSoins12)
-        #self.meSoins.add_separator()
-        self.meSoins.add_command(label=new_text13, font=('Times 12'), background='black',
+        #meSoins.add_separator()
+        meSoins.add_command(label=new_text13, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.suiviSoins13)
-        #self.meSoins.add_separator()
-        self.meSoins.add_command(label=new_text14, font=('Times 12'), background='black',
+        #meSoins.add_separator()
+        meSoins.add_command(label=new_text14, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.suiviSoins14)
-        #self.meSoins.add_separator()
-        self.meSoins.add_command(label=new_text15, font=('Times 12'), background='black',
+        #meSoins.add_separator()
+        meSoins.add_command(label=new_text15, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.suiviSoins15)
-        #self.meSoins.add_separator()
-        self.meSoins.add_command(label=new_text16, font=('Times 12'), background='black',
+        #meSoins.add_separator()
+        meSoins.add_command(label=new_text16, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.suiviSoins16)
-        #self.meSoins.add_separator()
-        self.meSoins.add_command(label=new_text17, font=('Times 12'), background='black',
+        #meSoins.add_separator()
+        meSoins.add_command(label=new_text17, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.suiviSoins17)
-        #self.meSoins.add_separator()
-        self.meSoins.add_command(label=new_text18, font=('Times 12'), background='black',
+        #meSoins.add_separator()
+        meSoins.add_command(label=new_text18, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.suiviSoins18)
-        #self.meSoins.add_separator()
-        self.meSoins.add_command(label=new_text19, font=('Times 12'), background='black',
+        #meSoins.add_separator()
+        meSoins.add_command(label=new_text19, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.suiviSoins19)
-        #self.meSoins.add_separator()
-        self.meSoins.add_command(label=new_text20, font=('Times 12'), background='black',
+        #meSoins.add_separator()
+        meSoins.add_command(label=new_text20, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.suiviSoins20)
-        #self.meSoins.add_separator()
-        self.meSoins.add_command(label=new_text21, font=('Times 12'), background='black',
+        #meSoins.add_separator()
+        meSoins.add_command(label=new_text21, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.suiviSoins21)
-        #self.meSoins.add_separator()
-        self.meSoins.add_command(label=new_text22, font=('Times 12'), background='black',
+        #meSoins.add_separator()
+        meSoins.add_command(label=new_text22, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.suiviSoins22)
-        #self.meSoins.add_separator()
-        self.meSoins.add_command(label=new_text23, font=('Times 12'), background='black',
+        #meSoins.add_separator()
+        meSoins.add_command(label=new_text23, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.suiviSoins23)
-        #self.meSoins.add_separator()
-        self.meSoins.add_command(label=new_text24, font=('Times 12'), background='black',
+        #meSoins.add_separator()
+        meSoins.add_command(label=new_text24, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.suiviSoins24)
         # Integration of health and care menu
-        self.cmd_Soins.configure(activeforeground='black', activebackground='cyan',
-            menu=self.meSoins)
+        cmd_Soins.configure(activeforeground='black', activebackground='cyan',
+            menu=meSoins)
 
         # Treatments
-        self.cmd_ttt = Menubutton(self, text='Treatments', font=("Times 14"),
+        cmd_ttt = Menubutton(self, text='Treatments', font=("Times 14"),
             fg='cyan', bg='grey30', relief=GROOVE)
-        self.cmd_ttt.pack(side=LEFT, padx=3)
+        cmd_ttt.pack(side=LEFT, padx=3)
         # Partie déroulante du menu health and care
-        self.meTtt = Menu(self.cmd_ttt)
-        self.meTtt.add_command(label=new_text, font=('Times 12'), background='black',
+        meTtt = Menu(cmd_ttt)
+        meTtt.add_command(label=new_text, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.tttMed1)
-        #self.meTtt.add_separator()
-        self.meTtt.add_command(label=new_text2, font=('Times 12'), background='black',
+        #meTtt.add_separator()
+        meTtt.add_command(label=new_text2, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.tttMed2)
-        #self.meTtt.add_separator()
-        self.meTtt.add_command(label=new_text3, font=('Times 12'), background='black',
+        #meTtt.add_separator()
+        meTtt.add_command(label=new_text3, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.tttMed3)
-        #self.meTtt.add_separator()
-        self.meTtt.add_command(label=new_text4, font=('Times 12'), background='black',
+        #meTtt.add_separator()
+        meTtt.add_command(label=new_text4, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.tttMed4)
-        #self.meTtt.add_separator()
-        self.meTtt.add_command(label=new_text5, font=('Times 12'), background='black',
+        #meTtt.add_separator()
+        meTtt.add_command(label=new_text5, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.tttMed5)
-        #self.meTtt.add_separator()
-        self.meTtt.add_command(label=new_text6, font=('Times 12'), background='black',
+        #meTtt.add_separator()
+        meTtt.add_command(label=new_text6, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.tttMed6)
-        #self.meTtt.add_separator()
-        self.meTtt.add_command(label=new_text7, font=('Times 12'), background='black',
+        #meTtt.add_separator()
+        meTtt.add_command(label=new_text7, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.tttMed7)
-        #self.meTtt.add_separator()
-        self.meTtt.add_command(label=new_text8, font=('Times 12'), background='black',
+        #meTtt.add_separator()
+        meTtt.add_command(label=new_text8, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.tttMed8)
-        #self.meTtt.add_separator()
-        self.meTtt.add_command(label=new_text9, font=('Times 12'), background='black',
+        #meTtt.add_separator()
+        meTtt.add_command(label=new_text9, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.tttMed9)
-        #self.meTtt.add_separator()
-        self.meTtt.add_command(label=new_text10, font=('Times 12'), background='black',
+        #meTtt.add_separator()
+        meTtt.add_command(label=new_text10, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.tttMed10)
-        #self.meTtt.add_separator()
-        self.meTtt.add_command(label=new_text11, font=('Times 12'), background='black',
+        #meTtt.add_separator()
+        meTtt.add_command(label=new_text11, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.tttMed11)
-        #self.meTtt.add_separator()
-        self.meTtt.add_command(label=new_text12, font=('Times 12'), background='black',
+        #meTtt.add_separator()
+        meTtt.add_command(label=new_text12, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.tttMed12)
-        #self.meTtt.add_separator()
-        self.meTtt.add_command(label=new_text13, font=('Times 12'), background='black',
+        #meTtt.add_separator()
+        meTtt.add_command(label=new_text13, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.tttMed13)
-        #self.meTtt.add_separator()
-        self.meTtt.add_command(label=new_text14, font=('Times 12'), background='black',
+        #meTtt.add_separator()
+        meTtt.add_command(label=new_text14, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.tttMed14)
-        #self.meTtt.add_separator()
-        self.meTtt.add_command(label=new_text15, font=('Times 12'), background='black',
+        #meTtt.add_separator()
+        meTtt.add_command(label=new_text15, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.tttMed15)
-        #self.meTtt.add_separator()
-        self.meTtt.add_command(label=new_text16, font=('Times 12'), background='black',
+        #meTtt.add_separator()
+        meTtt.add_command(label=new_text16, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.tttMed16)
-        #self.meTtt.add_separator()
-        self.meTtt.add_command(label=new_text17, font=('Times 12'), background='black',
+        #meTtt.add_separator()
+        meTtt.add_command(label=new_text17, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.tttMed17)
-        #self.meTtt.add_separator()
-        self.meTtt.add_command(label=new_text18, font=('Times 12'), background='black',
+        #meTtt.add_separator()
+        meTtt.add_command(label=new_text18, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.tttMed18)
-        #self.meTtt.add_separator()
-        self.meTtt.add_command(label=new_text19, font=('Times 12'), background='black',
+        #meTtt.add_separator()
+        meTtt.add_command(label=new_text19, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.tttMed19)
-        #self.meTtt.add_separator()
-        self.meTtt.add_command(label=new_text20, font=('Times 12'), background='black',
+        #meTtt.add_separator()
+        meTtt.add_command(label=new_text20, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.tttMed20)
-        #self.meTtt.add_separator()
-        self.meTtt.add_command(label=new_text21, font=('Times 12'), background='black',
+        #meTtt.add_separator()
+        meTtt.add_command(label=new_text21, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.tttMed21)
-        #self.meTtt.add_separator()
-        self.meTtt.add_command(label=new_text22, font=('Times 12'), background='black',
+        #meTtt.add_separator()
+        meTtt.add_command(label=new_text22, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.tttMed22)
-        #self.meTtt.add_separator()
-        self.meTtt.add_command(label=new_text23, font=('Times 12'), background='black',
+        #meTtt.add_separator()
+        meTtt.add_command(label=new_text23, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.tttMed23)
-        #self.meTtt.add_separator()
-        self.meTtt.add_command(label=new_text24, font=('Times 12'), background='black',
+        #meTtt.add_separator()
+        meTtt.add_command(label=new_text24, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.tttMed24)
         # Integration of health and care menu
-        self.cmd_ttt.configure(activeforeground='black', activebackground='cyan',
-            menu=self.meTtt)
+        cmd_ttt.configure(activeforeground='black', activebackground='cyan',
+            menu=meTtt)
 
         # BMI menu
-        self.cmd_BMI = Menubutton(self, text='Body Mass Indice', font=("Times 14"),
+        cmd_BMI = Menubutton(self, text='Body Mass Indice', font=("Times 14"),
             fg='cyan', bg='grey30', relief=GROOVE)
-        self.cmd_BMI.pack(side=LEFT, padx=3)
+        cmd_BMI.pack(side=LEFT, padx=3)
         # drop-down portion of BMI menu
-        self.meBmi = Menu(self.cmd_BMI)
-        self.meBmi.add_command(label=new_text, font=('Times 12'), background='black',
+        meBmi = Menu(cmd_BMI)
+        meBmi.add_command(label=new_text, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.calculB)
-        self.meBmi.add_command(label=new_text2, font=('Times 12'), background='black',
+        meBmi.add_command(label=new_text2, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.calculB2)
-        self.meBmi.add_command(label=new_text3, font=('Times 12'), background='black',
+        meBmi.add_command(label=new_text3, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.calculB3)
-        self.meBmi.add_command(label=new_text4, font=('Times 12'), background='black',
+        meBmi.add_command(label=new_text4, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.calculB4)
-        self.meBmi.add_command(label=new_text5, font=('Times 12'), background='black',
+        meBmi.add_command(label=new_text5, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.calculB5)
-        self.meBmi.add_command(label=new_text6, font=('Times 12'), background='black',
+        meBmi.add_command(label=new_text6, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.calculB6)
-        self.meBmi.add_command(label=new_text7, font=('Times 12'), background='black',
+        meBmi.add_command(label=new_text7, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.calculB7)
-        self.meBmi.add_command(label=new_text8, font=('Times 12'), background='black',
+        meBmi.add_command(label=new_text8, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.calculB8)
-        self.meBmi.add_command(label=new_text9, font=('Times 12'), background='black',
+        meBmi.add_command(label=new_text9, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.calculB9)
-        self.meBmi.add_command(label=new_text10, font=('Times 12'), background='black',
+        meBmi.add_command(label=new_text10, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.calculB10)
-        self.meBmi.add_command(label=new_text11, font=('Times 12'), background='black',
+        meBmi.add_command(label=new_text11, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.calculB11)
-        self.meBmi.add_command(label=new_text12, font=('Times 12'), background='black',
+        meBmi.add_command(label=new_text12, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.calculB12)
-        self.meBmi.add_command(label=new_text13, font=('Times 12'), background='black',
+        meBmi.add_command(label=new_text13, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.calculB13)
-        self.meBmi.add_command(label=new_text14, font=('Times 12'), background='black',
+        meBmi.add_command(label=new_text14, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.calculB14)
-        self.meBmi.add_command(label=new_text15, font=('Times 12'), background='black',
+        meBmi.add_command(label=new_text15, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.calculB15)
-        self.meBmi.add_command(label=new_text16, font=('Times 12'), background='black',
+        meBmi.add_command(label=new_text16, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.calculB16)
-        self.meBmi.add_command(label=new_text17, font=('Times 12'), background='black',
+        meBmi.add_command(label=new_text17, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.calculB17)
-        self.meBmi.add_command(label=new_text18, font=('Times 12'), background='black',
+        meBmi.add_command(label=new_text18, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.calculB18)
-        self.meBmi.add_command(label=new_text19, font=('Times 12'), background='black',
+        meBmi.add_command(label=new_text19, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.calculB19)
-        self.meBmi.add_command(label=new_text20, font=('Times 12'), background='black',
+        meBmi.add_command(label=new_text20, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.calculB20)
-        self.meBmi.add_command(label=new_text21, font=('Times 12'), background='black',
+        meBmi.add_command(label=new_text21, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.calculB21)
-        self.meBmi.add_command(label=new_text22, font=('Times 12'), background='black',
+        meBmi.add_command(label=new_text22, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.calculB22)
-        self.meBmi.add_command(label=new_text23, font=('Times 12'), background='black',
+        meBmi.add_command(label=new_text23, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.calculB23)
-        self.meBmi.add_command(label=new_text24, font=('Times 12'), background='black',
+        meBmi.add_command(label=new_text24, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.calculB24)
         # Integration of 3rd menu
-        self.cmd_BMI.configure(activeforeground='black', activebackground='cyan',
-            menu=self.meBmi)
+        cmd_BMI.configure(activeforeground='black', activebackground='cyan',
+            menu=meBmi)
 
         # Medical Visite
-        self.cmd_Vmed = Menubutton(self, text='Medical Visit', font=("Times 14"),
+        cmd_Vmed = Menubutton(self, text='Medical Visit', font=("Times 14"),
             fg='cyan', bg='grey30', relief=GROOVE)
-        self.cmd_Vmed.pack(side=LEFT, padx=3)
+        cmd_Vmed.pack(side=LEFT, padx=3)
         # drop-down portion of vmed
-        self.meVmed = Menu(self.cmd_Vmed)
-        self.meVmed.add_command(label=new_text, font=('Times 12'), background='black',
+        meVmed = Menu(cmd_Vmed)
+        meVmed.add_command(label=new_text, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.visitMed)
-        self.meVmed.add_command(label=new_text2, font=('Times 12'), background='black',
+        meVmed.add_command(label=new_text2, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.visitMed2)
-        self.meVmed.add_command(label=new_text3, font=('Times 12'), background='black',
+        meVmed.add_command(label=new_text3, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.visitMed3)
-        self.meVmed.add_command(label=new_text4, font=('Times 12'), background='black',
+        meVmed.add_command(label=new_text4, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.visitMed4)
-        self.meVmed.add_command(label=new_text5, font=('Times 12'), background='black',
+        meVmed.add_command(label=new_text5, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.visitMed5)
-        self.meVmed.add_command(label=new_text6, font=('Times 12'), background='black',
+        meVmed.add_command(label=new_text6, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.visitMed6)
-        self.meVmed.add_command(label=new_text7, font=('Times 12'), background='black',
+        meVmed.add_command(label=new_text7, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.visitMed7)
-        self.meVmed.add_command(label=new_text8, font=('Times 12'), background='black',
+        meVmed.add_command(label=new_text8, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.visitMed8)
-        self.meVmed.add_command(label=new_text9, font=('Times 12'), background='black',
+        meVmed.add_command(label=new_text9, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.visitMed9)
-        self.meVmed.add_command(label=new_text10, font=('Times 12'), background='black',
+        meVmed.add_command(label=new_text10, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.visitMed10)
-        self.meVmed.add_command(label=new_text11, font=('Times 12'), background='black',
+        meVmed.add_command(label=new_text11, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.visitMed11)
-        self.meVmed.add_command(label=new_text12, font=('Times 12'), background='black',
+        meVmed.add_command(label=new_text12, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.visitMed12)
-        self.meVmed.add_command(label=new_text13, font=('Times 12'), background='black',
+        meVmed.add_command(label=new_text13, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.visitMed13)
-        self.meVmed.add_command(label=new_text14, font=('Times 12'), background='black',
+        meVmed.add_command(label=new_text14, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.visitMed14)
-        self.meVmed.add_command(label=new_text15, font=('Times 12'), background='black',
+        meVmed.add_command(label=new_text15, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.visitMed15)
-        self.meVmed.add_command(label=new_text16, font=('Times 12'), background='black',
+        meVmed.add_command(label=new_text16, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.visitMed16)
-        self.meVmed.add_command(label=new_text17, font=('Times 12'), background='black',
+        meVmed.add_command(label=new_text17, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.visitMed17)
-        self.meVmed.add_command(label=new_text18, font=('Times 12'), background='black',
+        meVmed.add_command(label=new_text18, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.visitMed18)
-        self.meVmed.add_command(label=new_text19, font=('Times 12'), background='black',
+        meVmed.add_command(label=new_text19, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.visitMed19)
-        self.meVmed.add_command(label=new_text20, font=('Times 12'), background='black',
+        meVmed.add_command(label=new_text20, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.visitMed20)
-        self.meVmed.add_command(label=new_text21, font=('Times 12'), background='black',
+        meVmed.add_command(label=new_text21, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.visitMed21)
-        self.meVmed.add_command(label=new_text22, font=('Times 12'), background='black',
+        meVmed.add_command(label=new_text22, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.visitMed22)
-        self.meVmed.add_command(label=new_text23, font=('Times 12'), background='black',
+        meVmed.add_command(label=new_text23, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.visitMed23)
-        self.meVmed.add_command(label=new_text24, font=('Times 12'), background='black',
+        meVmed.add_command(label=new_text24, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.visitMed24)
         # Integration of 3rd menu
-        self.cmd_Vmed.configure(activeforeground='black', activebackground='cyan',
-            menu=self.meVmed)
+        cmd_Vmed.configure(activeforeground='black', activebackground='cyan',
+            menu=meVmed)
 
         # Nutrition menu for intolerance and hate meals
-        self.cmd_Print = Menubutton(self, text='Intolerance All.', font=("Times 14"),
+        cmd_Print = Menubutton(self, text='Intolerance All.', font=("Times 14"),
             fg='cyan', bg='grey30', relief=GROOVE)
-        self.cmd_Print.pack(side=LEFT, padx=3)
+        cmd_Print.pack(side=LEFT, padx=3)
         # drop-down portion of nutrition
-        self.mePrint = Menu(self.cmd_Print)
-        self.mePrint.add_command(label=new_text, font=('Times 12'), background='black',
+        mePrint = Menu(cmd_Print)
+        mePrint.add_command(label=new_text, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.nutritionMenu)
-        self.mePrint.add_command(label=new_text2, font=('Times 12'), background='black',
+        mePrint.add_command(label=new_text2, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.nutritionMenu2)
-        self.mePrint.add_command(label=new_text3, font=('Times 12'), background='black',
+        mePrint.add_command(label=new_text3, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.nutritionMenu3)
-        self.mePrint.add_command(label=new_text4, font=('Times 12'), background='black',
+        mePrint.add_command(label=new_text4, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.nutritionMenu4)
-        self.mePrint.add_command(label=new_text5, font=('Times 12'), background='black',
+        mePrint.add_command(label=new_text5, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.nutritionMenu5)
-        self.mePrint.add_command(label=new_text6, font=('Times 12'), background='black',
+        mePrint.add_command(label=new_text6, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.nutritionMenu6)
-        self.mePrint.add_command(label=new_text7, font=('Times 12'), background='black',
+        mePrint.add_command(label=new_text7, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.nutritionMenu7)
-        self.mePrint.add_command(label=new_text8, font=('Times 12'), background='black',
+        mePrint.add_command(label=new_text8, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.nutritionMenu8)
-        self.mePrint.add_command(label=new_text9, font=('Times 12'), background='black',
+        mePrint.add_command(label=new_text9, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.nutritionMenu9)
-        self.mePrint.add_command(label=new_text10, font=('Times 12'), background='black',
+        mePrint.add_command(label=new_text10, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.nutritionMenu10)
-        self.mePrint.add_command(label=new_text11, font=('Times 12'), background='black',
+        mePrint.add_command(label=new_text11, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.nutritionMenu11)
-        self.mePrint.add_command(label=new_text12, font=('Times 12'), background='black',
+        mePrint.add_command(label=new_text12, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.nutritionMenu12)
-        self.mePrint.add_command(label=new_text13, font=('Times 12'), background='black',
+        mePrint.add_command(label=new_text13, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.nutritionMenu13)
-        self.mePrint.add_command(label=new_text14, font=('Times 12'), background='black',
+        mePrint.add_command(label=new_text14, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.nutritionMenu14)
-        self.mePrint.add_command(label=new_text15, font=('Times 12'), background='black',
+        mePrint.add_command(label=new_text15, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.nutritionMenu15)
-        self.mePrint.add_command(label=new_text16, font=('Times 12'), background='black',
+        mePrint.add_command(label=new_text16, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.nutritionMenu16)
-        self.mePrint.add_command(label=new_text17, font=('Times 12'), background='black',
+        mePrint.add_command(label=new_text17, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.nutritionMenu17)
-        self.mePrint.add_command(label=new_text18, font=('Times 12'), background='black',
+        mePrint.add_command(label=new_text18, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.nutritionMenu18)
-        self.mePrint.add_command(label=new_text19, font=('Times 12'), background='black',
+        mePrint.add_command(label=new_text19, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.nutritionMenu19)
-        self.mePrint.add_command(label=new_text20, font=('Times 12'), background='black',
+        mePrint.add_command(label=new_text20, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.nutritionMenu20)
-        self.mePrint.add_command(label=new_text21, font=('Times 12'), background='black',
+        mePrint.add_command(label=new_text21, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.nutritionMenu21)
-        self.mePrint.add_command(label=new_text22, font=('Times 12'), background='black',
+        mePrint.add_command(label=new_text22, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.nutritionMenu22)
-        self.mePrint.add_command(label=new_text23, font=('Times 12'), background='black',
+        mePrint.add_command(label=new_text23, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.nutritionMenu23)
-        self.mePrint.add_command(label=new_text24, font=('Times 12'), background='black',
+        mePrint.add_command(label=new_text24, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.nutritionMenu24)
         # Integration of nutrition menu
-        self.cmd_Print.configure(activeforeground='black', activebackground='cyan',
-            menu=self.mePrint)
+        cmd_Print.configure(activeforeground='black', activebackground='cyan',
+            menu=mePrint)
 
         # Menu for showing all Graphs togather per patient
         self.cmd_backup=Menubutton(self, text='Global', font=("Times 14"), fg='cyan',

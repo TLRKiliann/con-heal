@@ -1220,7 +1220,7 @@ class Application(Frame):
         self.mBar = MenuBar(self)
         self.mBar.pack(side=TOP, fill=X, expand=YES)
 
-        self.can = Canvas(self, width=1250, height=700, bg='grey18')
+        self.can = Canvas(self, width=1250, height=700, bg='black')
         self.frame = Frame(self.can)
         # ScrollCanvas limite de la zone à parcourir avec la barre 1250 - 700
         self.vsb = Scrollbar(self, orient=VERTICAL, command=self.can.yview)
@@ -1228,7 +1228,7 @@ class Application(Frame):
         self.vsb.pack(side=RIGHT, fill=Y)
         self.can.create_window((4,4), window=self.frame, anchor=NW, tags="self.frame")
         self.clock_label = Label(self, text="",
-            fg="white", bg="RoyalBlue3", font=("helvetica", 18, 'bold'), padx=560)
+            fg="white", bg="RoyalBlue3", font=("helvetica", 18), padx=560)
         #self.clock_label = Label(self, text="", font=('Times New Roman', 18, 'bold'),
         #    fg='snow', bg='RoyalBlue3', padx=560)
         self.clock_label.after(200, self.tick)

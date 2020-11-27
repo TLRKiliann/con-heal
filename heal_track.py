@@ -5,6 +5,7 @@
 from tkinter import *
 from tkinter import messagebox
 import time
+import datetime as dt
 import subprocess
 from boxapp import callBox
 from patcaps import callResident
@@ -1120,12 +1121,13 @@ class Application(Frame):
         self.can.configure(yscrollcommand=self.vsb.set)
         self.vsb.pack(side=RIGHT, fill=Y)
         self.can.create_window((4,4), window=self.frame, anchor=NW, tags="self.frame")
-
-        self.clock_label = Label(self, text="", font=('Times New Roman', 18, 'bold'),
-            fg='snow', bg='RoyalBlue3', padx=560)
+        self.clock_label = Label(self, text="",
+            fg="white", bg="RoyalBlue3", font=("helvetica", 18, 'bold'), padx=560)
+        #self.clock_label = Label(self, text="", font=('Times New Roman', 18, 'bold'),
+        #    fg='snow', bg='RoyalBlue3', padx=560)
+        self.clock_label.after(200, self.tick)
         self.clock_label.pack(side=TOP)
         # Read python - tkinter - self.master.Tk.call(func()) in effbot
-        self.clock_label.bind(self.display_time())
 
         # Insertion of picture
         self.photo = PhotoImage(file='./syno_gif/fondcolorbg4.png')
@@ -1179,13 +1181,19 @@ class Application(Frame):
         '''Reinitialize canvas when we pass through another'''
         self.can.delete(ALL)
 
-    def display_time(self):
+    def tick(self):
+        """ Updates the display clock every 200 milliseconds """
+        new_time = time.strftime("%H:%M:%S %p")
         try:
-            current_time = time.strftime("%H:%M:%S %p")
-            self.clock_label.configure(text=current_time)
-            self.clock_label.after(200, self.display_time)
-        except (ValueError, OSError) as os_err:
-            ("Error : time to fucking time !!!", os_err)
+            if new_time == new_time:
+                self.time = new_time
+                self.display_time = self.time
+                self.clock_label.configure(text=self.display_time)
+                self.clock_label.after(200, self.tick)
+            else:
+                print("FUCK every one !")
+        except (ValueError, OSError) as val_err:
+            print("Error time --> ", val_err)
 
     def framShow(self):
         """
@@ -1193,6 +1201,7 @@ class Application(Frame):
             re-enter id and passwd
         """
         try:
+            self.clock_label.after(200 , self.clock_label.destroy())
             self.master.destroy()
             Application()
             #Application.__init__(self)

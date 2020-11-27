@@ -18,15 +18,6 @@ def callResident(self):
         Main function called since main app
         heal_track.py for displaying patients
         with theirs names and more.
-    self.mBar.fileMenu
-    self.mBar.me3
-    self.mBar.me4
-    self.mBar.meSoins
-    self.mBar.meTtt
-    self.mBar.meBmi
-    self.mBar.meVmed
-    self.mBar.mePrint
-    self.mBar(self)
     """    
     self.can.delete(ALL)
     self.can.configure(background='DodgerBlue2')

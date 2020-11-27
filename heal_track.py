@@ -12,6 +12,7 @@ from backapp import *
 from Backup.backupfile import dataBackToSave
 import passw
 
+
 class ScrollCanvas(Frame):
     """
         To prepare ScrollBar for main application.
@@ -234,34 +235,34 @@ class MenuBar(Frame):
 
         self.fileMenu.pack(side=LEFT, padx=3)
         # Partie déroulante du menu 1st
-        me1 = Menu(self.fileMenu, tearoff=0)
-        me1.add_command(label='Intro', underline=0, font=("Times 14 bold"),
+        self.me1 = Menu(self.fileMenu, tearoff=0)
+        self.me1.add_command(label='Intro', underline=0, font=("Times 14 bold"),
             background='black',activebackground='aquamarine',
             foreground='aquamarine', activeforeground='black',
             command=boss.framShow)
-        me1.add_command(label="Textbox", underline=0, font=("Times 14 bold"),
+        self.me1.add_command(label="Textbox", underline=0, font=("Times 14 bold"),
             background='black', activebackground='cyan',
             foreground='aquamarine', activeforeground='black',
             command=boss.showSynopsis)
-        me1.add_command(label="Residents", underline=0, font=("Times 14 bold"),
+        self.me1.add_command(label="Residents", underline=0, font=("Times 14 bold"),
             background='black', activebackground='cyan',
             foreground='aquamarine', activeforeground='black',
             command=boss.showPatients)
-        me1.add_command(label='DataBase', underline=0, font=("Times 14 bold"),
+        self.me1.add_command(label='DataBase', underline=0, font=("Times 14 bold"),
             background='black', activebackground='aquamarine',
             foreground='white', activeforeground='black',
             command=boss.funcPyCon)
-        me1.add_command(label='MapApp', font=("Times 14 bold"),
+        self.me1.add_command(label='MapApp', font=("Times 14 bold"),
             background='black', activebackground='aquamarine',
             foreground='yellow', activeforeground='black',
             command=boss.instalpy)
-        me1.add_command(label='Quit', font=("Times 14 bold"),
+        self.me1.add_command(label='Quit', font=("Times 14 bold"),
             background='black', activebackground='red',
             foreground='red', activeforeground='white',
             command=boss.msgExit)
         # Integration of 1st menu
         self.fileMenu.configure(activeforeground='black', activebackground='cyan',
-            menu=me1)
+            menu=self.me1)
 
         # Agenda menu
         self.cmd_agenda = Menubutton(self, text='Agenda', font=("Times 14"),
@@ -1307,7 +1308,6 @@ class Application(Frame):
         """
             To call func in patcaps.py
         """
-        self.mBar
         callResident(self)
 
     def callPatient1(self):
@@ -2149,10 +2149,9 @@ class Application(Frame):
             data from patcaps.py !
         """
         try:
-            # A tester !!!
-            self.mBar.destroy()
+            self.master.destroy()
+            Application.__init__(self)
             self.showPatients()
-            #self.mBar=MenuBar(self)
         except (OSError, ValueError) as p_out:
             print("Error --", p_out)
 

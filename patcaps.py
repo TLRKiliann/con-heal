@@ -27,9 +27,7 @@ def callResident(self):
     self.mBar.meVmed
     self.mBar.mePrint
     self.mBar(self)
-    """
-    self.mBar = MenuBar(self)
-    self.mBar.pack(side=TOP, fill=X, expand=YES)
+    """    
     self.can.delete(ALL)
     self.can.configure(background='DodgerBlue2')
     self.photo=PhotoImage(file='./syno_gif/title_tt3.png')

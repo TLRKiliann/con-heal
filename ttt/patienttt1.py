@@ -660,7 +660,7 @@ comboYear = ttk.Combobox(app,
             ' 2032', ' 2033', ' 2034', ' 2035'], postcommand=changeYear)
 comboYear.bind("<<ComboboxSelected>>", callbackYear)
 comboYear.grid(row=10, column=2, pady=10)
-comboYear.current(21)
+comboYear.current(0)
 
 # Date of finish
 textDateF = tk.Label(app, text="Processing end date :", 

@@ -348,7 +348,7 @@ class MenuBar(Frame):
             menu=me3)
 
         # 14 besoins menu
-        contact = Menubutton(self, text='14 Needs', font=("Times 14"),
+        contact = Menubutton(self, text='Contacts', font=("Times 14"),
             fg='cyan', bg='grey30', relief=GROOVE)
         contact.pack(side=LEFT, padx=3)
         # Partie déroulante du menu 14b

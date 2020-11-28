@@ -11,11 +11,13 @@ def launchData(self):
     """
     self.can.delete(ALL)
     self.can.configure(background='DodgerBlue2')
-
+    
+    txt_pat = StringVar()
+    
     try:
         with open('./newpatient/entryfile.txt', 'r') as namefile:
             line1 = namefile.readline()
-            new_text = line1
+            txt_pat = line1
     except FileNotFoundError as fileout:
         print("No file entryfile.txt exist", fileout)
 

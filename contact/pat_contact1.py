@@ -194,31 +194,28 @@ def Window(self):
     def client_exit(self):
         exit()
     """
-
+    txt_pat = StringVar()
     try:
         with open('./newpatient/entryfile.txt', 'r') as namefile:
             line1 = namefile.readline()
+            txt_pat = line1
     except FileNotFoundError as callfile:
         print("File entryfile.txt doesn't exist !", callfile)
 
     try:
-        self.data_time=line1
-        self.x10, self.y10 = 450, 200
-        self.new_data1=StringVar()
-        self.Data_write=Entry(self.can, textvariable=self.new_data1,
+        txt_pat = line1
+        self.x1, self.y1 = 200, 200
+        self.Data_write = Entry(self.can, textvariable=txt_pat,
             highlightbackground='grey', bd=4)
-        self.new_data1.set(line1)
-        self.Data_write=self.can.create_window(self.x10, self.y10,
-            window=self.Data_write)
+        txt_pat.set(line1)
+        self.Data_write = self.can.create_window(self.x1, self.y1,
+            window = self.Data_write)
     except UnboundLocalError as ub_error1:
         print("+ File 1 not created !", ub_error1)
 
-    self.x11, self.y11 = 200, 200
-    self.b11=Button(self.can, width=8, font=16, bg='blue violet', fg='white',
-        activebackground='MediumOrchid1', text="Enter",
-        command=self.callDataPat)
-    self.fb11=self.can.create_window(self.x11, self.y11, window=self.b11)
-
-
+    self.x1, self.y1 = 400, 200
+    self.b1 = Button(self.can, width=8, font=16, bg='blue violet', fg='white',
+        activebackground='MediumOrchid1', text="Enter", command=self.callDataPat)
+    self.fb1 = self.can.create_window(self.x1, self.y1, window=self.b1)
 
     self.can.configure(scrollregion=self.can.bbox(ALL))

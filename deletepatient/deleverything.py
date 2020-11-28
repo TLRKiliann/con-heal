@@ -304,41 +304,41 @@ def get(Nompatient, entree, PatientID, Num_pat):
     gui.destroy()
 
 gui=Tk()
-gui.title("Delete patient")
-gui.configure(bg='cyan')
+gui.title("Time-Track")
+gui.configure(bg='DodgerBlue2')
 #gui.geometry('300x200')
 
 labelID = Label(gui)
-labelID = Label(text='Number ID : ',
+labelID = Label(text='ID Number : ',
     font="Times 14 bold",
-    fg='RoyalBlue4', bg='cyan')
+    fg='white', bg='DodgerBlue2')
 labelID.pack(pady=10)
 
 Num_pat=StringVar()
-Num_pat.set('number ID')
+Num_pat.set('ID Number')
 PatientID = Entry(gui, textvariable=Num_pat,
-    highlightbackground='light sky blue', bd=4)
+    highlightbackground='SteelBlue', bd=4)
 PatientID.pack()
 
 labelName = Label(gui)
-labelName = Label(text='Enter NAME to delete : ',
+labelName = Label(text='Enter Name To Delete : ',
     font="Times 14 bold",
-    fg='RoyalBlue4', bg='cyan')
+    fg='white', bg='DodgerBlue2')
 labelName.pack(pady=10)
 
 Nompatient=StringVar()
 Nompatient.set('Firstname + Lastname')
 entree = Entry(gui, textvariable=Nompatient,
-    highlightbackground='light sky blue', bd=4)
+    highlightbackground='SteelBlue', bd=4)
 entree.pack()
 
 bouton1 = Button(gui, text="Delete", fg='yellow', bg='RoyalBlue3',
-    width=8, bd=4, highlightbackground='cyan', 
+    width=8, bd=4, highlightbackground='SteelBlue', 
     command = lambda: get(Nompatient, entree, PatientID, Num_pat))
 bouton1.pack(side=LEFT, padx=10, pady=20)
 
 buttQuit=Button(gui, text="Quit", fg='cyan', bg='RoyalBlue3',
-    width=8, bd=4, highlightbackground='cyan',
+    width=8, bd=4, highlightbackground='SteelBlue',
     command=quit)
 buttQuit.pack(side=LEFT, padx=10, pady=20)
 

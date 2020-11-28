@@ -7,6 +7,8 @@ from tkinter import messagebox
 import time
 import datetime as dt
 import subprocess
+from contact.pat_contact1 import Window
+from contact.data_pat1 import launchData
 from boxapp import callBox
 from patcaps import callResident
 from backapp import *
@@ -1516,9 +1518,12 @@ class Application(Frame):
     def patientAgenda24(self):
         subprocess.run('./patient_agenda/origin_agenda24.py', check=True)
 
-    # Contact
+    # Contact patient 1
     def contact_num1(self):
-        subprocess.run('./contact/pat_contact1.py', check=True)
+        Window(self)
+
+    def callDataPat(self):
+        launchData(self)
 
     def contact_num2(self):
         subprocess.run('./contact/pat_contact2.py', check=True)

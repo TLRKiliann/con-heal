@@ -10,7 +10,7 @@ from subprocess import run
 
 window = Tk()
 window.title('ACCESS')
-window.configure(bg='RoyalBlue3')
+window.configure(bg='RoyalBlue4')
 
 def hangonwin():
     """
@@ -50,7 +50,7 @@ def validentry():
 
 labelname = ttk.Label(window, text='Enter username :',
     font=('Times New Roman', 14, 'bold'),
-    foreground="white", background="RoyalBlue3")
+    foreground="white", background="RoyalBlue4")
 labelname.pack(pady=10)
 
 entryname = StringVar()
@@ -59,7 +59,7 @@ namenter.pack(padx=10)
 
 labelpass = ttk.Label(window, text='Enter password :',
     font=('Times New Roman', 14, 'bold'),
-    foreground="white", background="RoyalBlue3")
+    foreground="white", background="RoyalBlue4")
 labelpass.pack(pady=10)
 
 getpass = StringVar()

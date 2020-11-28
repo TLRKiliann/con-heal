@@ -14,8 +14,8 @@ except ImportError as err_report2:
 
 
 gui=Tk()
-gui.title("Enter new patient")
-gui.configure(bg='cyan')
+gui.title("Time-Track")
+gui.configure(bg='DodgerBlue2')
 #gui.geometry('300x200')
 
 def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
@@ -441,79 +441,79 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
 
     #gui.destroy()
 
-labelID = Label(gui, text='ID : ',
+labelID = Label(gui, text='ID Number : ',
     font="Times 14 bold",
-    fg='RoyalBlue4', bg='cyan')
+    fg='white', bg='DodgerBlue2')
 labelID.pack(pady=10)
 
 IDpatient = StringVar()
-IDpatient.set('ID of patient')
+IDpatient.set('Patient ID')
 Patient_num = Entry(gui, textvariable=IDpatient,
-    highlightbackground='light sky blue', bd=4)
+    highlightbackground='SteelBlue', bd=4)
 Patient_num.pack()
 
 labelName = Label(gui, text='Name : ',
     font="Times 14 bold",
-    fg='RoyalBlue4', bg='cyan')
+    fg='white', bg='DodgerBlue2')
 labelName.pack(pady=10)
 
 Patientname = StringVar()
 Patientname.set('Firstname')
 Firstname_pat = Entry(gui, textvariable=Patientname,
-    highlightbackground='light sky blue', bd=4)
+    highlightbackground='SteelBlue', bd=4)
 Firstname_pat.pack()
 
 Surname = StringVar()
 Surname.set("Lastname")
 Sur_pat = Entry(gui, textvariable=Surname,
-    highlightbackground='light sky blue', bd=4)
+    highlightbackground='SteelBlue', bd=4)
 Sur_pat.pack()
 
 labelBirth = Label(gui, text='Birth Date : ', font="Times 14 bold",
-    fg='RoyalBlue4', bg='cyan')
+    fg='white', bg='DodgerBlue2')
 labelBirth.pack(pady=10)
 
 Birthvalue=StringVar()
 Birthvalue.set('Format: 00/00/0000')
 Birth_entree = Entry(gui, textvariable=Birthvalue,
-    highlightbackground='light sky blue', bd=4)
+    highlightbackground='SteelBlue', bd=4)
 Birth_entree.pack()
 
 labelAller = Label(gui, text='Allergy : ',
     font="Times 14 bold",
-    fg='RoyalBlue4', bg='cyan')
+    fg='white', bg='DodgerBlue2')
 labelAller.pack(pady=10)
 
 Allergia = StringVar()
 Allergia.set('None')
 Patient_allergy = Entry(gui, textvariable=Allergia,
-    highlightbackground='light sky blue', bd=4)
+    highlightbackground='SteelBlue', bd=4)
 Patient_allergy.pack()
 
 labelTrans = Label(gui, text='Transmissible Disease : ',
     font="Times 14 bold",
-    fg='RoyalBlue4', bg='cyan')
+    fg='white', bg='DodgerBlue2')
 labelTrans.pack(pady=10)
 
 TransDisVal = StringVar()
 TransDisVal.set('None')
 TransDisease = Entry(gui, textvariable=TransDisVal,
-    highlightbackground='light sky blue', bd=4)
+    highlightbackground='SteelBlue', bd=4)
 TransDisease.pack()
 
 labelDiag = Label(gui, text='Diagnosis : ',
     font="Times 14 bold",
-    fg='RoyalBlue4', bg='cyan')
+    fg='white', bg='DodgerBlue2')
 labelDiag.pack(pady=10)
 
 Diagnosis = StringVar()
 Diagnosis.set('Diagnostic (main)')
 Diagnos_pat = Entry(gui, textvariable=Diagnosis,
-    highlightbackground='light sky blue', bd=4)
+    highlightbackground='SteelBlue', bd=4)
 Diagnos_pat.pack()
 
 bouton1 = Button(gui, text="Enter", width=8, bd=3,
-    fg='yellow', bg='RoyalBlue3', highlightbackground='light sky blue',
+    fg='yellow', bg='RoyalBlue3', highlightbackground='SteelBlue',
     activebackground='dark turquoise',
     command = lambda: get(IDpatient, Patient_num, Patientname, Firstname_pat,
         Surname, Sur_pat, Birthvalue, Birth_entree, Allergia, Patient_allergy, 
@@ -521,7 +521,7 @@ bouton1 = Button(gui, text="Enter", width=8, bd=3,
 bouton1.pack(side=LEFT, padx=10, pady=20)
 
 buttQuit=Button(gui, text="Quit", width=8, bd=3,
-    fg='cyan', bg='RoyalBlue3', highlightbackground='light sky blue',
+    fg='cyan', bg='RoyalBlue3', highlightbackground='SteelBlue',
     activebackground='dark turquoise', command=quit)
 buttQuit.pack(side=LEFT, padx=10, pady=20)
 

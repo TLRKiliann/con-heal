@@ -1228,11 +1228,11 @@ class Application(Frame):
         self.vsb.pack(side=RIGHT, fill=Y)
         self.can.create_window((4,4), window=self.frame, anchor=NW, tags="self.frame")
         self.clock_label = Label(self, text="",
-            fg="white", bg="RoyalBlue3", font=("helvetica", 18), padx=560)
+            fg="white", bg="RoyalBlue3", font=("helvetica", 18, 'bold'))
         #self.clock_label = Label(self, text="", font=('Times New Roman', 18, 'bold'),
         #    fg='snow', bg='RoyalBlue3', padx=560)
         self.clock_label.after(200, self.tick)
-        self.clock_label.pack(side=TOP)
+        self.clock_label.pack(side=TOP, fill=X, expand=YES)
         # Read python - tkinter - self.master.Tk.call(func()) in effbot
 
         # Insertion of picture

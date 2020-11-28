@@ -20,8 +20,8 @@ except ImportError as err_report4:
 
 
 gui=Tk()
-gui.title("Enter new patient")
-gui.configure(bg='cyan')
+gui.title("Time-Track")
+gui.configure(bg='DodgerBlue2')
 #gui.geometry('300x200')
 
 def get(PatientID, patientnum, Firstname, labelfirst, Surname, lblsurname, 
@@ -595,81 +595,81 @@ def searchLine24(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosi
             file24.write(TransDisVal + '\n')
             file24.write(Diagnosis + '\n')
 
-labelID = Label(gui, text='ID : ',
+labelID = Label(gui, text='ID Number: ',
     font="Times 14 bold",
-    fg='RoyalBlue4', bg='cyan')
+    fg='white', bg='DodgerBlue2')
 labelID.pack(pady=10)
 
 PatientID=StringVar()
-PatientID.set('PatientID')
+PatientID.set('Patient ID')
 patientnum = Entry(gui, textvariable=PatientID,
-    highlightbackground='light sky blue', bd=4)
+    highlightbackground='SteelBlue', bd=4)
 patientnum.pack()
 
 labelName = Label(gui, text='Name : ',
     font="Times 14 bold",
-    fg='RoyalBlue4', bg='cyan')
+    fg='white', bg='DodgerBlue2')
 labelName.pack(pady=10)
 
 Firstname=StringVar()
 Firstname.set('Firstname')
 labelfirst = Entry(gui, textvariable=Firstname,
-    highlightbackground='light sky blue', bd=4)
+    highlightbackground='DodgerBlue2', bd=4)
 labelfirst.pack()
 
 Surname=StringVar()
-Surname.set('Surname')
+Surname.set('Lastname')
 lblsurname = Entry(gui, textvariable=Surname,
-    highlightbackground='light sky blue', bd=4)
+    highlightbackground='SteelBlue', bd=4)
 lblsurname.pack()
 
 labelBirth = Label(gui, text='Birth Date : ', font="Times 14 bold",
-    fg='RoyalBlue4', bg='cyan')
+    fg='white', bg='DodgerBlue2')
 labelBirth.pack(pady=10)
 
 Birthvalue=StringVar()
 Birthvalue.set('Format: 00/00/0000')
 Birth_entree = Entry(gui, textvariable=Birthvalue,
-    highlightbackground='light sky blue', bd=4)
+    highlightbackground='SteelBlue', bd=4)
 Birth_entree.pack()
 
 labelAller = Label(gui)
 labelAller = Label(text='Allergy : ',
     font="Times 14 bold",
-    fg='RoyalBlue4', bg='cyan')
+    fg='white', bg='DodgerBlue2')
 labelAller.pack(pady=10)
 
 Allergia=StringVar()
 Allergia.set('None')
 Patient_allergy = Entry(gui, textvariable=Allergia,
-    highlightbackground='light sky blue', bd=4)
+    highlightbackground='SteelBlue', bd=4)
 Patient_allergy.pack()
 
 labelTrans = Label(gui, text='Transmissible Disease : ',
     font="Times 14 bold",
-    fg='RoyalBlue4', bg='cyan')
+    fg='white', bg='DodgerBlue2')
 labelTrans.pack(pady=10)
 
 TransDisVal = StringVar()
 TransDisVal.set('None')
 TransDisease = Entry(gui, textvariable=TransDisVal,
-    highlightbackground='light sky blue', bd=4)
+    highlightbackground='SteelBlue', bd=4)
 TransDisease.pack()
 
 labelDiag = Label(gui, text='Diagnosis : ',
     font="Times 14 bold",
-    fg='RoyalBlue4', bg='cyan')
+    fg='white', bg='DodgerBlue2')
 labelDiag.pack(pady=10)
 
 Diagnosis = StringVar()
 Diagnosis.set('Diagnostic (main)')
 Diagnos_pat = Entry(gui, textvariable=Diagnosis,
-    highlightbackground='light sky blue', bd=4)
+    highlightbackground='SteelBlue', bd=4)
 Diagnos_pat.pack()
 
 bouton1 = Button(gui, text="Enter", width=8, bd=4,
     fg='yellow', bg='RoyalBlue3',
-    highlightbackground='light sky blue',
+    highlightbackground='SteelBlue',
     activebackground='dark turquoise',
     command = lambda: get(PatientID, patientnum, Firstname, labelfirst,
         Surname, lblsurname, Birthvalue, Birth_entree, Allergia,
@@ -678,7 +678,7 @@ bouton1.pack(side=LEFT, padx=10, pady=20)
 
 buttQuit=Button(gui, text="Quit", width=8, bd=4,
     fg='cyan', bg='RoyalBlue3',
-    highlightbackground='light sky blue',
+    highlightbackground='SteelBlue',
     activebackground='dark turquoise', command=quit)
 buttQuit.pack(side=LEFT, padx=10, pady=20)
 

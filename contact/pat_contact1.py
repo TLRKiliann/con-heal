@@ -194,7 +194,6 @@ def Window(self):
     def client_exit(self):
         exit()
     """
-    txt_pat = StringVar()
     try:
         with open('./newpatient/entryfile.txt', 'r') as namefile:
             line1 = namefile.readline()
@@ -205,6 +204,7 @@ def Window(self):
     try:
         txt_pat = line1
         self.x1, self.y1 = 200, 200
+        txt_pat = StringVar()
         self.Data_write = Entry(self.can, textvariable=txt_pat,
             highlightbackground='grey', bd=4)
         txt_pat.set(line1)

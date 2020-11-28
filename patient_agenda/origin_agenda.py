@@ -133,24 +133,24 @@ if __name__ == '__main__':
 
             self.data_time = StringVar()
             self.entryname = tk.Entry(self.parent, textvariable=self.data_time,
-                font='Times 14', width=22, fg='red2', bg='pale turquoise', bd=2,
+                font='Times 14', width=22, fg='RoyalBlue4', bg='pale turquoise', bd=2,
                 justify=CENTER)
             self.data_time.set(line_a)
 
             self.choose_btn = tk.Button(self.parent, text="1 - Choice a date",
-                font="Times 14", width=20, height=1, fg='yellow', bg='RoyalBlue3',
+                font="Times 14", width=20, height=1, fg='white', bg='DodgerBlue2',
                 activebackground='dark turquoise', command=self.popup)
             self.show_btn = tk.Button(self.parent, text='2 - Fix appointment',
-                font="Times 14", width=20, height=1,fg='yellow', bg='RoyalBlue3',
+                font="Times 14", width=20, height=1,fg='white', bg='DodgerBlue2',
                 activebackground='dark turquoise', command=self.print_selected_date)
             self.buttAgenda = tk.Button(self.parent, text='Agenda', font="Times 14",
-                width=20, height=1, fg='cyan', bg='RoyalBlue3', activebackground='dark turquoise',
+                width=20, height=1, fg='cyan', bg='DodgerBlue2', activebackground='dark turquoise',
                 command=self.accessDate)
             self.buttLook = tk.Button(self.parent, text='To change rdv', font="Times 14",
-                width=20, height=1, fg='cyan', bg='RoyalBlue3', activebackground='dark turquoise',
+                width=20, height=1, fg='cyan', bg='DodgerBlue2', activebackground='dark turquoise',
                 command=self.accessLook)
             self.butQuit = tk.Button(self.parent, text='Quit', font="Times 14", width=20,
-                height=1, fg='white', bg='RoyalBlue3', activebackground='dark turquoise',
+                height=1, fg='white', bg='DodgerBlue2', activebackground='dark turquoise',
                 activeforeground='red', command=quit)
             self.labelo.grid()
             self.entryname.grid()

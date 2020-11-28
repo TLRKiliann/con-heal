@@ -60,26 +60,186 @@ class Window(Frame):
 
 
     def patient(self):
-        textBox = Text(self, height=18, width=50, font=18)
-        textBox.insert(textBox.get())(INSERT, "Patient Name : \n\n\n")
-        textBox.insert(INSERT, "Phone : \n\n\n")
-        textBox.insert(INSERT, "Address : \n\n\n")
-        textBox.insert(INSERT, "e-mail : \n\n\n")
-        textBox.insert(INSERT, "Assurance : \n\n\n")
-        textBox.insert(INSERT, "Miscellanous : \n\n\n")
-        textBox.pack(padx=30, pady=10)
+
+        textPat = StringVar()
+        patEntry = Entry(self, textvariable=textPat)
+        textPat.set(line1)
+        patEntry.pack()
+
+        buttonPat = Button(self, text='Enter', command='')
+        buttonPat.pack()
+
+        textPhone = IntVar()
+        phoneEntry = Entry(self, textvariable=textPhone)
+        textPhone.set("")
+        phoneEntry.pack()
+
+        buttonPhone = Button(self, text='Enter', command='')
+        buttonPhone.pack()
+
+        textAddr = StringVar()
+        addrEntry = Entry(self, textvariable=textAddr)
+        textAddr.set("")
+        addrEntry.pack()
+
+        buttonAddr = Button(self, text='Enter', command='')
+        buttonAddr.pack()
+
+        textMail = StringVar()
+        mailEntry = Entry(self, textvariable=textMail)
+        textMail.set("")
+        mailEntry.pack()
+
+        buttonMail = Button(self, text='Enter', command='')
+        buttonMail.pack()
+
+        textAss = StringVar()
+        assEntry = Entry(self, textvariable=textAss)
+        textAss.set("")
+        assEntry.pack()
+
+        buttonAss = Button(self, text='Enter', command='')
+        buttonAss.pack()
+
+        textMisce = StringVar()
+        miscEntry = Entry(self, textvariable=textMisce)
+        textMisce.set("")
+        miscEntry.pack()
+
+        buttonMisce = Button(self, text='Enter', command='')
+        buttonMisce.pack()
 
     def family(self):
-        pass
+        textPat = StringVar()
+        patEntry = Entry(self, textvariable=textPat)
+        textPat.set(line1)
+        patEntry.pack()
+
+        buttonPat = Button(self, text='Enter', command='')
+        buttonPat.pack()
+
+        textPhone = IntVar()
+        phoneEntry = Entry(self, textvariable=textPhone)
+        textPhone.set("")
+        phoneEntry.pack()
+
+        buttonPhone = Button(self, text='Enter', command='')
+        buttonPhone.pack()
+
+        textAddr = StringVar()
+        addrEntry = Entry(self, textvariable=textAddr)
+        textAddr.set("")
+        addrEntry.pack()
+
+        buttonAddr = Button(self, text='Enter', command='')
+        buttonAddr.pack()
+
+        textMail = StringVar()
+        mailEntry = Entry(self, textvariable=textMail)
+        textMail.set("")
+        mailEntry.pack()
+
+        buttonMail = Button(self, text='Enter', command='')
+        buttonMail.pack()
 
     def doctor(self):
-        pass
+        textPat = StringVar()
+        patEntry = Entry(self, textvariable=textPat)
+        textPat.set(line1)
+        patEntry.pack()
+
+        buttonPat = Button(self, text='Enter', command='')
+        buttonPat.pack()
+
+        textPhone = IntVar()
+        phoneEntry = Entry(self, textvariable=textPhone)
+        textPhone.set("")
+        phoneEntry.pack()
+
+        buttonPhone = Button(self, text='Enter', command='')
+        buttonPhone.pack()
+
+        textAddr = StringVar()
+        addrEntry = Entry(self, textvariable=textAddr)
+        textAddr.set("")
+        addrEntry.pack()
+
+        buttonAddr = Button(self, text='Enter', command='')
+        buttonAddr.pack()
+
+        textMail = StringVar()
+        mailEntry = Entry(self, textvariable=textMail)
+        textMail.set("")
+        mailEntry.pack()
+
+        buttonMail = Button(self, text='Enter', command='')
+        buttonMail.pack()
 
     def reseau(self):
-        pass
+        textPat = StringVar()
+        patEntry = Entry(self, textvariable=textPat)
+        textPat.set(line1)
+        patEntry.pack()
+
+        buttonPat = Button(self, text='Enter', command='')
+        buttonPat.pack()
+
+        textPhone = IntVar()
+        phoneEntry = Entry(self, textvariable=textPhone)
+        textPhone.set("")
+        phoneEntry.pack()
+
+        buttonPhone = Button(self, text='Enter', command='')
+        buttonPhone.pack()
+
+        textAddr = StringVar()
+        addrEntry = Entry(self, textvariable=textAddr)
+        textAddr.set("")
+        addrEntry.pack()
+
+        buttonAddr = Button(self, text='Enter', command='')
+        buttonAddr.pack()
+
+        textMail = StringVar()
+        mailEntry = Entry(self, textvariable=textMail)
+        textMail.set("")
+        mailEntry.pack()
+
+        buttonMail = Button(self, text='Enter', command='')
+        buttonMail.pack()
 
     def curateur(self):
-        pass
+        textPat = StringVar()
+        patEntry = Entry(self, textvariable=textPat)
+        textPat.set(line1)
+        patEntry.pack()
+
+        buttonPat = Button(self, text='Enter', command='')
+        buttonPat.pack()
+
+        textPhone = IntVar()
+        phoneEntry = Entry(self, textvariable=textPhone)
+        textPhone.set("")
+        phoneEntry.pack()
+
+        buttonPhone = Button(self, text='Enter', command='')
+        buttonPhone.pack()
+
+        textAddr = StringVar()
+        addrEntry = Entry(self, textvariable=textAddr)
+        textAddr.set("")
+        addrEntry.pack()
+
+        buttonAddr = Button(self, text='Enter', command='')
+        buttonAddr.pack()
+
+        textMail = StringVar()
+        mailEntry = Entry(self, textvariable=textMail)
+        textMail.set("")
+        mailEntry.pack()
+
+        buttonMail = Button(self, text='Enter', command='')
+        buttonMail.pack()
 
     def pat_construct(self):
         textBox = Text(self, height=18, width=50, font=18)
@@ -97,17 +257,14 @@ class Window(Frame):
         textBox.insert(INSERT, "Phone : \n\n\n")
         textBox.insert(INSERT, "Address : \n\n\n")
         textBox.insert(INSERT, "e-mail : \n\n\n")
-        textBox.insert(INSERT, "Assurance : \n\n\n")
-        textBox.insert(INSERT, "Miscellanous : \n\n\n")
         textBox.pack(padx=30, pady=10)
+
     def doc_construct(self):
         textBox = Text(self, height=18, width=50, font=18)
         textBox.insert(INSERT, "Doctor : \n\n\n")
         textBox.insert(INSERT, "Phone : \n\n\n")
         textBox.insert(INSERT, "Address : \n\n\n")
         textBox.insert(INSERT, "e-mail : \n\n\n")
-        textBox.insert(INSERT, "Assurance : \n\n\n")
-        textBox.insert(INSERT, "Miscellanous : \n\n\n")
         textBox.pack(padx=30, pady=10)
 
     def res_construct(self):
@@ -116,8 +273,6 @@ class Window(Frame):
         textBox.insert(INSERT, "Phone : \n\n\n")
         textBox.insert(INSERT, "Address : \n\n\n")
         textBox.insert(INSERT, "e-mail : \n\n\n")
-        textBox.insert(INSERT, "Assurance : \n\n\n")
-        textBox.insert(INSERT, "Miscellanous : \n\n\n")
         textBox.pack(padx=30, pady=10)
 
     def guard_construct(self):
@@ -126,10 +281,7 @@ class Window(Frame):
         textBox.insert(INSERT, "Phone : \n\n\n")
         textBox.insert(INSERT, "Address : \n\n\n")
         textBox.insert(INSERT, "e-mail : \n\n\n")
-        textBox.insert(INSERT, "Assurance : \n\n\n")
-        textBox.insert(INSERT, "Miscellanous : \n\n\n")
         textBox.pack(padx=30, pady=10)
-
 
     def client_exit(self):
         exit()

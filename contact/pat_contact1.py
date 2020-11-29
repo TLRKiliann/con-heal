@@ -172,7 +172,7 @@ def Window(self):
         self.t1.insert(INSERT, "Miscellanous : \n\n\n")
         self.ft1=self.can.create_window(self.x1, self.y1, window=self.t1)
 
-    def get(phonetxt, phone_write):
+    def phoneData(phonetxt, phone_write):
         """
             Next page after enter patient 1
         """
@@ -261,7 +261,7 @@ def Window(self):
     self.b22 = Button(self.can, text="Enter", font=16,
         width=8, bd=3, bg='RoyalBlue3', fg='white',
         highlightbackground='RoyalBlue3',
-        activebackground='pale turquoise', command = lambda: get(phonetxt, phone_write))
+        activebackground='pale turquoise', command = lambda: honeData(phonetxt, phone_write))
     self.fb22 = self.can.create_window(self.x22, self.y22, window=self.b22)
 
     # Address

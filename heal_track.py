@@ -8,7 +8,7 @@ import time
 import datetime as dt
 import subprocess
 from contact.pat_contact1 import Window
-from contact.data_pat1 import launchData
+#from contact.data_pat1 import launchData
 from boxapp import callBox
 from patcaps import callResident
 from backapp import *
@@ -1522,8 +1522,8 @@ class Application(Frame):
     def contact_num1(self):
         Window(self)
 
-    def callDataPat(self):
-        launchData(self)
+    #def callDataPat(self):
+    #    launchData(self)
 
     def contact_num2(self):
         subprocess.run('./contact/pat_contact2.py', check=True)

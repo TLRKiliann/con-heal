@@ -206,6 +206,42 @@ def Window(self):
         self.t1.insert(INSERT, "Miscellanous : \n\n\n")
         self.ft1=self.can.create_window(self.x1, self.y1, window=self.t1)
 
+    def assuData(assurance, assu_write):
+        """
+            Next page after enter patient 1
+        """
+        try:
+            with open('./newpatient/entryfile.txt', 'r') as namefile:
+                line1 = namefile.readline()
+                txt_pat = line1
+        except FileNotFoundError as fileout:
+            print("No file entryfile.txt exist", fileout)
+
+        try:
+            with open('./contact/contactphone.txt', 'a+') as assufile:
+                assufile.write('Assurance : ' + str(assurance.get()) + '\n')
+        except FileNotFoundError as err_w:
+            print("No file contactphone.txt exist", err_w)
+
+        try:
+            with open('./contact/contactphone.txt', 'r') as assu_r:
+                phone = assu_r.readline()
+                assu = assu_r.readline()
+        except FileNotFoundError as err_r:
+            print("No file contactphone.txt exist", err_r)
+
+        self.x1, self.y1 = 950, 350
+        self.t1 = Text(self.can, height=30, width=40, font=18, relief=SUNKEN)
+        self.t1.delete('1.0', END)
+        self.t1.update()
+        self.t1.insert(INSERT, "Patient Name : " + line1 + "\n\n")
+        self.t1.insert(INSERT, phone + "\n\n\n")
+        self.t1.insert(INSERT, "Address : \n\n\n")
+        self.t1.insert(INSERT, "e-mail : \n\n\n")
+        self.t1.insert(INSERT, assu + "\n\n\n")
+        self.t1.insert(INSERT, "Miscellanous : \n\n\n")
+        self.ft1=self.can.create_window(self.x1, self.y1, window=self.t1)
+
     # Name
     self.x1, self.y1 = 100, 100
     self.labelname = Label(self.can, text="Patient Name :",
@@ -261,7 +297,7 @@ def Window(self):
     self.b22 = Button(self.can, text="Enter", font=16,
         width=8, bd=3, bg='RoyalBlue3', fg='white',
         highlightbackground='RoyalBlue3',
-        activebackground='pale turquoise', command = lambda: honeData(phonetxt, phone_write))
+        activebackground='pale turquoise', command = lambda: phoneData(phonetxt, phone_write))
     self.fb22 = self.can.create_window(self.x22, self.y22, window=self.b22)
 
     # Address
@@ -317,5 +353,28 @@ def Window(self):
         highlightbackground='RoyalBlue3',
         activebackground='pale turquoise', command="")
     self.fb42 = self.can.create_window(self.x42, self.y42, window=self.b42)
+
+    # Assurance
+    self.x50, self.y50 = 100, 350
+    self.mailabel = Label(self.can, text="Assurance :",
+        font=('helvetica', 18, 'bold'),
+        bg='DodgerBlue2', fg='white')
+    self.mailabel = self.can.create_window(self.x50, self.y50,
+        window = self.mailabel)
+
+    self.x51, self.y51 = 300, 350
+    assurance = StringVar()
+    assu_write = Entry(self.can, textvariable=assurance,
+        highlightbackground='grey', bd=3)
+    assurance.set("")
+    assu_write = self.can.create_window(self.x51, self.y51,
+        window = assu_write)
+
+    self.x52, self.y52 = 500, 350
+    self.b52 = Button(self.can, text="Enter", font=16,
+        width=8, bd=3, bg='RoyalBlue3', fg='white',
+        highlightbackground='RoyalBlue3',
+        activebackground='pale turquoise', command = lambda: assuData(assurance, assu_write))
+    self.fb52 = self.can.create_window(self.x52, self.y52, window=self.b52)
 
     self.can.configure(scrollregion=self.can.bbox(ALL))

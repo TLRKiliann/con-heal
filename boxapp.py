@@ -39,7 +39,7 @@ def callBox(self):
     # To go to resident page
     self.x6, self.y6 = 100, 40
     self.b6=Button(self.can, width=10, font=16, bd=3, bg='RoyalBlue3', fg='white', 
-        highlightbackground='blue', activebackground='dark turquoise',
+        highlightbackground='cyan', activebackground='pale turquoise',
         activeforeground='white', text="Resident page", command=self.showPatients)
     self.fb6=self.can.create_window(self.x6, self.y6, window=self.b6)
 

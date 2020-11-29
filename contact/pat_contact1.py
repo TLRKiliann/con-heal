@@ -25,8 +25,8 @@ def Window(self):
         except FileNotFoundError as fileout:
             print("No file entryfile.txt exist", fileout)
 
-        self.x1, self.y1 = 900, 350
-        self.t1 = Text(self.can, height=30, width=40, font=18, relief=SUNKEN)
+        self.x1, self.y1 = 950, 350
+        self.t1 = Text(self.can, height=25, width=40, font=18, relief=SUNKEN)
         self.t1.insert(INSERT, "Patient Name : " + line1 + "\n\n")
         self.t1.insert(INSERT, "Native : \n\n")
         self.t1.insert(INSERT, "Phone : \n\n")
@@ -59,8 +59,8 @@ def Window(self):
         except FileNotFoundError as err_r:
             print("No file contact1.txt exist", err_r)
 
-        self.x1, self.y1 = 900, 350
-        self.t1 = Text(self.can, height=30, width=40, font=18, relief=SUNKEN)
+        self.x1, self.y1 = 950, 350
+        self.t1 = Text(self.can, height=25, width=40, font=18, relief=SUNKEN)
         self.t1.insert(INSERT, "Patient Name : " + line1 + "\n\n")
         self.t1.insert(INSERT, "Birthdate : " + line2 + "\n\n")
         self.t1.insert(INSERT, "Native : " + read_nativa + "\n\n")
@@ -96,8 +96,8 @@ def Window(self):
         except FileNotFoundError as err_r:
             print("No file contact1.txt exist", err_r)
 
-        self.x1, self.y1 = 900, 350
-        self.t1 = Text(self.can, height=30, width=40, font=18, relief=SUNKEN)
+        self.x1, self.y1 = 950, 350
+        self.t1 = Text(self.can, height=25, width=40, font=18, relief=SUNKEN)
         self.t1.insert(INSERT, "Patient Name : " + line1 + "\n\n")
         self.t1.insert(INSERT, "Birthdate : " + line2 + "\n\n")
         self.t1.insert(INSERT, "Phone : " + str(phonetxt.get()) + "\n\n")
@@ -132,8 +132,8 @@ def Window(self):
         except FileNotFoundError as err_r:
             print("No file contact1.txt exist", err_r)
 
-        self.x1, self.y1 = 900, 350
-        self.t1 = Text(self.can, height=30, width=40, font=18, relief=SUNKEN)
+        self.x1, self.y1 = 950, 350
+        self.t1 = Text(self.can, height=25, width=40, font=18, relief=SUNKEN)
         self.t1.delete('1.0', END)
         self.t1.update()
         self.t1.insert(INSERT, "Patient Name : " + line1 + "\n\n")
@@ -172,8 +172,8 @@ def Window(self):
         except FileNotFoundError as err_r:
             print("No file contact1.txt exist", err_r)
 
-        self.x1, self.y1 = 900, 350
-        self.t1 = Text(self.can, height=30, width=40, font=18, relief=SUNKEN)
+        self.x1, self.y1 = 950, 350
+        self.t1 = Text(self.can, height=25, width=40, font=18, relief=SUNKEN)
         self.t1.delete('1.0', END)
         self.t1.update()
         self.t1.insert(INSERT, "Patient Name : " + line1 + "\n\n")
@@ -187,6 +187,7 @@ def Window(self):
         self.ft1=self.can.create_window(self.x1, self.y1, window=self.t1)
 
     nameData()
+    # !!! In one file for function txtbox !!!
     # Label title
     self.x11, self.y11 = 625, 20
     self.labelname = Label(self.can, text="Contact",
@@ -237,7 +238,7 @@ def Window(self):
     nativa_write = self.can.create_window(self.x16, self.y16,
         window = nativa_write)
 
-    self.x17, self.y17 = 550, 250
+    self.x17, self.y17 = 575, 250
     self.b17 = Button(self.can, text="Enter", font=16,
         width=8, bd=3, bg='RoyalBlue3', fg='white',
         highlightbackground='RoyalBlue3',
@@ -259,7 +260,7 @@ def Window(self):
     phone_write = self.can.create_window(self.x21, self.y21,
         window = phone_write)
 
-    self.x22, self.y22 = 550, 300
+    self.x22, self.y22 = 575, 300
     self.b22 = Button(self.can, text="Enter", font=16,
         width=8, bd=3, bg='RoyalBlue3', fg='white',
         highlightbackground='RoyalBlue3',
@@ -290,7 +291,7 @@ def Window(self):
     self.city_write = self.can.create_window(self.x32, self.y32,
         window = self.city_write)
 
-    self.x33, self.y33 = 550, 400
+    self.x33, self.y33 = 575, 400
     self.b33 = Button(self.can, text="Enter", font=16,
         width=8, bd=3, bg='RoyalBlue3', fg='white',
         highlightbackground='RoyalBlue3',
@@ -313,7 +314,7 @@ def Window(self):
     self.mail_write = self.can.create_window(self.x41, self.y41,
         window = self.mail_write)
 
-    self.x42, self.y42 = 550, 450
+    self.x42, self.y42 = 575, 450
     self.b42 = Button(self.can, text="Enter", font=16,
         width=8, bd=3, bg='RoyalBlue3', fg='white',
         highlightbackground='RoyalBlue3',
@@ -335,7 +336,7 @@ def Window(self):
     assu_write = self.can.create_window(self.x51, self.y51,
         window = assu_write)
 
-    self.x52, self.y52 = 550, 500
+    self.x52, self.y52 = 575, 500
     self.b52 = Button(self.can, text="Enter", font=16,
         width=8, bd=3, bg='RoyalBlue3', fg='white',
         highlightbackground='RoyalBlue3',
@@ -357,7 +358,7 @@ def Window(self):
     poli_write = self.can.create_window(self.x51, self.y51,
         window = poli_write)
 
-    self.x52, self.y52 = 550, 550
+    self.x52, self.y52 = 575, 550
     self.b52 = Button(self.can, text="Enter", font=16,
         width=8, bd=3, bg='RoyalBlue3', fg='white',
         highlightbackground='RoyalBlue3',

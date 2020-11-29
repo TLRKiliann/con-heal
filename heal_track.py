@@ -348,19 +348,123 @@ class MenuBar(Frame):
         cmd_agenda.configure(activeforeground='black', activebackground='cyan',
             menu=me3)
 
-        # 14 besoins menu
+        # Contact menu
         contact = Menubutton(self, text='Contacts', font=("Times 14"),
             fg='cyan', bg='grey30', relief=GROOVE)
         contact.pack(side=LEFT, padx=3)
         # Partie déroulante du menu 14b
         contchck = Menu(contact)
-        contchck.add_command(label=new_text, font=('Times 12'), background='black',
+        me1 = Menu(contchck)
+        me1.add_command(label='Patient', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num1)
-        #contchck.add_separator()
-        contchck.add_command(label=new_text2, font=('Times 12'), background='black',
+        me1.add_command(label='Familiy', font=('Times 12'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.contact_num1)
+        me1.add_command(label='Doctor', font=('Times 12'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.contact_num1)
+        me1.add_command(label='Home care system', font=('Times 12'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.contact_num1)
+        contchck.add_cascade(label=new_text, underline=0, font=('Times 12'),
+            background='black', foreground='cyan', 
+            activeforeground='black', activebackground='cyan', menu=me1)
+        me2 = Menu(contchck)
+        me2.add_command(label='Patient', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num2)
+        me2.add_command(label='Familiy', font=('Times 12'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.contact_num1)
+        me2.add_command(label='Doctor', font=('Times 12'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.contact_num1)
+        me2.add_command(label='Home care system', font=('Times 12'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.contact_num1)
+        contchck.add_cascade(label=new_text2, underline=0, font=('Times 12'),
+            background='black', foreground='cyan', 
+            activeforeground='black', activebackground='cyan', menu=me2)
+        me3 = Menu(contchck)
+        me3.add_command(label='Familiy', font=('Times 12'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.contact_num1)
+        me3.add_command(label='Doctor', font=('Times 12'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.contact_num1)
+        me3.add_command(label='Home care system', font=('Times 12'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.contact_num1)
+        contchck.add_cascade(label=new_text3, underline=0, font=('Times 12'),
+            background='black', foreground='cyan', 
+            activeforeground='black', activebackground='cyan', menu=me3)
+        me4 = Menu(contchck)
+        me4.add_command()
+        contchck.add_cascade()
+        me5 = Menu(contchck)
+        me5.add_command()
+        contchck.add_cascade()
+        me6 = Menu(contchck)
+        me6.add_command()
+        contchck.add_cascade()
+        me7 = Menu(contchck)
+        me7.add_command()
+        contchck.add_cascade()
+        me8 = Menu(contchck)
+        me8.add_command()
+        contchck.add_cascade()
+        me9 = Menu(contchck)
+        me9.add_command()
+        contchck.add_cascade()
+        me10 = Menu(contchck)
+        me10.add_command()
+        contchck.add_cascade()
+        me11 = Menu(contchck)
+        me11.add_command()
+        contchck.add_cascade()
+        me12 = Menu(contchck)
+        me12.add_command()
+        contchck.add_cascade()
+        me13 = Menu(contchck)
+        me13.add_command()
+        contchck.add_cascade()
+        me14 = Menu(contchck)
+        me14.add_command()
+        contchck.add_cascade()
+        me15 = Menu(contchck)
+        me15.add_command()
+        contchck.add_cascade()
+        me16 = Menu(contchck)
+        me16.add_command()
+        contchck.add_cascade()
+        me17 = Menu(contchck)
+        me17.add_command()
+        contchck.add_cascade()
+        me18 = Menu(contchck)
+        me18.add_command()
+        contchck.add_cascade()
+        me19 = Menu(contchck)
+        me19.add_command()
+        contchck.add_cascade()
+        me20 = Menu(contchck)
+        me20.add_command()
+        contchck.add_cascade()
+        me21 = Menu(contchck)
+        me21.add_command()
+        contchck.add_cascade()
+        me22 = Menu(contchck)
+        me22.add_command()
+        contchck.add_cascade()
+        me23 = Menu(contchck)
+        me23.add_command()
+        contchck.add_cascade()
+        me24 = Menu(contchck)
+        me24.add_command()
+        contchck.add_cascade()
+        contact.configure(activeforeground='black', activebackground='cyan', menu=contchck)
+
+
         #contchck.add_separator()
         contchck.add_command(label=new_text3, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
@@ -1016,11 +1120,11 @@ class MenuBar(Frame):
             menu=mePrint)
 
         # Menu for showing all Graphs togather per patient
-        self.cmd_backup=Menubutton(self, text='Global', font=("Times 14"), fg='cyan',
+        cmd_backup=Menubutton(self, text='Global', font=("Times 14"), fg='cyan',
             bg='grey30', relief=GROOVE)
-        self.cmd_backup.pack(side=LEFT, padx=3)
+        cmd_backup.pack(side=LEFT, padx=3)
         # drop-down portion of Graphics menu
-        me1 = Menu(self.cmd_backup)
+        me1 = Menu(cmd_backup)
         me2 = Menu(me1)
         me2.add_command(label='All Files.txt', underline=0, font=('Times 12'),
             background='black', activebackground='cyan',
@@ -1208,7 +1312,7 @@ class MenuBar(Frame):
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me25)
         # Integration of Graph menu
-        self.cmd_backup.configure(activeforeground='black', activebackground='cyan', menu=me1)
+        cmd_backup.configure(activeforeground='black', activebackground='cyan', menu=me1)
 
 # Application principale (Main app)
 class Application(Frame):

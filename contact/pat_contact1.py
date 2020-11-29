@@ -7,14 +7,13 @@ from tkinter import *
 
 #def Window(self):
 def Window(self):
-    # Define settings upon initialization. Here you can specify
-    #bframe.__init__(self, bg='RoyalBlue2')
+    """
+        Main function to define 
+        design for contact interface.
+    """
     self.can.delete(ALL)
     self.can.configure(background='DodgerBlue2')
     """
-
-
-
     def family(self):
         textPat = StringVar()
         patEntry = Entry(self, textvariable=textPat)

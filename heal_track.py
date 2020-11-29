@@ -13,7 +13,7 @@ from boxapp import callBox
 from patcaps import callResident
 from backapp import *
 from Backup.backupfile import dataBackToSave
-import passw
+#import passw
 
 
 class ScrollCanvas(Frame):
@@ -1253,28 +1253,28 @@ class Application(Frame):
         self.button1 = Button(self, text="Info", font=('Times 14 bold'),
             bg='grey17', fg='cyan', command = self.frameInfo)
         self.button1.configure(width=10, bd=3, highlightbackground='grey10',
-            activebackground='dark turquoise')
+            activebackground='pale turquoise')
         self.button1_window = self.can.create_window(75, 30, anchor=CENTER,
             window=self.button1)
         # Pycon button
         self.button2 = Button(self, text="DATABASE", font=('Times 18 bold'),
-            bg='grey17', fg='cyan', command = self.funcPyCon)
-        self.button2.configure(width=15, bd=3, highlightbackground='grey10',
-            activebackground='dark turquoise')
+            bg='RoyalBlue3', fg='white', command = self.funcPyCon)
+        self.button2.configure(width=15, bd=3, highlightbackground='RoyalBlue4',
+            activebackground='pale turquoise')
         self.button2_window = self.can.create_window(300, 450, anchor=CENTER,
             window=self.button2)
         # Synopsis button
         self.button3 = Button(self, text="TEXTBOX", font=('Times 18 bold'),
-            bg='grey17', fg='cyan', command = self.showSynopsis)
-        self.button3.configure(width=15, bd=3, highlightbackground='grey10',
-            activebackground='dark turquoise')
+            bg='RoyalBlue3', fg='white', command = self.showSynopsis)
+        self.button3.configure(width=15, bd=3, highlightbackground='RoyalBlue4',
+            activebackground='pale turquoise')
         self.button3_window = self.can.create_window(625, 450, anchor=CENTER,
             window=self.button3)
         # Psychotabs button
         self.button4 = Button(self, text="RESIDENTS", font=('Times 18 bold'),
-            bg='grey17', fg='cyan', command = self.showPatients)
-        self.button4.configure(width=15, bd=3, highlightbackground='grey10',
-            activebackground='dark turquoise')
+            bg='RoyalBlue3', fg='white', command = self.showPatients)
+        self.button4.configure(width=15, bd=3, highlightbackground='RoyalBlue4',
+            activebackground='pale turquoise')
         self.button4_window = self.can.create_window(950, 450, anchor=CENTER,
             window=self.button4)
 

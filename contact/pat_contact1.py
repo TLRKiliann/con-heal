@@ -162,7 +162,7 @@ def Window(self):
         except FileNotFoundError as fileout:
             print("No file entryfile.txt exist", fileout)
 
-        self.x1, self.y1 = 950, 350
+        self.x1, self.y1 = 900, 350
         self.t1 = Text(self.can, height=30, width=40, font=18, relief=SUNKEN)
         self.t1.insert(INSERT, "Patient Name : " + line1 + "\n\n")
         self.t1.insert(INSERT, "Phone : \n\n\n")
@@ -196,7 +196,7 @@ def Window(self):
         except FileNotFoundError as err_r:
             print("No file contactphone.txt exist", err_r)
 
-        self.x1, self.y1 = 950, 350
+        self.x1, self.y1 = 900, 350
         self.t1 = Text(self.can, height=30, width=40, font=18, relief=SUNKEN)
         self.t1.insert(INSERT, "Patient Name : " + line1 + "\n\n")
         self.t1.insert(INSERT, "Phone : " + str(phonetxt.get()) + "\n\n\n")
@@ -230,7 +230,7 @@ def Window(self):
         except FileNotFoundError as err_r:
             print("No file contactphone.txt exist", err_r)
 
-        self.x1, self.y1 = 950, 350
+        self.x1, self.y1 = 900, 350
         self.t1 = Text(self.can, height=30, width=40, font=18, relief=SUNKEN)
         self.t1.delete('1.0', END)
         self.t1.update()
@@ -243,7 +243,7 @@ def Window(self):
         self.ft1=self.can.create_window(self.x1, self.y1, window=self.t1)
 
     # Name
-    self.x1, self.y1 = 100, 100
+    self.x1, self.y1 = 200, 100
     self.labelname = Label(self.can, text="Patient Name :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
@@ -259,7 +259,7 @@ def Window(self):
 
     try:
         txt_pat = line1
-        self.x2, self.y2 = 300, 100
+        self.x2, self.y2 = 400, 100
         txt_pat = StringVar()
         self.name_write = Entry(self.can, textvariable=txt_pat,
             highlightbackground='grey', bd=4)
@@ -269,7 +269,7 @@ def Window(self):
     except UnboundLocalError as ub_error1:
         print("+ File 1 not created !", ub_error1)
     
-    self.x3, self.y3 = 500, 100
+    self.x3, self.y3 = 550, 100
     self.b3 = Button(self.can, text="Enter", font=36,
         width=8, bd=3, bg='RoyalBlue3', fg='white',
         highlightbackground='RoyalBlue3',
@@ -278,7 +278,7 @@ def Window(self):
     #nameData() # For test. It will be at bottom when script will be finished.
 
     # Phone
-    self.x20, self.y20 = 100, 150
+    self.x20, self.y20 = 200, 150
     self.phonelabel = Label(self.can, text="Phone Number :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
@@ -286,14 +286,14 @@ def Window(self):
         window = self.phonelabel)
 
     # On work !
-    self.x21, self.y21 = 300, 150
+    self.x21, self.y21 = 400, 150
     phonetxt = StringVar()
     phone_write = Entry(self.can, textvariable=phonetxt,
         highlightbackground='grey', bd=3)
     phone_write = self.can.create_window(self.x21, self.y21,
         window = phone_write)
 
-    self.x22, self.y22 = 500, 150
+    self.x22, self.y22 = 550, 150
     self.b22 = Button(self.can, text="Enter", font=16,
         width=8, bd=3, bg='RoyalBlue3', fg='white',
         highlightbackground='RoyalBlue3',
@@ -301,14 +301,14 @@ def Window(self):
     self.fb22 = self.can.create_window(self.x22, self.y22, window=self.b22)
 
     # Address
-    self.x30, self.y30 = 100, 200
+    self.x30, self.y30 = 200, 200
     self.addrlabel = Label(self.can, text="Address :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.addrlabel = self.can.create_window(self.x30, self.y30,
         window = self.addrlabel)
 
-    self.x31, self.y31 = 300, 200
+    self.x31, self.y31 = 400, 200
     addrtxt = StringVar()
     self.addr_write = Entry(self.can, textvariable=addrtxt,
         highlightbackground='grey', bd=4)
@@ -316,7 +316,7 @@ def Window(self):
     self.addr_write = self.can.create_window(self.x31, self.y31,
         window = self.addr_write)
 
-    self.x32, self.y32 = 300, 250
+    self.x32, self.y32 = 400, 250
     citytxt = StringVar()
     self.city_write = Entry(self.can, textvariable=citytxt,
         highlightbackground='grey', bd=4)
@@ -324,7 +324,7 @@ def Window(self):
     self.city_write = self.can.create_window(self.x32, self.y32,
         window = self.city_write)
 
-    self.x33, self.y33 = 500, 250
+    self.x33, self.y33 = 550, 250
     self.b33 = Button(self.can, text="Enter", font=16,
         width=8, bd=3, bg='RoyalBlue3', fg='white',
         highlightbackground='RoyalBlue3',
@@ -332,14 +332,14 @@ def Window(self):
     self.fb33 = self.can.create_window(self.x33, self.y33, window=self.b33)
 
     # e-mail
-    self.x40, self.y40 = 100, 300
+    self.x40, self.y40 = 200, 300
     self.mailabel = Label(self.can, text="e-mail :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.mailabel = self.can.create_window(self.x40, self.y40,
         window = self.mailabel)
 
-    self.x41, self.y41 = 300, 300
+    self.x41, self.y41 = 400, 300
     mailtxt = StringVar()
     self.mail_write = Entry(self.can, textvariable=mailtxt,
         highlightbackground='grey', bd=3)
@@ -347,7 +347,7 @@ def Window(self):
     self.mail_write = self.can.create_window(self.x41, self.y41,
         window = self.mail_write)
 
-    self.x42, self.y42 = 500, 300
+    self.x42, self.y42 = 550, 300
     self.b42 = Button(self.can, text="Enter", font=16,
         width=8, bd=3, bg='RoyalBlue3', fg='white',
         highlightbackground='RoyalBlue3',
@@ -355,14 +355,14 @@ def Window(self):
     self.fb42 = self.can.create_window(self.x42, self.y42, window=self.b42)
 
     # Assurance
-    self.x50, self.y50 = 100, 350
+    self.x50, self.y50 = 200, 350
     self.mailabel = Label(self.can, text="Assurance :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.mailabel = self.can.create_window(self.x50, self.y50,
         window = self.mailabel)
 
-    self.x51, self.y51 = 300, 350
+    self.x51, self.y51 = 400, 350
     assurance = StringVar()
     assu_write = Entry(self.can, textvariable=assurance,
         highlightbackground='grey', bd=3)
@@ -370,7 +370,7 @@ def Window(self):
     assu_write = self.can.create_window(self.x51, self.y51,
         window = assu_write)
 
-    self.x52, self.y52 = 500, 350
+    self.x52, self.y52 = 550, 350
     self.b52 = Button(self.can, text="Enter", font=16,
         width=8, bd=3, bg='RoyalBlue3', fg='white',
         highlightbackground='RoyalBlue3',

@@ -403,107 +403,133 @@ def callLabo3(self):
         height=1, bg='RoyalBlue3', fg='aquamarine')
     self.labelresult3 = self.can.create_window(self.x43, self.y43,
         window = self.labelresult3)
-    """
 
-
+    self.x44, self.y44 = 134, 434
     CheckVar40 = IntVar()
-    C40 = Checkbutton(self.can, text="Anafrani (clomipramin)", fg='navy', 
+    self.C40 = Checkbutton(self.can, text="Anafrani (clomipramin)", fg='navy', 
         bg='cyan', variable=CheckVar40, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C40.grid(sticky='w', row=15, column=0, padx=10)
+    self.C40 = self.can.create_window(self.x44, self.y44,
+        window = self.C40)
 
+    self.x45, self.y45 = 134, 457
     CheckVar41 = IntVar()
-    C41 = Checkbutton(self.can, text="Citalopram", fg='navy', 
+    self.C41 = Checkbutton(self.can, text="Citalopram", fg='navy', 
         bg='cyan', variable=CheckVar41, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C41.grid(sticky='w', row=16, column=0, padx=10)
+    self.C41 = self.can.create_window(self.x45, self.y45,
+        window = self.C41)
 
+    self.x46, self.y46 = 134, 480
     CheckVar42 = IntVar()
-    C42 = Checkbutton(self.can, text="Cipralex (escitalopram)", fg='navy', 
+    self.C42 = Checkbutton(self.can, text="Cipralex (escitalopram)", fg='navy', 
         bg='cyan', variable=CheckVar42, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C42.grid(sticky='w', row=17, column=0, padx=10)
+    self.C42 = self.can.create_window(self.x46, self.y46,
+        window = self.C42)
 
+    self.x47, self.y47 = 134, 503
     CheckVar43 = IntVar()
-    C43 = Checkbutton(self.can, text="Cymbalta (duloxetin)", fg='navy', 
+    self.C43 = Checkbutton(self.can, text="Cymbalta (duloxetin)", fg='navy', 
         bg='cyan', variable=CheckVar43, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C43.grid(sticky='w', row=18, column=0, padx=10)
+    self.C43 = self.can.create_window(self.x47, self.y47,
+        window = self.C43)
 
+    self.x48, self.y48 = 461, 434
     CheckVar44 = IntVar()
-    C44 = Checkbutton(self.can, text="Deroxat (paroxetin)", fg='navy', 
+    self.C44 = Checkbutton(self.can, text="Deroxat (paroxetin)", fg='navy', 
         bg='cyan', variable=CheckVar44, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C44.grid(sticky='w', row=15, column=1, padx=30)
+    self.C44 = self.can.create_window(self.x48, self.y48,
+        window = self.C44)
 
+    self.x49, self.y49 = 461, 457
     CheckVar45 = IntVar()
-    C45 = Checkbutton(self.can, text="Effexor (venlafaxin)", fg='navy', 
+    self.C45 = Checkbutton(self.can, text="Effexor (venlafaxin)", fg='navy', 
         bg='cyan', variable=CheckVar45, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C45.grid(sticky='w', row=16, column=1, padx=30)
+    self.C45 = self.can.create_window(self.x49, self.y49,
+        window = self.C45)
 
+    self.x50, self.y50 = 461, 480
     CheckVar46 = IntVar()
-    C46 = Checkbutton(self.can, text="Floxifral (fluvoxamin)", fg='navy', 
+    self.C46 = Checkbutton(self.can, text="Floxifral (fluvoxamin)", fg='navy', 
         bg='cyan', variable=CheckVar46, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C46.grid(sticky='w', row=17, column=1, padx=30)
+    self.C46 = self.can.create_window(self.x50, self.y50,
+        window = self.C46)
 
+    self.x51, self.y51 = 461, 503
     CheckVar47 = IntVar()
-    C47 = Checkbutton(self.can, text="Fluctine (fluoxetin)", fg='navy', 
+    self.C47 = Checkbutton(self.can, text="Fluctine (fluoxetin)", fg='navy', 
         bg='cyan', variable=CheckVar47, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C47.grid(sticky='w', row=18, column=1, padx=30)
+    self.C47 = self.can.create_window(self.x51, self.y51,
+        window = self.C47)
 
+    self.x52, self.y52 = 790, 434
     CheckVar48 = IntVar()
-    C48 = Checkbutton(self.can, text="Ludiomil (maprotilin)", fg='navy', 
+    self.C48 = Checkbutton(self.can, text="Ludiomil (maprotilin)", fg='navy', 
         bg='cyan', variable=CheckVar48, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C48.grid(sticky='w', row=15, column=2, padx=20)
+    self.C48 = self.can.create_window(self.x52, self.y52,
+        window = self.C48)
 
+    self.x53, self.y53 = 790, 457
     CheckVar49 = IntVar()
-    C49 = Checkbutton(self.can, text="Remeron (mirtazapin)", fg='navy', 
+    self.C49 = Checkbutton(self.can, text="Remeron (mirtazapin)", fg='navy', 
         bg='cyan', variable=CheckVar49, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C49.grid(sticky='w', row=16, column=2, padx=20)
+    self.C49 = self.can.create_window(self.x53, self.y53,
+        window = self.C49)
 
+    self.x54, self.y54 = 790, 480
     CheckVar50 = IntVar()
-    C50 = Checkbutton(self.can, text="Saroten (amitriptylin)", fg='navy', 
+    self.C50 = Checkbutton(self.can, text="Saroten (amitriptylin)", fg='navy', 
         bg='cyan', variable=CheckVar50, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C50.grid(sticky='w', row=17, column=2, padx=20)
+    self.C50 = self.can.create_window(self.x54, self.y54,
+        window = self.C50)
 
+    self.x55, self.y55 = 790, 503
     CheckVar51 = IntVar()
-    C51 = Checkbutton(self.can, text="Sertraline (zoloft)", fg='navy', 
+    self.C51 = Checkbutton(self.can, text="Sertraline (zoloft)", fg='navy', 
         bg='cyan', variable=CheckVar51, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C51.grid(sticky='w', row=18, column=2, padx=20)
+    self.C51 = self.can.create_window(self.x55, self.y55,
+        window = self.C51)
 
+    self.x56, self.y56 = 1117, 434
     CheckVar52 = IntVar()
-    C52 = Checkbutton(self.can, text="Surmontil (trimipramin)", fg='navy', 
+    self.C52 = Checkbutton(self.can, text="Surmontil (trimipramin)", fg='navy', 
         bg='cyan', variable=CheckVar52, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C52.grid(sticky='e', row=15, column=3, padx=10)
+    self.C52 = self.can.create_window(self.x56, self.y56,
+        window = self.C52)
 
+    self.x57, self.y57 = 1117, 457
     CheckVar53 = IntVar()
-    C53 = Checkbutton(self.can, text="Wellbutrin (bupropion)", fg='navy', 
+    self.C53 = Checkbutton(self.can, text="Wellbutrin (bupropion)", fg='navy', 
         bg='cyan', variable=CheckVar53, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C53.grid(sticky='e', row=16, column=3, padx=10)
-
+    self.C53 = self.can.create_window(self.x57, self.y57,
+        window = self.C53)
+    """
     # Lithium
     labeltest=Label(self.can, text='--- Thymorégulateur ---', 
         font="Times 14 bold", width=26,

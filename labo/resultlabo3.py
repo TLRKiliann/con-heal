@@ -529,19 +529,14 @@ def callLabo3(self):
         width=26, anchor="w")
     self.C53 = self.can.create_window(self.x57, self.y57,
         window = self.C53)
-    """
-    # Lithium
-    labeltest=Label(self.can, text='--- Thymorégulateur ---', 
-        font="Times 14 bold", width=26,
-        height=1, bg='RoyalBlue3', fg='aquamarine')
-    labeltest.grid(sticky='w', row=29, column=2, padx=20)
 
-    CheckVar54 = IntVar()
-    C54 = Checkbutton(self.can, text="Lithiofor (lithium)", fg='navy', 
-        bg='cyan', variable=CheckVar54, 
-        onvalue=1, offvalue=0, height=1, 
-        width=26, anchor="w")
-    C54.grid(sticky='w', row=30, column=2, padx=20)
+    # Printable
+    self.x58, self.y58 = 298, 528
+    self.labelresult4 = Label(self.can, text='--- Printable ---', 
+        font="Times 14 bold", width=62,
+        height=1, bg='RoyalBlue4', fg='aquamarine')
+    self.labelresult4 = self.can.create_window(self.x58, self.y58,
+        window = self.labelresult4)
 
     def sheetLabo():
 
@@ -559,6 +554,13 @@ def callLabo3(self):
         else:
             os.startfile('./labo/labosheet.pdf') # Windows
 
+    # Buttons printable sheet
+    self.x59, self.y59 = 150, 600
+    self.buttonSheet = Button(self.can, text="Complete lab sheet", width=15,
+        fg='cyan', bg='navy', command=sheetLabo)
+    self.buttonSheet = self.can.create_window(self.x59, self.y59,
+        window = self.buttonSheet)
+
     def sheetMicrobio():
 
             #For openning file at pdf 
@@ -574,6 +576,12 @@ def callLabo3(self):
             subprocess.call('open', './labo/microbio.pdf' ) # Mac
         else:
             os.startfile('./labo/microbio.pdf') # Windows
+
+    self.x60, self.y60 = 450, 600
+    self.buttonMicro = Button(self.can, text="Microbiology sheet", width=15,
+        fg='cyan', bg='navy', command=sheetMicrobio)
+    self.buttonMicro = self.can.create_window(self.x60, self.y60,
+        window = self.buttonMicro)
 
     def printLabo():
 
@@ -1163,31 +1171,36 @@ def callLabo3(self):
             print("Error from labo to way out", p_out)
 
     # Printable sheet
-    labelinfuri = Label(self.can, text='--- Printable ---', 
+    self.x61, self.y61 = 800, 528
+    self.labelinfuri = Label(self.can, text='--- Lithium ---', 
         font="Times 14 bold", width=60,
         height=1, bg='navy', fg='aquamarine')
-    labelinfuri.grid(sticky='w', row=29, column=0, columnspan=2, padx=10)
+    self.labelinfuri = self.can.create_window(self.x61, self.y61,
+        window = self.labelinfuri)
 
-    # Buttons printable sheet
-    buttonsheet = Button(self.can, text="Complete lab sheet", width=15,
-        fg='cyan', bg='navy', command=sheetLabo)
-    buttonsheet.grid(row=31, column=0, padx=10, pady=10)
-
-    buttonsheet = Button(self.can, text="Microbiology sheet", width=15,
-        fg='cyan', bg='navy', command=sheetMicrobio)
-    buttonsheet.grid(row=31, column=1, padx=10, pady=10)
+    self.x62, self.y62 = 800, 553
+    CheckVar54 = IntVar()
+    self.C54 = Checkbutton(self.can, text="Lithiofor (lithium)", fg='navy', 
+        bg='cyan', variable=CheckVar54, 
+        onvalue=1, offvalue=0, height=1, 
+        width=26, anchor="w")
+    self.C54 = self.can.create_window(self.x62, self.y62,
+        window = self.C54)
 
     # Button save and quit
-    buttonsave = Button(self.can, text="Save", width=10, bd=3,
+    self.x63, self.y63 = 800, 700
+    self.buttonsave = Button(self.can, text="Save", width=10, bd=3,
         fg='aquamarine', bg='RoyalBlue3', activebackground='dark turquoise',
         highlightbackground='RoyalBlue4', command=recordTofile)
-    buttonsave.grid(sticky='e', row=31, column=2, padx=20, pady=20)
+    self.buttonsave = self.can.create_window(self.x63, self.y63,
+        window = self.buttonsave)
 
-    buttonquit = Button(self.can, text='Quit', width=10, bd=3,
+    self.x64, self.y64 = 950, 700
+    self.buttonquit = Button(self.can, text='Quit', width=10, bd=3,
         fg='white', bg='RoyalBlue3', activebackground='dark turquoise',
         highlightbackground='RoyalBlue4', command=awayOut)
-    buttonquit.grid(sticky='e', row=31, column=3, padx=20, pady=20)
-    #label_fra = LabelFrame(self.can, text="Patient 1",
-    #    font=('Times 16'),bg='yellow', fg='red', height=2, bd=3)
-    """
+    self.buttonquit = self.can.create_window(self.x64, self.y64,
+        window = self.buttonquit)
+
+
     self.can.configure(scrollregion=self.can.bbox(ALL))

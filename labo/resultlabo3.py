@@ -17,145 +17,176 @@ def callLabo3(self):
         To display labo into Canvas
     """
     self.can.delete(ALL)
-    self.can.configure(bg='RoyalBlue4')
+    self.can.configure(bg='DodgerBlue2')
 
-    self.x1, self.y1 = 200, 50
+    self.x1, self.y1 = 540, 40
     self.labelname = Label(self.can, text="Labo check",
         font=('helvetica', 18, 'bold'), width=10,
-        height=2, bg='RoyalBlue4', fg='aquamarine')
+        height=2, bg='DodgerBlue2', fg='white')
     self.labelname = self.can.create_window(self.x1, self.y1,
         window = self.labelname)
 
     with open('./newpatient/entryfile3.txt', 'r') as filename:
         line1 = filename.readline()
 
-    self.x2, self.y2 = 400, 50
+    self.x2, self.y2 = 720, 40
     entrytext = StringVar()
     self.entryname = Entry(self.can, textvariable=entrytext, width=20)
     entrytext.set(line1)
     self.entryname = self.can.create_window(self.x2, self.y2,
-            window = self.entryname)
+        window = self.entryname)
 
-    # NL
-    self.labelresult = Label(self.can, text='--- Neuroleptiques ---', 
-        font="Times 14 bold", width=132,
+    self.x3, self.y3 = 625, 100
+    self.labelresult = Label(self.can, text='--- Neuroleptiques ---',
+        font="Times 14 bold", width=135,
         height=1, bg='RoyalBlue3', fg='aquamarine')
-    self.labelresult.grid(row=1, column=0, columnspan=4)
+    self.labelresult = self.can.create_window(self.x3, self.y3,
+        window = self.labelresult)
 
+    self.x4, self.y4 = 134, 125
     CheckVar1 = IntVar()
-    C1 = Checkbutton(self.can, text="Abilify (aripiprazol)", fg='navy', 
-        bg='cyan', variable=CheckVar1, 
-        onvalue=1, offvalue=0, height=1, 
+    self.C1 = Checkbutton(self.can, text="Abilify (aripiprazol)", fg='navy',
+        bg='cyan', variable=CheckVar1,
+        onvalue=1, offvalue=0, height=1,
         width=26, anchor="w")
-    C1.grid(sticky='w', row=2, column=0, padx=10)
+    self.C1 = self.can.create_window(self.x4, self.y4,
+        window = self.C1)
 
+    self.x5, self.y5 = 134, 148
     CheckVar2 = IntVar()
-    C2 = Checkbutton(self.can, text="Clopixol (zuclopenthixol)", fg='navy', 
-        bg='cyan', variable=CheckVar2, 
-        onvalue=1, offvalue=0, height=1, 
+    self.C2 = Checkbutton(self.can, text="Clopixol (zuclopenthixol)", fg='navy',
+        bg='cyan', variable=CheckVar2,
+        onvalue=1, offvalue=0, height=1,
         width=26, anchor="w")
-    C2.grid(sticky='w', row=3, column=0, padx=10)
+    self.C2 = self.can.create_window(self.x5, self.y5,
+        window = self.C2)
 
+    self.x6, self.y6 = 134, 171
     CheckVar3 = IntVar()
-    C3 = Checkbutton(self.can, text="Clozapine (clopin, leponex)", fg='navy', 
-        bg='cyan', variable=CheckVar3, 
-        onvalue=1, offvalue=0, height=1, 
+    self.C3 = Checkbutton(self.can, text="Clozapine (clopin, leponex)", fg='navy',
+        bg='cyan', variable=CheckVar3,
+        onvalue=1, offvalue=0, height=1,
         width=26, anchor="w")
-    C3.grid(sticky='w', row=4, column=0, padx=10)
+    self.C3 = self.can.create_window(self.x6, self.y6,
+        window = self.C3)
 
+    self.x7, self.y7 = 134, 194
     CheckVar4 = IntVar()
-    C4 = Checkbutton(self.can, text="Dogmatil (sulprid)", fg='navy', 
-        bg='cyan', variable=CheckVar4, 
-        onvalue=1, offvalue=0, height=1, 
+    self.C4 = Checkbutton(self.can, text="Dogmatil (sulprid)", fg='navy',
+        bg='cyan', variable=CheckVar4,
+        onvalue=1, offvalue=0, height=1,
         width=26, anchor="w")
-    C4.grid(sticky='w', row=5, column=0, padx=10)
+    self.C4 = self.can.create_window(self.x7, self.y7,
+        window = self.C4)
 
+    self.x8, self.y8 = 134, 217
     CheckVar5 = IntVar()
-    C5 = Checkbutton(self.can, text="Entumine (clotiapin)", fg='navy', 
-        bg='cyan', variable=CheckVar5, 
-        onvalue=1, offvalue=0, height=1, 
+    self.C5 = Checkbutton(self.can, text="Entumine (clotiapin)", fg='navy',
+        bg='cyan', variable=CheckVar5,
+        onvalue=1, offvalue=0, height=1,
         width=26, anchor="w")
-    C5.grid(sticky='w', row=6, column=0, padx=10)
+    self.C5 = self.can.create_window(self.x8, self.y8,
+        window = self.C5)
 
+    self.x9, self.y9 = 461, 125
     CheckVar6 = IntVar()
-    C6 = Checkbutton(self.can, text="Fluanxol (flupentixol)", fg='navy', 
-        bg='cyan', variable=CheckVar6, 
-        onvalue=1, offvalue=0, height=1, 
+    self.C6 = Checkbutton(self.can, text="Fluanxol (flupentixol)", fg='navy',
+        bg='cyan', variable=CheckVar6,
+        onvalue=1, offvalue=0, height=1,
         width=26, anchor="w")
-    C6.grid(sticky='w', row=2, column=1, padx=30)
+    self.C6 = self.can.create_window(self.x9, self.y9,
+        window = self.C6)
 
+    self.x10, self.y10 = 461, 148
     CheckVar7 = IntVar()
-    C7 = Checkbutton(self.can, text="Haldol (haloperidol)", fg='navy', 
+    self.C7 = Checkbutton(self.can, text="Haldol (haloperidol)", fg='navy', 
         bg='cyan', variable=CheckVar7, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C7.grid(sticky='w', row=3, column=1, padx=30)
+    self.C7 = self.can.create_window(self.x10, self.y10,
+        window = self.C7)
 
+    self.x11, self.y11 = 461, 171
     CheckVar8 = IntVar()
-    C8 = Checkbutton(self.can, text="Invega (paliperidon)", fg='navy', 
+    self.C8 = Checkbutton(self.can, text="Invega (paliperidon)", fg='navy', 
         bg='cyan', variable=CheckVar8, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C8.grid(sticky='w', row=4, column=1, padx=30)
+    self.C8 = self.can.create_window(self.x11, self.y11,
+        window = self.C8)
 
+    self.x12, self.y12 = 461, 194
     CheckVar9 = IntVar()
-    C9 = Checkbutton(self.can, text="Nozinan (levomepromazin)", fg='navy', 
+    self.C9 = Checkbutton(self.can, text="Nozinan (levomepromazin)", fg='navy', 
         bg='cyan', variable=CheckVar9, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C9.grid(sticky='w', row=5, column=1, padx=30)
+    self.C9 = self.can.create_window(self.x12, self.y12,
+        window = self.C9)
 
+    self.x13, self.y13 = 461, 217
     CheckVar10 = IntVar()
-    C10 = Checkbutton(self.can, text="Prazine (promazin)", fg='navy', 
+    self.C10 = Checkbutton(self.can, text="Prazine (promazin)", fg='navy', 
         bg='cyan', variable=CheckVar10, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C10.grid(sticky='w', row=6, column=1, padx=30)
+    self.C10 = self.can.create_window(self.x13, self.y13,
+        window = self.C10)
 
-    # second column
+    self.x14, self.y14 = 790, 125
     CheckVar12 = IntVar()
-    C12 = Checkbutton(self.can, text="Quetiapine (seroquel, sequase)", fg='navy', 
-        bg='cyan', variable=CheckVar12, 
-        onvalue=1, offvalue=0, height=1, 
+    self.C12 = Checkbutton(self.can, text="Quetiapine (seroquel, sequase)", fg='navy',
+        bg='cyan', variable=CheckVar12,
+        onvalue=1, offvalue=0, height=1,
         width=26, anchor="w")
-    C12.grid(sticky='w', row=2, column=2, padx=20)
+    self.C12 = self.can.create_window(self.x14, self.y14,
+        window = self.C12)
 
+    self.x15, self.y15 = 790, 148
     CheckVar13 = IntVar()
-    C13 = Checkbutton(self.can, text="Risperdal (risperidon)", fg='navy', 
+    self.C13 = Checkbutton(self.can, text="Risperdal (risperidon)", fg='navy', 
         bg='cyan', variable=CheckVar13, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C13.grid(sticky='w', row=3, column=2, padx=20)
+    self.C13 = self.can.create_window(self.x15, self.y15,
+        window = self.C13)
 
+    self.x16, self.y16 = 790, 171
     CheckVar14 = IntVar()
-    C14 = Checkbutton(self.can, text="Serdolect (sertindol)", fg='navy', 
+    self.C14 = Checkbutton(self.can, text="Serdolect (sertindol)", fg='navy', 
         bg='cyan', variable=CheckVar14, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C14.grid(sticky='w', row=4, column=2, padx=20)
+    self.C14 = self.can.create_window(self.x16, self.y16,
+        window = self.C14)
 
+    self.x17, self.y17 = 790, 194
     CheckVar15 = IntVar()
-    C15 = Checkbutton(self.can, text="Solian (amisulprid)", fg='navy', 
+    self.C15 = Checkbutton(self.can, text="Solian (amisulprid)", fg='navy', 
         bg='cyan', variable=CheckVar15, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C15.grid(sticky='w', row=5, column=2, padx=20)
+    self.C15 = self.can.create_window(self.x17, self.y17,
+        window = self.C15)
 
+    self.x18, self.y18 = 790, 217
     CheckVar16 = IntVar()
-    C16 = Checkbutton(self.can, text="Tiapridal (tiaprid)", fg='navy', 
+    self.C16 = Checkbutton(self.can, text="Tiapridal (tiaprid)", fg='navy', 
         bg='cyan', variable=CheckVar16, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C16.grid(sticky='w', row=6, column=2, padx=20)
+    self.C16 = self.can.create_window(self.x18, self.y18,
+        window = self.C16)
 
-    # third column
+    self.x19, self.y19 = 1117, 125
     CheckVar17 = IntVar()
-    C17 = Checkbutton(self.can, text="Truxal (chlorprothixen)", fg='navy', 
-        bg='cyan', variable=CheckVar17, 
-        onvalue=1, offvalue=0, height=1, 
+    self.C17 = Checkbutton(self.can, text="Truxal (chlorprothixen)", fg='navy',
+        bg='cyan', variable=CheckVar17,
+        onvalue=1, offvalue=0, height=1,
         width=26, anchor="w")
-    C17.grid(sticky='e', row=2, column=3, padx=10)
-
+    self.C17 = self.can.create_window(self.x19, self.y19,
+        window = self.C17)
+    """
     CheckVar18 = IntVar()
     C18 = Checkbutton(self.can, text="Zyprexa (olanzapin)", fg='navy', 
         bg='cyan', variable=CheckVar18, 
@@ -437,11 +468,11 @@ def callLabo3(self):
     C54.grid(sticky='w', row=30, column=2, padx=20)
 
     def sheetLabo():
-        """
-            For openning file at pdf 
-            format with a bit prog-sys code.
-            For Linux, Windows and MAC.
-        """
+
+            #For openning file at pdf 
+            #format with a bit prog-sys code.
+            #For Linux, Windows and MAC.
+
         becall = platform.system()
         print(platform.system())
         
@@ -453,11 +484,11 @@ def callLabo3(self):
             os.startfile('./labo/labosheet.pdf') # Windows
 
     def sheetMicrobio():
-        """
-            For openning file at pdf 
-            format with a bit prog-sys code.
-            For Linux, Windows and MAC.
-        """
+
+            #For openning file at pdf 
+            #format with a bit prog-sys code.
+            #For Linux, Windows and MAC.
+
         callplatform = platform.system()
         print(platform.system())
         
@@ -469,12 +500,12 @@ def callLabo3(self):
             os.startfile('./labo/microbio.pdf') # Windows
 
     def printLabo():
-        """
-            Need to be modified in 
-            function of platform's 
-            user !!! Here, it's 
-            for linux ! ;)
-        """
+
+            #Need to be modified in 
+            #function of platform's 
+            #user !!! Here, it's 
+            #for linux ! ;)
+
         #lpr = subprocess.Popen("/usr/bin/lpr", stdin=subprocess.PIPE)
         #lpr.stdin.write('4.15.0-96-generic')
         pass
@@ -1082,5 +1113,5 @@ def callLabo3(self):
     buttonquit.grid(sticky='e', row=31, column=3, padx=20, pady=20)
     #label_fra = LabelFrame(self.can, text="Patient 1",
     #    font=('Times 16'),bg='yellow', fg='red', height=2, bd=3)
-
+    """
     self.can.configure(scrollregion=self.can.bbox(ALL))

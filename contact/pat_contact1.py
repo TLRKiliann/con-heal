@@ -100,12 +100,94 @@ def Window(self):
         self.t1 = Text(self.can, height=25, width=40, font=18, relief=SUNKEN)
         self.t1.insert(INSERT, "Patient Name : " + line1 + "\n\n")
         self.t1.insert(INSERT, "Birthdate : " + line2 + "\n\n")
+        self.t1.insert(INSERT, "Native : " + native + "\n\n")
         self.t1.insert(INSERT, "Phone : " + str(phonetxt.get()) + "\n\n")
         self.t1.insert(INSERT, "Address : \n\n")
         self.t1.insert(INSERT, "e-mail : \n\n")
         self.t1.insert(INSERT, "Assurance : \n\n")
         self.t1.insert(INSERT, "Policy : \n\n")
         self.ft1=self.can.create_window(self.x1, self.y1, window=self.t1)
+
+    def addrData(addrtxt, addr_write, citytxt, city_write):
+        """
+            Display address
+        """
+        try:
+            with open('./newpatient/entryfile.txt', 'r') as namefile:
+                line1 = namefile.readline()
+                line2 = namefile.readline()
+        except FileNotFoundError as fileout:
+            print("No file entryfile.txt exist", fileout)
+
+        try:
+            with open('./contact/contact1.txt', 'a+') as addr_file:
+                addr_file.write(str(addrtxt.get()) + '\n')
+                addr_file.write(str(citytxt.get()) + '\n')
+        except FileNotFoundError as err_w:
+            print("No file contact1.txt exist", err_w)
+
+        try:
+            with open('./contact/contact1.txt', 'r') as add_r:
+                native = add_r.readline()
+                phone = add_r.readline()
+                streetad = add_r.readline()
+                cityadd = add_r.readline()
+        except FileNotFoundError as err_r:
+            print("No file contact1.txt exist", err_r)
+
+        self.x1, self.y1 = 950, 350
+        self.t1 = Text(self.can, height=25, width=40, font=18, relief=SUNKEN)
+        self.t1.insert(INSERT, "Patient Name : " + line1 + "\n\n")
+        self.t1.insert(INSERT, "Birthdate : " + line2 + "\n\n")
+        self.t1.insert(INSERT, "Native : " + native + "\n\n")
+        self.t1.insert(INSERT, "Phone : " + phone + "\n\n")
+        self.t1.insert(INSERT, "Street : " + streetad + "\n\n")
+        self.t1.insert(INSERT, "City : " + cityadd + "\n\n")
+        self.t1.insert(INSERT, "e-mail : \n\n")
+        self.t1.insert(INSERT, "Assurance : \n\n")
+        self.t1.insert(INSERT, "Policy : \n\n")
+        self.ft1=self.can.create_window(self.x1, self.y1, window=self.t1)
+
+    def mailData(mailtxt, mail_write):
+        """
+            Display e-mail
+        """
+        try:
+            with open('./newpatient/entryfile.txt', 'r') as namefile:
+                line1 = namefile.readline()
+                line2 = namefile.readline()
+        except FileNotFoundError as fileout:
+            print("No file entryfile.txt exist", fileout)
+
+        try:
+            with open('./contact/contact1.txt', 'a+') as addr_file:
+                addr_file.write(str(mailtxt.get()) + '\n')
+        except FileNotFoundError as err_w:
+            print("No file contact1.txt exist", err_w)
+
+        try:
+            with open('./contact/contact1.txt', 'r') as add_r:
+                native = add_r.readline()
+                phone = add_r.readline()
+                streetad = add_r.readline()
+                cityadd = add_r.readline()
+                mail = add_r.readline()
+        except FileNotFoundError as err_r:
+            print("No file contact1.txt exist", err_r)
+
+        self.x1, self.y1 = 950, 350
+        self.t1 = Text(self.can, height=25, width=40, font=18, relief=SUNKEN)
+        self.t1.insert(INSERT, "Patient Name : " + line1 + "\n\n")
+        self.t1.insert(INSERT, "Birthdate : " + line2 + "\n\n")
+        self.t1.insert(INSERT, "Native : " + native + "\n\n")
+        self.t1.insert(INSERT, "Phone : " + phone + "\n\n")
+        self.t1.insert(INSERT, "Street : " + streetad + "\n\n")
+        self.t1.insert(INSERT, "City : " + cityadd + "\n\n")
+        self.t1.insert(INSERT, "e-mail : " + mail + "\n\n")
+        self.t1.insert(INSERT, "Assurance : \n\n")
+        self.t1.insert(INSERT, "Policy : \n\n")
+        self.ft1=self.can.create_window(self.x1, self.y1, window=self.t1)
+
 
     def assuData(assurance, assu_write):
         """
@@ -128,6 +210,9 @@ def Window(self):
             with open('./contact/contact1.txt', 'r') as assu_r:
                 native = assu_r.readline()
                 phone = assu_r.readline()
+                street = assu_r.readline()
+                cityadd = assu_r.readline()
+                email = assu_r.readline()
                 assu = assu_r.readline()
         except FileNotFoundError as err_r:
             print("No file contact1.txt exist", err_r)
@@ -140,8 +225,9 @@ def Window(self):
         self.t1.insert(INSERT, "Birthdate : " + line2 + "\n\n")
         self.t1.insert(INSERT, "Native : " + native + "\n\n")
         self.t1.insert(INSERT, "Phone : " + phone + "\n\n")
-        self.t1.insert(INSERT, "Address : \n\n")
-        self.t1.insert(INSERT, "e-mail : \n\n")
+        self.t1.insert(INSERT, "Street : " + street + "\n\n")
+        self.t1.insert(INSERT, "City : " + cityadd + "\n\n")
+        self.t1.insert(INSERT, "e-mail : " + email + "\n\n")
         self.t1.insert(INSERT, "Insurance : " + assu + "\n\n")
         self.t1.insert(INSERT, "Policy : \n\n")
         self.ft1=self.can.create_window(self.x1, self.y1, window=self.t1)
@@ -167,6 +253,9 @@ def Window(self):
             with open('./contact/contact1.txt', 'r') as policyfile:
                 native = policyfile.readline()
                 phone = policyfile.readline()
+                street = policyfile.readline()
+                state = policyfile.readline()
+                email = policyfile.readline()
                 assu = policyfile.readline()
                 polins = policyfile.readline()
         except FileNotFoundError as err_r:
@@ -179,9 +268,10 @@ def Window(self):
         self.t1.insert(INSERT, "Patient Name : " + line1 + "\n\n")
         self.t1.insert(INSERT, "Birthdate : " + line2 + "\n\n")
         self.t1.insert(INSERT, "Native : " + native + "\n\n")
-        self.t1.insert(INSERT, "Phone : " + str(phone) + "\n\n")
-        self.t1.insert(INSERT, "Address : \n\n")
-        self.t1.insert(INSERT, "e-mail : \n\n")
+        self.t1.insert(INSERT, "Phone : " + phone + "\n\n")
+        self.t1.insert(INSERT, "Street : " + street + "\n\n")
+        self.t1.insert(INSERT, "City : " + state + "\n\n")
+        self.t1.insert(INSERT, "e-mail : " + email + "\n\n")
         self.t1.insert(INSERT, "Insurance : " + assu + "\n\n")
         self.t1.insert(INSERT, "Policy : " + polins + "\n\n")
         self.ft1=self.can.create_window(self.x1, self.y1, window=self.t1)
@@ -242,7 +332,8 @@ def Window(self):
     self.b17 = Button(self.can, text="Enter", font=16,
         width=8, bd=3, bg='RoyalBlue3', fg='white',
         highlightbackground='RoyalBlue3',
-        activebackground='pale turquoise', command = lambda: nativaData(native, nativa_write))
+        activebackground='pale turquoise',
+        command = lambda: nativaData(native, nativa_write))
     self.fb17 = self.can.create_window(self.x17, self.y17, window=self.b17)
 
     # Phone
@@ -264,7 +355,8 @@ def Window(self):
     self.b22 = Button(self.can, text="Enter", font=16,
         width=8, bd=3, bg='RoyalBlue3', fg='white',
         highlightbackground='RoyalBlue3',
-        activebackground='pale turquoise', command = lambda: phoneData(phonetxt, phone_write))
+        activebackground='pale turquoise',
+        command = lambda: phoneData(phonetxt, phone_write))
     self.fb22 = self.can.create_window(self.x22, self.y22, window=self.b22)
 
     # Address
@@ -277,25 +369,26 @@ def Window(self):
 
     self.x31, self.y31 = 400, 350
     addrtxt = StringVar()
-    self.addr_write = Entry(self.can, textvariable=addrtxt,
+    addr_write = Entry(self.can, textvariable=addrtxt,
         highlightbackground='grey', bd=4)
     addrtxt.set("Street")
-    self.addr_write = self.can.create_window(self.x31, self.y31,
-        window = self.addr_write)
+    addr_write = self.can.create_window(self.x31, self.y31,
+        window = addr_write)
 
     self.x32, self.y32 = 400, 400
     citytxt = StringVar()
-    self.city_write = Entry(self.can, textvariable=citytxt,
+    city_write = Entry(self.can, textvariable=citytxt,
         highlightbackground='grey', bd=4)
     citytxt.set("City")
-    self.city_write = self.can.create_window(self.x32, self.y32,
-        window = self.city_write)
+    city_write = self.can.create_window(self.x32, self.y32,
+        window = city_write)
 
     self.x33, self.y33 = 575, 400
     self.b33 = Button(self.can, text="Enter", font=16,
         width=8, bd=3, bg='RoyalBlue3', fg='white',
         highlightbackground='RoyalBlue3',
-        activebackground='pale turquoise', command="")
+        activebackground='pale turquoise',
+        command = lambda: addrData(addrtxt, addr_write, citytxt, city_write))
     self.fb33 = self.can.create_window(self.x33, self.y33, window=self.b33)
 
     # e-mail
@@ -308,17 +401,18 @@ def Window(self):
 
     self.x41, self.y41 = 400, 450
     mailtxt = StringVar()
-    self.mail_write = Entry(self.can, textvariable=mailtxt,
+    mail_write = Entry(self.can, textvariable=mailtxt,
         highlightbackground='grey', bd=3)
     mailtxt.set("")
-    self.mail_write = self.can.create_window(self.x41, self.y41,
-        window = self.mail_write)
+    mail_write = self.can.create_window(self.x41, self.y41,
+        window = mail_write)
 
     self.x42, self.y42 = 575, 450
     self.b42 = Button(self.can, text="Enter", font=16,
         width=8, bd=3, bg='RoyalBlue3', fg='white',
         highlightbackground='RoyalBlue3',
-        activebackground='pale turquoise', command="")
+        activebackground='pale turquoise',
+        command = lambda: mailData(mailtxt, mail_write))
     self.fb42 = self.can.create_window(self.x42, self.y42, window=self.b42)
 
     # Assurance
@@ -340,7 +434,8 @@ def Window(self):
     self.b52 = Button(self.can, text="Enter", font=16,
         width=8, bd=3, bg='RoyalBlue3', fg='white',
         highlightbackground='RoyalBlue3',
-        activebackground='pale turquoise', command = lambda: assuData(assurance, assu_write))
+        activebackground='pale turquoise',
+        command = lambda: assuData(assurance, assu_write))
     self.fb52 = self.can.create_window(self.x52, self.y52, window=self.b52)
 
     # Police
@@ -362,7 +457,8 @@ def Window(self):
     self.b52 = Button(self.can, text="Enter", font=16,
         width=8, bd=3, bg='RoyalBlue3', fg='white',
         highlightbackground='RoyalBlue3',
-        activebackground='pale turquoise', command = lambda: policyData(policy, poli_write))
+        activebackground='pale turquoise',
+        command = lambda: policyData(policy, poli_write))
     self.fb52 = self.can.create_window(self.x52, self.y52, window=self.b52)
 
     self.can.configure(scrollregion=self.can.bbox(ALL))

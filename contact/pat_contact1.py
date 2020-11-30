@@ -14,6 +14,43 @@ def Window(self):
     self.can.delete(ALL)
     self.can.configure(background='DodgerBlue2')
 
+    def allInData():
+        """
+            First page
+        """
+        try:
+            with open('./newpatient/entryfile.txt', 'r') as namefile:
+                line1 = namefile.readline()
+                line2 = namefile.readline()
+        except FileNotFoundError as fileout:
+            print("No file entryfile.txt exist", fileout)
+        try:
+            with open('./contact/contact1.txt', 'r') as policyfile:
+                native = policyfile.readline()
+                phone = policyfile.readline()
+                street = policyfile.readline()
+                state = policyfile.readline()
+                email = policyfile.readline()
+                assu = policyfile.readline()
+                polins = policyfile.readline()
+        except FileNotFoundError as err_r:
+            print("No file contact1.txt exist", err_r)
+
+        self.x1, self.y1 = 950, 350
+        self.t1 = Text(self.can, height=25, width=40, font=18, relief=SUNKEN)
+        self.t1.delete('1.0', END)
+        self.t1.update()
+        self.t1.insert(INSERT, "Patient Name : " + line1 + "\n\n")
+        self.t1.insert(INSERT, "Birthdate : " + line2 + "\n\n")
+        self.t1.insert(INSERT, "Native : " + native + "\n\n")
+        self.t1.insert(INSERT, "Phone : " + phone + "\n\n")
+        self.t1.insert(INSERT, "Street : " + street + "\n\n")
+        self.t1.insert(INSERT, "City : " + state + "\n\n")
+        self.t1.insert(INSERT, "e-mail : " + email + "\n\n")
+        self.t1.insert(INSERT, "Insurance : " + assu + "\n\n")
+        self.t1.insert(INSERT, "Policy : " + polins + "\n\n")
+        self.ft1=self.can.create_window(self.x1, self.y1, window=self.t1)
+
     def nameData():
         """
             Display name
@@ -22,12 +59,14 @@ def Window(self):
         try:
             with open('./newpatient/entryfile.txt', 'r') as namefile:
                 line1 = namefile.readline()
+                line2 = namefile.readline()
         except FileNotFoundError as fileout:
             print("No file entryfile.txt exist", fileout)
 
         self.x1, self.y1 = 950, 350
         self.t1 = Text(self.can, height=25, width=40, font=18, relief=SUNKEN)
         self.t1.insert(INSERT, "Patient Name : " + line1 + "\n\n")
+        self.t1.insert(INSERT, "Birthdate : " + line2 + "\n\n")
         self.t1.insert(INSERT, "Native : \n\n")
         self.t1.insert(INSERT, "Phone : \n\n")
         self.t1.insert(INSERT, "Address : \n\n")
@@ -276,18 +315,18 @@ def Window(self):
         self.t1.insert(INSERT, "Policy : " + polins + "\n\n")
         self.ft1=self.can.create_window(self.x1, self.y1, window=self.t1)
 
-    nameData()
+    allInData()
     # !!! In one file for function txtbox !!!
     # Label title
-    self.x11, self.y11 = 625, 20
+    self.x11, self.y11 = 200, 100
     self.labelname = Label(self.can, text="Contact",
-        font=('helvetica', 28, 'bold'),
+        font=('helvetica', 40, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.labelname = self.can.create_window(self.x11, self.y11,
         window = self.labelname)  
 
     # Name
-    self.x1, self.y1 = 200, 100
+    self.x1, self.y1 = 200, 200
     self.labelname = Label(self.can, text="Patient Name :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
@@ -303,7 +342,7 @@ def Window(self):
 
     try:
         txt_pat = line1
-        self.x2, self.y2 = 400, 100
+        self.x2, self.y2 = 400, 200
         txt_pat = StringVar()
         self.name_write = Entry(self.can, textvariable=txt_pat,
             highlightbackground='grey', bd=4)

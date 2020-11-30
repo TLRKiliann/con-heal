@@ -12,6 +12,7 @@ from boxapp import callBox
 from patcaps import callResident
 from backapp import *
 from Backup.backupfile import dataBackToSave
+from labo.resultlabo3 import callLabo3
 #import passw
 
 
@@ -2400,7 +2401,8 @@ class Application(Frame):
         subprocess.run('./labo/resultlabo2.py', check=True)
 
     def laboResult3(self):
-        subprocess.run('./labo/resultlabo3.py', check=True)
+        callLabo3(self)
+        #subprocess.run('./labo/resultlabo3.py', check=True)
 
     def laboResult4(self):
         subprocess.run('./labo/resultlabo4.py', check=True)

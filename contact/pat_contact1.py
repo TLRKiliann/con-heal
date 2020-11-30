@@ -323,7 +323,7 @@ def Window(self):
         font=('helvetica', 40, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.labelname = self.can.create_window(self.x11, self.y11,
-        window = self.labelname)  
+        window = self.labelname)
 
     # Name
     self.x1, self.y1 = 200, 200

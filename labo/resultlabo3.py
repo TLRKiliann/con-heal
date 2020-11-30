@@ -368,34 +368,43 @@ def callLabo3(self):
         width=26, anchor="w")
     self.C36 = self.can.create_window(self.x39, self.y39,
         window = self.C36)
-    """
 
+    self.x40, self.y40 = 1117, 268
     CheckVar37 = IntVar()
-    C37 = Checkbutton(self.can, text="Trobalt (retigabin)", fg='navy', 
+    self.C37 = Checkbutton(self.can, text="Trobalt (retigabin)", fg='navy', 
         bg='cyan', variable=CheckVar37, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C37.grid(sticky='e', row=8, column=3, padx=10)
+    self.C37 = self.can.create_window(self.x40, self.y40,
+        window = self.C37)
 
+    self.x41, self.y41 = 1117, 291
     CheckVar38 = IntVar()
-    C38 = Checkbutton(self.can, text="Vimpat (lacosamid)", fg='navy', 
+    self.C38 = Checkbutton(self.can, text="Vimpat (lacosamid)", fg='navy', 
         bg='cyan', variable=CheckVar38, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C38.grid(sticky='e', row=9, column=3, padx=10)
+    self.C38 = self.can.create_window(self.x41, self.y41,
+        window = self.C38)
 
+    self.x42, self.y42 = 1117, 314
     CheckVar39 = IntVar()
-    C39 = Checkbutton(self.can, text="Zonegran (zonisamid)", fg='navy', 
+    self.C39 = Checkbutton(self.can, text="Zonegran (zonisamid)", fg='navy', 
         bg='cyan', variable=CheckVar39, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C39.grid(sticky='e', row=10, column=3, padx=10)
+    self.C39 = self.can.create_window(self.x42, self.y42,
+        window = self.C39)
 
     # ATD
-    labelinf = Label(self.can, text='--- Antidépresseurs ---',
-        font="Times 14 bold", width=132,
+    self.x43, self.y43 = 625, 409
+    self.labelresult3 = Label(self.can, text='--- Antidépresseurs ---',
+        font="Times 14 bold", width=135,
         height=1, bg='RoyalBlue3', fg='aquamarine')
-    labelinf.grid(sticky='w', row=14, column=0, columnspan=4, padx=10)
+    self.labelresult3 = self.can.create_window(self.x43, self.y43,
+        window = self.labelresult3)
+    """
+
 
     CheckVar40 = IntVar()
     C40 = Checkbutton(self.can, text="Anafrani (clomipramin)", fg='navy', 

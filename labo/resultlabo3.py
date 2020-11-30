@@ -260,90 +260,115 @@ def callLabo3(self):
         width=26, anchor="w")
     self.C24 = self.can.create_window(self.x27, self.y27,
         window = self.C24)
-    """
+    
+    self.x28, self.y28 = 461, 268
     CheckVar25 = IntVar()
-    C25 = Checkbutton(self.can, text="Inovelon (rufinamid)", fg='navy',
+    self.C25 = Checkbutton(self.can, text="Inovelon (rufinamid)", fg='navy',
         bg='cyan', variable=CheckVar25, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C25.grid(sticky='w', row=8, column=1, padx=30)
+    self.C25 = self.can.create_window(self.x28, self.y28,
+        window = self.C25)
 
+    self.x29, self.y29 = 461, 291
     CheckVar26 = IntVar()
-    C26 = Checkbutton(self.can, text="Keppra (levetiracetam)", fg='navy',
+    self.C26 = Checkbutton(self.can, text="Keppra (levetiracetam)", fg='navy',
         bg='cyan', variable=CheckVar26, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C26.grid(sticky='w', row=9, column=1, padx=30)
+    self.C26 = self.can.create_window(self.x29, self.y29,
+        window = self.C26)
 
+    self.x30, self.y30 = 461, 314
     CheckVar27 = IntVar()
-    C27 = Checkbutton(self.can, text="Lamictal (lamotrigine)", fg='navy',
+    self.C27 = Checkbutton(self.can, text="Lamictal (lamotrigine)", fg='navy',
         bg='cyan', variable=CheckVar27, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C27.grid(sticky='w', row=10, column=1, padx=30)
+    self.C27 = self.can.create_window(self.x30, self.y30,
+        window = self.C27)
 
+    self.x31, self.y31 = 461, 337
     CheckVar28 = IntVar()
-    C28 = Checkbutton(self.can, text="Lyrica (pregabalin)", fg='navy', 
+    self.C28 = Checkbutton(self.can, text="Lyrica (pregabalin)", fg='navy', 
         bg='cyan', variable=CheckVar28, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C28.grid(sticky='w', row=11, column=1, padx=30)
+    self.C28 = self.can.create_window(self.x31, self.y31,
+        window = self.C28)
 
+    self.x32, self.y32 = 461, 360
     CheckVar29 = IntVar()
-    C29 = Checkbutton(self.can, text="Myzoline (primidon)", fg='navy', 
+    self.C29 = Checkbutton(self.can, text="Myzoline (primidon)", fg='navy', 
         bg='cyan', variable=CheckVar29, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C29.grid(sticky='w', row=12, column=1, padx=30)
+    self.C29 = self.can.create_window(self.x32, self.y32,
+        window = self.C29)
 
+    self.x33, self.y33 = 461, 383
     CheckVar30 = IntVar()
-    C30 = Checkbutton(self.can, text="Neurontin (gabapentin)", fg='navy', 
+    self.C30 = Checkbutton(self.can, text="Neurontin (gabapentin)", fg='navy', 
         bg='cyan', variable=CheckVar30, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C30.grid(sticky='w', row=13, column=1, padx=30)
+    self.C30 = self.can.create_window(self.x33, self.y33,
+        window = self.C30)
 
+    self.x34, self.y34 = 790, 268
     CheckVar31 = IntVar()
-    C31 = Checkbutton(self.can, text="Phenobarbital (aphenylbarbit)", fg='navy', 
+    self.C31 = Checkbutton(self.can, text="Phenobarbital (aphenylbarbit)", fg='navy', 
         bg='cyan', variable=CheckVar31, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C31.grid(sticky='w', row=8, column=2, padx=20)
+    self.C31 = self.can.create_window(self.x34, self.y34,
+        window = self.C31)
 
+    self.x35, self.y35 = 790, 291
     CheckVar32 = IntVar()
-    C32 = Checkbutton(self.can, text="Phenytoïne", fg='navy', 
+    self.C32 = Checkbutton(self.can, text="Phenytoïne", fg='navy', 
         bg='cyan', variable=CheckVar32, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C32.grid(sticky='w', row=9, column=2, padx=20)
+    self.C32 = self.can.create_window(self.x35, self.y35,
+        window = self.C32)
 
+    self.x36, self.y36 = 790, 314
     CheckVar33 = IntVar()
-    C33 = Checkbutton(self.can, text="Sabril (vigabatrin)", fg='navy', 
+    self.C33 = Checkbutton(self.can, text="Sabril (vigabatrin)", fg='navy', 
         bg='cyan', variable=CheckVar33, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C33.grid(sticky='w', row=10, column=2, padx=20)
+    self.C33 = self.can.create_window(self.x36, self.y36,
+        window = self.C33)
 
+    self.x37, self.y37 = 790, 337
     CheckVar34 = IntVar()
-    C34 = Checkbutton(self.can, text="Taloxa (felbamate)", fg='navy', 
+    self.C34 = Checkbutton(self.can, text="Taloxa (felbamate)", fg='navy', 
         bg='cyan', variable=CheckVar34, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C34.grid(sticky='w', row=11, column=2, padx=20)
+    self.C34 = self.can.create_window(self.x37, self.y37,
+        window = self.C34)
 
+    self.x38, self.y38 = 790, 360
     CheckVar35 = IntVar()
-    C35 = Checkbutton(self.can, text="Topamax (topiramate)", fg='navy', 
+    self.C35 = Checkbutton(self.can, text="Topamax (topiramate)", fg='navy', 
         bg='cyan', variable=CheckVar35, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C35.grid(sticky='w', row=12, column=2, padx=20)
+    self.C35 = self.can.create_window(self.x38, self.y38,
+        window = self.C35)
 
+    self.x39, self.y39 = 790, 383
     CheckVar36 = IntVar()
-    C36 = Checkbutton(self.can, text="Trileptal (oxcarbazepin)", fg='navy', 
+    self.C36 = Checkbutton(self.can, text="Trileptal (oxcarbazepin)", fg='navy', 
         bg='cyan', variable=CheckVar36, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C36.grid(sticky='w', row=13, column=2, padx=20)
+    self.C36 = self.can.create_window(self.x39, self.y39,
+        window = self.C36)
+    """
 
     CheckVar37 = IntVar()
     C37 = Checkbutton(self.can, text="Trobalt (retigabin)", fg='navy', 

@@ -19,17 +19,17 @@ def callLabo3(self):
     self.can.delete(ALL)
     self.can.configure(bg='DodgerBlue2')
 
-    self.x1, self.y1 = 540, 40
+    self.x1, self.y1 = 540, 45
     self.labelname = Label(self.can, text="Labo check",
         font=('helvetica', 18, 'bold'), width=10,
-        height=2, bg='DodgerBlue2', fg='white')
+        height=2, bg='DodgerBlue2', fg='cyan')
     self.labelname = self.can.create_window(self.x1, self.y1,
         window = self.labelname)
 
     with open('./newpatient/entryfile3.txt', 'r') as filename:
         line1 = filename.readline()
 
-    self.x2, self.y2 = 720, 40
+    self.x2, self.y2 = 720, 45
     entrytext = StringVar()
     self.entryname = Entry(self.can, textvariable=entrytext, width=20)
     entrytext.set(line1)
@@ -186,81 +186,97 @@ def callLabo3(self):
         width=26, anchor="w")
     self.C17 = self.can.create_window(self.x19, self.y19,
         window = self.C17)
-    """
+
+    self.x20, self.y20 = 1117, 148
     CheckVar18 = IntVar()
-    C18 = Checkbutton(self.can, text="Zyprexa (olanzapin)", fg='navy', 
-        bg='cyan', variable=CheckVar18, 
-        onvalue=1, offvalue=0, height=1, 
+    self.C18 = Checkbutton(self.can, text="Zyprexa (olanzapin)", fg='navy',
+        bg='cyan', variable=CheckVar18,
+        onvalue=1, offvalue=0, height=1,
         width=26, anchor="w")
-    C18.grid(sticky='e', row=3, column=3, padx=10)
+    self.C18 = self.can.create_window(self.x20, self.y20,
+        window = self.C18)
 
     # MAE
-    labelresult2=Label(self.can, text='--- Médicaments anti-épileptiques ---', 
-        font="Times 14 bold", width=132,
+    self.x21, self.y21 = 625, 243
+    self.labelresult2 = Label(self.can, text='--- Médicaments anti-épileptiques ---',
+        font="Times 14 bold", width=135,
         height=1, bg='RoyalBlue3', fg='aquamarine')
-    labelresult2.grid(sticky='w', row=7, column=0, columnspan=4, padx=10)
+    self.labelresult2 = self.can.create_window(self.x21, self.y21,
+        window = self.labelresult2)
 
     #separator = Label(self.can, height=5, bd=2, relief=SUNKEN)
     #separator.grid(sticky='ns', row=2, column=1)
 
+    self.x22, self.y22 = 134, 268
     CheckVar19 = IntVar()
-    C19 = Checkbutton(self.can, text="Briviact (brivaracetam)", fg='navy', 
-        bg='cyan', variable=CheckVar19, 
-        onvalue=1, offvalue=0, height=1, 
+    self.C19 = Checkbutton(self.can, text="Briviact (brivaracetam)", fg='navy',
+        bg='cyan', variable=CheckVar19,
+        onvalue=1, offvalue=0, height=1,
         width=26, anchor="w")
-    C19.grid(sticky='w', row=8, column=0, padx=10)
+    self.C19 = self.can.create_window(self.x22, self.y22,
+        window = self.C19)
 
+    self.x23, self.y23 = 134, 291
     CheckVar20 = IntVar()
-    C20 = Checkbutton(self.can, text="Carbamazepine (tegretol)", fg='navy', 
-        bg='cyan', variable=CheckVar20, 
-        onvalue=1, offvalue=0, height=1, 
+    self.C20 = Checkbutton(self.can, text="Carbamazepine (tegretol)", fg='navy',
+        bg='cyan', variable=CheckVar20,
+        onvalue=1, offvalue=0, height=1,
         width=26, anchor="w")
-    C20.grid(sticky='w', row=9, column=0, padx=10)
-
+    self.C20 = self.can.create_window(self.x23, self.y23,
+        window = self.C20)
+    
+    self.x24, self.y24 = 134, 314
     CheckVar21 = IntVar()
-    C21 = Checkbutton(self.can, text="Depakine (valproate)", fg='navy', 
+    self.C21 = Checkbutton(self.can, text="Depakine (valproate)", fg='navy',
         bg='cyan', variable=CheckVar21, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C21.grid(sticky='w', row=10, column=0, padx=10)
+    self.C21 = self.can.create_window(self.x24, self.y24,
+        window = self.C21)
 
+    self.x25, self.y25 = 134, 337
     CheckVar22 = IntVar()
-    C22 = Checkbutton(self.can, text="Ethosuximide (petinimid)", fg='navy', 
+    self.C22 = Checkbutton(self.can, text="Ethosuximide (petinimid)", fg='navy',
         bg='cyan', variable=CheckVar22, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C22.grid(sticky='w', row=11, column=0, padx=10)
+    self.C22 = self.can.create_window(self.x25, self.y25,
+        window = self.C22)
 
+    self.x26, self.y26 = 134, 360
     CheckVar23 = IntVar()
-    C23 = Checkbutton(self.can, text="Fycompa (perampanel)", fg='navy',
+    self.C23 = Checkbutton(self.can, text="Fycompa (perampanel)", fg='navy',
         bg='cyan', variable=CheckVar23, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C23.grid(sticky='w', row=12, column=0, padx=10)
+    self.C23 = self.can.create_window(self.x26, self.y26,
+        window = self.C23)
 
+    self.x27, self.y27 = 134, 383
     CheckVar24 = IntVar()
-    C24 = Checkbutton(self.can, text="Gabitril (tiagabine)", fg='navy', 
+    self.C24 = Checkbutton(self.can, text="Gabitril (tiagabine)", fg='navy',
         bg='cyan', variable=CheckVar24, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    C24.grid(sticky='w', row=13, column=0, padx=10)
-
+    self.C24 = self.can.create_window(self.x27, self.y27,
+        window = self.C24)
+    """
     CheckVar25 = IntVar()
-    C25 = Checkbutton(self.can, text="Inovelon (rufinamid)", fg='navy', 
+    C25 = Checkbutton(self.can, text="Inovelon (rufinamid)", fg='navy',
         bg='cyan', variable=CheckVar25, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
     C25.grid(sticky='w', row=8, column=1, padx=30)
 
     CheckVar26 = IntVar()
-    C26 = Checkbutton(self.can, text="Keppra (levetiracetam)", fg='navy', 
+    C26 = Checkbutton(self.can, text="Keppra (levetiracetam)", fg='navy',
         bg='cyan', variable=CheckVar26, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
     C26.grid(sticky='w', row=9, column=1, padx=30)
 
     CheckVar27 = IntVar()
-    C27 = Checkbutton(self.can, text="Lamictal (lamotrigine)", fg='navy', 
+    C27 = Checkbutton(self.can, text="Lamictal (lamotrigine)", fg='navy',
         bg='cyan', variable=CheckVar27, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")

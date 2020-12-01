@@ -13,6 +13,7 @@ from patcaps import callResident
 from backapp import *
 from Backup.backupfile import dataBackToSave
 from labo.resultlabo3 import callLabo3
+from ttt.patienttt4 import callTreatment4
 #import passw
 
 
@@ -2036,7 +2037,8 @@ class Application(Frame):
         subprocess.run("./ttt/patienttt3.py", check=True)
 
     def tttMed4(self):
-        subprocess.run("./ttt/patienttt4.py", check=True)
+        callTreatment4(self)
+        #subprocess.run("./ttt/patienttt4.py", check=True)
 
     def tttMed5(self):
         subprocess.run("./ttt/patienttt5.py", check=True)

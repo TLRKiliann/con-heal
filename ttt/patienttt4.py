@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-
 from tkinter import *
+from tkinter import ttk
 from tkinter import messagebox
 import time
 import os
@@ -10,37 +10,40 @@ import json
 import subprocess
 
 
-def callTreatment4(self):
+def callTreatment3(self):
     self.can.delete(ALL)
     self.can.configure(bg='DodgerBlue2')
 
+    self.x1, self.y1 = 625, 40
     self.textLab = Label(self.can, text="Introduction of treatement (ttt)",
-        font=('Times 22 bold'), fg='aquamarine', bg='RoyalBlue4')
-    self.textLab.grid(row=0, column=0, columnspan=4, pady=10)
+        font=('Times', 22, 'bold'), fg='aquamarine', bg='DodgerBlue2')
+    self.textLab = self.can.create_window(self.x1, self.y1, window=self.textLab)
 
-    self.labelallergy = Label(self.can, text="Allergy",
-        font='Arial 18 bold', fg='coral', bg='RoyalBlue4')
-    self.labelallergy.grid(row=1, column=0, columnspan=4)
+    self.x2, self.y2 = 370, 80
+    self.labelallergy = Label(self.can, text="Allergy : ",
+        font=('Arial', 18, 'bold'), fg='coral', bg='DodgerBlue2')
+    self.labelallergy = self.can.create_window(self.x2, self.y2, window=self.labelallergy)
 
     # To read allergy for entry widget
-    with open('./newpatient/entryfile4.txt', 'r') as filename2:
+    with open('./newpatient/entryfile3.txt', 'r') as filename2:
         line1 = filename2.readline()
         line2 = filename2.readline()
         line3 = filename2.readline()
 
-    entrytext=StringVar()
+    self.x3, self.y3 = 680, 80
+    entrytext = StringVar()
+    self.entryName = Entry(self.can, textvariable=entrytext, width=60)
     entrytext.set(line3)
-    entryName=Entry(self.can, textvariable=entrytext, width=60)
-    entryName.grid(row=2, column=0, columnspan=4, pady=10)
+    self.entryName = self.can.create_window(self.x3, self.y3, window=self.entryName)
 
     def callbackDay(event):
-        print(comboDay.get())
+        print(self.comboDay.get())
 
     def callbackMonth(event):
-        print(comboMonth.get())
+        print(self.comboMonth.get())
 
     def callbackYear(event):
-        print(comboYear.get())
+        print(self.comboYear.get())
 
     def callbackFinishDay(event):
         print(comboFinishDay.get())
@@ -50,54 +53,48 @@ def callTreatment4(self):
 
     def callbackFinishYear(event):
         print(comboFinishYear.get())
-
+    """
     def showTreat():
-        """
-        To display tabs of ttt, convdose.json 
-        file must be existing.
-        """
+            #To display tabs of ttt, convdose.json 
+            #file must be existing.
         try:
-            if os.path.getsize('./ttt/doc_ttt4/convdose.json'):
-                subprocess.call('./ttt/doc_ttt4/tabs.py')
+            if os.path.getsize('./ttt/doc_ttt3/convdose.json'):
+                subprocess.call('./ttt/doc_ttt3/tabs.py')
         except FileNotFoundError as no_tabs:
             print("+ Sorry, it's not possible to show tab of ttt, \
                 convdose.json file missing !")
             tttTabs()
 
     def tttTabs():
-        MSBTABS = messagebox.showinfo("Info", "No ttt recorded for \
+        messagebox.showinfo("Info", "No ttt recorded for \
             this patient, convdose.json file missing !") 
 
     def showReserve():
-        """
-        To display tabs of reserve, convres.json 
-        file must be existing.
-        """
+            #To display tabs of reserve, convres.json 
+            #file must be existing.
         try:
-            if os.path.getsize('./ttt/doc_ttt4/convres.json'):
-                subprocess.call('./ttt/doc_ttt4/tabres.py')
+            if os.path.getsize('./ttt/doc_ttt3/convres.json'):
+                subprocess.call('./ttt/doc_ttt3/tabres.py')
         except FileNotFoundError as no_tabs:
             print("+ Sorry, it's not possible to show tab of reserve, \
                 convres.json file missing !")
             reserveTabs()
 
     def reserveTabs():
-        MSBTABS = messagebox.showinfo("Info", "No reserve recorded for \
+        messagebox.showinfo("Info", "No reserve recorded for \
             this patient, convres.json file missing !")
 
     def deleteTreatment():
-        """
-        To earase one line in array
-        for one treatment
-        """
+            #To earase one line in array
+            #for one treatment
         MSB = messagebox.askyesno('Delete ttt', 'Are you sure ?')
         if MSB == 1:
             print("+ Ok, ttt has been ejected !")
             messagebox.showinfo('info BOX', 'Treatment is away !')
             try:
-                if os.path.getsize('./ttt/doc_ttt4/convdose.json'):
+                if os.path.getsize('./ttt/doc_ttt3/convdose.json'):
                     print("+ File 'convdose' exist !")
-                    with open('./ttt/doc_ttt4/convdose.json', 'r') as datafile:
+                    with open('./ttt/doc_ttt3/convdose.json', 'r') as datafile:
                         datastore = json.load(datafile)
                     
                     dataDose = datastore
@@ -168,26 +165,24 @@ def callTreatment4(self):
                             print("None treatment checked")
                         else:
                             print("---Ok VALUE 'Treatment' earased---")
-                            with open('./ttt/doc_ttt4/convdose.json', 'w') as datafile2:
+                            with open('./ttt/doc_ttt3/convdose.json', 'w') as datafile2:
                                 json.dump(dataDose, datafile2, indent=4)
             except FileNotFoundError as outcom:
                 print('+ Sorry, file convdose.json not exist !', outcom)
         else:           
-            NoforQ = messagebox.showinfo('Return', 'Treatment not earased')
+            messagebox.showinfo('Return', 'Treatment not earased')
 
     def deleteReserve():
-        """
-        To earase one line in array
-        for one Reserve
-        """
+            #To earase one line in array
+            #for one Reserve
         MSB2 = messagebox.askyesno('Delete Reserve', 'Are you sure ?')
         if MSB2 == 1:
             print("Ok, Reserve has been ejected !")
             messagebox.showinfo('info BOX', 'Reserve is away !')
             try:
-                if os.path.getsize('./ttt/doc_ttt4/convres.json'):
+                if os.path.getsize('./ttt/doc_ttt3/convres.json'):
                     print("+ File 'convres' exist !")
-                    with open('./ttt/doc_ttt4/convres.json', 'r') as datafile:
+                    with open('./ttt/doc_ttt3/convres.json', 'r') as datafile:
                         datastore = json.load(datafile)
                     
                     dataRes = datastore
@@ -258,18 +253,16 @@ def callTreatment4(self):
                             print("None Reserve checked")
                         else:
                             print("---Ok VALUE 'Reserve' earased---")
-                            with open('./ttt/doc_ttt4/convres.json', 'w') as datafile2:
+                            with open('./ttt/doc_ttt3/convres.json', 'w') as datafile2:
                                 json.dump(dataRes, datafile2, indent=4)
             except FileNotFoundError as outinfo:
                 print('+ Sorry, file convres.json not exist !', outinfo)
         else:           
-            NoforQ = messagebox.showinfo('Return', 'Reserve not earased')
+            messagebox.showinfo('Return', 'Reserve not earased')
 
     def copyTttMess():
-        """
-        MessageBox to ensure if it's well done.
-        """
-        MsgBox = messagebox.askyesno('Record', 'Do you want to save ?')
+            #MessageBox to ensure if it's well done.
+        messagebox.askyesno('Record', 'Do you want to save ?')
         if MsgBox == 1:
             print("Ok to save")
             copyToFile()
@@ -278,11 +271,9 @@ def callTreatment4(self):
             messagebox.showinfo('Return', 'You will return to the application')
 
     def copyToFile():
-        """
-        To write all data to intro_ttt.json
-        to reuse them after.
-        """
-        with open('./ttt/doc_ttt4/intro_ttt.txt', '+a') as file:
+            #To write all data to intro_ttt.json
+            #to reuse them after.
+        with open('./ttt/doc_ttt3/intro_ttt.txt', '+a') as file:
             file.write(str("Date : "))
             file.write(textDate.get() + '\n')
             file.write(str("Heure : "))
@@ -319,9 +310,9 @@ def callTreatment4(self):
             file.write(textSign.get())
             file.write(str('\n\n'))
         try:
-            if os.path.getsize('./ttt/doc_ttt4/convdose.json'):
+            if os.path.getsize('./ttt/doc_ttt3/convdose.json'):
                 print("+ File 'convdose' exist !")
-                with open('./ttt/doc_ttt4/convdose.json', 'r') as datafile:
+                with open('./ttt/doc_ttt3/convdose.json', 'r') as datafile:
                     datastore = json.load(datafile)
                     print(datastore)
                 dataDose = datastore
@@ -336,7 +327,7 @@ def callTreatment4(self):
                     print("---No value 'Treatment' introduced---")
                 else:
                     print("---Ok value 'Treatment' introduced---")
-                    with open('./ttt/doc_ttt4/convdose.json', 'w') as datafile2:
+                    with open('./ttt/doc_ttt3/convdose.json', 'w') as datafile2:
                         json.dump(dataDose, datafile2, indent=4)
         except FileNotFoundError as outcom:
             print('+ Sorry, file convdose.json not exist !')
@@ -355,13 +346,11 @@ def callTreatment4(self):
                 print("---No value 'Treatment' introduced---")
             else:
                 print("---Ok value 'Treatment' introduced---")
-                with open('./ttt/doc_ttt4/convdose.json', 'w') as datafile:
+                with open('./ttt/doc_ttt3/convdose.json', 'w') as datafile:
                     json.dump(dataDose, datafile, indent=4)
 
     def copyResMess():
-        """
-        MessageBox to ensure if it's well done.
-        """
+        #MessageBox to ensure if it's well done.
         MsgBox = messagebox.askyesno('Record', 'Do you want to save ?')
         if MsgBox == 1:
             print("Ok to save")
@@ -371,11 +360,9 @@ def callTreatment4(self):
             messagebox.showinfo('Return', 'You will return to the application')
 
     def copyToReserve():
-        """
-        To write all data to intro_res.txt
-        to reuse them after.
-        """
-        with open('./ttt/doc_ttt4/intro_res.txt', '+a') as file:
+        #To write all data to intro_res.txt
+        #to reuse them after.
+        with open('./ttt/doc_ttt3/intro_res.txt', '+a') as file:
             file.write(str("Date : "))
             file.write(textDate.get() + '\n')
             file.write(str("Heure : "))
@@ -412,9 +399,9 @@ def callTreatment4(self):
             file.write(textSign.get())
             file.write(str('\n\n'))
         try:
-            if os.path.getsize('./ttt/doc_ttt4/convres.json'):
+            if os.path.getsize('./ttt/doc_ttt3/convres.json'):
                 print("+ File 'convres' exist !")
-                with open('./ttt/doc_ttt4/convres.json', 'r') as datafile:
+                with open('./ttt/doc_ttt3/convres.json', 'r') as datafile:
                     datastore = json.load(datafile)
                     print(datastore)
                 dataDose = datastore
@@ -429,7 +416,7 @@ def callTreatment4(self):
                     print("---No value 'Treatment' introduced---")
                 else:
                     print("---Ok value 'Treatment' introduced---")
-                    with open('./ttt/doc_ttt4/convres.json', 'w') as datafile2:
+                    with open('./ttt/doc_ttt3/convres.json', 'w') as datafile2:
                         json.dump(dataDose, datafile2, indent=4)
         except FileNotFoundError as outcom:
             print('+ Sorry, file convres.json not exist !')
@@ -457,88 +444,93 @@ def callTreatment4(self):
             else:
                 print("Problem with reserve registration")
             print("+ Ok, value 'Treatment' introduced---")
-            with open('./ttt/doc_ttt4/convres.json', 'w') as datafile:
+            with open('./ttt/doc_ttt3/convres.json', 'w') as datafile:
                 json.dump(dataDose, datafile, indent=4)
 
     def readFileStory():
         try:
-            if os.path.getsize("./ttt/doc_ttt4/intro_ttt.txt"):
-                subprocess.call("./ttt/doc_ttt4/readstory.py")
+            if os.path.getsize("./ttt/doc_ttt3/intro_ttt.txt"):
+                subprocess.call("./ttt/doc_ttt3/readstory.py")
         except FileNotFoundError as no_storyfile:
             print("+ Sorry, it's not possible to show tab of ttt, \
                 no ttt has been introduced !", no_storyfile)
             noStory()
 
     def noStory():
-        MSBstory = messagebox.showinfo("Info", "None historic of ttt is available, \
+        messagebox.showinfo("Info", "None historic of ttt is available, \
             no ttt has been introduced !") 
-
-
-    LabDate = Label(self.can, text="Date : ", width=20, font=12,
+    """
+    self.x4, self.y4 = 120, 140
+    self.LabDate = Label(self.can, text="Date : ", width=15, font=12,
         fg='cyan', bg='RoyalBlue4', anchor='e')
-    LabDate.grid(row=3, column=0)
+    self.LabDate = self.can.create_window(self.x4, self.y4, window=self.LabDate)
 
-    LabHour = Label(self.can, text="Hour : ", width=20, font=12,
+    self.x5, self.y5 = 120, 170
+    self.LabHour = Label(self.can, text="Hour : ", width=15, font=12,
         fg='cyan', bg='RoyalBlue4', anchor='e')
-    LabHour.grid(row=4, column=0)
+    self.LabHour = self.can.create_window(self.x5, self.y5, window=self.LabHour)
 
-    LabName = Label(self.can, text="Patient's name : ", width=20, font=12,
+    self.x6, self.y6 = 120, 200
+    self.LabName = Label(self.can, text="Patient's name : ", width=15, font=12,
         fg='cyan', bg='RoyalBlue4', anchor='e')
-    LabName.grid(row=5, column=0)
+    self.LabName = self.can.create_window(self.x6, self.y6, window=self.LabName)
 
-    LabTreat = Label(self.can, text='Name of drug : ', width=20, 
+    self.x7, self.y7 = 120, 230
+    self.LabTreat = Label(self.can, text='Name of drug : ', width=15, 
         font=12, fg='cyan', bg='RoyalBlue4', anchor='e')
-    LabTreat.grid(row=6, column=0)
+    self.LabTreat = self.can.create_window(self.x7, self.y7, window=self.LabTreat)
 
-    LabDose = Label(self.can, text="Dose : ", width=20, font=12,
+    self.x8, self.y8 = 120, 260
+    self.LabDose = Label(self.can, text="Dose : ", width=15, font=12,
         fg='cyan', bg='RoyalBlue4', anchor='e')
-    LabDose.grid(row=7, column=0)
+    self.LabDose = self.can.create_window(self.x8, self.y8, window=self.LabDose)
 
-    textDate = Entry(self.can)
+    self.x9, self.y9 = 300, 140
     time_string = IntVar()
-    textDate = Entry(self.can, textvariable=time_string,
+    self.textDate = Entry(self.can, textvariable=time_string,
         highlightbackground='grey', bd=4)
     time_string.set(time.strftime("%d/%m/%Y"))
-    textDate.grid(row=3, column=1)
+    self.textDate = self.can.create_window(self.x9, self.y9, window=self.textDate)
 
-    textHour = Entry(self.can)
+    self.x10, self.y10 = 300, 170
     time_Htring = IntVar()
-    textHour = Entry(textvariable=time_Htring,
+    self.textHour = Entry(self.can, textvariable=time_Htring,
         highlightbackground='grey', bd=4)
     time_Htring.set(time.strftime("%H:%M:%S"))
-    textHour.grid(row=4, column=1)
+    self.textHour = self.can.create_window(self.x10, self.y10, window=self.textHour)
 
     # To read name of patient for entry widget
-    with open('./newpatient/entryfile4.txt', 'r') as filename:
+    with open('./newpatient/entryfile3.txt', 'r') as filename:
         line1=filename.readline()
 
-    textName = Entry(self.can)
+    self.x11, self.y11 = 300, 200
     name_text = StringVar()
-    textName = Entry(textvariable=name_text,
+    self.textName = Entry(self.can, textvariable=name_text,
         highlightbackground='grey', bd=4)
     name_text.set(line1)
-    textName.grid(row=5, column=1)
+    self.textName = self.can.create_window(self.x11, self.y11, window=self.textName)
 
-    textTreat = Entry(self.can)
+    self.x12, self.y12 = 300, 230
     ttt_name = StringVar()
-    textTreat = Entry(textvariable=ttt_name,
+    self.textTreat = Entry(self.can, textvariable=ttt_name,
         highlightbackground='grey', bd=4)
     ttt_name.set("Drug")
-    textTreat.grid(row=6, column=1)
+    self.textTreat = self.can.create_window(self.x12, self.y12, window=self.textTreat)
 
-    textDosage = Entry(self.can)
+    self.x13, self.y13 = 300, 260
     tttDosage = StringVar()
-    textDosage = Entry(textvariable=tttDosage,
+    self.textDosage = Entry(self.can, textvariable=tttDosage,
         highlightbackground='grey', bd=4)
     tttDosage.set("mcg/ml/mg/UI/gttes")
-    textDosage.grid(row=7, column=1)
+    self.textDosage = self.can.create_window(self.x13, self.y13, window=self.textDosage)
 
-    deleteTreat = Entry(self.can)
+    """
+    self.x14, self.y14 = 200, 260
     delete_text = StringVar()
-    delete_text.set("Enter ttt to stop")
-    deleteTreat = Entry(textvariable=delete_text,
+    self.deleteTreat = Entry(self.can, textvariable=delete_text,
         highlightbackground='red', bd=4)
-    deleteTreat.grid(row=3, column=2)
+    delete_text.set("Enter ttt to stop")
+    self.deleteTreat = self.can.create_window(self.x14, self.y14, window=self.deleteTreat)
 
     # Button to stop ttt and R
     buttStopttt = Button(self.can, text="Stop ttt", width=10, fg='yellow',
@@ -568,13 +560,14 @@ def callTreatment4(self):
         bg='RoyalBlue3', bd=3, highlightbackground='RoyalBlue4', 
         activebackground='dark turquoise', command=showReserve)
     buttShowttt.grid(row=7, column=3)
-
-    textDateS = Label(self.can, text="Processing start date :", 
+    """
+    self.x20, self.y20 = 650, 140
+    self.textDateS = Label(self.can, text="Processing start date :", 
         font=('Arial 14 bold'), fg='aquamarine', bg='RoyalBlue4', width=40, anchor='w')
-    textDateS.grid(row=8, column=0, columnspan=2, pady=10)
+    self.textDateS = self.can.create_window(self.x20, self.y20, window=self.textDateS)
 
     def changeDay():
-        comboDay["values"] = ['01', '02', '03', '04',
+        self.comboDay["values"] = ['01', '02', '03', '04',
                               '05', '06', '07', '08',
                               '09', '10', '11', '12',
                               '13', '14', '15', '16',
@@ -582,12 +575,13 @@ def callTreatment4(self):
                               '21', '22', '23', '24',
                               '25', '26', '27', '28',
                               '29', '30', '31']
-
-    labelDay = Label(self.can,
+    self.x21, self.y21 = 600, 180
+    self.labelDay = Label(self.can,
         text = "Choose the day :", font=12, fg='cyan', bg='RoyalBlue4')
-    labelDay.grid(row=9, column=0)
+    self.labelDay = self.can.create_window(self.x21, self.y21, window=self.labelDay)
 
-    comboDay = tCombobox(self.can,
+    self.x22, self.y22 = 600, 220
+    self.comboDay = ttk.Combobox(self.can,
         values=['01', '02', '03', '04',
                 '05', '06', '07', '08',
                 '09', '10', '11', '12',
@@ -596,11 +590,11 @@ def callTreatment4(self):
                 '21', '22', '23', '24',
                 '25', '26', '27', '28',
                 '29', '30', '31'], postcommand=changeDay)
-    comboDay.bind("<<ComboboxSelected>>", callbackDay)
-    comboDay.grid(row=10, column=0, pady=10)
+    self.comboDay.bind("<<ComboboxSelected>>", callbackDay)
+    self.comboDay = self.can.create_window(self.x22, self.y22, window=self.comboDay)
 
     def changeMonth():
-        comboMonth["values"] = [' January',
+        self.comboMonth["values"] = [' January',
                               ' February',
                               ' March',
                               ' April',
@@ -613,11 +607,13 @@ def callTreatment4(self):
                               ' November',
                               ' December']
 
-    labelMonth = Label(self.can,
+    self.x23, self.y23 = 800, 180
+    self.labelMonth = Label(self.can,
         text = "Choose the month :", font=12, fg='cyan', bg='RoyalBlue4')
-    labelMonth.grid(row=9, column=1)
+    self.labelMonth = self.can.create_window(self.x23, self.y23, window=self.labelMonth)
 
-    comboMonth = tCombobox(self.can,
+    self.x24, self.y24 = 800, 220
+    self.comboMonth = ttk.Combobox(self.can,
         values=[' January',
               ' February',
               ' March',
@@ -630,11 +626,11 @@ def callTreatment4(self):
               ' October',
               ' November',
               ' December'], postcommand=changeMonth)
-    comboMonth.bind("<<ComboboxSelected>>", callbackMonth)
-    comboMonth.grid(row=10, column=1, pady=10)
+    self.comboMonth.bind("<<ComboboxSelected>>", callbackMonth)
+    self.comboMonth = self.can.create_window(self.x24, self.y24, window=self.comboMonth)
 
     def changeYear():
-        comboYear["values"] = ['', ' 2000', ' 2001', ' 2002', ' 2003',
+        self.comboYear["values"] = ['', ' 2000', ' 2001', ' 2002', ' 2003',
                               ' 2004', ' 2005', ' 2006', ' 2007',
                               ' 2008', ' 2009', ' 2010', ' 2011',
                               ' 2012', ' 2013', ' 2014', ' 2015',
@@ -644,11 +640,13 @@ def callTreatment4(self):
                               ' 2028', ' 2029', ' 2030', ' 2031',
                               ' 2032', ' 2033', ' 2034', ' 2035']
 
-    labelYear = Label(self.can,
+    self.x25, self.y25 = 1000, 180
+    self.labelYear = Label(self.can,
         text = "Choose the year :", font=12, fg='cyan', bg='RoyalBlue4')
-    labelYear.grid(row=9, column=2)
+    self.labelYear = self.can.create_window(self.x25, self.y25, window=self.labelYear)
 
-    comboYear = tCombobox(self.can,
+    self.x26, self.y26 = 1000, 220
+    self.comboYear = ttk.Combobox(self.can,
         values=['', ' 2000', ' 2001', ' 2002', ' 2003',
                 ' 2004', ' 2005', ' 2006', ' 2007',
                 ' 2008', ' 2009', ' 2010', ' 2011',
@@ -658,22 +656,20 @@ def callTreatment4(self):
                 ' 2024', ' 2025', ' 2026', ' 2027',
                 ' 2028', ' 2029', ' 2030', ' 2031',
                 ' 2032', ' 2033', ' 2034', ' 2035'], postcommand=changeYear)
-    comboYear.bind("<<ComboboxSelected>>", callbackYear)
-    comboYear.grid(row=10, column=2, pady=10)
-    comboYear.current(0)
+    self.comboYear.bind("<<ComboboxSelected>>", callbackYear)
+    self.comboYear.current(0)
+    self.comboYear = self.can.create_window(self.x26, self.y26, window=self.comboYear)
+
 
     # Date of finish
-    textDateF = Label(self.can, text="Processing end date :", 
+    self.x27, self.y27 = 650, 260
+    self.txtfinishdate = Label(self.can, text="Processing end date :", 
         font=('Arial 14 bold'), fg='aquamarine', bg='RoyalBlue4', width=40, anchor='w')
-    textDateF.grid(row=11, column=0, columnspan=2, pady=10)
+    self.txtfinishdate = self.can.create_window(self.x27, self.y27, window=self.txtfinishdate)
 
-    buttStory = Button(self.can, text="Historic", width=10, fg='cyan',
-        bg='RoyalBlue3', bd=3, highlightbackground='RoyalBlue4', 
-        activebackground='dark turquoise', command=readFileStory)
-    buttStory.grid(row=11, column=3)
 
     def finishDay():
-        comboFinishDay["values"] = ['01', '02', '03', '04',
+        self.comboFinishDay["values"] = ['01', '02', '03', '04',
                                     '05', '06', '07', '08',
                                     '09', '10', '11', '12',
                                     '13', '14', '15', '16',
@@ -681,12 +677,13 @@ def callTreatment4(self):
                                     '21', '22', '23', '24',
                                     '25', '26', '27', '28',
                                     '29', '30', '31']
-
-    labelFinishDay = Label(self.can,
+    self.x28, self.y28 = 600, 300
+    self.labelFinishDay = Label(self.can,
         text = "Choose the day :", font=12, fg='cyan', bg='RoyalBlue4')
-    labelFinishDay.grid(row=12, column=0)
+    self.labelFinishDay = self.can.create_window(self.x28, self.y28, window=self.labelFinishDay)
 
-    comboFinishDay = tCombobox(self.can,
+    self.x29, self.y29 = 600, 340
+    self.comboFinishDay = ttk.Combobox(self.can,
         values=['01', '02', '03', '04',
                 '05', '06', '07', '08',
                 '09', '10', '11', '12',
@@ -695,11 +692,11 @@ def callTreatment4(self):
                 '21', '22', '23', '24',
                 '25', '26', '27', '28',
                 '29', '30', '31'], postcommand=finishDay)
-    comboFinishDay.bind("<<ComboboxSelected>>", callbackFinishDay)
-    comboFinishDay.grid(row=13, column=0, pady=10)
+    self.comboFinishDay.bind("<<ComboboxSelected>>", callbackFinishDay)
+    self.comboFinishDay = self.can.create_window(self.x29, self.y29, window=self.comboFinishDay)
 
     def finishMonth():
-        comboFinishMonth["values"] = ['01',
+        self.comboFinishMonth["values"] = ['01',
                                     '02',
                                     '03',
                                     '04',
@@ -711,12 +708,13 @@ def callTreatment4(self):
                                     '10',
                                     '11',
                                     '12']
-
-    labelMonth = Label(self.can,
+    
+    self.x30, self.y30 = 800, 300
+    self.labelMonth = Label(self.can,
         text = "Choose the month :", font=12, fg='cyan', bg='RoyalBlue4')
-    labelMonth.grid(row=12, column=1)
+    self.labelMonth = self.can.create_window(self.x30, self.y30, window=self.labelMonth)
 
-    comboFinishMonth = tCombobox(self.can,
+    self.comboFinishMonth = ttk.Combobox(self.can,
         values=['01',  
               '02', 
               '03', 
@@ -729,114 +727,137 @@ def callTreatment4(self):
               '10', 
               '11', 
               '12'], postcommand=finishMonth)
-    comboFinishMonth.bind("<<ComboboxSelected>>", callbackFinishMonth)
-    comboFinishMonth.grid(row=13, column=1, pady=10)
+
+    self.x31, self.y31 = 800, 340
+    self.comboFinishMonth.bind("<<ComboboxSelected>>", callbackFinishMonth)
+    self.comboFinishMonth = self.can.create_window(self.x31, self.y31, window=self.comboFinishMonth)
 
     def finishYear():
-        comboFinishYear["values"] = ['', '2020', '2021', '2022', '2023',
+        self.comboFinishYear["values"] = ['', '2020', '2021', '2022', '2023',
                                      '2024', '2025', '2026', '2027',
                                      '2028', '2029', '2030', '2031',
                                      '2032', '2033', '2034', '2035']
 
-    labelFinishYear = Label(self.can,
+    self.x32, self.y32 = 1000, 300
+    self.labelFinishYear = Label(self.can,
         text = "Choose the year :", font=12, fg='cyan', bg='RoyalBlue4')
-    labelFinishYear.grid(row=12, column=2)
+    self.labelFinishYear = self.can.create_window(self.x32, self.y32, window=self.labelFinishYear)
 
-    comboFinishYear = tCombobox(self.can,
+    self.x33, self.y33 = 1000, 340
+    self.comboFinishYear = ttk.Combobox(self.can,
         values=['', '2020', '2021', '2022', '2023',
                 '2024', '2025', '2026', '2027',
                 '2028', '2029', '2030', '2031',
                 '2032', '2033', '2034', '2035'], postcommand=finishYear)
-    comboFinishYear.bind("<<ComboboxSelected>>", callbackFinishYear)
-    comboFinishYear.grid(row=13, column=2, pady=10)
-    comboFinishYear.current(0)
+    self.comboFinishYear.bind("<<ComboboxSelected>>", callbackFinishYear)
+    self.comboFinishYear.current(0)
+    self.comboFinishYear = self.can.create_window(self.x33, self.y33, window=self.comboFinishYear)
 
-    checkLab = Label(self.can, text="Doses :", font=('Arial 14 bold'), 
-        fg='aquamarine', bg='RoyalBlue4')
-    checkLab.grid(row=14, column=0, pady=10)
+    """
+    self.x34, self.y34 = 800, 600
+    self.buttStory = Button(self.can, text="Historic", width=10, fg='cyan',
+        bg='RoyalBlue3', bd=3, highlightbackground='RoyalBlue4', 
+        activebackground='dark turquoise', command=readFileStory)
+    self.buttStory = self.can.create_window(self.x34, self.y34, window=self.buttStory)
+    """
 
-    DosaLab = Label(self.can, text="Unity :", font=('Arial 14 bold'), 
+    self.x34, self.y34 = 100, 400
+    self.checkLab = Label(self.can, text="Doses :", font=('Arial 14 bold'), 
         fg='aquamarine', bg='RoyalBlue4')
-    DosaLab.grid(row=14, column=2, pady=10)
+    self.checkLab = self.can.create_window(self.x34, self.y34, window=self.checkLab)
 
     # CheckBox
+    self.x35, self.y35 = 100, 440
     CheckVarMatin = IntVar()
-    Cma = Checkbutton(self.can, text="Morning --->", fg='navy', 
+    self.Cma = Checkbutton(self.can, text="Morning --->", fg='navy', 
         bg='cyan', variable=CheckVarMatin, 
         onvalue=1, offvalue=0, height=1, 
         width=15, anchor='w')
-    Cma.grid(row=16, column=0)
+    self.Cma = self.can.create_window(self.x35, self.y35, window=self.Cma)
 
-    LabDose = Label(self.can, text='Morning take : ', font=12,
+    self.x36, self.y36 = 300, 440
+    self.LabDose = Label(self.can, text='Morning take : ', font=12,
         width=20, fg='cyan', bg='RoyalBlue4')
-    LabDose.grid(row=16, column=1)
+    self.LabDose = self.can.create_window(self.x36, self.y36, window=self.LabDose)
 
-    Entmatin = Entry(self.can)
-    Entmatin = Entry(highlightbackground='grey', bd=4)
-    Entmatin.grid(row=16, column=2)
+    self.x37, self.y37 = 500, 400
+    self.DosaLab = Label(self.can, text="Unity :", font=('Arial 14 bold'), 
+        fg='aquamarine', bg='RoyalBlue4')
+    self.DosaLab = self.can.create_window(self.x37, self.y37, window=self.DosaLab)
 
+    self.x38, self.y38 = 500, 440
+    self.Entmatin = Entry(self.can, highlightbackground='grey', bd=4)
+    self.Entmatin = self.can.create_window(self.x38, self.y38, window=self.Entmatin)
+
+    self.x39, self.y39 = 100, 480
     CheckVarMidi = IntVar()
-    Cmi = Checkbutton(self.can, text="Noon --->", fg='navy', 
+    self.Cmi = Checkbutton(self.can, text="Noon --->", fg='navy', 
         bg='cyan', variable=CheckVarMidi, 
         onvalue=1, offvalue=0, height=1, 
         width=15, anchor='w')
-    Cmi.grid(row=17, column=0)
+    self.Cmi = self.can.create_window(self.x39, self.y39, window=self.Cmi)
 
-    LabDose = Label(self.can, text='Lunchtime take : ', font=12, 
+    self.x40, self.y40 = 300, 480
+    self.Lunchtime = Label(self.can, text='Lunchtime take : ', font=12, 
         width=20, fg='cyan', bg='RoyalBlue4')
-    LabDose.grid(row=17, column=1)
+    self.Lunchtime = self.can.create_window(self.x40, self.y40, window=self.Lunchtime)
 
-    Entmidi = Entry(self.can)
-    Entmidi = Entry(highlightbackground='grey', bd=4)
-    Entmidi.grid(row=17, column=2)
+    self.x41, self.y41 = 500, 480
+    self.Entmidi = Entry(self.can, highlightbackground='grey', bd=4)
+    self.Entmidi = self.can.create_window(self.x41, self.y41, window=self.Entmidi)
 
+    self.x42, self.y42 = 100, 520
     CheckVarSoir = IntVar()
-    Csoir = Checkbutton(self.can, text="Evening --->", fg='navy', 
+    self.Csoir = Checkbutton(self.can, text="Evening --->", fg='navy', 
         bg='cyan', variable=CheckVarSoir, 
         onvalue=1, offvalue=0, height=1, 
         width=15, anchor='w')
-    Csoir.grid(row=18, column=0)
+    self.Csoir = self.can.create_window(self.x42, self.y42, window=self.Csoir)
 
-    LabDose = Label(self.can, text='Evening take : ', font=12,
+    self.x43, self.y43 = 300, 520
+    self.Evetake = Label(self.can, text='Evening take : ', font=12,
         width=20, fg='cyan', bg='RoyalBlue4')
-    LabDose.grid(row=18, column=1)
+    self.Evetake = self.can.create_window(self.x43, self.y43, window=self.Evetake)
 
-    Entsoir = Entry(self.can)
-    Entsoir = Entry(highlightbackground='grey', bd=4)
-    Entsoir.grid(row=18, column=2)
+    self.x44, self.y44 = 500, 520
+    self.Entsoir = Entry(self.can, highlightbackground='grey', bd=4)
+    self.Entsoir = self.can.create_window(self.x44, self.y44, window=self.Entsoir)
 
+    self.x45, self.y45 = 100, 560
     CheckVarNuit = IntVar()
-    Cnuit = Checkbutton(self.can, text="Night --->", fg='navy', 
+    self.Cnuit = Checkbutton(self.can, text="Night --->", fg='navy', 
         bg='cyan', variable=CheckVarNuit, 
         onvalue=1, offvalue=0, height=1, 
         width=15, anchor='w')
-    Cnuit.grid(row=19, column=0)
+    self.Cnuit = self.can.create_window(self.x45, self.y45, window=self.Cnuit)
 
-    # Entry nbre de x/24h
-    LabDose = Label(self.can, text='Night-time take : ', font=12,
+    self.x46, self.y46 = 300, 560
+    self.Nightlab = Label(self.can, text='Night-time take : ', font=12,
         width=20, fg='cyan', bg='RoyalBlue4')
-    LabDose.grid(row=19, column=1)
+    self.Nightlab = self.can.create_window(self.x46, self.y46, window=self.Nightlab)
 
-    Entnuit = Entry(self.can)
-    Entnuit = Entry(highlightbackground='grey', bd=4)
-    Entnuit.grid(row=19, column=2)
+    self.x47, self.y47 = 500, 560
+    self.Entnuit = Entry(self.can, highlightbackground='grey', bd=4)
+    self.Entnuit = self.can.create_window(self.x47, self.y47, window=self.Entnuit)
 
+
+    """
     CheckVar1 = IntVar()
-    C1 = Checkbutton(self.can, text="Reserve", fg='navy', 
+    C1 = tk.Checkbutton(self.can, text="Reserve", fg='navy', 
         bg='pale green', variable=CheckVar1, 
         onvalue=1, offvalue=0, height=1, 
         width=20, anchor='w')
     C1.grid(row=20, column=0, pady=10)
 
     CheckVar2 = IntVar()
-    C2 = Checkbutton(self.can, text="First-line", fg='navy', 
+    C2 = tk.Checkbutton(self.can, text="First-line", fg='navy', 
         bg='pale green', variable=CheckVar2, 
         onvalue=1, offvalue=0, height=1, 
         width=20, anchor='w')
     C2.grid(row=20, column=1, pady=10)
 
     CheckVar3 = IntVar()
-    C3 = Checkbutton(self.can, text="Second-line", fg='navy', 
+    C3 = tk.Checkbutton(self.can, text="Second-line", fg='navy', 
         bg='pale green', variable=CheckVar3, 
         onvalue=1, offvalue=0, height=1, 
         width=20, anchor='w')
@@ -872,5 +893,5 @@ def callTreatment4(self):
         bg='RoyalBlue3', bd=3, highlightbackground='RoyalBlue4',
         activebackground='dark turquoise', command=quit)
     buttQuit.grid(row=22, column=3)
-
+    """
     self.can.configure(scrollregion=self.can.bbox(ALL))

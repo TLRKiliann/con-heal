@@ -37,14 +37,15 @@ def callTreatment3(self):
     entryName = self.can.create_window(self.x3, self.y3, window=entryName)
 
     def callbackDay(event):
-        print(comboDay.get())
-    """
+        print(self.comboDay.get())
+
     def callbackMonth(event):
-        print(comboMonth.get())
+        print(self.comboMonth.get())
 
     def callbackYear(event):
-        print(comboYear.get())
+        print(self.comboYear.get())
 
+    """
     def callbackFinishDay(event):
         print(comboFinishDay.get())
 
@@ -567,7 +568,7 @@ def callTreatment3(self):
     self.textDateS = self.can.create_window(self.x20, self.y20, window=self.textDateS)
 
     def changeDay():
-        comboDay["values"] = ['01', '02', '03', '04',
+        self.comboDay["values"] = ['01', '02', '03', '04',
                               '05', '06', '07', '08',
                               '09', '10', '11', '12',
                               '13', '14', '15', '16',
@@ -593,9 +594,8 @@ def callTreatment3(self):
     self.comboDay.bind("<<ComboboxSelected>>", callbackDay)
     self.comboDay = self.can.create_window(self.x22, self.y22, window=self.comboDay)
 
-    """
     def changeMonth():
-        comboMonth["values"] = [' January',
+        self.comboMonth["values"] = [' January',
                               ' February',
                               ' March',
                               ' April',
@@ -607,12 +607,13 @@ def callTreatment3(self):
                               ' October',
                               ' November',
                               ' December']
-
-    labelMonth = Label(self.can,
+    self.x23, self.y23 = 800, 180
+    self.labelMonth = Label(self.can,
         text = "Choose the month :", font=12, fg='cyan', bg='RoyalBlue4')
-    labelMonth.grid(row=9, column=1)
+    self.labelMonth = self.can.create_window(self.x23, self.y23, window=self.labelMonth)
 
-    comboMonth = ttk.Combobox(self.can,
+    self.x24, self.y24 = 800, 220
+    self.comboMonth = ttk.Combobox(self.can,
         values=[' January',
               ' February',
               ' March',
@@ -625,11 +626,11 @@ def callTreatment3(self):
               ' October',
               ' November',
               ' December'], postcommand=changeMonth)
-    comboMonth.bind("<<ComboboxSelected>>", callbackMonth)
-    comboMonth.grid(row=10, column=1, pady=10)
+    self.comboMonth.bind("<<ComboboxSelected>>", callbackMonth)
+    self.comboMonth = self.can.create_window(self.x24, self.y24, window=self.comboMonth)
 
     def changeYear():
-        comboYear["values"] = ['', ' 2000', ' 2001', ' 2002', ' 2003',
+        self.comboYear["values"] = ['', ' 2000', ' 2001', ' 2002', ' 2003',
                               ' 2004', ' 2005', ' 2006', ' 2007',
                               ' 2008', ' 2009', ' 2010', ' 2011',
                               ' 2012', ' 2013', ' 2014', ' 2015',
@@ -639,11 +640,13 @@ def callTreatment3(self):
                               ' 2028', ' 2029', ' 2030', ' 2031',
                               ' 2032', ' 2033', ' 2034', ' 2035']
 
-    labelYear = Label(self.can,
+    self.x25, self.y25 = 1000, 180
+    self.labelYear = Label(self.can,
         text = "Choose the year :", font=12, fg='cyan', bg='RoyalBlue4')
-    labelYear.grid(row=9, column=2)
+    self.labelYear = self.can.create_window(self.x25, self.y25, window=self.labelYear)
 
-    comboYear = ttk.Combobox(self.can,
+    self.x26, self.y26 = 1000, 220
+    self.comboYear = ttk.Combobox(self.can,
         values=['', ' 2000', ' 2001', ' 2002', ' 2003',
                 ' 2004', ' 2005', ' 2006', ' 2007',
                 ' 2008', ' 2009', ' 2010', ' 2011',
@@ -653,19 +656,20 @@ def callTreatment3(self):
                 ' 2024', ' 2025', ' 2026', ' 2027',
                 ' 2028', ' 2029', ' 2030', ' 2031',
                 ' 2032', ' 2033', ' 2034', ' 2035'], postcommand=changeYear)
-    comboYear.bind("<<ComboboxSelected>>", callbackYear)
-    comboYear.grid(row=10, column=2, pady=10)
-    comboYear.current(0)
+    self.comboYear.bind("<<ComboboxSelected>>", callbackYear)
+    self.comboYear = self.can.create_window(self.x26, self.y26, window=self.comboYear)
+    self.comboYear.current(0)
 
+    """
     # Date of finish
     textDateF = Label(self.can, text="Processing end date :", 
         font=('Arial 14 bold'), fg='aquamarine', bg='RoyalBlue4', width=40, anchor='w')
     textDateF.grid(row=11, column=0, columnspan=2, pady=10)
 
-    buttStory = Button(self.can, text="Historic", width=10, fg='cyan',
+    self.buttStory = Button(self.can, text="Historic", width=10, fg='cyan',
         bg='RoyalBlue3', bd=3, highlightbackground='RoyalBlue4', 
         activebackground='dark turquoise', command=readFileStory)
-    buttStory.grid(row=11, column=3)
+    self.buttStory.grid(row=11, column=3)
 
     def finishDay():
         comboFinishDay["values"] = ['01', '02', '03', '04',
@@ -677,9 +681,9 @@ def callTreatment3(self):
                                     '25', '26', '27', '28',
                                     '29', '30', '31']
 
-    labelFinishDay = Label(self.can,
+    self.labelFinishDay = Label(self.can,
         text = "Choose the day :", font=12, fg='cyan', bg='RoyalBlue4')
-    labelFinishDay.grid(row=12, column=0)
+    self.labelFinishDay.grid(row=12, column=0)
 
     comboFinishDay = ttk.Combobox(self.can,
         values=['01', '02', '03', '04',

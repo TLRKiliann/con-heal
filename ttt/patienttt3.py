@@ -16,12 +16,12 @@ def callTreatment3(self):
 
     self.x1, self.y1 = 625, 40
     self.textLab = Label(self.can, text="Introduction of treatement (ttt)",
-        font=('Times', 22, 'bold'), fg='aquamarine', bg='RoyalBlue4')
+        font=('Times', 22, 'bold'), fg='aquamarine', bg='DodgerBlue2')
     self.textLab = self.can.create_window(self.x1, self.y1, window=self.textLab)
 
-    self.x2, self.y2 = 300, 80
-    self.labelallergy = Label(self.can, text="Allergy",
-        font=('Arial', 18, 'bold'), fg='coral', bg='RoyalBlue4')
+    self.x2, self.y2 = 370, 80
+    self.labelallergy = Label(self.can, text="Allergy : ",
+        font=('Arial', 18, 'bold'), fg='coral', bg='DodgerBlue2')
     self.labelallergy = self.can.create_window(self.x2, self.y2, window=self.labelallergy)
 
     # To read allergy for entry widget
@@ -30,11 +30,11 @@ def callTreatment3(self):
         line2 = filename2.readline()
         line3 = filename2.readline()
 
-    self.x3, self.y3 = 800, 80
+    self.x3, self.y3 = 680, 80
     entrytext = StringVar()
-    entryName = Entry(self.can, textvariable=entrytext, width=60)
+    self.entryName = Entry(self.can, textvariable=entrytext, width=60)
     entrytext.set(line3)
-    entryName = self.can.create_window(self.x3, self.y3, window=entryName)
+    self.entryName = self.can.create_window(self.x3, self.y3, window=self.entryName)
 
     def callbackDay(event):
         print(self.comboDay.get())
@@ -461,38 +461,38 @@ def callTreatment3(self):
             no ttt has been introduced !") 
     """
     self.x4, self.y4 = 120, 140
-    self.LabDate = Label(self.can, text="Date : ", width=20, font=12,
+    self.LabDate = Label(self.can, text="Date : ", width=15, font=12,
         fg='cyan', bg='RoyalBlue4', anchor='e')
     self.LabDate = self.can.create_window(self.x4, self.y4, window=self.LabDate)
 
     self.x5, self.y5 = 120, 170
-    self.LabHour = Label(self.can, text="Hour : ", width=20, font=12,
+    self.LabHour = Label(self.can, text="Hour : ", width=15, font=12,
         fg='cyan', bg='RoyalBlue4', anchor='e')
     self.LabHour = self.can.create_window(self.x5, self.y5, window=self.LabHour)
 
     self.x6, self.y6 = 120, 200
-    self.LabName = Label(self.can, text="Patient's name : ", width=20, font=12,
+    self.LabName = Label(self.can, text="Patient's name : ", width=15, font=12,
         fg='cyan', bg='RoyalBlue4', anchor='e')
     self.LabName = self.can.create_window(self.x6, self.y6, window=self.LabName)
 
     self.x7, self.y7 = 120, 230
-    self.LabTreat = Label(self.can, text='Name of drug : ', width=20, 
+    self.LabTreat = Label(self.can, text='Name of drug : ', width=15, 
         font=12, fg='cyan', bg='RoyalBlue4', anchor='e')
     self.LabTreat = self.can.create_window(self.x7, self.y7, window=self.LabTreat)
 
     self.x8, self.y8 = 120, 260
-    self.LabDose = Label(self.can, text="Dose : ", width=20, font=12,
+    self.LabDose = Label(self.can, text="Dose : ", width=15, font=12,
         fg='cyan', bg='RoyalBlue4', anchor='e')
     self.LabDose = self.can.create_window(self.x8, self.y8, window=self.LabDose)
 
-    self.x9, self.y9 = 350, 140
+    self.x9, self.y9 = 300, 140
     time_string = IntVar()
     self.textDate = Entry(self.can, textvariable=time_string,
         highlightbackground='grey', bd=4)
     time_string.set(time.strftime("%d/%m/%Y"))
     self.textDate = self.can.create_window(self.x9, self.y9, window=self.textDate)
 
-    self.x10, self.y10 = 350, 170
+    self.x10, self.y10 = 300, 170
     time_Htring = IntVar()
     self.textHour = Entry(self.can, textvariable=time_Htring,
         highlightbackground='grey', bd=4)
@@ -503,21 +503,21 @@ def callTreatment3(self):
     with open('./newpatient/entryfile3.txt', 'r') as filename:
         line1=filename.readline()
 
-    self.x11, self.y11 = 350, 200
+    self.x11, self.y11 = 300, 200
     name_text = StringVar()
     self.textName = Entry(self.can, textvariable=name_text,
         highlightbackground='grey', bd=4)
     name_text.set(line1)
     self.textName = self.can.create_window(self.x11, self.y11, window=self.textName)
 
-    self.x12, self.y12 = 350, 230
+    self.x12, self.y12 = 300, 230
     ttt_name = StringVar()
     self.textTreat = Entry(self.can, textvariable=ttt_name,
         highlightbackground='grey', bd=4)
     ttt_name.set("Drug")
     self.textTreat = self.can.create_window(self.x12, self.y12, window=self.textTreat)
 
-    self.x13, self.y13 = 350, 260
+    self.x13, self.y13 = 300, 260
     tttDosage = StringVar()
     self.textDosage = Entry(self.can, textvariable=tttDosage,
         highlightbackground='grey', bd=4)
@@ -759,77 +759,89 @@ def callTreatment3(self):
         bg='RoyalBlue3', bd=3, highlightbackground='RoyalBlue4', 
         activebackground='dark turquoise', command=readFileStory)
     self.buttStory = self.can.create_window(self.x34, self.y34, window=self.buttStory)
-    
-    checkLab = Label(self.can, text="Doses :", font=('Arial 14 bold'), 
-        fg='aquamarine', bg='RoyalBlue4')
-    checkLab.grid(row=14, column=0, pady=10)
+    """
 
-    DosaLab = Label(self.can, text="Unity :", font=('Arial 14 bold'), 
+    self.x34, self.y34 = 100, 400
+    self.checkLab = Label(self.can, text="Doses :", font=('Arial 14 bold'), 
         fg='aquamarine', bg='RoyalBlue4')
-    DosaLab.grid(row=14, column=2, pady=10)
+    self.checkLab = self.can.create_window(self.x34, self.y34, window=self.checkLab)
 
     # CheckBox
+    self.x35, self.y35 = 100, 440
     CheckVarMatin = IntVar()
-    Cma = tk.Checkbutton(self.can, text="Morning --->", fg='navy', 
+    self.Cma = Checkbutton(self.can, text="Morning --->", fg='navy', 
         bg='cyan', variable=CheckVarMatin, 
         onvalue=1, offvalue=0, height=1, 
         width=15, anchor='w')
-    Cma.grid(row=16, column=0)
+    self.Cma = self.can.create_window(self.x35, self.y35, window=self.Cma)
 
-    LabDose = Label(self.can, text='Morning take : ', font=12,
+    self.x36, self.y36 = 300, 440
+    self.LabDose = Label(self.can, text='Morning take : ', font=12,
         width=20, fg='cyan', bg='RoyalBlue4')
-    LabDose.grid(row=16, column=1)
+    self.LabDose = self.can.create_window(self.x36, self.y36, window=self.LabDose)
 
-    Entmatin = Entry(self.can)
-    Entmatin = Entry(highlightbackground='grey', bd=4)
-    Entmatin.grid(row=16, column=2)
+    self.x37, self.y37 = 500, 400
+    self.DosaLab = Label(self.can, text="Unity :", font=('Arial 14 bold'), 
+        fg='aquamarine', bg='RoyalBlue4')
+    self.DosaLab = self.can.create_window(self.x37, self.y37, window=self.DosaLab)
 
+    self.x38, self.y38 = 500, 440
+    self.Entmatin = Entry(self.can, highlightbackground='grey', bd=4)
+    self.Entmatin = self.can.create_window(self.x38, self.y38, window=self.Entmatin)
+
+    self.x39, self.y39 = 100, 480
     CheckVarMidi = IntVar()
-    Cmi = tk.Checkbutton(self.can, text="Noon --->", fg='navy', 
+    self.Cmi = Checkbutton(self.can, text="Noon --->", fg='navy', 
         bg='cyan', variable=CheckVarMidi, 
         onvalue=1, offvalue=0, height=1, 
         width=15, anchor='w')
-    Cmi.grid(row=17, column=0)
+    self.Cmi = self.can.create_window(self.x39, self.y39, window=self.Cmi)
 
-    LabDose = Label(self.can, text='Lunchtime take : ', font=12, 
+    self.x40, self.y40 = 300, 480
+    self.Lunchtime = Label(self.can, text='Lunchtime take : ', font=12, 
         width=20, fg='cyan', bg='RoyalBlue4')
-    LabDose.grid(row=17, column=1)
+    self.Lunchtime = self.can.create_window(self.x40, self.y40, window=self.Lunchtime)
 
-    Entmidi = Entry(self.can)
-    Entmidi = Entry(highlightbackground='grey', bd=4)
-    Entmidi.grid(row=17, column=2)
+    self.x41, self.y41 = 500, 480
+    self.Entmidi = Entry(self.can, highlightbackground='grey', bd=4)
+    self.Entmidi = self.can.create_window(self.x41, self.y41, window=self.Entmidi)
 
+    self.x42, self.y42 = 100, 520
     CheckVarSoir = IntVar()
-    Csoir = tk.Checkbutton(self.can, text="Evening --->", fg='navy', 
+    self.Csoir = Checkbutton(self.can, text="Evening --->", fg='navy', 
         bg='cyan', variable=CheckVarSoir, 
         onvalue=1, offvalue=0, height=1, 
         width=15, anchor='w')
-    Csoir.grid(row=18, column=0)
+    self.Csoir = self.can.create_window(self.x42, self.y42, window=self.Csoir)
 
-    LabDose = Label(self.can, text='Evening take : ', font=12,
+    self.x43, self.y43 = 300, 520
+    self.Evetake = Label(self.can, text='Evening take : ', font=12,
         width=20, fg='cyan', bg='RoyalBlue4')
-    LabDose.grid(row=18, column=1)
+    self.Evetake = self.can.create_window(self.x43, self.y43, window=self.Evetake)
 
-    Entsoir = Entry(self.can)
-    Entsoir = Entry(highlightbackground='grey', bd=4)
-    Entsoir.grid(row=18, column=2)
+    self.x44, self.y44 = 500, 520
+    self.Entsoir = Entry(self.can, highlightbackground='grey', bd=4)
+    self.Entsoir = self.can.create_window(self.x44, self.y44, window=self.Entsoir)
 
+    self.x45, self.y45 = 100, 560
     CheckVarNuit = IntVar()
-    Cnuit = tk.Checkbutton(self.can, text="Night --->", fg='navy', 
+    self.Cnuit = Checkbutton(self.can, text="Night --->", fg='navy', 
         bg='cyan', variable=CheckVarNuit, 
         onvalue=1, offvalue=0, height=1, 
         width=15, anchor='w')
-    Cnuit.grid(row=19, column=0)
+    self.Cnuit = self.can.create_window(self.x45, self.y45, window=self.Cnuit)
 
-    # Entry nbre de x/24h
-    LabDose = Label(self.can, text='Night-time take : ', font=12,
+    self.x46, self.y46 = 300, 560
+    self.Nightlab = Label(self.can, text='Night-time take : ', font=12,
         width=20, fg='cyan', bg='RoyalBlue4')
-    LabDose.grid(row=19, column=1)
+    self.Nightlab = self.can.create_window(self.x46, self.y46, window=self.Nightlab)
 
-    Entnuit = Entry(self.can)
-    Entnuit = Entry(highlightbackground='grey', bd=4)
-    Entnuit.grid(row=19, column=2)
+    self.x47, self.y47 = 500, 560
+    self.Entnuit = Entry(self.can, highlightbackground='grey', bd=4)
+    self.Entnuit = self.can.create_window(self.x47, self.y47, window=self.Entnuit)
 
+
+    """
     CheckVar1 = IntVar()
     C1 = tk.Checkbutton(self.can, text="Reserve", fg='navy', 
         bg='pale green', variable=CheckVar1, 

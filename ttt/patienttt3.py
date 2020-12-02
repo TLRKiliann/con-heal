@@ -545,7 +545,7 @@ def callTreatment3(self):
 
     self.x20, self.y20 = 800, 140
     self.textDateS = Label(self.can, text="Processing start date :", 
-        font=('Arial 14 bold'), fg='navy', bg='DodgerBlue2', width=40, anchor='w')
+        font=('Arial 14 bold'), fg='aquamarine', bg='DodgerBlue2', width=40, anchor='w')
     self.textDateS = self.can.create_window(self.x20, self.y20, window=self.textDateS)
 
     def changeDay():
@@ -645,7 +645,7 @@ def callTreatment3(self):
     # Date of finish
     self.x27, self.y27 = 800, 270
     self.txtfinishdate = Label(self.can, text="Processing end date :", 
-        font=('Arial 14 bold'), fg='navy', bg='DodgerBlue2', width=40, anchor='w')
+        font=('Arial 14 bold'), fg='aquamarine', bg='DodgerBlue2', width=40, anchor='w')
     self.txtfinishdate = self.can.create_window(self.x27, self.y27, window=self.txtfinishdate)
 
     def finishDay():
@@ -735,10 +735,9 @@ def callTreatment3(self):
 
     self.x34, self.y34 = 100, 380
     self.checkLab = Label(self.can, text="Doses :", font=('Arial 14 bold'), 
-        fg='navy', bg='DodgerBlue2')
+        fg='aquamarine', bg='DodgerBlue2')
     self.checkLab = self.can.create_window(self.x34, self.y34, window=self.checkLab)
 
-    # CheckBox
     self.x35, self.y35 = 100, 420
     CheckVarMatin = IntVar()
     self.Cma = Checkbutton(self.can, text="Morning --->", fg='navy', 
@@ -754,7 +753,7 @@ def callTreatment3(self):
 
     self.x37, self.y37 = 500, 380
     self.DosaLab = Label(self.can, text="Unity :", font=('Arial 14 bold'), 
-        fg='navy', bg='DodgerBlue2')
+        fg='aquamarine', bg='DodgerBlue2')
     self.DosaLab = self.can.create_window(self.x37, self.y37, window=self.DosaLab)
 
     self.x38, self.y38 = 500, 420
@@ -812,8 +811,8 @@ def callTreatment3(self):
     self.Entnuit = Entry(self.can, highlightbackground='grey', bd=4)
     self.Entnuit = self.can.create_window(self.x47, self.y47, window=self.Entnuit)
 
-    self.x59, self.y59 = 500, 590
-    self.buttsavettt = Button(self.can, text="Save ttt", width=10, fg='yellow',
+    self.x59, self.y59 = 500, 640
+    self.buttsavettt = Button(self.can, text="Save as ttt", width=10, fg='yellow',
         bg='RoyalBlue3', bd=3, highlightbackground='cyan',
         activebackground='pale turquoise', command=copyTttMess)
     self.buttsavettt = self.can.create_window(self.x59, self.y59, window=self.buttsavettt)
@@ -848,26 +847,17 @@ def callTreatment3(self):
         width=16, anchor='w')
     self.C3 = self.can.create_window(self.x50, self.y50, window=self.C3)
 
-    self.x51, self.y51 = 900, 500
+    self.x51, self.y51 = 900, 540
     self.labelresd = Label(self.can, text='Number of R/24h : ', font=12, 
         width=15, fg='white', bg='DodgerBlue2')
     self.labelresd = self.can.create_window(self.x51, self.y51, window=self.labelresd)
 
-    self.x52, self.y52 = 1100, 500
+    self.x52, self.y52 = 1100, 540
     self.Rnbre = Entry(self.can, bd=4, highlightbackground='grey')
     self.Rnbre = self.can.create_window(self.x52, self.y52, window=self.Rnbre)
 
-    self.x53, self.y53 = 900, 540
-    self.LabSign = Label(self.can, text='Signature :', font=12, 
-        width=15, fg='red', bg='pale green')
-    self.LabSign = self.can.create_window(self.x53, self.y53, window=self.LabSign)
-
-    self.x54, self.y54 = 1100, 540
-    self.textSign = Entry(self.can, highlightbackground='grey', bd=4)
-    self.textSign = self.can.create_window(self.x54, self.y54, window=self.textSign)
-
     self.x62, self.y62 = 1100, 590
-    self.buttsaveres = Button(self.can, text="Save R", width=10, fg='yellow',
+    self.buttsaveres = Button(self.can, text="Save as R", width=10, fg='yellow',
         bg='RoyalBlue3', bd=3, highlightbackground='cyan',
         activebackground='pale turquoise', command=copyResMess)
     self.buttsaveres = self.can.create_window(self.x62, self.y62, window=self.buttsaveres)
@@ -879,7 +869,7 @@ def callTreatment3(self):
     self.delttt.set("Enter ttt to stop")
     self.deleteTreat = self.can.create_window(self.x55, self.y55, window=self.deleteTreat)
 
-    self.x56, self.y56 = 300, 620
+    self.x56, self.y56 = 280, 620
     self.buttStopttt = Button(self.can, text="Stop ttt", width=10, fg='yellow',
         bg='red', bd=3, highlightbackground='cyan',
         activebackground='coral', command=deleteTreatment)
@@ -893,11 +883,20 @@ def callTreatment3(self):
         highlightbackground='red')
     self.deleteRes = self.can.create_window(self.x57, self.y57, window=self.deleteRes)
 
-    self.x58, self.y58 = 300, 660
+    self.x58, self.y58 = 280, 660
     self.buttStopttt = Button(self.can, text="Stop R", width=10, fg='yellow',
         bg='red', bd=3, highlightbackground='cyan',
         activebackground='coral', command=deleteReserve, padx=10)
     self.buttStopttt = self.can.create_window(self.x58, self.y58, window=self.buttStopttt)
+
+    self.x53, self.y53 = 500, 590
+    self.LabSign = Label(self.can, text='Signature :', font=12, 
+        width=15, fg='red', bg='pale green')
+    self.LabSign = self.can.create_window(self.x53, self.y53, window=self.LabSign)
+
+    self.x54, self.y54 = 700, 590
+    self.textSign = Entry(self.can, highlightbackground='grey', bd=4)
+    self.textSign = self.can.create_window(self.x54, self.y54, window=self.textSign)
 
     def awayOut():
         try:
@@ -906,7 +905,7 @@ def callTreatment3(self):
         except (OSError, ValueError) as p_out:
             print("Error from labo to way out", p_out)
 
-    self.x64, self.y64 = 800, 640
+    self.x64, self.y64 = 1100, 660
     self.buttQuit = Button(self.can, text="Return to main menu", width=20, fg='white',
         bg='RoyalBlue3', bd=3, highlightbackground='cyan',
         activebackground='pale turquoise', command=awayOut)

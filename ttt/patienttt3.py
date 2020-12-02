@@ -460,39 +460,39 @@ def callTreatment3(self):
         messagebox.showinfo("Info", "None historic of ttt is available, \
             no ttt has been introduced !") 
 
-    self.x4, self.y4 = 120, 140
+    self.x4, self.y4 = 120, 180
     self.LabDate = Label(self.can, text="Date : ", width=15, font=12,
         fg='white', bg='DodgerBlue2', anchor='e')
     self.LabDate = self.can.create_window(self.x4, self.y4, window=self.LabDate)
 
-    self.x5, self.y5 = 120, 170
+    self.x5, self.y5 = 120, 210
     self.LabHour = Label(self.can, text="Hour : ", width=15, font=12,
         fg='white', bg='DodgerBlue2', anchor='e')
     self.LabHour = self.can.create_window(self.x5, self.y5, window=self.LabHour)
 
-    self.x6, self.y6 = 120, 200
+    self.x6, self.y6 = 120, 240
     self.LabName = Label(self.can, text="Patient name : ", width=15, font=12,
         fg='white', bg='DodgerBlue2', anchor='e')
     self.LabName = self.can.create_window(self.x6, self.y6, window=self.LabName)
 
-    self.x7, self.y7 = 120, 230
+    self.x7, self.y7 = 120, 270
     self.LabTreat = Label(self.can, text='Name of drug : ', width=15, 
         font=12, fg='white', bg='DodgerBlue2', anchor='e')
     self.LabTreat = self.can.create_window(self.x7, self.y7, window=self.LabTreat)
 
-    self.x8, self.y8 = 120, 260
+    self.x8, self.y8 = 120, 300
     self.LabDose = Label(self.can, text="Dose : ", width=15, font=12,
         fg='white', bg='DodgerBlue2', anchor='e')
     self.LabDose = self.can.create_window(self.x8, self.y8, window=self.LabDose)
 
-    self.x9, self.y9 = 300, 140
+    self.x9, self.y9 = 300, 180
     time_string = IntVar()
     self.textDate = Entry(self.can, textvariable=time_string,
         highlightbackground='grey', bd=4)
     time_string.set(time.strftime("%d/%m/%Y"))
     self.textDate = self.can.create_window(self.x9, self.y9, window=self.textDate)
 
-    self.x10, self.y10 = 300, 170
+    self.x10, self.y10 = 300, 210
     time_Htring = IntVar()
     self.textHour = Entry(self.can, textvariable=time_Htring,
         highlightbackground='grey', bd=4)
@@ -503,30 +503,49 @@ def callTreatment3(self):
     with open('./newpatient/entryfile3.txt', 'r') as filename:
         line1=filename.readline()
 
-    self.x11, self.y11 = 300, 200
+    self.x11, self.y11 = 300, 240
     name_text = StringVar()
     self.textName = Entry(self.can, textvariable=name_text,
         highlightbackground='grey', bd=4)
     name_text.set(line1)
     self.textName = self.can.create_window(self.x11, self.y11, window=self.textName)
 
-    self.x12, self.y12 = 300, 230
+    self.x12, self.y12 = 300, 270
     ttt_name = StringVar()
     self.textTreat = Entry(self.can, textvariable=ttt_name,
         highlightbackground='grey', bd=4)
     ttt_name.set("Drug")
     self.textTreat = self.can.create_window(self.x12, self.y12, window=self.textTreat)
 
-    self.x13, self.y13 = 300, 260
+    self.x13, self.y13 = 300, 300
     tttDosage = StringVar()
     self.textDosage = Entry(self.can, textvariable=tttDosage,
         highlightbackground='grey', bd=4)
     tttDosage.set("mcg/ml/mg/UI/gttes")
     self.textDosage = self.can.create_window(self.x13, self.y13, window=self.textDosage)
 
-    self.x20, self.y20 = 650, 140
+    self.x14, self.y14 = 500, 180
+    self.buttShowres = Button(self.can, text="Show R", width=10, fg='white',
+        bg='RoyalBlue3', bd=3, highlightbackground='cyan', 
+        activebackground='pale turquoise', command=showReserve)
+    self.buttShowres = self.can.create_window(self.x14, self.y14, window=self.buttShowres)
+
+    self.x15, self.y15 = 500, 240
+    self.buttShowttt = Button(self.can, text="Show ttt", width=10, fg='white',
+        bg='RoyalBlue3', bd=3, highlightbackground='cyan', 
+        activebackground='pale turquoise', command=showTreat)
+    self.buttShowttt = self.can.create_window(self.x15, self.y15, window=self.buttShowttt)
+
+    self.x16, self.y16 = 500, 300
+    self.buttStory = Button(self.can, text="Historic", width=10, fg='white',
+        bg='RoyalBlue3', bd=3, highlightbackground='cyan', 
+        activebackground='pale turquoise', command=readFileStory)
+    self.buttStory = self.can.create_window(self.x16, self.y16, window=self.buttStory)
+
+
+    self.x20, self.y20 = 800, 140
     self.textDateS = Label(self.can, text="Processing start date :", 
-        font=('Arial 14 bold'), fg='white', bg='DodgerBlue2', width=40, anchor='w')
+        font=('Arial 14 bold'), fg='navy', bg='DodgerBlue2', width=40, anchor='w')
     self.textDateS = self.can.create_window(self.x20, self.y20, window=self.textDateS)
 
     def changeDay():
@@ -538,12 +557,12 @@ def callTreatment3(self):
                               '21', '22', '23', '24',
                               '25', '26', '27', '28',
                               '29', '30', '31']
-    self.x21, self.y21 = 600, 180
+    self.x21, self.y21 = 700, 180
     self.labelDay = Label(self.can,
         text = "Choose the day :", font=12, fg='white', bg='DodgerBlue2')
     self.labelDay = self.can.create_window(self.x21, self.y21, window=self.labelDay)
 
-    self.x22, self.y22 = 600, 220
+    self.x22, self.y22 = 700, 220
     self.comboDay = ttk.Combobox(self.can,
         values=['01', '02', '03', '04',
                 '05', '06', '07', '08',
@@ -570,12 +589,12 @@ def callTreatment3(self):
                               ' November',
                               ' December']
 
-    self.x23, self.y23 = 800, 180
+    self.x23, self.y23 = 900, 180
     self.labelMonth = Label(self.can,
         text = "Choose the month :", font=12, fg='white', bg='DodgerBlue2')
     self.labelMonth = self.can.create_window(self.x23, self.y23, window=self.labelMonth)
 
-    self.x24, self.y24 = 800, 220
+    self.x24, self.y24 = 900, 220
     self.comboMonth = ttk.Combobox(self.can,
         values=[' January',
               ' February',
@@ -603,12 +622,12 @@ def callTreatment3(self):
                               ' 2028', ' 2029', ' 2030', ' 2031',
                               ' 2032', ' 2033', ' 2034', ' 2035']
 
-    self.x25, self.y25 = 1000, 180
+    self.x25, self.y25 = 1100, 180
     self.labelYear = Label(self.can,
         text = "Choose the year :", font=12, fg='white', bg='DodgerBlue2')
     self.labelYear = self.can.create_window(self.x25, self.y25, window=self.labelYear)
 
-    self.x26, self.y26 = 1000, 220
+    self.x26, self.y26 = 1100, 220
     self.comboYear = ttk.Combobox(self.can,
         values=['', ' 2000', ' 2001', ' 2002', ' 2003',
                 ' 2004', ' 2005', ' 2006', ' 2007',
@@ -623,13 +642,11 @@ def callTreatment3(self):
     self.comboYear.current(0)
     self.comboYear = self.can.create_window(self.x26, self.y26, window=self.comboYear)
 
-
     # Date of finish
-    self.x27, self.y27 = 650, 260
+    self.x27, self.y27 = 800, 270
     self.txtfinishdate = Label(self.can, text="Processing end date :", 
-        font=('Arial 14 bold'), fg='white', bg='DodgerBlue2', width=40, anchor='w')
+        font=('Arial 14 bold'), fg='navy', bg='DodgerBlue2', width=40, anchor='w')
     self.txtfinishdate = self.can.create_window(self.x27, self.y27, window=self.txtfinishdate)
-
 
     def finishDay():
         self.comboFinishDay["values"] = ['01', '02', '03', '04',
@@ -640,12 +657,12 @@ def callTreatment3(self):
                                     '21', '22', '23', '24',
                                     '25', '26', '27', '28',
                                     '29', '30', '31']
-    self.x28, self.y28 = 600, 300
+    self.x28, self.y28 = 700, 310
     self.labelFinishDay = Label(self.can,
         text = "Choose the day :", font=12, fg='white', bg='DodgerBlue2')
     self.labelFinishDay = self.can.create_window(self.x28, self.y28, window=self.labelFinishDay)
 
-    self.x29, self.y29 = 600, 340
+    self.x29, self.y29 = 700, 350
     self.comboFinishDay = ttk.Combobox(self.can,
         values=['01', '02', '03', '04',
                 '05', '06', '07', '08',
@@ -672,7 +689,7 @@ def callTreatment3(self):
                                     '11',
                                     '12']
     
-    self.x30, self.y30 = 800, 300
+    self.x30, self.y30 = 900, 310
     self.labelMonth = Label(self.can,
         text = "Choose the month :", font=12, fg='white', bg='DodgerBlue2')
     self.labelMonth = self.can.create_window(self.x30, self.y30, window=self.labelMonth)
@@ -691,7 +708,7 @@ def callTreatment3(self):
               '11', 
               '12'], postcommand=finishMonth)
 
-    self.x31, self.y31 = 800, 340
+    self.x31, self.y31 = 900, 350
     self.comboFinishMonth.bind("<<ComboboxSelected>>", callbackFinishMonth)
     self.comboFinishMonth = self.can.create_window(self.x31, self.y31, window=self.comboFinishMonth)
 
@@ -701,12 +718,12 @@ def callTreatment3(self):
                                      '2028', '2029', '2030', '2031',
                                      '2032', '2033', '2034', '2035']
 
-    self.x32, self.y32 = 1000, 300
+    self.x32, self.y32 = 1100, 310
     self.labelFinishYear = Label(self.can,
         text = "Choose the year :", font=12, fg='white', bg='DodgerBlue2')
     self.labelFinishYear = self.can.create_window(self.x32, self.y32, window=self.labelFinishYear)
 
-    self.x33, self.y33 = 1000, 340
+    self.x33, self.y33 = 1100, 350
     self.comboFinishYear = ttk.Combobox(self.can,
         values=['', '2020', '2021', '2022', '2023',
                 '2024', '2025', '2026', '2027',
@@ -716,13 +733,13 @@ def callTreatment3(self):
     self.comboFinishYear.current(0)
     self.comboFinishYear = self.can.create_window(self.x33, self.y33, window=self.comboFinishYear)
 
-    self.x34, self.y34 = 100, 400
+    self.x34, self.y34 = 100, 380
     self.checkLab = Label(self.can, text="Doses :", font=('Arial 14 bold'), 
-        fg='white', bg='DodgerBlue2')
+        fg='navy', bg='DodgerBlue2')
     self.checkLab = self.can.create_window(self.x34, self.y34, window=self.checkLab)
 
     # CheckBox
-    self.x35, self.y35 = 100, 440
+    self.x35, self.y35 = 100, 420
     CheckVarMatin = IntVar()
     self.Cma = Checkbutton(self.can, text="Morning --->", fg='navy', 
         bg='cyan', variable=CheckVarMatin, 
@@ -730,21 +747,21 @@ def callTreatment3(self):
         width=15, anchor='w')
     self.Cma = self.can.create_window(self.x35, self.y35, window=self.Cma)
 
-    self.x36, self.y36 = 300, 440
+    self.x36, self.y36 = 300, 420
     self.LabDose = Label(self.can, text='Morning take : ', font=12,
         width=20, fg='white', bg='DodgerBlue2')
     self.LabDose = self.can.create_window(self.x36, self.y36, window=self.LabDose)
 
-    self.x37, self.y37 = 500, 400
+    self.x37, self.y37 = 500, 380
     self.DosaLab = Label(self.can, text="Unity :", font=('Arial 14 bold'), 
-        fg='white', bg='DodgerBlue2')
+        fg='navy', bg='DodgerBlue2')
     self.DosaLab = self.can.create_window(self.x37, self.y37, window=self.DosaLab)
 
-    self.x38, self.y38 = 500, 440
+    self.x38, self.y38 = 500, 420
     self.Entmatin = Entry(self.can, highlightbackground='grey', bd=4)
     self.Entmatin = self.can.create_window(self.x38, self.y38, window=self.Entmatin)
 
-    self.x39, self.y39 = 100, 480
+    self.x39, self.y39 = 100, 460
     CheckVarMidi = IntVar()
     self.Cmi = Checkbutton(self.can, text="Noon --->", fg='navy', 
         bg='cyan', variable=CheckVarMidi, 
@@ -752,16 +769,16 @@ def callTreatment3(self):
         width=15, anchor='w')
     self.Cmi = self.can.create_window(self.x39, self.y39, window=self.Cmi)
 
-    self.x40, self.y40 = 300, 480
+    self.x40, self.y40 = 300, 460
     self.Lunchtime = Label(self.can, text='Lunchtime take : ', font=12, 
         width=20, fg='white', bg='DodgerBlue2')
     self.Lunchtime = self.can.create_window(self.x40, self.y40, window=self.Lunchtime)
 
-    self.x41, self.y41 = 500, 480
+    self.x41, self.y41 = 500, 460
     self.Entmidi = Entry(self.can, highlightbackground='grey', bd=4)
     self.Entmidi = self.can.create_window(self.x41, self.y41, window=self.Entmidi)
 
-    self.x42, self.y42 = 100, 520
+    self.x42, self.y42 = 100, 500
     CheckVarSoir = IntVar()
     self.Csoir = Checkbutton(self.can, text="Evening --->", fg='navy', 
         bg='cyan', variable=CheckVarSoir, 
@@ -769,16 +786,16 @@ def callTreatment3(self):
         width=15, anchor='w')
     self.Csoir = self.can.create_window(self.x42, self.y42, window=self.Csoir)
 
-    self.x43, self.y43 = 300, 520
+    self.x43, self.y43 = 300, 500
     self.Evetake = Label(self.can, text='Evening take : ', font=12,
         width=20, fg='white', bg='DodgerBlue2')
     self.Evetake = self.can.create_window(self.x43, self.y43, window=self.Evetake)
 
-    self.x44, self.y44 = 500, 520
+    self.x44, self.y44 = 500, 500
     self.Entsoir = Entry(self.can, highlightbackground='grey', bd=4)
     self.Entsoir = self.can.create_window(self.x44, self.y44, window=self.Entsoir)
 
-    self.x45, self.y45 = 100, 560
+    self.x45, self.y45 = 100, 540
     CheckVarNuit = IntVar()
     self.Cnuit = Checkbutton(self.can, text="Night --->", fg='navy', 
         bg='cyan', variable=CheckVarNuit, 
@@ -786,16 +803,28 @@ def callTreatment3(self):
         width=15, anchor='w')
     self.Cnuit = self.can.create_window(self.x45, self.y45, window=self.Cnuit)
 
-    self.x46, self.y46 = 300, 560
+    self.x46, self.y46 = 300, 540
     self.Nightlab = Label(self.can, text='Night-time take : ', font=12,
         width=20, fg='white', bg='DodgerBlue2')
     self.Nightlab = self.can.create_window(self.x46, self.y46, window=self.Nightlab)
 
-    self.x47, self.y47 = 500, 560
+    self.x47, self.y47 = 500, 540
     self.Entnuit = Entry(self.can, highlightbackground='grey', bd=4)
     self.Entnuit = self.can.create_window(self.x47, self.y47, window=self.Entnuit)
 
-    self.x48, self.y48 = 700, 440
+    self.x59, self.y59 = 500, 590
+    self.buttsavettt = Button(self.can, text="Save ttt", width=10, fg='yellow',
+        bg='RoyalBlue3', bd=3, highlightbackground='cyan',
+        activebackground='pale turquoise', command=copyTttMess)
+    self.buttsavettt = self.can.create_window(self.x59, self.y59, window=self.buttsavettt)
+
+    self.x70, self.y70 = 873, 420
+    self.Labelifchoice = Label(self.can,
+        text="If medication is a RESERVE make your choice below :",
+        font=('Times', 16, 'bold'),fg='white', bg='DodgerBlue2')
+    self.Labelifchoice = self.can.create_window(self.x70, self.y70, window=self.Labelifchoice)
+
+    self.x48, self.y48 = 700, 460
     self.CheckVar1 = IntVar()
     self.C1 = Checkbutton(self.can, text="Reserve", fg='navy', 
         bg='pale green', variable=self.CheckVar1, 
@@ -803,7 +832,7 @@ def callTreatment3(self):
         width=16, anchor='w')
     self.C1 = self.can.create_window(self.x48, self.y48, window=self.C1)
 
-    self.x49, self.y49 = 910, 440
+    self.x49, self.y49 = 700, 500
     self.CheckVar2 = IntVar()
     self.C2 = Checkbutton(self.can, text="First-line", fg='navy', 
         bg='pale green', variable=self.CheckVar2, 
@@ -811,7 +840,7 @@ def callTreatment3(self):
         width=16, anchor='w')
     self.C2 = self.can.create_window(self.x49, self.y49, window=self.C2)
 
-    self.x50, self.y50 = 1120, 440
+    self.x50, self.y50 = 700, 540
     self.CheckVar3 = IntVar()
     self.C3 = Checkbutton(self.can, text="Second-line", fg='navy', 
         bg='pale green', variable=self.CheckVar3, 
@@ -819,23 +848,29 @@ def callTreatment3(self):
         width=16, anchor='w')
     self.C3 = self.can.create_window(self.x50, self.y50, window=self.C3)
 
-    self.x51, self.y51 = 700, 480
+    self.x51, self.y51 = 900, 500
     self.labelresd = Label(self.can, text='Number of R/24h : ', font=12, 
         width=15, fg='white', bg='DodgerBlue2')
     self.labelresd = self.can.create_window(self.x51, self.y51, window=self.labelresd)
 
-    self.x52, self.y52 = 910, 480
+    self.x52, self.y52 = 1100, 500
     self.Rnbre = Entry(self.can, bd=4, highlightbackground='grey')
     self.Rnbre = self.can.create_window(self.x52, self.y52, window=self.Rnbre)
 
-    self.x53, self.y53 = 700, 520
+    self.x53, self.y53 = 900, 540
     self.LabSign = Label(self.can, text='Signature :', font=12, 
         width=15, fg='red', bg='pale green')
     self.LabSign = self.can.create_window(self.x53, self.y53, window=self.LabSign)
 
-    self.x54, self.y54 = 910, 520
+    self.x54, self.y54 = 1100, 540
     self.textSign = Entry(self.can, highlightbackground='grey', bd=4)
     self.textSign = self.can.create_window(self.x54, self.y54, window=self.textSign)
+
+    self.x62, self.y62 = 1100, 590
+    self.buttsaveres = Button(self.can, text="Save R", width=10, fg='yellow',
+        bg='RoyalBlue3', bd=3, highlightbackground='cyan',
+        activebackground='pale turquoise', command=copyResMess)
+    self.buttsaveres = self.can.create_window(self.x62, self.y62, window=self.buttsaveres)
 
     self.x55, self.y55 = 110, 620
     self.delttt = StringVar()
@@ -864,36 +899,6 @@ def callTreatment3(self):
         activebackground='coral', command=deleteReserve, padx=10)
     self.buttStopttt = self.can.create_window(self.x58, self.y58, window=self.buttStopttt)
 
-    self.x59, self.y59 = 500, 620
-    self.buttShowttt = Button(self.can, text="Show ttt", width=10, fg='white',
-        bg='RoyalBlue3', bd=3, highlightbackground='cyan', 
-        activebackground='pale turquoise', command=showTreat)
-    self.buttShowttt = self.can.create_window(self.x59, self.y59, window=self.buttShowttt)
-
-    self.x60, self.y60 = 500, 660
-    self.buttShowres = Button(self.can, text="Show R", width=10, fg='white',
-        bg='RoyalBlue3', bd=3, highlightbackground='cyan', 
-        activebackground='pale turquoise', command=showReserve)
-    self.buttShowres = self.can.create_window(self.x60, self.y60, window=self.buttShowres)
-
-    self.x61, self.y61 = 700, 620
-    self.buttsavettt = Button(self.can, text="Save ttt", width=10, fg='yellow',
-        bg='RoyalBlue3', bd=3, highlightbackground='cyan',
-        activebackground='pale turquoise', command=copyTttMess)
-    self.buttsavettt = self.can.create_window(self.x61, self.y61, window=self.buttsavettt)
-
-    self.x62, self.y62 = 700, 660
-    self.buttsaveres = Button(self.can, text="Save R", width=10, fg='yellow',
-        bg='RoyalBlue3', bd=3, highlightbackground='cyan',
-        activebackground='pale turquoise', command=copyResMess)
-    self.buttsaveres = self.can.create_window(self.x62, self.y62, window=self.buttsaveres)
-
-    self.x63, self.y63 = 900, 620
-    self.buttStory = Button(self.can, text="Historic", width=10, fg='white',
-        bg='RoyalBlue3', bd=3, highlightbackground='cyan', 
-        activebackground='pale turquoise', command=readFileStory)
-    self.buttStory = self.can.create_window(self.x63, self.y63, window=self.buttStory)
-
     def awayOut():
         try:
             self.can.delete(ALL)
@@ -901,8 +906,8 @@ def callTreatment3(self):
         except (OSError, ValueError) as p_out:
             print("Error from labo to way out", p_out)
 
-    self.x64, self.y64 = 1150, 650
-    self.buttQuit = Button(self.can, text="Quit", width=10, fg='white',
+    self.x64, self.y64 = 800, 640
+    self.buttQuit = Button(self.can, text="Return to main menu", width=20, fg='white',
         bg='RoyalBlue3', bd=3, highlightbackground='cyan',
         activebackground='pale turquoise', command=awayOut)
     self.buttQuit = self.can.create_window(self.x64, self.y64, window=self.buttQuit)

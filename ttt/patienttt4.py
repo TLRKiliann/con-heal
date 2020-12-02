@@ -10,7 +10,7 @@ import json
 import subprocess
 
 
-def callTreatment3(self):
+def callTreatment4(self):
     self.can.delete(ALL)
     self.can.configure(bg='DodgerBlue2')
 

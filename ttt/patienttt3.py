@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from tkinter import *
+import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
 import time
@@ -37,7 +38,7 @@ def callTreatment3(self):
     self.entryName = self.can.create_window(self.x3, self.y3, window=self.entryName)
 
     def callbackDay(event):
-        print(self.comboDay.get())
+        print(str(comboDay))
 
     def callbackMonth(event):
         print(self.comboMonth.get())
@@ -87,8 +88,8 @@ def callTreatment3(self):
     def deleteTreatment():
             #To earase one line in array
             #for one treatment
-        MSB = messagebox.askyesno('Delete ttt', 'Are you sure ?')
-        if MSB == 1:
+        MSBask = messagebox.askyesno('Delete ttt', 'Are you sure ?')
+        if MSBask == 1:
             print("+ Ok, ttt has been ejected !")
             messagebox.showinfo('info BOX', 'Treatment is away !')
             try:
@@ -175,8 +176,8 @@ def callTreatment3(self):
     def deleteReserve():
             #To earase one line in array
             #for one Reserve
-        MSB2 = messagebox.askyesno('Delete Reserve', 'Are you sure ?')
-        if MSB2 == 1:
+        MSB2asno = messagebox.askyesno('Delete Reserve', 'Are you sure ?')
+        if MSB2asno == 1:
             print("Ok, Reserve has been ejected !")
             messagebox.showinfo('info BOX', 'Reserve is away !')
             try:
@@ -262,8 +263,8 @@ def callTreatment3(self):
 
     def copyTttMess():
             #MessageBox to ensure if it's well done.
-        messagebox.askyesno('Record', 'Do you want to save ?')
-        if MsgBox == 1:
+        MsgBoxayes = messagebox.askyesno('Record', 'Do you want to save ?')
+        if MsgBoxayes == 1:
             print("Ok to save")
             copyToFile()
             #app.destroy()
@@ -351,8 +352,8 @@ def callTreatment3(self):
 
     def copyResMess():
         #MessageBox to ensure if it's well done.
-        MsgBox = messagebox.askyesno('Record', 'Do you want to save ?')
-        if MsgBox == 1:
+        MsgBoxayn = messagebox.askyesno('Record', 'Do you want to save ?')
+        if MsgBoxayn == 1:
             print("Ok to save")
             copyToReserve()
             #app.destroy()
@@ -549,7 +550,7 @@ def callTreatment3(self):
     self.textDateS = self.can.create_window(self.x20, self.y20, window=self.textDateS)
 
     def changeDay():
-        self.comboDay["values"] = ['01', '02', '03', '04',
+        comboDay['values'] = ['01', '02', '03', '04',
                               '05', '06', '07', '08',
                               '09', '10', '11', '12',
                               '13', '14', '15', '16',
@@ -557,13 +558,15 @@ def callTreatment3(self):
                               '21', '22', '23', '24',
                               '25', '26', '27', '28',
                               '29', '30', '31']
+
     self.x21, self.y21 = 700, 180
     self.labelDay = Label(self.can,
         text = "Choose the day :", font=12, fg='white', bg='DodgerBlue2')
     self.labelDay = self.can.create_window(self.x21, self.y21, window=self.labelDay)
 
-    self.x22, self.y22 = 700, 220
-    self.comboDay = ttk.Combobox(self.can,
+    #self.x22, self.y22 = 700, 220
+    text_var = StringVar()
+    comboDay = ttk.Combobox(self.can, textvariable=text_var,
         values=['01', '02', '03', '04',
                 '05', '06', '07', '08',
                 '09', '10', '11', '12',
@@ -572,8 +575,9 @@ def callTreatment3(self):
                 '21', '22', '23', '24',
                 '25', '26', '27', '28',
                 '29', '30', '31'], postcommand=changeDay)
-    self.comboDay.bind("<<ComboboxSelected>>", callbackDay)
-    self.comboDay = self.can.create_window(self.x22, self.y22, window=self.comboDay)
+
+    comboDay.bind("<<ComboboxSelected>>", callbackDay)
+    #comboDay = self.can.create_window(self.x22, self.y22, window=comboDay)
 
     def changeMonth():
         self.comboMonth["values"] = [' January',

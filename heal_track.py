@@ -13,8 +13,30 @@ from patcaps import callResident
 from backapp import *
 from Backup.backupfile import dataBackToSave
 from labo.resultlabo3 import callLabo3
+from ttt.patienttt1 import callTreatment1
+from ttt.patienttt2 import callTreatment2
 from ttt.patienttt3 import callTreatment3
 from ttt.patienttt4 import callTreatment4
+from ttt.patienttt5 import callTreatment5
+from ttt.patienttt6 import callTreatment6
+from ttt.patienttt7 import callTreatment7
+from ttt.patienttt8 import callTreatment8
+from ttt.patienttt9 import callTreatment9
+from ttt.patienttt10 import callTreatment10
+from ttt.patienttt11 import callTreatment11
+from ttt.patienttt12 import callTreatment12
+from ttt.patienttt13 import callTreatment13
+from ttt.patienttt14 import callTreatment14
+from ttt.patienttt15 import callTreatment15
+from ttt.patienttt16 import callTreatment16
+from ttt.patienttt17 import callTreatment17
+from ttt.patienttt18 import callTreatment18
+from ttt.patienttt19 import callTreatment19
+from ttt.patienttt20 import callTreatment20
+from ttt.patienttt21 import callTreatment21
+from ttt.patienttt22 import callTreatment22
+from ttt.patienttt23 import callTreatment23
+from ttt.patienttt24 import callTreatment24
 #import passw
 
 
@@ -2029,78 +2051,76 @@ class Application(Frame):
 
     # treatments
     def tttMed1(self):
-        subprocess.run("./ttt/patienttt1.py", check=True)
+        callTreatment1(self)
 
     def tttMed2(self):
-        subprocess.run("./ttt/patienttt2.py", check=True)
+        callTreatment2(self)
 
     def tttMed3(self):
         callTreatment3(self)
-        #subprocess.run("./ttt/patienttt3.py", check=True)
 
     def tttMed4(self):
         callTreatment4(self)
-        #subprocess.run("./ttt/patienttt4.py", check=True)
 
     def tttMed5(self):
-        subprocess.run("./ttt/patienttt5.py", check=True)
+        callTreatment5(self)
 
     def tttMed6(self):
-        subprocess.run("./ttt/patienttt6.py", check=True)
+        callTreatment6(self)
 
     def tttMed7(self):
-        subprocess.run("./ttt/patienttt7.py", check=True)
+        callTreatment7(self)
 
     def tttMed8(self):
-        subprocess.run("./ttt/patienttt8.py", check=True)
+        callTreatment8(self)
 
     def tttMed9(self):
-        subprocess.run("./ttt/patienttt9.py", check=True)
+        callTreatment9(self)
 
     def tttMed10(self):
-        subprocess.run("./ttt/patienttt10.py", check=True)
+        callTreatment10(self)
 
     def tttMed11(self):
-        subprocess.run("./ttt/patienttt11.py", check=True)
+        callTreatment11(self)
 
     def tttMed12(self):
-        subprocess.run("./ttt/patienttt12.py", check=True)
+        callTreatment12(self)
 
     def tttMed13(self):
-        subprocess.run("./ttt/patienttt13.py", check=True)
+        callTreatment13(self)
 
     def tttMed14(self):
-        subprocess.run("./ttt/patienttt14.py", check=True)
+        callTreatment14(self)
 
     def tttMed15(self):
-        subprocess.run("./ttt/patienttt15.py", check=True)
+        callTreatment15(self)
 
     def tttMed16(self):
-        subprocess.run("./ttt/patienttt16.py", check=True)
+        callTreatment16(self)
 
     def tttMed17(self):
-        subprocess.run("./ttt/patienttt17.py", check=True)
+        callTreatment17(self)
 
     def tttMed18(self):
-        subprocess.run("./ttt/patienttt18.py", check=True)
+        callTreatment18(self)
 
     def tttMed19(self):
-        subprocess.run("./ttt/patienttt19.py", check=True)
+        callTreatment19(self)
 
     def tttMed20(self):
-        subprocess.run("./ttt/patienttt20.py", check=True)
+        callTreatment20(self)
 
     def tttMed21(self):
-        subprocess.run("./ttt/patienttt21.py", check=True)
+        callTreatment21(self)
 
     def tttMed22(self):
-        subprocess.run("./ttt/patienttt22.py", check=True)
+        callTreatment22(self)
 
     def tttMed23(self):
-        subprocess.run("./ttt/patienttt23.py", check=True)
+        callTreatment23(self)
 
     def tttMed24(self):
-        subprocess.run("./ttt/patienttt24.py", check=True)
+        callTreatment24(self)
 
     # Func BMI
     def calculB(self):

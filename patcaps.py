@@ -712,11 +712,11 @@ def callResident(self):
         self.new_data11 = line11
         self.x110, self.y110 = 149, 550
         self.new_data11 = StringVar()
-        self.Data_write = Entry(self.can, textvariable=self.new_data11,
+        self.Dataeleven = Entry(self.can, textvariable=self.new_data11,
             highlightbackground='grey', bd=4)
         self.new_data11.set(line11)
-        self.Data_write = self.can.create_window(self.x110, self.y110,
-            window=self.Data_write)
+        self.Dataeleven_window = self.can.create_window(self.x110, self.y110,
+            window=self.Dataeleven)
     except UnboundLocalError as ub_error11:
         print("+ File 11 not created !", ub_error11)
 
@@ -724,43 +724,43 @@ def callResident(self):
     self.b111 = Button(self.can, width=8, font=16,
         activebackground='pale turquoise', text="Update",
         command=self.updateLink11)
-    self.fb111 = self.can.create_window(self.x111, self.y111, window=self.b111)
+    self.fb111_window = self.can.create_window(self.x111, self.y111, window=self.b111)
 
     self.x112, self.y112 = 449, 550
     self.b112 = Button(self.can, width=18, font=16,
         activebackground='pale turquoise', text="Diagnostic + ATCD",
         command=self.diag11)
-    self.fb112 = self.can.create_window(self.x112, self.y112, window=self.b112)
+    self.fb112_window = self.can.create_window(self.x112, self.y112, window=self.b112)
 
     self.x113, self.y113 = 617, 550
     self.b113 = Button(self.can, width=10, font=16,
         activebackground='pale turquoise', text="Treatments",
         command=self.tttMed11)
-    self.fb113 = self.can.create_window(self.x113, self.y113, window=self.b113)
+    self.fb113_window = self.can.create_window(self.x113, self.y113, window=self.b113)
 
     self.x114, self.y114 = 745, 550
     self.b114 = Button(self.can, width=10, font=16,
         activebackground='pale turquoise', text="Laboratory",
         command=self.laboResult11)
-    self.fb114 = self.can.create_window(self.x114, self.y114, window=self.b114)
+    self.fb114_window = self.can.create_window(self.x114, self.y114, window=self.b114)
 
     self.x115, self.y115 = 873, 550
     self.b115 = Button(self.can, width=10, font=16,
         activebackground='pale turquoise', text="Medical Visit",
         command=self.visitMed11)
-    self.fb115 = self.can.create_window(self.x115, self.y115, window=self.b115)
+    self.fb115_window = self.can.create_window(self.x115, self.y115, window=self.b115)
 
     self.x116, self.y116 = 1001, 550
     self.b116 = Button(self.can, width=10, font=16,
         activebackground='pale turquoise', text="Intolerance",
         command=self.nutritionMenu11)
-    self.fb116 = self.can.create_window(self.x116, self.y116, window=self.b116)
+    self.fb116_window = self.can.create_window(self.x116, self.y116, window=self.b116)
 
     self.x117, self.y117 = 1129, 550
     self.b117 = Button(self.can, width=10, font=16,
         activebackground='pale turquoise', text="BMI",
         command=self.calculB11)
-    self.fb117 = self.can.create_window(self.x117, self.y117, window=self.b117)
+    self.fb117_window = self.can.create_window(self.x117, self.y117, window=self.b117)
 
     # Patient 12
     try:
@@ -773,11 +773,11 @@ def callResident(self):
         self.new_data12 = line12
         self.x120, self.y120 = 149, 582
         self.new_data12 = StringVar()
-        self.Data_write = Entry(self.can, textvariable=self.new_data12,
+        self.Datatwelve = Entry(self.can, textvariable=self.new_data12,
             highlightbackground='grey', bd=4)
         self.new_data12.set(line12)
-        self.Data_write = self.can.create_window(self.x120, self.y120,
-            window=self.Data_write)
+        self.Datatwelve_window = self.can.create_window(self.x120, self.y120,
+            window=self.Datatwelve)
     except UnboundLocalError as ub_error12:
         print("+ File 12 not created !", ub_error12)
 
@@ -785,43 +785,43 @@ def callResident(self):
     self.b121 = Button(self.can, width=8, font=16, bg='grey70',
         activebackground='pale turquoise', text="Update",
         command=self.updateLink12)
-    self.fb121 = self.can.create_window(self.x121, self.y121, window=self.b121)
+    self.fb121_window = self.can.create_window(self.x121, self.y121, window=self.b121)
 
     self.x122, self.y122 = 449, 582
     self.b122 = Button(self.can, width=18, font=16, bg='grey70',
         activebackground='pale turquoise', text="Diagnostic + ATCD",
         command=self.diag12)
-    self.fb122 = self.can.create_window(self.x122, self.y122, window=self.b122)
+    self.fb122_window = self.can.create_window(self.x122, self.y122, window=self.b122)
 
     self.x123, self.y123 = 617, 582
     self.b123 = Button(self.can, width=10, font=16, bg='grey70',
         activebackground='pale turquoise', text="Treatments",
         command=self.tttMed12)
-    self.fb123 = self.can.create_window(self.x123, self.y123, window=self.b123)
+    self.fb123_window = self.can.create_window(self.x123, self.y123, window=self.b123)
 
     self.x124, self.y124 = 745, 582
     self.b124 = Button(self.can, width=10, font=16, bg='grey70',
         activebackground='pale turquoise', text="Laboratory",
         command=self.laboResult12)
-    self.fb124 = self.can.create_window(self.x124, self.y124, window=self.b124)
+    self.fb124_window = self.can.create_window(self.x124, self.y124, window=self.b124)
 
     self.x125, self.y125 = 873, 582
     self.b125 = Button(self.can, width=10, font=16, bg='grey70',
         activebackground='pale turquoise', text="Medical Visit",
         command=self.visitMed12)
-    self.fb125 = self.can.create_window(self.x125, self.y125, window=self.b125)
+    self.fb125_window = self.can.create_window(self.x125, self.y125, window=self.b125)
 
     self.x126, self.y126 = 1001, 582
     self.b126 = Button(self.can, width=10, font=16, bg='grey70',
         activebackground='pale turquoise', text="Intolerance",
         command=self.nutritionMenu12)
-    self.fb126 = self.can.create_window(self.x126, self.y126, window=self.b126)
+    self.fb126_window = self.can.create_window(self.x126, self.y126, window=self.b126)
 
     self.x127, self.y127 = 1129, 582
     self.b127 = Button(self.can, width=10, font=16, bg='grey70',
         activebackground='pale turquoise', text="BMI",
         command=self.calculB12)
-    self.fb127 = self.can.create_window(self.x127, self.y127, window=self.b127)
+    self.fb127_window = self.can.create_window(self.x127, self.y127, window=self.b127)
 
     # Patient 13
     try:
@@ -834,11 +834,11 @@ def callResident(self):
         self.new_data13 = line13
         self.x130, self.y130 = 149, 614
         self.new_data13 = StringVar()
-        self.Data_write = Entry(self.can, textvariable=self.new_data13,
+        self.Datathirtin = Entry(self.can, textvariable=self.new_data13,
             highlightbackground='grey', bd=4)
         self.new_data13.set(line13)
-        self.Data_write = self.can.create_window(self.x130, self.y130,
-            window=self.Data_write)
+        self.Datathirtin_window = self.can.create_window(self.x130, self.y130,
+            window=self.Datathirtin)
     except UnboundLocalError as ub_error13:
         print("+ File 13 not created !", ub_error13)
 
@@ -846,43 +846,43 @@ def callResident(self):
     self.b131 = Button(self.can, width=8, font=16,
         activebackground='pale turquoise', text="Update",
         command=self.updateLink13)
-    self.fb131 = self.can.create_window(self.x131, self.y131, window=self.b131)
+    self.fb131_window = self.can.create_window(self.x131, self.y131, window=self.b131)
 
     self.x132, self.y132 = 449, 614
     self.b132 = Button(self.can, width=18, font=16,
         activebackground='pale turquoise', text="Diagnostic + ATCD",
         command=self.diag13)
-    self.fb132 = self.can.create_window(self.x132, self.y132, window=self.b132)
+    self.fb132_window = self.can.create_window(self.x132, self.y132, window=self.b132)
 
     self.x133, self.y133 = 617, 614
     self.b133 = Button(self.can, width=10, font=16,
         activebackground='pale turquoise', text="Treatments",
         command=self.tttMed13)
-    self.fb133 = self.can.create_window(self.x133, self.y133, window=self.b133)
+    self.fb133_window = self.can.create_window(self.x133, self.y133, window=self.b133)
 
     self.x134, self.y134 = 745, 614
     self.b134 = Button(self.can, width=10, font=16,
         activebackground='pale turquoise', text="Laboratory",
         command=self.laboResult13)
-    self.fb134 = self.can.create_window(self.x134, self.y134, window=self.b134)
+    self.fb134_window = self.can.create_window(self.x134, self.y134, window=self.b134)
 
     self.x135, self.y135 = 873, 614
     self.b135 = Button(self.can, width=10, font=16,
         activebackground='pale turquoise', text="Medical Visit",
         command=self.visitMed13)
-    self.fb135 = self.can.create_window(self.x135, self.y135, window=self.b135)
+    self.fb135_window = self.can.create_window(self.x135, self.y135, window=self.b135)
 
     self.x136, self.y136 = 1001, 614
     self.b136 = Button(self.can, width=10, font=16,
         activebackground='pale turquoise', text="Intolerance",
         command=self.nutritionMenu13)
-    self.fb136 = self.can.create_window(self.x136, self.y136, window=self.b136)
+    self.fb136_window = self.can.create_window(self.x136, self.y136, window=self.b136)
 
     self.x137, self.y137 = 1129, 614
     self.b137 = Button(self.can, width=10, font=16,
         activebackground='pale turquoise', text="BMI",
         command=self.calculB13)
-    self.fb137 = self.can.create_window(self.x137, self.y137, window=self.b137)
+    self.fb137_window = self.can.create_window(self.x137, self.y137, window=self.b137)
 
     # Patient 14
     try:
@@ -895,11 +895,11 @@ def callResident(self):
         self.new_data14 = line14
         self.x140, self.y140 = 149, 646
         self.new_data14 = StringVar()
-        self.Data_write = Entry(self.can, textvariable=self.new_data14,
+        self.Datafourteen = Entry(self.can, textvariable=self.new_data14,
             highlightbackground='grey', bd=4)
         self.new_data14.set(line14)
-        self.Data_write = self.can.create_window(self.x140, self.y140,
-            window=self.Data_write)
+        self.Datafourteen_window = self.can.create_window(self.x140, self.y140,
+            window=self.Datafourteen)
     except UnboundLocalError as ub_error14:
         print("+ File 14 not created !", ub_error14)
 
@@ -907,43 +907,43 @@ def callResident(self):
     self.b141 = Button(self.can, width=8, font=16, bg='grey70',
         activebackground='pale turquoise', text="Update",
         command=self.updateLink14)
-    self.fb141 = self.can.create_window(self.x141, self.y141, window=self.b141)
+    self.fb141_window = self.can.create_window(self.x141, self.y141, window=self.b141)
 
     self.x142, self.y142 = 449, 646
     self.b142 = Button(self.can, width=18, font=16, bg='grey70',
         activebackground='pale turquoise', text="Diagnostic + ATCD",
         command=self.diag14)
-    self.fb142 = self.can.create_window(self.x142, self.y142, window=self.b142)
+    self.fb142_window = self.can.create_window(self.x142, self.y142, window=self.b142)
 
     self.x143, self.y143 = 617, 646
     self.b143 = Button(self.can, width=10, font=16, bg='grey70',
         activebackground='pale turquoise', text="Treatments",
         command=self.tttMed14)
-    self.fb143 = self.can.create_window(self.x143, self.y143, window=self.b143)
+    self.fb143_window = self.can.create_window(self.x143, self.y143, window=self.b143)
 
     self.x144, self.y144 = 745, 646
     self.b144 = Button(self.can, width=10, font=16, bg='grey70',
         activebackground='pale turquoise', text="Laboratory",
         command=self.laboResult14)
-    self.fb144 = self.can.create_window(self.x144, self.y144, window=self.b144)
+    self.fb144_window = self.can.create_window(self.x144, self.y144, window=self.b144)
 
     self.x145, self.y145 = 873, 646
     self.b145 = Button(self.can, width=10, font=16, bg='grey70',
         activebackground='pale turquoise', text="Medical Visit",
         command=self.visitMed14)
-    self.fb145 = self.can.create_window(self.x145, self.y145, window=self.b145)
+    self.fb145_window = self.can.create_window(self.x145, self.y145, window=self.b145)
 
     self.x146, self.y146 = 1001, 646
     self.b146 = Button(self.can, width=10, font=16, bg='grey70',
         activebackground='pale turquoise', text="Intolerance",
         command=self.nutritionMenu14)
-    self.fb146 = self.can.create_window(self.x146, self.y146, window=self.b146)
+    self.fb146_window = self.can.create_window(self.x146, self.y146, window=self.b146)
 
     self.x147, self.y147 = 1129, 646
     self.b147 = Button(self.can, width=10, font=16, bg='grey70',
         activebackground='pale turquoise', text="BMI",
         command=self.calculB14)
-    self.fb147 = self.can.create_window(self.x147, self.y147, window=self.b147)
+    self.fb147_window = self.can.create_window(self.x147, self.y147, window=self.b147)
 
     # Patient 15
     try:
@@ -956,11 +956,11 @@ def callResident(self):
         self.new_data15 = line15
         self.x150, self.y150 = 149, 678
         self.new_data15 = StringVar()
-        self.Data_write = Entry(self.can, textvariable=self.new_data15,
+        self.Datafivteen = Entry(self.can, textvariable=self.new_data15,
             highlightbackground='grey', bd=4)
         self.new_data15.set(line15)
-        self.Data_write = self.can.create_window(self.x150, self.y150,
-            window=self.Data_write)
+        self.Datafivteen_window = self.can.create_window(self.x150, self.y150,
+            window=self.Datafivteen)
     except UnboundLocalError as ub_error15:
         print("+ File 15 not created !", ub_error15)
 
@@ -968,43 +968,43 @@ def callResident(self):
     self.b151 = Button(self.can, width=8, font=16,
         activebackground='pale turquoise', text="Update",
         command=self.updateLink15)
-    self.fb151 = self.can.create_window(self.x151, self.y151, window=self.b151)
+    self.fb151_window = self.can.create_window(self.x151, self.y151, window=self.b151)
 
     self.x152, self.y152 = 449, 678
     self.b152 = Button(self.can, width=18, font=16,
         activebackground='pale turquoise', text="Diagnostic + ATCD",
         command=self.diag15)
-    self.fb152 = self.can.create_window(self.x152, self.y152, window=self.b152)
+    self.fb152_window = self.can.create_window(self.x152, self.y152, window=self.b152)
 
     self.x153, self.y153 = 617, 678
     self.b153 = Button(self.can, width=10, font=16,
         activebackground='pale turquoise', text="Treatments",
         command=self.tttMed15)
-    self.fb153 = self.can.create_window(self.x153, self.y153, window=self.b153)
+    self.fb153_window = self.can.create_window(self.x153, self.y153, window=self.b153)
 
     self.x154, self.y154 = 745, 678
     self.b154 = Button(self.can, width=10, font=16,
         activebackground='pale turquoise', text="Laboratory",
         command=self.laboResult15)
-    self.fb154 = self.can.create_window(self.x154, self.y154, window=self.b154)
+    self.fb154_window = self.can.create_window(self.x154, self.y154, window=self.b154)
 
     self.x155, self.y155 = 873, 678
     self.b155 = Button(self.can, width=10, font=16,
         activebackground='pale turquoise', text="Medical Visit",
         command=self.visitMed15)
-    self.fb155 = self.can.create_window(self.x155, self.y155, window=self.b155)
+    self.fb155_window = self.can.create_window(self.x155, self.y155, window=self.b155)
 
     self.x156, self.y156 = 1001, 678
     self.b156 = Button(self.can, width=10, font=16,
         activebackground='pale turquoise', text="Intolerance",
         command=self.nutritionMenu15)
-    self.fb156 = self.can.create_window(self.x156, self.y156, window=self.b156)
+    self.fb156_window = self.can.create_window(self.x156, self.y156, window=self.b156)
 
     self.x157, self.y157 = 1129, 678
     self.b157 = Button(self.can, width=10, font=16,
         activebackground='pale turquoise', text="BMI",
         command=self.calculB15)
-    self.fb157 = self.can.create_window(self.x157, self.y157, window=self.b157)
+    self.fb157_window = self.can.create_window(self.x157, self.y157, window=self.b157)
 
     # Patient 16
     try:

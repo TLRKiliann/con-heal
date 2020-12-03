@@ -18,12 +18,12 @@ def callTreatment3(self):
     self.x1, self.y1 = 625, 30
     self.textLab = Label(self.can, text="Introduction of treatement (ttt)",
         font=('Times', 22, 'bold'), fg='white', bg='DodgerBlue2')
-    self.textLab = self.can.create_window(self.x1, self.y1, window=self.textLab)
+    self.textLab_window = self.can.create_window(self.x1, self.y1, window=self.textLab)
 
     self.x2, self.y2 = 410, 80
     self.labelallergy = Label(self.can, text="Allergy : ",
         font=('Arial', 18, 'bold'), fg='coral', bg='DodgerBlue2')
-    self.labelallergy = self.can.create_window(self.x2, self.y2, window=self.labelallergy)
+    self.labelallergy_window = self.can.create_window(self.x2, self.y2, window=self.labelallergy)
 
     # To read allergy for entry widget
     with open('./newpatient/entryfile3.txt', 'r') as filename2:
@@ -32,74 +32,74 @@ def callTreatment3(self):
         line3 = filename2.readline()
 
     self.x3, self.y3 = 670, 80
-    entrytext = StringVar()
-    self.entryName = Entry(self.can, textvariable=entrytext, width=50)
-    entrytext.set(line3)
-    self.entryName = self.can.create_window(self.x3, self.y3, window=self.entryName)
+    self.entrytext = StringVar()
+    self.entryName = Entry(self.can, textvariable=self.entrytext, width=50)
+    self.entrytext.set(line3)
+    self.entryName_window = self.can.create_window(self.x3, self.y3, window=self.entryName)
 
     self.x4, self.y4 = 120, 180
     self.LabDate = Label(self.can, text="Date : ", width=15, font=12,
         fg='white', bg='DodgerBlue2', anchor='e')
-    self.LabDate = self.can.create_window(self.x4, self.y4, window=self.LabDate)
+    self.LabDate_window = self.can.create_window(self.x4, self.y4, window=self.LabDate)
 
     self.x5, self.y5 = 120, 210
     self.LabHour = Label(self.can, text="Hour : ", width=15, font=12,
         fg='white', bg='DodgerBlue2', anchor='e')
-    self.LabHour = self.can.create_window(self.x5, self.y5, window=self.LabHour)
+    self.LabHour_window = self.can.create_window(self.x5, self.y5, window=self.LabHour)
 
     self.x6, self.y6 = 120, 240
     self.LabName = Label(self.can, text="Patient name : ", width=15, font=12,
         fg='white', bg='DodgerBlue2', anchor='e')
-    self.LabName = self.can.create_window(self.x6, self.y6, window=self.LabName)
+    self.LabName_window = self.can.create_window(self.x6, self.y6, window=self.LabName)
 
     self.x7, self.y7 = 120, 270
     self.LabTreat = Label(self.can, text='Name of drug : ', width=15, 
         font=12, fg='white', bg='DodgerBlue2', anchor='e')
-    self.LabTreat = self.can.create_window(self.x7, self.y7, window=self.LabTreat)
+    self.LabTreat_window = self.can.create_window(self.x7, self.y7, window=self.LabTreat)
 
     self.x8, self.y8 = 120, 300
     self.LabDose = Label(self.can, text="Dose : ", width=15, font=12,
         fg='white', bg='DodgerBlue2', anchor='e')
-    self.LabDose = self.can.create_window(self.x8, self.y8, window=self.LabDose)
+    self.LabDose_window = self.can.create_window(self.x8, self.y8, window=self.LabDose)
 
     self.x9, self.y9 = 300, 180
-    time_string = IntVar()
-    self.textDate = Entry(self.can, textvariable=time_string,
+    self.time_string = IntVar()
+    self.textDate = Entry(self.can, textvariable=self.time_string,
         highlightbackground='grey', bd=4)
-    time_string.set(time.strftime("%d/%m/%Y"))
-    self.textDate = self.can.create_window(self.x9, self.y9, window=self.textDate)
+    self.time_string.set(time.strftime("%d/%m/%Y"))
+    self.textDate_window = self.can.create_window(self.x9, self.y9, window=self.textDate)
 
     self.x10, self.y10 = 300, 210
-    time_Htring = IntVar()
-    self.textHour = Entry(self.can, textvariable=time_Htring,
+    self.time_Htring = IntVar()
+    self.textHour = Entry(self.can, textvariable=self.time_Htring,
         highlightbackground='grey', bd=4)
-    time_Htring.set(time.strftime("%H:%M:%S"))
-    self.textHour = self.can.create_window(self.x10, self.y10, window=self.textHour)
+    self.time_Htring.set(time.strftime("%H:%M:%S"))
+    self.textHour_window = self.can.create_window(self.x10, self.y10, window=self.textHour)
 
     # To read name of patient for entry widget
     with open('./newpatient/entryfile3.txt', 'r') as filename:
         line1=filename.readline()
 
     self.x11, self.y11 = 300, 240
-    name_text = StringVar()
-    self.textName = Entry(self.can, textvariable=name_text,
+    self.name_text = StringVar()
+    self.textName = Entry(self.can, textvariable=self.name_text,
         highlightbackground='grey', bd=4)
-    name_text.set(line1)
-    self.textName = self.can.create_window(self.x11, self.y11, window=self.textName)
+    self.name_text.set(line1)
+    self.textName_window = self.can.create_window(self.x11, self.y11, window=self.textName)
 
     self.x12, self.y12 = 300, 270
-    ttt_name = StringVar()
-    self.textTreat = Entry(self.can, textvariable=ttt_name,
+    self.ttt_name = StringVar()
+    self.textTreat = Entry(self.can, textvariable=self.ttt_name,
         highlightbackground='grey', bd=4)
-    ttt_name.set("Drug")
-    self.textTreat = self.can.create_window(self.x12, self.y12, window=self.textTreat)
+    self.ttt_name.set("Drug")
+    self.textTreat_window = self.can.create_window(self.x12, self.y12, window=self.textTreat)
 
     self.x13, self.y13 = 300, 300
-    tttDosage = StringVar()
-    self.textDosage = Entry(self.can, textvariable=tttDosage,
+    self.tttDosage = StringVar()
+    self.textDosage = Entry(self.can, textvariable=self.tttDosage,
         highlightbackground='grey', bd=4)
-    tttDosage.set("mcg/ml/mg/UI/gttes")
-    self.textDosage = self.can.create_window(self.x13, self.y13, window=self.textDosage)
+    self.tttDosage.set("mcg/ml/mg/UI/gttes")
+    self.textDosage_window = self.can.create_window(self.x13, self.y13, window=self.textDosage)
 
     def callbackDay(event):
         print(self.comboDay.get())
@@ -164,69 +164,69 @@ def callTreatment3(self):
                     
                     dataDose = datastore
                     for key, value in dataDose.items():
-                        if deleteTreat.get() == value[0]['Treatment']:
+                        if self.deleteTreat.get() == value[0]['Treatment']:
                             del value[0]
                             print("+ TTT earased !")
 
-                        elif deleteTreat.get() == value[1]['Treatment']:
+                        elif self.deleteTreat.get() == value[1]['Treatment']:
                             del value[1]
                             print("+ TTT earased !")
 
-                        elif deleteTreat.get() == value[2]['Treatment']:
+                        elif self.deleteTreat.get() == value[2]['Treatment']:
                             del value[2]
                             print("+ TTT earased !")
                             
-                        elif deleteTreat.get() == value[3]['Treatment']:
+                        elif self.deleteTreat.get() == value[3]['Treatment']:
                             del value[3]
                             print("+ TTT earased !")
 
-                        elif deleteTreat.get() == value[4]['Treatment']:
+                        elif self.deleteTreat.get() == value[4]['Treatment']:
                             del value[4]
                             print("+ TTT earased !")
 
-                        elif deleteTreat.get() == value[5]['Treatment']:
+                        elif self.deleteTreat.get() == value[5]['Treatment']:
                             del value[5]
                             print("+ TTT earased !")
 
-                        elif deleteTreat.get() == value[6]['Treatment']:
+                        elif self.deleteTreat.get() == value[6]['Treatment']:
                             del value[6]
                             print("+ TTT earased !")
 
-                        elif deleteTreat.get() == value[7]['Treatment']:
+                        elif self.deleteTreat.get() == value[7]['Treatment']:
                             del value[7]
                             print("+ TTT earased !")
 
-                        elif deleteTreat.get() == value[8]['Treatment']:
+                        elif self.deleteTreat.get() == value[8]['Treatment']:
                             del value[8]
                             print("+ TTT earased !")
 
-                        elif deleteTreat.get() == value[9]['Treatment']:
+                        elif self.deleteTreat.get() == value[9]['Treatment']:
                             del value[9]
                             print("+ TTT earased !")
 
-                        elif deleteTreat.get() == value[10]['Treatment']:
+                        elif self.deleteTreat.get() == value[10]['Treatment']:
                             del value[10]
                             print("+ TTT earased !")
 
-                        elif deleteTreat.get() == value[11]['Treatment']:
+                        elif self.deleteTreat.get() == value[11]['Treatment']:
                             del value[11]
                             print("+ TTT earased !")
 
-                        elif deleteTreat.get() == value[12]['Treatment']:
+                        elif self.deleteTreat.get() == value[12]['Treatment']:
                             del value[12]
                             print("+ TTT earased !")
 
-                        elif deleteTreat.get() == value[13]['Treatment']:
+                        elif self.deleteTreat.get() == value[13]['Treatment']:
                             del value[13]
                             print("+ TTT earased !")
 
-                        elif deleteTreat.get() == value[14]['Treatment']:
+                        elif self.deleteTreat.get() == value[14]['Treatment']:
                             del value[14]
                             print("+ TTT earased !")
                         else:
                             print("Treatment is not present into medication")
 
-                        if deleteTreat.get() == '':
+                        if self.deleteTreat.get() == '':
                             print("None treatment checked")
                         else:
                             print("---Ok VALUE 'Treatment' earased---")
@@ -524,28 +524,27 @@ def callTreatment3(self):
             no ttt has been introduced !") 
 
     self.x14, self.y14 = 500, 180
-    self.buttShowres = Button(self.can, text="Show R", width=10, fg='white',
-        bg='RoyalBlue3', bd=3, highlightbackground='cyan', 
-        activebackground='pale turquoise', command=showReserve)
-    self.buttShowres = self.can.create_window(self.x14, self.y14, window=self.buttShowres)
-
-    self.x15, self.y15 = 500, 240
     self.buttShowttt = Button(self.can, text="Show ttt", width=10, fg='white',
         bg='RoyalBlue3', bd=3, highlightbackground='cyan', 
         activebackground='pale turquoise', command=showTreat)
-    self.buttShowttt = self.can.create_window(self.x15, self.y15, window=self.buttShowttt)
+    self.buttShowttt_window = self.can.create_window(self.x14, self.y14, window=self.buttShowttt)
+
+    self.x15, self.y15 = 500, 240
+    self.buttShowres = Button(self.can, text="Show R", width=10, fg='white',
+        bg='RoyalBlue3', bd=3, highlightbackground='cyan', 
+        activebackground='pale turquoise', command=showReserve)
+    self.buttShowres_window = self.can.create_window(self.x15, self.y15, window=self.buttShowres)
 
     self.x16, self.y16 = 500, 300
     self.buttStory = Button(self.can, text="Historic", width=10, fg='white',
         bg='RoyalBlue3', bd=3, highlightbackground='cyan', 
         activebackground='pale turquoise', command=readFileStory)
-    self.buttStory = self.can.create_window(self.x16, self.y16, window=self.buttStory)
-
+    self.buttStory_window = self.can.create_window(self.x16, self.y16, window=self.buttStory)
 
     self.x20, self.y20 = 800, 140
     self.textProcess = Label(self.can, text="Processing start date :", 
         font=('Arial 14 bold'), fg='aquamarine', bg='DodgerBlue2', width=40, anchor='w')
-    self.textProcess = self.can.create_window(self.x20, self.y20, window=self.textProcess)
+    self.textProcess_window = self.can.create_window(self.x20, self.y20, window=self.textProcess)
 
     def changeDay():
         self.comboDay['values']=['01', '02', '03', '04',
@@ -559,7 +558,7 @@ def callTreatment3(self):
 
     self.labelDay = Label(self.can,
         text = "Choose the day :", font=12, fg='white', bg='DodgerBlue2')
-    self.labelDay = self.can.create_window(700, 180, window=self.labelDay)
+    self.labelDay_window = self.can.create_window(700, 180, window=self.labelDay)
 
     self.mystring = tk.StringVar()
     self.comboDay = ttk.Combobox(self.can, textvariable=self.mystring,
@@ -593,7 +592,7 @@ def callTreatment3(self):
     self.x23, self.y23 = 900, 180
     self.labelMonth = Label(self.can,
         text = "Choose the month :", font=12, fg='white', bg='DodgerBlue2')
-    self.labelMonth = self.can.create_window(self.x23, self.y23, window=self.labelMonth)
+    self.labelMonth_window = self.can.create_window(self.x23, self.y23, window=self.labelMonth)
 
     self.x24, self.y24 = 900, 220
     self.mystring2 = tk.StringVar()
@@ -628,7 +627,7 @@ def callTreatment3(self):
     self.x25, self.y25 = 1100, 180
     self.labelYear = Label(self.can,
         text = "Choose the year :", font=12, fg='white', bg='DodgerBlue2')
-    self.labelYear = self.can.create_window(self.x25, self.y25, window=self.labelYear)
+    self.labelYear_window = self.can.create_window(self.x25, self.y25, window=self.labelYear)
 
     self.x26, self.y26 = 1100, 220
     self.mystring3 = tk.StringVar()
@@ -650,7 +649,7 @@ def callTreatment3(self):
     self.x27, self.y27 = 800, 270
     self.txtfinishdate = Label(self.can, text="Processing end date :", 
         font=('Arial 14 bold'), fg='aquamarine', bg='DodgerBlue2', width=40, anchor='w')
-    self.txtfinishdate = self.can.create_window(self.x27, self.y27, window=self.txtfinishdate)
+    self.txtfinishdate_window = self.can.create_window(self.x27, self.y27, window=self.txtfinishdate)
 
     def finishDay():
         self.comboFinishDay["values"] = ['01', '02', '03', '04',
@@ -664,7 +663,7 @@ def callTreatment3(self):
     self.x28, self.y28 = 700, 310
     self.labelFinishDay = Label(self.can,
         text = "Choose the day :", font=12, fg='white', bg='DodgerBlue2')
-    self.labelFinishDay = self.can.create_window(self.x28, self.y28, window=self.labelFinishDay)
+    self.labelFinishDay_window = self.can.create_window(self.x28, self.y28, window=self.labelFinishDay)
 
     self.x29, self.y29 = 700, 350
     self.mystring4 = tk.StringVar()
@@ -690,7 +689,7 @@ def callTreatment3(self):
     self.x30, self.y30 = 900, 310
     self.labelMonth = Label(self.can,
         text = "Choose the month :", font=12, fg='white', bg='DodgerBlue2')
-    self.labelMonth = self.can.create_window(self.x30, self.y30, window=self.labelMonth)
+    self.labelMonth_window = self.can.create_window(self.x30, self.y30, window=self.labelMonth)
 
     self.x31, self.y31 = 900, 350
     self.mystring5 = tk.StringVar()
@@ -721,7 +720,7 @@ def callTreatment3(self):
     self.x32, self.y32 = 1100, 310
     self.labelFinishYear = Label(self.can,
         text = "Choose the year :", font=12, fg='white', bg='DodgerBlue2')
-    self.labelFinishYear = self.can.create_window(self.x32, self.y32, window=self.labelFinishYear)
+    self.labelFinishYear_window = self.can.create_window(self.x32, self.y32, window=self.labelFinishYear)
 
     self.x33, self.y33 = 1100, 350
     self.mystring6 = tk.StringVar()
@@ -738,167 +737,167 @@ def callTreatment3(self):
     self.x34, self.y34 = 100, 380
     self.checkLab = Label(self.can, text="Doses :", font=('Arial 14 bold'), 
         fg='aquamarine', bg='DodgerBlue2')
-    self.checkLab = self.can.create_window(self.x34, self.y34, window=self.checkLab)
+    self.checkLab_window = self.can.create_window(self.x34, self.y34, window=self.checkLab)
 
     self.x35, self.y35 = 100, 420
-    CheckVarMatin = IntVar()
+    self.CheckVarMatin = IntVar()
     self.Cma = Checkbutton(self.can, text="Morning --->", fg='navy', 
-        bg='cyan', variable=CheckVarMatin, 
+        bg='cyan', variable=self.CheckVarMatin, 
         onvalue=1, offvalue=0, height=1, 
         width=15, anchor='w')
-    self.Cma = self.can.create_window(self.x35, self.y35, window=self.Cma)
+    self.Cma_window = self.can.create_window(self.x35, self.y35, window=self.Cma)
 
     self.x36, self.y36 = 300, 420
     self.LabDose = Label(self.can, text='Morning take : ', font=12,
         width=20, fg='white', bg='DodgerBlue2')
-    self.LabDose = self.can.create_window(self.x36, self.y36, window=self.LabDose)
+    self.LabDose_window = self.can.create_window(self.x36, self.y36, window=self.LabDose)
 
     self.x37, self.y37 = 500, 380
     self.DosaLab = Label(self.can, text="Unity :", font=('Arial 14 bold'), 
         fg='aquamarine', bg='DodgerBlue2')
-    self.DosaLab = self.can.create_window(self.x37, self.y37, window=self.DosaLab)
+    self.DosaLab_window = self.can.create_window(self.x37, self.y37, window=self.DosaLab)
 
     self.x38, self.y38 = 500, 420
     self.Entmatin = Entry(self.can, highlightbackground='grey', bd=4)
-    self.Entmatin = self.can.create_window(self.x38, self.y38, window=self.Entmatin)
+    self.Entmatin_window = self.can.create_window(self.x38, self.y38, window=self.Entmatin)
 
     self.x39, self.y39 = 100, 460
-    CheckVarMidi = IntVar()
+    self.CheckVarMidi = IntVar()
     self.Cmi = Checkbutton(self.can, text="Noon --->", fg='navy', 
-        bg='cyan', variable=CheckVarMidi, 
+        bg='cyan', variable=self.CheckVarMidi, 
         onvalue=1, offvalue=0, height=1, 
         width=15, anchor='w')
-    self.Cmi = self.can.create_window(self.x39, self.y39, window=self.Cmi)
+    self.Cmi_window = self.can.create_window(self.x39, self.y39, window=self.Cmi)
 
     self.x40, self.y40 = 300, 460
     self.Lunchtime = Label(self.can, text='Lunchtime take : ', font=12, 
         width=20, fg='white', bg='DodgerBlue2')
-    self.Lunchtime = self.can.create_window(self.x40, self.y40, window=self.Lunchtime)
+    self.Lunchtime_window = self.can.create_window(self.x40, self.y40, window=self.Lunchtime)
 
     self.x41, self.y41 = 500, 460
     self.Entmidi = Entry(self.can, highlightbackground='grey', bd=4)
-    self.Entmidi = self.can.create_window(self.x41, self.y41, window=self.Entmidi)
+    self.Entmidi_window = self.can.create_window(self.x41, self.y41, window=self.Entmidi)
 
     self.x42, self.y42 = 100, 500
-    CheckVarSoir = IntVar()
+    self.CheckVarSoir = IntVar()
     self.Csoir = Checkbutton(self.can, text="Evening --->", fg='navy', 
-        bg='cyan', variable=CheckVarSoir, 
+        bg='cyan', variable=self.CheckVarSoir, 
         onvalue=1, offvalue=0, height=1, 
         width=15, anchor='w')
-    self.Csoir = self.can.create_window(self.x42, self.y42, window=self.Csoir)
+    self.Csoir_window = self.can.create_window(self.x42, self.y42, window=self.Csoir)
 
     self.x43, self.y43 = 300, 500
     self.Evetake = Label(self.can, text='Evening take : ', font=12,
         width=20, fg='white', bg='DodgerBlue2')
-    self.Evetake = self.can.create_window(self.x43, self.y43, window=self.Evetake)
+    self.Evetake_window = self.can.create_window(self.x43, self.y43, window=self.Evetake)
 
     self.x44, self.y44 = 500, 500
     self.Entsoir = Entry(self.can, highlightbackground='grey', bd=4)
-    self.Entsoir = self.can.create_window(self.x44, self.y44, window=self.Entsoir)
+    self.Entsoir_window = self.can.create_window(self.x44, self.y44, window=self.Entsoir)
 
     self.x45, self.y45 = 100, 540
-    CheckVarNuit = IntVar()
+    self.CheckVarNuit = IntVar()
     self.Cnuit = Checkbutton(self.can, text="Night --->", fg='navy', 
-        bg='cyan', variable=CheckVarNuit, 
+        bg='cyan', variable=self.CheckVarNuit, 
         onvalue=1, offvalue=0, height=1, 
         width=15, anchor='w')
-    self.Cnuit = self.can.create_window(self.x45, self.y45, window=self.Cnuit)
+    self.Cnuit_window = self.can.create_window(self.x45, self.y45, window=self.Cnuit)
 
     self.x46, self.y46 = 300, 540
     self.Nightlab = Label(self.can, text='Night-time take : ', font=12,
         width=20, fg='white', bg='DodgerBlue2')
-    self.Nightlab = self.can.create_window(self.x46, self.y46, window=self.Nightlab)
+    self.Nightlab_window = self.can.create_window(self.x46, self.y46, window=self.Nightlab)
 
     self.x47, self.y47 = 500, 540
     self.Entnuit = Entry(self.can, highlightbackground='grey', bd=4)
-    self.Entnuit = self.can.create_window(self.x47, self.y47, window=self.Entnuit)
+    self.Entnuit_window = self.can.create_window(self.x47, self.y47, window=self.Entnuit)
 
-    self.x59, self.y59 = 500, 640
+    self.x48, self.y48 = 500, 640
     self.buttsavettt = Button(self.can, text="Save as ttt", width=10, fg='yellow',
         bg='RoyalBlue3', bd=3, highlightbackground='cyan',
         activebackground='pale turquoise', command=copyTttMess)
-    self.buttsavettt = self.can.create_window(self.x59, self.y59, window=self.buttsavettt)
+    self.buttsavettt_window = self.can.create_window(self.x48, self.y48, window=self.buttsavettt)
 
-    self.x70, self.y70 = 873, 420
+    self.x50, self.y50 = 873, 420
     self.Labelifchoice = Label(self.can,
         text="If medication is a RESERVE make your choice below :",
         font=('Times', 16, 'bold'),fg='white', bg='DodgerBlue2')
-    self.Labelifchoice = self.can.create_window(self.x70, self.y70, window=self.Labelifchoice)
+    self.Labelifchoice_window = self.can.create_window(self.x50, self.y50, window=self.Labelifchoice)
 
-    self.x48, self.y48 = 700, 460
+    self.x51, self.y51 = 700, 460
     self.CheckVar1 = IntVar()
     self.C1 = Checkbutton(self.can, text="Reserve", fg='navy', 
         bg='pale green', variable=self.CheckVar1, 
         onvalue=1, offvalue=0, height=1, 
         width=16, anchor='w')
-    self.C1 = self.can.create_window(self.x48, self.y48, window=self.C1)
+    self.C1_window = self.can.create_window(self.x51, self.y51, window=self.C1)
 
-    self.x49, self.y49 = 700, 500
+    self.x52, self.y52 = 700, 500
     self.CheckVar2 = IntVar()
     self.C2 = Checkbutton(self.can, text="First-line", fg='navy', 
         bg='pale green', variable=self.CheckVar2, 
         onvalue=1, offvalue=0, height=1, 
         width=16, anchor='w')
-    self.C2 = self.can.create_window(self.x49, self.y49, window=self.C2)
+    self.C2_window = self.can.create_window(self.x52, self.y52, window=self.C2)
 
-    self.x50, self.y50 = 700, 540
+    self.x53, self.y53 = 700, 540
     self.CheckVar3 = IntVar()
     self.C3 = Checkbutton(self.can, text="Second-line", fg='navy', 
         bg='pale green', variable=self.CheckVar3, 
         onvalue=1, offvalue=0, height=1, 
         width=16, anchor='w')
-    self.C3 = self.can.create_window(self.x50, self.y50, window=self.C3)
+    self.C3_window = self.can.create_window(self.x53, self.y53, window=self.C3)
 
-    self.x51, self.y51 = 900, 540
+    self.x54, self.y54 = 900, 540
     self.labelresd = Label(self.can, text='Number of R/24h : ', font=12, 
         width=15, fg='white', bg='DodgerBlue2')
-    self.labelresd = self.can.create_window(self.x51, self.y51, window=self.labelresd)
+    self.labelresd_window = self.can.create_window(self.x54, self.y54, window=self.labelresd)
 
-    self.x52, self.y52 = 1100, 540
+    self.x55, self.y55 = 1100, 540
     self.Rnbre = Entry(self.can, bd=4, highlightbackground='grey')
-    self.Rnbre = self.can.create_window(self.x52, self.y52, window=self.Rnbre)
+    self.Rnbre_window = self.can.create_window(self.x55, self.y55, window=self.Rnbre)
 
-    self.x62, self.y62 = 1100, 590
+    self.x56, self.y56 = 1100, 590
     self.buttsaveres = Button(self.can, text="Save as R", width=10, fg='yellow',
         bg='RoyalBlue3', bd=3, highlightbackground='cyan',
         activebackground='pale turquoise', command=copyResMess)
-    self.buttsaveres = self.can.create_window(self.x62, self.y62, window=self.buttsaveres)
+    self.buttsaveres_window = self.can.create_window(self.x56, self.y56, window=self.buttsaveres)
 
-    self.x55, self.y55 = 110, 620
+    self.x57, self.y57 = 110, 620
     self.delttt = StringVar()
     self.deleteTreat = Entry(self.can, bd=4, textvariable=self.delttt,
         highlightbackground='red')
     self.delttt.set("Enter ttt to stop")
-    self.deleteTreat = self.can.create_window(self.x55, self.y55, window=self.deleteTreat)
+    self.deleteTreat_window = self.can.create_window(self.x57, self.y57, window=self.deleteTreat)
 
-    self.x56, self.y56 = 280, 620
+    self.x58, self.y58 = 280, 620
     self.buttStopttt = Button(self.can, text="Stop ttt", width=10, fg='yellow',
         bg='red', bd=3, highlightbackground='cyan',
         activebackground='coral', command=deleteTreatment)
-    self.buttStopttt = self.can.create_window(self.x56, self.y56, window=self.buttStopttt)
+    self.buttStopttt_window = self.can.create_window(self.x58, self.y58, window=self.buttStopttt)
 
-    self.x57, self.y57 = 110, 660
+    self.x59, self.y59 = 110, 660
     self.deleteRes = Entry()
     self.delete_res = StringVar()
     self.delete_res.set("Enter R to stop")
     self.deleteRes = Entry(self.can, bd=4, textvariable=self.delete_res,
         highlightbackground='red')
-    self.deleteRes = self.can.create_window(self.x57, self.y57, window=self.deleteRes)
+    self.deleteRes_window = self.can.create_window(self.x59, self.y59, window=self.deleteRes)
 
-    self.x58, self.y58 = 280, 660
+    self.x60, self.y60 = 280, 660
     self.buttStopttt = Button(self.can, text="Stop R", width=10, fg='yellow',
         bg='red', bd=3, highlightbackground='cyan',
         activebackground='coral', command=deleteReserve, padx=10)
-    self.buttStopttt = self.can.create_window(self.x58, self.y58, window=self.buttStopttt)
+    self.buttStopttt_window = self.can.create_window(self.x60, self.y60, window=self.buttStopttt)
 
-    self.x53, self.y53 = 500, 590
+    self.x61, self.y61 = 500, 590
     self.LabSign = Label(self.can, text='Signature :', font=12, 
         width=15, fg='red', bg='pale green')
-    self.LabSign = self.can.create_window(self.x53, self.y53, window=self.LabSign)
+    self.LabSign_window = self.can.create_window(self.x61, self.y61, window=self.LabSign)
 
-    self.x54, self.y54 = 700, 590
+    self.x62, self.y62 = 700, 590
     self.textSign = Entry(self.can, highlightbackground='grey', bd=4)
-    self.textSign = self.can.create_window(self.x54, self.y54, window=self.textSign)
+    self.textSign_window = self.can.create_window(self.x62, self.y62, window=self.textSign)
 
     def awayOut():
         try:
@@ -907,10 +906,10 @@ def callTreatment3(self):
         except (OSError, ValueError) as p_out:
             print("Error from labo to way out", p_out)
 
-    self.x64, self.y64 = 1100, 660
+    self.x63, self.y63 = 1100, 660
     self.buttQuit = Button(self.can, text="Return to main menu", width=20, fg='white',
         bg='RoyalBlue3', bd=3, highlightbackground='cyan',
         activebackground='pale turquoise', command=awayOut)
-    self.buttQuit = self.can.create_window(self.x64, self.y64, window=self.buttQuit)
+    self.buttQuit_window = self.can.create_window(self.x63, self.y63, window=self.buttQuit)
 
     self.can.configure(scrollregion=self.can.bbox(ALL))

@@ -37,6 +37,70 @@ def callTreatment3(self):
     entrytext.set(line3)
     self.entryName = self.can.create_window(self.x3, self.y3, window=self.entryName)
 
+    self.x4, self.y4 = 120, 180
+    self.LabDate = Label(self.can, text="Date : ", width=15, font=12,
+        fg='white', bg='DodgerBlue2', anchor='e')
+    self.LabDate = self.can.create_window(self.x4, self.y4, window=self.LabDate)
+
+    self.x5, self.y5 = 120, 210
+    self.LabHour = Label(self.can, text="Hour : ", width=15, font=12,
+        fg='white', bg='DodgerBlue2', anchor='e')
+    self.LabHour = self.can.create_window(self.x5, self.y5, window=self.LabHour)
+
+    self.x6, self.y6 = 120, 240
+    self.LabName = Label(self.can, text="Patient name : ", width=15, font=12,
+        fg='white', bg='DodgerBlue2', anchor='e')
+    self.LabName = self.can.create_window(self.x6, self.y6, window=self.LabName)
+
+    self.x7, self.y7 = 120, 270
+    self.LabTreat = Label(self.can, text='Name of drug : ', width=15, 
+        font=12, fg='white', bg='DodgerBlue2', anchor='e')
+    self.LabTreat = self.can.create_window(self.x7, self.y7, window=self.LabTreat)
+
+    self.x8, self.y8 = 120, 300
+    self.LabDose = Label(self.can, text="Dose : ", width=15, font=12,
+        fg='white', bg='DodgerBlue2', anchor='e')
+    self.LabDose = self.can.create_window(self.x8, self.y8, window=self.LabDose)
+
+    self.x9, self.y9 = 300, 180
+    time_string = IntVar()
+    self.textDate = Entry(self.can, textvariable=time_string,
+        highlightbackground='grey', bd=4)
+    time_string.set(time.strftime("%d/%m/%Y"))
+    self.textDate = self.can.create_window(self.x9, self.y9, window=self.textDate)
+
+    self.x10, self.y10 = 300, 210
+    time_Htring = IntVar()
+    self.textHour = Entry(self.can, textvariable=time_Htring,
+        highlightbackground='grey', bd=4)
+    time_Htring.set(time.strftime("%H:%M:%S"))
+    self.textHour = self.can.create_window(self.x10, self.y10, window=self.textHour)
+
+    # To read name of patient for entry widget
+    with open('./newpatient/entryfile3.txt', 'r') as filename:
+        line1=filename.readline()
+
+    self.x11, self.y11 = 300, 240
+    name_text = StringVar()
+    self.textName = Entry(self.can, textvariable=name_text,
+        highlightbackground='grey', bd=4)
+    name_text.set(line1)
+    self.textName = self.can.create_window(self.x11, self.y11, window=self.textName)
+
+    self.x12, self.y12 = 300, 270
+    ttt_name = StringVar()
+    self.textTreat = Entry(self.can, textvariable=ttt_name,
+        highlightbackground='grey', bd=4)
+    ttt_name.set("Drug")
+    self.textTreat = self.can.create_window(self.x12, self.y12, window=self.textTreat)
+
+    self.x13, self.y13 = 300, 300
+    tttDosage = StringVar()
+    self.textDosage = Entry(self.can, textvariable=tttDosage,
+        highlightbackground='grey', bd=4)
+    tttDosage.set("mcg/ml/mg/UI/gttes")
+    self.textDosage = self.can.create_window(self.x13, self.y13, window=self.textDosage)
+
     def callbackDay(event):
         print(self.comboDay.get())
 
@@ -61,9 +125,9 @@ def callTreatment3(self):
         try:
             if os.path.getsize('./ttt/doc_ttt3/convdose.json'):
                 subprocess.call('./ttt/doc_ttt3/tabs.py')
-        except FileNotFoundError as no_tabs:
+        except FileNotFoundError as no_tabtreat:
             print("+ Sorry, it's not possible to show tab of ttt, \
-                convdose.json file missing !")
+                convdose.json file missing !", no_tabtreat)
             tttTabs()
 
     def tttTabs():
@@ -76,9 +140,9 @@ def callTreatment3(self):
         try:
             if os.path.getsize('./ttt/doc_ttt3/convres.json'):
                 subprocess.call('./ttt/doc_ttt3/tabres.py')
-        except FileNotFoundError as no_tabs:
+        except FileNotFoundError as no_tabres:
             print("+ Sorry, it's not possible to show tab of reserve, \
-                convres.json file missing !")
+                convres.json file missing !", no_tabres)
             reserveTabs()
 
     def reserveTabs():
@@ -168,8 +232,8 @@ def callTreatment3(self):
                             print("---Ok VALUE 'Treatment' earased---")
                             with open('./ttt/doc_ttt3/convdose.json', 'w') as datafile2:
                                 json.dump(dataDose, datafile2, indent=4)
-            except FileNotFoundError as outcom:
-                print('+ Sorry, file convdose.json not exist !', outcom)
+            except FileNotFoundError as fnfe:
+                print('+ Sorry, file convdose.json not exist !', fnfe)
         else:           
             messagebox.showinfo('Return', 'Treatment not earased')
 
@@ -188,69 +252,69 @@ def callTreatment3(self):
                     
                     dataRes = datastore
                     for key, value in dataRes.items():
-                        if deleteRes.get() == value[0]['Treatment']:
+                        if self.deleteRes.get() == value[0]['Treatment']:
                             del value[0]
                             print("+ Reserve earased !")
 
-                        elif deleteRes.get() == value[1]['Treatment']:
+                        elif self.deleteRes.get() == value[1]['Treatment']:
                             del value[1]
                             print("+ Reserve earased !")
 
-                        elif deleteRes.get() == value[2]['Treatment']:
+                        elif self.deleteRes.get() == value[2]['Treatment']:
                             del value[2]
                             print("+ Reserve earased !")
                             
-                        elif deleteRes.get() == value[3]['Treatment']:
+                        elif self.deleteRes.get() == value[3]['Treatment']:
                             del value[3]
                             print("+ Reserve earased !")
 
-                        elif deleteRes.get() == value[4]['Treatment']:
+                        elif self.deleteRes.get() == value[4]['Treatment']:
                             del value[4]
                             print("+ Reserve earased !")
 
-                        elif deleteRes.get() == value[5]['Treatment']:
+                        elif self.deleteRes.get() == value[5]['Treatment']:
                             del value[5]
                             print("+ Reserve earased !")
 
-                        elif deleteRes.get() == value[6]['Treatment']:
+                        elif self.deleteRes.get() == value[6]['Treatment']:
                             del value[6]
                             print("+ Reserve earased !")
 
-                        elif deleteRes.get() == value[7]['Treatment']:
+                        elif self.deleteRes.get() == value[7]['Treatment']:
                             del value[7]
                             print("+ Reserve earased !")
 
-                        elif deleteRes.get() == value[8]['Treatment']:
+                        elif self.deleteRes.get() == value[8]['Treatment']:
                             del value[8]
                             print("+ Reserve earased !")
 
-                        elif deleteRes.get() == value[9]['Treatment']:
+                        elif self.deleteRes.get() == value[9]['Treatment']:
                             del value[9]
                             print("+ Reserve earased !")
 
-                        elif deleteRes.get() == value[10]['Treatment']:
+                        elif self.deleteRes.get() == value[10]['Treatment']:
                             del value[10]
                             print("+ Reserve earased !")
 
-                        elif deleteRes.get() == value[11]['Treatment']:
+                        elif self.deleteRes.get() == value[11]['Treatment']:
                             del value[11]
                             print("+ Reserve earased !")
 
-                        elif deleteRes.get() == value[12]['Treatment']:
+                        elif self.deleteRes.get() == value[12]['Treatment']:
                             del value[12]
                             print("+ Reserve earased !")
 
-                        elif deleteRes.get() == value[13]['Treatment']:
+                        elif self.deleteRes.get() == value[13]['Treatment']:
                             del value[13]
                             print("+ Reserve earased !")
 
-                        elif deleteRes.get() == value[14]['Treatment']:
+                        elif self.deleteRes.get() == value[14]['Treatment']:
                             del value[14]
                             print("+ Reserve earased !")
                         else:
                             print("Reserve is not present into medication")
 
-                        if deleteRes.get() == '':
+                        if self.deleteRes.get() == '':
                             print("None Reserve checked")
                         else:
                             print("---Ok VALUE 'Reserve' earased---")
@@ -276,39 +340,39 @@ def callTreatment3(self):
             #to reuse them after.
         with open('./ttt/doc_ttt3/intro_ttt.txt', '+a') as file:
             file.write(str("Date : "))
-            file.write(textDate.get() + '\n')
+            file.write(self.textDate.get() + '\n')
             file.write(str("Heure : "))
-            file.write(textHour.get() + '\n')
+            file.write(self.textHour.get() + '\n')
             file.write(str("Name : "))
-            file.write(textName.get() + '\n')
+            file.write(self.textName.get() + '\n')
             file.write(str("Date of introduction : "))
             file.write(self.comboDay.get())
-            file.write(comboMonth.get())
-            file.write(comboYear.get())
+            file.write(self.comboMonth.get())
+            file.write(self.comboYear.get())
             file.write(str('\n'))
             file.write(str("Nom du ttt : "))
-            file.write(textTreat.get() + '\n')
+            file.write(self.textTreat.get() + '\n')
             file.write(str("Dosage du ttt : "))
-            file.write(textDosage.get() + '\n')
-            if CheckVarMatin.get()==1:
+            file.write(self.textDosage.get() + '\n')
+            if self.CheckVarMatin.get()==1:
                 file.write(str("Matin : "))
-            file.write(Entmatin.get() + '\n')
-            if CheckVarMidi.get()==1:
+            file.write(self.Entmatin.get() + '\n')
+            if self.CheckVarMidi.get()==1:
                 file.write(str("Midi : "))
-            file.write(Entmidi.get() + '\n')
-            if CheckVarSoir.get()==1:
+            file.write(self.Entmidi.get() + '\n')
+            if self.CheckVarSoir.get()==1:
                 file.write(str("Soir : "))
-            file.write(Entsoir.get() + '\n')
-            if CheckVarNuit.get()==1:
+            file.write(self.Entsoir.get() + '\n')
+            if self.CheckVarNuit.get()==1:
                 file.write(str("Nuit : "))
-            file.write(Entnuit.get() + '\n')
+            file.write(self.Entnuit.get() + '\n')
             file.write(str("Date of end : "))
-            file.write(comboFinishDay.get())
-            file.write('/' + comboFinishMonth.get() + '/')
-            file.write(comboFinishYear.get())
+            file.write(self.comboFinishDay.get())
+            file.write('/' + self.comboFinishMonth.get() + '/')
+            file.write(self.comboFinishYear.get())
             file.write(str('\n'))
             file.write(str("Signature : "))
-            file.write(textSign.get())
+            file.write(self.textSign.get())
             file.write(str('\n\n'))
         try:
             if os.path.getsize('./ttt/doc_ttt3/convdose.json'):
@@ -317,33 +381,32 @@ def callTreatment3(self):
                     datastore = json.load(datafile)
                     print(datastore)
                 dataDose = datastore
-                dataDose['data'].append({'Date' : textDate.get(), \
-                    'Date of introduction' : self.comboDay.get() + comboMonth.get() + \
-                    comboYear.get(), 'Date of end' : comboFinishDay.get() + \
-                    '/' + comboFinishMonth.get() + '/' + comboFinishYear.get(), \
-                    'Treatment' : textTreat.get(), 'Dosage' : textDosage.get(), \
-                    'Matin' : Entmatin.get(), 'Midi' : Entmidi.get(), \
-                    'Soir' : Entsoir.get(), 'Nuit' : Entnuit.get()})
-                if textTreat.get() == "":
+                dataDose['data'].append({'Date' : self.textDate.get(), \
+                    'Date of introduction' : self.comboDay.get() + self.comboMonth.get() + \
+                    self.comboYear.get(), 'Date of end' : self.comboFinishDay.get() + \
+                    '/' + self.comboFinishMonth.get() + '/' + self.comboFinishYear.get(), \
+                    'Treatment' : self.textTreat.get(), 'Dosage' : self.textDosage.get(), \
+                    'Matin' : self.Entmatin.get(), 'Midi' : self.Entmidi.get(), \
+                    'Soir' : self.Entsoir.get(), 'Nuit' : self.Entnuit.get()})
+                if self.textTreat.get() == "":
                     print("---No value 'Treatment' introduced---")
                 else:
                     print("---Ok value 'Treatment' introduced---")
                     with open('./ttt/doc_ttt3/convdose.json', 'w') as datafile2:
                         json.dump(dataDose, datafile2, indent=4)
-        except FileNotFoundError as outcom:
-            print('+ Sorry, file convdose.json not exist !')
-            print(str(outcom))
+        except FileNotFoundError as fnf:
+            print('+ Sorry, file convdose.json not exist !', fnf)
             print("+ File convdose.json created !")
             dataDose = {}
             dataDose['data'] = []
-            dataDose['data'].append({'Date' : textDate.get(), \
-                'Date of introduction' : self.comboDay.get() + comboMonth.get() + \
-                comboYear.get(), 'Date of end' : comboFinishDay.get() + \
-                '/' + comboFinishMonth.get() + '/' + comboFinishYear.get(), \
-                'Treatment' : textTreat.get(), 'Dosage' : textDosage.get(), \
-                'Matin' : Entmatin.get(), 'Midi' : Entmidi.get(), \
-                'Soir' : Entsoir.get(), 'Nuit' : Entnuit.get()})
-            if textTreat.get() == "":
+            dataDose['data'].append({'Date' : self.textDate.get(), \
+                'Date of introduction' : self.comboDay.get() + self.comboMonth.get() + \
+                self.comboYear.get(), 'Date of end' : self.comboFinishDay.get() + \
+                '/' + self.comboFinishMonth.get() + '/' + self.comboFinishYear.get(), \
+                'Treatment' : self.textTreat.get(), 'Dosage' : self.textDosage.get(), \
+                'Matin' : self.Entmatin.get(), 'Midi' : self.Entmidi.get(), \
+                'Soir' : self.Entsoir.get(), 'Nuit' : self.Entnuit.get()})
+            if self.textTreat.get() == "":
                 print("---No value 'Treatment' introduced---")
             else:
                 print("---Ok value 'Treatment' introduced---")
@@ -365,39 +428,39 @@ def callTreatment3(self):
         #to reuse them after.
         with open('./ttt/doc_ttt3/intro_res.txt', '+a') as file:
             file.write(str("Date : "))
-            file.write(textDate.get() + '\n')
+            file.write(self.textDate.get() + '\n')
             file.write(str("Heure : "))
-            file.write(textHour.get() + '\n')
+            file.write(self.textHour.get() + '\n')
             file.write(str("Name : "))
-            file.write(textName.get() + '\n')
+            file.write(self.textName.get() + '\n')
             file.write(str("Date of introduction : "))
             file.write(self.comboDay.get())
-            file.write(comboMonth.get())
-            file.write(comboYear.get())
+            file.write(self.comboMonth.get())
+            file.write(self.comboYear.get())
             file.write(str('\n'))
             file.write(str("Nom du ttt : "))
-            file.write(textTreat.get() + '\n')
+            file.write(self.textTreat.get() + '\n')
             file.write(str("Dosage du ttt : "))
-            file.write(textDosage.get() + '\n')
-            if CheckVar1.get()==1:
+            file.write(self.textDosage.get() + '\n')
+            if self.CheckVar1.get()==1:
                 file.write(str("Réserve : "))
                 file.write(str("Oui\n"))
-            if CheckVar2.get()==1:
+            if self.CheckVar2.get()==1:
                 file.write(str("1ère intention : "))
                 file.write(str("Oui\n"))
-            if CheckVar3.get()==1:
+            if self.CheckVar3.get()==1:
                 file.write(str("2ème intention : "))
                 file.write(str("Oui\n"))
-            if Rnbre.get()=='':
+            if self.Rnbre.get()=='':
                 print("Pas de réserves!")
-                file.write(Rnbre.get() + '\n')
+                file.write(self.Rnbre.get() + '\n')
             file.write(str("Date of end : "))
-            file.write(comboFinishDay.get())
-            file.write('/' + comboFinishMonth.get() + '/')
-            file.write(comboFinishYear.get())
+            file.write(self.comboFinishDay.get())
+            file.write('/' + self.comboFinishMonth.get() + '/')
+            file.write(self.comboFinishYear.get())
             file.write(str('\n'))
             file.write(str("Signature : "))
-            file.write(textSign.get())
+            file.write(self.textSign.get())
             file.write(str('\n\n'))
         try:
             if os.path.getsize('./ttt/doc_ttt3/convres.json'):
@@ -406,41 +469,40 @@ def callTreatment3(self):
                     datastore = json.load(datafile)
                     print(datastore)
                 dataDose = datastore
-                dataDose['data'].append({'Date' : textDate.get(), \
-                    'Date of introduction' : self.comboDay.get() + comboMonth.get() + \
-                    comboYear.get(), 'Date of end' : comboFinishDay.get() + \
-                    '/' + comboFinishMonth.get() + '/' + comboFinishYear.get(), \
-                    'Treatment' : textTreat.get(), 'Dosage' : textDosage.get(), \
-                    'Reserve' : CheckVar1.get(), 'First-line' : CheckVar2.get(), \
-                    'Second-line' : CheckVar3.get(), 'Number/24h' : Rnbre.get()})
-                if textTreat.get() == "":
+                dataDose['data'].append({'Date' : self.textDate.get(), \
+                    'Date of introduction' : self.comboDay.get() + self.comboMonth.get() + \
+                    self.comboYear.get(), 'Date of end' : self.comboFinishDay.get() + \
+                    '/' + self.comboFinishMonth.get() + '/' + self.comboFinishYear.get(), \
+                    'Treatment' : self.textTreat.get(), 'Dosage' : self.textDosage.get(), \
+                    'Reserve' : self.CheckVar1.get(), 'First-line' : self.CheckVar2.get(), \
+                    'Second-line' : self.CheckVar3.get(), 'Number/24h' : self.Rnbre.get()})
+                if self.textTreat.get() == "":
                     print("---No value 'Treatment' introduced---")
                 else:
                     print("---Ok value 'Treatment' introduced---")
                     with open('./ttt/doc_ttt3/convres.json', 'w') as datafile2:
                         json.dump(dataDose, datafile2, indent=4)
         except FileNotFoundError as outcom:
-            print('+ Sorry, file convres.json not exist !')
-            print(str(outcom))
+            print('+ Sorry, file convres.json not exist !', outcom)
             print("+ File convres.json created !")
             dataDose = {}
             dataDose['data'] = []
-            dataDose['data'].append({'Date' : textDate.get(), \
-                'Date of introduction' : self.comboDay.get() + comboMonth.get() + \
-                comboYear.get(), 'Date of end' : comboFinishDay.get() + \
-                '/' + comboFinishMonth.get() + '/' + comboFinishYear.get(), \
-                'Treatment' : textTreat.get(), 'Dosage' : textDosage.get(), \
-                'Reserve' : CheckVar1.get(), 'First-line' : CheckVar2.get(), \
-                'Second-line' : CheckVar3.get(), 'Number/24h' : Rnbre.get()})
-            if textTreat.get() == "":
+            dataDose['data'].append({'Date' : self.textDate.get(), \
+                'Date of introduction' : self.comboDay.get() + self.comboMonth.get() + \
+                self.comboYear.get(), 'Date of end' : self.comboFinishDay.get() + \
+                '/' + self.comboFinishMonth.get() + '/' + self.comboFinishYear.get(), \
+                'Treatment' : self.textTreat.get(), 'Dosage' : self.textDosage.get(), \
+                'Reserve' : self.CheckVar1.get(), 'First-line' : self.CheckVar2.get(), \
+                'Second-line' : self.CheckVar3.get(), 'Number/24h' : self.Rnbre.get()})
+            if self.textTreat.get() == "":
                 print("+ No value 'Treatment' introduced---")
-            elif CheckVar2.get() == 0:
+            elif self.CheckVar2.get() == 0:
                 print("+ There is not First-line reserve marked---")
-            elif CheckVar2.get() != 0:
+            elif self.CheckVar2.get() != 0:
                 print("+ There is First-line reserve marked---")
-            elif CheckVar3.get() == 0:
+            elif self.CheckVar3.get() == 0:
                 print("+ There is not Second-line reserve marked---")
-            elif CheckVar3.get() != 0:
+            elif self.CheckVar3.get() != 0:
                 print("+ There is Second-line reserve marked---")
             else:
                 print("Problem with reserve registration")
@@ -460,70 +522,6 @@ def callTreatment3(self):
     def noStory():
         messagebox.showinfo("Info", "None historic of ttt is available, \
             no ttt has been introduced !") 
-
-    self.x4, self.y4 = 120, 180
-    self.LabDate = Label(self.can, text="Date : ", width=15, font=12,
-        fg='white', bg='DodgerBlue2', anchor='e')
-    self.LabDate = self.can.create_window(self.x4, self.y4, window=self.LabDate)
-
-    self.x5, self.y5 = 120, 210
-    self.LabHour = Label(self.can, text="Hour : ", width=15, font=12,
-        fg='white', bg='DodgerBlue2', anchor='e')
-    self.LabHour = self.can.create_window(self.x5, self.y5, window=self.LabHour)
-
-    self.x6, self.y6 = 120, 240
-    self.LabName = Label(self.can, text="Patient name : ", width=15, font=12,
-        fg='white', bg='DodgerBlue2', anchor='e')
-    self.LabName = self.can.create_window(self.x6, self.y6, window=self.LabName)
-
-    self.x7, self.y7 = 120, 270
-    self.LabTreat = Label(self.can, text='Name of drug : ', width=15, 
-        font=12, fg='white', bg='DodgerBlue2', anchor='e')
-    self.LabTreat = self.can.create_window(self.x7, self.y7, window=self.LabTreat)
-
-    self.x8, self.y8 = 120, 300
-    self.LabDose = Label(self.can, text="Dose : ", width=15, font=12,
-        fg='white', bg='DodgerBlue2', anchor='e')
-    self.LabDose = self.can.create_window(self.x8, self.y8, window=self.LabDose)
-
-    self.x9, self.y9 = 300, 180
-    time_string = IntVar()
-    self.textDate = Entry(self.can, textvariable=time_string,
-        highlightbackground='grey', bd=4)
-    time_string.set(time.strftime("%d/%m/%Y"))
-    self.textDate = self.can.create_window(self.x9, self.y9, window=self.textDate)
-
-    self.x10, self.y10 = 300, 210
-    time_Htring = IntVar()
-    self.textHour = Entry(self.can, textvariable=time_Htring,
-        highlightbackground='grey', bd=4)
-    time_Htring.set(time.strftime("%H:%M:%S"))
-    self.textHour = self.can.create_window(self.x10, self.y10, window=self.textHour)
-
-    # To read name of patient for entry widget
-    with open('./newpatient/entryfile3.txt', 'r') as filename:
-        line1=filename.readline()
-
-    self.x11, self.y11 = 300, 240
-    name_text = StringVar()
-    self.textName = Entry(self.can, textvariable=name_text,
-        highlightbackground='grey', bd=4)
-    name_text.set(line1)
-    self.textName = self.can.create_window(self.x11, self.y11, window=self.textName)
-
-    self.x12, self.y12 = 300, 270
-    ttt_name = StringVar()
-    self.textTreat = Entry(self.can, textvariable=ttt_name,
-        highlightbackground='grey', bd=4)
-    ttt_name.set("Drug")
-    self.textTreat = self.can.create_window(self.x12, self.y12, window=self.textTreat)
-
-    self.x13, self.y13 = 300, 300
-    tttDosage = StringVar()
-    self.textDosage = Entry(self.can, textvariable=tttDosage,
-        highlightbackground='grey', bd=4)
-    tttDosage.set("mcg/ml/mg/UI/gttes")
-    self.textDosage = self.can.create_window(self.x13, self.y13, window=self.textDosage)
 
     self.x14, self.y14 = 500, 180
     self.buttShowres = Button(self.can, text="Show R", width=10, fg='white',
@@ -545,9 +543,9 @@ def callTreatment3(self):
 
 
     self.x20, self.y20 = 800, 140
-    self.textDateS = Label(self.can, text="Processing start date :", 
+    self.textProcess = Label(self.can, text="Processing start date :", 
         font=('Arial 14 bold'), fg='aquamarine', bg='DodgerBlue2', width=40, anchor='w')
-    self.textDateS = self.can.create_window(self.x20, self.y20, window=self.textDateS)
+    self.textProcess = self.can.create_window(self.x20, self.y20, window=self.textProcess)
 
     def changeDay():
         self.comboDay['values']=['01', '02', '03', '04',

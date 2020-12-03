@@ -12,7 +12,7 @@ import json
 import subprocess
 
 
-def callTreatment3(self):
+def callTreatment7(self):
     self.can.delete(ALL)
     self.can.configure(bg='DodgerBlue2')
 
@@ -27,7 +27,7 @@ def callTreatment3(self):
     self.labelallergy_window = self.can.create_window(self.x2, self.y2, window=self.labelallergy)
 
     # To read allergy for entry widget
-    with open('./newpatient/entryfile3.txt', 'r') as filename2:
+    with open('./newpatient/entryfile7.txt', 'r') as filename2:
         line1 = filename2.readline()
         line2 = filename2.readline()
         line3 = filename2.readline()
@@ -78,7 +78,7 @@ def callTreatment3(self):
     self.textHour_window = self.can.create_window(self.x10, self.y10, window=self.textHour)
 
     # To read name of patient for entry widget
-    with open('./newpatient/entryfile3.txt', 'r') as filename:
+    with open('./newpatient/entryfile7.txt', 'r') as filename:
         line1=filename.readline()
 
     self.x11, self.y11 = 300, 240
@@ -124,8 +124,8 @@ def callTreatment3(self):
             #To display tabs of ttt, convdose.json 
             #file must be existing.
         try:
-            if os.path.getsize('./ttt/doc_ttt3/convdose.json'):
-                subprocess.call('./ttt/doc_ttt3/tabs.py')
+            if os.path.getsize('./ttt/doc_ttt7/convdose.json'):
+                subprocess.call('./ttt/doc_ttt7/tabs.py')
         except FileNotFoundError as no_tabtreat:
             print("+ Sorry, it's not possible to show tab of ttt, \
                 convdose.json file missing !", no_tabtreat)
@@ -139,8 +139,8 @@ def callTreatment3(self):
             #To display tabs of reserve, convres.json 
             #file must be existing.
         try:
-            if os.path.getsize('./ttt/doc_ttt3/convres.json'):
-                subprocess.call('./ttt/doc_ttt3/tabres.py')
+            if os.path.getsize('./ttt/doc_ttt7/convres.json'):
+                subprocess.call('./ttt/doc_ttt7/tabres.py')
         except FileNotFoundError as no_tabres:
             print("+ Sorry, it's not possible to show tab of reserve, \
                 convres.json file missing !", no_tabres)
@@ -158,9 +158,9 @@ def callTreatment3(self):
             print("+ Ok, ttt has been ejected !")
             messagebox.showinfo('info BOX', 'Treatment is away !')
             try:
-                if os.path.getsize('./ttt/doc_ttt3/convdose.json'):
+                if os.path.getsize('./ttt/doc_ttt7/convdose.json'):
                     print("+ File 'convdose' exist !")
-                    with open('./ttt/doc_ttt3/convdose.json', 'r') as datafile:
+                    with open('./ttt/doc_ttt7/convdose.json', 'r') as datafile:
                         datastore = json.load(datafile)
                     
                     dataDose = datastore
@@ -231,7 +231,7 @@ def callTreatment3(self):
                             print("None treatment checked")
                         else:
                             print("---Ok VALUE 'Treatment' earased---")
-                            with open('./ttt/doc_ttt3/convdose.json', 'w') as datafile2:
+                            with open('./ttt/doc_ttt7/convdose.json', 'w') as datafile2:
                                 json.dump(dataDose, datafile2, indent=4)
             except FileNotFoundError as fnfe:
                 print('+ Sorry, file convdose.json not exist !', fnfe)
@@ -246,9 +246,9 @@ def callTreatment3(self):
             print("Ok, Reserve has been ejected !")
             messagebox.showinfo('info BOX', 'Reserve is away !')
             try:
-                if os.path.getsize('./ttt/doc_ttt3/convres.json'):
+                if os.path.getsize('./ttt/doc_ttt7/convres.json'):
                     print("+ File 'convres' exist !")
-                    with open('./ttt/doc_ttt3/convres.json', 'r') as datafile:
+                    with open('./ttt/doc_ttt7/convres.json', 'r') as datafile:
                         datastore = json.load(datafile)
                     
                     dataRes = datastore
@@ -319,7 +319,7 @@ def callTreatment3(self):
                             print("None Reserve checked")
                         else:
                             print("---Ok VALUE 'Reserve' earased---")
-                            with open('./ttt/doc_ttt3/convres.json', 'w') as datafile2:
+                            with open('./ttt/doc_ttt7/convres.json', 'w') as datafile2:
                                 json.dump(dataRes, datafile2, indent=4)
             except FileNotFoundError as outinfo:
                 print('+ Sorry, file convres.json not exist !', outinfo)
@@ -339,7 +339,7 @@ def callTreatment3(self):
     def copyToFile():
             #To write all data to intro_ttt.json
             #to reuse them after.
-        with open('./ttt/doc_ttt3/intro_ttt.txt', '+a') as file:
+        with open('./ttt/doc_ttt7/intro_ttt.txt', '+a') as file:
             file.write(str("Date : "))
             file.write(self.textDate.get() + '\n')
             file.write(str("Heure : "))
@@ -376,9 +376,9 @@ def callTreatment3(self):
             file.write(self.textSign.get())
             file.write(str('\n\n'))
         try:
-            if os.path.getsize('./ttt/doc_ttt3/convdose.json'):
+            if os.path.getsize('./ttt/doc_ttt7/convdose.json'):
                 print("+ File 'convdose' exist !")
-                with open('./ttt/doc_ttt3/convdose.json', 'r') as datafile:
+                with open('./ttt/doc_ttt7/convdose.json', 'r') as datafile:
                     datastore = json.load(datafile)
                     print(datastore)
                 dataDose = datastore
@@ -393,7 +393,7 @@ def callTreatment3(self):
                     print("---No value 'Treatment' introduced---")
                 else:
                     print("---Ok value 'Treatment' introduced---")
-                    with open('./ttt/doc_ttt3/convdose.json', 'w') as datafile2:
+                    with open('./ttt/doc_ttt7/convdose.json', 'w') as datafile2:
                         json.dump(dataDose, datafile2, indent=4)
         except FileNotFoundError as fnf:
             print('+ Sorry, file convdose.json not exist !', fnf)
@@ -411,7 +411,7 @@ def callTreatment3(self):
                 print("---No value 'Treatment' introduced---")
             else:
                 print("---Ok value 'Treatment' introduced---")
-                with open('./ttt/doc_ttt3/convdose.json', 'w') as datafile:
+                with open('./ttt/doc_ttt7/convdose.json', 'w') as datafile:
                     json.dump(dataDose, datafile, indent=4)
 
     def copyResMess():
@@ -427,7 +427,7 @@ def callTreatment3(self):
     def copyToReserve():
         #To write all data to intro_res.txt
         #to reuse them after.
-        with open('./ttt/doc_ttt3/intro_res.txt', '+a') as file:
+        with open('./ttt/doc_ttt7/intro_res.txt', '+a') as file:
             file.write(str("Date : "))
             file.write(self.textDate.get() + '\n')
             file.write(str("Heure : "))
@@ -464,9 +464,9 @@ def callTreatment3(self):
             file.write(self.textSign.get())
             file.write(str('\n\n'))
         try:
-            if os.path.getsize('./ttt/doc_ttt3/convres.json'):
+            if os.path.getsize('./ttt/doc_ttt7/convres.json'):
                 print("+ File 'convres' exist !")
-                with open('./ttt/doc_ttt3/convres.json', 'r') as datafile:
+                with open('./ttt/doc_ttt7/convres.json', 'r') as datafile:
                     datastore = json.load(datafile)
                     print(datastore)
                 dataDose = datastore
@@ -481,7 +481,7 @@ def callTreatment3(self):
                     print("---No value 'Treatment' introduced---")
                 else:
                     print("---Ok value 'Treatment' introduced---")
-                    with open('./ttt/doc_ttt3/convres.json', 'w') as datafile2:
+                    with open('./ttt/doc_ttt7/convres.json', 'w') as datafile2:
                         json.dump(dataDose, datafile2, indent=4)
         except FileNotFoundError as outcom:
             print('+ Sorry, file convres.json not exist !', outcom)
@@ -508,13 +508,13 @@ def callTreatment3(self):
             else:
                 print("Problem with reserve registration")
             print("+ Ok, value 'Treatment' introduced---")
-            with open('./ttt/doc_ttt3/convres.json', 'w') as datafile:
+            with open('./ttt/doc_ttt7/convres.json', 'w') as datafile:
                 json.dump(dataDose, datafile, indent=4)
 
     def readFileStory():
         try:
-            if os.path.getsize("./ttt/doc_ttt3/intro_ttt.txt"):
-                subprocess.call("./ttt/doc_ttt3/readstory.py")
+            if os.path.getsize("./ttt/doc_ttt7/intro_ttt.txt"):
+                subprocess.call("./ttt/doc_ttt7/readstory.py")
         except FileNotFoundError as no_storyfile:
             print("+ Sorry, it's not possible to show tab of ttt, \
                 no ttt has been introduced !", no_storyfile)

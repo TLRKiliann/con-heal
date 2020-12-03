@@ -38,7 +38,7 @@ def callTreatment3(self):
     self.entryName = self.can.create_window(self.x3, self.y3, window=self.entryName)
 
     def callbackDay(event):
-        print(str(comboDay))
+        print(self.comboDay.get())
 
     def callbackMonth(event):
         print(self.comboMonth.get())
@@ -47,13 +47,13 @@ def callTreatment3(self):
         print(self.comboYear.get())
 
     def callbackFinishDay(event):
-        print(comboFinishDay.get())
+        print(self.comboFinishDay.get())
 
     def callbackFinishMonth(event):
-        print(comboFinishMonth.get())
+        print(self.comboFinishMonth.get())
 
     def callbackFinishYear(event):
-        print(comboFinishYear.get())
+        print(self.comboFinishYear.get())
 
     def showTreat():
             #To display tabs of ttt, convdose.json 
@@ -282,7 +282,7 @@ def callTreatment3(self):
             file.write(str("Name : "))
             file.write(textName.get() + '\n')
             file.write(str("Date of introduction : "))
-            file.write(comboDay.get())
+            file.write(self.comboDay.get())
             file.write(comboMonth.get())
             file.write(comboYear.get())
             file.write(str('\n'))
@@ -318,7 +318,7 @@ def callTreatment3(self):
                     print(datastore)
                 dataDose = datastore
                 dataDose['data'].append({'Date' : textDate.get(), \
-                    'Date of introduction' : comboDay.get() + comboMonth.get() + \
+                    'Date of introduction' : self.comboDay.get() + comboMonth.get() + \
                     comboYear.get(), 'Date of end' : comboFinishDay.get() + \
                     '/' + comboFinishMonth.get() + '/' + comboFinishYear.get(), \
                     'Treatment' : textTreat.get(), 'Dosage' : textDosage.get(), \
@@ -337,7 +337,7 @@ def callTreatment3(self):
             dataDose = {}
             dataDose['data'] = []
             dataDose['data'].append({'Date' : textDate.get(), \
-                'Date of introduction' : comboDay.get() + comboMonth.get() + \
+                'Date of introduction' : self.comboDay.get() + comboMonth.get() + \
                 comboYear.get(), 'Date of end' : comboFinishDay.get() + \
                 '/' + comboFinishMonth.get() + '/' + comboFinishYear.get(), \
                 'Treatment' : textTreat.get(), 'Dosage' : textDosage.get(), \
@@ -371,7 +371,7 @@ def callTreatment3(self):
             file.write(str("Name : "))
             file.write(textName.get() + '\n')
             file.write(str("Date of introduction : "))
-            file.write(comboDay.get())
+            file.write(self.comboDay.get())
             file.write(comboMonth.get())
             file.write(comboYear.get())
             file.write(str('\n'))
@@ -407,7 +407,7 @@ def callTreatment3(self):
                     print(datastore)
                 dataDose = datastore
                 dataDose['data'].append({'Date' : textDate.get(), \
-                    'Date of introduction' : comboDay.get() + comboMonth.get() + \
+                    'Date of introduction' : self.comboDay.get() + comboMonth.get() + \
                     comboYear.get(), 'Date of end' : comboFinishDay.get() + \
                     '/' + comboFinishMonth.get() + '/' + comboFinishYear.get(), \
                     'Treatment' : textTreat.get(), 'Dosage' : textDosage.get(), \
@@ -426,7 +426,7 @@ def callTreatment3(self):
             dataDose = {}
             dataDose['data'] = []
             dataDose['data'].append({'Date' : textDate.get(), \
-                'Date of introduction' : comboDay.get() + comboMonth.get() + \
+                'Date of introduction' : self.comboDay.get() + comboMonth.get() + \
                 comboYear.get(), 'Date of end' : comboFinishDay.get() + \
                 '/' + comboFinishMonth.get() + '/' + comboFinishYear.get(), \
                 'Treatment' : textTreat.get(), 'Dosage' : textDosage.get(), \
@@ -550,23 +550,21 @@ def callTreatment3(self):
     self.textDateS = self.can.create_window(self.x20, self.y20, window=self.textDateS)
 
     def changeDay():
-        comboDay['values'] = ['01', '02', '03', '04',
-                              '05', '06', '07', '08',
-                              '09', '10', '11', '12',
-                              '13', '14', '15', '16',
-                              '17', '18', '19', '20',
-                              '21', '22', '23', '24',
-                              '25', '26', '27', '28',
-                              '29', '30', '31']
+        self.comboDay['values']=['01', '02', '03', '04',
+                  '05', '06', '07', '08',
+                  '09', '10', '11', '12',
+                  '13', '14', '15', '16',
+                  '17', '18', '19', '20',
+                  '21', '22', '23', '24',
+                  '25', '26', '27', '28',
+                  '29', '30', '31']
 
-    self.x21, self.y21 = 700, 180
     self.labelDay = Label(self.can,
         text = "Choose the day :", font=12, fg='white', bg='DodgerBlue2')
-    self.labelDay = self.can.create_window(self.x21, self.y21, window=self.labelDay)
+    self.labelDay = self.can.create_window(700, 180, window=self.labelDay)
 
-    #self.x22, self.y22 = 700, 220
-    text_var = StringVar()
-    comboDay = ttk.Combobox(self.can, textvariable=text_var,
+    self.mystring = tk.StringVar()
+    self.comboDay = ttk.Combobox(self.can, textvariable=self.mystring,
         values=['01', '02', '03', '04',
                 '05', '06', '07', '08',
                 '09', '10', '11', '12',
@@ -576,8 +574,9 @@ def callTreatment3(self):
                 '25', '26', '27', '28',
                 '29', '30', '31'], postcommand=changeDay)
 
-    comboDay.bind("<<ComboboxSelected>>", callbackDay)
-    #comboDay = self.can.create_window(self.x22, self.y22, window=comboDay)
+    self.comboDay.bind("<<ComboboxSelected>>", callbackDay)
+    self.comboDay.current(0)
+    self.comboDay_window = self.can.create_window(700, 220, window=self.comboDay)
 
     def changeMonth():
         self.comboMonth["values"] = [' January',
@@ -599,7 +598,8 @@ def callTreatment3(self):
     self.labelMonth = self.can.create_window(self.x23, self.y23, window=self.labelMonth)
 
     self.x24, self.y24 = 900, 220
-    self.comboMonth = ttk.Combobox(self.can,
+    self.mystring2 = tk.StringVar()
+    self.comboMonth = ttk.Combobox(self.can, textvariable=self.mystring2,
         values=[' January',
               ' February',
               ' March',
@@ -613,7 +613,8 @@ def callTreatment3(self):
               ' November',
               ' December'], postcommand=changeMonth)
     self.comboMonth.bind("<<ComboboxSelected>>", callbackMonth)
-    self.comboMonth = self.can.create_window(self.x24, self.y24, window=self.comboMonth)
+    self.comboMonth.current(0)
+    self.comboMonth_window = self.can.create_window(self.x24, self.y24, window=self.comboMonth)
 
     def changeYear():
         self.comboYear["values"] = ['', ' 2000', ' 2001', ' 2002', ' 2003',
@@ -632,7 +633,8 @@ def callTreatment3(self):
     self.labelYear = self.can.create_window(self.x25, self.y25, window=self.labelYear)
 
     self.x26, self.y26 = 1100, 220
-    self.comboYear = ttk.Combobox(self.can,
+    self.mystring3 = tk.StringVar()
+    self.comboYear = ttk.Combobox(self.can, textvariable=self.mystring3,
         values=['', ' 2000', ' 2001', ' 2002', ' 2003',
                 ' 2004', ' 2005', ' 2006', ' 2007',
                 ' 2008', ' 2009', ' 2010', ' 2011',
@@ -644,7 +646,7 @@ def callTreatment3(self):
                 ' 2032', ' 2033', ' 2034', ' 2035'], postcommand=changeYear)
     self.comboYear.bind("<<ComboboxSelected>>", callbackYear)
     self.comboYear.current(0)
-    self.comboYear = self.can.create_window(self.x26, self.y26, window=self.comboYear)
+    self.comboYear_window = self.can.create_window(self.x26, self.y26, window=self.comboYear)
 
     # Date of finish
     self.x27, self.y27 = 800, 270
@@ -667,7 +669,8 @@ def callTreatment3(self):
     self.labelFinishDay = self.can.create_window(self.x28, self.y28, window=self.labelFinishDay)
 
     self.x29, self.y29 = 700, 350
-    self.comboFinishDay = ttk.Combobox(self.can,
+    self.mystring4 = tk.StringVar()
+    self.comboFinishDay = ttk.Combobox(self.can, textvariable=self.mystring4,
         values=['01', '02', '03', '04',
                 '05', '06', '07', '08',
                 '09', '10', '11', '12',
@@ -676,29 +679,24 @@ def callTreatment3(self):
                 '21', '22', '23', '24',
                 '25', '26', '27', '28',
                 '29', '30', '31'], postcommand=finishDay)
+
     self.comboFinishDay.bind("<<ComboboxSelected>>", callbackFinishDay)
-    self.comboFinishDay = self.can.create_window(self.x29, self.y29, window=self.comboFinishDay)
+    self.comboFinishDay.current(0)
+    self.comboFinishDay_window = self.can.create_window(self.x29, self.y29, window=self.comboFinishDay)
 
     def finishMonth():
-        self.comboFinishMonth["values"] = ['01',
-                                    '02',
-                                    '03',
-                                    '04',
-                                    '05',
-                                    '06',
-                                    '07',
-                                    '08',
-                                    '09',
-                                    '10',
-                                    '11',
-                                    '12']
+        self.comboFinishMonth["values"] = ['01', '02', '03', '04',
+                                            '05', '06', '07', '08',
+                                            '09', '10', '11', '12']
     
     self.x30, self.y30 = 900, 310
     self.labelMonth = Label(self.can,
         text = "Choose the month :", font=12, fg='white', bg='DodgerBlue2')
     self.labelMonth = self.can.create_window(self.x30, self.y30, window=self.labelMonth)
 
-    self.comboFinishMonth = ttk.Combobox(self.can,
+    self.x31, self.y31 = 900, 350
+    self.mystring5 = tk.StringVar()
+    self.comboFinishMonth = ttk.Combobox(self.can, textvariable=self.mystring5,
         values=['01',  
               '02', 
               '03', 
@@ -712,9 +710,9 @@ def callTreatment3(self):
               '11', 
               '12'], postcommand=finishMonth)
 
-    self.x31, self.y31 = 900, 350
     self.comboFinishMonth.bind("<<ComboboxSelected>>", callbackFinishMonth)
-    self.comboFinishMonth = self.can.create_window(self.x31, self.y31, window=self.comboFinishMonth)
+    self.comboFinishMonth.current(0)
+    self.comboFinishMonth_window = self.can.create_window(self.x31, self.y31, window=self.comboFinishMonth)
 
     def finishYear():
         self.comboFinishYear["values"] = ['', '2020', '2021', '2022', '2023',
@@ -728,14 +726,16 @@ def callTreatment3(self):
     self.labelFinishYear = self.can.create_window(self.x32, self.y32, window=self.labelFinishYear)
 
     self.x33, self.y33 = 1100, 350
-    self.comboFinishYear = ttk.Combobox(self.can,
+    self.mystring6 = tk.StringVar()
+    self.comboFinishYear = ttk.Combobox(self.can, textvariable=self.mystring6,
         values=['', '2020', '2021', '2022', '2023',
                 '2024', '2025', '2026', '2027',
                 '2028', '2029', '2030', '2031',
                 '2032', '2033', '2034', '2035'], postcommand=finishYear)
+
     self.comboFinishYear.bind("<<ComboboxSelected>>", callbackFinishYear)
     self.comboFinishYear.current(0)
-    self.comboFinishYear = self.can.create_window(self.x33, self.y33, window=self.comboFinishYear)
+    self.comboFinishYear_window = self.can.create_window(self.x33, self.y33, window=self.comboFinishYear)
 
     self.x34, self.y34 = 100, 380
     self.checkLab = Label(self.can, text="Doses :", font=('Arial 14 bold'), 

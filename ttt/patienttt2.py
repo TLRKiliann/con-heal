@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
+
 from tkinter import *
 import tkinter as tk
 from tkinter import ttk
@@ -11,7 +12,7 @@ import json
 import subprocess
 
 
-def callTreatment3(self):
+def callTreatment2(self):
     self.can.delete(ALL)
     self.can.configure(bg='DodgerBlue2')
 

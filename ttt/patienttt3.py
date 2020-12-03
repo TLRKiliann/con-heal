@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
+
 from tkinter import *
 import tkinter as tk
 from tkinter import ttk
@@ -664,7 +665,7 @@ def callTreatment3(self):
                                         '21', '22', '23', '24',
                                         '25', '26', '27', '28',
                                         '29', '30', '31']
-    
+
     self.x28, self.y28 = 700, 310
     self.labelFinishDay = Label(self.can,
         text = "Choose the day :", font=12, fg='white', bg='DodgerBlue2')

@@ -8,6 +8,9 @@ import time
 import datetime as dt
 import subprocess
 from contact.pat_contact1 import Window
+from contact.doc_contact1 import doctorWind
+from contact.family_contact1 import famWind
+from contact.hcs_contact1 import homecs
 from boxapp import callBox
 from patcaps import callResident
 from backapp import *
@@ -384,13 +387,13 @@ class MenuBar(Frame):
             command=boss.contact_num1)
         me1.add_command(label='Familiy', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num1)
+            command=boss.contactfamily_1)
         me1.add_command(label='Doctor', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num1)
+            command=boss.contactdoctor_1)
         me1.add_command(label='Home care system', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num1)
+            command=boss.contacthcsystem_1)
         contchck.add_cascade(label=new_text, underline=0, font=('Times 12'),
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me1)
@@ -1830,6 +1833,15 @@ class Application(Frame):
     # Contact patient 1
     def contact_num1(self):
         Window(self)
+
+    def contactfamily_1(self):
+        famWind(self)
+
+    def contactdoctor_1(self):
+        doctorWind(self)
+
+    def contacthcsystem_1(self):
+        homecs(self)
 
     #def callDataPat(self):
     #    launchData(self)

@@ -120,18 +120,11 @@ def doctorWind(self):
 
     # Name
     self.x1, self.y1 = 250, 200
-    self.labelname = Label(self.can, text="Patient Name :",
+    self.labelname = Label(self.can, text="Doctor :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.labelname_window = self.can.create_window(self.x1, self.y1,
         window = self.labelname)
-
-    try:
-        with open('./newpatient/entryfile.txt', 'r') as namefile:
-            line1 = namefile.readline()
-            txt_pat = line1
-    except FileNotFoundError as callfile:
-        print("+ File entryfile.txt doesn't exist !", callfile)
 
     try:
         self.txt_pat = line1
@@ -144,41 +137,6 @@ def doctorWind(self):
             window = self.namentry)
     except UnboundLocalError as ub_error1:
         print("+ + File 1 not created !", ub_error1)
-
-    try:
-        with open('./newpatient/entryfile.txt', 'r') as namefile:
-            line1 = namefile.readline()
-            line2 = namefile.readline()
-            birth_pat = line2
-    except FileNotFoundError as callfile:
-        print("+ File entryfile.txt doesn't exist !", callfile)
-
-    try:
-        self.txt_pat = line1
-        self.x2, self.y2 = 450, 200
-        self.birth_pat = StringVar()
-        self.birthentry = Entry(self.can, textvariable=self.birth_pat,
-            highlightbackground='grey', bd=4)
-        self.birth_pat.set(line1)
-        self.birthentry_window = self.can.create_window(self.x2, self.y2,
-            window = self.birthentry)
-    except UnboundLocalError as ub_error1:
-        print("+ + File 1 not created !", ub_error1)
-
-    # Native
-    self.x15, self.y15 = 250, 250
-    self.nativelab = Label(self.can, text="Native :",
-        font=('helvetica', 18, 'bold'),
-        bg='DodgerBlue2', fg='white')
-    self.nativelab_window = self.can.create_window(self.x15, self.y15,
-        window = self.nativelab)
-
-    self.x16, self.y16 = 450, 250
-    self.native = StringVar()
-    self.nativaentry = Entry(self.can, textvariable=self.native,
-        highlightbackground='grey', bd=3)
-    self.nativaentry_window = self.can.create_window(self.x16, self.y16,
-        window = self.nativaentry)
 
     # Phone
     self.x20, self.y20 = 250, 300
@@ -211,6 +169,7 @@ def doctorWind(self):
     self.addrentry_window = self.can.create_window(self.x31, self.y31,
         window = self.addrentry)
 
+    # City
     self.x32, self.y32 = 450, 400
     self.citytxt = StringVar()
     self.cityentry = Entry(self.can, textvariable=self.citytxt,
@@ -235,9 +194,9 @@ def doctorWind(self):
     self.entrymail_window = self.can.create_window(self.x41, self.y41,
         window = self.entrymail)
 
-    # Assurance
+    # Fax
     self.x50, self.y50 = 250, 500
-    self.mailabel = Label(self.can, text="Insurance :",
+    self.mailabel = Label(self.can, text="Fax :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.mailabel_window = self.can.create_window(self.x50, self.y50,
@@ -249,21 +208,6 @@ def doctorWind(self):
         highlightbackground='grey', bd=3)
     self.entryassu_window = self.can.create_window(self.x51, self.y51,
         window = self.entryassu)
-
-    # Police
-    self.x50, self.y50 = 250, 550
-    self.mailabel = Label(self.can, text="Policy Number :",
-        font=('helvetica', 18, 'bold'),
-        bg='DodgerBlue2', fg='white')
-    self.mailabel_window = self.can.create_window(self.x50, self.y50,
-        window = self.mailabel)
-
-    self.x51, self.y51 = 450, 550
-    self.policy = StringVar()
-    self.entrypolicy = Entry(self.can, textvariable=self.policy,
-        highlightbackground='grey', bd=3)
-    self.entrypolicy_window = self.can.create_window(self.x51, self.y51,
-        window = self.entrypolicy)
 
     self.x52, self.y52 = 350, 620
     self.b52 = Button(self.can, text="Save", font=16,

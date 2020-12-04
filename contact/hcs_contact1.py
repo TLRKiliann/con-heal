@@ -165,21 +165,6 @@ def homecsWind(self):
     except UnboundLocalError as ub_error1:
         print("+ + File 1 not created !", ub_error1)
 
-    # Native
-    self.x15, self.y15 = 250, 250
-    self.nativelab = Label(self.can, text="Native :",
-        font=('helvetica', 18, 'bold'),
-        bg='DodgerBlue2', fg='white')
-    self.nativelab_window = self.can.create_window(self.x15, self.y15,
-        window = self.nativelab)
-
-    self.x16, self.y16 = 450, 250
-    self.native = StringVar()
-    self.nativaentry = Entry(self.can, textvariable=self.native,
-        highlightbackground='grey', bd=3)
-    self.nativaentry_window = self.can.create_window(self.x16, self.y16,
-        window = self.nativaentry)
-
     # Phone
     self.x20, self.y20 = 250, 300
     self.phonelabel = Label(self.can, text="Phone Number :",
@@ -234,36 +219,6 @@ def homecsWind(self):
     self.mailtxt.set("")
     self.entrymail_window = self.can.create_window(self.x41, self.y41,
         window = self.entrymail)
-
-    # Assurance
-    self.x50, self.y50 = 250, 500
-    self.mailabel = Label(self.can, text="Insurance :",
-        font=('helvetica', 18, 'bold'),
-        bg='DodgerBlue2', fg='white')
-    self.mailabel_window = self.can.create_window(self.x50, self.y50,
-        window = self.mailabel)
-
-    self.x51, self.y51 = 450, 500
-    self.assurance = StringVar()
-    self.entryassu = Entry(self.can, textvariable=self.assurance,
-        highlightbackground='grey', bd=3)
-    self.entryassu_window = self.can.create_window(self.x51, self.y51,
-        window = self.entryassu)
-
-    # Police
-    self.x50, self.y50 = 250, 550
-    self.mailabel = Label(self.can, text="Policy Number :",
-        font=('helvetica', 18, 'bold'),
-        bg='DodgerBlue2', fg='white')
-    self.mailabel_window = self.can.create_window(self.x50, self.y50,
-        window = self.mailabel)
-
-    self.x51, self.y51 = 450, 550
-    self.policy = StringVar()
-    self.entrypolicy = Entry(self.can, textvariable=self.policy,
-        highlightbackground='grey', bd=3)
-    self.entrypolicy_window = self.can.create_window(self.x51, self.y51,
-        window = self.entrypolicy)
 
     self.x52, self.y52 = 350, 620
     self.b52 = Button(self.can, text="Save", font=16,

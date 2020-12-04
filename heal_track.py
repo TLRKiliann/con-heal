@@ -10,7 +10,7 @@ import subprocess
 from contact.pat_contact1 import Window
 from contact.doc_contact1 import doctorWind
 from contact.family_contact1 import famWind
-from contact.hcs_contact1 import homecs
+from contact.hcs_contact1 import homecsWind
 from boxapp import callBox
 from patcaps import callResident
 from backapp import *
@@ -1841,7 +1841,7 @@ class Application(Frame):
         doctorWind(self)
 
     def contacthcsystem_1(self):
-        homecs(self)
+        homecsWind(self)
 
     #def callDataPat(self):
     #    launchData(self)

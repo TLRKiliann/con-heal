@@ -5,7 +5,6 @@
 from tkinter import *
 
 
-#def Window(self):
 def Window(self):
     """
         Main function to define 

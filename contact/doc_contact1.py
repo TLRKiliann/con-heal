@@ -27,7 +27,7 @@ def doctorWind(self):
                 print("+ File contactdoc1.txt created !")
 
         self.x1, self.y1 = 900, 350
-        self.txtBox = Text(self.can, height=25, width=40, font=18, relief=SUNKEN)
+        self.txtBox = Text(self.can, height=15, width=40, font=18, relief=SUNKEN)
         self.txtBox.delete('1.0', END)
         self.txtBox.update()
         self.ftxtBox_window = self.can.create_window(self.x1, self.y1, window=self.txtBox)
@@ -62,7 +62,7 @@ def doctorWind(self):
             Display origin
         """
         self.x1, self.y1 = 900, 350
-        self.txtBox = Text(self.can, height=25, width=40, font=18, relief=SUNKEN)
+        self.txtBox = Text(self.can, height=15, width=40, font=18, relief=SUNKEN)
         self.txtBox.delete('1.0', END)
         self.ftxtBox_window = self.can.create_window(self.x1, self.y1, window=self.txtBox)
 
@@ -236,7 +236,7 @@ def doctorWind(self):
     self.lblfax_window = self.can.create_window(self.x50, self.y50,
         window = self.lblfax)
 
-    self.assurance = line7
+    self.faxtxt = line7
     self.x51, self.y51 = 450, 500
     self.faxtxt = StringVar()
     self.entryfax = Entry(self.can, textvariable=self.faxtxt,

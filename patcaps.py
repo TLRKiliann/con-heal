@@ -89,7 +89,7 @@ def callResident(self):
         self.new_data1 = StringVar()
         self.Datacool = Entry(self.can, textvariable=self.new_data1,
             highlightbackground='grey', bd=4)
-        self.new_data1.set(line1)
+        self.new_data1.set(line1[:-1])
         self.Datacool_window = self.can.create_window(self.x10, self.y10,
             window=self.Datacool)
     except UnboundLocalError as ub_error1:
@@ -150,7 +150,7 @@ def callResident(self):
         self.new_data2 = StringVar()
         self.Datatcool = Entry(self.can, textvariable=self.new_data2,
             highlightbackground='grey', bd=4)
-        self.new_data2.set(line2)
+        self.new_data2.set(line2[:-1])
         self.Datatcool_window = self.can.create_window(self.x20, self.y20,
             window=self.Datatcool)
     except UnboundLocalError as ub_error2:
@@ -214,7 +214,7 @@ def callResident(self):
         self.new_data3 = StringVar()
         self.Datathreel = Entry(self.can, textvariable=self.new_data3,
             highlightbackground='grey', bd=4)
-        self.new_data3.set(line3)
+        self.new_data3.set(line3[:-1])
         self.Datathreel_window = self.can.create_window(self.x30, self.y30,
             window=self.Datathreel)
     except UnboundLocalError as ub_error3:
@@ -287,7 +287,7 @@ def callResident(self):
         self.new_data4 = StringVar()
         self.Datafour = Entry(self.can, textvariable=self.new_data4,
             highlightbackground='grey', bd=4)
-        self.new_data4.set(line4)
+        self.new_data4.set(line4[:-1])
         self.Datafour_window = self.can.create_window(self.x40, self.y40,
             window=self.Datafour)
     except UnboundLocalError as ub_error4:
@@ -348,7 +348,7 @@ def callResident(self):
         self.new_data5 = StringVar()
         self.Datafive = Entry(self.can, textvariable=self.new_data5,
             highlightbackground='grey', bd=4)
-        self.new_data5.set(line5)
+        self.new_data5.set(line5[:-1])
         self.Datafive_window = self.can.create_window(self.x50, self.y50,
             window=self.Datafive)
     except UnboundLocalError as ub_error5:
@@ -409,7 +409,7 @@ def callResident(self):
         self.new_data6 = StringVar()
         self.Datasix = Entry(self.can, textvariable=self.new_data6,
             highlightbackground='grey', bd=4)
-        self.new_data6.set(line6)
+        self.new_data6.set(line6[:-1])
         self.Datasix_window = self.can.create_window(self.x60, self.y60,
             window=self.Datasix)
     except UnboundLocalError as ub_error6:
@@ -470,7 +470,7 @@ def callResident(self):
         self.new_data7 = StringVar()
         self.Dataseven = Entry(self.can, textvariable=self.new_data7,
             highlightbackground='grey', bd=4)
-        self.new_data7.set(line7)
+        self.new_data7.set(line7[:-1])
         self.Dataseven_window = self.can.create_window(self.x70, self.y70,
           window=self.Dataseven)
     except UnboundLocalError as ub_error7:
@@ -531,7 +531,7 @@ def callResident(self):
         self.new_data8 = StringVar()
         self.Dataeight = Entry(self.can, textvariable=self.new_data8,
             highlightbackground='grey', bd=4)
-        self.new_data8.set(line8)
+        self.new_data8.set(line8[:-1])
         self.Dataeight_window = self.can.create_window(self.x80, self.y80,
             window=self.Dataeight)
     except UnboundLocalError as ub_error8:
@@ -592,7 +592,7 @@ def callResident(self):
         self.new_data9 = StringVar()
         self.Datanine = Entry(self.can, textvariable=self.new_data9,
             highlightbackground='grey', bd=4)
-        self.new_data9.set(line9)
+        self.new_data9.set(line9[:-1])
         self.Datanine_window = self.can.create_window(self.x90, self.y90,
             window=self.Datanine)
     except UnboundLocalError as ub_error9:
@@ -653,7 +653,7 @@ def callResident(self):
         self.new_data10 = StringVar()
         self.Dataten = Entry(self.can, textvariable=self.new_data10,
             highlightbackground='grey', bd=4)
-        self.new_data10.set(line10)
+        self.new_data10.set(line10[:-1])
         self.Dataten_window = self.can.create_window(self.x100, self.y100,
             window=self.Dataten)
     except UnboundLocalError as ub_error10:
@@ -714,7 +714,7 @@ def callResident(self):
         self.new_data11 = StringVar()
         self.Dataeleven = Entry(self.can, textvariable=self.new_data11,
             highlightbackground='grey', bd=4)
-        self.new_data11.set(line11)
+        self.new_data11.set(line11[:-1])
         self.Dataeleven_window = self.can.create_window(self.x110, self.y110,
             window=self.Dataeleven)
     except UnboundLocalError as ub_error11:
@@ -775,7 +775,7 @@ def callResident(self):
         self.new_data12 = StringVar()
         self.Datatwelve = Entry(self.can, textvariable=self.new_data12,
             highlightbackground='grey', bd=4)
-        self.new_data12.set(line12)
+        self.new_data12.set(line12[:-1])
         self.Datatwelve_window = self.can.create_window(self.x120, self.y120,
             window=self.Datatwelve)
     except UnboundLocalError as ub_error12:
@@ -836,7 +836,7 @@ def callResident(self):
         self.new_data13 = StringVar()
         self.Datathirtin = Entry(self.can, textvariable=self.new_data13,
             highlightbackground='grey', bd=4)
-        self.new_data13.set(line13)
+        self.new_data13.set(line13[:-1])
         self.Datathirtin_window = self.can.create_window(self.x130, self.y130,
             window=self.Datathirtin)
     except UnboundLocalError as ub_error13:
@@ -897,7 +897,7 @@ def callResident(self):
         self.new_data14 = StringVar()
         self.Datafourteen = Entry(self.can, textvariable=self.new_data14,
             highlightbackground='grey', bd=4)
-        self.new_data14.set(line14)
+        self.new_data14.set(line14[:-1])
         self.Datafourteen_window = self.can.create_window(self.x140, self.y140,
             window=self.Datafourteen)
     except UnboundLocalError as ub_error14:
@@ -958,7 +958,7 @@ def callResident(self):
         self.new_data15 = StringVar()
         self.Datafivteen = Entry(self.can, textvariable=self.new_data15,
             highlightbackground='grey', bd=4)
-        self.new_data15.set(line15)
+        self.new_data15.set(line15[:-1])
         self.Datafivteen_window = self.can.create_window(self.x150, self.y150,
             window=self.Datafivteen)
     except UnboundLocalError as ub_error15:
@@ -1019,7 +1019,7 @@ def callResident(self):
         self.new_data16 = StringVar()
         self.Datasixteen = Entry(self.can, textvariable=self.new_data16,
             highlightbackground='grey', bd=4)
-        self.new_data16.set(line16)
+        self.new_data16.set(line16[:-1])
         self.Datasixteen_window = self.can.create_window(self.x160, self.y160,
             window=self.Datasixteen)
     except UnboundLocalError as ub_error16:
@@ -1080,7 +1080,7 @@ def callResident(self):
         self.new_data17 = StringVar()
         self.Dataseventeen = Entry(self.can, textvariable=self.new_data17,
             highlightbackground='grey', bd=4)
-        self.new_data17.set(line17)
+        self.new_data17.set(line17[:-1])
         self.Dataseventeen_window = self.can.create_window(self.x170, self.y170,
             window=self.Dataseventeen)
     except UnboundLocalError as ub_error17:
@@ -1141,7 +1141,7 @@ def callResident(self):
         self.new_data18 = StringVar()
         self.Dteighteen = Entry(self.can, textvariable=self.new_data18,
             highlightbackground='grey', bd=4)
-        self.new_data18.set(line18)
+        self.new_data18.set(line18[:-1])
         self.Dteighteen_window = self.can.create_window(self.x180, self.y180,
             window=self.Dteighteen)
     except UnboundLocalError as ub_error18:
@@ -1202,7 +1202,7 @@ def callResident(self):
         self.new_data19 = StringVar()
         self.Dtnineteen = Entry(self.can, textvariable=self.new_data19,
             highlightbackground='grey', bd=4)
-        self.new_data19.set(line19)
+        self.new_data19.set(line19[:-1])
         self.Dtnineteen_window = self.can.create_window(self.x190, self.y190,
             window=self.Dtnineteen)
     except UnboundLocalError as ub_error19:
@@ -1263,7 +1263,7 @@ def callResident(self):
         self.new_data20 = StringVar()
         self.Datatwent = Entry(self.can, textvariable=self.new_data20,
             highlightbackground='grey', bd=4)
-        self.new_data20.set(line20)
+        self.new_data20.set(line20[:-1])
         self.Datatwent_window = self.can.create_window(self.x200, self.y200,
             window=self.Datatwent)
     except UnboundLocalError as ub_error20:
@@ -1324,7 +1324,7 @@ def callResident(self):
         self.new_data21 = StringVar()
         self.Datatwenone = Entry(self.can, textvariable=self.new_data21,
             highlightbackground='grey', bd=4)
-        self.new_data21.set(line21)
+        self.new_data21.set(line21[:-1])
         self.Datatwenone_window = self.can.create_window(self.x210, self.y210,
             window=self.Datatwenone)
     except UnboundLocalError as ub_error21:
@@ -1385,7 +1385,7 @@ def callResident(self):
         self.new_data22 = StringVar()
         self.Datatowto = Entry(self.can, textvariable=self.new_data22,
             highlightbackground='grey', bd=4)
-        self.new_data22.set(line22)
+        self.new_data22.set(line22[:-1])
         self.Datatowto_window = self.can.create_window(self.x220, self.y220,
             window=self.Datatowto)
     except UnboundLocalError as ub_error22:
@@ -1446,7 +1446,7 @@ def callResident(self):
         self.new_data23 = StringVar()
         self.Datatwothry = Entry(self.can, textvariable=self.new_data23,
             highlightbackground='grey', bd=4)
-        self.new_data23.set(line23)
+        self.new_data23.set(line23[:-1])
         self.Datatwothry_window = self.can.create_window(self.x230, self.y230,
             window=self.Datatwothry)
     except UnboundLocalError as ub_error23:
@@ -1507,7 +1507,7 @@ def callResident(self):
         self.new_data24 = StringVar()
         self.Datatwofour = Entry(self.can, textvariable=self.new_data24,
           highlightbackground='grey', bd=4)
-        self.new_data24.set(line24)
+        self.new_data24.set(line24[:-1])
         self.Datatwofour_window = self.can.create_window(self.x240, self.y240,
             window=self.Datatwofour)
     except UnboundLocalError as ub_error24:

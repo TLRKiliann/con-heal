@@ -91,10 +91,34 @@ def doctorWind(self):
                 self.txtBox.insert(INSERT, "Patient Name : " + namentry.get() + "\n\n")
                 iofile.write("Birthdate : " + line2)
                 self.txtBox.insert('3.0', "Birthdate : " + line2 + "\n\n")
-                iofile.write("Native : " + nativaentry.get() + "\n")
-                self.txtBox.insert('5.0', "Native : " + nativaentry.get() + "\n\n")
-                iofile.write("Phone : " + phonentry.get() + "\n")
-                self.txtBox.insert('7.0', "Phone : " + phonentry.get() + "\n\n")
+        except FileNotFoundError as errorf:
+            print("+ No file contact1.txt exist", errorf)
+
+        try:
+            natword = nativaentry.get()
+            phoneword = phonentry.get()
+            with open('./contact/contact1.txt', 'r') as toreadf:
+                lines = toreadf.readlines()
+                for i in range(0, len(lines)):
+                    line = lines[i]
+                    if natword in line:
+                        print(lines[i])
+                        with open('./contact/contact1.txt', 'w') as iofile:
+                            iofile.write("Native : " + nativaentry.get() + "\n")
+                            self.txtBox.insert('5.0', "Native : " + nativaentry.get() + "\n\n")
+                    elif phoneword in line:
+                        with open('./contact/contact1.txt', 'w') as iofile:
+                            iofile.write("Phone : " + phonentry.get() + "\n")
+                            self.txtBox.insert('7.0', "Phone : " + phonentry.get() + "\n\n")
+                    else:
+                        pass
+
+
+                #iofile.write("Native : " + nativaentry.get() + "\n")
+                #self.txtBox.insert('5.0', "Native : " + nativaentry.get() + "\n\n")
+                #iofile.write("Phone : " + phonentry.get() + "\n")
+                #self.txtBox.insert('7.0', "Phone : " + phonentry.get() + "\n\n")
+                """
                 iofile.write("Street : " + addrentry.get() + "\n")
                 self.txtBox.insert('9.0', "Street : " + addrentry.get() + "\n\n")
                 iofile.write("City : " + cityentry.get() + "\n")
@@ -105,10 +129,24 @@ def doctorWind(self):
                 self.txtBox.insert('14.0', "Insurance : " + entryassu.get() + "\n\n")
                 iofile.write("Policy : " + entrypolicy.get() + "\n")
                 self.txtBox.insert('16.0', "Policy : " + entrypolicy.get() + "\n\n")
+                """
         except FileNotFoundError as err_w:
             print("+ No file contact1.txt exist", err_w)
 
     allInData()
+
+    try:
+        with open('./contact/contact1.txt', 'r') as readf:
+            line1 = readf.readline()
+            line2 = readf.readline()
+            line3 = readf.readline()
+            line4 = readf.readline()
+            line5 = readf.readline()
+            line6 = readf.readline()
+            line7 = readf.readline()
+            line8 = readf.readline()
+    except FileNotFoundError as errorf:
+        print("+ No file contact1.txt exist", errorf)
 
     # Label title
     self.x11, self.y11 = 250, 100

@@ -65,7 +65,7 @@ def Window(self):
         self.txtBox.insert('16.0', polins + "\n\n")
         self.ftxtBox_window = self.can.create_window(self.x1, self.y1, window=self.txtBox)
 
-    def recorderData(namentry, birthentry, native, nativaentry, txtphone, phonentry,
+    def recorderData(namentry, native, nativaentry, txtphone, phonentry,
         addrtxt, addrentry, citytxt, cityentry, mailtxt, entrymail,
         assurance, entryassu, policy, entrypolicy):
         """
@@ -79,6 +79,13 @@ def Window(self):
             with open('./contact/contact1.txt', 'a+') as testf:
                 print("+ File contact1.txt created !")
 
+        try:
+            with open('./newpatient/entryfile.txt', 'r') as namefile:
+                line1 = namefile.readline()
+                line2 = namefile.readline()
+        except FileNotFoundError as fileout:
+            print("+ No file entryfile.txt exist", fileout)
+
         self.x1, self.y1 = 900, 350
         self.txtBox = Text(self.can, height=25, width=40, font=18, relief=SUNKEN)
         self.txtBox.delete('1.0', END)
@@ -87,7 +94,7 @@ def Window(self):
 
         try:
             with open('./contact/contact1.txt', 'w') as iofile:
-                iofile.write("Name : " + namentry.get())
+                iofile.write("Patient Name : " + namentry.get())
                 self.txtBox.insert(INSERT, "Patient Name : " + namentry.get() + "\n\n")
                 iofile.write("Birthdate : " + line2)
                 self.txtBox.insert('3.0', "Birthdate : " + line2 + "\n\n")
@@ -129,6 +136,7 @@ def Window(self):
     try:
         with open('./newpatient/entryfile.txt', 'r') as namefile:
             line1 = namefile.readline()
+            line2 = namefile.readline()
             txt_pat = line1
     except FileNotFoundError as callfile:
         print("+ File entryfile.txt doesn't exist !", callfile)
@@ -143,27 +151,21 @@ def Window(self):
         self.namentry_window = self.can.create_window(self.x2, self.y2,
             window = self.namentry)
     except UnboundLocalError as ub_error1:
-        print("+ + File 1 not created !", ub_error1)
+        print("+ File 1 not created !", ub_error1)
 
     try:
-        with open('./newpatient/entryfile.txt', 'r') as namefile:
-            line1 = namefile.readline()
-            line2 = namefile.readline()
-            birth_pat = line2
-    except FileNotFoundError as callfile:
-        print("+ File entryfile.txt doesn't exist !", callfile)
-
-    try:
-        self.txt_pat = line1
-        self.x2, self.y2 = 450, 200
-        self.birth_pat = StringVar()
-        self.birthentry = Entry(self.can, textvariable=self.birth_pat,
-            highlightbackground='grey', bd=4)
-        self.birth_pat.set(line1)
-        self.birthentry_window = self.can.create_window(self.x2, self.y2,
-            window = self.birthentry)
-    except UnboundLocalError as ub_error1:
-        print("+ + File 1 not created !", ub_error1)
+        with open('./contact/contact1.txt', 'r') as readf:
+            line1 = readf.readline()
+            line2 = readf.readline()
+            line3 = readf.readline()
+            line4 = readf.readline()
+            line5 = readf.readline()
+            line6 = readf.readline()
+            line7 = readf.readline()
+            line8 = readf.readline()
+            line9 = readf.readline()
+    except FileNotFoundError as errorf:
+        print("+ No file contact1.txt exist", errorf)
 
     # Native
     self.x15, self.y15 = 250, 250
@@ -177,6 +179,7 @@ def Window(self):
     self.native = StringVar()
     self.nativaentry = Entry(self.can, textvariable=self.native,
         highlightbackground='grey', bd=3)
+    self.native.set(line3)
     self.nativaentry_window = self.can.create_window(self.x16, self.y16,
         window = self.nativaentry)
 
@@ -192,6 +195,7 @@ def Window(self):
     self.txtphone = StringVar()
     self.phonentry = Entry(self.can, textvariable=self.txtphone,
         highlightbackground='grey', bd=3)
+    self.txtphone.set(line4)
     self.phonentry_window = self.can.create_window(self.x21, self.y21,
         window = self.phonentry)
 
@@ -207,7 +211,7 @@ def Window(self):
     self.addrtxt = StringVar()
     self.addrentry = Entry(self.can, textvariable=self.addrtxt,
         highlightbackground='grey', bd=4)
-    self.addrtxt.set("Street")
+    self.addrtxt.set(line5)
     self.addrentry_window = self.can.create_window(self.x31, self.y31,
         window = self.addrentry)
 
@@ -215,7 +219,7 @@ def Window(self):
     self.citytxt = StringVar()
     self.cityentry = Entry(self.can, textvariable=self.citytxt,
         highlightbackground='grey', bd=4)
-    self.citytxt.set("City")
+    self.citytxt.set(line6)
     self.cityentry_window = self.can.create_window(self.x32, self.y32,
         window = self.cityentry)
 
@@ -231,7 +235,7 @@ def Window(self):
     self.mailtxt = StringVar()
     self.entrymail = Entry(self.can, textvariable=self.mailtxt,
         highlightbackground='grey', bd=3)
-    self.mailtxt.set("")
+    self.mailtxt.set(line7)
     self.entrymail_window = self.can.create_window(self.x41, self.y41,
         window = self.entrymail)
 
@@ -247,6 +251,7 @@ def Window(self):
     self.assurance = StringVar()
     self.entryassu = Entry(self.can, textvariable=self.assurance,
         highlightbackground='grey', bd=3)
+    self.assurance.set(line8)
     self.entryassu_window = self.can.create_window(self.x51, self.y51,
         window = self.entryassu)
 
@@ -262,6 +267,7 @@ def Window(self):
     self.policy = StringVar()
     self.entrypolicy = Entry(self.can, textvariable=self.policy,
         highlightbackground='grey', bd=3)
+    self.policy.set(line9)
     self.entrypolicy_window = self.can.create_window(self.x51, self.y51,
         window = self.entrypolicy)
 
@@ -270,7 +276,7 @@ def Window(self):
         width=30, bd=3, bg='RoyalBlue3', fg='yellow',
         highlightbackground='RoyalBlue3',
         activebackground='pale turquoise',
-        command = lambda: recorderData(self.namentry, self.birthentry, 
+        command = lambda: recorderData(self.namentry, 
             self.native, self.nativaentry, self.txtphone, self.phonentry,
             self.addrtxt, self.addrentry, self.citytxt, self.cityentry,
             self.mailtxt, self.entrymail, self.assurance, self.entryassu,

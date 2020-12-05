@@ -21,7 +21,7 @@ def callLabo3(self):
     self.x1, self.y1 = 540, 45
     self.labelname = Label(self.can, text="Labo check",
         font=('helvetica', 18, 'bold'), width=10,
-        height=2, bg='DodgerBlue2', fg='pale turquoise')
+        height=2, bg='DodgerBlue2', fg='white')
     self.labelname = self.can.create_window(self.x1, self.y1,
         window = self.labelname)
 
@@ -38,13 +38,12 @@ def callLabo3(self):
     self.x3, self.y3 = 625, 100
     self.labelresult = Label(self.can, text='--- Neuroleptiques ---',
         font="Times 14 bold", width=135,
-        height=1, bg='RoyalBlue3', fg='aquamarine')
+        height=1, bg='RoyalBlue3', fg='white')
     self.labelresult = self.can.create_window(self.x3, self.y3,
         window = self.labelresult)
 
     def recordTofile():
         MsgBox = messagebox.askyesno('Record', 'Results will be saved into Care and Monitoring, ok ?')
-
         if MsgBox == 1:
             print("Ok, data saved")
             recordOption()
@@ -775,7 +774,7 @@ def callLabo3(self):
     self.x21, self.y21 = 625, 243
     self.labelresult2 = Label(self.can, text='--- Médicaments anti-épileptiques ---',
         font="Times 14 bold", width=135,
-        height=1, bg='RoyalBlue3', fg='aquamarine')
+        height=1, bg='RoyalBlue3', fg='white')
     self.labelresult2 = self.can.create_window(self.x21, self.y21,
         window = self.labelresult2)
 
@@ -975,7 +974,7 @@ def callLabo3(self):
     self.x43, self.y43 = 625, 409
     self.labelresult3 = Label(self.can, text='--- Antidépresseurs ---',
         font="Times 14 bold", width=135,
-        height=1, bg='RoyalBlue3', fg='aquamarine')
+        height=1, bg='RoyalBlue3', fg='white')
     self.labelresult3 = self.can.create_window(self.x43, self.y43,
         window = self.labelresult3)
 
@@ -1109,7 +1108,7 @@ def callLabo3(self):
     self.x58, self.y58 = 298, 528
     self.labelresult4 = Label(self.can, text='--- Printable ---', 
         font="Times 14 bold", width=62,
-        height=1, bg='RoyalBlue3', fg='aquamarine')
+        height=1, bg='RoyalBlue3', fg='white')
     self.labelresult4 = self.can.create_window(self.x58, self.y58,
         window = self.labelresult4)
 
@@ -1179,7 +1178,7 @@ def callLabo3(self):
     self.x61, self.y61 = 790, 528
     self.labelinfuri = Label(self.can, text='--- Lithium ---', 
         font="Times 14 bold", width=26,
-        height=1, bg='RoyalBlue3', fg='aquamarine')
+        height=1, bg='RoyalBlue3', fg='white')
     self.labelinfuri = self.can.create_window(self.x61, self.y61,
         window = self.labelinfuri)
 
@@ -1201,7 +1200,7 @@ def callLabo3(self):
         window = self.buttonsave)
 
     self.x64, self.y64 = 1110, 620
-    self.buttonquit = Button(self.can, text='Quit', width=10, bd=3,
+    self.buttonquit = Button(self.can, text='Return to main menu', width=20, bd=3,
         fg='white', bg='RoyalBlue3', activebackground='pale turquoise',
         highlightbackground='cyan', command=awayOut)
     self.buttonquit = self.can.create_window(self.x64, self.y64,

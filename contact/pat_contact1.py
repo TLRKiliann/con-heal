@@ -27,7 +27,7 @@ def Window(self):
                 print("+ File contact1.txt created !")
 
         self.x1, self.y1 = 900, 350
-        self.txtBox = Text(self.can, height=25, width=40, font=18, relief=SUNKEN)
+        self.txtBox = Text(self.can, height=20, width=40, font=18, relief=SUNKEN)
         self.txtBox.delete('1.0', END)
         self.txtBox.update()
         self.ftxtBox_window = self.can.create_window(self.x1, self.y1, window=self.txtBox)
@@ -66,7 +66,7 @@ def Window(self):
             Display origin
         """
         self.x1, self.y1 = 900, 350
-        self.txtBox = Text(self.can, height=25, width=40, font=18, relief=SUNKEN)
+        self.txtBox = Text(self.can, height=20, width=40, font=18, relief=SUNKEN)
         self.txtBox.delete('1.0', END)
         self.ftxtBox_window = self.can.create_window(self.x1, self.y1, window=self.txtBox)
 
@@ -219,13 +219,20 @@ def Window(self):
     self.addrentry_window = self.can.create_window(self.x31, self.y31,
         window = self.addrentry)
 
+    self.x32, self.y32 = 250, 400
+    self.labcity = Label(self.can, text="City :",
+        font=('helvetica', 18, 'bold'),
+        bg='DodgerBlue2', fg='white')
+    self.labcity_window = self.can.create_window(self.x32, self.y32,
+        window = self.labcity)
+
     self.citytxt = line6
-    self.x32, self.y32 = 450, 400
+    self.x33, self.y33 = 450, 400
     self.citytxt = StringVar()
     self.cityentry = Entry(self.can, textvariable=self.citytxt,
         highlightbackground='grey', bd=4)
     self.citytxt.set(line6[:-1])
-    self.cityentry_window = self.can.create_window(self.x32, self.y32,
+    self.cityentry_window = self.can.create_window(self.x33, self.y33,
         window = self.cityentry)
 
     # e-mail

@@ -198,13 +198,20 @@ def famWind(self):
     self.addrentry_window = self.can.create_window(self.x31, self.y31,
         window = self.addrentry)
 
+    self.x32, self.y32 = 250, 400
+    self.labcity = Label(self.can, text="City :",
+        font=('helvetica', 18, 'bold'),
+        bg='DodgerBlue2', fg='white')
+    self.labcity_window = self.can.create_window(self.x32, self.y32,
+        window = self.labcity)
+
     self.citytxt = line5
-    self.x32, self.y32 = 450, 400
+    self.x33, self.y33 = 450, 400
     self.citytxt = StringVar()
     self.cityentry = Entry(self.can, textvariable=self.citytxt,
         highlightbackground='grey', bd=4)
     self.citytxt.set(line5[:-1])
-    self.cityentry_window = self.can.create_window(self.x32, self.y32,
+    self.cityentry_window = self.can.create_window(self.x33, self.y33,
         window = self.cityentry)
 
     # e-mail

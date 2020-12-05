@@ -44,7 +44,8 @@ def Window(self):
                     email = policyfile.readline()
                     assu = policyfile.readline()
                     polins = policyfile.readline()
-                self.txtBox.insert(INSERT, "Patient name : " + line1)
+                self.txtBox.insert(INSERT, "--- Data Patient ---\n")
+                self.txtBox.insert(END, "\nPatient name : " + line1)
                 self.txtBox.insert(END, "\nBirthdate : " + line2)
                 self.txtBox.insert(END, "\nNative : " + native)
                 self.txtBox.insert(END, "\nPhone : " + phone)
@@ -80,8 +81,8 @@ def Window(self):
         try:
             with open('./contact/contact1.txt', 'w') as iofile:
                 iofile.write(namentry.get())
-                iofile.write(birthvar)
-                iofile.write(nativaentry.get())
+                iofile.write("\n" + birthvar)
+                iofile.write("\n" + nativaentry.get())
                 iofile.write("\n" + phonentry.get())
                 iofile.write("\n" + addrentry.get())
                 iofile.write("\n" + cityentry.get())
@@ -101,8 +102,8 @@ def Window(self):
         try:
             with open('./contact/finalfile1.txt', 'w') as terminfile:
                 terminfile.write("Patient name : " + namentry.get())
-                terminfile.write("Birthdate : " + birthvar)
-                terminfile.write("Native : " + nativaentry.get())
+                terminfile.write("\nBirthdate : " + birthvar)
+                terminfile.write("\nNative : " + nativaentry.get())
                 terminfile.write("\nPhone : " + phonentry.get())
                 terminfile.write("\nStreet : " + addrentry.get())
                 terminfile.write("\nCity : " + cityentry.get())
@@ -137,7 +138,7 @@ def Window(self):
             line1 = namefile.readline()
             line2 = namefile.readline()
             txt_pat = line1
-            birthvar = line2
+            birthvar = line2[:-1]
     except FileNotFoundError as callfile:
         print("+ File entryfile.txt doesn't exist !", callfile)
 
@@ -147,7 +148,7 @@ def Window(self):
         self.txt_pat = StringVar()
         self.namentry = Entry(self.can, textvariable=self.txt_pat,
             highlightbackground='grey', bd=4)
-        self.txt_pat.set(line1)
+        self.txt_pat.set(line1[:-1])
         self.namentry_window = self.can.create_window(self.x2, self.y2,
             window = self.namentry)
     except UnboundLocalError as ub_error1:
@@ -180,7 +181,7 @@ def Window(self):
     self.native = StringVar()
     self.nativaentry = Entry(self.can, textvariable=self.native,
         highlightbackground='grey', bd=3)
-    self.native.set(line3)
+    self.native.set(line3[:-1])
     self.nativaentry_window = self.can.create_window(self.x16, self.y16,
         window = self.nativaentry)
 
@@ -197,7 +198,7 @@ def Window(self):
     self.txtphone = StringVar()
     self.phonentry = Entry(self.can, textvariable=self.txtphone,
         highlightbackground='grey', bd=3)
-    self.txtphone.set(line4)
+    self.txtphone.set(line4[:-1])
     self.phonentry_window = self.can.create_window(self.x21, self.y21,
         window = self.phonentry)
 
@@ -214,7 +215,7 @@ def Window(self):
     self.addrtxt = StringVar()
     self.addrentry = Entry(self.can, textvariable=self.addrtxt,
         highlightbackground='grey', bd=4)
-    self.addrtxt.set(line5)
+    self.addrtxt.set(line5[:-1])
     self.addrentry_window = self.can.create_window(self.x31, self.y31,
         window = self.addrentry)
 
@@ -223,7 +224,7 @@ def Window(self):
     self.citytxt = StringVar()
     self.cityentry = Entry(self.can, textvariable=self.citytxt,
         highlightbackground='grey', bd=4)
-    self.citytxt.set(line6)
+    self.citytxt.set(line6[:-1])
     self.cityentry_window = self.can.create_window(self.x32, self.y32,
         window = self.cityentry)
 
@@ -240,7 +241,7 @@ def Window(self):
     self.mailtxt = StringVar()
     self.entrymail = Entry(self.can, textvariable=self.mailtxt,
         highlightbackground='grey', bd=3)
-    self.mailtxt.set(line7)
+    self.mailtxt.set(line7[:-1])
     self.entrymail_window = self.can.create_window(self.x41, self.y41,
         window = self.entrymail)
 
@@ -257,7 +258,7 @@ def Window(self):
     self.assurance = StringVar()
     self.entryassu = Entry(self.can, textvariable=self.assurance,
         highlightbackground='grey', bd=3)
-    self.assurance.set(line8)
+    self.assurance.set(line8[:-1])
     self.entryassu_window = self.can.create_window(self.x51, self.y51,
         window = self.entryassu)
 
@@ -281,7 +282,7 @@ def Window(self):
     self.x52, self.y52 = 350, 620
     self.b52 = Button(self.can, text="Save", font=16,
         width=30, bd=3, bg='RoyalBlue3', fg='yellow',
-        highlightbackground='RoyalBlue3',
+        highlightbackground='cyan',
         activebackground='pale turquoise',
         command = lambda: recorderData(self.namentry, birthvar,
             self.native, self.nativaentry, self.txtphone, self.phonentry,

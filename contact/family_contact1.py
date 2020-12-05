@@ -6,7 +6,7 @@ from tkinter import *
 import os
 
 
-def Window(self):
+def famWind(self):
     """
         Main function to define 
         design for contact interface.

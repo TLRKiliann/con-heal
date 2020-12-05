@@ -2454,77 +2454,76 @@ class Application(Frame):
 
     # Func labo
     def laboResult(self):
-        subprocess.run('./labo/resultlabo1.py', check=True)
+        callLabo1(self)
 
     def laboResult2(self):
-        subprocess.run('./labo/resultlabo2.py', check=True)
+        sucallLabo2(self)
 
     def laboResult3(self):
         callLabo3(self)
-        #subprocess.run('./labo/resultlabo3.py', check=True)
 
     def laboResult4(self):
-        subprocess.run('./labo/resultlabo4.py', check=True)
+        callLabo4(self)
 
     def laboResult5(self):
-        subprocess.run('./labo/resultlabo5.py', check=True)
+        callLabo5(self)
 
     def laboResult6(self):
-        subprocess.run('./labo/resultlabo6.py', check=True)
+        callLabo6(self)
 
     def laboResult7(self):
-        subprocess.run('./labo/resultlabo7.py', check=True)
+        callLabo7(self)
 
     def laboResult8(self):
-        subprocess.run('./labo/resultlabo8.py', check=True)
+        callLabo8(self)
 
     def laboResult9(self):
-        subprocess.run('./labo/resultlabo9.py', check=True)
+        callLabo9(self)
 
     def laboResult10(self):
-        subprocess.run('./labo/resultlabo10.py', check=True)
+        callLabo10(self)
 
     def laboResult11(self):
-        subprocess.run('./labo/resultlabo11.py', check=True)
+        callLabo11(self)
 
     def laboResult12(self):
-        subprocess.run('./labo/resultlabo12.py', check=True)
+        callLabo12(self)
 
     def laboResult13(self):
-        subprocess.run('./labo/resultlabo13.py', check=True)
+        callLabo13(self)
 
     def laboResult14(self):
-        subprocess.run('./labo/resultlabo14.py', check=True)
+        callLabo14(self)
 
     def laboResult15(self):
-        subprocess.run('./labo/resultlabo15.py', check=True)
+        callLabo15(self)
 
     def laboResult16(self):
-        subprocess.run('./labo/resultlabo16.py', check=True)
+        callLabo16(self)
 
     def laboResult17(self):
-        subprocess.run('./labo/resultlabo17.py', check=True)
+        callLabo17(self)
 
     def laboResult18(self):
-        subprocess.run('./labo/resultlabo18.py', check=True)
+        callLabo18(self)
 
     def laboResult19(self):
-        subprocess.run('./labo/resultlabo19.py', check=True)
+        callLabo19(self)
 
     def laboResult20(self):
-        subprocess.run('./labo/resultlabo20.py', check=True)
+        callLabo20(self)
 
     def laboResult21(self):
-        subprocess.run('./labo/resultlabo21.py', check=True)
+        callLabo21(self)
 
     def laboResult22(self):
-        subprocess.run('./labo/resultlabo22.py', check=True)
+        callLabo22(self)
 
     def laboResult23(self):
-        subprocess.run('./labo/resultlabo23.py', check=True)
+        callLabo23(self)
 
     def laboResult24(self):
-        subprocess.run('./labo/resultlabo24.py', check=True)
+        callLabo24(self)
 
     # Menu print
     def nutritionMenu(self):

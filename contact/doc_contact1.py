@@ -248,11 +248,11 @@ def doctorWind(self):
     self.faxtxt = StringVar()
     self.entryfax = Entry(self.can, textvariable=self.faxtxt,
         highlightbackground='grey', bd=3)
-    self.faxtxt.set(line7[:-1])
+    self.faxtxt.set(line7)
     self.entryfax_window = self.can.create_window(self.x51, self.y51,
         window = self.entryfax)
 
-    self.x52, self.y52 = 350, 620
+    self.x52, self.y52 = 350, 570
     self.b52 = Button(self.can, text="Save", font=16,
         width=30, bd=3, bg='RoyalBlue3', fg='yellow',
         highlightbackground='cyan',

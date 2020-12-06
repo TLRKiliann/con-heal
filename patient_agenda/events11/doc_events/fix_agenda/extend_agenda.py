@@ -34,7 +34,7 @@ with open('./newpatient/entryfile11.txt', 'r') as filename:
 textname = StringVar()
 entryName = Entry(fen, textvariable=textname, width=20, 
     highlightbackground='grey', bd=3)
-textname.set(line1)
+textname.set(line1[:-1])
 entryName.pack(in_=top, side=LEFT, padx=10, pady=5)
 
 labelhour = Label(fen, text="Appointment time : ",

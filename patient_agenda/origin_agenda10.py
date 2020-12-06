@@ -135,7 +135,7 @@ if __name__ == '__main__':
             self.entryname = tk.Entry(self.parent, textvariable=self.data_time,
                 font='Times 14', width=22, fg='red2', bg='pale turquoise', bd=2,
                 justify=CENTER)
-            self.data_time.set(line_a)
+            self.data_time.set(line_a[:-1])
 
             self.choose_btn = tk.Button(self.parent, text="1 - Choice a date",
                 font="Times 14", width=20, height=1, fg='yellow', bg='RoyalBlue3',
@@ -180,13 +180,13 @@ if __name__ == '__main__':
                     file.close()
                     subprocess.run('./patient_agenda/events10/entrer_event1.py', check=True)
             except FileNotFoundError as file_creat:
-                    print("+ File not existing!")
-                    print(file_creat)
-                    print("+ File 'patient_calendar.txt' created !")
-                    file = open('./patient_agenda/events10/patient_calendar.txt','wb')
-                    dump(self.data, file)
-                    file.close()
-                    subprocess.run('./patient_agenda/events10/entrer_event1.py', check=True)
+                print("+ File not existing!")
+                print(file_creat)
+                print("+ File 'patient_calendar.txt' created !")
+                file = open('./patient_agenda/events10/patient_calendar.txt','wb')
+                dump(self.data, file)
+                file.close()
+                subprocess.run('./patient_agenda/events10/entrer_event1.py', check=True)
 
         def accessDate(self):
             try:

@@ -27,7 +27,7 @@ with open('./newpatient/entryfile24.txt', 'r') as filename:
     line1=filename.readline()
 
 text_name=StringVar()
-text_name.set(line1)
+text_name.set(line1[:-1])
 Entryname=Entry(fen, textvariable=text_name)
 Entryname.pack(in_=top, side=LEFT, padx=10, pady=20)
 
@@ -42,7 +42,7 @@ with open('./newpatient/entryfile24.txt', 'r') as allerfile:
     lineA3=allerfile.readline()
 
 text_aller=StringVar()
-text_aller.set(lineA3)
+text_aller.set(lineA3[:-1])
 Entryall=Entry(fen, textvariable=text_aller, width=60)
 Entryall.pack(padx=10, pady=5)
 

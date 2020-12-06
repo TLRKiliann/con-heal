@@ -31,7 +31,7 @@ def callLabo17(self):
     self.x2, self.y2 = 720, 45
     entrytext = StringVar()
     self.entryname = Entry(self.can, textvariable=entrytext, width=20)
-    entrytext.set(line1)
+    entrytext.set(line1[:-1])
     self.entryname = self.can.create_window(self.x2, self.y2,
         window = self.entryname)
 

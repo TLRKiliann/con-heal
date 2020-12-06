@@ -35,7 +35,7 @@ def callTreatment24(self):
     self.x3, self.y3 = 670, 80
     self.entrytext = StringVar()
     self.entryName = Entry(self.can, textvariable=self.entrytext, width=50)
-    self.entrytext.set(line3)
+    self.entrytext.set(line3[:-1])
     self.entryName_window = self.can.create_window(self.x3, self.y3, window=self.entryName)
 
     self.x4, self.y4 = 120, 180
@@ -85,7 +85,7 @@ def callTreatment24(self):
     self.name_text = StringVar()
     self.textName = Entry(self.can, textvariable=self.name_text,
         highlightbackground='grey', bd=4)
-    self.name_text.set(line1)
+    self.name_text.set(line1[:-1])
     self.textName_window = self.can.create_window(self.x11, self.y11, window=self.textName)
 
     self.x12, self.y12 = 300, 270

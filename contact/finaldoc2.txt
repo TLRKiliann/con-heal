@@ -1,7 +1,7 @@
-Doctor : Kevin Lynnch
-Phone : 823748
-Mobile : 384727
-Street : Blvd. Artists 18
-City : Heligan-Stead
-e-mail : obol@mail.org
-Fax : 2378348924
+Doctor : 000
+Phone : 1
+Mobile : 2
+Street : 3
+City : 4
+e-mail : 5
+Fax : 6

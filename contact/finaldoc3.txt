@@ -1,0 +1,7 @@
+Doctor : 1111111
+Phone : 8
+Mobile : 9
+Street : 00
+City : 11
+e-mail : 12
+Fax : 13

@@ -30,7 +30,7 @@ with open('./newpatient/entryfile4.txt', 'r') as filename:
 
 textname=StringVar()
 entryName=Entry(root, textvariable=textname)
-textname.set(line_a)
+textname.set(line_a[:-1])
 entryName.pack(in_=top, side=LEFT, padx=10, pady=20)
 
 labelallergy=Label(root, text="Allergy",
@@ -38,7 +38,7 @@ labelallergy=Label(root, text="Allergy",
 labelallergy.pack(padx=5, pady=10)
 
 entrytext=StringVar()
-entrytext.set(line_c)
+entrytext.set(line_c[:-1])
 entryName=Entry(root, textvariable=entrytext, width=60)
 entryName.pack(padx=10, pady=10)
 

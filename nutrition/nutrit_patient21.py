@@ -181,7 +181,7 @@ with open('./newpatient/entryfile21.txt', 'r') as filename:
     line1=filename.readline()
 
 text_entry = StringVar()
-text_entry.set(line1)
+text_entry.set(line1[:-1])
 entryName = Entry(gui, textvariable=text_entry)
 entryName.grid(sticky='e', row=0, column=0, padx=10, pady=10)
 

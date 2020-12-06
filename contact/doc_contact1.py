@@ -24,7 +24,7 @@ def doctorWind(self):
         except FileNotFoundError as errfnf:
             print("+ No file contactdoc1.txt exist", errfnf)
             with open('./contact/contactdoc1.txt', 'w') as testf:
-                print("+ File contactdoc1.txt created !")
+                print("+ File contactdoc1.txt created !", testf)
 
         self.x1, self.y1 = 900, 350
         self.txtBox = Text(self.can, height=15, width=40, font=18, relief=SUNKEN)
@@ -54,6 +54,43 @@ def doctorWind(self):
                 pass
         except FileNotFoundError as err_r:
             print("+ No file contactdoc1.txt exist", err_r)
+
+        try:
+            if os.path.getsize('./contact/contactdoc2.txt'):
+                print("+ Ok, contactdoc2.txt exist (t1)")
+        except FileNotFoundError as nfd2:
+            print("+ No file contactdoc2.txt exist", nfd2)
+            with open('./contact/contactdoc2.txt', 'w') as testfd2:
+                print("+ File contactdoc2.txt created !", testfd2)
+
+        self.x2, self.y2 = 900, 820
+        self.txtBox2 = Text(self.can, height=15, width=40, font=18, relief=SUNKEN)
+        self.txtBox2.delete('1.0', END)
+        self.txtBox2.update()
+        self.ftxtBox2_window = self.can.create_window(self.x2, self.y2, window=self.txtBox2)
+
+        try:
+            if os.path.exists('./contact/contactdoc2.txt'):
+                with open('./contact/contactdoc2.txt', 'r') as policydoc:
+                    docline1 = policydoc.readline()
+                    docphone = policydoc.readline()
+                    dociphone2 = policydoc.readline()
+                    docstreet = policydoc.readline()
+                    docstate = policydoc.readline()
+                    docemail = policydoc.readline()
+                    docfax = policydoc.readline()
+                self.txtBox2.insert(INSERT, "--- Data Doctor 2 ---\n")
+                self.txtBox2.insert(END, "\nDoctor : " + docline1)
+                self.txtBox2.insert(END, "\nPhone : " + docphone)
+                self.txtBox2.insert(END, "\nMobile : " + dociphone2)
+                self.txtBox2.insert(END, "\nStreet : " + docstreet)
+                self.txtBox2.insert(END, "\nCity : " + docstate)
+                self.txtBox2.insert(END, "\ne-mail : " + docemail)
+                self.txtBox2.insert(END, "\nFax : " + docfax)
+            else:
+                pass
+        except FileNotFoundError as err_r2:
+            print("+ No file contactdoc2.txt exist", err_r2)
 
     def recorderData(namentry, txtphone, phonentry, txtmobile,
         mobilentry, addrtxt, addrentry, citytxt, cityentry,
@@ -107,6 +144,53 @@ def doctorWind(self):
 
         allInData()
 
+    def recorderDoc2(namentry2, txtphone2, phonentry2, txtmobile2,
+        mobilentry2, addrtxt2, addrentry2, citytxt2, cityentry2,
+        mailtxt2, entrymail2, faxtxt2, entryfax2):
+
+        try:
+            if os.path.getsize('./contact/contactdoc1.txt'):
+                print("+ Ok, contactdoc2.txt exist (t3)")
+        except FileNotFoundError as errfnf2:
+            print("+ No file contactdoc2.txt exist", errfnf2)
+            with open('./contact/contactdoc2.txt', 'w') as testf2:
+                print("+ File contactdoc2.txt created !", testf2)
+
+        try:
+            with open('./contact/contactdoc2.txt', 'w') as datadoc:
+                datadoc.write("--- Doctor 2 ---\n")
+                datadoc.write(namentry2.get())
+                datadoc.write("\n" + phonentry2.get())
+                datadoc.write("\n" + mobilentry2.get())
+                datadoc.write("\n" + addrentry2.get())
+                datadoc.write("\n" + cityentry2.get())
+                datadoc.write("\n" + entrymail2.get())
+                datadoc.write("\n" + entryfax2.get())
+        except FileNotFoundError as fn2:
+            print("+ File not found !", fn2)
+
+        try:
+            if os.path.getsize('./contact/finaldoc2.txt'):
+                os.remove('./contact/finaldoc2.txt')
+        except FileNotFoundError as err_termin2:
+            print("+ finaldoc2 not found !(t4)", err_termin2)
+            with open('./contact/finaldoc2.txt', 'a+'):
+                print("+ finaldoc2.txt exist!")
+        try:
+            with open('./contact/finaldoc2.txt', 'w') as finalf:
+                finalf.write("Doctor : " + namentry2.get())
+                finalf.write("\nPhone : " + phonentry2.get())
+                finalf.write("\nMobile : " + mobilentry2.get())
+                finalf.write("\nStreet : " + addrentry2.get())
+                finalf.write("\nCity : " + cityentry2.get())
+                finalf.write("\ne-mail : " + entrymail2.get())
+                finalf.write("\nFax : " + entryfax2.get())
+        except FileNotFoundError as err_final2:
+            print("+ finaldoc2.txt not created (t4)", err_final2)
+
+        allInData()
+
+
     allInData()
 
     # Label title
@@ -116,6 +200,14 @@ def doctorWind(self):
         bg='DodgerBlue2', fg='white')
     self.lbltitle_window = self.can.create_window(self.x11, self.y11,
         window = self.lbltitle)
+
+    # Label title2
+    self.x12, self.y12 = 470, 100
+    self.labtitle = Label(self.can, text="Doctors",
+        font=('Times', 40, 'italic'),
+        bg='DodgerBlue2', fg='coral')
+    self.labtitle_window = self.can.create_window(self.x12, self.y12,
+        window = self.labtitle)
 
     # Name
     self.x1, self.y1 = 250, 200
@@ -138,7 +230,7 @@ def doctorWind(self):
             line9 = namefile.readline()
     except FileNotFoundError as callfile:
         print("+ File contactdoc1.txt doesn't exist !", callfile)
-
+        
     try:
         self.txt_pat = linex
         self.x2, self.y2 = 450, 200
@@ -262,5 +354,151 @@ def doctorWind(self):
             self.addrtxt, self.addrentry, self.citytxt, self.cityentry,
             self.mailtxt, self.entrymail, self.faxtxt, self.entryfax))
     self.fb52_window = self.can.create_window(self.x52, self.y52, window=self.b52)
+
+    # Name
+    self.x60, self.y60 = 250, 670
+    self.lbldocname = Label(self.can, text="Doctor :",
+        font=('helvetica', 18, 'bold'),
+        bg='DodgerBlue2', fg='white')
+    self.lbldocname_window = self.can.create_window(self.x60, self.y60,
+        window = self.lbldocname)
+
+    try:
+        with open('./contact/contactdoc2.txt', 'r') as docfile2:
+            docline1 = docfile2.readline()
+            docline2 = docfile2.readline()
+            docline3 = docfile2.readline()
+            docline4 = docfile2.readline()
+            docline5 = docfile2.readline()
+            docline6 = docfile2.readline()
+            docline7 = docfile2.readline()
+            docline8 = docfile2.readline()
+            docline9 = docfile2.readline()
+    except FileNotFoundError as callfiledoc2:
+        print("+ File contactdoc2.txt doesn't exist !", callfiledoc2)
+
+    try:
+        self.txt_doc2 = docline1
+        self.x62, self.y62 = 450, 670
+        self.txt_doc2 = StringVar()
+        self.namentry2 = Entry(self.can, textvariable=self.txt_doc2,
+            highlightbackground='grey', bd=4)
+        self.txt_doc2.set(docline1[:-1])
+        self.namentry2_window = self.can.create_window(self.x62, self.y62,
+            window = self.namentry2)
+    except UnboundLocalError as err_doc2:
+        print("+ File 1 not created !", err_doc2)
+
+    # Phone
+    self.x63, self.y63 = 250, 720
+    self.phonelabel2 = Label(self.can, text="Phone :",
+        font=('helvetica', 18, 'bold'),
+        bg='DodgerBlue2', fg='white')
+    self.phonelabel2_window = self.can.create_window(self.x63, self.y63,
+        window = self.phonelabel2)
+
+    self.txtphone2 = docline2
+    self.x64, self.y64 = 450, 720
+    self.txtphone2 = StringVar()
+    self.phonentry2 = Entry(self.can, textvariable=self.txtphone2,
+        highlightbackground='grey', bd=3)
+    self.txtphone2.set(docline2[:-1])
+    self.phonentry2_window = self.can.create_window(self.x64, self.y64,
+        window = self.phonentry2)
+
+    # Mobile
+    self.x65, self.y65 = 250, 770
+    self.lblmobile2 = Label(self.can, text="Mobile :",
+        font=('helvetica', 18, 'bold'),
+        bg='DodgerBlue2', fg='white')
+    self.lblmobile2_window = self.can.create_window(self.x65, self.y65,
+        window = self.lblmobile2)
+
+    self.txtmobile2 = docline3
+    self.x66, self.y66 = 450, 770
+    self.txtmobile2 = StringVar()
+    self.mobilentry2 = Entry(self.can, textvariable=self.txtmobile2,
+        highlightbackground='grey', bd=3)
+    self.txtmobile2.set(docline3[:-1])
+    self.mobilentry2_window = self.can.create_window(self.x66, self.y66,
+        window = self.mobilentry2)
+
+    # Street
+    self.x67, self.y67 = 250, 820
+    self.addrlabel2 = Label(self.can, text="Street :",
+        font=('helvetica', 18, 'bold'),
+        bg='DodgerBlue2', fg='white')
+    self.addrlabel2_window = self.can.create_window(self.x67, self.y67,
+        window = self.addrlabel2)
+
+    self.addrtxt2 = docline4
+    self.x68, self.y68 = 450, 820
+    self.addrtxt2 = StringVar()
+    self.addrentry2 = Entry(self.can, textvariable=self.addrtxt2,
+        highlightbackground='grey', bd=4)
+    self.addrtxt2.set(docline4[:-1])
+    self.addrentry2_window = self.can.create_window(self.x68, self.y68,
+        window = self.addrentry2)
+
+    self.x69, self.y69 = 250, 870
+    self.labcity2 = Label(self.can, text="City :",
+        font=('helvetica', 18, 'bold'),
+        bg='DodgerBlue2', fg='white')
+    self.labcity2_window = self.can.create_window(self.x69, self.y69,
+        window = self.labcity2)
+
+    self.citytxt2 = docline5
+    self.x70, self.y70 = 450, 870
+    self.citytxt2 = StringVar()
+    self.cityentry2 = Entry(self.can, textvariable=self.citytxt2,
+        highlightbackground='grey', bd=4)
+    self.citytxt2.set(docline5[:-1])
+    self.cityentry2_window = self.can.create_window(self.x70, self.y70,
+        window = self.cityentry2)
+
+    # e-mail
+    self.x71, self.y71 = 250, 920
+    self.mailabel2 = Label(self.can, text="e-mail :",
+        font=('helvetica', 18, 'bold'),
+        bg='DodgerBlue2', fg='white')
+    self.mailabel2_window = self.can.create_window(self.x71, self.y71,
+        window = self.mailabel2)
+
+    self.mailtxt2 = docline6
+    self.x72, self.y72 = 450, 920
+    self.mailtxt2 = StringVar()
+    self.entrymail2 = Entry(self.can, textvariable=self.mailtxt2,
+        highlightbackground='grey', bd=3)
+    self.mailtxt2.set(docline6[:-1])
+    self.entrymail2_window = self.can.create_window(self.x72, self.y72,
+        window = self.entrymail2)
+
+    # Fax
+    self.x73, self.y73 = 250, 970
+    self.lblfax2 = Label(self.can, text="Fax :",
+        font=('helvetica', 18, 'bold'),
+        bg='DodgerBlue2', fg='white')
+    self.lblfax2_window = self.can.create_window(self.x73, self.y73,
+        window = self.lblfax2)
+
+    self.faxtxt2 = docline7
+    self.x74, self.y74 = 450, 970
+    self.faxtxt2 = StringVar()
+    self.entryfax2 = Entry(self.can, textvariable=self.faxtxt2,
+        highlightbackground='grey', bd=3)
+    self.faxtxt2.set(docline7)
+    self.entryfax2_window = self.can.create_window(self.x74, self.y74,
+        window = self.entryfax2)
+
+    self.x75, self.y75 = 350, 1040
+    self.bat75 = Button(self.can, text="Save", font=16,
+        width=30, bd=3, bg='RoyalBlue3', fg='yellow',
+        highlightbackground='cyan',
+        activebackground='pale turquoise',
+        command = lambda: recorderDoc2(self.namentry2, self.txtphone2,
+            self.phonentry2, self.txtmobile2, self.mobilentry2,
+            self.addrtxt2, self.addrentry2, self.citytxt2, self.cityentry2,
+            self.mailtxt2, self.entrymail2, self.faxtxt2, self.entryfax2))
+    self.fbat75_window = self.can.create_window(self.x75, self.y75, window=self.bat75)
 
     self.can.configure(scrollregion=self.can.bbox(ALL))

@@ -1,7 +1,7 @@
-Doctor : Blatter Herald
-Phone : 021/3826371
-Mobile : 079/2199755
-Street : 3
-City : 45
-e-mail : 555
-Fax : 02292378492
+Doctor : Lynnett Pick
+Phone : 293472894
+Mobile : 1287389132
+Street : Wisteria Lane Av.
+City : Fairview
+e-mail : fake@mail.com
+Fax : 3928748924

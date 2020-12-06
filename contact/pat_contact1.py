@@ -26,7 +26,7 @@ def Window(self):
             with open('./contact/contact1.txt', 'w') as testf:
                 print("+ File contact1.txt created !")
 
-        self.x1, self.y1 = 900, 400
+        self.x1, self.y1 = 900, 380
         self.txtBox = Text(self.can, height=20, width=40, font=18, relief=SUNKEN)
         self.txtBox.delete('1.0', END)
         self.txtBox.update()
@@ -65,7 +65,7 @@ def Window(self):
         """
             Display origin
         """
-        self.x1, self.y1 = 900, 400
+        self.x1, self.y1 = 900, 380
         self.txtBox = Text(self.can, height=20, width=40, font=18, relief=SUNKEN)
         self.txtBox.delete('1.0', END)
         self.ftxtBox_window = self.can.create_window(self.x1, self.y1, window=self.txtBox)
@@ -124,6 +124,14 @@ def Window(self):
         bg='DodgerBlue2', fg='white')
     self.lbltitle_window = self.can.create_window(self.x11, self.y11,
         window = self.lbltitle)
+
+    # Label title2
+    self.x12, self.y12 = 470, 100
+    self.labtitle = Label(self.can, text="Patient",
+        font=('Times', 40, 'italic'),
+        bg='DodgerBlue2', fg='coral')
+    self.labtitle_window = self.can.create_window(self.x12, self.y12,
+        window = self.labtitle)
 
     # Name
     self.x1, self.y1 = 250, 200

@@ -26,7 +26,7 @@ def homecsWind(self):
             with open('./contact/hcscontact1.txt', 'w') as testf:
                 print("+ File hcscontact1.txt created !")
 
-        self.x1, self.y1 = 900, 350
+        self.x1, self.y1 = 900, 330
         self.txtBox = Text(self.can, height=15, width=40, font=18, relief=SUNKEN)
         self.txtBox.delete('1.0', END)
         self.txtBox.update()
@@ -59,7 +59,7 @@ def homecsWind(self):
         """
             Display origin
         """
-        self.x1, self.y1 = 900, 350
+        self.x1, self.y1 = 900, 330
         self.txtBox = Text(self.can, height=15, width=40, font=18, relief=SUNKEN)
         self.txtBox.delete('1.0', END)
         self.ftxtBox_window = self.can.create_window(self.x1, self.y1, window=self.txtBox)
@@ -112,6 +112,14 @@ def homecsWind(self):
         bg='DodgerBlue2', fg='white')
     self.lbltitle_window = self.can.create_window(self.x11, self.y11,
         window = self.lbltitle)
+
+    # Label title2
+    self.x12, self.y12 = 600, 100
+    self.labtitle = Label(self.can, text="Home Care System",
+        font=('Times', 40, 'italic'),
+        bg='DodgerBlue2', fg='coral')
+    self.labtitle_window = self.can.create_window(self.x12, self.y12,
+        window = self.labtitle)
 
     # Name
     self.x1, self.y1 = 250, 200

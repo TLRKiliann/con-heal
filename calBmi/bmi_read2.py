@@ -32,12 +32,12 @@ with open('./newpatient/entryfile2.txt', 'r') as filename:
     line_c = filename.readline()
 
 text_name = StringVar()
-text_name.set(line_a)
+text_name.set(line_a[:-1])
 Entryname = Entry(fen, textvariable=text_name)
 Entryname.pack(in_=top, side=LEFT, pady=20)
 
 text_all = StringVar()
-text_all.set(line_c)
+text_all.set(line_c[:-1])
 Entryall = Entry(fen, textvariable=text_all, width=60)
 Entryall.pack(padx=10, pady=5)
 

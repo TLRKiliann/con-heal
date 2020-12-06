@@ -36,7 +36,7 @@ with open('./newpatient/entryfile21.txt', 'r') as filename:
 textentry = StringVar()
 entrylab = Entry(fen, textvariable=textentry, width=20, 
     highlightbackground='grey', bd=3)
-textentry.set(line1)
+textentry.set(line1[:-1])
 entrylab.pack(in_=top, side=RIGHT, padx=10, pady=10)
 
 textBox = Text(fen, height=20, width=60, font=18)

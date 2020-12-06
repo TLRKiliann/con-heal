@@ -21,7 +21,7 @@ with open('./newpatient/entryfile5.txt', 'r') as filename:
 
 textname=StringVar()
 entryName=Entry(fen, textvariable=textname)
-textname.set(line1)
+textname.set(line1[:-1])
 entryName.grid(sticky='e', row=0, column=0, padx=30, pady=20)
 
 def recordOption():

@@ -562,14 +562,12 @@ labelname = Label(text='Name : ',
 labelname.pack(pady=10)
 
 firstpat = StringVar()
-#firstpat.set('Firstname')
 firstname_pat = Entry(gui, textvariable=firstpat,
     highlightbackground='light sky blue',
     bd=4)
 firstname_pat.pack()
 
 surname = StringVar()
-#surname.set("Lastname")
 sur_pat = Entry(gui, textvariable=surname,
     highlightbackground='light sky blue',
     bd=4)
@@ -581,7 +579,6 @@ labelbirth = Label(text='Birth Date : ', font="Times 14 bold",
 labelbirth.pack(pady=10)
 
 birthvalue=StringVar()
-#birthvalue.set('Format: 00/00/0000')
 birth_entree = Entry(gui, textvariable=birthvalue,
     highlightbackground='light sky blue', bd=4)
 birth_entree.pack()
@@ -606,7 +603,6 @@ labeltrans = Label(text='Transmissible Disease : ',
 labeltrans.pack(pady=10)
 
 transdisval = StringVar()
-#transdisval.set('None')
 diseasetrans = Entry(gui, textvariable=transdisval,
     highlightbackground='light sky blue',
     bd=4)
@@ -619,7 +615,6 @@ labeldiag = Label(text='Diagnosis : ',
 labeldiag.pack(pady=10)
 
 diagnosis = StringVar()
-#diagnosis.set('Diagnostic (main)')
 diagnos_pat = Entry(gui, textvariable=diagnosis,
     highlightbackground='light sky blue',
     bd=4)

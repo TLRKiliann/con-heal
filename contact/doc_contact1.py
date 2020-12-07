@@ -279,7 +279,7 @@ def doctorWind(self):
     self.lbltitle = Label(self.can, text="Contact",
         font=('helvetica', 40, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.lbltitle_window = self.can.create_window(self.x11, self.y11,
+    self.wlbltitle_window = self.can.create_window(self.x11, self.y11,
         window = self.lbltitle)
 
     # Label title2
@@ -287,7 +287,7 @@ def doctorWind(self):
     self.labtitle = Label(self.can, text="Doctors",
         font=('Times', 40, 'italic'),
         bg='DodgerBlue2', fg='coral')
-    self.labtitle_window = self.can.create_window(self.x12, self.y12,
+    self.wlabtitle_window = self.can.create_window(self.x12, self.y12,
         window = self.labtitle)
 
     # Name
@@ -295,7 +295,7 @@ def doctorWind(self):
     self.labelname = Label(self.can, text="Doctor :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.labelname_window = self.can.create_window(self.x1, self.y1,
+    self.wlabelname_window = self.can.create_window(self.x1, self.y1,
         window = self.labelname)
 
     try:
@@ -319,7 +319,7 @@ def doctorWind(self):
         self.namentry = Entry(self.can, textvariable=self.txt_pat,
             highlightbackground='grey', bd=4)
         self.txt_pat.set(linex[:-1])
-        self.namentry_window = self.can.create_window(self.x2, self.y2,
+        self.wnamentry_window = self.can.create_window(self.x2, self.y2,
             window = self.namentry)
     except UnboundLocalError as ub_error1:
         print("+ File 1 not created !", ub_error1)
@@ -329,7 +329,7 @@ def doctorWind(self):
     self.phonelabel = Label(self.can, text="Phone :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.phonelabel_window = self.can.create_window(self.x20, self.y20,
+    self.wphonelabel_window = self.can.create_window(self.x20, self.y20,
         window = self.phonelabel)
 
     self.txtphone = line2
@@ -338,7 +338,7 @@ def doctorWind(self):
     self.phonentry = Entry(self.can, textvariable=self.txtphone,
         highlightbackground='grey', bd=3)
     self.txtphone.set(line2[:-1])
-    self.phonentry_window = self.can.create_window(self.x21, self.y21,
+    self.wphonentry_window = self.can.create_window(self.x21, self.y21,
         window = self.phonentry)
 
     # Mobile
@@ -346,7 +346,7 @@ def doctorWind(self):
     self.lblmobile = Label(self.can, text="Mobile :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.lblmobile_window = self.can.create_window(self.x20, self.y20,
+    self.wlblmobile_window = self.can.create_window(self.x20, self.y20,
         window = self.lblmobile)
 
     self.txtmobile = line3
@@ -355,7 +355,7 @@ def doctorWind(self):
     self.mobilentry = Entry(self.can, textvariable=self.txtmobile,
         highlightbackground='grey', bd=3)
     self.txtmobile.set(line3[:-1])
-    self.mobilentry_window = self.can.create_window(self.x21, self.y21,
+    self.wmobilentry_window = self.can.create_window(self.x21, self.y21,
         window = self.mobilentry)
 
     # Street
@@ -363,7 +363,7 @@ def doctorWind(self):
     self.addrlabel = Label(self.can, text="Street :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.addrlabel_window = self.can.create_window(self.x30, self.y30,
+    self.waddrlabel_window = self.can.create_window(self.x30, self.y30,
         window = self.addrlabel)
 
     self.addrtxt = line4
@@ -372,14 +372,14 @@ def doctorWind(self):
     self.addrentry = Entry(self.can, textvariable=self.addrtxt,
         highlightbackground='grey', bd=4)
     self.addrtxt.set(line4[:-1])
-    self.addrentry_window = self.can.create_window(self.x31, self.y31,
+    self.waddrentry_window = self.can.create_window(self.x31, self.y31,
         window = self.addrentry)
 
     self.x32, self.y32 = 250, 400
     self.labcity = Label(self.can, text="City :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.labcity_window = self.can.create_window(self.x32, self.y32,
+    self.wlabcity_window = self.can.create_window(self.x32, self.y32,
         window = self.labcity)
 
     self.citytxt = line5
@@ -388,7 +388,7 @@ def doctorWind(self):
     self.cityentry = Entry(self.can, textvariable=self.citytxt,
         highlightbackground='grey', bd=4)
     self.citytxt.set(line5[:-1])
-    self.cityentry_window = self.can.create_window(self.x33, self.y33,
+    self.wcityentry_window = self.can.create_window(self.x33, self.y33,
         window = self.cityentry)
 
     # e-mail
@@ -396,7 +396,7 @@ def doctorWind(self):
     self.mailabel = Label(self.can, text="e-mail :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.mailabel_window = self.can.create_window(self.x40, self.y40,
+    self.wmailabel_window = self.can.create_window(self.x40, self.y40,
         window = self.mailabel)
 
     self.mailtxt = line6
@@ -405,7 +405,7 @@ def doctorWind(self):
     self.entrymail = Entry(self.can, textvariable=self.mailtxt,
         highlightbackground='grey', bd=3)
     self.mailtxt.set(line6[:-1])
-    self.entrymail_window = self.can.create_window(self.x41, self.y41,
+    self.wentrymail_window = self.can.create_window(self.x41, self.y41,
         window = self.entrymail)
 
     # Fax
@@ -413,7 +413,7 @@ def doctorWind(self):
     self.lblfax = Label(self.can, text="Fax :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.lblfax_window = self.can.create_window(self.x50, self.y50,
+    self.wlblfax_window = self.can.create_window(self.x50, self.y50,
         window = self.lblfax)
 
     self.faxtxt = line7
@@ -422,7 +422,7 @@ def doctorWind(self):
     self.entryfax = Entry(self.can, textvariable=self.faxtxt,
         highlightbackground='grey', bd=3)
     self.faxtxt.set(line7[:-1])
-    self.entryfax_window = self.can.create_window(self.x51, self.y51,
+    self.wentryfax_window = self.can.create_window(self.x51, self.y51,
         window = self.entryfax)
 
     self.x52, self.y52 = 350, 570
@@ -441,7 +441,7 @@ def doctorWind(self):
     self.lbldocname = Label(self.can, text="Doctor :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.lbldocname_window = self.can.create_window(self.x60, self.y60,
+    self.wlbldocname_window = self.can.create_window(self.x60, self.y60,
         window = self.lbldocname)
 
     try:
@@ -465,7 +465,7 @@ def doctorWind(self):
         self.namentry2 = Entry(self.can, textvariable=self.txt_doc2,
             highlightbackground='grey', bd=4)
         self.txt_doc2.set(docline1[:-1])
-        self.namentry2_window = self.can.create_window(self.x62, self.y62,
+        self.wnamentry2_window = self.can.create_window(self.x62, self.y62,
             window = self.namentry2)
     except UnboundLocalError as err_doc2:
         print("+ File 1 not created !", err_doc2)
@@ -475,7 +475,7 @@ def doctorWind(self):
     self.phonelabel2 = Label(self.can, text="Phone :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.phonelabel2_window = self.can.create_window(self.x63, self.y63,
+    self.wphonelabel2_window = self.can.create_window(self.x63, self.y63,
         window = self.phonelabel2)
 
     self.txtphone2 = docline2
@@ -484,7 +484,7 @@ def doctorWind(self):
     self.phonentry2 = Entry(self.can, textvariable=self.txtphone2,
         highlightbackground='grey', bd=3)
     self.txtphone2.set(docline2[:-1])
-    self.phonentry2_window = self.can.create_window(self.x64, self.y64,
+    self.wphonentry2_window = self.can.create_window(self.x64, self.y64,
         window = self.phonentry2)
 
     # Mobile
@@ -492,7 +492,7 @@ def doctorWind(self):
     self.lblmobile2 = Label(self.can, text="Mobile :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.lblmobile2_window = self.can.create_window(self.x65, self.y65,
+    self.wlblmobile2_window = self.can.create_window(self.x65, self.y65,
         window = self.lblmobile2)
 
     self.txtmobile2 = docline3
@@ -501,7 +501,7 @@ def doctorWind(self):
     self.mobilentry2 = Entry(self.can, textvariable=self.txtmobile2,
         highlightbackground='grey', bd=3)
     self.txtmobile2.set(docline3[:-1])
-    self.mobilentry2_window = self.can.create_window(self.x66, self.y66,
+    self.wmobilentry2_window = self.can.create_window(self.x66, self.y66,
         window = self.mobilentry2)
 
     # Street
@@ -509,7 +509,7 @@ def doctorWind(self):
     self.addrlabel2 = Label(self.can, text="Street :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.addrlabel2_window = self.can.create_window(self.x67, self.y67,
+    self.waddrlabel2_window = self.can.create_window(self.x67, self.y67,
         window = self.addrlabel2)
 
     self.addrtxt2 = docline4
@@ -518,14 +518,14 @@ def doctorWind(self):
     self.addrentry2 = Entry(self.can, textvariable=self.addrtxt2,
         highlightbackground='grey', bd=4)
     self.addrtxt2.set(docline4[:-1])
-    self.addrentry2_window = self.can.create_window(self.x68, self.y68,
+    self.waddrentry2_window = self.can.create_window(self.x68, self.y68,
         window = self.addrentry2)
 
     self.x69, self.y69 = 250, 870
     self.labcity2 = Label(self.can, text="City :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.labcity2_window = self.can.create_window(self.x69, self.y69,
+    self.wlabcity2_window = self.can.create_window(self.x69, self.y69,
         window = self.labcity2)
 
     self.citytxt2 = docline5
@@ -534,7 +534,7 @@ def doctorWind(self):
     self.cityentry2 = Entry(self.can, textvariable=self.citytxt2,
         highlightbackground='grey', bd=4)
     self.citytxt2.set(docline5[:-1])
-    self.cityentry2_window = self.can.create_window(self.x70, self.y70,
+    self.wcityentry2_window = self.can.create_window(self.x70, self.y70,
         window = self.cityentry2)
 
     # e-mail
@@ -542,7 +542,7 @@ def doctorWind(self):
     self.mailabel2 = Label(self.can, text="e-mail :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.mailabel2_window = self.can.create_window(self.x71, self.y71,
+    self.wmailabel2_window = self.can.create_window(self.x71, self.y71,
         window = self.mailabel2)
 
     self.mailtxt2 = docline6
@@ -551,7 +551,7 @@ def doctorWind(self):
     self.entrymail2 = Entry(self.can, textvariable=self.mailtxt2,
         highlightbackground='grey', bd=3)
     self.mailtxt2.set(docline6[:-1])
-    self.entrymail2_window = self.can.create_window(self.x72, self.y72,
+    self.wentrymail2_window = self.can.create_window(self.x72, self.y72,
         window = self.entrymail2)
 
     # Fax
@@ -559,7 +559,7 @@ def doctorWind(self):
     self.lblfax2 = Label(self.can, text="Fax :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.lblfax2_window = self.can.create_window(self.x73, self.y73,
+    self.wlblfax2_window = self.can.create_window(self.x73, self.y73,
         window = self.lblfax2)
 
     self.faxtxt2 = docline7
@@ -568,7 +568,7 @@ def doctorWind(self):
     self.entryfax2 = Entry(self.can, textvariable=self.faxtxt2,
         highlightbackground='grey', bd=3)
     self.faxtxt2.set(docline7)
-    self.entryfax2_window = self.can.create_window(self.x74, self.y74,
+    self.wentryfax2_window = self.can.create_window(self.x74, self.y74,
         window = self.entryfax2)
 
     self.x75, self.y75 = 350, 1040
@@ -587,7 +587,7 @@ def doctorWind(self):
     self.lbldocname3 = Label(self.can, text="Doctor :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.lbldocname3_window = self.can.create_window(self.x80, self.y80,
+    self.wlbldocname3_window = self.can.create_window(self.x80, self.y80,
         window = self.lbldocname3)
 
     try:
@@ -611,7 +611,7 @@ def doctorWind(self):
         self.namentry3 = Entry(self.can, textvariable=self.txt_doc3,
             highlightbackground='grey', bd=4)
         self.txt_doc3.set(doc3line1[:-1])
-        self.namentry3_window = self.can.create_window(self.x81, self.y81,
+        self.wnamentry3_window = self.can.create_window(self.x81, self.y81,
             window = self.namentry3)
     except UnboundLocalError as err_doc3:
         print("+ File 1 not created !", err_doc3)
@@ -621,7 +621,7 @@ def doctorWind(self):
     self.phonelabel3 = Label(self.can, text="Phone :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.phonelabel3_window = self.can.create_window(self.x82, self.y82,
+    self.wphonelabel3_window = self.can.create_window(self.x82, self.y82,
         window = self.phonelabel3)
 
     self.txtphone3 = doc3line2
@@ -630,7 +630,7 @@ def doctorWind(self):
     self.phonentry3 = Entry(self.can, textvariable=self.txtphone3,
         highlightbackground='grey', bd=3)
     self.txtphone3.set(doc3line2[:-1])
-    self.phonentry3_window = self.can.create_window(self.x83, self.y83,
+    self.wphonentry3_window = self.can.create_window(self.x83, self.y83,
         window = self.phonentry3)
 
     # Mobile
@@ -638,7 +638,7 @@ def doctorWind(self):
     self.lblmobile3 = Label(self.can, text="Mobile :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.lblmobile3_window = self.can.create_window(self.x84, self.y84,
+    self.wlblmobile3_window = self.can.create_window(self.x84, self.y84,
         window = self.lblmobile3)
 
     self.txtmobile3 = doc3line3
@@ -647,7 +647,7 @@ def doctorWind(self):
     self.mobilentry3 = Entry(self.can, textvariable=self.txtmobile3,
         highlightbackground='grey', bd=3)
     self.txtmobile3.set(doc3line3[:-1])
-    self.mobilentry3_window = self.can.create_window(self.x85, self.y85,
+    self.wmobilentry3_window = self.can.create_window(self.x85, self.y85,
         window = self.mobilentry3)
 
     # Street
@@ -655,7 +655,7 @@ def doctorWind(self):
     self.addrlabel3 = Label(self.can, text="Street :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.addrlabel3_window = self.can.create_window(self.x86, self.y86,
+    self.waddrlabel3_window = self.can.create_window(self.x86, self.y86,
         window = self.addrlabel3)
 
     self.addrtxt3 = doc3line4
@@ -664,14 +664,14 @@ def doctorWind(self):
     self.addrentry3 = Entry(self.can, textvariable=self.addrtxt3,
         highlightbackground='grey', bd=4)
     self.addrtxt3.set(doc3line4[:-1])
-    self.addrentry3_window = self.can.create_window(self.x87, self.y87,
+    self.waddrentry3_window = self.can.create_window(self.x87, self.y87,
         window = self.addrentry3)
 
     self.x88, self.y88 = 250, 1340
     self.labcity3 = Label(self.can, text="City :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.labcity3_window = self.can.create_window(self.x88, self.y88,
+    self.wlabcity3_window = self.can.create_window(self.x88, self.y88,
         window = self.labcity3)
 
     self.citytxt3 = doc3line5
@@ -680,7 +680,7 @@ def doctorWind(self):
     self.cityentry3 = Entry(self.can, textvariable=self.citytxt3,
         highlightbackground='grey', bd=4)
     self.citytxt3.set(doc3line5[:-1])
-    self.cityentry3_window = self.can.create_window(self.x89, self.y89,
+    self.wcityentry3_window = self.can.create_window(self.x89, self.y89,
         window = self.cityentry3)
 
     # e-mail
@@ -688,7 +688,7 @@ def doctorWind(self):
     self.mailabel3 = Label(self.can, text="e-mail :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.mailabel3_window = self.can.create_window(self.x90, self.y90,
+    self.wmailabel3_window = self.can.create_window(self.x90, self.y90,
         window = self.mailabel3)
 
     self.mailtxt3 = doc3line6
@@ -697,7 +697,7 @@ def doctorWind(self):
     self.entrymail3 = Entry(self.can, textvariable=self.mailtxt3,
         highlightbackground='grey', bd=3)
     self.mailtxt3.set(doc3line6[:-1])
-    self.entrymail3_window = self.can.create_window(self.x91, self.y91,
+    self.wentrymail3_window = self.can.create_window(self.x91, self.y91,
         window = self.entrymail3)
 
     # Fax
@@ -705,7 +705,7 @@ def doctorWind(self):
     self.lblfax3 = Label(self.can, text="Fax :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.lblfax3_window = self.can.create_window(self.x92, self.y92,
+    self.wlblfax3_window = self.can.create_window(self.x92, self.y92,
         window = self.lblfax3)
 
     self.faxtxt3 = doc3line7
@@ -714,7 +714,7 @@ def doctorWind(self):
     self.entryfax3 = Entry(self.can, textvariable=self.faxtxt3,
         highlightbackground='grey', bd=3)
     self.faxtxt3.set(doc3line7[:-1])
-    self.entryfax3_window = self.can.create_window(self.x93, self.y93,
+    self.wentryfax3_window = self.can.create_window(self.x93, self.y93,
         window = self.entryfax3)
 
     self.x94, self.y94 = 350, 1530

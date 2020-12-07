@@ -122,7 +122,7 @@ def Window(self):
     self.lbltitle = Label(self.can, text="Contact",
         font=('helvetica', 40, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.lbltitle_window = self.can.create_window(self.x11, self.y11,
+    self.wlbltitle_window = self.can.create_window(self.x11, self.y11,
         window = self.lbltitle)
 
     # Label title2
@@ -130,7 +130,7 @@ def Window(self):
     self.labtitle = Label(self.can, text="Patient",
         font=('Times', 40, 'italic'),
         bg='DodgerBlue2', fg='coral')
-    self.labtitle_window = self.can.create_window(self.x12, self.y12,
+    self.wlabtitle_window = self.can.create_window(self.x12, self.y12,
         window = self.labtitle)
 
     # Name
@@ -138,7 +138,7 @@ def Window(self):
     self.labelname = Label(self.can, text="Patient Name :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.labelname_window = self.can.create_window(self.x1, self.y1,
+    self.wlabelname_window = self.can.create_window(self.x1, self.y1,
         window = self.labelname)
 
     try:
@@ -157,7 +157,7 @@ def Window(self):
         self.namentry = Entry(self.can, textvariable=self.txt_pat,
             highlightbackground='grey', bd=4)
         self.txt_pat.set(line1[:-1])
-        self.namentry_window = self.can.create_window(self.x2, self.y2,
+        self.wnamentry_window = self.can.create_window(self.x2, self.y2,
             window = self.namentry)
     except UnboundLocalError as ub_error1:
         print("+ File 1 not created !", ub_error1)
@@ -181,7 +181,7 @@ def Window(self):
     self.nativelab = Label(self.can, text="Native :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.nativelab_window = self.can.create_window(self.x15, self.y15,
+    self.wnativelab_window = self.can.create_window(self.x15, self.y15,
         window = self.nativelab)
 
     self.native = line3
@@ -190,7 +190,7 @@ def Window(self):
     self.nativaentry = Entry(self.can, textvariable=self.native,
         highlightbackground='grey', bd=3)
     self.native.set(line3[:-1])
-    self.nativaentry_window = self.can.create_window(self.x16, self.y16,
+    self.wnativaentry_window = self.can.create_window(self.x16, self.y16,
         window = self.nativaentry)
 
     # Phone
@@ -198,7 +198,7 @@ def Window(self):
     self.phonelabel = Label(self.can, text="Phone Number :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.phonelabel_window = self.can.create_window(self.x20, self.y20,
+    self.wphonelabel_window = self.can.create_window(self.x20, self.y20,
         window = self.phonelabel)
 
     self.txtphone = line4
@@ -207,7 +207,7 @@ def Window(self):
     self.phonentry = Entry(self.can, textvariable=self.txtphone,
         highlightbackground='grey', bd=3)
     self.txtphone.set(line4[:-1])
-    self.phonentry_window = self.can.create_window(self.x21, self.y21,
+    self.wphonentry_window = self.can.create_window(self.x21, self.y21,
         window = self.phonentry)
 
     # Street
@@ -215,7 +215,7 @@ def Window(self):
     self.addrlabel = Label(self.can, text="Street :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.addrlabel_window = self.can.create_window(self.x30, self.y30,
+    self.waddrlabel_window = self.can.create_window(self.x30, self.y30,
         window = self.addrlabel)
 
     self.addrtxt = line5
@@ -224,14 +224,14 @@ def Window(self):
     self.addrentry = Entry(self.can, textvariable=self.addrtxt,
         highlightbackground='grey', bd=4)
     self.addrtxt.set(line5[:-1])
-    self.addrentry_window = self.can.create_window(self.x31, self.y31,
+    self.waddrentry_window = self.can.create_window(self.x31, self.y31,
         window = self.addrentry)
 
     self.x32, self.y32 = 250, 400
     self.labcity = Label(self.can, text="City :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.labcity_window = self.can.create_window(self.x32, self.y32,
+    self.wlabcity_window = self.can.create_window(self.x32, self.y32,
         window = self.labcity)
 
     self.citytxt = line6
@@ -240,7 +240,7 @@ def Window(self):
     self.cityentry = Entry(self.can, textvariable=self.citytxt,
         highlightbackground='grey', bd=4)
     self.citytxt.set(line6[:-1])
-    self.cityentry_window = self.can.create_window(self.x33, self.y33,
+    self.wcityentry_window = self.can.create_window(self.x33, self.y33,
         window = self.cityentry)
 
     # e-mail
@@ -248,7 +248,7 @@ def Window(self):
     self.mailabel = Label(self.can, text="e-mail :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.mailabel_window = self.can.create_window(self.x40, self.y40,
+    self.wmailabel_window = self.can.create_window(self.x40, self.y40,
         window = self.mailabel)
 
     self.mailtxt = line7
@@ -257,7 +257,7 @@ def Window(self):
     self.entrymail = Entry(self.can, textvariable=self.mailtxt,
         highlightbackground='grey', bd=3)
     self.mailtxt.set(line7[:-1])
-    self.entrymail_window = self.can.create_window(self.x41, self.y41,
+    self.wentrymail_window = self.can.create_window(self.x41, self.y41,
         window = self.entrymail)
 
     # Assurance
@@ -265,7 +265,7 @@ def Window(self):
     self.mailabel = Label(self.can, text="Insurance :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.mailabel_window = self.can.create_window(self.x50, self.y50,
+    self.wmailabel_window = self.can.create_window(self.x50, self.y50,
         window = self.mailabel)
 
     self.assurance = line8
@@ -274,7 +274,7 @@ def Window(self):
     self.entryassu = Entry(self.can, textvariable=self.assurance,
         highlightbackground='grey', bd=3)
     self.assurance.set(line8[:-1])
-    self.entryassu_window = self.can.create_window(self.x51, self.y51,
+    self.wentryassu_window = self.can.create_window(self.x51, self.y51,
         window = self.entryassu)
 
     # Police
@@ -282,7 +282,7 @@ def Window(self):
     self.mailabel = Label(self.can, text="Policy Number :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.mailabel_window = self.can.create_window(self.x50, self.y50,
+    self.wmailabel_window = self.can.create_window(self.x50, self.y50,
         window = self.mailabel)
 
     self.policy = line9
@@ -291,7 +291,7 @@ def Window(self):
     self.entrypolicy = Entry(self.can, textvariable=self.policy,
         highlightbackground='grey', bd=3)
     self.policy.set(line9)
-    self.entrypolicy_window = self.can.create_window(self.x51, self.y51,
+    self.wentrypolicy_window = self.can.create_window(self.x51, self.y51,
         window = self.entrypolicy)
 
     self.x52, self.y52 = 350, 620

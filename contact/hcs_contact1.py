@@ -110,7 +110,7 @@ def homecsWind(self):
     self.lbltitle = Label(self.can, text="Contact",
         font=('helvetica', 40, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.lbltitle_window = self.can.create_window(self.x11, self.y11,
+    self.wlbltitle_window = self.can.create_window(self.x11, self.y11,
         window = self.lbltitle)
 
     # Label title2
@@ -118,7 +118,7 @@ def homecsWind(self):
     self.labtitle = Label(self.can, text="Home Care System",
         font=('Times', 40, 'italic'),
         bg='DodgerBlue2', fg='coral')
-    self.labtitle_window = self.can.create_window(self.x12, self.y12,
+    self.wlabtitle_window = self.can.create_window(self.x12, self.y12,
         window = self.labtitle)
 
     # Name
@@ -126,7 +126,7 @@ def homecsWind(self):
     self.labelname = Label(self.can, text="Name :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.labelname_window = self.can.create_window(self.x1, self.y1,
+    self.wlabelname_window = self.can.create_window(self.x1, self.y1,
         window = self.labelname)
 
     try:
@@ -150,7 +150,7 @@ def homecsWind(self):
         self.namentry = Entry(self.can, textvariable=self.txt_pat,
             highlightbackground='grey', bd=4)
         self.txt_pat.set(linex[:-1])
-        self.namentry_window = self.can.create_window(self.x2, self.y2,
+        self.wnamentry_window = self.can.create_window(self.x2, self.y2,
             window = self.namentry)
     except UnboundLocalError as ub_error1:
         print("+ File 1 not created !", ub_error1)
@@ -160,7 +160,7 @@ def homecsWind(self):
     self.phonelabel = Label(self.can, text="Phone :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.phonelabel_window = self.can.create_window(self.x20, self.y20,
+    self.wphonelabel_window = self.can.create_window(self.x20, self.y20,
         window = self.phonelabel)
 
     self.txtphone = line2
@@ -169,7 +169,7 @@ def homecsWind(self):
     self.phonentry = Entry(self.can, textvariable=self.txtphone,
         highlightbackground='grey', bd=3)
     self.txtphone.set(line2[:-1])
-    self.phonentry_window = self.can.create_window(self.x21, self.y21,
+    self.wphonentry_window = self.can.create_window(self.x21, self.y21,
         window = self.phonentry)
 
     # Mobile
@@ -177,7 +177,7 @@ def homecsWind(self):
     self.lblmobile = Label(self.can, text="Mobile :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.lblmobile_window = self.can.create_window(self.x20, self.y20,
+    self.wlblmobile_window = self.can.create_window(self.x20, self.y20,
         window = self.lblmobile)
 
     self.txtmobile = line3
@@ -186,7 +186,7 @@ def homecsWind(self):
     self.mobilentry = Entry(self.can, textvariable=self.txtmobile,
         highlightbackground='grey', bd=3)
     self.txtmobile.set(line3[:-1])
-    self.mobilentry_window = self.can.create_window(self.x21, self.y21,
+    self.wmobilentry_window = self.can.create_window(self.x21, self.y21,
         window = self.mobilentry)
 
     # Street
@@ -194,7 +194,7 @@ def homecsWind(self):
     self.addrlabel = Label(self.can, text="Street :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.addrlabel_window = self.can.create_window(self.x30, self.y30,
+    self.waddrlabel_window = self.can.create_window(self.x30, self.y30,
         window = self.addrlabel)
 
     self.addrtxt = line4
@@ -203,14 +203,14 @@ def homecsWind(self):
     self.addrentry = Entry(self.can, textvariable=self.addrtxt,
         highlightbackground='grey', bd=4)
     self.addrtxt.set(line4[:-1])
-    self.addrentry_window = self.can.create_window(self.x31, self.y31,
+    self.waddrentry_window = self.can.create_window(self.x31, self.y31,
         window = self.addrentry)
 
     self.x32, self.y32 = 250, 400
     self.labcity = Label(self.can, text="City :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.labcity_window = self.can.create_window(self.x32, self.y32,
+    self.wlabcity_window = self.can.create_window(self.x32, self.y32,
         window = self.labcity)
 
     self.citytxt = line5
@@ -219,7 +219,7 @@ def homecsWind(self):
     self.cityentry = Entry(self.can, textvariable=self.citytxt,
         highlightbackground='grey', bd=4)
     self.citytxt.set(line5[:-1])
-    self.cityentry_window = self.can.create_window(self.x33, self.y33,
+    self.wcityentry_window = self.can.create_window(self.x33, self.y33,
         window = self.cityentry)
 
     # e-mail
@@ -227,7 +227,7 @@ def homecsWind(self):
     self.mailabel = Label(self.can, text="e-mail :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
-    self.mailabel_window = self.can.create_window(self.x40, self.y40,
+    self.wmailabel_window = self.can.create_window(self.x40, self.y40,
         window = self.mailabel)
 
     self.mailtxt = line6
@@ -236,7 +236,7 @@ def homecsWind(self):
     self.entrymail = Entry(self.can, textvariable=self.mailtxt,
         highlightbackground='grey', bd=3)
     self.mailtxt.set(line6)
-    self.entrymail_window = self.can.create_window(self.x41, self.y41,
+    self.wentrymail_window = self.can.create_window(self.x41, self.y41,
         window = self.entrymail)
 
     self.x52, self.y52 = 350, 520

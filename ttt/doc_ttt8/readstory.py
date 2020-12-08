@@ -23,20 +23,20 @@ def importationFile2(fichier2, encodage="Utf-8"):
 
 fen=Tk()
 fen.title("Historic of ttt")
-fen.configure(background='RoyalBlue4')
+fen.configure(background='DodgerBlue2')
 
 # To place side by side labelo + entrylab
-top = Frame(fen, bg='RoyalBlue4')
-bottom = Frame(fen, bg='RoyalBlue4')
+top = Frame(fen, bg='DodgerBlue2')
+bottom = Frame(fen, bg='DodgerBlue2')
 top.pack(side=TOP)
 bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
 
 labelo=Label(fen, text="Historic of ttt : ", width=15,
-    font='Times 18 bold', fg='cyan', bg='RoyalBlue4')
+    font='Times 18 bold', fg='aquamarine', bg='DodgerBlue2')
 labelo.pack(in_=top, side=LEFT, pady=20)
 
 labelallergy=Label(fen, text="Allergy",
-    font='Arial 18 bold', fg='coral', bg='RoyalBlue4')
+    font='Arial 18 bold', fg='coral', bg='DodgerBlue2')
 labelallergy.pack(padx=5, pady=5)
 
 # To read name in Entry widget
@@ -44,8 +44,8 @@ with open('./newpatient/entryfile8.txt', 'r') as filename:
     line1=filename.readline()
 
 text_name=StringVar()
-text_name.set(line1)
 Entryname=Entry(fen, textvariable=text_name)
+text_name.set(line1[:-1])
 Entryname.pack(in_=top, side=LEFT, pady=20)
 
 # To read allergy in Entry widget
@@ -55,16 +55,16 @@ with open('./newpatient/entryfile8.txt', 'r') as allerfile:
     lineA3=allerfile.readline()
 
 text_all=StringVar()
-text_all.set(lineA3)
 Entryall=Entry(fen, textvariable=text_all, width=60)
+text_all.set(lineA3[:-1])
 Entryall.pack(padx=10, pady=5)
 
 textBox=Text(fen, height=15, width=60, font=18)
 textBox.pack(padx=30, pady=30)
 
 buttonClose=Button(fen, text="Quit", width=10, bd=3, fg='white', 
-    bg='RoyalBlue3', highlightbackground='RoyalBlue4',
-    activebackground='dark turquoise', 
+    bg='RoyalBlue3', highlightbackground='cyan',
+    activebackground='pale turquoise', 
     activeforeground='navy', command=quit)
 buttonClose.pack(side='right', padx=10, pady=10)
 

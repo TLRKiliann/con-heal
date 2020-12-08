@@ -1,0 +1,15 @@
+{
+    "data": [
+        {
+            "Date": "08/12/2020",
+            "Date of introduction": "03 July 2008",
+            "Date of end": "03/08/2027",
+            "Treatment": "Drug101",
+            "Dosage": "101mg",
+            "Reserve": 1,
+            "First-line": 1,
+            "Second-line": 0,
+            "Number/24h": "2"
+        }
+    ]
+}

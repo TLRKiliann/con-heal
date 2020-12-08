@@ -62,7 +62,7 @@ Entryall.pack(padx=10, pady=5)
 textBox=Text(fen, height=15, width=60, font=18)
 textBox.pack(padx=30, pady=30)
 
-buttonClose=Button(fen, text="Quit", width=10, bd=3, fg='cyan', 
+buttonClose=Button(fen, text="Quit", width=10, bd=3, fg='white', 
     bg='RoyalBlue3', highlightbackground='cyan',
     activebackground='pale turquoise', 
     activeforeground='navy', command=quit)

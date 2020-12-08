@@ -44,8 +44,8 @@ with open('./newpatient/entryfile2.txt', 'r') as filename:
     line1=filename.readline()
 
 text_name=StringVar()
-text_name.set(line1[:-1])
 Entryname=Entry(fen, textvariable=text_name)
+text_name.set(line1[:-1])
 Entryname.pack(in_=top, side=LEFT, pady=20)
 
 # To read allergy in Entry widget
@@ -55,8 +55,8 @@ with open('./newpatient/entryfile2.txt', 'r') as allerfile:
     lineA3=allerfile.readline()
 
 text_all=StringVar()
-text_all.set(lineA3[:-1])
 Entryall=Entry(fen, textvariable=text_all, width=60)
+text_all.set(lineA3[:-1])
 Entryall.pack(padx=10, pady=5)
 
 textBox=Text(fen, height=15, width=60, font=18)

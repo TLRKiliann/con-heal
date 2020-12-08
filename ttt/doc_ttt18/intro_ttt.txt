@@ -1,0 +1,13 @@
+Date : 08/12/2020
+Heure : 21:49:39
+Name : Charles Asnavour
+Date of introduction : 04 June 2006
+Nom du ttt : Drugtest
+Dosage du ttt : 100 mg
+Matin : 1
+Midi : 1
+Soir : 1
+Nuit : 1
+Date of end : 06/06/2025
+Signature : etc
+

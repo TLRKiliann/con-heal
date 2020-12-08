@@ -1,0 +1,15 @@
+{
+    "data": [
+        {
+            "Date": "08/12/2020",
+            "Date of introduction": "04 June 2006",
+            "Date of end": "06/06/2025",
+            "Treatment": "Drugtest",
+            "Dosage": "100 mg",
+            "Matin": "1",
+            "Midi": "1",
+            "Soir": "1",
+            "Nuit": "1"
+        }
+    ]
+}

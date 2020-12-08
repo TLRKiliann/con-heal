@@ -191,30 +191,34 @@ print("\nThat seems correct!\n")
 class app(Frame):
     def __init__(self, master = None):
         Frame.__init__(self, master)
-        self.text_name=StringVar()
         self.labelo=Label(master, text="Treatments for : ", width=20,
-            font='Times 18 bold', fg='cyan', bg='RoyalBlue4')
+            font='Times 18 bold', fg='aquamarine', bg='DodgerBlue2')
         self.labelo.grid(sticky='w', row=0, column=0, padx=30, pady=5)
+
         with open('./newpatient/entryfile18.txt', 'r') as file:
             line1=file.readline()
 
-        self.text_name.set(line1)
+        self.text_name=StringVar()
         self.entryName=Entry(master, textvariable=self.text_name)
+        self.text_name.set(line1[:-1])
         self.entryName.grid(sticky='w', row=0, column=0, padx=250, pady=5)
+
         self.labelallergy=Label(master, text="Allergy : ",
-            font='Arial 18 bold', fg='coral', bg='RoyalBlue4')
+            font='Arial 18 bold', fg='coral', bg='DodgerBlue2')
         self.labelallergy.grid(row=0, column=0, padx=10, pady=5)
+
         with open('./newpatient/entryfile18.txt', 'r') as allerfile:
             lineA1=allerfile.readline()
             lineA2=allerfile.readline()
             lineA3=allerfile.readline()
 
         self.text_all=StringVar()
-        self.text_all.set(lineA3)
         self.Entryall=Entry(master, textvariable=self.text_all, width=60)
+        self.text_all.set(lineA3[:-1])
         self.Entryall.grid(sticky='e', row=0, column=0, padx=120, pady=5)
+
         self.buttQuit=Button(master, text="Close", bg='RoyalBlue3', fg='cyan',
-            activebackground='cyan', activeforeground='navy', command=quit)
+            activebackground='pale turquoise', activeforeground='navy', command=quit)
         self.buttQuit.grid(sticky='e', row=0, column=0, padx=10)
         self.grid()
         self.create_widgets()
@@ -394,5 +398,5 @@ os.remove('./ttt/doc_ttt18/data_end.json')
 
 prog = app()
 prog.master.title('Medication')
-prog.master.configure(bg='RoyalBlue4')
+prog.master.configure(bg='DodgerBlue2')
 prog.mainloop()

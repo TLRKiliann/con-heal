@@ -262,12 +262,12 @@ C14.grid(row=14, column=0)
 
 buttonTocheck=Button(fen, text="Save", width=10, fg='yellow',
     bg='RoyalBlue3', bd=3, highlightbackground='light sky blue',
-    activebackground='dark turquoise', command=recordTofile)
+    activebackground='pale turquoise', command=recordTofile)
 buttonTocheck.grid(sticky='w', row=15, column=0, padx=20, pady=10)
 
 buttonQuit=Button(fen, text='Quit', width=10, fg='white',
     bg='RoyalBlue3', bd=3, highlightbackground='light sky blue',
-    activebackground='dark turquoise', command=quit)
+    activebackground='pale turquoise', command=quit)
 buttonQuit.grid(sticky='e',row=15, column=0, padx=20, pady=10)
 
 fen.mainloop()

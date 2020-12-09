@@ -129,19 +129,19 @@ textBox=Text(root, height=15, width=60, font=18, relief=SUNKEN)
 textBox.pack(padx=30, pady=30)
 
 buttonLire=Button(root, text="Read", bd=3, width=10, 
-    fg='cyan', bg='RoyalBlue3', activebackground='dark turquoise',
+    fg='cyan', bg='RoyalBlue3', activebackground='pale turquoise',
     activeforeground='navy', highlightbackground='light sky blue',
     command=lectureFic)
 buttonLire.pack(side='left', padx=10, pady=10)
 
 buttonEnter=Button(root, text="Save", bd=3, width=10,
-    fg='yellow', bg='RoyalBlue3', activebackground='dark turquoise',
+    fg='yellow', bg='RoyalBlue3', activebackground='pale turquoise',
     activeforeground='navy', highlightbackground='light sky blue',
     command=messFromSafeButt)
 buttonEnter.pack(side='left', padx=10, pady=10)
 
 buttonQuitter=Button(root, text="Quit", bd=3, width=10,
-    fg='white', bg='RoyalBlue3', activebackground='cyan',
+    fg='white', bg='RoyalBlue3', activebackground='pale turquoise',
     activeforeground='navy', highlightbackground='light sky blue',
     command=quit)
 buttonQuitter.pack(side='right', padx=10, pady=10)

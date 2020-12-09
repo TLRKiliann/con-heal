@@ -140,7 +140,7 @@ buttonEnter=Button(root, text="Save", bd=3, width=10,
 buttonEnter.pack(side='left', padx=10, pady=10)
 
 buttonQuitter=Button(root, text="Quit", bd=3, width=10,
-    fg='white', bg='RoyalBlue3', activebackground='cyan',
+    fg='white', bg='RoyalBlue3', activebackground='pale turquoise',
     activeforeground='navy', highlightbackground='light sky blue',
     command=quit)
 buttonQuitter.pack(side='right', padx=10, pady=10)

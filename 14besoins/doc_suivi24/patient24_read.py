@@ -8,17 +8,17 @@ import os
 
 
 fen=Tk()
-fen.title("Care and monitoring")
-fen.configure(background='cyan')
+fen.title("Time-Track")
+fen.configure(background='DodgerBlue2')
 
 # To place side by side labelo + entrylab
-top = Frame(fen, bg='cyan')
-bottom = Frame(fen, bg='cyan')
+top = Frame(fen, bg='DodgerBlue2')
+bottom = Frame(fen, bg='DodgerBlue2')
 top.pack(side=TOP)
 bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
 
 labelo=Label(fen, text="Care and monitoring : ",
-    font='Times 18 bold', fg='navy', bg='cyan')
+    font='Times 18 bold', fg='navy', bg='DodgerBlue2')
 labelo.pack(in_=top, side=LEFT, padx=5, pady=20)
 
 # To read name in Entry widget
@@ -33,7 +33,7 @@ Entryname=Entry(fen, textvariable=text_name)
 Entryname.pack(in_=top, side=LEFT, padx=10, pady=20)
 
 labelallergy=Label(fen, text="Allergy",
-    font='Arial 18 bold', fg='coral', bg='cyan')
+    font='Arial 18 bold', fg='coral', bg='DodgerBlue2')
 labelallergy.pack(padx=5, pady=5)
 
 text_all=StringVar()
@@ -53,7 +53,7 @@ textBox.pack(padx=30, pady=30)
 
 buttonClose=Button(fen, text="Quit", width=10, bd=3,
     fg='white', bg='RoyalBlue3',
-    activebackground='dark turquoise', activeforeground='navy',
+    activebackground='pale turquoise', activeforeground='navy',
     highlightbackground='light sky blue', command=quit)
 buttonClose.pack(side='right', padx=10, pady=10)
 

@@ -791,57 +791,57 @@ def callResident(self):
         print("+ File 10 not created !", ub_error10)
 
     self.x101, self.y101 = 291, 518
-    self.b101 = Button(self.can, width=8, font=16,
+    self.b101 = Button(self.can, text="Update", font=16, width=8,
         fg='aquamarine', bg='RoyalBlue3',
-        activebackground='pale turquoise', text="Update",
+        activebackground='pale turquoise',
         command=self.updateLink10)
     self.fb101_window = self.can.create_window(self.x101,
         self.y101, window=self.b101)
 
     self.x102, self.y102 = 449, 518
-    self.b102 = Button(self.can, width=18, font=16,
-        fg='aquamarine', bg='RoyalBlue3',
-        activebackground='pale turquoise', text="Diagnostic + ATCD",
+    self.b102 = Button(self.can, text="Diagnostic + ATCD",
+        font=16, width=18, fg='aquamarine', bg='RoyalBlue3',
+        activebackground='pale turquoise',
         command=self.diag10)
     self.fb102_window = self.can.create_window(self.x102,
         self.y102, window=self.b102)
 
     self.x103, self.y103 = 617, 518
-    self.b103 = Button(self.can, width=10, font=16,
-        fg='aquamarine', bg='RoyalBlue3',
-        activebackground='pale turquoise', text="Treatments",
+    self.b103 = Button(self.can, text="Treatments", font=16,
+        width=10, fg='aquamarine', bg='RoyalBlue3',
+        activebackground='pale turquoise',
         command=self.tttMed10)
     self.fb103_window = self.can.create_window(self.x103,
         self.y103, window=self.b103)
 
     self.x104, self.y104 = 745, 518
-    self.b104 = Button(self.can, width=10, font=16,
-        fg='aquamarine', bg='RoyalBlue3',
-        activebackground='pale turquoise', text="Laboratory",
+    self.b104 = Button(self.can, text="Laboratory", font=16,
+        width=10, fg='aquamarine', bg='RoyalBlue3',
+        activebackground='pale turquoise',
         command=self.laboResult10)
     self.fb104_window = self.can.create_window(self.x104,
         self.y104, window=self.b104)
 
     self.x105, self.y105 = 873, 518
-    self.b105 = Button(self.can, width=10, font=16,
-        fg='aquamarine', bg='RoyalBlue3',
-        activebackground='pale turquoise', text="Medical Visit",
+    self.b105 = Button(self.can, text="Medical Visit",
+        font=16, width=10, fg='aquamarine', bg='RoyalBlue3',
+        activebackground='pale turquoise',
         command=self.visitMed10)
     self.fb105_window = self.can.create_window(self.x105,
         self.y105, window=self.b105)
 
     self.x106, self.y106 = 1001, 518
-    self.b106 = Button(self.can, width=10, font=16,
-        fg='aquamarine', bg='RoyalBlue3',
-        activebackground='pale turquoise', text="Intolerance",
+    self.b106 = Button(self.can, text="Intolerance", font=16,
+        width=10, fg='aquamarine', bg='RoyalBlue3',
+        activebackground='pale turquoise',
         command=self.nutritionMenu10)
     self.fb106_window = self.can.create_window(self.x106,
         self.y106, window=self.b106)
 
     self.x107, self.y107 = 1129, 518
-    self.b107 = Button(self.can, width=10, font=16,
-        fg='aquamarine', bg='RoyalBlue3',
-        activebackground='pale turquoise', text="BMI",
+    self.b107 = Button(self.can, text="BMI", font=16,
+        width=10, fg='aquamarine', bg='RoyalBlue3',
+        activebackground='pale turquoise',
         command=self.calculB10)
     self.fb107_window = self.can.create_window(self.x107,
         self.y107, window=self.b107)
@@ -857,8 +857,7 @@ def callResident(self):
         self.new_data11 = line11
         self.x110, self.y110 = 149, 550
         self.new_data11 = StringVar()
-        self.d110 = Entry(self.can,
-            textvariable=self.new_data11,
+        self.d110 = Entry(self.can, textvariable=self.new_data11,
             highlightbackground='grey', bd=4)
         self.new_data11.set(line11[:-1])
         self.fd110_window = self.can.create_window(self.x110,
@@ -867,50 +866,57 @@ def callResident(self):
         print("+ File 11 not created !", ub_error11)
 
     self.x111, self.y111 = 291, 550
-    self.b111 = Button(self.can, width=8, font=16, fg='RoyalBlue4',
-        activebackground='pale turquoise', text="Update",
+    self.b111 = Button(self.can, text="Update", font=16,
+        width=8, fg='RoyalBlue4',
+        activebackground='pale turquoise',
         command=self.updateLink11)
     self.fb111_window = self.can.create_window(self.x111,
         self.y111, window=self.b111)
 
     self.x112, self.y112 = 449, 550
-    self.b112 = Button(self.can, width=18, font=16, fg='RoyalBlue4',
-        activebackground='pale turquoise', text="Diagnostic + ATCD",
+    self.b112 = Button(self.can, text="Diagnostic + ATCD",
+        font=16, width=18, fg='RoyalBlue4',
+        activebackground='pale turquoise',
         command=self.diag11)
     self.fb112_window = self.can.create_window(self.x112,
         self.y112, window=self.b112)
 
     self.x113, self.y113 = 617, 550
-    self.b113 = Button(self.can, width=10, font=16, fg='RoyalBlue4',
-        activebackground='pale turquoise', text="Treatments",
+    self.b113 = Button(self.can, text="Treatments", font=16,
+        width=10, fg='RoyalBlue4',
+        activebackground='pale turquoise',
         command=self.tttMed11)
     self.fb113_window = self.can.create_window(self.x113,
         self.y113, window=self.b113)
 
     self.x114, self.y114 = 745, 550
-    self.b114 = Button(self.can, width=10, font=16, fg='RoyalBlue4',
-        activebackground='pale turquoise', text="Laboratory",
+    self.b114 = Button(self.can, text="Laboratory", font=16,
+        width=10, fg='RoyalBlue4',
+        activebackground='pale turquoise',
         command=self.laboResult11)
     self.fb114_window = self.can.create_window(self.x114,
         self.y114, window=self.b114)
 
     self.x115, self.y115 = 873, 550
-    self.b115 = Button(self.can, width=10, font=16, fg='RoyalBlue4',
-        activebackground='pale turquoise', text="Medical Visit",
+    self.b115 = Button(self.can, text="Medical Visit",
+        font=16, width=10, fg='RoyalBlue4',
+        activebackground='pale turquoise',
         command=self.visitMed11)
     self.fb115_window = self.can.create_window(self.x115,
         self.y115, window=self.b115)
 
     self.x116, self.y116 = 1001, 550
-    self.b116 = Button(self.can, width=10, font=16, fg='RoyalBlue4',
-        activebackground='pale turquoise', text="Intolerance",
+    self.b116 = Button(self.can, text="Intolerance",
+        font=16, width=10, fg='RoyalBlue4',
+        activebackground='pale turquoise',
         command=self.nutritionMenu11)
     self.fb116_window = self.can.create_window(self.x116,
         self.y116, window=self.b116)
 
     self.x117, self.y117 = 1129, 550
-    self.b117 = Button(self.can, width=10, font=16, fg='RoyalBlue4',
-        activebackground='pale turquoise', text="BMI",
+    self.b117 = Button(self.can, text="BMI", font=16,
+        width=10, fg='RoyalBlue4',
+        activebackground='pale turquoise',
         command=self.calculB11)
     self.fb117_window = self.can.create_window(self.x117,
         self.y117, window=self.b117)
@@ -926,8 +932,7 @@ def callResident(self):
         self.new_data12 = line12
         self.x120, self.y120 = 149, 582
         self.new_data12 = StringVar()
-        self.d120 = Entry(self.can,
-            textvariable=self.new_data12,
+        self.d120 = Entry(self.can, textvariable=self.new_data12,
             highlightbackground='grey', bd=4)
         self.new_data12.set(line12[:-1])
         self.fd120_window = self.can.create_window(self.x120,
@@ -936,57 +941,57 @@ def callResident(self):
         print("+ File 12 not created !", ub_error12)
 
     self.x121, self.y121 = 291, 582
-    self.b121 = Button(self.can, width=8, font=16,
-        fg='aquamarine', bg='RoyalBlue3',
-        activebackground='pale turquoise', text="Update",
+    self.b121 = Button(self.can, text="Update", font=16,
+        width=8, fg='aquamarine', bg='RoyalBlue3',
+        activebackground='pale turquoise',
         command=self.updateLink12)
     self.fb121_window = self.can.create_window(self.x121,
         self.y121, window=self.b121)
 
     self.x122, self.y122 = 449, 582
-    self.b122 = Button(self.can, width=18, font=16,
-        fg='aquamarine', bg='RoyalBlue3',
-        activebackground='pale turquoise', text="Diagnostic + ATCD",
+    self.b122 = Button(self.can, text="Diagnostic + ATCD",
+        font=16, width=18, fg='aquamarine', bg='RoyalBlue3',
+        activebackground='pale turquoise',
         command=self.diag12)
     self.fb122_window = self.can.create_window(self.x122,
         self.y122, window=self.b122)
 
     self.x123, self.y123 = 617, 582
-    self.b123 = Button(self.can, width=10, font=16,
-        fg='aquamarine', bg='RoyalBlue3',
-        activebackground='pale turquoise', text="Treatments",
+    self.b123 = Button(self.can, text="Treatments",
+        font=16, width=10, fg='aquamarine', bg='RoyalBlue3',
+        activebackground='pale turquoise',
         command=self.tttMed12)
     self.fb123_window = self.can.create_window(self.x123,
         self.y123, window=self.b123)
 
     self.x124, self.y124 = 745, 582
-    self.b124 = Button(self.can, width=10, font=16,
-        fg='aquamarine', bg='RoyalBlue3',
-        activebackground='pale turquoise', text="Laboratory",
+    self.b124 = Button(self.can, text="Laboratory", font=16,
+        width=10, fg='aquamarine', bg='RoyalBlue3',
+        activebackground='pale turquoise',
         command=self.laboResult12)
     self.fb124_window = self.can.create_window(self.x124,
         self.y124, window=self.b124)
 
     self.x125, self.y125 = 873, 582
-    self.b125 = Button(self.can, width=10, font=16,
-        fg='aquamarine', bg='RoyalBlue3',
-        activebackground='pale turquoise', text="Medical Visit",
+    self.b125 = Button(self.can, text="Medical Visit",
+        font=16, width=10, fg='aquamarine', bg='RoyalBlue3',
+        activebackground='pale turquoise',
         command=self.visitMed12)
     self.fb125_window = self.can.create_window(self.x125,
         self.y125, window=self.b125)
 
     self.x126, self.y126 = 1001, 582
-    self.b126 = Button(self.can, width=10, font=16,
-        fg='aquamarine', bg='RoyalBlue3',
-        activebackground='pale turquoise', text="Intolerance",
+    self.b126 = Button(self.can, text="Intolerance", font=16,
+        width=10, fg='aquamarine', bg='RoyalBlue3',
+        activebackground='pale turquoise',
         command=self.nutritionMenu12)
     self.fb126_window = self.can.create_window(self.x126,
         self.y126, window=self.b126)
 
     self.x127, self.y127 = 1129, 582
-    self.b127 = Button(self.can, width=10, font=16,
-        fg='aquamarine', bg='RoyalBlue3',
-        activebackground='pale turquoise', text="BMI",
+    self.b127 = Button(self.can, text="BMI", font=16,
+        width=10, fg='aquamarine', bg='RoyalBlue3',
+        activebackground='pale turquoise',
         command=self.calculB12)
     self.fb127_window = self.can.create_window(self.x127,
         self.y127, window=self.b127)
@@ -1002,8 +1007,7 @@ def callResident(self):
         self.new_data13 = line13
         self.x130, self.y130 = 149, 614
         self.new_data13 = StringVar()
-        self.d130 = Entry(self.can,
-            textvariable=self.new_data13,
+        self.d130 = Entry(self.can, textvariable=self.new_data13,
             highlightbackground='grey', bd=4)
         self.new_data13.set(line13[:-1])
         self.fd130_window = self.can.create_window(self.x130,
@@ -1012,50 +1016,57 @@ def callResident(self):
         print("+ File 13 not created !", ub_error13)
 
     self.x131, self.y131 = 291, 614
-    self.b131 = Button(self.can, width=8, font=16, fg='RoyalBlue4',
-        activebackground='pale turquoise', text="Update",
+    self.b131 = Button(self.can, text="Update", font=16,
+        width=8, fg='RoyalBlue4',
+        activebackground='pale turquoise',
         command=self.updateLink13)
     self.fb131_window = self.can.create_window(self.x131,
         self.y131, window=self.b131)
 
     self.x132, self.y132 = 449, 614
-    self.b132 = Button(self.can, width=18, font=16, fg='RoyalBlue4',
-        activebackground='pale turquoise', text="Diagnostic + ATCD",
+    self.b132 = Button(self.can, text="Diagnostic + ATCD",
+        font=16, width=18, fg='RoyalBlue4',
+        activebackground='pale turquoise',
         command=self.diag13)
     self.fb132_window = self.can.create_window(self.x132,
         self.y132, window=self.b132)
 
     self.x133, self.y133 = 617, 614
-    self.b133 = Button(self.can, width=10, font=16, fg='RoyalBlue4',
-        activebackground='pale turquoise', text="Treatments",
+    self.b133 = Button(self.can, text="Treatments",
+        font=16, width=10, fg='RoyalBlue4',
+        activebackground='pale turquoise',
         command=self.tttMed13)
     self.fb133_window = self.can.create_window(self.x133,
         self.y133, window=self.b133)
 
     self.x134, self.y134 = 745, 614
-    self.b134 = Button(self.can, width=10, font=16, fg='RoyalBlue4',
-        activebackground='pale turquoise', text="Laboratory",
+    self.b134 = Button(self.can, text="Laboratory",
+        font=16, width=10, fg='RoyalBlue4',
+        activebackground='pale turquoise',
         command=self.laboResult13)
     self.fb134_window = self.can.create_window(self.x134,
         self.y134, window=self.b134)
 
     self.x135, self.y135 = 873, 614
-    self.b135 = Button(self.can, width=10, font=16, fg='RoyalBlue4',
-        activebackground='pale turquoise', text="Medical Visit",
+    self.b135 = Button(self.can, text="Medical Visit",
+        font=16, width=10, fg='RoyalBlue4',
+        activebackground='pale turquoise',
         command=self.visitMed13)
     self.fb135_window = self.can.create_window(self.x135,
         self.y135, window=self.b135)
 
     self.x136, self.y136 = 1001, 614
-    self.b136 = Button(self.can, width=10, font=16, fg='RoyalBlue4',
-        activebackground='pale turquoise', text="Intolerance",
+    self.b136 = Button(self.can, text="Intolerance",
+        font=16, width=10, fg='RoyalBlue4',
+        activebackground='pale turquoise',
         command=self.nutritionMenu13)
     self.fb136_window = self.can.create_window(self.x136,
         self.y136, window=self.b136)
 
     self.x137, self.y137 = 1129, 614
-    self.b137 = Button(self.can, width=10, font=16, fg='RoyalBlue4',
-        activebackground='pale turquoise', text="BMI",
+    self.b137 = Button(self.can, text="BMI", font=16,
+        width=10, fg='RoyalBlue4',
+        activebackground='pale turquoise',
         command=self.calculB13)
     self.fb137_window = self.can.create_window(self.x137,
         self.y137, window=self.b137)
@@ -1071,8 +1082,7 @@ def callResident(self):
         self.new_data14 = line14
         self.x140, self.y140 = 149, 646
         self.new_data14 = StringVar()
-        self.d140 = Entry(self.can,
-            textvariable=self.new_data14,
+        self.d140 = Entry(self.can, textvariable=self.new_data14,
             highlightbackground='grey', bd=4)
         self.new_data14.set(line14[:-1])
         self.fd140_window = self.can.create_window(self.x140,
@@ -1081,62 +1091,62 @@ def callResident(self):
         print("+ File 14 not created !", ub_error14)
 
     self.x141, self.y141 = 291, 646
-    self.b141 = Button(self.can, width=8, font=16,
-        fg='aquamarine', bg='RoyalBlue3',
-        activebackground='pale turquoise', text="Update",
+    self.b141 = Button(self.can, text="Update", font=16,
+        width=8, fg='aquamarine', bg='RoyalBlue3',
+        activebackground='pale turquoise',
         command=self.updateLink14)
     self.fb141_window = self.can.create_window(self.x141,
         self.y141, window=self.b141)
 
     self.x142, self.y142 = 449, 646
-    self.b142 = Button(self.can, width=18, font=16,
-        fg='aquamarine', bg='RoyalBlue3',
-        activebackground='pale turquoise', text="Diagnostic + ATCD",
+    self.b142 = Button(self.can, text="Diagnostic + ATCD",
+        font=16, width=18, fg='aquamarine', bg='RoyalBlue3',
+        activebackground='pale turquoise',
         command=self.diag14)
     self.fb142_window = self.can.create_window(self.x142,
         self.y142, window=self.b142)
 
     self.x143, self.y143 = 617, 646
-    self.b143 = Button(self.can, width=10, font=16,
-        fg='aquamarine', bg='RoyalBlue3',
-        activebackground='pale turquoise', text="Treatments",
+    self.b143 = Button(self.can, text="Treatments", font=16,
+        width=10, fg='aquamarine', bg='RoyalBlue3',
+        activebackground='pale turquoise',
         command=self.tttMed14)
     self.fb143_window = self.can.create_window(self.x143,
         self.y143, window=self.b143)
 
     self.x144, self.y144 = 745, 646
-    self.b144 = Button(self.can, width=10, font=16,
-        fg='aquamarine', bg='RoyalBlue3',
-        activebackground='pale turquoise', text="Laboratory",
+    self.b144 = Button(self.can, text="Laboratory", font=16,
+        width=10, fg='aquamarine', bg='RoyalBlue3',
+        activebackground='pale turquoise',
         command=self.laboResult14)
     self.fb144_window = self.can.create_window(self.x144,
         self.y144, window=self.b144)
 
     self.x145, self.y145 = 873, 646
-    self.b145 = Button(self.can, width=10, font=16,
-        fg='aquamarine', bg='RoyalBlue3',
-        activebackground='pale turquoise', text="Medical Visit",
+    self.b145 = Button(self.can, text="Medical Visit",
+        font=16, width=10, fg='aquamarine', bg='RoyalBlue3',
+        activebackground='pale turquoise',
         command=self.visitMed14)
     self.fb145_window = self.can.create_window(self.x145,
         self.y145, window=self.b145)
 
     self.x146, self.y146 = 1001, 646
-    self.b146 = Button(self.can, width=10, font=16,
-        fg='aquamarine', bg='RoyalBlue3',
-        activebackground='pale turquoise', text="Intolerance",
+    self.b146 = Button(self.can, text="Intolerance", font=16,
+        width=10, fg='aquamarine', bg='RoyalBlue3',
+        activebackground='pale turquoise',
         command=self.nutritionMenu14)
     self.fb146_window = self.can.create_window(self.x146,
         self.y146, window=self.b146)
 
     self.x147, self.y147 = 1129, 646
-    self.b147 = Button(self.can, width=10, font=16,
-        fg='aquamarine', bg='RoyalBlue3',
-        activebackground='pale turquoise', text="BMI",
+    self.b147 = Button(self.can, text="BMI", font=16,
+        width=10, fg='aquamarine', bg='RoyalBlue3',
+        activebackground='pale turquoise',
         command=self.calculB14)
     self.fb147_window = self.can.create_window(self.x147,
         self.y147, window=self.b147)
 
-    # Patient 15
+    # Patient 15 --> to be continue (align)
     try:
         with open('./newpatient/entryfile15.txt', 'r') as namefile:
             line15 = namefile.readline()
@@ -1147,8 +1157,7 @@ def callResident(self):
         self.new_data15 = line15
         self.x150, self.y150 = 149, 678
         self.new_data15 = StringVar()
-        self.d150 = Entry(self.can,
-            textvariable=self.new_data15,
+        self.d150 = Entry(self.can, textvariable=self.new_data15,
             highlightbackground='grey', bd=4)
         self.new_data15.set(line15[:-1])
         self.fd150_window = self.can.create_window(self.x150,
@@ -1216,8 +1225,7 @@ def callResident(self):
         self.new_data16 = line16
         self.x160, self.y160 = 149, 710
         self.new_data16 = StringVar()
-        self.d160 = Entry(self.can,
-            textvariable=self.new_data16,
+        self.d160 = Entry(self.can, textvariable=self.new_data16,
             highlightbackground='grey', bd=4)
         self.new_data16.set(line16[:-1])
         self.fd160_window = self.can.create_window(self.x160,
@@ -1292,8 +1300,7 @@ def callResident(self):
         self.new_data17 = line17
         self.x170, self.y170 = 149, 742
         self.new_data17 = StringVar()
-        self.d170 = Entry(self.can,
-            textvariable=self.new_data17,
+        self.d170 = Entry(self.can, textvariable=self.new_data17,
             highlightbackground='grey', bd=4)
         self.new_data17.set(line17[:-1])
         self.fd170_window = self.can.create_window(self.x170,
@@ -1361,8 +1368,7 @@ def callResident(self):
         self.new_data18 = line18
         self.x180, self.y180 = 149, 774
         self.new_data18 = StringVar()
-        self.d180 = Entry(self.can,
-            textvariable=self.new_data18,
+        self.d180 = Entry(self.can, textvariable=self.new_data18,
             highlightbackground='grey', bd=4)
         self.new_data18.set(line18[:-1])
         self.fd180_window = self.can.create_window(self.x180,
@@ -1437,8 +1443,7 @@ def callResident(self):
         self.new_data19 = line19
         self.x190, self.y190 = 149, 806
         self.new_data19 = StringVar()
-        self.d190 = Entry(self.can,
-            textvariable=self.new_data19,
+        self.d190 = Entry(self.can, textvariable=self.new_data19,
             highlightbackground='grey', bd=4)
         self.new_data19.set(line19[:-1])
         self.fd190_window = self.can.create_window(self.x190,
@@ -1506,8 +1511,7 @@ def callResident(self):
         self.new_data20 = line20
         self.x200, self.y200 = 149, 838
         self.new_data20 = StringVar()
-        self.d200 = Entry(self.can,
-            textvariable=self.new_data20,
+        self.d200 = Entry(self.can, textvariable=self.new_data20,
             highlightbackground='grey', bd=4)
         self.new_data20.set(line20[:-1])
         self.fd200_window = self.can.create_window(self.x200,
@@ -1582,8 +1586,7 @@ def callResident(self):
         self.new_data21 = line21
         self.x210, self.y210 = 149, 870
         self.new_data21 = StringVar()
-        self.d210 = Entry(self.can,
-            textvariable=self.new_data21,
+        self.d210 = Entry(self.can, textvariable=self.new_data21,
             highlightbackground='grey', bd=4)
         self.new_data21.set(line21[:-1])
         self.fd210_window = self.can.create_window(self.x210,
@@ -1651,8 +1654,7 @@ def callResident(self):
         self.new_data22 = line22
         self.x220, self.y220 = 149, 902
         self.new_data22 = StringVar()
-        self.d220 = Entry(self.can,
-            textvariable=self.new_data22,
+        self.d220 = Entry(self.can, textvariable=self.new_data22,
             highlightbackground='grey', bd=4)
         self.new_data22.set(line22[:-1])
         self.fd220_window = self.can.create_window(self.x220,
@@ -1727,8 +1729,7 @@ def callResident(self):
         self.new_data23 = line23
         self.x230, self.y230 = 149, 934
         self.new_data23 = StringVar()
-        self.d230 = Entry(self.can,
-            textvariable=self.new_data23,
+        self.d230 = Entry(self.can, textvariable=self.new_data23,
             highlightbackground='grey', bd=4)
         self.new_data23.set(line23[:-1])
         self.fd230_window = self.can.create_window(self.x230,
@@ -1796,8 +1797,7 @@ def callResident(self):
         self.new_data24 = line24
         self.x240, self.y240 = 149, 966
         self.new_data24 = StringVar()
-        self.d240 = Entry(self.can,
-            textvariable=self.new_data24,
+        self.d240 = Entry(self.can, textvariable=self.new_data24,
           highlightbackground='grey', bd=4)
         self.new_data24.set(line24[:-1])
         self.fd240_window = self.can.create_window(self.x240,

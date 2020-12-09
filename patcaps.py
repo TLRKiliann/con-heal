@@ -167,14 +167,14 @@ def callResident(self):
 
     self.x21, self.y21 = 291, 262
     self.b21 = Button(self.can, width=8, font=16,
-        fg='white', bg='RoyalBlue3', activebackground='pale turquoise',
+        fg='aquamarine', bg='RoyalBlue3', activebackground='pale turquoise',
         text="Update", command=self.updateLink2)
     self.fb21_window = self.can.create_window(self.x21,
         self.y21, window=self.b21)
 
     self.x22, self.y22 = 449, 262
     self.b22 = Button(self.can, text="Diagnostic + ATCD",
-        width=18, font=16, fg='white', bg='RoyalBlue3',
+        width=18, font=16, fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise',
         command=self.diag2)
     self.fb22_window = self.can.create_window(self.x22,
@@ -182,7 +182,7 @@ def callResident(self):
 
     self.x23, self.y23 = 617, 262
     self.b23 = Button(self.can, text="Treatments",
-        width=10, font=16, fg='white', bg='RoyalBlue3', 
+        width=10, font=16, fg='aquamarine', bg='RoyalBlue3', 
         activebackground='pale turquoise',
         command=self.tttMed2)
     self.fb23_window = self.can.create_window(self.x23,
@@ -190,7 +190,7 @@ def callResident(self):
 
     self.x24, self.y24 = 745, 262
     self.b24 = Button(self.can, text="Laboratory",
-        width=10, font=16, fg='white', bg='RoyalBlue3',
+        width=10, font=16, fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise',
         command=self.laboResult2)
     self.fb24_window = self.can.create_window(self.x24,
@@ -198,7 +198,7 @@ def callResident(self):
 
     self.x25, self.y25 = 873, 262
     self.b25 = Button(self.can, text="Medical Visit",
-        width=10, font=16, fg='white', bg='RoyalBlue3',
+        width=10, font=16, fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise',
         command=self.visitMed2)
     self.fb25_window = self.can.create_window(self.x25,
@@ -206,7 +206,7 @@ def callResident(self):
 
     self.x26, self.y26 = 1001, 262
     self.b26 = Button(self.can, text="Intolerance",
-        width=10, font=16, fg='white', bg='RoyalBlue3',
+        width=10, font=16, fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise',
         command=self.nutritionMenu2)
     self.fb26_window = self.can.create_window(self.x26,
@@ -214,7 +214,7 @@ def callResident(self):
 
     self.x27, self.y27 = 1129, 262
     self.b27 = Button(self.can, text="BMI",
-        width=10, font=16, fg='white', bg='RoyalBlue3',
+        width=10, font=16, fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise',
         command=self.calculB2)
     self.fb27_window = self.can.create_window(self.x27,
@@ -318,7 +318,7 @@ def callResident(self):
 
     self.x41, self.y41 = 291, 326
     self.b41 = Button(self.can, text="Update",
-        width=8, font=16, fg='white', bg='RoyalBlue3',
+        width=8, font=16, fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise',
         command=self.updateLink4)
     self.fb41_window = self.can.create_window(self.x41,
@@ -326,7 +326,7 @@ def callResident(self):
 
     self.x42, self.y42 = 449, 326
     self.b42 = Button(self.can, text="Diagnostic + ATCD",
-        width=18, font=16, fg='white', bg='RoyalBlue3',
+        width=18, font=16, fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise',
         command=self.diag4)
     self.fb42_window = self.can.create_window(self.x42,
@@ -334,7 +334,7 @@ def callResident(self):
 
     self.x43, self.y43 = 617, 326
     self.b43 = Button(self.can, text="Treatments",
-        width=10, font=16, fg='white', bg='RoyalBlue3',
+        width=10, font=16, fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise',
         command=self.tttMed4)
     self.fb43_window = self.can.create_window(self.x43,
@@ -342,7 +342,7 @@ def callResident(self):
 
     self.x44, self.y44 = 745, 326
     self.b44 = Button(self.can, text="Laboratory",
-        width=10, font=16, fg='white', bg='RoyalBlue3',
+        width=10, font=16, fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise',
         command=self.laboResult4)
     self.fb44_window = self.can.create_window(self.x44,
@@ -350,7 +350,7 @@ def callResident(self):
 
     self.x45, self.y45 = 873, 326
     self.b45 = Button(self.can, text="Medical Visit",
-        width=10, font=16, fg='white', bg='RoyalBlue3',
+        width=10, font=16, fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise',
         command=self.visitMed4)
     self.fb45_window = self.can.create_window(self.x45,
@@ -358,7 +358,7 @@ def callResident(self):
 
     self.x46, self.y46 = 1001, 326
     self.b46 = Button(self.can, text="Intolerance",
-        width=10, font=16, fg='white', bg='RoyalBlue3',
+        width=10, font=16, fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise',
         command=self.nutritionMenu4)
     self.fb46_window = self.can.create_window(self.x46,
@@ -366,7 +366,7 @@ def callResident(self):
 
     self.x47, self.y47 = 1129, 326
     self.b47 = Button(self.can, text="BMI",
-        width=10, font=16, fg='white', bg='RoyalBlue3',
+        width=10, font=16, fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise',
         command=self.calculB4)
     self.fb47_window = self.can.create_window(self.x47,
@@ -463,7 +463,7 @@ def callResident(self):
 
     self.x61, self.y61 = 291, 390
     self.b61 = Button(self.can, width=8, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Update",
         command=self.updateLink6)
     self.fb61_window = self.can.create_window(self.x61,
@@ -471,7 +471,7 @@ def callResident(self):
 
     self.x62, self.y62 = 449, 390
     self.b62 = Button(self.can, width=18, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Diagnostic + ATCD",
         command=self.diag6)
     self.fb62_window = self.can.create_window(self.x62,
@@ -479,7 +479,7 @@ def callResident(self):
 
     self.x64, self.y64 = 617, 390
     self.b64 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Treatments",
         command=self.tttMed6)
     self.fb64_window = self.can.create_window(self.x64,
@@ -487,7 +487,7 @@ def callResident(self):
 
     self.x65, self.y65 = 745, 390
     self.b65 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Laboratory",
         command=self.laboResult6)
     self.fb65_window = self.can.create_window(self.x65,
@@ -495,7 +495,7 @@ def callResident(self):
 
     self.x66, self.y66 = 873, 390
     self.b66 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Medical Visit",
         command=self.visitMed6)
     self.fb66_window = self.can.create_window(self.x66,
@@ -503,7 +503,7 @@ def callResident(self):
 
     self.x67, self.y67 = 1001, 390
     self.b67 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Intolerance",
         command=self.nutritionMenu6)
     self.fb67_window = self.can.create_window(self.x67,
@@ -511,7 +511,7 @@ def callResident(self):
 
     self.x68, self.y68 = 1129, 390
     self.b68 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="BMI",
         command=self.calculB6)
     self.fb68_window = self.can.create_window(self.x68,
@@ -608,7 +608,7 @@ def callResident(self):
 
     self.x81, self.y81 = 291, 454
     self.b81 = Button(self.can, width=8, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Update",
         command=self.updateLink8)
     self.fb81_window = self.can.create_window(self.x81,
@@ -616,7 +616,7 @@ def callResident(self):
 
     self.x82, self.y82 = 449, 454
     self.b82 = Button(self.can, width=18, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Diagnostic + ATCD",
         command=self.diag8)
     self.fb82_window = self.can.create_window(self.x82,
@@ -624,7 +624,7 @@ def callResident(self):
 
     self.x83, self.y83 = 617, 454
     self.b83 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Treatments",
         command=self.tttMed8)
     self.fb83_window = self.can.create_window(self.x83,
@@ -632,7 +632,7 @@ def callResident(self):
 
     self.x84, self.y84 = 745, 454
     self.b84 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Laboratory",
         command=self.laboResult8)
     self.fb84_window = self.can.create_window(self.x84,
@@ -640,7 +640,7 @@ def callResident(self):
 
     self.x85, self.y85 = 873, 454
     self.b85 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Medical Visit",
         command=self.visitMed8)
     self.fb85_window = self.can.create_window(self.x85,
@@ -648,7 +648,7 @@ def callResident(self):
 
     self.x86, self.y86 = 1001, 454
     self.b86 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Intolerance",
         command=self.nutritionMenu8)
     self.fb86_window = self.can.create_window(self.x86,
@@ -656,7 +656,7 @@ def callResident(self):
 
     self.x87, self.y87 = 1129, 454
     self.b87 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="BMI",
         command=self.calculB8)
     self.fb87_window = self.can.create_window(self.x87,
@@ -753,7 +753,7 @@ def callResident(self):
 
     self.x101, self.y101 = 291, 518
     self.b101 = Button(self.can, width=8, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Update",
         command=self.updateLink10)
     self.fb101_window = self.can.create_window(self.x101,
@@ -761,7 +761,7 @@ def callResident(self):
 
     self.x102, self.y102 = 449, 518
     self.b102 = Button(self.can, width=18, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Diagnostic + ATCD",
         command=self.diag10)
     self.fb102_window = self.can.create_window(self.x102,
@@ -769,7 +769,7 @@ def callResident(self):
 
     self.x103, self.y103 = 617, 518
     self.b103 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Treatments",
         command=self.tttMed10)
     self.fb103_window = self.can.create_window(self.x103,
@@ -777,7 +777,7 @@ def callResident(self):
 
     self.x104, self.y104 = 745, 518
     self.b104 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Laboratory",
         command=self.laboResult10)
     self.fb104_window = self.can.create_window(self.x104,
@@ -785,7 +785,7 @@ def callResident(self):
 
     self.x105, self.y105 = 873, 518
     self.b105 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Medical Visit",
         command=self.visitMed10)
     self.fb105_window = self.can.create_window(self.x105,
@@ -793,7 +793,7 @@ def callResident(self):
 
     self.x106, self.y106 = 1001, 518
     self.b106 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Intolerance",
         command=self.nutritionMenu10)
     self.fb106_window = self.can.create_window(self.x106,
@@ -801,7 +801,7 @@ def callResident(self):
 
     self.x107, self.y107 = 1129, 518
     self.b107 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="BMI",
         command=self.calculB10)
     self.fb107_window = self.can.create_window(self.x107,
@@ -898,7 +898,7 @@ def callResident(self):
 
     self.x121, self.y121 = 291, 582
     self.b121 = Button(self.can, width=8, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Update",
         command=self.updateLink12)
     self.fb121_window = self.can.create_window(self.x121,
@@ -906,7 +906,7 @@ def callResident(self):
 
     self.x122, self.y122 = 449, 582
     self.b122 = Button(self.can, width=18, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Diagnostic + ATCD",
         command=self.diag12)
     self.fb122_window = self.can.create_window(self.x122,
@@ -914,7 +914,7 @@ def callResident(self):
 
     self.x123, self.y123 = 617, 582
     self.b123 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Treatments",
         command=self.tttMed12)
     self.fb123_window = self.can.create_window(self.x123,
@@ -922,7 +922,7 @@ def callResident(self):
 
     self.x124, self.y124 = 745, 582
     self.b124 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Laboratory",
         command=self.laboResult12)
     self.fb124_window = self.can.create_window(self.x124,
@@ -930,7 +930,7 @@ def callResident(self):
 
     self.x125, self.y125 = 873, 582
     self.b125 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Medical Visit",
         command=self.visitMed12)
     self.fb125_window = self.can.create_window(self.x125,
@@ -938,7 +938,7 @@ def callResident(self):
 
     self.x126, self.y126 = 1001, 582
     self.b126 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Intolerance",
         command=self.nutritionMenu12)
     self.fb126_window = self.can.create_window(self.x126,
@@ -946,7 +946,7 @@ def callResident(self):
 
     self.x127, self.y127 = 1129, 582
     self.b127 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="BMI",
         command=self.calculB12)
     self.fb127_window = self.can.create_window(self.x127,
@@ -1043,7 +1043,7 @@ def callResident(self):
 
     self.x141, self.y141 = 291, 646
     self.b141 = Button(self.can, width=8, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Update",
         command=self.updateLink14)
     self.fb141_window = self.can.create_window(self.x141,
@@ -1051,7 +1051,7 @@ def callResident(self):
 
     self.x142, self.y142 = 449, 646
     self.b142 = Button(self.can, width=18, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Diagnostic + ATCD",
         command=self.diag14)
     self.fb142_window = self.can.create_window(self.x142,
@@ -1059,7 +1059,7 @@ def callResident(self):
 
     self.x143, self.y143 = 617, 646
     self.b143 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Treatments",
         command=self.tttMed14)
     self.fb143_window = self.can.create_window(self.x143,
@@ -1067,7 +1067,7 @@ def callResident(self):
 
     self.x144, self.y144 = 745, 646
     self.b144 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Laboratory",
         command=self.laboResult14)
     self.fb144_window = self.can.create_window(self.x144,
@@ -1075,7 +1075,7 @@ def callResident(self):
 
     self.x145, self.y145 = 873, 646
     self.b145 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Medical Visit",
         command=self.visitMed14)
     self.fb145_window = self.can.create_window(self.x145,
@@ -1083,7 +1083,7 @@ def callResident(self):
 
     self.x146, self.y146 = 1001, 646
     self.b146 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Intolerance",
         command=self.nutritionMenu14)
     self.fb146_window = self.can.create_window(self.x146,
@@ -1091,7 +1091,7 @@ def callResident(self):
 
     self.x147, self.y147 = 1129, 646
     self.b147 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="BMI",
         command=self.calculB14)
     self.fb147_window = self.can.create_window(self.x147,
@@ -1188,7 +1188,7 @@ def callResident(self):
 
     self.x161, self.y161 = 291, 710
     self.b161 = Button(self.can, width=8, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Update",
         command=self.updateLink16)
     self.fb161_window = self.can.create_window(self.x161,
@@ -1196,7 +1196,7 @@ def callResident(self):
 
     self.x162, self.y162 = 449, 710
     self.b162 = Button(self.can, width=18, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Diagnostic + ATCD",
         command=self.diag16)
     self.fb162_window = self.can.create_window(self.x162,
@@ -1204,7 +1204,7 @@ def callResident(self):
 
     self.x163, self.y163 = 617, 710
     self.b163 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Treatments",
         command=self.tttMed16)
     self.fb163_window = self.can.create_window(self.x163,
@@ -1212,7 +1212,7 @@ def callResident(self):
 
     self.x164, self.y164 = 745, 710
     self.b164 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Laboratory",
         command=self.laboResult16)
     self.fb164_window = self.can.create_window(self.x164,
@@ -1220,7 +1220,7 @@ def callResident(self):
 
     self.x165, self.y165 = 873, 710
     self.b165 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Medical Visit",
         command=self.visitMed16)
     self.fb165_window = self.can.create_window(self.x165,
@@ -1228,7 +1228,7 @@ def callResident(self):
 
     self.x166, self.y166 = 1001, 710
     self.b166 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Intolerance",
         command=self.nutritionMenu16)
     self.fb166_window = self.can.create_window(self.x166,
@@ -1236,7 +1236,7 @@ def callResident(self):
 
     self.x167, self.y167 = 1129, 710
     self.b167 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="BMI",
         command=self.calculB16)
     self.fb167_window = self.can.create_window(self.x167,
@@ -1333,7 +1333,7 @@ def callResident(self):
 
     self.x181, self.y181 = 291, 774
     self.b181 = Button(self.can, width=8, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Update",
         command=self.updateLink18)
     self.fb181_window = self.can.create_window(self.x181,
@@ -1341,7 +1341,7 @@ def callResident(self):
 
     self.x182, self.y182 = 449, 774
     self.b182 = Button(self.can, width=18, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Diagnostic + ATCD",
         command=self.diag18)
     self.fb182_window = self.can.create_window(self.x182,
@@ -1349,7 +1349,7 @@ def callResident(self):
 
     self.x183, self.y183 = 617, 774
     self.b183 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Treatments",
         command=self.tttMed18)
     self.fb183_window = self.can.create_window(self.x183,
@@ -1357,7 +1357,7 @@ def callResident(self):
 
     self.x184, self.y184 = 745, 774
     self.b184 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Laboratory",
         command=self.laboResult18)
     self.fb184_window = self.can.create_window(self.x184,
@@ -1365,7 +1365,7 @@ def callResident(self):
 
     self.x185, self.y185 = 873, 774
     self.b185 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Medical Visit",
         command=self.visitMed18)
     self.fb185_window = self.can.create_window(self.x185,
@@ -1373,7 +1373,7 @@ def callResident(self):
 
     self.x186, self.y186 = 1001, 774
     self.b186 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Intolerance",
         command=self.nutritionMenu18)
     self.fb186_window = self.can.create_window(self.x186,
@@ -1381,7 +1381,7 @@ def callResident(self):
 
     self.x187, self.y187 = 1129, 774
     self.b187 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="BMI",
         command=self.calculB18)
     self.fb187_window = self.can.create_window(self.x187,
@@ -1478,7 +1478,7 @@ def callResident(self):
 
     self.x201, self.y201 = 291, 838
     self.b201 = Button(self.can, width=8, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Update",
         command=self.updateLink20)
     self.fb201_window = self.can.create_window(self.x201,
@@ -1486,7 +1486,7 @@ def callResident(self):
 
     self.x202, self.y202 = 449, 838
     self.b202 = Button(self.can, width=18, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Diagnostic + ATCD",
         command=self.diag20)
     self.fb202_window = self.can.create_window(self.x202,
@@ -1494,7 +1494,7 @@ def callResident(self):
 
     self.x203, self.y203 = 617, 838
     self.b203 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Treatments",
         command=self.tttMed20)
     self.fb203_window = self.can.create_window(self.x203,
@@ -1502,7 +1502,7 @@ def callResident(self):
 
     self.x204, self.y204 = 745, 838
     self.b204 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Laboratory",
         command=self.laboResult20)
     self.fb204_window = self.can.create_window(self.x204,
@@ -1510,7 +1510,7 @@ def callResident(self):
 
     self.x205, self.y205 = 873, 838
     self.b205 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Medical Visit",
         command=self.visitMed20)
     self.fb205_window = self.can.create_window(self.x205,
@@ -1518,7 +1518,7 @@ def callResident(self):
 
     self.x206, self.y206 = 1001, 838
     self.b206 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Intolerance",
         command=self.nutritionMenu20)
     self.fb206_window = self.can.create_window(self.x206,
@@ -1526,7 +1526,7 @@ def callResident(self):
 
     self.x207, self.y207 = 1129, 838
     self.b207 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="BMI",
         command=self.calculB20)
     self.fb207_window = self.can.create_window(self.x207,
@@ -1623,7 +1623,7 @@ def callResident(self):
 
     self.x221, self.y221 = 291, 902
     self.b221 = Button(self.can, width=8, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Update",
         command=self.updateLink22)
     self.fb221_window = self.can.create_window(self.x221,
@@ -1631,7 +1631,7 @@ def callResident(self):
 
     self.x222, self.y222 = 449, 902
     self.b222 = Button(self.can, width=18, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Diagnostic + ATCD",
         command=self.diag22)
     self.fb222_window = self.can.create_window(self.x222,
@@ -1639,7 +1639,7 @@ def callResident(self):
 
     self.x223, self.y223 = 617, 902
     self.b223 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Treatments",
         command=self.tttMed22)
     self.fb223_window = self.can.create_window(self.x223,
@@ -1647,7 +1647,7 @@ def callResident(self):
 
     self.x224, self.y224 = 745, 902
     self.b224 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Laboratory",
         command=self.laboResult22)
     self.fb224_window = self.can.create_window(self.x224,
@@ -1655,7 +1655,7 @@ def callResident(self):
 
     self.x225, self.y225 = 873, 902
     self.b225 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Medical Visit",
         command=self.visitMed22)
     self.fb225_window = self.can.create_window(self.x225,
@@ -1663,7 +1663,7 @@ def callResident(self):
 
     self.x226, self.y226 = 1001, 902
     self.b226 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Intolerance",
         command=self.nutritionMenu22)
     self.fb226_window = self.can.create_window(self.x226,
@@ -1671,7 +1671,7 @@ def callResident(self):
 
     self.x227, self.y227 = 1129, 902
     self.b227 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="BMI",
         command=self.calculB22)
     self.fb227_window = self.can.create_window(self.x227,
@@ -1768,7 +1768,7 @@ def callResident(self):
 
     self.x241, self.y241 = 291, 966
     self.b241 = Button(self.can, width=8, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Update",
         command=self.updateLink24)
     self.fb241_window = self.can.create_window(self.x241,
@@ -1776,7 +1776,7 @@ def callResident(self):
 
     self.x242, self.y242 = 449, 966
     self.b242 = Button(self.can, width=18, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Diagnostic + ATCD",
         command=self.diag24)
     self.fb242_window = self.can.create_window(self.x242,
@@ -1784,7 +1784,7 @@ def callResident(self):
 
     self.x243, self.y243 = 617, 966
     self.b243 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Treatments",
         command=self.tttMed24)
     self.fb243_window = self.can.create_window(self.x243,
@@ -1792,7 +1792,7 @@ def callResident(self):
 
     self.x244, self.y244 = 745, 966
     self.b244 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Laboratory",
         command=self.laboResult24)
     self.fb244_window = self.can.create_window(self.x244,
@@ -1800,7 +1800,7 @@ def callResident(self):
 
     self.x245, self.y245 = 873, 966
     self.b245 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Medical Visit",
         command=self.visitMed24)
     self.fb245_window = self.can.create_window(self.x245,
@@ -1808,7 +1808,7 @@ def callResident(self):
 
     self.x246, self.y246 = 1001, 966
     self.b246 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="Intolerance",
         command=self.nutritionMenu24)
     self.fb246_window = self.can.create_window(self.x246,
@@ -1816,7 +1816,7 @@ def callResident(self):
 
     self.x247, self.y247 = 1129, 966
     self.b247 = Button(self.can, width=10, font=16,
-        fg='white', bg='RoyalBlue3',
+        fg='aquamarine', bg='RoyalBlue3',
         activebackground='pale turquoise', text="BMI",
         command=self.calculB24)
     self.fb247_window = self.can.create_window(self.x247,

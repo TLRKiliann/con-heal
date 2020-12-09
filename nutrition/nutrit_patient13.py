@@ -16,7 +16,7 @@ import subprocess
 
 gui = Tk()
 gui.title("Intolerances")
-gui.configure(bg='RoyalBlue4')
+gui.configure(bg='DodgerBlue2')
 
 def saveCheck():
     """
@@ -173,7 +173,7 @@ def confRec():
     messagebox.showinfo("Confirmation", "Record confirmed and finished !")
 
 Intolabel = Label(gui, text="Intolerances : ", font="Times 18 bold",
-    width=14, fg='aquamarine', bg='RoyalBlue4')
+    width=14, fg='white', bg='DodgerBlue2')
 Intolabel.grid(sticky='w', row=0, column=0, pady=10)
 
 # To read name in Entry widget
@@ -215,7 +215,7 @@ C4.grid(row=5, column=0)
 
 #Les allergies d’origine animale :
 animallabel = Label(gui, text="Animal allergy", font="Times 18 bold",
-    fg='aquamarine', bg='RoyalBlue4')
+    fg='white', bg='DodgerBlue2')
 animallabel.grid(row=6, column=0, pady=10)
 
 CheckVar5 = IntVar()
@@ -248,7 +248,7 @@ C8.grid(row=10, column=0)
 
 #Les allergies d’origine végétale :
 vegetallabel = Label(gui, text="Vegetable allergy",
-    font="Times 18 bold", fg='aquamarine', bg='RoyalBlue4')
+    font="Times 18 bold", fg='white', bg='DodgerBlue2')
 vegetallabel.grid(row=11, column=0, pady=10)
 
 CheckVar9 = IntVar()
@@ -294,8 +294,8 @@ C14 = Checkbutton(gui, text="Latex fruits", fg='navy',
 C14.grid(row=17, column=0)
 
 latexlabel = Label(gui, text="Latex fruits = avocado, banana, kiwi,"
-    " fig, chestnut...", font="Times 12", fg='aquamarine',
-    bg='RoyalBlue4')
+    " fig, chestnut...", font="Times 12", fg='white',
+    bg='DodgerBlue2')
 latexlabel.grid(row=18, column=0, pady=10)
 
 CheckVar15 = IntVar()
@@ -306,7 +306,7 @@ C15 = Checkbutton(gui, text="Rosacea",
 C15.grid(row=19, column=0)
 
 rosaclabel = Label(gui, text="Rosacea = apricot, cherry, strawberry...",
-    font="Times 12", fg='aquamarine', bg='RoyalBlue4')
+    font="Times 12", fg='white', bg='DodgerBlue2')
 rosaclabel.grid(row=20, column=0, pady=10)
 
 CheckVar16 = IntVar()
@@ -318,17 +318,17 @@ C16.grid(row=21, column=0)
 
 ombellabel = Label(gui, text="Umbellifers = dill, carrot, celery,"
     " fennel, parsley...",
-    font="Times 12", fg='aquamarine', bg='RoyalBlue4')
+    font="Times 12", fg='white', bg='DodgerBlue2')
 ombellabel.grid(row=22, column=0, pady=10)
 
 buttSave = Button(gui, text="Save", width=10, fg='yellow',
-    bg='RoyalBlue3', bd=3, highlightbackground='RoyalBlue4',
-    activebackground='dark turquoise', command=saveCheck)
+    bg='RoyalBlue3', bd=3, highlightbackground='light sky blue',
+    activebackground='pale turquoise', command=saveCheck)
 buttSave.grid(sticky='w', row=23, column=0, padx=20, pady=10)
 
 buttQuit = Button(gui, text='Quit', width=10, fg='white',
-    bg='RoyalBlue3', bd=3, highlightbackground='RoyalBlue4',
-    activebackground='dark turquoise', command=quit)
+    bg='RoyalBlue3', bd=3, highlightbackground='light sky blue',
+    activebackground='pale turquoise', command=quit)
 buttQuit.grid(sticky='e', row=23, column=0, padx=20, pady=10)
 
 gui.mainloop()

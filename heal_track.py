@@ -289,7 +289,7 @@ class MenuBar(Frame):
         fileMenu.pack(side=LEFT, padx=3)
         # Partie déroulante du menu 1st
         me1 = Menu(fileMenu, tearoff=0)
-        me1.add_command(label='Intro', underline=0, font=("Times 14 bold"),
+        me1.add_command(label='Start Page', underline=0, font=("Times 14 bold"),
             background='black',activebackground='aquamarine',
             foreground='aquamarine', activeforeground='black',
             command=boss.framShow)
@@ -1753,8 +1753,9 @@ class Application(Frame):
         """
             To display data from database
         """
+        self.master.withdraw()
         subprocess.run('./accessDB.py', check=True)
-        #showDbPatient(self)
+        self.master.deiconify()
 
     def showPatients(self):
         """
@@ -1781,77 +1782,132 @@ class Application(Frame):
         subprocess.run('./newpatient/torecord.py', check=True)
 
     def patientAgenda(self):
+        """
+            Multiples possibilities with next cmd :
+            self.master.withdraw()
+            self.master.overrideredirect(True)
+            self.master.deiconify()
+            self.master.lift()
+            self.master.focus_force()
+        """
+        self.master.withdraw()
         subprocess.run('./patient_agenda/origin_agenda.py', check=True)
+        self.master.deiconify()
 
     def patientAgenda2(self):
+        self.master.withdraw()
         subprocess.run('./patient_agenda/origin_agenda2.py', check=True)
+        self.master.deiconify()
 
     def patientAgenda3(self):
-
+        self.master.withdraw()
         subprocess.run('./patient_agenda/origin_agenda3.py', check=True)
+        self.master.deiconify()
 
     def patientAgenda4(self):
+        self.master.withdraw()
         subprocess.run('./patient_agenda/origin_agenda4.py', check=True)
+        self.master.deiconify()
 
     def patientAgenda5(self):
+        self.master.withdraw()
         subprocess.run('./patient_agenda/origin_agenda5.py', check=True)
+        self.master.deiconify()
 
     def patientAgenda6(self):
+        self.master.withdraw()
         subprocess.run('./patient_agenda/origin_agenda6.py', check=True)
+        self.master.deiconify()
 
     def patientAgenda7(self):
+        self.master.withdraw()
         subprocess.run('./patient_agenda/origin_agenda7.py', check=True)
+        self.master.deiconify()
 
     def patientAgenda8(self):
+        self.master.withdraw()
         subprocess.run('./patient_agenda/origin_agenda8.py', check=True)
+        self.master.deiconify()
 
     def patientAgenda9(self):
+        self.master.withdraw()
         subprocess.run('./patient_agenda/origin_agenda9.py', check=True)
+        self.master.deiconify()
 
     def patientAgenda10(self):
+        self.master.withdraw()
         subprocess.run('./patient_agenda/origin_agenda10.py', check=True)
+        self.master.deiconify()
 
     def patientAgenda11(self):
+        self.master.withdraw()
         subprocess.run('./patient_agenda/origin_agenda11.py', check=True)
+        self.master.deiconify()
 
     def patientAgenda12(self):
+        self.master.withdraw()
         subprocess.run('./patient_agenda/origin_agenda12.py', check=True)
+        self.master.deiconify()
 
     def patientAgenda13(self):
+        self.master.withdraw()
         subprocess.run('./patient_agenda/origin_agenda13.py', check=True)
+        self.master.deiconify()
 
     def patientAgenda14(self):
+        self.master.withdraw()
         subprocess.run('./patient_agenda/origin_agenda14.py', check=True)
+        self.master.deiconify()
 
     def patientAgenda15(self):
+        self.master.withdraw()
         subprocess.run('./patient_agenda/origin_agenda15.py', check=True)
+        self.master.deiconify()
 
     def patientAgenda16(self):
+        self.master.withdraw()
         subprocess.run('./patient_agenda/origin_agenda16.py', check=True)
+        self.master.deiconify()
 
     def patientAgenda17(self):
+        self.master.withdraw()
         subprocess.run('./patient_agenda/origin_agenda17.py', check=True)
+        self.master.deiconify()
 
     def patientAgenda18(self):
+        self.master.withdraw()
         subprocess.run('./patient_agenda/origin_agenda18.py', check=True)
+        self.master.deiconify()
 
     def patientAgenda19(self):
+        self.master.withdraw()
         subprocess.run('./patient_agenda/origin_agenda19.py', check=True)
+        self.master.deiconify()
 
     def patientAgenda20(self):
+        self.master.withdraw()
         subprocess.run('./patient_agenda/origin_agenda20.py', check=True)
+        self.master.deiconify()
 
     def patientAgenda21(self):
+        self.master.withdraw()
         subprocess.run('./patient_agenda/origin_agenda21.py', check=True)
+        self.master.deiconify()
 
     def patientAgenda22(self):
+        self.master.withdraw()
         subprocess.run('./patient_agenda/origin_agenda22.py', check=True)
+        self.master.deiconify()
 
     def patientAgenda23(self):
+        self.master.withdraw()
         subprocess.run('./patient_agenda/origin_agenda23.py', check=True)
+        self.master.deiconify()
 
     def patientAgenda24(self):
+        self.master.withdraw()
         subprocess.run('./patient_agenda/origin_agenda24.py', check=True)
+        self.master.deiconify()
 
     # Contact patient 1
     def contact_num1(self):
@@ -1940,149 +1996,245 @@ class Application(Frame):
 
     # CheckBox 14 needs OK
     def besoinsCoche(self):
+        self.master.withdraw()
         subprocess.run('./14besoins/checkb.py', check=True)
+        self.master.deiconify()
 
     def besoins2Coche(self):
+        self.master.withdraw()
         subprocess.run('./14besoins/checkb2.py', check=True)
+        self.master.deiconify()
 
     def besoins3Coche(self):
+        self.master.withdraw()
         subprocess.run('./14besoins/checkb3.py', check=True)
+        self.master.deiconify()
 
     def besoins4Coche(self):
+        self.master.withdraw()
         subprocess.run('./14besoins/checkb4.py', check=True)
+        self.master.deiconify()
 
     def besoins5Coche(self):
+        self.master.withdraw()
         subprocess.run('./14besoins/checkb5.py', check=True)
+        self.master.deiconify()
 
     def besoins6Coche(self):
+        self.master.withdraw()
         subprocess.run('./14besoins/checkb6.py', check=True)
+        self.master.deiconify()
 
     def besoins7Coche(self):
+        self.master.withdraw()
         subprocess.run('./14besoins/checkb7.py', check=True)
+        self.master.deiconify()
 
     def besoins8Coche(self):
+        self.master.withdraw()
         subprocess.run('./14besoins/checkb8.py', check=True)
+        self.master.deiconify()
 
     def besoins9Coche(self):
+        self.master.withdraw()
         subprocess.run('./14besoins/checkb9.py', check=True)
+        self.master.deiconify()
 
     def besoins10Coche(self):
+        self.master.withdraw()
         subprocess.run('./14besoins/checkb10.py', check=True)
+        self.master.deiconify()
 
     def besoins11Coche(self):
+        self.master.withdraw()
         subprocess.run('./14besoins/checkb11.py', check=True)
+        self.master.deiconify()
 
     def besoins12Coche(self):
+        self.master.withdraw()
         subprocess.run('./14besoins/checkb12.py', check=True)
+        self.master.deiconify()
 
     def besoins13Coche(self):
+        self.master.withdraw()
         subprocess.run('./14besoins/checkb13.py', check=True)
+        self.master.deiconify()
 
     def besoins14Coche(self):
+        self.master.withdraw()
         subprocess.run('./14besoins/checkb14.py', check=True)
+        self.master.deiconify()
 
     def besoins15Coche(self):
+        self.master.withdraw()
         subprocess.run('./14besoins/checkb15.py', check=True)
+        self.master.deiconify()
 
     def besoins16Coche(self):
+        self.master.withdraw()
         subprocess.run('./14besoins/checkb16.py', check=True)
+        self.master.deiconify()
 
     def besoins17Coche(self):
+        self.master.withdraw()
         subprocess.run('./14besoins/checkb17.py', check=True)
+        self.master.deiconify()
 
     def besoins18Coche(self):
+        self.master.withdraw()
         subprocess.run('./14besoins/checkb18.py', check=True)
+        self.master.deiconify()
 
     def besoins19Coche(self):
+        self.master.withdraw()
         subprocess.run('./14besoins/checkb19.py', check=True)
+        self.master.deiconify()
 
     def besoins20Coche(self):
+        self.master.withdraw()
         subprocess.run('./14besoins/checkb20.py', check=True)
+        self.master.deiconify()
 
     def besoins21Coche(self):
+        self.master.withdraw()
         subprocess.run('./14besoins/checkb21.py', check=True)
+        self.master.deiconify()
 
     def besoins22Coche(self):
+        self.master.withdraw()
         subprocess.run('./14besoins/checkb22.py', check=True)
+        self.master.deiconify()
 
     def besoins23Coche(self):
+        self.master.withdraw()
         subprocess.run('./14besoins/checkb23.py', check=True)
+        self.master.deiconify()
 
     def besoins24Coche(self):
+        self.master.withdraw()
         subprocess.run('./14besoins/checkb24.py', check=True)
+        self.master.deiconify()
 
     # Func 14 needs suivi OK
     def suiviSoins1(self):
+        self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_1.py", check=True)
+        self.master.deiconify()
 
     def suiviSoins2(self):
+        self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_2.py", check=True)
+        self.master.deiconify()
 
     def suiviSoins3(self):
+        self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_3.py", check=True)
+        self.master.deiconify()
 
     def suiviSoins4(self):
+        self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_4.py", check=True)
+        self.master.deiconify()
 
     def suiviSoins5(self):
+        self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_5.py", check=True)
+        self.master.deiconify()
 
     def suiviSoins6(self):
+        self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_6.py", check=True)
+        self.master.deiconify()
 
     def suiviSoins7(self):
+        self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_7.py", check=True)
+        self.master.deiconify()
 
     def suiviSoins8(self):
+        self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_8.py", check=True)
+        self.master.deiconify()
 
     def suiviSoins9(self):
+        self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_9.py", check=True)
+        self.master.deiconify()
 
     def suiviSoins10(self):
+        self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_10.py", check=True)
+        self.master.deiconify()
 
     def suiviSoins11(self):
+        self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_11.py", check=True)
+        self.master.deiconify()
 
     def suiviSoins12(self):
+        self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_12.py", check=True)
+        self.master.deiconify()
 
     def suiviSoins13(self):
+        self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_13.py", check=True)
+        self.master.deiconify()
 
     def suiviSoins14(self):
+        self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_14.py", check=True)
+        self.master.deiconify()
 
     def suiviSoins15(self):
+        self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_15.py", check=True)
+        self.master.deiconify()
 
     def suiviSoins16(self):
+        self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_16.py", check=True)
+        self.master.deiconify()
 
     def suiviSoins17(self):
+        self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_17.py", check=True)
+        self.master.deiconify()
 
     def suiviSoins18(self):
+        self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_18.py", check=True)
+        self.master.deiconify()
 
     def suiviSoins19(self):
+        self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_19.py", check=True)
+        self.master.deiconify()
 
     def suiviSoins20(self):
+        self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_20.py", check=True)
+        self.master.deiconify()
 
     def suiviSoins21(self):
+        self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_21.py", check=True)
+        self.master.deiconify()
 
     def suiviSoins22(self):
+        self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_22.py", check=True)
+        self.master.deiconify()
 
     def suiviSoins23(self):
+        self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_23.py", check=True)
+        self.master.deiconify()
 
     def suiviSoins24(self):
+        self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_24.py", check=True)
+        self.master.deiconify()
 
     # treatments
     def tttMed1(self):
@@ -2159,298 +2311,490 @@ class Application(Frame):
 
     # Func BMI
     def calculB(self):
+        self.master.withdraw()
         subprocess.run("./calBmi/CalculBmi.py", check=True)
+        self.master.deiconify()
 
     def calculB2(self):
+        self.master.withdraw()
         subprocess.run("./calBmi/CalculBmi2.py", check=True)
+        self.master.deiconify()
 
     def calculB3(self):
+        self.master.withdraw()
         subprocess.run("./calBmi/CalculBmi3.py", check=True)
+        self.master.deiconify()
 
     def calculB4(self):
+        self.master.withdraw()
         subprocess.run("./calBmi/CalculBmi4.py", check=True)
+        self.master.deiconify()
 
     def calculB5(self):
+        self.master.withdraw()
         subprocess.run("./calBmi/CalculBmi5.py", check=True)
+        self.master.deiconify()
 
     def calculB6(self):
+        self.master.withdraw()
         subprocess.run("./calBmi/CalculBmi6.py", check=True)
+        self.master.deiconify()
 
     def calculB7(self):
+        self.master.withdraw()
         subprocess.run("./calBmi/CalculBmi7.py", check=True)
+        self.master.deiconify()
 
     def calculB8(self):
+        self.master.withdraw()
         subprocess.run("./calBmi/CalculBmi8.py", check=True)
+        self.master.deiconify()
 
     def calculB9(self):
+        self.master.withdraw()
         subprocess.run("./calBmi/CalculBmi9.py", check=True)
+        self.master.deiconify()
 
     def calculB10(self):
+        self.master.withdraw()
         subprocess.run("./calBmi/CalculBmi10.py", check=True)
+        self.master.deiconify()
 
     def calculB11(self):
+        self.master.withdraw()
         subprocess.run("./calBmi/CalculBmi11.py", check=True)
+        self.master.deiconify()
 
     def calculB12(self):
+        self.master.withdraw()
         subprocess.run("./calBmi/CalculBmi12.py", check=True)
+        self.master.deiconify()
 
     def calculB13(self):
+        self.master.withdraw()
         subprocess.run("./calBmi/CalculBmi13.py", check=True)
+        self.master.deiconify()
 
     def calculB14(self):
+        self.master.withdraw()
         subprocess.run("./calBmi/CalculBmi14.py", check=True)
+        self.master.deiconify()
 
     def calculB15(self):
+        self.master.withdraw()
         subprocess.run("./calBmi/CalculBmi15.py", check=True)
+        self.master.deiconify()
 
     def calculB16(self):
+        self.master.withdraw()
         subprocess.run("./calBmi/CalculBmi16.py", check=True)
+        self.master.deiconify()
 
     def calculB17(self):
+        self.master.withdraw()
         subprocess.run("./calBmi/CalculBmi17.py", check=True)
+        self.master.deiconify()
 
     def calculB18(self):
+        self.master.withdraw()
         subprocess.run("./calBmi/CalculBmi18.py", check=True)
+        self.master.deiconify()
 
     def calculB19(self):
+        self.master.withdraw()
         subprocess.run("./calBmi/CalculBmi19.py", check=True)
+        self.master.deiconify()
 
     def calculB20(self):
+        self.master.withdraw()
         subprocess.run("./calBmi/CalculBmi20.py", check=True)
+        self.master.deiconify()
 
     def calculB21(self):
+        self.master.withdraw()
         subprocess.run("./calBmi/CalculBmi21.py", check=True)
+        self.master.deiconify()
 
     def calculB22(self):
+        self.master.withdraw()
         subprocess.run("./calBmi/CalculBmi22.py", check=True)
+        self.master.deiconify()
 
     def calculB23(self):
+        self.master.withdraw()
         subprocess.run("./calBmi/CalculBmi23.py", check=True)
+        self.master.deiconify()
 
     def calculB24(self):
+        self.master.withdraw()
         subprocess.run("./calBmi/CalculBmi24.py", check=True)
+        self.master.deiconify()
 
     # Func Visit MED
     def visitMed(self):
+        self.master.withdraw()
         subprocess.run("./vmed/vm_patient1.py", check=True)
+        self.master.deiconify()
         
     def visitMed2(self):
+        self.master.withdraw()
         subprocess.run("./vmed/vm_patient2.py", check=True)
+        self.master.deiconify()
         
     def visitMed3(self):
+        self.master.withdraw()
         subprocess.run("./vmed/vm_patient3.py", check=True)
+        self.master.deiconify()
         
     def visitMed4(self):
+        self.master.withdraw()
         subprocess.run("./vmed/vm_patient4.py", check=True)
+        self.master.deiconify()
         
     def visitMed5(self):
+        self.master.withdraw()
         subprocess.run("./vmed/vm_patient5.py", check=True)
+        self.master.deiconify()
         
     def visitMed6(self):
+        self.master.withdraw()
         subprocess.run("./vmed/vm_patient6.py", check=True)
+        self.master.deiconify()
         
     def visitMed7(self):
+        self.master.withdraw()
         subprocess.run("./vmed/vm_patient7.py", check=True)
+        self.master.deiconify()
 
     def visitMed8(self):
+        self.master.withdraw()
         subprocess.run("./vmed/vm_patient8.py", check=True)
+        self.master.deiconify()
 
     def visitMed9(self):
+        self.master.withdraw()
         subprocess.run("./vmed/vm_patient9.py", check=True)
+        self.master.deiconify()
 
     def visitMed10(self):
+        self.master.withdraw()
         subprocess.run("./vmed/vm_patient10.py", check=True)
+        self.master.deiconify()
 
     def visitMed11(self):
+        self.master.withdraw()
         subprocess.run("./vmed/vm_patient11.py", check=True)
+        self.master.deiconify()
 
     def visitMed12(self):
+        self.master.withdraw()
         subprocess.run("./vmed/vm_patient12.py", check=True)
+        self.master.deiconify()
 
     def visitMed13(self):
+        self.master.withdraw()
         subprocess.run("./vmed/vm_patient13.py", check=True)
+        self.master.deiconify()
 
     def visitMed14(self):
+        self.master.withdraw()
         subprocess.run("./vmed/vm_patient14.py", check=True)
+        self.master.deiconify()
 
     def visitMed15(self):
+        self.master.withdraw()
         subprocess.run("./vmed/vm_patient15.py", check=True)
+        self.master.deiconify()
 
     def visitMed16(self):
+        self.master.withdraw()
         subprocess.run("./vmed/vm_patient16.py", check=True)
+        self.master.deiconify()
 
     def visitMed17(self):
+        self.master.withdraw()
         subprocess.run("./vmed/vm_patient17.py", check=True)
+        self.master.deiconify()
 
     def visitMed18(self):
+        self.master.withdraw()
         subprocess.run("./vmed/vm_patient18.py", check=True)
+        self.master.deiconify()
 
     def visitMed19(self):
+        self.master.withdraw()
         subprocess.run("./vmed/vm_patient19.py", check=True)
+        self.master.deiconify()
 
     def visitMed20(self):
+        self.master.withdraw()
         subprocess.run("./vmed/vm_patient20.py", check=True)
+        self.master.deiconify()
 
     def visitMed21(self):
+        self.master.withdraw()
         subprocess.run("./vmed/vm_patient21.py", check=True)
+        self.master.deiconify()
 
     def visitMed22(self):
+        self.master.withdraw()
         subprocess.run("./vmed/vm_patient22.py", check=True)
+        self.master.deiconify()
 
     def visitMed23(self):
+        self.master.withdraw()
         subprocess.run("./vmed/vm_patient23.py", check=True)
+        self.master.deiconify()
 
     def visitMed24(self):
+        self.master.withdraw()
         subprocess.run("./vmed/vm_patient24.py", check=True)
+        self.master.deiconify()
 
     def updateLink(self):
         """
             To update data for patient
             in txt entryfile and for DB.
         """
+        self.master.withdraw()
         subprocess.run('./update/updatepatient1.py', check=True)
+        self.master.deiconify()
 
     def updateLink2(self):
+        self.master.withdraw()
         subprocess.run('./update/updatepatient2.py', check=True)
+        self.master.deiconify()
 
     def updateLink3(self):
+        self.master.withdraw()
         subprocess.run('./update/updatepatient3.py', check=True)
+        self.master.deiconify()
 
     def updateLink4(self):
+        self.master.withdraw()
         subprocess.run('./update/updatepatient4.py', check=True)
+        self.master.deiconify()
 
     def updateLink5(self):
+        self.master.withdraw()
         subprocess.run('./update/updatepatient5.py', check=True)
+        self.master.deiconify()
 
     def updateLink6(self):
+        self.master.withdraw()
         subprocess.run('./update/updatepatient6.py', check=True)
+        self.master.deiconify()
 
     def updateLink7(self):
+        self.master.withdraw()
         subprocess.run('./update/updatepatient7.py', check=True)
+        self.master.deiconify()
 
     def updateLink8(self):
+        self.master.withdraw()
         subprocess.run('./update/updatepatient8.py', check=True)
+        self.master.deiconify()
 
     def updateLink9(self):
+        self.master.withdraw()
         subprocess.run('./update/updatepatient9.py', check=True)
+        self.master.deiconify()
 
     def updateLink10(self):
+        self.master.withdraw()
         subprocess.run('./update/updatepatient10.py', check=True)
+        self.master.deiconify()
 
     def updateLink11(self):
+        self.master.withdraw()
         subprocess.run('./update/updatepatient11.py', check=True)
+        self.master.deiconify()
 
     def updateLink12(self):
+        self.master.withdraw()
         subprocess.run('./update/updatepatient12.py', check=True)
+        self.master.deiconify()
 
     def updateLink13(self):
+        self.master.withdraw()
         subprocess.run('./update/updatepatient13.py', check=True)
+        self.master.deiconify()
 
     def updateLink14(self):
+        self.master.withdraw()
         subprocess.run('./update/updatepatient14.py', check=True)
+        self.master.deiconify()
 
     def updateLink15(self):
+        self.master.withdraw()
         subprocess.run('./update/updatepatient15.py', check=True)
+        self.master.deiconify()
 
     def updateLink16(self):
+        self.master.withdraw()
         subprocess.run('./update/updatepatient16.py', check=True)
+        self.master.deiconify()
 
     def updateLink17(self):
+        self.master.withdraw()
         subprocess.run('./update/updatepatient17.py', check=True)
+        self.master.deiconify()
 
     def updateLink18(self):
+        self.master.withdraw()
         subprocess.run('./update/updatepatient18.py', check=True)
+        self.master.deiconify()
 
     def updateLink19(self):
+        self.master.withdraw()
         subprocess.run('./update/updatepatient19.py', check=True)
+        self.master.deiconify()
 
     def updateLink20(self):
+        self.master.withdraw()
         subprocess.run('./update/updatepatient20.py', check=True)
+        self.master.deiconify()
 
     def updateLink21(self):
+        self.master.withdraw()
         subprocess.run('./update/updatepatient21.py', check=True)
+        self.master.deiconify()
 
     def updateLink22(self):
+        self.master.withdraw()
         subprocess.run('./update/updatepatient22.py', check=True)
+        self.master.deiconify()
 
     def updateLink23(self):
+        self.master.withdraw()
         subprocess.run('./update/updatepatient23.py', check=True)
+        self.master.deiconify()
 
     def updateLink24(self):
+        self.master.withdraw()
         subprocess.run('./update/updatepatient24.py', check=True)
+        self.master.deiconify()
 
     # Func Diagnostic
     def diag1(self):
+        self.master.withdraw()
         subprocess.run("./diag/diag_patient1.py", check=True)
+        self.master.deiconify()
 
     def diag2(self):
+        self.master.withdraw()
         subprocess.run("./diag/diag_patient2.py", check=True)
+        self.master.deiconify()
 
     def diag3(self):
+        self.master.withdraw()
         subprocess.run("./diag/diag_patient3.py", check=True)
+        self.master.deiconify()
 
     def diag4(self):
+        self.master.withdraw()
         subprocess.run("./diag/diag_patient4.py", check=True)
+        self.master.deiconify()
 
     def diag5(self):
+        self.master.withdraw()
         subprocess.run("./diag/diag_patient5.py", check=True)
+        self.master.deiconify()
 
     def diag6(self):
+        self.master.withdraw()
         subprocess.run("./diag/diag_patient6.py", check=True)
+        self.master.deiconify()
 
     def diag7(self):
+        self.master.withdraw()
         subprocess.run("./diag/diag_patient7.py", check=True)
+        self.master.deiconify()
 
     def diag8(self):
+        self.master.withdraw()
         subprocess.run("./diag/diag_patient8.py", check=True)
+        self.master.deiconify()
 
     def diag9(self):
+        self.master.withdraw()
         subprocess.run("./diag/diag_patient9.py", check=True)
+        self.master.deiconify()
 
     def diag10(self):
+        self.master.withdraw()
         subprocess.run("./diag/diag_patient10.py", check=True)
+        self.master.deiconify()
 
     def diag11(self):
+        self.master.withdraw()
         subprocess.run("./diag/diag_patient11.py", check=True)
+        self.master.deiconify()
 
     def diag12(self):
+        self.master.withdraw()
         subprocess.run("./diag/diag_patient12.py", check=True)
+        self.master.deiconify()
 
     def diag13(self):
+        self.master.withdraw()
         subprocess.run("./diag/diag_patient13.py", check=True)
+        self.master.deiconify()
 
     def diag14(self):
+        self.master.withdraw()
         subprocess.run("./diag/diag_patient14.py", check=True)
+        self.master.deiconify()
 
     def diag15(self):
+        self.master.withdraw()
         subprocess.run("./diag/diag_patient15.py", check=True)
+        self.master.deiconify()
 
     def diag16(self):
+        self.master.withdraw()
         subprocess.run("./diag/diag_patient16.py", check=True)
+        self.master.deiconify()
 
     def diag17(self):
+        self.master.withdraw()
         subprocess.run("./diag/diag_patient17.py", check=True)
+        self.master.deiconify()
 
     def diag18(self):
+        self.master.withdraw()
         subprocess.run("./diag/diag_patient18.py", check=True)
+        self.master.deiconify()
 
     def diag19(self):
+        self.master.withdraw()
         subprocess.run("./diag/diag_patient19.py", check=True)
+        self.master.deiconify()
 
     def diag20(self):
+        self.master.withdraw()
         subprocess.run("./diag/diag_patient20.py", check=True)
+        self.master.deiconify()
 
     def diag21(self):
+        self.master.withdraw()
         subprocess.run("./diag/diag_patient21.py", check=True)
+        self.master.deiconify()
 
     def diag22(self):
+        self.master.withdraw()
         subprocess.run("./diag/diag_patient22.py", check=True)
+        self.master.deiconify()
 
     def diag23(self):
+        self.master.withdraw()
         subprocess.run("./diag/diag_patient23.py", check=True)
+        self.master.deiconify()
 
     def diag24(self):
+        self.master.withdraw()
         subprocess.run("./diag/diag_patient24.py", check=True)
+        self.master.deiconify()
 
     # Func labo
     def laboResult(self):
@@ -2527,76 +2871,124 @@ class Application(Frame):
 
     # Menu print
     def nutritionMenu(self):
+        self.master.withdraw()
         subprocess.run('./nutrition/nutrit_patient1.py', check=True)
+        self.master.deiconify()
 
     def nutritionMenu2(self):
+        self.master.withdraw()
         subprocess.run('./nutrition/nutrit_patient2.py', check=True)
+        self.master.deiconify()
 
     def nutritionMenu3(self):
+        self.master.withdraw()
         subprocess.run('./nutrition/nutrit_patient3.py', check=True)
+        self.master.deiconify()
 
     def nutritionMenu4(self):
+        self.master.withdraw()
         subprocess.run('./nutrition/nutrit_patient4.py', check=True)
+        self.master.deiconify()
 
     def nutritionMenu5(self):
+        self.master.withdraw()
         subprocess.run('./nutrition/nutrit_patient5.py', check=True)
+        self.master.deiconify()
 
     def nutritionMenu6(self):
+        self.master.withdraw()
         subprocess.run('./nutrition/nutrit_patient6.py', check=True)
+        self.master.deiconify()
 
     def nutritionMenu7(self):
+        self.master.withdraw()
         subprocess.run('./nutrition/nutrit_patient7.py', check=True)
+        self.master.deiconify()
 
     def nutritionMenu8(self):
+        self.master.withdraw()
         subprocess.run('./nutrition/nutrit_patient8.py', check=True)
+        self.master.deiconify()
 
     def nutritionMenu9(self):
+        self.master.withdraw()
         subprocess.run('./nutrition/nutrit_patient9.py', check=True)
+        self.master.deiconify()
 
     def nutritionMenu10(self):
+        self.master.withdraw()
         subprocess.run('./nutrition/nutrit_patient10.py', check=True)
+        self.master.deiconify()
 
     def nutritionMenu11(self):
+        self.master.withdraw()
         subprocess.run('./nutrition/nutrit_patient11.py', check=True)
+        self.master.deiconify()
 
     def nutritionMenu12(self):
+        self.master.withdraw()
         subprocess.run('./nutrition/nutrit_patient12.py', check=True)
+        self.master.deiconify()
 
     def nutritionMenu13(self):
+        self.master.withdraw()
         subprocess.run('./nutrition/nutrit_patient13.py', check=True)
+        self.master.deiconify()
 
     def nutritionMenu14(self):
+        self.master.withdraw()
         subprocess.run('./nutrition/nutrit_patient14.py', check=True)
+        self.master.deiconify()
 
     def nutritionMenu15(self):
+        self.master.withdraw()
         subprocess.run('./nutrition/nutrit_patient15.py', check=True)
+        self.master.deiconify()
 
     def nutritionMenu16(self):
+        self.master.withdraw()
         subprocess.run('./nutrition/nutrit_patient16.py', check=True)
+        self.master.deiconify()
 
     def nutritionMenu17(self):
+        self.master.withdraw()
         subprocess.run('./nutrition/nutrit_patient17.py', check=True)
+        self.master.deiconify()
 
     def nutritionMenu18(self):
+        self.master.withdraw()
         subprocess.run('./nutrition/nutrit_patient18.py', check=True)
+        self.master.deiconify()
 
     def nutritionMenu19(self):
+        self.master.withdraw()
         subprocess.run('./nutrition/nutrit_patient19.py', check=True)
+        self.master.deiconify()
 
     def nutritionMenu20(self):
+        self.master.withdraw()
         subprocess.run('./nutrition/nutrit_patient20.py', check=True)
+        self.master.deiconify()
 
     def nutritionMenu21(self):
+        self.master.withdraw()
         subprocess.run('./nutrition/nutrit_patient21.py', check=True)
+        self.master.deiconify()
 
     def nutritionMenu22(self):
+        self.master.withdraw()
         subprocess.run('./nutrition/nutrit_patient22.py', check=True)
+        self.master.deiconify()
 
     def nutritionMenu23(self):
+        self.master.withdraw()
         subprocess.run('./nutrition/nutrit_patient23.py', check=True)
+        self.master.deiconify()
 
     def nutritionMenu24(self):
+        self.master.withdraw()
         subprocess.run('./nutrition/nutrit_patient24.py', check=True)
+        self.master.deiconify()
 
     # To acces files into Backup folder
     def allFilesBackup(self):

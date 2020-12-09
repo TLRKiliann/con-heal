@@ -28,8 +28,9 @@ class MenuBar(Frame):
     """Barre menu déroulant"""
     def __init__(self, boss=None):
         Frame.__init__(self, borderwidth=5, bg='RoyalBlue3', padx=0)
-        But2=Button(self, text ="Close", fg='white', bg='RoyalBlue3', relief=GROOVE,
-            activebackground='pale turquoise', command=boss.quit).pack(side=LEFT, padx=3)
+        But2=Button(self, text ="Close", fg='white', bg='RoyalBlue3',
+            relief=GROOVE, activebackground='pale turquoise',
+            command=boss.quit).pack(side=LEFT, padx=3)
 
 # Application principale
 class Application(Frame):

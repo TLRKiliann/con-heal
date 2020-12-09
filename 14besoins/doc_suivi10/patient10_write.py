@@ -11,17 +11,17 @@ import subprocess
 
 
 root=Tk()
-root.title("Care and monitoring")
-root.configure(background='cyan')
+root.title("Time-Track")
+root.configure(background='DodgerBlue2')
 
 # To place side by side labelo + entrylab
-top = Frame(root, bg='cyan')
-bottom = Frame(root, bg='cyan')
+top = Frame(root, bg='DodgerBlue2')
+bottom = Frame(root, bg='DodgerBlue2')
 top.pack(side=TOP)
 bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
 
 labelo=Label(root, text="Care and monitoring : ",
-    font='Times 18 bold', fg='navy', bg='cyan')
+    font='Times 18 bold', fg='navy', bg='DodgerBlue2')
 labelo.pack(in_=top, side=LEFT, padx=5, pady=20)
 
 with open('./newpatient/entryfile10.txt', 'r') as filename:
@@ -35,7 +35,7 @@ text_name.set(line_a[:-1])
 Entryname.pack(in_=top, side=LEFT, padx=10, pady=20)
 
 labelallergy=Label(root, text="Allergy",
-    font='Arial 18 bold', fg='coral', bg='cyan')
+    font='Arial 18 bold', fg='coral', bg='DodgerBlue2')
 labelallergy.pack(padx=5, pady=5)
 
 text_aller=StringVar()

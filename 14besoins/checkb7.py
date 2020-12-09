@@ -9,7 +9,12 @@ import time
 
 fen = Tk()
 fen.title("14 needs")
-fen.configure(bg='RoyalBlue4')
+fen.configure(bg='DodgerBlue2')
+
+labeltite=Label(fen, text='14 NEEDS', 
+    font="Times 16 bold", width=10,
+    height=3, bg='DodgerBlue2', fg='white')
+labeltite.grid(sticky='w', row=0, column=0, padx=20)
 
 with open('./newpatient/entryfile7.txt', 'r') as filename:
     line1=filename.readline()
@@ -157,11 +162,6 @@ def recordTofile():
     else:
         messagebox.showinfo('Return', 'You will return back')
 
-labeltite=Label(fen, text='14 NEEDS', 
-    font="Times 16 bold", width=10,
-    height=3, bg='RoyalBlue4', fg='cyan')
-labeltite.grid(sticky='w', row=0, column=0, padx=20)
-
 CheckVar1 = IntVar()
 C1 = Checkbutton(fen, text="Respirer", fg='navy', 
     bg='cyan', variable=CheckVar1, 
@@ -261,12 +261,12 @@ C14 = Checkbutton(fen, text="Apprendre", fg='navy',
 C14.grid(row=14, column=0)
 
 buttonTocheck=Button(fen, text="Save", width=10, fg='yellow',
-    bg='blue', bd=3, highlightbackground='cyan',
+    bg='RoyalBlue3', bd=3, highlightbackground='light sky blue',
     activebackground='dark turquoise', command=recordTofile)
 buttonTocheck.grid(sticky='w', row=15, column=0, padx=20, pady=10)
 
 buttonQuit=Button(fen, text='Quit', width=10, fg='white',
-    bg='blue', bd=3, highlightbackground='cyan',
+    bg='RoyalBlue3', bd=3, highlightbackground='light sky blue',
     activebackground='dark turquoise', command=quit)
 buttonQuit.grid(sticky='e',row=15, column=0, padx=20, pady=10)
 

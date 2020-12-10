@@ -2010,8 +2010,11 @@ class Application(Frame):
         self.master.update()
 
     def besoins2Coche(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
+        #self.master.deiconify()
+        self.master.lift()
+        self.master.focus_force()
+        #self.master.wm_attributes('-alpha', 0.8)
+        #self.master.update()
         subprocess.run('./14besoins/checkb2.py', check=True)
         self.master.wm_attributes('-alpha', 1.0)
         self.master.update()

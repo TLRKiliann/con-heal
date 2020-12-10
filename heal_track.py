@@ -2001,16 +2001,14 @@ class Application(Frame):
     def contact_num24(self):
         subprocess.run('./contact/pat_contact24.py', check=True)
 
-    def trancparency(self):
-        subprocess.run('./14besoins/checkb.py', check=True)
-        #self.master.wm_attributes('-alpha', 0.8)
-
     # CheckBox 14 needs OK
     # ON WORK !!!
     def besoinsCoche(self):
         self.master.wm_attributes('-alpha', 0.8)
-        self.trancparency()
-        #subprocess.run('./14besoins/checkb.py', check=True)
+        self.master.update()
+        subprocess.run('./14besoins/checkb.py', check=True)
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
 
     def besoins2Coche(self):
         self.master.withdraw()

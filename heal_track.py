@@ -1619,7 +1619,6 @@ class Application(Frame):
             activebackground='pale turquoise')
         self.button4_window = self.can.create_window(950, 450, anchor=CENTER,
             window=self.button4)
-
         self.pack()
 
     # Method to reconfigure scrollbar every time.
@@ -2011,9 +2010,11 @@ class Application(Frame):
         self.master.update()
 
     def besoins2Coche(self):
-        self.master.withdraw()
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
         subprocess.run('./14besoins/checkb2.py', check=True)
-        self.master.deiconify()
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
 
     def besoins3Coche(self):
         self.master.withdraw()

@@ -1554,6 +1554,20 @@ class Application(Frame):
     def __init__(self, boss=None):
         Frame.__init__(self, borderwidth=5, bg='RoyalBlue4', padx=20, pady=20, relief=GROOVE)
         self.master.title('Time-Track Developed by ko@l@tr33 - 2020')
+        self.master.resizable(False, False)
+
+        self.window_height = 830
+        self.window_width = 1310
+
+        self.screen_width = self.master.winfo_screenwidth()
+        self.screen_height = self.master.winfo_screenheight()
+
+        self.x_cordinate = int((self.screen_width/2) - (self.window_width/2))
+        self.y_cordinate = int((self.screen_height/2) - (self.window_height/2))
+
+        self.master.geometry("{}x{}+{}+{}".format(self.window_width, self.window_height,
+            self.x_cordinate, self.y_cordinate))
+
         self.mBar = MenuBar(self)
         self.mBar.pack(side=TOP, fill=X, expand=YES)
 

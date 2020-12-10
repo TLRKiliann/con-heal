@@ -3,20 +3,22 @@
 
 
 # To center window
+# Without codinates
 
 self.master.withdraw()
 self.master.update_idletasks()  # Update "requested size" from geometry manager
 
-x = (self.master.winfo_screenwidth() - self.master.winfo_reqwidth()) / 2
-y = (self.master.winfo_screenheight() - self.master.winfo_reqheight()) / 2
+x = (self.master.winfo_screenwidth() / 3 - self.master.winfo_reqwidth()) / 2
+y = (self.master.winfo_screenheight() / 3 - self.master.winfo_reqheight()) / 2
 self.master.geometry("+%d+%d" % (x, y))
 
 # This seems to draw the window frame immediately, so only call deiconify()
 # after setting correct window position
 self.master.deiconify()
 
-# or
+# or with cordinates
 
+self.master.resizable(False, False)
 print(self.master.winfo_screenheight())
 print(self.master.winfo_screenwidth())
 #size_h=1050

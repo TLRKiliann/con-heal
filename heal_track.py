@@ -2018,10 +2018,9 @@ class Application(Frame):
         self.master.update()
 
     def besoins3Coche(self):
-        process = subprocess.Popen('./14besoins/checkb2.py')
         self.master.wm_attributes('-alpha', 0.8)
-        process.poll()
         self.master.update()
+        subprocess.Popen('./14besoins/checkb2.py')
         self.master.wm_attributes('-alpha', 1.0)
         self.master.update()
 

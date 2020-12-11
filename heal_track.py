@@ -6,6 +6,7 @@ from tkinter import *
 from tkinter import messagebox
 import time
 import datetime as dt
+import os
 import subprocess
 from contact.pat_contact1 import Window
 from contact.doc_contact1 import doctorWind
@@ -2012,14 +2013,17 @@ class Application(Frame):
     def besoins2Coche(self):
         self.master.wm_attributes('-alpha', 0.8)
         self.master.update()
-        subprocess.run('./14besoins/checkb2.py', check=True)
+        subprocess.Popen('./14besoins/checkb2.py')
         self.master.wm_attributes('-alpha', 1.0)
         self.master.update()
 
     def besoins3Coche(self):
-        self.master.withdraw()
-        subprocess.run('./14besoins/checkb3.py', check=True)
-        self.master.deiconify()
+        process = subprocess.Popen('./14besoins/checkb2.py')
+        self.master.wm_attributes('-alpha', 0.8)
+        process.poll()
+        self.master.update()
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
 
     def besoins4Coche(self):
         self.master.withdraw()

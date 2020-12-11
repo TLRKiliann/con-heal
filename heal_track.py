@@ -2013,16 +2013,16 @@ class Application(Frame):
     def besoins2Coche(self):
         self.master.wm_attributes('-alpha', 0.8)
         self.master.update()
-        subprocess.Popen('./14besoins/checkb2.py')
+        subprocess.Popen('./14besoins/checkb2.py').wait()
         self.master.wm_attributes('-alpha', 1.0)
         self.master.update()
 
     def besoins3Coche(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.Popen('./14besoins/checkb2.py')
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
+        #self.master.wm_attributes('-alpha', 0.8)
+        #self.master.update()
+        subprocess.Popen('./14besoins/checkb3.py', shell=True)
+        #self.master.wm_attributes('-alpha', 1.0)
+        #self.master.update()
 
     def besoins4Coche(self):
         self.master.withdraw()

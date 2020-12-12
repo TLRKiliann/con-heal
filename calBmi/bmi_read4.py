@@ -6,22 +6,23 @@ from tkinter import *
 from tkinter import messagebox
 import sys
 
+
 fen = Tk()
-fen.title("BMI results")
-fen.configure(background='RoyalBlue4')
+fen.title("Reader BMI")
+fen.configure(background='DodgerBue2')
 
 # To place side by side labelo + entrylab
-top = Frame(fen, bg='RoyalBlue4')
-bottom = Frame(fen, bg='RoyalBlue4')
+top = Frame(fen, bg='DodgerBue2')
+bottom = Frame(fen, bg='DodgerBue2')
 top.pack(side=TOP)
 bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
 
 labelo = Label(fen, text="BMI results : ", width=15,
-    font='Times 18 bold', fg='cyan', bg='RoyalBlue4')
+    font='Times 18 bold', fg='white', bg='DodgerBue2')
 labelo.pack(in_=top, side=LEFT, pady=20)
 
 labelallergy = Label(fen, text="Allergy",
-    font='Arial 18 bold', fg='coral', bg='RoyalBlue4')
+    font='Arial 18 bold', fg='coral', bg='DodgerBue2')
 labelallergy.pack(padx=5, pady=5)
 
 # To read name in Entry widget
@@ -54,8 +55,8 @@ textBox = Text(fen, height=15, width=60, font=18)
 textBox.pack(padx=30, pady=30)
 
 buttonClose = Button(fen, text="Quit", width=10, bd=3,
-    fg='cyan', bg='RoyalBlue3', activebackground='dark turquoise', 
-    activeforeground='navy', highlightbackground='RoyalBlue3',
+    fg='cyan', bg='RoyalBlue3', activebackground='pale turquoise', 
+    activeforeground='navy', highlightbackground='cyan',
     command=quit)
 buttonClose.pack(side='right', padx=10, pady=10)
 

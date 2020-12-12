@@ -12,7 +12,7 @@ import subprocess
 class ScrollCanvas(Frame):
     def __init__(self, boss=None):
         Frame.__init__(self, borderwidth=borderwidth, relief=relief)
-        self.can=Canvas(self, width=width, height=height, bd=bd, bg=bg,
+        self.can = Canvas(self, width=width, height=height, bd=bd, bg=bg,
             relief=relief)
         self.frame = Frame(self.can)
 
@@ -31,8 +31,8 @@ class MenuBar(Frame):
     def __init__(self, boss=None):
         Frame.__init__(self, borderwidth=5, bg='RoyalBlue3', padx=0)
         # Menu fichier
-        But=Button(self, text ="Close", fg='white', bg='blue',
-            activebackground='cyan', command=boss.quit).pack(side=LEFT,
+        But = Button(self, text ="Close", fg='cyan', bg='RoyalBlue3',
+            activebackground='pale turquoise', command=boss.quit).pack(side=LEFT,
             padx=3)
 
 # Application principale
@@ -40,10 +40,10 @@ class Application(Frame):
     def __init__(self, boss=None):
         Frame.__init__(self)
         self.master.title('TIME-TRACK - Developed by ko@l@tr33 - 2020')
-        mBar=MenuBar(self)
+        mBar = MenuBar(self)
         mBar.pack(side=TOP, fill=X, expand=1)
         # ScrollCanvas limite de la zone à parcourir avec la barre
-        self.can=Canvas(self, width=600, height=400, bg='cyan')
+        self.can = Canvas(self, width=600, height=400, bg='cyan')
         self.frame = Frame(self.can)
         self.vsb = Scrollbar(self, orient=VERTICAL, command=self.can.yview)
         self.can.configure(yscrollcommand=self.vsb.set)
@@ -61,18 +61,18 @@ class Application(Frame):
         self.frame.bind("<Configure>", self.onFrameConfigure)
         # Création des boutons
         self.x2, self.y2 = 200, 250
-        self.b2=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='gold',
+        self.b2 = Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='gold',
             activebackground='dark turquoise', bd=3, 
             highlightbackground='light sky blue', 
             text="Add", command=self.Frame_Ap1)
-        self.fb2=self.can.create_window(self.x2, self.y2, window=self.b2)
+        self.fb2 = self.can.create_window(self.x2, self.y2, window=self.b2)
 
         self.x3, self.y3 = 400, 250
-        self.b3=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='gold',
+        self.b3 = Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='gold',
             activebackground='dark turquoise', bd=3, 
             highlightbackground='light sky blue', 
             text="Read", command=self.Frame_Ap2)
-        self.fb3=self.can.create_window(self.x3, self.y3, window=self.b3)
+        self.fb3 = self.can.create_window(self.x3, self.y3, window=self.b3)
         self.pack()
 
     # Méthode pour reconfigurer la scrollbar à chaque fois

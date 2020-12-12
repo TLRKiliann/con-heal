@@ -11,16 +11,16 @@ import subprocess
 
 root=Tk()
 root.title("Diagnostics and ATCD")
-root.configure(background='cyan')
+root.configure(background='DodgerBlue2')
 
 # To place side by side labelo + entrylab
-top = Frame(root, bg='cyan')
-bottom = Frame(root, bg='cyan')
+top = Frame(root, bg='DodgerBlue2')
+bottom = Frame(root, bg='DodgerBlue2')
 top.pack(side=TOP)
 bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
 
 labelo=Label(root, text="Diagnostics and ATCD for : ",
-    font='Arial 18 bold', fg='navy', bg='cyan')
+    font='Arial 18 bold', fg='white', bg='DodgerBlue2')
 labelo.pack(in_=top, side=LEFT, padx=5, pady=20)
 
 with open('./newpatient/entryfile7.txt', 'r') as filename:
@@ -34,7 +34,7 @@ textname.set(line_a[:-1])
 entryName.pack(in_=top, side=LEFT, padx=10, pady=20)
 
 labelallergy=Label(root, text="Allergy",
-    font='Arial 18 bold', fg='coral', bg='cyan')
+    font='Arial 18 bold', fg='coral', bg='DodgerBlue2')
 labelallergy.pack(padx=5, pady=10)
 
 entrytext=StringVar()
@@ -78,19 +78,19 @@ textBox.pack(padx=30, pady=30)
 
 bubuttonLire=Button(root, text="Read", width=10, bd=3,
     fg='cyan', bg='RoyalBlue3',
-    activebackground='dark turquoise', activeforeground='navy',
+    activebackground='pale turquoise', activeforeground='navy',
     highlightbackground='light sky blue', command=lectureFic)
 buttonLire.pack(side='left', padx=10, pady=10)
 
 buttonEnter=Button(root, text="Save", width=10, bd=3,
     fg='yellow', bg='RoyalBlue3',
-    activebackground='dark turquoise', activeforeground='navy',
+    activebackground='pale turquoise', activeforeground='navy',
     highlightbackground='light sky blue', command=messFromSafeButt)
 buttonEnter.pack(side='left', padx=10, pady=10)
 
 buttonQuitter=Button(root, text="Quit", width=10, bd=3,
     fg='white', bg='RoyalBlue3',
-    activebackground='cyan', activeforeground='navy',
+    activebackground='pale turquoise', activeforeground='navy',
     highlightbackground='light sky blue', command=quit)
 buttonQuitter.pack(side='right', padx=10, pady=10)
 

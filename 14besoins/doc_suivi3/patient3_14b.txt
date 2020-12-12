@@ -1,31 +1,7 @@
-En date du : 06/11/2020 à 21:16:35 :
+En date du : 12/12/2020 à 08:52:21 :
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
 
-----------------------------------------------------------
-Date : 30/11/2020
-Patient name : Aaron Schwartz
-# Tiapridal : (add result of dosage here)
----------------------------------------------------------
-
-
-----------------------------------------------------------
-Date : 30/11/2020
-Patient name : Aaron Schwartz
-# Phenytoine : (add result of dosage here)
-# Topamax : (add result of dosage here)
-# Trileptal : (add result of dosage here)
----------------------------------------------------------
-
-
-----------------------------------------------------------
-Date : 30/11/2020
-Patient name : Aaron Schwartz
-# Remeron : (add result of dosage here)
-# Sertraline : (add result of dosage here)
----------------------------------------------------------
-
-
-----------------------------------------------------------
-Date : 30/11/2020
-Patient name : Aaron Schwartz
----------------------------------------------------------
+En date du : 12/12/2020 à 08:53:29 :
+Patient name : Aaron Schwartz+ Surveillance pour éviter les dangers requise
+---
 

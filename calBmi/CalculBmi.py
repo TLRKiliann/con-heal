@@ -240,13 +240,13 @@ call_result = partial(call_result, textBox, number1, number2)
 
 buttonCal = Button(gui, text="Calculate", width=30, bd=3,
     fg='white', bg='RoyalBlue3', activeforeground='gray40',
-    activebackground='turquoise2', highlightbackground='cyan',
+    activebackground='pale turquoise', highlightbackground='cyan',
     command=call_result)
 buttonCal.grid(row=7, column=1, columnspan=2, padx=10)
 
 buttonSave = Button(gui, text="Save", width=12, bd=3, 
     fg='yellow', bg='RoyalBlue3', activeforeground='gray40',
-    activebackground='turquoise2', highlightbackground='light sky blue',
+    activebackground='pale turquoise', highlightbackground='light sky blue',
     command=buttRecord)
 buttonSave.grid(sticky='w', row=10, column=1, padx=10, pady=10)
 
@@ -258,24 +258,24 @@ buttonCancel.grid(sticky='w', row=11, column=1, padx=10)
 
 buttonRead = Button(gui, text="Read", width=12, bd=3,
     fg='cyan', bg='RoyalBlue3',
-    activebackground='dark turquoise',
+    activebackground='pale turquoise',
     highlightbackground='light sky blue', command=readBmi)
 buttonRead.grid(sticky='w', row=12, column=1, padx=10, pady=10)
 
 buttonBmi = Button(gui, text="Graph BMI", width=12, bd=3,
     fg='cyan', bg='RoyalBlue3', activeforeground='gray40',
-    activebackground='turquoise', highlightbackground='light sky blue',
+    activebackground='pale turquoise', highlightbackground='light sky blue',
     command=viewGraphicBmi)
 buttonBmi.grid(sticky='e', row=10, column=2, padx=10, pady=10)
 
 buttonWeight = Button(gui, text="Graph Weight", width=12, bd=3,
     fg='cyan', bg='RoyalBlue3', activeforeground='gray40',
-    activebackground='turquoise', highlightbackground='light sky blue',
+    activebackground='pale turquoise', highlightbackground='light sky blue',
     command=viewGraphicKilo)
 buttonWeight.grid(sticky='e', row=11, column=2, padx=10)
 
 buttonQuit = Button(gui, text="Quit", width=12, bd=3,
-    fg='white', bg='RoyalBlue3', activebackground='turquoise',
+    fg='white', bg='RoyalBlue3', activebackground='pale turquoise',
     highlightbackground='light sky blue', command=quit)
 buttonQuit.grid(sticky='e', row=12, column=2, padx=10, pady=10)
 

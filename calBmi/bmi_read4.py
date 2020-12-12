@@ -9,20 +9,20 @@ import sys
 
 fen = Tk()
 fen.title("Reader BMI")
-fen.configure(background='DodgerBue2')
+fen.configure(background='DodgerBlue2')
 
 # To place side by side labelo + entrylab
-top = Frame(fen, bg='DodgerBue2')
-bottom = Frame(fen, bg='DodgerBue2')
+top = Frame(fen, bg='DodgerBlue2')
+bottom = Frame(fen, bg='DodgerBlue2')
 top.pack(side=TOP)
 bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
 
 labelo = Label(fen, text="BMI results : ", width=15,
-    font='Times 18 bold', fg='white', bg='DodgerBue2')
+    font='Times 18 bold', fg='white', bg='DodgerBlue2')
 labelo.pack(in_=top, side=LEFT, pady=20)
 
 labelallergy = Label(fen, text="Allergy",
-    font='Arial 18 bold', fg='coral', bg='DodgerBue2')
+    font='Arial 18 bold', fg='coral', bg='DodgerBlue2')
 labelallergy.pack(padx=5, pady=5)
 
 # To read name in Entry widget

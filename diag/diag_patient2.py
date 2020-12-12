@@ -39,7 +39,7 @@ class MenuBar(Frame):
 class Application(Frame):
     def __init__(self, boss=None):
         Frame.__init__(self)
-        self.master.title('TIME-TRACK - Developed by ko@l@tr33 - 2020')
+        self.master.title('Diagnosis')
         mBar = MenuBar(self)
         mBar.pack(side=TOP, fill=X, expand=1)
         # ScrollCanvas limite de la zone à parcourir avec la barre
@@ -54,7 +54,7 @@ class Application(Frame):
         # Insertion du texte
         self.can.create_text(300, 140, anchor=CENTER, text="Diagnostics and ATCD",
                     font=('Times New Roman', 28), fill='navy')
-        self.can.create_text(590, 380, anchor=NE, text="Diagnosis",
+        self.can.create_text(590, 380, anchor=NE, text="Diagnosis + Update",
                     font=('Times', 12), fill='white') 
         self.can.pack(side=LEFT, fill=BOTH, expand=1)
         # Configuration de la Scrollbar sur le Frame

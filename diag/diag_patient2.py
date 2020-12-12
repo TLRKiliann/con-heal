@@ -43,7 +43,7 @@ class Application(Frame):
         mBar = MenuBar(self)
         mBar.pack(side=TOP, fill=X, expand=1)
         # ScrollCanvas limite de la zone à parcourir avec la barre
-        self.can = Canvas(self, width=600, height=400, bg='cyan')
+        self.can = Canvas(self, width=600, height=400, bg='DodgerBlue2')
         self.frame = Frame(self.can)
         self.vsb = Scrollbar(self, orient=VERTICAL, command=self.can.yview)
         self.can.configure(yscrollcommand=self.vsb.set)
@@ -54,7 +54,7 @@ class Application(Frame):
         # Insertion du texte
         self.can.create_text(300, 140, anchor=CENTER, text="Diagnostics and ATCD",
                     font=('Times New Roman', 28), fill='navy')
-        self.can.create_text(590, 380, anchor=NE, text="TIME-TRACK",
+        self.can.create_text(590, 380, anchor=NE, text="Diagnosis",
                     font=('Times', 12), fill='white') 
         self.can.pack(side=LEFT, fill=BOTH, expand=1)
         # Configuration de la Scrollbar sur le Frame
@@ -62,14 +62,14 @@ class Application(Frame):
         # Création des boutons
         self.x2, self.y2 = 200, 250
         self.b2 = Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='gold',
-            activebackground='dark turquoise', bd=3, 
+            activebackground='pale turquoise', bd=3, 
             highlightbackground='light sky blue', 
             text="Add", command=self.Frame_Ap1)
         self.fb2 = self.can.create_window(self.x2, self.y2, window=self.b2)
 
         self.x3, self.y3 = 400, 250
         self.b3 = Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='gold',
-            activebackground='dark turquoise', bd=3, 
+            activebackground='pale turquoise', bd=3, 
             highlightbackground='light sky blue', 
             text="Read", command=self.Frame_Ap2)
         self.fb3 = self.can.create_window(self.x3, self.y3, window=self.b3)

@@ -20,7 +20,7 @@ top.pack(side=TOP)
 bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
 
 labelo=Label(root, text="Diagnostics and ATCD for : ",
-    font='Arial 18 bold', fg='navy', bg='DodgerBlue2')
+    font='Arial 18 bold', fg='white', bg='DodgerBlue2')
 labelo.pack(in_=top, side=LEFT, padx=5, pady=20)
 
 with open('./newpatient/entryfile5.txt', 'r') as filename:

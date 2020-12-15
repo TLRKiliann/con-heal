@@ -119,7 +119,7 @@ class Calendar:
     def kill_and_save(self):
         self.parent.destroy()
 
-if __name__ == '__main__':
+if __name__=='__main__':
 
     class Control:
         def __init__(self, parent):

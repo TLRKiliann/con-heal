@@ -124,7 +124,7 @@ buttonEnter.pack(side='left', padx=10, pady=10)
 
 buttonQuitter=Button(root, text="Quit", width=8, bd=3,
     fg='white', bg='navy', highlightbackground='grey17',
-    activebackground='red', command=quit)
+    activebackground='pale turquoise', command=quit)
 buttonQuitter.pack(side='right', padx=10, pady=10)
 
 try:

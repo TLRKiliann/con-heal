@@ -11,16 +11,16 @@ import subprocess
 
 root=Tk()
 root.title("Results of Medical Visit")
-root.configure(background='cyan')
+root.configure(background='DodgerBlue2')
 
 # To place side by side labelo + entrylab
-top = Frame(root, bg='cyan')
-bottom = Frame(root, bg='cyan')
+top = Frame(root, bg='DodgerBlue2')
+bottom = Frame(root, bg='DodgerBlue2')
 top.pack(side=TOP)
 bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
 
 labelo=Label(root, text="Results of Medical Visit for : ",
-    font='Arial 18 bold', fg='navy', bg='cyan')
+    font='Arial 18 bold', fg='white', bg='DodgerBlue2')
 labelo.pack(in_=top, side=LEFT, padx=5, pady=20)
 
 # To read name in Entry widget
@@ -33,7 +33,7 @@ text_name.set(line1[:-1])
 Entryname.pack(in_=top, side=LEFT, padx=10, pady=20)
 
 labelallergy=Label(root, text="Allergy",
-    font='Arial 18 bold', fg='coral', bg='cyan')
+    font='Arial 18 bold', fg='coral', bg='DodgerBlue2')
 labelallergy.pack(padx=5, pady=5)
 
 # To read allergy in Entry widget

@@ -1,0 +1,24 @@
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
+
+En date du : 15/12/2020 à 18:11:27 :
+Patient name : Michael Jordan+ Surveillance urinaire et/ou fécale requise requise
++ Surveillance pour éviter les dangers requise
++ Stimulation ou aide pour la communication requise
+---
+
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
+
+En date du : 15/12/2020 à 18:11:45 :
+Patient name : Michael Jordan+ Surveillance propreté et/ou téguments requise
++ Agir pour aider la personne dans ses valeurs et croyances
++ Accompagnement ou aide dans l'apprentissage requis
+---
+
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
+
+En date du : 15/12/2020 à 18:14:25 :
+Patient name : Michael Jordan+ Surveillance pour éviter les dangers requise
++ Surveillance ou aide pour l'habillage/déshabillage requise
++ Agir pour aider la personne dans ses valeurs et croyances
+---
+

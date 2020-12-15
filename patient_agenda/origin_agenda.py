@@ -80,7 +80,7 @@ class Calendar:
         self.wid.append(left)
         left.grid(row=0, column=1)
 
-        header = tk.Label(self.parent, fg='navy', bg='cyan',
+        header = tk.Label(self.parent, fg='white', bg='DodgerBlue2',
             height=2, text='{}   {}'.format(calendar.month_abbr[m], str(y)))
         self.wid.append(header)
         header.grid(row=0, column=2, columnspan=3)
@@ -107,7 +107,7 @@ class Calendar:
 
         sel = tk.Label(self.parent, height=2, text='{} {} {} {}'.format(
             self.day_name, calendar.month_name[self.month_selected],
-            self.day_selected, self.year_selected), fg='navy', bg='cyan')
+            self.day_selected, self.year_selected), fg='white', bg='DodgerBlue2')
         self.wid.append(sel)
         sel.grid(row=8, column=0, columnspan=7)
 
@@ -138,19 +138,19 @@ if __name__=='__main__':
             self.data_time.set(line_a[:-1])
 
             self.choose_btn = tk.Button(self.parent, text="1 - Choice a date",
-                font="Times 14", width=20, height=1, fg='white', bg='DodgerBlue2',
+                font="Times 14", width=20, height=1, fg='white', bg='RoyalBlue3',
                 activebackground='dark turquoise', command=self.popup)
             self.show_btn = tk.Button(self.parent, text='2 - Fix appointment',
-                font="Times 14", width=20, height=1,fg='white', bg='DodgerBlue2',
+                font="Times 14", width=20, height=1,fg='white', bg='RoyalBlue3',
                 activebackground='dark turquoise', command=self.print_selected_date)
             self.buttAgenda = tk.Button(self.parent, text='Agenda', font="Times 14",
-                width=20, height=1, fg='cyan', bg='DodgerBlue2', activebackground='dark turquoise',
+                width=20, height=1, fg='cyan', bg='RoyalBlue3', activebackground='dark turquoise',
                 command=self.accessDate)
             self.buttLook = tk.Button(self.parent, text='To change rdv', font="Times 14",
-                width=20, height=1, fg='cyan', bg='DodgerBlue2', activebackground='dark turquoise',
+                width=20, height=1, fg='cyan', bg='RoyalBlue3', activebackground='dark turquoise',
                 command=self.accessLook)
             self.butQuit = tk.Button(self.parent, text='Quit', font="Times 14", width=20,
-                height=1, fg='white', bg='DodgerBlue2', activebackground='dark turquoise',
+                height=1, fg='white', bg='RoyalBlue3', activebackground='dark turquoise',
                 activeforeground='red', command=quit)
             self.labelo.grid()
             self.entryname.grid()
@@ -162,7 +162,7 @@ if __name__=='__main__':
             self.data = {}
 
         def popup(self):
-            child = tk.Toplevel(bg='cyan')
+            child = tk.Toplevel(bg='DodgerBlue2')
             cal = Calendar(child, self.data)
 
         def print_selected_date(self):

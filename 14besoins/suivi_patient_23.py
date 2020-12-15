@@ -81,7 +81,7 @@ class Application(Frame):
             if files exist.
         """
         try:
-            if os.path.getsize('./14besoins/doc_suivi20/patient23_14b.txt'):
+            if os.path.getsize('./14besoins/doc_suivi23/patient23_14b.txt'):
                 print("+ File '14 needs' exist (add)!")
                 subprocess.run('./14besoins/doc_suivi23/patient23_write.py', check=True)
         except FileNotFoundError as outmsg:

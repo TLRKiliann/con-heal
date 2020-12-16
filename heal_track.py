@@ -1572,12 +1572,11 @@ class Application(Frame):
         self.can.configure(yscrollcommand=self.vsb.set)
         self.vsb.pack(side=RIGHT, fill=Y)
         self.can.create_window((4,4), window=self.frame, anchor=NW, tags="self.frame")
-
-        self.clock_label = Label(self, text="",
-            fg="white", bg="RoyalBlue3", font=("helvetica", 18, 'bold'))
-        #self.clock_label.after(200, self.tick)
-        self.clock_label.after(200, self.tick)
+        
+        self.clock_label = Label(self, text="", fg="white", bg="RoyalBlue3",
+            font=("helvetica", 18, 'bold'))
         self.clock_label.pack(side=TOP, fill=X, expand=YES)
+        self.clock_label.after(200, self.tick)
 
         # Insertion of picture
         self.photo = PhotoImage(file='./syno_gif/fondcolorbg4.png')
@@ -1621,6 +1620,18 @@ class Application(Frame):
             window=self.button4)
         self.pack()
 
+    def tick(self):
+        """ Updates the display clock every 200 milliseconds """
+        self.new_time = time.strftime("%H:%M:%S %p")
+        try:
+            if self.new_time == self.new_time:
+                self.time = self.new_time
+                self.display_time = self.time
+                self.clock_label.configure(text=self.display_time)
+                self._job = self.clock_label.after(200, self.tick)
+        except (ValueError, OSError) as val_err:
+            print("Error time --> ", val_err)
+
     # Method to reconfigure scrollbar every time.
     def onFrameConfigure(self, event):
         '''Reset the scroll region to encompass the inner frame'''
@@ -1630,30 +1641,18 @@ class Application(Frame):
         '''Reinitialize canvas when we pass through another'''
         self.can.delete(ALL)
 
-    def tick(self):
-        """ Updates the display clock every 200 milliseconds """
-        new_time = time.strftime("%H:%M:%S %p")
-        try:
-            if new_time == new_time:
-                self.time = new_time
-                self.display_time = self.time
-                self.clock_label.config(text=self.display_time)
-                self.clock_label.after(200, self.tick)
-            else:
-                print("FUCK every one !")
-        except (ValueError, OSError) as val_err:
-            print("Error time --> ", val_err)
-
     def framShow(self):
         """
             To update without
             re-enter id and passwd
         """
         try:
-            self.clock_label.after(200 , self.clock_label.destroy())
-            self.master.destroy()
-            Application()
-            #Application.__init__(self)
+            if self._job is not None:
+                self.clock_label.after_cancel(self._job)
+                self._job = None
+                self.master.destroy()
+                Application()
+                #Application.__init__(self)
         except (OSError, ValueError) as two_err:
             print("OS or Val error", two_err)
 

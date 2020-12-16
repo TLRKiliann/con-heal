@@ -14,17 +14,17 @@ from itertools import *
 
 gui = Tk()
 gui.title("Time-Track")
-gui.configure(background='cyan')
+gui.configure(background='DodgerBlue2')
 
-top = Frame(gui, bg='cyan')
-top2 = Frame(gui, bg='cyan3')
-bottom = Frame(gui, bg='cyan')
+top = Frame(gui, bg='DodgerBlue2')
+top2 = Frame(gui, bg='SteelBlue2')
+bottom = Frame(gui, bg='DodgerBlue2')
 top.pack(side=TOP)
 top2.pack(side=TOP)
 bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
 
 labelTit = Label(gui, text="Save changes !", font=("Arial 16 bold"),
-    fg='navy', bg='cyan')
+    fg='white', bg='DodgerBlue2')
 labelTit.pack(in_=top, side=LEFT, pady=10)
 
 with open('./newpatient/entryfile8.txt', 'r') as filename:
@@ -37,7 +37,7 @@ textname.set(line1[:-1])
 entryName.pack(in_=top, side=LEFT, padx=10, pady=10)
 
 labelDate = Label(gui, text='Search date to modify : ',
-    font='Arial 14 bold', fg='RoyalBlue4', bg='cyan')
+    font='Arial 14 bold', fg='white', bg='DodgerBlue2')
 labelDate.pack(in_=top2, side=LEFT, padx=10, pady=10)
 
 def searchExpress():
@@ -76,7 +76,7 @@ regexpi_var.set("00/00/2020")
 reachDate.pack(in_=top2, side=LEFT, pady=10)
 
 labelhour = Label(gui, text='Hour : ',
-    font='Arial 14 bold', fg='RoyalBlue4', bg='cyan')
+    font='Arial 14 bold', fg='white', bg='DodgerBlue2')
 labelhour.pack(in_=top2, side=LEFT, padx=10, pady=10)
 
 hour_var = IntVar()
@@ -87,7 +87,7 @@ reachHour.pack(in_=top2, side=LEFT, pady=10)
 
 buttonSearch = Button(gui, text='Search', width=8, bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
-    activebackground='dark turquoise', command=searchExpress)
+    activebackground='pale turquoise', command=searchExpress)
 buttonSearch.pack(in_=top2, side=LEFT, padx=10, pady=10)
 
 def save_input():
@@ -150,22 +150,22 @@ textBox.pack(in_=bottom, padx=30, pady=10)
 
 buttonSave = Button(gui, text="Save", width=8, bd=3,
     fg='yellow', bg='RoyalBlue3', highlightbackground='light sky blue',
-    activebackground='dark turquoise', command = messFromSafeButt)
+    activebackground='pale turquoise', command = messFromSafeButt)
 buttonSave.pack(in_=bottom, side=LEFT, padx=10, pady=10)
 
 buttonModif = Button(gui, text="Read", width=8, bd=3,
     fg='cyan', bg='RoyalBlue3', highlightbackground='light sky blue',
-    activebackground='dark turquoise', command = modifList)
+    activebackground='pale turquoise', command = modifList)
 buttonModif.pack(in_=bottom, side=LEFT, padx=10, pady=10)
 
 buttonDelete = Button(gui, text="Clear", width=8, bd=3,
     fg='cyan', bg='RoyalBlue3', highlightbackground='light sky blue',
-    activebackground='dark turquoise', command = deleteTextbox)
+    activebackground='pale turquoise', command = deleteTextbox)
 buttonDelete.pack(in_=bottom, side=LEFT, padx=10, pady=10)
 
 buttonQuit = Button(gui, text='Quit', width=8, bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
-    activebackground='dark turquoise', command=quit)
+    activebackground='pale turquoise', command=quit)
 buttonQuit.pack(in_=bottom, side=RIGHT, padx=10, pady=10)
 
 gui.mainloop()

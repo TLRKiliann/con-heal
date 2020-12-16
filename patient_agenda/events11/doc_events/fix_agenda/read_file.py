@@ -10,15 +10,15 @@ import posixpath
 
 fen=Tk()
 fen.title("Time-Track")
-fen.configure(background='cyan')
+fen.configure(background='DodgerBlue2')
 
 # To place side by side labelo + entrylab
-top = Frame(fen, bg='cyan')
-top2 = Frame(fen, bg='cyan')
-top3 = Frame(fen, bg='cyan3')
-top4 = Frame(fen, bg='cyan3')
-top5 = Frame(fen, bg='cyan')
-bottom = Frame(fen, bg='cyan')
+top = Frame(fen, bg='DodgerBlue2')
+top2 = Frame(fen, bg='DodgerBlue2')
+top3 = Frame(fen, bg='SteelBlue2')
+top4 = Frame(fen, bg='SteelBlue2')
+top5 = Frame(fen, bg='DodgerBlue2')
+bottom = Frame(fen, bg='DodgerBlue2')
 top.pack(side=TOP)
 top2.pack(side=TOP)
 top3.pack(side=TOP)
@@ -27,7 +27,7 @@ top5.pack(side=TOP)
 bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
 
 labelo = Label(fen, text="Appointments",
-    font='Arial 18 bold', fg='navy', bg='cyan')
+    font='Arial 18 bold', fg='white', bg='DodgerBlue2')
 labelo.pack(in_=top, side=LEFT, pady=5)
 
 with open('./newpatient/entryfile11.txt', 'r') as filename:
@@ -67,7 +67,7 @@ def janSearch():
 
 buttonJan = Button(fen, text="Jan", font='Arial 12 bold', bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
-    activebackground='dark turquoise', command=janSearch)
+    activebackground='pale turquoise', command=janSearch)
 buttonJan.pack(in_=top3, side=LEFT, padx=10, pady=10)
 
 def febSearch():
@@ -91,7 +91,7 @@ def febSearch():
 
 buttonFeb = Button(fen, text="Feb", font='Arial 12 bold', bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
-    activebackground='dark turquoise',
+    activebackground='pale turquoise',
     command=febSearch)
 buttonFeb.pack(in_=top3, side=LEFT, padx=10, pady=10)
 
@@ -116,7 +116,7 @@ def marSearch():
 
 buttonMar = Button(fen, text="Mar", font='Arial 12 bold', bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
-    activebackground='dark turquoise',
+    activebackground='pale turquoise',
     command=marSearch)
 buttonMar.pack(in_=top3, side=LEFT, padx=10, pady=10)
 
@@ -141,7 +141,7 @@ def avrSearch():
 
 buttonAvr = Button(fen, text="Avr", font='Arial 12 bold', bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
-    activebackground='dark turquoise',
+    activebackground='pale turquoise',
     command=avrSearch)
 buttonAvr.pack(in_=top3, side=LEFT, padx=10, pady=10)
 
@@ -166,7 +166,7 @@ def maiSearch():
 
 buttonMay = Button(fen, text="May", font='Arial 12 bold', bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
-    activebackground='dark turquoise',
+    activebackground='pale turquoise',
     command=maiSearch)
 buttonMay.pack(in_=top3, side=LEFT, padx=10, pady=10)
 
@@ -191,7 +191,7 @@ def junSearch():
 
 buttonJun = Button(fen, text="Jun", font='Arial 12 bold', bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
-    activebackground='dark turquoise',
+    activebackground='pale turquoise',
     command=junSearch)
 buttonJun.pack(in_=top3, side=LEFT, padx=10, pady=10)
 
@@ -216,7 +216,7 @@ def julSearch():
 
 buttonJul = Button(fen, text="Jul", font='Arial 12 bold', bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
-    activebackground='dark turquoise',
+    activebackground='pale turquoise',
     command=julSearch)
 buttonJul.pack(in_=top4, side=LEFT, padx=10, pady=10)
 
@@ -241,7 +241,7 @@ def augSearch():
 
 buttonAug = Button(fen, text="Aug", font='Arial 12 bold', bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
-    activebackground='dark turquoise',
+    activebackground='pale turquoise',
     command=augSearch)
 buttonAug.pack(in_=top4, side=LEFT, padx=10, pady=10)
 
@@ -266,7 +266,7 @@ def sepSearch():
 
 buttonSep = Button(fen, text="Sep", font='Arial 12 bold', bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
-    activebackground='dark turquoise',
+    activebackground='pale turquoise',
     command=sepSearch)
 buttonSep.pack(in_=top4, side=LEFT, padx=10, pady=10)
 
@@ -291,7 +291,7 @@ def octSearch():
 
 buttonOct = Button(fen, text="Oct", font='Arial 12 bold', bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
-    activebackground='dark turquoise',
+    activebackground='pale turquoise',
     command=octSearch)
 buttonOct.pack(in_=top4, side=LEFT, padx=10, pady=10)
 
@@ -316,7 +316,7 @@ def novSearch():
 
 buttonNov = Button(fen, text="Nov", font='Arial 12 bold', bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
-    activebackground='dark turquoise',
+    activebackground='pale turquoise',
     command=novSearch)
 buttonNov.pack(in_=top4, side=LEFT, padx=10, pady=10)
 
@@ -341,7 +341,7 @@ def decSearch():
 
 buttonDec = Button(fen, text="Dec", font='Arial 12 bold', bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
-    activebackground='dark turquoise',
+    activebackground='pale turquoise',
     command=decSearch)
 buttonDec.pack(in_=top4, side=LEFT, padx=10, pady=10)
 
@@ -351,7 +351,7 @@ def clearTextbox():
 buttonClear = Button(fen, text="Clear", font='Arial 12 bold', 
     width=50, bd=3, fg='white', bg='RoyalBlue3',
     highlightbackground='light sky blue',
-    activebackground='dark turquoise', command = clearTextbox)
+    activebackground='pale turquoise', command = clearTextbox)
 buttonClear.pack(in_=top5, padx=10, pady=10)
 
 def msgBox():

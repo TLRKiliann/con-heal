@@ -64,7 +64,7 @@ from ttt.patienttt21 import callTreatment21
 from ttt.patienttt22 import callTreatment22
 from ttt.patienttt23 import callTreatment23
 from ttt.patienttt24 import callTreatment24
-#import passw
+import passw
 
 
 class ScrollCanvas(Frame):
@@ -1561,6 +1561,7 @@ class Application(Frame):
         y = (self.master.winfo_screenheight() / 3 - self.master.winfo_reqheight()) / 2
         self.master.geometry("+%d+%d" % (x, y))
         self.master.deiconify()
+        self.master.protocol("WM_DELETE_WINDOW", lambda arg=self.master: self.msgExit(arg))
 
         self.mBar = MenuBar(self)
         self.mBar.pack(side=TOP, fill=X, expand=YES)
@@ -1656,7 +1657,7 @@ class Application(Frame):
         except (OSError, ValueError) as two_err:
             print("OS or Val error", two_err)
 
-    def msgExit(self):
+    def msgExit(self, arg):
         """
             If usr want to quit, a question
             into a msgbox appear.

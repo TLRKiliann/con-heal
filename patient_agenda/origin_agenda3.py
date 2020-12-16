@@ -133,7 +133,7 @@ if __name__=='__main__':
 
             self.data_time = StringVar()
             self.entryname = tk.Entry(self.parent, textvariable=self.data_time,
-                font='Times 14', width=22, fg='red2', bg='pale turquoise', bd=2,
+                font='Times 14', width=22, fg='RoyalBlue4', bg='pale turquoise', bd=2,
                 justify=CENTER)
             self.data_time.set(line_a[:-1])
 

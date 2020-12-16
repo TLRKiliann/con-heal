@@ -1561,7 +1561,7 @@ class Application(Frame):
         y = (self.master.winfo_screenheight() / 3 - self.master.winfo_reqheight()) / 2
         self.master.geometry("+%d+%d" % (x, y))
         self.master.deiconify()
-        self.master.protocol("WM_DELETE_WINDOW", lambda arg=self.master: self.msgExit(arg))
+        self.master.protocol("WM_DELETE_WINDOW", lambda arg=self.master: self.msgQuitapp(arg))
 
         self.mBar = MenuBar(self)
         self.mBar.pack(side=TOP, fill=X, expand=YES)
@@ -1657,7 +1657,7 @@ class Application(Frame):
         except (OSError, ValueError) as two_err:
             print("OS or Val error", two_err)
 
-    def msgExit(self, arg):
+    def msgQuitapp(self, arg):
         """
             If usr want to quit, a question
             into a msgbox appear.
@@ -1666,8 +1666,20 @@ class Application(Frame):
             MsgBox = messagebox.askyesno('Quit system', 'Do you want to quit ?')
             if MsgBox == 1:
                 self.master.destroy()
-        except OSError as fuckingtime:
-            print("Error 2 : time to fucking time !!!", fuckingtime)
+        except OSError as quitwind:
+            print("Error 2 : time to quit !!!", quitwind)
+
+    def msgExit(self):
+        """
+            If usr want to quit, a question
+            into a msgbox appear.
+        """
+        try:
+            MsgBoxapp = messagebox.askyesno('Quit system', 'Do you want to quit ?')
+            if MsgBoxapp == 1:
+                self.master.destroy()
+        except OSError as quitapp:
+            print("Error 2 : time to quit !!!", quitapp)
 
     def frameInfo(self):
         """

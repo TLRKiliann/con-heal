@@ -13,19 +13,19 @@ from tkinter import messagebox
 
 fen = Tk()
 fen.title("Time-Track")
-fen.configure(background='cyan')
+fen.configure(background='DodgerBlue2')
 
 # To place side by side labelo + entrylab
-top = Frame(fen, bg='cyan')
-top2 = Frame(fen, bg='cyan3')
-bottom = Frame(fen, bg='cyan')
+top = Frame(fen, bg='DodgerBlue2')
+top2 = Frame(fen, bg='SteelBlue2')
+bottom = Frame(fen, bg='DodgerBlue2')
 top.pack(side=TOP)
 top2.pack(side=TOP)
 bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
 
 labelo = Label(fen, text="Agenda",
     font='Arial 18 bold',
-    fg='navy', bg='cyan')
+    fg='white', bg='DodgerBlue2')
 labelo.pack(in_=top, side=LEFT, pady=10)
 
 with open('./newpatient/entryfile21.txt', 'r') as filename:
@@ -38,7 +38,7 @@ textname.set(line1[:-1])
 entryName.pack(in_=top, side=LEFT, padx=10, pady=5)
 
 labelhour = Label(fen, text="Appointment time : ",
-    font='Arial 14 bold', fg='RoyalBlue4', bg='cyan')
+    font='Arial 14 bold', fg='white', bg='DodgerBlue2')
 labelhour.pack(in_=top2, side=LEFT, padx=10, pady=10)
 
 def callRefresh():
@@ -56,7 +56,7 @@ entrimehour.pack(in_=top2, side=LEFT, pady=10)
 buttonhour = Button(fen, text="Enter", width=8, bd=3,
     fg="white", bg="RoyalBlue3",
     highlightbackground='light sky blue',
-    activebackground='dark turquoise', command=callRefresh)
+    activebackground='pale turquoise', command=callRefresh)
 buttonhour.pack(in_=top2, side=LEFT, padx=10, pady=10)
 
 def importationFile(fichier):
@@ -168,23 +168,23 @@ except FileNotFoundError as nf_file:
     print(nf_file)
 
 buttonSave = Button(fen, text="Save", width=8, bd=3,
-    fg='yellow', bg='RoyalBlue3',activebackground='dark turquoise',
+    fg='yellow', bg='RoyalBlue3',activebackground='pale turquoise',
     highlightbackground='light sky blue', command=messFromSafeButt)
 buttonSave.pack(in_=bottom, side=LEFT, padx=10, pady=10)
 
 buttonRead = Button(fen, text="Read", width=8, bd=3,
-    fg='cyan', bg='RoyalBlue3', activebackground='dark turquoise',
+    fg='cyan', bg='RoyalBlue3', activebackground='pale turquoise',
     highlightbackground='light sky blue', command=readerFile)
 buttonRead.pack(in_=bottom, side=LEFT, padx=10, pady=10)
 
 buttonDel = Button(fen, text="Modify RDV", width=10, bd=3,
     fg='cyan', bg='RoyalBlue3', highlightbackground='light sky blue',
-    activebackground='dark turquoise', command=changeText)
+    activebackground='pale turquoise', command=changeText)
 buttonDel.pack(in_=bottom, side=LEFT, padx=10, pady=10)
 
 buttonClose = Button(fen, text="Quit", width=8, bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
-    activebackground='dark turquoise', command=quit)
+    activebackground='pale turquoise', command=quit)
 buttonClose.pack(in_=bottom, side=RIGHT, padx=10, pady=10)
 
 fen.mainloop()

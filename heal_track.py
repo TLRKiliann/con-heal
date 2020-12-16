@@ -1572,13 +1572,12 @@ class Application(Frame):
         self.can.configure(yscrollcommand=self.vsb.set)
         self.vsb.pack(side=RIGHT, fill=Y)
         self.can.create_window((4,4), window=self.frame, anchor=NW, tags="self.frame")
+
         self.clock_label = Label(self, text="",
             fg="white", bg="RoyalBlue3", font=("helvetica", 18, 'bold'))
-        #self.clock_label = Label(self, text="", font=('Times New Roman', 18, 'bold'),
-        #    fg='snow', bg='RoyalBlue3', padx=560)
+        #self.clock_label.after(200, self.tick)
         self.clock_label.after(200, self.tick)
         self.clock_label.pack(side=TOP, fill=X, expand=YES)
-        # Read python - tkinter - self.master.Tk.call(func()) in effbot
 
         # Insertion of picture
         self.photo = PhotoImage(file='./syno_gif/fondcolorbg4.png')
@@ -1638,7 +1637,7 @@ class Application(Frame):
             if new_time == new_time:
                 self.time = new_time
                 self.display_time = self.time
-                self.clock_label.configure(text=self.display_time)
+                self.clock_label.config(text=self.display_time)
                 self.clock_label.after(200, self.tick)
             else:
                 print("FUCK every one !")

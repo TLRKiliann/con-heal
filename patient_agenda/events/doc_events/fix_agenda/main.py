@@ -17,7 +17,7 @@ gui.title("Time-Track")
 gui.configure(background='DodgerBlue2')
 
 top = Frame(gui, bg='DodgerBlue2')
-top2 = Frame(gui, bg='DodgerBlue3')
+top2 = Frame(gui, bg='SteelBlue2')
 bottom = Frame(gui, bg='DodgerBlue2')
 top.pack(side=TOP)
 top2.pack(side=TOP)
@@ -87,7 +87,7 @@ reachHour.pack(in_=top2, side=LEFT, pady=10)
 
 buttonSearch = Button(gui, text='Search', width=8, bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
-    activebackground='dark turquoise', command=searchExpress)
+    activebackground='pale turquoise', command=searchExpress)
 buttonSearch.pack(in_=top2, side=LEFT, padx=10, pady=10)
 
 def save_input():
@@ -149,23 +149,23 @@ textBox = Text(gui, height=15, width=60, font=18)
 textBox.pack(in_=bottom, padx=30, pady=10)
 
 buttonSave = Button(gui, text="Save", width=8, bd=3,
-    fg='yellow', bg='RoyalBlue3', highlightbackground='cyan',
-    activebackground='dark turquoise', command = messFromSafeButt)
+    fg='yellow', bg='RoyalBlue3', highlightbackground='light sky blue',
+    activebackground='pale turquoise', command = messFromSafeButt)
 buttonSave.pack(in_=bottom, side=LEFT, padx=10, pady=10)
 
 buttonModif = Button(gui, text="Read", width=8, bd=3,
-    fg='cyan', bg='RoyalBlue3', highlightbackground='cyan',
-    activebackground='dark turquoise', command = modifList)
+    fg='cyan', bg='RoyalBlue3', highlightbackground='light sky blue',
+    activebackground='pale turquoise', command = modifList)
 buttonModif.pack(in_=bottom, side=LEFT, padx=10, pady=10)
 
 buttonDelete = Button(gui, text="Clear", width=8, bd=3,
-    fg='cyan', bg='RoyalBlue3', highlightbackground='cyan',
-    activebackground='dark turquoise', command = deleteTextbox)
+    fg='cyan', bg='RoyalBlue3', highlightbackground='light sky blue',
+    activebackground='pale turquoise', command = deleteTextbox)
 buttonDelete.pack(in_=bottom, side=LEFT, padx=10, pady=10)
 
 buttonQuit = Button(gui, text='Quit', width=8, bd=3,
-    fg='white', bg='RoyalBlue3', highlightbackground='cyan',
-    activebackground='dark turquoise', command=quit)
+    fg='white', bg='RoyalBlue3', highlightbackground='light sky blue',
+    activebackground='pale turquoise', command=quit)
 buttonQuit.pack(in_=bottom, side=RIGHT, padx=10, pady=10)
 
 gui.mainloop()

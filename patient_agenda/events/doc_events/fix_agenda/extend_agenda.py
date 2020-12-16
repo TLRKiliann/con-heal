@@ -17,7 +17,7 @@ fen.configure(background='DodgerBlue2')
 
 # To place side by side labelo + entrylab
 top = Frame(fen, bg='DodgerBlue2')
-top2 = Frame(fen, bg='DodgerBlue3')
+top2 = Frame(fen, bg='SteelBlue2')
 bottom = Frame(fen, bg='DodgerBlue2')
 top.pack(side=TOP)
 top2.pack(side=TOP)
@@ -168,7 +168,7 @@ except FileNotFoundError as nf_file:
     print(nf_file)
 
 buttonSave = Button(fen, text="Save", width=8, bd=3,
-    fg='yellow', bg='RoyalBlue3',activebackground='pale turquoise',
+    fg='yellow', bg='RoyalBlue3', activebackground='pale turquoise',
     highlightbackground='light sky blue', command=messFromSafeButt)
 buttonSave.pack(in_=bottom, side=LEFT, padx=10, pady=10)
 

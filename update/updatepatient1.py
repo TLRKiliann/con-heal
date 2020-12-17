@@ -16,7 +16,7 @@ except ImportError as err_report:
 
 gui=Tk()
 gui.title("Enter new patient")
-gui.configure(bg='cyan')
+gui.configure(bg='DodgerBlue2')
 
 def searchDB():
     """
@@ -124,7 +124,7 @@ def searchLineName(firstpat, surname, birthvalue, allergia, transdisval, diagnos
 labelID = Label(gui)
 labelID = Label(text='ID : ',
     font="Times 14 bold",
-    fg='RoyalBlue4', bg='cyan')
+    fg='white', bg='DodgerBlue2')
 labelID.pack(pady=10)
 
 idpatient = StringVar()
@@ -137,7 +137,7 @@ patient_num.pack()
 labelname = Label(gui)
 labelname = Label(text='Name : ',
     font="Times 14 bold",
-    fg='RoyalBlue4', bg='cyan')
+    fg='white', bg='DodgerBlue2')
 labelname.pack(pady=10)
 
 firstpat = StringVar()
@@ -156,7 +156,7 @@ sur_pat.pack()
 
 labelbirth = Label(gui)
 labelbirth = Label(text='Birth Date : ', font="Times 14 bold",
-    fg='RoyalBlue4', bg='cyan')
+    fg='white', bg='DodgerBlue2')
 labelbirth.pack(pady=10)
 
 birthvalue=StringVar()
@@ -168,7 +168,7 @@ birth_entree.pack()
 labelaller = Label(gui)
 labelaller = Label(text='Allergy : ',
     font="Times 14 bold",
-    fg='RoyalBlue4', bg='cyan')
+    fg='white', bg='DodgerBlue2')
 labelaller.pack(pady=10)
 
 allergia = StringVar()
@@ -181,7 +181,7 @@ allergy_pat.pack(padx=10)
 labeltrans = Label(gui)
 labeltrans = Label(text='Transmissible Disease : ',
     font="Times 14 bold",
-    fg='RoyalBlue4', bg='cyan')
+    fg='white', bg='DodgerBlue2')
 labeltrans.pack(pady=10)
 
 transdisval = StringVar()
@@ -194,7 +194,7 @@ diseasetrans.pack()
 labeldiag = Label(gui)
 labeldiag = Label(text='Diagnosis : ',
     font="Times 14 bold",
-    fg='RoyalBlue4', bg='cyan')
+    fg='white', bg='DodgerBlue2')
 labeldiag.pack(pady=10)
 
 diagnosis = StringVar()
@@ -206,13 +206,13 @@ diagnos_pat.pack()
 
 buttonsearch = Button(gui, text="Search ID", width=8, bd=3,
     fg='yellow', bg='RoyalBlue3', highlightbackground='light sky blue',
-    activebackground='dark turquoise',
+    activebackground='pale turquoise',
     command = searchDB)
 buttonsearch.pack(side=LEFT, padx=10, pady=20)
 
 buttonupdate = Button(gui, text="Enter", width=8, bd=3,
     fg='orange', bg='RoyalBlue3', highlightbackground='light sky blue',
-    activebackground='dark turquoise',
+    activebackground='pale turquoise',
     command = lambda: uptopat(idpatient, patient_num, firstpat, firstname_pat,
         surname, sur_pat, birthvalue, birth_entree, allergia, allergy_pat,
         transdisval, diseasetrans, diagnosis, diagnos_pat))
@@ -220,7 +220,7 @@ buttonupdate.pack(side=LEFT, padx=10, pady=20)
 
 buttQuit=Button(gui, text="Quit", width=8, bd=3,
     fg='cyan', bg='RoyalBlue3', highlightbackground='light sky blue',
-    activebackground='dark turquoise', command=quit)
+    activebackground='pale turquoise', command=quit)
 buttQuit.pack(side=LEFT, padx=10, pady=20)
 
 searchDB()

@@ -2578,119 +2578,73 @@ class Application(Frame):
         subprocess.Popen('./update/updatepatient1.py', shell=True)
 
     def updateLink2(self):
-        self.master.withdraw()
-        subprocess.run('./update/updatepatient2.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./update/updatepatient2.py', shell=True)
 
     def updateLink3(self):
-        self.master.withdraw()
-        subprocess.run('./update/updatepatient3.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./update/updatepatient3.py', shell=True)
 
     def updateLink4(self):
-        self.master.withdraw()
-        subprocess.run('./update/updatepatient4.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./update/updatepatient4.py', shell=True)
 
     def updateLink5(self):
-        self.master.withdraw()
-        subprocess.run('./update/updatepatient5.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./update/updatepatient5.py', shell=True)
 
     def updateLink6(self):
-        self.master.withdraw()
-        subprocess.run('./update/updatepatient6.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./update/updatepatient6.py', shell=True)
 
     def updateLink7(self):
-        self.master.withdraw()
-        subprocess.run('./update/updatepatient7.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./update/updatepatient7.py', shell=True)
 
     def updateLink8(self):
-        self.master.withdraw()
-        subprocess.run('./update/updatepatient8.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./update/updatepatient8.py', shell=True)
 
     def updateLink9(self):
-        self.master.withdraw()
-        subprocess.run('./update/updatepatient9.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./update/updatepatient9.py', shell=True)
 
     def updateLink10(self):
-        self.master.withdraw()
-        subprocess.run('./update/updatepatient10.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./update/updatepatient10.py', shell=True)
 
     def updateLink11(self):
-        self.master.withdraw()
-        subprocess.run('./update/updatepatient11.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./update/updatepatient11.py', shell=True)
 
     def updateLink12(self):
-        self.master.withdraw()
-        subprocess.run('./update/updatepatient12.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./update/updatepatient12.py', shell=True)
 
     def updateLink13(self):
-        self.master.withdraw()
-        subprocess.run('./update/updatepatient13.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./update/updatepatient13.py', shell=True)
 
     def updateLink14(self):
-        self.master.withdraw()
-        subprocess.run('./update/updatepatient14.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./update/updatepatient14.py', shell=True)
 
     def updateLink15(self):
-        self.master.withdraw()
-        subprocess.run('./update/updatepatient15.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./update/updatepatient15.py', shell=True)
 
     def updateLink16(self):
-        self.master.withdraw()
-        subprocess.run('./update/updatepatient16.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./update/updatepatient16.py', shell=True)
 
     def updateLink17(self):
-        self.master.withdraw()
-        subprocess.run('./update/updatepatient17.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./update/updatepatient17.py', shell=True)
 
     def updateLink18(self):
-        self.master.withdraw()
-        subprocess.run('./update/updatepatient18.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./update/updatepatient18.py', shell=True)
 
     def updateLink19(self):
-        self.master.withdraw()
-        subprocess.run('./update/updatepatient19.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./update/updatepatient19.py', shell=True)
 
     def updateLink20(self):
-        self.master.withdraw()
-        subprocess.run('./update/updatepatient20.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./update/updatepatient20.py', shell=True)
 
     def updateLink21(self):
-        self.master.withdraw()
-        subprocess.run('./update/updatepatient21.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./update/updatepatient21.py', shell=True)
 
     def updateLink22(self):
-        self.master.withdraw()
-        subprocess.run('./update/updatepatient22.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./update/updatepatient22.py', shell=True)
 
     def updateLink23(self):
-        self.master.withdraw()
-        subprocess.run('./update/updatepatient23.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./update/updatepatient23.py', shell=True)
 
     def updateLink24(self):
-        self.master.withdraw()
-        subprocess.run('./update/updatepatient24.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./update/updatepatient24.py', shell=True)
 
     # Func Diagnostic
     def diag1(self):

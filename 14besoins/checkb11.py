@@ -32,7 +32,7 @@ def recordOption():
         file.write("\nEn date du : ")
         file.write(time.strftime("%d/%m/%Y à %H:%M:%S :") + '\n')
         file.write("Patient name : ")
-        file.write(entryName.get())
+        file.write(entryName.get() + "\n")
 
     print(CheckVar1.get())
     if CheckVar1.get()==1:

@@ -312,7 +312,7 @@ class MenuBar(Frame):
             command=boss.instalpy)
         me1.add_command(label='Quit', font=("Times 14 bold"),
             background='black', activebackground='red',
-            foreground='cyan', activeforeground='white',
+            foreground='coral', activeforeground='white',
             command=boss.msgExit)
         # Integration of 1st menu
         fileMenu.configure(activeforeground='black', activebackground='cyan',
@@ -3011,7 +3011,11 @@ class Application(Frame):
 
     # To acces files into Backup folder
     def allFilesBackup(self):
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
         backupFuncPatient(self)
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
 
     def allFilesBackup2(self):
         backupFuncPatient2(self)

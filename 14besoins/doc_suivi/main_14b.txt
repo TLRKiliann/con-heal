@@ -1,31 +1,20 @@
 ---####-|--- Affichage des besoins du patient à surveiller ---|-####---
 
-En date du : 06/11/2020 à 01:59:49 :
+En date du : 17/12/2020 à 18:51:07 :
 Patient name : Edward Snowden
-+ Surveillance de la température requise
-3x/j
 + Surveillance posturale et/ou des déplacements requise
-Accompagner à la mob.
-+ Surveillance ou aide pour l'habillage/déshabillage requise
-Aide partielle
----
-
-
-
-En date du : 06/11/2020 à 02:00:34 :
-Chuté à 9h00 en se levant seul.
-
-En date du : 06/11/2020 à 02:01:02 :
----####-|--- Affichage des besoins du patient à surveiller ---|-####---
-
-En date du : 10/12/2020 à 17:54:24 :
-Patient name : Edward Snowden+ Surveillance ou aide pour l'habillage/déshabillage requise
+Faire truc 1
++ Surveillance pour éviter les dangers requise
+Faire truc 2
 + Stimulation ou aide pour la communication requise
+Faire truc 3
 ---
 
-Mr s'est levé tout seul sans stimulations.
 
 
-En date du : 16/12/2020 à 17:55:58 :
-Trop de trucs pour Mr aujourd'hui. Il a complètement dysjoncté +++
+En date du : 17/12/2020 à 18:51:39 :
+Mr est en bnne forme today !
+
+En date du : 16/12/2020 à 18:51:59 :
+On regarde si le text apparaît dans la textbox ...
 

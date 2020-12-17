@@ -38,12 +38,12 @@ def get(monthVal, month_start, monthEnd, month_end):
 
 gui = Tk()
 gui.title("Enter date")
-gui.configure(bg='cyan')
+gui.configure(bg='DodgerBlue2')
 
 labelName = Label(gui)
 labelName = Label(text='Enter date of start : ', 
     font="Times 14 bold", 
-    fg='RoyalBlue3', bg='cyan')
+    fg='white', bg='DodgerBlue2')
 labelName.pack(pady=10)
 
 monthVal=StringVar()
@@ -55,7 +55,7 @@ month_start.pack()
 labelName = Label(gui)
 labelName = Label(text='Enter date of end : ', 
     font="Times 14 bold", 
-    fg='RoyalBlue3', bg='cyan')
+    fg='white', bg='DodgerBlue2')
 labelName.pack(pady=10)
 
 monthEnd=StringVar()
@@ -66,13 +66,13 @@ month_end.pack()
 
 bouton1 = Button(gui, text="Enter", width=8, bd=3,
     fg='yellow', bg='RoyalBlue3', highlightbackground='light sky blue',
-    activebackground='dark turquoise',
+    activebackground='pale turquoise',
     command = lambda: get(monthVal, month_start, monthEnd, month_end))
 bouton1.pack(side=LEFT, padx=10, pady=20)
 
 buttQuit=Button(gui, text="Quit", width=8, bd=3,
     fg='cyan', bg='RoyalBlue3', highlightbackground='light sky blue',
-    activebackground='dark turquoise', command=quit)
+    activebackground='pale turquoise', command=quit)
 buttQuit.pack(side=LEFT, padx=10, pady=20)
 
 gui.mainloop()

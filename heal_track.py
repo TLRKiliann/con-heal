@@ -312,7 +312,7 @@ class MenuBar(Frame):
             command=boss.instalpy)
         me1.add_command(label='Quit', font=("Times 14 bold"),
             background='black', activebackground='red',
-            foreground='red', activeforeground='white',
+            foreground='cyan', activeforeground='white',
             command=boss.msgExit)
         # Integration of 1st menu
         fileMenu.configure(activeforeground='black', activebackground='cyan',

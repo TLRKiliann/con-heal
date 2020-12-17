@@ -26,3 +26,22 @@ Poids : 75
 Taille : 1.86
 BMI : 21.679
 
+Date : 17-12-2020
+Heure : 18:19:45
+Prenom et Nom : Edward SnowdenPoids : 75
+Taille : 1.86
+BMI : 21.679
+
+Date : 17-12-2020
+Heure : 18:19:45
+Prenom et Nom : Edward SnowdenPoids : 75
+Taille : 1.86
+BMI : 21.679
+
+Date : 17-12-2020
+Heure : 18:24:11
+Prenom et Nom : Edward Snowden
+Poids : 75
+Taille : 1.00
+BMI : 75.0
+

@@ -32,17 +32,6 @@
             "First-line": 0,
             "Second-line": 1,
             "Number/24h": "2"
-        },
-        {
-            "Date": "16/11/2020",
-            "Date of introduction": "14 May 2000",
-            "Date of end": "STOP17/11/2020",
-            "Treatment": "Trittico",
-            "Dosage": "50 mg",
-            "Reserve": 1,
-            "First-line": 0,
-            "Second-line": 1,
-            "Number/24h": "3"
         }
     ]
 }

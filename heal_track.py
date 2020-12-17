@@ -2015,130 +2015,76 @@ class Application(Frame):
     # CheckBox 14 needs OK
     # ON WORK !!!
     def besoinsCoche(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.run('./14besoins/checkb.py', check=True)
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
+        subprocess.Popen('./14besoins/checkb.py', shell=True)
 
     def besoins2Coche(self):
-        self.master.wm_attributes('-alpha', 0.8)
-        self.master.update()
-        subprocess.Popen('./14besoins/checkb2.py').wait()
-        self.master.wm_attributes('-alpha', 1.0)
-        self.master.update()
+        subprocess.Popen('./14besoins/checkb2.py', shell=True)
 
     def besoins3Coche(self):
-        #self.master.wm_attributes('-alpha', 0.8)
-        #self.master.update()
         subprocess.Popen('./14besoins/checkb3.py', shell=True)
-        #self.master.wm_attributes('-alpha', 1.0)
-        #self.master.update()
 
     def besoins4Coche(self):
-        self.master.withdraw()
-        subprocess.run('./14besoins/checkb4.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./14besoins/checkb4.py', shell=True)
 
     def besoins5Coche(self):
-        self.master.withdraw()
-        subprocess.run('./14besoins/checkb5.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./14besoins/checkb5.py', shell=True)
 
     def besoins6Coche(self):
-        self.master.withdraw()
-        subprocess.run('./14besoins/checkb6.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./14besoins/checkb6.py', shell=True)
 
     def besoins7Coche(self):
-        self.master.withdraw()
-        subprocess.run('./14besoins/checkb7.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./14besoins/checkb7.py', shell=True)
 
     def besoins8Coche(self):
-        self.master.withdraw()
-        subprocess.run('./14besoins/checkb8.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./14besoins/checkb8.py', shell=True)
 
     def besoins9Coche(self):
-        self.master.withdraw()
-        subprocess.run('./14besoins/checkb9.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./14besoins/checkb9.py', shell=True)
 
     def besoins10Coche(self):
-        self.master.withdraw()
-        subprocess.run('./14besoins/checkb10.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./14besoins/checkb10.py', shell=True)
 
     def besoins11Coche(self):
-        self.master.withdraw()
-        subprocess.run('./14besoins/checkb11.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./14besoins/checkb11.py', shell=True)
 
     def besoins12Coche(self):
-        self.master.withdraw()
-        subprocess.run('./14besoins/checkb12.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./14besoins/checkb12.py', shell=True)
 
     def besoins13Coche(self):
-        self.master.withdraw()
-        subprocess.run('./14besoins/checkb13.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./14besoins/checkb13.py', shell=True)
 
     def besoins14Coche(self):
-        self.master.withdraw()
-        subprocess.run('./14besoins/checkb14.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./14besoins/checkb14.py', shell=True)
 
     def besoins15Coche(self):
-        self.master.withdraw()
-        subprocess.run('./14besoins/checkb15.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./14besoins/checkb15.py', shell=True)
 
     def besoins16Coche(self):
-        self.master.withdraw()
-        subprocess.run('./14besoins/checkb16.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./14besoins/checkb16.py', shell=True)
 
     def besoins17Coche(self):
-        self.master.withdraw()
-        subprocess.run('./14besoins/checkb17.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./14besoins/checkb17.py', shell=True)
 
     def besoins18Coche(self):
-        self.master.withdraw()
-        subprocess.run('./14besoins/checkb18.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./14besoins/checkb18.py', shell=True)
 
     def besoins19Coche(self):
-        self.master.withdraw()
-        subprocess.run('./14besoins/checkb19.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./14besoins/checkb19.py', shell=True)
 
     def besoins20Coche(self):
-        self.master.withdraw()
-        subprocess.run('./14besoins/checkb20.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./14besoins/checkb20.py', shell=True)
 
     def besoins21Coche(self):
-        self.master.withdraw()
-        subprocess.run('./14besoins/checkb21.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./14besoins/checkb21.py', shell=True)
 
     def besoins22Coche(self):
-        self.master.withdraw()
-        subprocess.run('./14besoins/checkb22.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./14besoins/checkb22.py', shell=True)
 
     def besoins23Coche(self):
-        self.master.withdraw()
-        subprocess.run('./14besoins/checkb23.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./14besoins/checkb23.py', shell=True)
 
     def besoins24Coche(self):
-        self.master.withdraw()
-        subprocess.run('./14besoins/checkb24.py', check=True)
-        self.master.deiconify()
+        subprocess.Popen('./14besoins/checkb24.py', shell=True)
 
     # Func 14 needs suivi OK
     def suiviSoins1(self):
@@ -2336,124 +2282,172 @@ class Application(Frame):
 
     # Func BMI
     def calculB(self):
-        self.master.withdraw()
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
         subprocess.run("./calBmi/CalculBmi.py", check=True)
-        self.master.deiconify()
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
 
     def calculB2(self):
-        self.master.withdraw()
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
         subprocess.run("./calBmi/CalculBmi2.py", check=True)
-        self.master.deiconify()
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
 
     def calculB3(self):
-        self.master.withdraw()
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
         subprocess.run("./calBmi/CalculBmi3.py", check=True)
-        self.master.deiconify()
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
 
     def calculB4(self):
-        self.master.withdraw()
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
         subprocess.run("./calBmi/CalculBmi4.py", check=True)
-        self.master.deiconify()
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
 
     def calculB5(self):
-        self.master.withdraw()
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
         subprocess.run("./calBmi/CalculBmi5.py", check=True)
-        self.master.deiconify()
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
 
     def calculB6(self):
-        self.master.withdraw()
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
         subprocess.run("./calBmi/CalculBmi6.py", check=True)
-        self.master.deiconify()
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
 
     def calculB7(self):
-        self.master.withdraw()
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
         subprocess.run("./calBmi/CalculBmi7.py", check=True)
-        self.master.deiconify()
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
 
     def calculB8(self):
-        self.master.withdraw()
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
         subprocess.run("./calBmi/CalculBmi8.py", check=True)
-        self.master.deiconify()
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
 
     def calculB9(self):
-        self.master.withdraw()
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
         subprocess.run("./calBmi/CalculBmi9.py", check=True)
-        self.master.deiconify()
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
 
     def calculB10(self):
-        self.master.withdraw()
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
         subprocess.run("./calBmi/CalculBmi10.py", check=True)
-        self.master.deiconify()
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
 
     def calculB11(self):
-        self.master.withdraw()
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
         subprocess.run("./calBmi/CalculBmi11.py", check=True)
-        self.master.deiconify()
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
 
     def calculB12(self):
-        self.master.withdraw()
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
         subprocess.run("./calBmi/CalculBmi12.py", check=True)
-        self.master.deiconify()
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
 
     def calculB13(self):
-        self.master.withdraw()
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
         subprocess.run("./calBmi/CalculBmi13.py", check=True)
-        self.master.deiconify()
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
 
     def calculB14(self):
-        self.master.withdraw()
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
         subprocess.run("./calBmi/CalculBmi14.py", check=True)
-        self.master.deiconify()
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
 
     def calculB15(self):
-        self.master.withdraw()
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
         subprocess.run("./calBmi/CalculBmi15.py", check=True)
-        self.master.deiconify()
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
 
     def calculB16(self):
-        self.master.withdraw()
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
         subprocess.run("./calBmi/CalculBmi16.py", check=True)
-        self.master.deiconify()
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
 
     def calculB17(self):
-        self.master.withdraw()
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
         subprocess.run("./calBmi/CalculBmi17.py", check=True)
-        self.master.deiconify()
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
 
     def calculB18(self):
-        self.master.withdraw()
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
         subprocess.run("./calBmi/CalculBmi18.py", check=True)
-        self.master.deiconify()
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
 
     def calculB19(self):
-        self.master.withdraw()
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
         subprocess.run("./calBmi/CalculBmi19.py", check=True)
-        self.master.deiconify()
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
 
     def calculB20(self):
-        self.master.withdraw()
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
         subprocess.run("./calBmi/CalculBmi20.py", check=True)
-        self.master.deiconify()
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
 
     def calculB21(self):
-        self.master.withdraw()
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
         subprocess.run("./calBmi/CalculBmi21.py", check=True)
-        self.master.deiconify()
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
 
     def calculB22(self):
-        self.master.withdraw()
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
         subprocess.run("./calBmi/CalculBmi22.py", check=True)
-        self.master.deiconify()
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
 
     def calculB23(self):
-        self.master.withdraw()
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
         subprocess.run("./calBmi/CalculBmi23.py", check=True)
-        self.master.deiconify()
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
 
     def calculB24(self):
-        self.master.withdraw()
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
         subprocess.run("./calBmi/CalculBmi24.py", check=True)
-        self.master.deiconify()
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
 
     # Func Visit MED
     def visitMed(self):
@@ -3103,11 +3097,14 @@ class Application(Frame):
             data from patcaps.py !
         """
         try:
-            self.master.destroy()
-            Application.__init__(self)
-            self.showPatients()
+            if self._job is not None:
+                self.clock_label.after_cancel(self._job)
+                self._job = None
+                self.master.destroy()
+                Application.__init__(self)
+                self.showPatients()
         except (OSError, ValueError) as p_out:
-            print("Error --", p_out)
+            print("Error with refresh...", p_out)
 
 if __name__=='__main__':
     app = Application()

@@ -38,161 +38,161 @@ def dataBackToSave(self):
                     try:
                         if os.path.exists('./newpatient/entryfile2.txt'):
                             print("+ entryfile 2 exist")
-                            shutil.copy('./newpatient/entryfile2.txt', './Backup/Files1/Backup_patient2.txt')
+                            shutil.copy('./newpatient/entryfile2.txt', './Backup/Files2/Backup_patient2.txt')
                     except FileNotFoundError as nf_file2:
                         print("Not found", nf_file2)
 
                     try:
                         if os.path.exists('./newpatient/entryfile3.txt'):
                             print("+ entryfile 3 exist")
-                            shutil.copy('./newpatient/entryfile3.txt', './Backup/Files1/Backup_patient3.txt')
+                            shutil.copy('./newpatient/entryfile3.txt', './Backup/Files3/Backup_patient3.txt')
                     except FileNotFoundError as nf_file3:
                         print("Not found", nf_file3)
 
                     try:
                         if os.path.exists('./newpatient/entryfile4.txt'):
                             print("+ entryfile 4 exist")
-                            shutil.copy('./newpatient/entryfile4.txt', './Backup/Files1/Backup_patient4.txt')
+                            shutil.copy('./newpatient/entryfile4.txt', './Backup/Files4/Backup_patient4.txt')
                     except FileNotFoundError as nf_file4:
                         print("Not found", nf_file4)
 
                     try:
                         if os.path.exists('./newpatient/entryfile5.txt'):
                             print("+ entryfile 5 exist")
-                            shutil.copy('./newpatient/entryfile5.txt', './Backup/Files1/Backup_patient5.txt')
+                            shutil.copy('./newpatient/entryfile5.txt', './Backup/Files5/Backup_patient5.txt')
                     except FileNotFoundError as nf_file5:
                         print("Not found", nf_file5)
 
                     try:
                         if os.path.exists('./newpatient/entryfile6.txt'):
                             print("+ entryfile 6 exist")
-                            shutil.copy('./newpatient/entryfile6.txt', './Backup/Files1/Backup_patient6.txt')
+                            shutil.copy('./newpatient/entryfile6.txt', './Backup/Files6/Backup_patient6.txt')
                     except FileNotFoundError as nf_file6:
                         print("Not found", nf_file6)
 
                     try:
                         if os.path.exists('./newpatient/entryfile7.txt'):
                             print("+ entryfile 7 exist")
-                            shutil.copy('./newpatient/entryfile7.txt', './Backup/Files1/Backup_patient7.txt')
+                            shutil.copy('./newpatient/entryfile7.txt', './Backup/Files7/Backup_patient7.txt')
                     except FileNotFoundError as nf_file7:
                         print("Not found", nf_file7)
 
                     try:
                         if os.path.exists('./newpatient/entryfile8.txt'):
                             print("+ entryfile 8 exist")
-                            shutil.copy('./newpatient/entryfile8.txt', './Backup/Files1/Backup_patient8.txt')
+                            shutil.copy('./newpatient/entryfile8.txt', './Backup/Files8/Backup_patient8.txt')
                     except FileNotFoundError as nf_file8:
                         print("Not found", nf_file8)
 
                     try:
                         if os.path.exists('./newpatient/entryfile9.txt'):
                             print("+ entryfile 9 exist")
-                            shutil.copy('./newpatient/entryfile9.txt', './Backup/Files1/Backup_patient9.txt')
+                            shutil.copy('./newpatient/entryfile9.txt', './Backup/Files9/Backup_patient9.txt')
                     except FileNotFoundError as nf_file9:
                         print("Not found", nf_file9)
 
                     try:
                         if os.path.exists('./newpatient/entryfile10.txt'):
                             print("+ entryfile 10 exist")
-                            shutil.copy('./newpatient/entryfile10.txt', './Backup/Files1/Backup_patient10.txt')
+                            shutil.copy('./newpatient/entryfile10.txt', './Backup/Files10/Backup_patient10.txt')
                     except FileNotFoundError as nf_file10:
                         print("Not found", nf_file10)
 
                     try:
                         if os.path.exists('./newpatient/entryfile11.txt'):
                             print("+ entryfile 11 exist")
-                            shutil.copy('./newpatient/entryfile11.txt', './Backup/Files1/Backup_patient11.txt')
+                            shutil.copy('./newpatient/entryfile11.txt', './Backup/Files11/Backup_patient11.txt')
                     except FileNotFoundError as nf_file11:
                         print("Not found", nf_file11)
 
                     try:
                         if os.path.exists('./newpatient/entryfile12.txt'):
                             print("+ entryfile 12 exist")
-                            shutil.copy('./newpatient/entryfile12.txt', './Backup/Files1/Backup_patient12.txt')
+                            shutil.copy('./newpatient/entryfile12.txt', './Backup/Files12/Backup_patient12.txt')
                     except FileNotFoundError as nf_file12:
                         print("Not found", nf_file12)
                         
                     try:
                         if os.path.exists('./newpatient/entryfile13.txt'):
                             print("+ entryfile 13 exist")
-                            shutil.copy('./newpatient/entryfile13.txt', './Backup/Files1/Backup_patient13.txt')
+                            shutil.copy('./newpatient/entryfile13.txt', './Backup/Files13/Backup_patient13.txt')
                     except FileNotFoundError as nf_file13:
                         print("Not found", nf_file13)
 
                     try:
                         if os.path.exists('./newpatient/entryfile14.txt'):
                             print("+ entryfile 14 exist")
-                            shutil.copy('./newpatient/entryfile14.txt', './Backup/Files1/Backup_patient14.txt')
+                            shutil.copy('./newpatient/entryfile14.txt', './Backup/Files14/Backup_patient14.txt')
                     except FileNotFoundError as nf_file14:
                         print("Not found", nf_file14)
 
                     try:
                         if os.path.exists('./newpatient/entryfile15.txt'):
                             print("+ entryfile 15 exist")
-                            shutil.copy('./newpatient/entryfile15.txt', './Backup/Files1/Backup_patient15.txt')
+                            shutil.copy('./newpatient/entryfile15.txt', './Backup/Files15/Backup_patient15.txt')
                     except FileNotFoundError as nf_file15:
                         print("Not found", nf_file15)
 
                     try:
                         if os.path.exists('./newpatient/entryfile16.txt'):
                             print("+ entryfile 16 exist")
-                            shutil.copy('./newpatient/entryfile16.txt', './Backup/Files1/Backup_patient16.txt')
+                            shutil.copy('./newpatient/entryfile16.txt', './Backup/Files16/Backup_patient16.txt')
                     except FileNotFoundError as nf_file16:
                         print("Not found", nf_file16)
 
                     try:
                         if os.path.exists('./newpatient/entryfile17.txt'):
                             print("+ entryfile 17 exist")
-                            shutil.copy('./newpatient/entryfile17.txt', './Backup/Files1/Backup_patient17.txt')
+                            shutil.copy('./newpatient/entryfile17.txt', './Backup/Files17/Backup_patient17.txt')
                     except FileNotFoundError as nf_file17:
                         print("Not found", nf_file17)
 
                     try:
                         if os.path.exists('./newpatient/entryfile18.txt'):
                             print("+ entryfile 18 exist")
-                            shutil.copy('./newpatient/entryfile18.txt', './Backup/Files1/Backup_patient18.txt')
+                            shutil.copy('./newpatient/entryfile18.txt', './Backup/Files18/Backup_patient18.txt')
                     except FileNotFoundError as nf_file18:
                         print("Not found", nf_file18)
 
                     try:
                         if os.path.exists('./newpatient/entryfile19.txt'):
                             print("+ entryfile 19 exist")
-                            shutil.copy('./newpatient/entryfile19.txt', './Backup/Files1/Backup_patient19.txt')
+                            shutil.copy('./newpatient/entryfile19.txt', './Backup/Files19/Backup_patient19.txt')
                     except FileNotFoundError as nf_file19:
                         print("Not found", nf_file19)
 
                     try:
                         if os.path.exists('./newpatient/entryfile20.txt'):
                             print("+ entryfile 20 exist")
-                            shutil.copy('./newpatient/entryfile20.txt', './Backup/Files1/Backup_patient20.txt')
+                            shutil.copy('./newpatient/entryfile20.txt', './Backup/Files20/Backup_patient20.txt')
                     except FileNotFoundError as nf_file20:
                         print("Not found", nf_file20)
 
                     try:
                         if os.path.exists('./newpatient/entryfile21.txt'):
                             print("+ entryfile 21 exist")
-                            shutil.copy('./newpatient/entryfile21.txt', './Backup/Files1/Backup_patient21.txt')
+                            shutil.copy('./newpatient/entryfile21.txt', './Backup/Files21/Backup_patient21.txt')
                     except FileNotFoundError as nf_file21:
                         print("Not found", nf_file21)
 
                     try:
                         if os.path.exists('./newpatient/entryfile22.txt'):
                             print("+ entryfile 22 exist")
-                            shutil.copy('./newpatient/entryfile22.txt', './Backup/Files1/Backup_patient22.txt')
+                            shutil.copy('./newpatient/entryfile22.txt', './Backup/Files22/Backup_patient22.txt')
                     except FileNotFoundError as nf_file22:
                         print("Not found", nf_file22)
 
                     try:
                         if os.path.exists('./newpatient/entryfile23.txt'):
                             print("+ entryfile 23 exist")
-                            shutil.copy('./newpatient/entryfile23.txt', './Backup/Files1/Backup_patient23.txt')
+                            shutil.copy('./newpatient/entryfile23.txt', './Backup/Files23/Backup_patient23.txt')
                     except FileNotFoundError as nf_file23:
                         print("Not found", nf_file23)
 
                     try:
                         if os.path.exists('./newpatient/entryfile24.txt'):
                             print("+ entryfile 24 exist")
-                            shutil.copy('./newpatient/entryfile24.txt', './Backup/Files1/Backup_patient24.txt')
+                            shutil.copy('./newpatient/entryfile24.txt', './Backup/Files24/Backup_patient24.txt')
                     except FileNotFoundError as nf_file24:
                         print("Not found", nf_file24)
 

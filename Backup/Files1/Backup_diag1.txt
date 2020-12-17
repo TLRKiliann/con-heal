@@ -1,0 +1,26 @@
+--- DIAGNOSTICS ---
+diagnotest
+diagnotest, dt2
+diag 3
+diag 4
+diag5
+fou à lier
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

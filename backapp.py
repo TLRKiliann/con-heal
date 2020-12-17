@@ -14,7 +14,7 @@ from tkinter import filedialog
 def backupFuncPatient(self):
     self.fen=Tk()
     self.fen.title("Search File")
-    self.fen.configure(bg='cyan')
+    self.fen.configure(bg='RoyalBlue3')
     filepath = filedialog.askopenfilename(initialdir = "./Backup/Files1",
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
@@ -43,7 +43,7 @@ def backupFuncPatient(self):
 def backupFuncPatient2(self):
     self.fen=Tk()
     self.fen.title("Search File")
-    self.fen.configure(bg='cyan')
+    self.fen.configure(bg='RoyalBlue3')
     filepath = filedialog.askopenfilename(initialdir = "./Backup/Files2",
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
@@ -72,7 +72,7 @@ def backupFuncPatient2(self):
 def backupFuncPatient3(self):
     self.fen=Tk()
     self.fen.title("Search File")
-    self.fen.configure(bg='cyan')
+    self.fen.configure(bg='RoyalBlue3')
     filepath = filedialog.askopenfilename(initialdir = "./Backup/Files3",
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
@@ -101,7 +101,7 @@ def backupFuncPatient3(self):
 def backupFuncPatient4(self):
     self.fen=Tk()
     self.fen.title("Search File")
-    self.fen.configure(bg='cyan')
+    self.fen.configure(bg='RoyalBlue3')
     filepath = filedialog.askopenfilename(initialdir = "./Backup/Files4",
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
@@ -130,7 +130,7 @@ def backupFuncPatient4(self):
 def backupFuncPatient5(self):
     self.fen=Tk()
     self.fen.title("Search File")
-    self.fen.configure(bg='cyan')
+    self.fen.configure(bg='RoyalBlue3')
     filepath = filedialog.askopenfilename(initialdir = "./Backup/Files5",
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
@@ -159,7 +159,7 @@ def backupFuncPatient5(self):
 def backupFuncPatient6(self):
     self.fen=Tk()
     self.fen.title("Search File")
-    self.fen.configure(bg='cyan')
+    self.fen.configure(bg='RoyalBlue3')
     filepath = filedialog.askopenfilename(initialdir = "./Backup/Files6",
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
@@ -188,7 +188,7 @@ def backupFuncPatient6(self):
 def backupFuncPatient7(self):
     self.fen=Tk()
     self.fen.title("Search File")
-    self.fen.configure(bg='cyan')
+    self.fen.configure(bg='RoyalBlue3')
     filepath = filedialog.askopenfilename(initialdir = "./Backup/Files7",
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
@@ -217,7 +217,7 @@ def backupFuncPatient7(self):
 def backupFuncPatient8(self):
     self.fen=Tk()
     self.fen.title("Search File")
-    self.fen.configure(bg='cyan')
+    self.fen.configure(bg='RoyalBlue3')
     filepath = filedialog.askopenfilename(initialdir = "./Backup/Files8",
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
@@ -246,7 +246,7 @@ def backupFuncPatient8(self):
 def backupFuncPatient9(self):
     self.fen=Tk()
     self.fen.title("Search File")
-    self.fen.configure(bg='cyan')
+    self.fen.configure(bg='RoyalBlue3')
     filepath = filedialog.askopenfilename(initialdir = "./Backup/Files9",
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
@@ -275,7 +275,7 @@ def backupFuncPatient9(self):
 def backupFuncPatient10(self):
     self.fen=Tk()
     self.fen.title("Search File")
-    self.fen.configure(bg='cyan')
+    self.fen.configure(bg='RoyalBlue3')
     filepath = filedialog.askopenfilename(initialdir = "./Backup/Files10",
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
@@ -304,7 +304,7 @@ def backupFuncPatient10(self):
 def backupFuncPatient11(self):
     self.fen=Tk()
     self.fen.title("Search File")
-    self.fen.configure(bg='cyan')
+    self.fen.configure(bg='RoyalBlue3')
     filepath = filedialog.askopenfilename(initialdir = "./Backup/Files11",
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
@@ -333,7 +333,7 @@ def backupFuncPatient11(self):
 def backupFuncPatient12(self):
     self.fen=Tk()
     self.fen.title("Search File")
-    self.fen.configure(bg='cyan')
+    self.fen.configure(bg='RoyalBlue3')
     filepath = filedialog.askopenfilename(initialdir = "./Backup/Files12",
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
@@ -362,7 +362,7 @@ def backupFuncPatient12(self):
 def backupFuncPatient13(self):
     self.fen=Tk()
     self.fen.title("Search File")
-    self.fen.configure(bg='cyan')
+    self.fen.configure(bg='RoyalBlue3')
     filepath = filedialog.askopenfilename(initialdir = "./Backup/Files13",
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
@@ -391,7 +391,7 @@ def backupFuncPatient13(self):
 def backupFuncPatient14(self):
     self.fen=Tk()
     self.fen.title("Search File")
-    self.fen.configure(bg='cyan')
+    self.fen.configure(bg='RoyalBlue3')
     filepath = filedialog.askopenfilename(initialdir = "./Backup/Files14",
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
@@ -420,7 +420,7 @@ def backupFuncPatient14(self):
 def backupFuncPatient15(self):
     self.fen=Tk()
     self.fen.title("Search File")
-    self.fen.configure(bg='cyan')
+    self.fen.configure(bg='RoyalBlue3')
     filepath = filedialog.askopenfilename(initialdir = "./Backup/Files15",
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
@@ -449,7 +449,7 @@ def backupFuncPatient15(self):
 def backupFuncPatient16(self):
     self.fen=Tk()
     self.fen.title("Search File")
-    self.fen.configure(bg='cyan')
+    self.fen.configure(bg='RoyalBlue3')
     filepath = filedialog.askopenfilename(initialdir = "./Backup/Files16",
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
@@ -478,7 +478,7 @@ def backupFuncPatient16(self):
 def backupFuncPatient17(self):
     self.fen=Tk()
     self.fen.title("Search File")
-    self.fen.configure(bg='cyan')
+    self.fen.configure(bg='RoyalBlue3')
     filepath = filedialog.askopenfilename(initialdir = "./Backup/Files17",
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
@@ -507,7 +507,7 @@ def backupFuncPatient17(self):
 def backupFuncPatient18(self):
     self.fen=Tk()
     self.fen.title("Search File")
-    self.fen.configure(bg='cyan')
+    self.fen.configure(bg='RoyalBlue3')
     filepath = filedialog.askopenfilename(initialdir = "./Backup/Files18",
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
@@ -536,7 +536,7 @@ def backupFuncPatient18(self):
 def backupFuncPatient19(self):
     self.fen=Tk()
     self.fen.title("Search File")
-    self.fen.configure(bg='cyan')
+    self.fen.configure(bg='RoyalBlue3')
     filepath = filedialog.askopenfilename(initialdir = "./Backup/Files19",
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
@@ -565,7 +565,7 @@ def backupFuncPatient19(self):
 def backupFuncPatient20(self):
     self.fen=Tk()
     self.fen.title("Search File")
-    self.fen.configure(bg='cyan')
+    self.fen.configure(bg='RoyalBlue3')
     filepath = filedialog.askopenfilename(initialdir = "./Backup/Files20",
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
@@ -594,7 +594,7 @@ def backupFuncPatient20(self):
 def backupFuncPatient21(self):
     self.fen=Tk()
     self.fen.title("Search File")
-    self.fen.configure(bg='cyan')
+    self.fen.configure(bg='RoyalBlue3')
     filepath = filedialog.askopenfilename(initialdir = "./Backup/Files21",
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
@@ -623,7 +623,7 @@ def backupFuncPatient21(self):
 def backupFuncPatient22(self):
     self.fen=Tk()
     self.fen.title("Search File")
-    self.fen.configure(bg='cyan')
+    self.fen.configure(bg='RoyalBlue3')
     filepath = filedialog.askopenfilename(initialdir = "./Backup/Files22",
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
@@ -652,7 +652,7 @@ def backupFuncPatient22(self):
 def backupFuncPatient23(self):
     self.fen=Tk()
     self.fen.title("Search File")
-    self.fen.configure(bg='cyan')
+    self.fen.configure(bg='RoyalBlue3')
     filepath = filedialog.askopenfilename(initialdir = "./Backup/Files23",
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)
@@ -681,7 +681,7 @@ def backupFuncPatient23(self):
 def backupFuncPatient24(self):
     self.fen=Tk()
     self.fen.title("Search File")
-    self.fen.configure(bg='cyan')
+    self.fen.configure(bg='RoyalBlue3')
     filepath = filedialog.askopenfilename(initialdir = "./Backup/Files24",
         title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
     print(filepath)

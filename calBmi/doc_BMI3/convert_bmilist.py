@@ -94,10 +94,9 @@ with plt.style.context(('dark_background')):
     axes.set_xlim([min_date, max_date])
 
     plt.bar(x_axis, y_axis, width=3, color='yellow')
-    plt.ylabel('BMI')
-    plt.xlabel('Dates')
-    plt.title('BMI for one year')
-    #plt.xticks(rotation=45)
+    plt.ylabel('BMI', fontsize=14)
+    plt.xlabel('Dates', fontsize=14)
+    plt.title('BMI for one year', fontsize=16)
     plt.legend(['BMI/date'])
     plt.grid(show_grid)
     plt.gcf().autofmt_xdate(rotation=45)

@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# -*-encoding:Utf-8-*-
+# -*- coding: utf-8-*-
 
 
 from tkinter import *
@@ -9,8 +9,8 @@ import os
 
 def get(monthVal, month_start, monthEnd, month_end):
     """
-    Entry at first time
-    a patient with entry button
+        Entry at first time
+        a patient with entry button
     """
     MsgBox = messagebox.askyesno('Enter dates', 'Do you want to enter these dates ?')
     if MsgBox == 1:
@@ -47,9 +47,9 @@ labelName = Label(text='Enter date of start : ',
 labelName.pack(pady=10)
 
 monthVal=StringVar()
-monthVal.set("00-00-2020")
 month_start = Entry(gui, textvariable=monthVal, 
     highlightbackground='light sky blue', bd=4)
+monthVal.set("00-00-2020")
 month_start.pack()
 
 labelName = Label(gui)
@@ -59,9 +59,9 @@ labelName = Label(text='Enter date of end : ',
 labelName.pack(pady=10)
 
 monthEnd=StringVar()
-monthEnd.set("00-00-2020")
 month_end = Entry(gui, textvariable=monthEnd, 
     highlightbackground='light sky blue', bd=4)
+monthEnd.set("00-00-2020")
 month_end.pack()
 
 bouton1 = Button(gui, text="Enter", width=8, bd=3,

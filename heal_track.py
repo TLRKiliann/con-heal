@@ -64,7 +64,7 @@ from ttt.patienttt21 import callTreatment21
 from ttt.patienttt22 import callTreatment22
 from ttt.patienttt23 import callTreatment23
 from ttt.patienttt24 import callTreatment24
-import passw
+#import passw
 
 
 class ScrollCanvas(Frame):
@@ -2970,161 +2970,161 @@ class Application(Frame):
         self.master.update()
 
     def allFilesBackup2(self):
-    	self.master.wm_attributes('-alpha', 0.8)
+        self.master.wm_attributes('-alpha', 0.8)
         self.master.update()
         backupFuncPatient2(self)
         self.master.wm_attributes('-alpha', 1.0)
         self.master.update()
 
     def allFilesBackup3(self):
-    	self.master.wm_attributes('-alpha', 0.8)
+        self.master.wm_attributes('-alpha', 0.8)
         self.master.update()
         backupFuncPatient3(self)
         self.master.wm_attributes('-alpha', 1.0)
         self.master.update()
 
     def allFilesBackup4(self):
-    	self.master.wm_attributes('-alpha', 0.8)
+        self.master.wm_attributes('-alpha', 0.8)
         self.master.update()
         backupFuncPatient4(self)
         self.master.wm_attributes('-alpha', 1.0)
         self.master.update()
 
     def allFilesBackup5(self):
-    	self.master.wm_attributes('-alpha', 0.8)
+        self.master.wm_attributes('-alpha', 0.8)
         self.master.update()
         backupFuncPatient5(self)
         self.master.wm_attributes('-alpha', 1.0)
         self.master.update()
 
     def allFilesBackup6(self):
-    	self.master.wm_attributes('-alpha', 0.8)
+        self.master.wm_attributes('-alpha', 0.8)
         self.master.update()
         backupFuncPatient6(self)
         self.master.wm_attributes('-alpha', 1.0)
         self.master.update()
 
     def allFilesBackup7(self):
-    	self.master.wm_attributes('-alpha', 0.8)
+        self.master.wm_attributes('-alpha', 0.8)
         self.master.update()
         backupFuncPatient7(self)
         self.master.wm_attributes('-alpha', 1.0)
         self.master.update()
 
     def allFilesBackup8(self):
-    	self.master.wm_attributes('-alpha', 0.8)
+        self.master.wm_attributes('-alpha', 0.8)
         self.master.update()
         backupFuncPatient8(self)
         self.master.wm_attributes('-alpha', 1.0)
         self.master.update()
 
     def allFilesBackup9(self):
-    	self.master.wm_attributes('-alpha', 0.8)
+        self.master.wm_attributes('-alpha', 0.8)
         self.master.update()
         backupFuncPatient9(self)
         self.master.wm_attributes('-alpha', 1.0)
         self.master.update()
 
     def allFilesBackup10(self):
-    	self.master.wm_attributes('-alpha', 0.8)
+        self.master.wm_attributes('-alpha', 0.8)
         self.master.update()
         backupFuncPatient10(self)
         self.master.wm_attributes('-alpha', 1.0)
         self.master.update()
 
     def allFilesBackup11(self):
-    	self.master.wm_attributes('-alpha', 0.8)
+        self.master.wm_attributes('-alpha', 0.8)
         self.master.update()
         backupFuncPatient11(self)
         self.master.wm_attributes('-alpha', 1.0)
         self.master.update()
 
     def allFilesBackup12(self):
-    	self.master.wm_attributes('-alpha', 0.8)
+        self.master.wm_attributes('-alpha', 0.8)
         self.master.update()
         backupFuncPatient12(self)
         self.master.wm_attributes('-alpha', 1.0)
         self.master.update()
 
     def allFilesBackup13(self):
-    	self.master.wm_attributes('-alpha', 0.8)
+        self.master.wm_attributes('-alpha', 0.8)
         self.master.update()
         backupFuncPatient13(self)
         self.master.wm_attributes('-alpha', 1.0)
         self.master.update()
 
     def allFilesBackup14(self):
-    	self.master.wm_attributes('-alpha', 0.8)
+        self.master.wm_attributes('-alpha', 0.8)
         self.master.update()
         backupFuncPatient14(self)
         self.master.wm_attributes('-alpha', 1.0)
         self.master.update()
 
     def allFilesBackup15(self):
-    	self.master.wm_attributes('-alpha', 0.8)
+        self.master.wm_attributes('-alpha', 0.8)
         self.master.update()
         backupFuncPatient15(self)
         self.master.wm_attributes('-alpha', 1.0)
         self.master.update()
 
     def allFilesBackup16(self):
-    	self.master.wm_attributes('-alpha', 0.8)
+        self.master.wm_attributes('-alpha', 0.8)
         self.master.update()
         backupFuncPatient16(self)
         self.master.wm_attributes('-alpha', 1.0)
         self.master.update()
 
     def allFilesBackup17(self):
-    	self.master.wm_attributes('-alpha', 0.8)
+        self.master.wm_attributes('-alpha', 0.8)
         self.master.update()
         backupFuncPatient17(self)
         self.master.wm_attributes('-alpha', 1.0)
         self.master.update()
 
     def allFilesBackup18(self):
-    	self.master.wm_attributes('-alpha', 0.8)
+        self.master.wm_attributes('-alpha', 0.8)
         self.master.update()
         backupFuncPatient18(self)
         self.master.wm_attributes('-alpha', 1.0)
         self.master.update()
 
     def allFilesBackup19(self):
-    	self.master.wm_attributes('-alpha', 0.8)
+        self.master.wm_attributes('-alpha', 0.8)
         self.master.update()
         backupFuncPatient19(self)
         self.master.wm_attributes('-alpha', 1.0)
         self.master.update()
 
     def allFilesBackup20(self):
-    	self.master.wm_attributes('-alpha', 0.8)
+        self.master.wm_attributes('-alpha', 0.8)
         self.master.update()
         backupFuncPatient20(self)
         self.master.wm_attributes('-alpha', 1.0)
         self.master.update()
 
     def allFilesBackup21(self):
-    	self.master.wm_attributes('-alpha', 0.8)
+        self.master.wm_attributes('-alpha', 0.8)
         self.master.update()
         backupFuncPatient21(self)
         self.master.wm_attributes('-alpha', 1.0)
         self.master.update()
 
     def allFilesBackup22(self):
-    	self.master.wm_attributes('-alpha', 0.8)
+        self.master.wm_attributes('-alpha', 0.8)
         self.master.update()
         backupFuncPatient22(self)
         self.master.wm_attributes('-alpha', 1.0)
         self.master.update()
 
     def allFilesBackup23(self):
-    	self.master.wm_attributes('-alpha', 0.8)
+        self.master.wm_attributes('-alpha', 0.8)
         self.master.update()
         backupFuncPatient23(self)
         self.master.wm_attributes('-alpha', 1.0)
         self.master.update()
 
     def allFilesBackup24(self):
-    	self.master.wm_attributes('-alpha', 0.8)
+        self.master.wm_attributes('-alpha', 0.8)
         self.master.update()
         backupFuncPatient24(self)
         self.master.wm_attributes('-alpha', 1.0)

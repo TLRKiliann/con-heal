@@ -1,7 +1,0 @@
----####-|--- Affichage des besoins du patient à surveiller ---|-####---
-
-En date du : 16/12/2020 à 10:06:36 :
-Patient name : Ian Curtis+ Surveillance alimentaire et/ou hydratation requise
-+ Surveillance urinaire et/ou fécale requise requise
----
-

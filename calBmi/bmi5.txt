@@ -1,7 +1,0 @@
-Date : 19-12-2020
-Heure : 09:22:54
-Prenom et Nom : Garry McKinnen
-Poids : 77
-Taille : 1.86
-BMI : 22.257
-

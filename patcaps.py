@@ -107,7 +107,11 @@ def callResident(self):
         self.d10 = Entry(self.can,
             textvariable=self.new_data1,
             highlightbackground='grey', bd=4)
-        self.new_data1.set(line1[:-1])
+        if line1 == '-':
+            line1 = line1
+        else:
+            line1 = line1[:-1]
+        self.new_data1.set(line1)
         self.fd10_window = self.can.create_window(self.x10,
             self.y10, window=self.d10)
     except UnboundLocalError as ub_error1:
@@ -182,7 +186,11 @@ def callResident(self):
         self.new_data2 = StringVar()
         self.d20 = Entry(self.can, textvariable=self.new_data2,
             highlightbackground='grey', bd=4)
-        self.new_data2.set(line2[:-1])
+        if line2 == '-':
+            line2 = line2
+        else:
+            line2 = line2[:-1]
+        self.new_data2.set(line2)
         self.fd20_window = self.can.create_window(self.x20,
             self.y20, window=self.d20)
     except UnboundLocalError as ub_error2:
@@ -257,7 +265,11 @@ def callResident(self):
         self.new_data3 = StringVar()
         self.d30 = Entry(self.can, textvariable=self.new_data3,
             highlightbackground='grey', bd=4)
-        self.new_data3.set(line3[:-1])
+        if line3 == '-':
+            line3 = line3
+        else:
+            line3 = line3[:-1]
+        self.new_data3.set(line3)
         self.fd30_window = self.can.create_window(self.x30,
             self.y30, window=self.d30)
     except UnboundLocalError as ub_error3:
@@ -333,7 +345,11 @@ def callResident(self):
         self.d40 = Entry(self.can,
             textvariable=self.new_data4,
             highlightbackground='grey', bd=4)
-        self.new_data4.set(line4[:-1])
+        if line4 == '-':
+            line4 = line4
+        else:
+            line4 = line4[:-1]
+        self.new_data4.set(line4)
         self.fd40_window = self.can.create_window(self.x40,
             self.y40, window=self.d40)
     except UnboundLocalError as ub_error4:
@@ -409,7 +425,11 @@ def callResident(self):
         self.d50 = Entry(self.can,
             textvariable=self.new_data5,
             highlightbackground='grey', bd=4)
-        self.new_data5.set(line5[:-1])
+        if line5 == '-':
+            line5 = line5
+        else:
+            line5 = line5[:-1]
+        self.new_data5.set(line5)
         self.fd50_window = self.can.create_window(self.x50,
             self.y50, window=self.d50)
     except UnboundLocalError as ub_error5:
@@ -484,7 +504,11 @@ def callResident(self):
         self.new_data6 = StringVar()
         self.d60 = Entry(self.can, textvariable=self.new_data6,
             highlightbackground='grey', bd=4)
-        self.new_data6.set(line6[:-1])
+        if line6 == '-':
+            line6 = line6
+        else:
+            line6 = line6[:-1]
+        self.new_data6.set(line6)
         self.fd60_window = self.can.create_window(self.x60,
             self.y60, window=self.d60)
     except UnboundLocalError as ub_error6:
@@ -559,7 +583,11 @@ def callResident(self):
         self.new_data7 = StringVar()
         self.d70 = Entry(self.can, textvariable=self.new_data7,
             highlightbackground='grey', bd=4)
-        self.new_data7.set(line7[:-1])
+        if line7 == '-':
+            line7 = line7
+        else:
+            line7 = line7[:-1]
+        self.new_data7.set(line7)
         self.fd70_window = self.can.create_window(self.x70,
             self.y70, window=self.d70)
     except UnboundLocalError as ub_error7:
@@ -634,7 +662,11 @@ def callResident(self):
         self.new_data8 = StringVar()
         self.d80 = Entry(self.can, textvariable=self.new_data8,
             highlightbackground='grey', bd=4)
-        self.new_data8.set(line8[:-1])
+        if line8 == '-':
+            line8 = line8
+        else:
+            line8 = line8[:-1]
+        self.new_data8.set(line8)
         self.fd80_window = self.can.create_window(self.x80,
             self.y80, window=self.d80)
     except UnboundLocalError as ub_error8:
@@ -709,7 +741,11 @@ def callResident(self):
         self.new_data9 = StringVar()
         self.d90 = Entry(self.can, textvariable=self.new_data9,
             highlightbackground='grey', bd=4)
-        self.new_data9.set(line9[:-1])
+        if line9 == '-':
+            line9 = line9
+        else:
+            line9 = line9[:-1]
+        self.new_data9.set(line9)
         self.fd90_window = self.can.create_window(self.x90,
             self.y90, window=self.d90)
     except UnboundLocalError as ub_error9:
@@ -784,7 +820,11 @@ def callResident(self):
         self.new_data10 = StringVar()
         self.d100 = Entry(self.can, textvariable=self.new_data10,
             highlightbackground='grey', bd=4)
-        self.new_data10.set(line10[:-1])
+        if line10 == '-':
+            line10 = line10
+        else:
+            line10 = line10[:-1]
+        self.new_data10.set(line10)
         self.fd100_window = self.can.create_window(self.x100,
             self.y100, window=self.d100)
     except UnboundLocalError as ub_error10:
@@ -859,7 +899,11 @@ def callResident(self):
         self.new_data11 = StringVar()
         self.d110 = Entry(self.can, textvariable=self.new_data11,
             highlightbackground='grey', bd=4)
-        self.new_data11.set(line11[:-1])
+        if line11 == '-':
+            line11 = line11
+        else:
+            line11 = line11[:-1]
+        self.new_data11.set(line11)
         self.fd110_window = self.can.create_window(self.x110,
             self.y110, window=self.d110)
     except UnboundLocalError as ub_error11:
@@ -934,7 +978,11 @@ def callResident(self):
         self.new_data12 = StringVar()
         self.d120 = Entry(self.can, textvariable=self.new_data12,
             highlightbackground='grey', bd=4)
-        self.new_data12.set(line12[:-1])
+        if line12 == '-':
+            line12 = line12
+        else:
+            line12 = line12[:-1]
+        self.new_data12.set(line12)
         self.fd120_window = self.can.create_window(self.x120,
             self.y120, window=self.d120)
     except UnboundLocalError as ub_error12:
@@ -1009,7 +1057,11 @@ def callResident(self):
         self.new_data13 = StringVar()
         self.d130 = Entry(self.can, textvariable=self.new_data13,
             highlightbackground='grey', bd=4)
-        self.new_data13.set(line13[:-1])
+        if line13 == '-':
+            line13 = line13
+        else:
+            line13 = line13[:-1]
+        self.new_data13.set(line13)
         self.fd130_window = self.can.create_window(self.x130,
             self.y130, window=self.d130)
     except UnboundLocalError as ub_error13:
@@ -1084,7 +1136,11 @@ def callResident(self):
         self.new_data14 = StringVar()
         self.d140 = Entry(self.can, textvariable=self.new_data14,
             highlightbackground='grey', bd=4)
-        self.new_data14.set(line14[:-1])
+        if line14 == '-':
+            line14 = line14
+        else:
+            line14 = line14[:-1]
+        self.new_data14.set(line14)
         self.fd140_window = self.can.create_window(self.x140,
             self.y140, window=self.d140)
     except UnboundLocalError as ub_error14:
@@ -1159,7 +1215,11 @@ def callResident(self):
         self.new_data15 = StringVar()
         self.d150 = Entry(self.can, textvariable=self.new_data15,
             highlightbackground='grey', bd=4)
-        self.new_data15.set(line15[:-1])
+        if line15 == '-':
+            line15 = line15
+        else:
+            line15 = line15[:-1]
+        self.new_data15.set(line15)
         self.fd150_window = self.can.create_window(self.x150,
             self.y150, window=self.d150)
     except UnboundLocalError as ub_error15:
@@ -1227,7 +1287,11 @@ def callResident(self):
         self.new_data16 = StringVar()
         self.d160 = Entry(self.can, textvariable=self.new_data16,
             highlightbackground='grey', bd=4)
-        self.new_data16.set(line16[:-1])
+        if line16 == '-':
+            line16 = line16
+        else:
+            line16 = line16[:-1]
+        self.new_data16.set(line16)
         self.fd160_window = self.can.create_window(self.x160,
             self.y160, window=self.d160)
     except UnboundLocalError as ub_error16:
@@ -1302,7 +1366,11 @@ def callResident(self):
         self.new_data17 = StringVar()
         self.d170 = Entry(self.can, textvariable=self.new_data17,
             highlightbackground='grey', bd=4)
-        self.new_data17.set(line17[:-1])
+        if line17 == '-':
+            line17 = line17
+        else:
+            line17 = line17[:-1]
+        self.new_data17.set(line17)
         self.fd170_window = self.can.create_window(self.x170,
             self.y170, window=self.d170)
     except UnboundLocalError as ub_error17:
@@ -1370,7 +1438,11 @@ def callResident(self):
         self.new_data18 = StringVar()
         self.d180 = Entry(self.can, textvariable=self.new_data18,
             highlightbackground='grey', bd=4)
-        self.new_data18.set(line18[:-1])
+        if line18 == '-':
+            line18 = line18
+        else:
+            line18 = line18[:-1]
+        self.new_data18.set(line18)
         self.fd180_window = self.can.create_window(self.x180,
             self.y180, window=self.d180)
     except UnboundLocalError as ub_error18:
@@ -1445,7 +1517,11 @@ def callResident(self):
         self.new_data19 = StringVar()
         self.d190 = Entry(self.can, textvariable=self.new_data19,
             highlightbackground='grey', bd=4)
-        self.new_data19.set(line19[:-1])
+        if line19 == '-':
+            line19 = line19
+        else:
+            line19 = line19[:-1]
+        self.new_data19.set(line19)
         self.fd190_window = self.can.create_window(self.x190,
             self.y190, window=self.d190)
     except UnboundLocalError as ub_error19:
@@ -1513,7 +1589,11 @@ def callResident(self):
         self.new_data20 = StringVar()
         self.d200 = Entry(self.can, textvariable=self.new_data20,
             highlightbackground='grey', bd=4)
-        self.new_data20.set(line20[:-1])
+        if line20 == '-':
+            line20 = line20
+        else:
+            line20 = line20[:-1]
+        self.new_data20.set(line20)
         self.fd200_window = self.can.create_window(self.x200,
             self.y200, window=self.d200)
     except UnboundLocalError as ub_error20:
@@ -1588,7 +1668,11 @@ def callResident(self):
         self.new_data21 = StringVar()
         self.d210 = Entry(self.can, textvariable=self.new_data21,
             highlightbackground='grey', bd=4)
-        self.new_data21.set(line21[:-1])
+        if line21 == '-':
+            line21 = line21
+        else:
+            line21 = line21[:-1]
+        self.new_data21.set(line21)
         self.fd210_window = self.can.create_window(self.x210,
             self.y210, window=self.d210)
     except UnboundLocalError as ub_error21:
@@ -1656,7 +1740,11 @@ def callResident(self):
         self.new_data22 = StringVar()
         self.d220 = Entry(self.can, textvariable=self.new_data22,
             highlightbackground='grey', bd=4)
-        self.new_data22.set(line22[:-1])
+        if line22 == '-':
+            line22 = line22
+        else:
+            line22 = line22[:-1]
+        self.new_data22.set(line22)
         self.fd220_window = self.can.create_window(self.x220,
             self.y220, window=self.d220)
     except UnboundLocalError as ub_error22:
@@ -1731,7 +1819,11 @@ def callResident(self):
         self.new_data23 = StringVar()
         self.d230 = Entry(self.can, textvariable=self.new_data23,
             highlightbackground='grey', bd=4)
-        self.new_data23.set(line23[:-1])
+        if line23 == '-':
+            line23 = line23
+        else:
+            line23 = line23[:-1]
+        self.new_data23.set(line23)
         self.fd230_window = self.can.create_window(self.x230,
             self.y230, window=self.d230)
     except UnboundLocalError as ub_error23:
@@ -1799,7 +1891,11 @@ def callResident(self):
         self.new_data24 = StringVar()
         self.d240 = Entry(self.can, textvariable=self.new_data24,
           highlightbackground='grey', bd=4)
-        self.new_data24.set(line24[:-1])
+        if line24 == '-':
+            line24 = line24
+        else:
+            line24 = line24[:-1]
+        self.new_data24.set(line24)
         self.fd240_window = self.can.create_window(self.x240,
             self.y240, window=self.d240)
     except UnboundLocalError as ub_error24:

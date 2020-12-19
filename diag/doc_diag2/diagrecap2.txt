@@ -1,2 +1,0 @@
---- DIAGNOSTICS ---
-diagno_test1

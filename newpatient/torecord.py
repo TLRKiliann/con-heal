@@ -601,9 +601,9 @@ labelID = Label(gui, text='ID Number: ',
 labelID.pack(pady=10)
 
 PatientID=StringVar()
-PatientID.set('Patient ID')
 patientnum = Entry(gui, textvariable=PatientID,
     highlightbackground='SteelBlue', bd=4)
+PatientID.set('Patient ID')
 patientnum.pack()
 
 labelName = Label(gui, text='Name : ',
@@ -612,15 +612,15 @@ labelName = Label(gui, text='Name : ',
 labelName.pack(pady=10)
 
 Firstname=StringVar()
-Firstname.set('Firstname')
 labelfirst = Entry(gui, textvariable=Firstname,
     highlightbackground='DodgerBlue2', bd=4)
+Firstname.set('Firstname')
 labelfirst.pack()
 
 Surname=StringVar()
-Surname.set('Lastname')
 lblsurname = Entry(gui, textvariable=Surname,
     highlightbackground='SteelBlue', bd=4)
+Surname.set('Lastname')
 lblsurname.pack()
 
 labelBirth = Label(gui, text='Birth Date : ', font="Times 14 bold",
@@ -628,9 +628,9 @@ labelBirth = Label(gui, text='Birth Date : ', font="Times 14 bold",
 labelBirth.pack(pady=10)
 
 Birthvalue=StringVar()
-Birthvalue.set('Format: 00/00/0000')
 Birth_entree = Entry(gui, textvariable=Birthvalue,
     highlightbackground='SteelBlue', bd=4)
+Birthvalue.set('Format: 00/00/0000')
 Birth_entree.pack()
 
 labelAller = Label(gui)
@@ -640,9 +640,9 @@ labelAller = Label(text='Allergy : ',
 labelAller.pack(pady=10)
 
 Allergia=StringVar()
-Allergia.set('None')
 Patient_allergy = Entry(gui, textvariable=Allergia,
     highlightbackground='SteelBlue', bd=4)
+Allergia.set('None')
 Patient_allergy.pack()
 
 labelTrans = Label(gui, text='Transmissible Disease : ',
@@ -651,9 +651,9 @@ labelTrans = Label(gui, text='Transmissible Disease : ',
 labelTrans.pack(pady=10)
 
 TransDisVal = StringVar()
-TransDisVal.set('None')
 TransDisease = Entry(gui, textvariable=TransDisVal,
     highlightbackground='SteelBlue', bd=4)
+TransDisVal.set('None')
 TransDisease.pack()
 
 labelDiag = Label(gui, text='Diagnosis : ',
@@ -662,14 +662,13 @@ labelDiag = Label(gui, text='Diagnosis : ',
 labelDiag.pack(pady=10)
 
 Diagnosis = StringVar()
-Diagnosis.set('Diagnostic (main)')
 Diagnos_pat = Entry(gui, textvariable=Diagnosis,
     highlightbackground='SteelBlue', bd=4)
+Diagnosis.set('Diagnostic (main)')
 Diagnos_pat.pack()
 
 bouton1 = Button(gui, text="Enter", width=8, bd=4,
-    fg='yellow', bg='RoyalBlue3',
-    highlightbackground='SteelBlue',
+    fg='yellow', bg='RoyalBlue3', highlightbackground='SteelBlue',
     activebackground='dark turquoise',
     command = lambda: get(PatientID, patientnum, Firstname, labelfirst,
         Surname, lblsurname, Birthvalue, Birth_entree, Allergia,
@@ -677,8 +676,7 @@ bouton1 = Button(gui, text="Enter", width=8, bd=4,
 bouton1.pack(side=LEFT, padx=10, pady=20)
 
 buttQuit=Button(gui, text="Quit", width=8, bd=4,
-    fg='cyan', bg='RoyalBlue3',
-    highlightbackground='SteelBlue',
+    fg='cyan', bg='RoyalBlue3', highlightbackground='SteelBlue',
     activebackground='dark turquoise', command=quit)
 buttQuit.pack(side=LEFT, padx=10, pady=20)
 

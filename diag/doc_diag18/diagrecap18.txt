@@ -1,2 +1,0 @@
---- DIAGNOSTICS ---
-Diagnostic 18

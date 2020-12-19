@@ -1,9 +1,0 @@
-
----------------------------------------------------------
-Date : 02/11/2020
-Patient name : Terry McGuire
-# Lyrica : (add result of dosage here)
-# Trileptal : (add result of dosage here)
-# Remeron : (add result of dosage here)
----------------------------------------------------------
-

@@ -1,7 +1,0 @@
-Date : 19-12-2020
-Heure : 09:23:52
-Prenom et Nom : Clint Eastwood
-Poids : 77
-Taille : 1.95
-BMI : 20.25
-

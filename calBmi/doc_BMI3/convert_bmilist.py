@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# -*- coding:utf-8 -*-
+# -*- coding: utf-8 -*-
 
 
 import os
@@ -19,21 +19,24 @@ file = open('./calBmi/doc_BMI3/file_bmi.json')
 data = json.load(file)
 #file.close
 
-for (key, value) in data.items():
-    print("Key: " + key)
-    print("Valeur: " + str(value))
-    print("\nTo represent the data_get:\n")
-    print(data.get("data"))
-    print("\n")
-    print("Valeur: " + str(value[0]))
-    print("Valeur: " + str(value[1]))
-    print("\n")
-    print("Date: " + str(value[0]["Date"]))
-    print("BMI: " + str(value[0]["BMI"]))
-    print("\n")
-    print("Date: " + str(value[1]["Date"]))
-    print("BMI: " + str(value[1]["BMI"]))
-    
+try:
+    for (key, value) in data.items():
+        print("Key: " + key)
+        print("Valeur: " + str(value))
+        print("\nTo represent the data_get:\n")
+        print(data.get("data"))
+        print("\n")
+        print("Valeur: " + str(value[0]))
+        print("Valeur: " + str(value[1]))
+        print("\n")
+        print("Date: " + str(value[0]["Date"]))
+        print("BMI: " + str(value[0]["BMI"]))
+        print("\n")
+        print("Date: " + str(value[1]["Date"]))
+        print("BMI: " + str(value[1]["BMI"]))
+except IndexError as ind_err:
+    print("Only one value for BMI...", ind_err)
+
 data_list1 = []
 for value in zip(value):
     data_list1.append(value[0]['Date'])

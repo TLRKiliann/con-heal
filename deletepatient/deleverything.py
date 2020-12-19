@@ -44,8 +44,8 @@ except ImportError as err_report3:
 
 def get(Nompatient, entree, PatientID, Num_pat):
     """
-    To delete patient name and all files by functions
-    with a msgbox to verify the choice.
+        To delete patient name and all files by functions
+        with a msgbox to verify the choice.
     """
     MsgBox = messagebox.askyesno('Save data', 'Do you want to delete ?')
     if MsgBox == 1:

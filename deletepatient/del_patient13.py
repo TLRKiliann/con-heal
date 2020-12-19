@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-# -*-encoding:Utf-8-*-
+# -*- coding: utf-8 -*-
 
 
 """
-To delete all files for patient 13
-when usr delete patient by pressing
-the delete button.
+    To delete all files for patient 13
+    when usr delete patient by pressing
+    the delete button.
 """
 
 
@@ -14,8 +14,8 @@ import os
 
 def delFuncFile13():
     """
-    This function delete all files with
-    a test before removing files.
+        This function delete all files with
+        a test before removing files.
     """
     try:
         if os.path.getsize('./14besoins/doc_suivi13/main_14b.txt'):

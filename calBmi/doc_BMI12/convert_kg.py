@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-# -*- coding:utf-8 -*-
+# -*- coding: utf-8 -*-
 
 
+from tkinter import *
+from tkinter import messagebox
 import os
 import subprocess
 import json
@@ -19,21 +21,24 @@ file = open('./calBmi/doc_BMI12/file_kg.json')
 data = json.load(file)
 #file.close
 
-for (key, value) in data.items():
-    print("Key: " + key)
-    print("Valeur: " + str(value))
-    print("\nTo represent the data_get:\n")
-    print(data.get("data"))
-    print("\n")
-    print("Valeur: " + str(value[0]))
-    print("Valeur: " + str(value[1]))
-    print("\n")
-    print("Date: " + str(value[0]["Date"]))
-    print("Kg: " + str(value[0]["Kg"]))
-    print("\n")
-    print("Date: " + str(value[1]["Date"]))
-    print("Kg: " + str(value[1]["Kg"]))
-    
+try:
+    for (key, value) in data.items():
+        print("Key: " + key)
+        print("Valeur: " + str(value))
+        print("\nTo represent the data_get:\n")
+        print(data.get("data"))
+        print("\n")
+        print("Valeur: " + str(value[0]))
+        print("Valeur: " + str(value[1]))
+        print("\n")
+        print("Date: " + str(value[0]["Date"]))
+        print("Kg: " + str(value[0]["Kg"]))
+        print("\n")
+        print("Date: " + str(value[1]["Date"]))
+        print("Kg: " + str(value[1]["Kg"]))
+except IndexError as ind_kg:
+    print("Only one value for kg...", ind_kg)
+
 data_list1 = []
 for value in zip(value):
     data_list1.append(value[0]['Date'])
@@ -95,10 +100,9 @@ with plt.style.context('dark_background'):
     #figure.autofmt_xdate()
 
     plt.plot(x_axis, y_axis, 'o-', color='cyan')
-    plt.ylabel('Kg')
-    plt.xlabel('Dates')
-    plt.title('Kg for one year')
-    #plt.xticks(rotation=45)
+    plt.ylabel('Kg', fontsize=14)
+    plt.xlabel('Dates', fontsize=14)
+    plt.title('Kg by Date', fontsize=16)
     plt.legend(['kg/date'])
     plt.grid(show_grid)
     plt.gcf().autofmt_xdate(rotation=45)
@@ -122,29 +126,34 @@ except FileNotFoundError as callfile2:
     print("+ File custom_kg.txt doesn't exist !", callfile2)
 
 # to delete '\n' at the end of line_1
-printmonth=len(line_1)
-convert_line=line_1[0:-1]
-print(convert_line)
+try:
+    printmonth=len(line_1)
+    convert_line=line_1[0:-1]
+    print(convert_line)
+except NameError as err_nam:
+    print("None value was checked", err_nam)
 
-# or seaborn-darkgrid
-show_grid = True
-with plt.style.context('seaborn-darkgrid'):
-    figure, axes = plt.subplots()
+try:
+    show_grid = True
+    with plt.style.context('seaborn-darkgrid'):
+        figure, axes = plt.subplots()
 
-    locator = AutoDateLocator()
-    axes.xaxis.set_major_locator(locator)
-    ax = plt.gcf().axes[0]
-    ax.xaxis.set_major_formatter(formatter)
-    min_date = date2num(datetime.datetime.strptime(convert_line, "%d-%m-%Y"))
-    max_date = date2num(datetime.datetime.strptime(line_2, "%d-%m-%Y"))
-    axes.set_xlim([min_date, max_date])
+        locator = AutoDateLocator()
+        axes.xaxis.set_major_locator(locator)
+        ax = plt.gcf().axes[0]
+        ax.xaxis.set_major_formatter(formatter)
+        min_date = date2num(datetime.datetime.strptime(convert_line, "%d-%m-%Y"))
+        max_date = date2num(datetime.datetime.strptime(line_2, "%d-%m-%Y"))
+        axes.set_xlim([min_date, max_date])
 
-    plt.plot(x_axis, y_axis, 'o-', color='purple')
-    plt.ylabel('Kg')
-    plt.xlabel('Dates')
-    plt.title('Kg/Date customised')
-    #plt.xticks(rotation=45)
-    plt.legend(['kg/date'])
-    plt.grid(show_grid)
-    plt.gcf().autofmt_xdate(rotation=45)
-    plt.show()
+        plt.plot(x_axis, y_axis, 'o-', color='purple')
+        plt.ylabel('Kg', fontsize=14)
+        plt.xlabel('Dates', fontsize=14)
+        plt.title('Kg by Date customised', fontsize=16)
+        plt.legend(['kg/date'])
+        plt.grid(show_grid)
+        plt.gcf().autofmt_xdate(rotation=45)
+        plt.show()
+except NameError as data_err:
+    print("Data BMI error", data_err)
+    messagebox.showwarning("Warning", "None value was entered !")

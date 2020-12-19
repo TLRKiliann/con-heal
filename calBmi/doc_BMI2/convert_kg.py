@@ -149,7 +149,7 @@ try:
         plt.plot(x_axis, y_axis, 'o-', color='purple')
         plt.ylabel('Kg', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
-        plt.title('Kg/Date customised', fontsize=16)
+        plt.title('Kg by Date customised', fontsize=16)
         plt.legend(['kg/date'])
         plt.grid(show_grid)
         plt.gcf().autofmt_xdate(rotation=45)

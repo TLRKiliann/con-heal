@@ -1881,19 +1881,19 @@ class Application(Frame):
         """
             To enter a new patient.
         """
-        subprocess.run('./newpatient/entrypytientfile.py', check=True)
+        subprocess.Popen('./newpatient/entrypytientfile.py', shell=True)
 
     def delEverPat(self):
         """
             To delete patient
         """
-        subprocess.run('./deletepatient/deleverything.py', check=True)
+        subprocess.Popen('./deletepatient/deleverything.py', shell=True)
 
     def addPatientAfter(self):
         """
             To add new patient after delete one of them
         """
-        subprocess.run('./newpatient/torecord.py', check=True)
+        subprocess.Popen('./newpatient/torecord.py', shell=True)
 
     def patientAgenda(self):
         """

@@ -1,9 +1,9 @@
-Patient name : Edward Snowden
-Birthdate : 08/02/1963
+Patient name : last oflast
+Birthdate : 30/01/1979
 Native : Berlin
 Phone : 077 339 65 45
 Street : Blvd Sun-Street 67
-City : Eurocity
+City : Kansas
 e-mail : zut@gmail.com
 Insurance : Helsa
 Policy : 976789758346

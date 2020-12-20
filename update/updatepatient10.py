@@ -146,8 +146,7 @@ labelname.pack(pady=10)
 
 firstpat = StringVar()
 firstname_pat = Entry(gui, textvariable=firstpat,
-    highlightbackground='light sky blue',
-    bd=4)
+    highlightbackground='light sky blue', bd=4)
 firstname_pat.pack()
 
 surname = StringVar()
@@ -182,8 +181,7 @@ labeltrans.pack(pady=10)
 
 transdisval = StringVar()
 diseasetrans = Entry(gui, textvariable=transdisval,
-    highlightbackground='light sky blue',
-    bd=4)
+    highlightbackground='light sky blue', bd=4)
 diseasetrans.pack()
 
 labeldiag = Label(gui, text='Diagnosis : ',

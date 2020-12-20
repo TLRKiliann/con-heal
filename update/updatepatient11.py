@@ -11,9 +11,10 @@ try:
 except ImportError as err_report:
     print("+ An error occured about pymysql !")
     print(str(err_report))
+    pass
 
 
-gui=Tk()
+gui = Tk()
 gui.title("Enter new patient")
 gui.configure(bg='DodgerBlue2')
 
@@ -91,20 +92,21 @@ def uptopat(idpatient, patient_num, firstpat, firstname_pat,
         ))
         sqlCon.commit()
         sqlCon.close()
-        messagebox.showinfo("Data Entry Form", "Record Updated Successfully !")
+        messagebox.showinfo("Data Entry Form",
+            "Record Updated Successfully !")
 
-    if idpatient == '11':
+    if idpatient == '10':
         if os.path.getsize('./newpatient/entryfile11.txt'):
             print("+ File 'entryfile11.txt' exist !")
             os.remove('./newpatient/entryfile11.txt')
-            searchLineName11(firstpat, surname, birthvalue,
+            searchLineName10(firstpat, surname, birthvalue,
                 allergia, transdisval, diagnosis)
     else:
         pass
 
     gui.destroy()
 
-def searchLineName11(firstpat, surname, birthvalue,
+def searchLineName10(firstpat, surname, birthvalue,
     allergia, transdisval, diagnosis):
     """
         To save changing data for 
@@ -126,93 +128,75 @@ def searchLineName11(firstpat, surname, birthvalue,
         messagebox.showinfo("INFO", "! Nothing has been saved !")
     diagRecapt(diagnosis)
 
-labelID = Label(gui)
-labelID = Label(text='ID : ',
+labelID = Label(gui, text='ID : ',
     font="Times 14 bold",
     fg='white', bg='DodgerBlue2')
 labelID.pack(pady=10)
 
 idpatient = StringVar()
-idpatient.set('11')
 patient_num = Entry(gui, textvariable=idpatient,
-    highlightbackground='light sky blue',
-    bd=4)
+    highlightbackground='light sky blue', bd=4)
+idpatient.set('10')
 patient_num.pack()
 
-labelname = Label(gui)
-labelname = Label(text='Name : ',
+labelname = Label(gui, text='Name : ',
     font="Times 14 bold",
     fg='white', bg='DodgerBlue2')
 labelname.pack(pady=10)
 
 firstpat = StringVar()
-#firstpat.set('Firstname')
 firstname_pat = Entry(gui, textvariable=firstpat,
-    highlightbackground='light sky blue',
-    bd=4)
+    highlightbackground='light sky blue', bd=4)
 firstname_pat.pack()
 
 surname = StringVar()
-#surname.set("Lastname")
 sur_pat = Entry(gui, textvariable=surname,
-    highlightbackground='light sky blue',
-    bd=4)
+    highlightbackground='light sky blue', bd=4)
 sur_pat.pack()
 
-labelbirth = Label(gui)
-labelbirth = Label(text='Birth Date : ', font="Times 14 bold",
+labelbirth = Label(gui, text='Birth Date : ', font="Times 14 bold",
     fg='white', bg='DodgerBlue2')
 labelbirth.pack(pady=10)
 
 birthvalue=StringVar()
-#birthvalue.set('Format: 00/00/0000')
 birth_entree = Entry(gui, textvariable=birthvalue,
     highlightbackground='light sky blue', bd=4)
 birth_entree.pack()
 
-labelaller = Label(gui)
-labelaller = Label(text='Allergy : ',
+labelaller = Label(gui, text='Allergy : ',
     font="Times 14 bold",
     fg='white', bg='DodgerBlue2')
 labelaller.pack(pady=10)
 
 allergia = StringVar()
-#allergia.set('None')
 allergy_pat = Entry(gui, textvariable=allergia,
     highlightbackground='light sky blue',
     bd=4, width=40)
 allergy_pat.pack(padx=10)
 
-labeltrans = Label(gui)
-labeltrans = Label(text='Transmissible Disease : ',
+labeltrans = Label(gui, text='Transmissible Disease : ',
     font="Times 14 bold",
     fg='white', bg='DodgerBlue2')
 labeltrans.pack(pady=10)
 
 transdisval = StringVar()
-#transdisval.set('None')
 diseasetrans = Entry(gui, textvariable=transdisval,
-    highlightbackground='light sky blue',
-    bd=4)
+    highlightbackground='light sky blue', bd=4)
 diseasetrans.pack()
 
-labeldiag = Label(gui)
-labeldiag = Label(text='Diagnosis : ',
+labeldiag = Label(gui, text='Diagnosis : ',
     font="Times 14 bold",
     fg='white', bg='DodgerBlue2')
 labeldiag.pack(pady=10)
 
 diagnosis = StringVar()
-#diagnosis.set('Diagnostic (main)')
 diagnos_pat = Entry(gui, textvariable=diagnosis,
-    highlightbackground='light sky blue',
-    bd=4)
+    highlightbackground='light sky blue', bd=4)
 diagnos_pat.pack()
 
 buttonsearch = Button(gui, text="Search ID", width=8, bd=3,
     fg='yellow', bg='RoyalBlue3', highlightbackground='light sky blue',
-    activebackground='pale turquoise',
-    command = searchDB)
+    activebackground='pale turquoise', command = searchDB)
 buttonsearch.pack(side=LEFT, padx=10, pady=20)
 
 buttonupdate = Button(gui, text="Enter", width=8, bd=3,
@@ -223,7 +207,7 @@ buttonupdate = Button(gui, text="Enter", width=8, bd=3,
         transdisval, diseasetrans, diagnosis, diagnos_pat))
 buttonupdate.pack(side=LEFT, padx=10, pady=20)
 
-buttQuit=Button(gui, text="Quit", width=8, bd=3,
+buttQuit = Button(gui, text="Quit", width=8, bd=3,
     fg='cyan', bg='RoyalBlue3', highlightbackground='light sky blue',
     activebackground='pale turquoise', command=quit)
 buttQuit.pack(side=LEFT, padx=10, pady=20)

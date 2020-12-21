@@ -1,4 +1,2 @@
 --- DIAGNOSTICS ---
-Schizophrenia
-
-
+Diagnostic (main)

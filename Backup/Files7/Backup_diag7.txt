@@ -1,2 +1,2 @@
 --- DIAGNOSTICS ---
-Diagnostic 7
+Diagnostic (main)

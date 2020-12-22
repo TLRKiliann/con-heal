@@ -1,5 +1,5 @@
-Clara Morgan
-00/00/0000
+Jack Dutronc
+09/01/1946
 None
 None
-Diagnostic 21
+Diagnostic (main)

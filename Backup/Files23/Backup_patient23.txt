@@ -1,5 +1,5 @@
-Michael Jordan
-00/00/0000
+Clint Eastwood
+05/07/1943
+Pollen
 None
-None
-Diagnostic 23
+Diagnostic (main)

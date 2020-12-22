@@ -1,5 +1,5 @@
 Kevin Mitnick
-00/00/0000
+04/07/1967
 None
 None
-Diagnostic 9
+Diagnostic (main)

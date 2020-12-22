@@ -1,5 +1,5 @@
-Terry McGuire
-07/12/1984
-Pollen
+Edward Snowden
+02/07/1964
 None
-diagno_test1
+None
+Diagnostic (main)

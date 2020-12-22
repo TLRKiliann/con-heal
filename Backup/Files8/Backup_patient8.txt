@@ -1,5 +1,5 @@
-Jayson Statham
-00/00/0000
+David Copperfield
+08/04/1965
 None
 None
-Diagnostic 8
+Diagnostic (main)

@@ -1,5 +1,5 @@
-Robert Stanford
-00/00/0000
+Clint Eastwood
+05/07/1943
 None
 None
-Diagnostic 10
+Diagnostic (main)

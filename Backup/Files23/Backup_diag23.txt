@@ -1,2 +1,2 @@
 --- DIAGNOSTICS ---
-Diagnostic 23
+Diagnostic (main)

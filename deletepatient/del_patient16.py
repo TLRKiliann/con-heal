@@ -157,5 +157,60 @@ def delFuncFile16():
             print("+ File entryfile16.txt deleted")
     except FileNotFoundError as filefunc19:
         print("+ File entryfile16.txt does not exist", filefunc19)
+
+    try:
+        if os.path.exists('./Backup/Files16/Backup_patient16.txt'):
+            print("+ Backup_patient16.txt exist")
+            shutil.copy('./Backup/Files16/Backup_patient16.txt',
+                './Backup/old/oldfiles16/Backup_patient16.txt')
+            os.remove('./Backup/Files16/Backup_patient16.txt')
+    except FileNotFoundError as nf_oldfile:
+        print("Not found", nf_oldfile)
+
+    try:
+        if os.path.exists('./Backup/Files16/Backup_careneeds16.txt'):
+            print("+ Backup_careneeds16.txt exist")
+            shutil.copy('./Backup/Files16/Backup_careneeds16.txt',
+                './Backup/old/oldfiles16/Backup_careneeds16.txt')
+            os.remove('./Backup/Files16/Backup_careneeds16.txt')
+    except FileNotFoundError as nf_oldfile2:
+        print("Not found", nf_oldfile2)
+
+    try:
+        if os.path.exists('./Backup/Files16/Backup_diag16.txt'):
+            print("+ Backup_diag16.txt exist")
+            shutil.copy('./Backup/Files16/Backup_diag16.txt',
+                './Backup/old/oldfiles16/Backup_diag16.txt')
+            os.remove('./Backup/Files16/Backup_diag16.txt')
+    except FileNotFoundError as nf_oldfile3:
+        print("Not found", nf_oldfile3)
+
+    try:
+        if os.path.exists('./Backup/Files16/Backup_Bmi16.txt'):
+            print("+ Backup_Bmi16.txt exist")
+            shutil.copy('./Backup/Files16/Backup_Bmi16.txt',
+                './Backup/old/oldfiles16/Backup_Bmi16.txt')
+            os.remove('./Backup/Files16/Backup_Bmi16.txt')
+    except FileNotFoundError as nf_oldfile4:
+        print("Not found", nf_oldfile4)
+
+    try:
+        if os.path.exists('./Backup/Files16/Backup_resultvmed16.txt'):
+            print("+ Backup_resultvmed16.txt exist")
+            shutil.copy('./Backup/Files16/Backup_resultvmed16.txt',
+                './Backup/old/oldfiles16/Backup_resultvmed16.txt')
+            os.remove('./Backup/Files16/Backup_resultvmed16.txt')
+    except FileNotFoundError as nf_oldfile5:
+        print("Not found", nf_oldfile5)
+
+    try:
+        if os.path.exists('./Backup/Files16/Backup_ttt16.txt'):
+            print("+ Backup_ttt16.txt exist")
+            shutil.copy('./Backup/Files16/Backup_ttt16.txt',
+                './Backup/old/oldfiles16/Backup_ttt16.txt')
+            os.remove('./Backup/Files16/Backup_ttt16.txt')
+    except FileNotFoundError as nf_oldfile6:
+        print("Not found", nf_oldfile6)
+
     print("!!! All files have been deleted !!!")
     

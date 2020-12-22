@@ -52,7 +52,8 @@ def get(Nompatient, entree, PatientID, Num_pat):
         Nompatient = entree.get()
         Num_pat = PatientID.get()
 
-        sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='timetrackconn')
+        sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379',
+            database='timetrackconn')
         cur = sqlCon.cursor()
         cur.execute("DELETE from timetrackconn where stdid=%s", PatientID.get())
         sqlCon.commit()

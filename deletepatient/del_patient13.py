@@ -137,11 +137,11 @@ def delFuncFile13():
         print("+ File patient_calendar.txt does not exist", filefunc16)
 
     try:
-        if os.path.getsize('./vmed/doc_vmed13/resultvmed.txt'):
-            os.remove('./vmed/doc_vmed13/resultvmed.txt')
-            print("+ File resultvmed.txt deleted")
+        if os.path.getsize('./vmed/doc_vmed13/resultvmed13.txt'):
+            os.remove('./vmed/doc_vmed13/resultvmed13.txt')
+            print("+ File resultvmed13.txt deleted")
     except FileNotFoundError as filefunc17:
-        print("+ File resultvmed.txt does not exist", filefunc17)
+        print("+ File resultvmed13.txt does not exist", filefunc17)
 
     try:
         if os.path.getsize('./allergy/allergyfile13.txt'):

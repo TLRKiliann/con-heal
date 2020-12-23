@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-#!-*-encoding:utf-8-*-
+# -*- coding: utf-8 -*-
 
 """
-this script is made to develop
-other butons with functions
+    this script is made to develop
+    other butons with functions
 """
 
 import tkinter
@@ -20,8 +20,8 @@ import shutil
 
 def writeData():
     """
-    To export data in a json file
-    and launching aspiFile7.py
+        To export data in a json file
+        and launching aspiFile7.py
     """
     try:
         if os.path.getsize('./param/Main7.txt'):
@@ -261,8 +261,8 @@ def mainRead():
 
 def appelTens():
     """
-    to call aspidata.py for recapt data
-    and launching matplotlib graph
+        to call aspidata.py for recapt data
+        and launching matplotlib graph
     """
     try:
         if os.path.getsize('./param/aspifile7/tensor.json'):
@@ -275,8 +275,8 @@ def appelTens():
 
 def appelPuls():
     """
-    to call aspidata.py for recapt data
-    and launching matplotlib graph
+        to call aspidata.py for recapt data
+        and launching matplotlib graph
     """
     try:
         if os.path.getsize('./param/aspifile7/puls.json'):
@@ -289,8 +289,8 @@ def appelPuls():
 
 def appelSat():
     """
-    to call aspidata.py for recapt data
-    and launching matplotlib graph
+        to call aspidata.py for recapt data
+        and launching matplotlib graph
     """
     try:
         if os.path.getsize('./param/aspifile7/sat.json'):
@@ -303,8 +303,8 @@ def appelSat():
 
 def appelFreq():
     """
-    to call aspidata.py for recapt data
-    and launching matplotlib graph
+        to call aspidata.py for recapt data
+        and launching matplotlib graph
     """
     try:
         if os.path.getsize('./param/aspifile7/freq.json'):
@@ -317,8 +317,8 @@ def appelFreq():
 
 def appelTemp():
     """
-    to call aspidata.py for recapt data
-    and launching matplotlib graph
+        to call aspidata.py for recapt data
+        and launching matplotlib graph
     """
     try:
         if os.path.getsize('./param/aspifile7/temp.json'):
@@ -331,8 +331,8 @@ def appelTemp():
 
 def appelGly():
     """
-    to call aspidata.py for recapt data
-    and launching matplotlib graph
+        to call aspidata.py for recapt data
+        and launching matplotlib graph
     """
     try:
         if os.path.getsize('./param/aspifile7/gly.json'):
@@ -345,8 +345,8 @@ def appelGly():
 
 def appelDlr():
     """
-    to call aspidata.py for recapt data
-    and launching matplotlib graph
+        to call aspidata.py for recapt data
+        and launching matplotlib graph
     """
     try:
         if os.path.getsize('./param/aspifile7/dlr.json'):
@@ -359,7 +359,7 @@ def appelDlr():
 
 def delMain():
     """
-    To earase Main7.txt
+        To earase Main7.txt
     """
     Main_MsgBox = messagebox.askquestion("Confirm","Are you sure ?\n"
         "It will delete Main7.txt with all data !!!")
@@ -378,8 +378,8 @@ def delMain():
 
 def delTA():
     """
-    To earase last line 
-    of tensor.json
+        To earase last line 
+        of tensor.json
     """
     try:
         if os.path.getsize('./param/aspifile7/tensor.json'):
@@ -399,8 +399,8 @@ def delTA():
 
 def delPuls():
     """
-    To earase last line 
-    of puls.json
+        To earase last line 
+        of puls.json
     """
     try:
         if os.path.getsize('./param/aspifile7/puls.json'):
@@ -420,8 +420,8 @@ def delPuls():
 
 def delSat():
     """
-    To earase last line 
-    of sat.json
+        To earase last line 
+        of sat.json
     """
     try:
         if os.path.getsize('./param/aspifile7/sat.json'):
@@ -441,8 +441,8 @@ def delSat():
 
 def delFreq():
     """
-    To earase last line 
-    of freq.json
+        To earase last line 
+        of freq.json
     """
     try:
         if os.path.getsize('./param/aspifile7/freq.json'):
@@ -462,8 +462,8 @@ def delFreq():
 
 def delTemp():
     """
-    To earase last line 
-    of temp.json
+        To earase last line 
+        of temp.json
     """
     try:
         if os.path.getsize('./param/aspifile7/temp.json'):
@@ -483,8 +483,8 @@ def delTemp():
 
 def delGly():
     """
-    To earase last line 
-    of gly.json
+        To earase last line 
+        of gly.json
     """
     try:
         if os.path.getsize('./param/aspifile7/gly.json'):
@@ -504,8 +504,8 @@ def delGly():
 
 def delDlr():
     """
-    To earase last line 
-    of dlr.json
+        To earase last line 
+        of dlr.json
     """
     try:
         if os.path.getsize('./param/aspifile7/dlr.json'):
@@ -525,7 +525,7 @@ def delDlr():
 
 def delEvery():
     """
-    To delete all json files
+        To delete all json files
     """
     MsgBox = messagebox.askquestion("Confirm","Are you sure ?\n"
         "It will delete all files with all data !!!")
@@ -545,7 +545,7 @@ def delEvery():
 
 def updateData():
     """
-    Backup for Main7.txt/month
+        Backup for Main7.txt/month
     """
     listeDate = ["01/05/2020", "01/06/2020", "01/07/2020",
     "01/08/2020", "01/09/2020", "01/10/2020",
@@ -563,134 +563,115 @@ with open('./newpatient/entryfile7.txt', 'r') as filename:
     line1=filename.readline()
 
 gui = Tk()
-gui.title("Paramètres vitaux")
-gui.configure(background='#82193e')
+gui.title("Vital Parameters")
+gui.configure(background='DodgerBlue2')
 gui.geometry('650x560')
 
 # Labels
 labelTitle = Label(gui, text="Vital Parameters", 
-    font=('Times 22 bold'), bg='#82193e', fg='aquamarine')
+    font=('Times 22 bold'), bg='DodgerBlue2', fg='aquamarine')
 labelTitle.grid(row=0, column=1, columnspan=4, pady=10)
 
-label = Label(gui)
-label = Label(text='Date : ', font=('Times', 14),
-    fg='aquamarine', bg='#82193e', width=15, anchor='e')
+label = Label(gui, text='Date : ', font=('Times', 14),
+    fg='aquamarine', bg='DodgerBlue2', width=15, anchor='e')
 label.grid(row=1, column=1)
 
-label = Label(gui)
-label = Label(text='Heure : ', font=('Times', 14),
-    fg='aquamarine', bg='#82193e', width=15, anchor='e')
+label = Label(gui, text='Heure : ', font=('Times', 14),
+    fg='aquamarine', bg='DodgerBlue2', width=15, anchor='e')
 label.grid(row=2, column=1)
 
-label1 = Label(gui)
-label1 = Label(text='Entrer le Nom : ', font=('Times', 14),
-    fg='aquamarine', bg='#82193e', width=15, anchor='e')
+label1 = Label(gui, text='Entrer le Nom : ', font=('Times', 14),
+    fg='aquamarine', bg='DodgerBlue2', width=15, anchor='e')
 label1.grid(row=3, column=1)
 
-label2 = Label(gui)
-label2 = Label(text='Entrer la TA : ', font=('Times', 14),
-    fg='aquamarine', bg='#82193e', width=15, anchor='e')
+label2 = Label(gui, text='Entrer la TA : ', font=('Times', 14),
+    fg='aquamarine', bg='DodgerBlue2', width=15, anchor='e')
 label2.grid(row=4, column=1)
 
-label3 = Label(gui)
-label3 = Label(text='Entrer les Puls : ', font=('Times', 14),
-    fg='aquamarine', bg='#82193e', width=15, anchor='e')
+label3 = Label(gui, text='Entrer les Puls : ', font=('Times', 14),
+    fg='aquamarine', bg='DodgerBlue2', width=15, anchor='e')
 label3.grid(row=5, column=1)
 
-label4 = Label(gui)
-label4 = Label(text='Entrer la SaO2 : ', font=('Times', 14),
-    fg='aquamarine', bg='#82193e', width=15, anchor='e')
+label4 = Label(gui, text='Entrer la SaO2 : ', font=('Times', 14),
+    fg='aquamarine', bg='DodgerBlue2', width=15, anchor='e')
 label4.grid(row=6, column=1)
 
-label5 = Label(gui)
-label5 = Label(text='Entrer la FR : ', font=('Times', 14),
-    fg='aquamarine', bg='#82193e', width=15, anchor='e')
+label5 = Label(gui, text='Entrer la FR : ', font=('Times', 14),
+    fg='aquamarine', bg='DodgerBlue2', width=15, anchor='e')
 label5.grid(row=7, column=1)
 
-label6 = Label(gui)
-label6 = Label(text='Entrer la T°C : ', font=('Times', 14),
-    fg='aquamarine', bg='#82193e', width=15, anchor='e')
+label6 = Label(gui, text='Entrer la T°C : ', font=('Times', 14),
+    fg='aquamarine', bg='DodgerBlue2', width=15, anchor='e')
 label6.grid(row=8, column=1)
 
-label7 = Label(gui)
-label7 = Label(text='Entrer la Hgt : ', font=('Times', 14),
-    fg='aquamarine', bg='#82193e', width=15, anchor='e')
+label7 = Label(gui, text='Entrer la Hgt : ', font=('Times', 14),
+    fg='aquamarine', bg='DodgerBlue2', width=15, anchor='e')
 label7.grid(row=9, column=1)
 
-label8 = Label(gui)
-label8 = Label(text='Eva des Dlrs : ', font=('Times', 14),
-    fg='aquamarine', bg='#82193e', width=15, anchor='e')
+label8 = Label(gui, text='Eva des Dlrs : ', font=('Times', 14),
+    fg='aquamarine', bg='DodgerBlue2', width=15, anchor='e')
 label8.grid(row=10, column=1)
 
 # Entry
-textDate = Entry(gui)
 time_string = IntVar()
-textDate = Entry(textvariable=time_string, highlightbackground='gray', bd=4)
+textDate = Entry(gui, textvariable=time_string, highlightbackground='gray', bd=4)
 time_string.set(time.strftime("%d/%m/%Y"))
 textDate.grid(row=1, column=2)
 # Directly up to function
 updateData()
 
-textHour = Entry(gui)
 time_Htring = IntVar()
-textHour = Entry(textvariable=time_Htring, highlightbackground='gray', bd=4)
+textHour = Entry(gui, textvariable=time_Htring, highlightbackground='gray', bd=4)
 time_Htring.set(time.strftime("%H:%M:%S"))
 textHour.grid(row=2, column=2)
 
-textName = Entry(gui)
 name_text = StringVar()
-textName = Entry(textvariable=name_text, highlightbackground='gray', bd=4)
-name_text.set(line1)
+textName = Entry(gui, textvariable=name_text, highlightbackground='gray', bd=4)
+name_text.set(line1[:-1])
 textName.grid(row=3, column=2)
 
-textTa = Entry(gui)
-textTa = Entry(highlightbackground='gray', bd=4)
+textTa = Entry(gui, highlightbackground='gray', bd=4)
 textTa.grid(row=4, column=2)
 
-textPuls = Entry(gui)
-textPuls = Entry(highlightbackground='gray', bd=4)
+textPuls = Entry(gui, highlightbackground='gray', bd=4)
 textPuls.grid(row=5, column=2)
 
-textSa = Entry(gui)
-textSa = Entry(highlightbackground='gray', bd=4)
+textSa = Entry(gui, highlightbackground='gray', bd=4)
 textSa.grid(row=6, column=2)
 
-textFr = Entry(gui)
-textFr = Entry(highlightbackground='gray', bd=4)
+textFr = Entry(gui, highlightbackground='gray', bd=4)
 textFr.grid(row=7, column=2)
 
-textTemp = Entry(gui)
-textTemp = Entry(highlightbackground='gray', bd=4)
+textTemp = Entry(gui, highlightbackground='gray', bd=4)
 textTemp.grid(row=8, column=2)
 
-textHgt = Entry(gui)
-textHgt = Entry(highlightbackground='gray', bd=4)
+textHgt = Entry(gui, highlightbackground='gray', bd=4)
 textHgt.grid(row=9, column=2)
 
-textDlrs = Entry(gui)
-textDlrs = Entry(highlightbackground='gray', bd=4)
+textDlrs = Entry(gui, highlightbackground='gray', bd=4)
 textDlrs.grid(row=10, column=2)
 
 button2Write = Button(gui)
-button2Write.config(text='Quit', width=15, bg='gray30', fg='cyan',
-    activeforeground='gray40', command=quit)
+button2Write.config(text='Quit', width=15, bg='lightblue', fg='navy',
+    activebackground='pale turquoise', activeforeground='gray40',
+    command=quit)
 button2Write.grid(row=1, column=3)
 
 buttonDel = Button(gui)
 buttonDel.config(text='Reinitialize ALL !!!', width=15,
-    bg='gray30', fg='cyan',
-    activebackground='red', activeforeground='white', command=delEvery)
+    bg='lightblue', fg='red', activebackground='red',
+    activeforeground='white', command=delEvery)
 buttonDel.grid(row=1, column=4)
 
 buttonWrite = Button(gui)
-buttonWrite.config(text='Capture data', width=15, 
-    fg='yellow', bg='turquoise4', activeforeground='gray40',
-    activebackground='turquoise2', command=writeData)
-buttonWrite.grid(row=2, column=3)
+buttonWrite.config(text='CAPTURE DATA', width=33, 
+    fg='white', bg='gray60', activeforeground='gray40',
+    activebackground='pale turquoise', command=writeData)
+buttonWrite.grid(row=2, column=3, columnspan=4)
 
 buttonMainlec = Button(gui)
 buttonMainlec.config(text='Read Main file', width=15, 
-    bg='lightblue', fg='navy', activebackground='cyan',
+    bg='lightblue', fg='navy', activebackground='pale turquoise',
     activeforeground='gray40', command=mainRead)
 buttonMainlec.grid(row=3, column=3)
 
@@ -703,43 +684,43 @@ buttonDel.grid(row=3, column=4)
 # Buttons
 button3Write = Button(gui)
 button3Write.config(text='Graph TA', width=15, 
-    bg='lightblue', fg='navy', activebackground='cyan',
+    bg='lightblue', fg='navy', activebackground='pale turquoise',
     activeforeground='gray40', command=appelTens)
 button3Write.grid(row=4, column=3)
 
 button4Write = Button(gui)
 button4Write.config(text='Graph Puls', width=15, 
-    bg='lightblue', fg='navy', activebackground='cyan',
+    bg='lightblue', fg='navy', activebackground='pale turquoise',
     activeforeground='gray40', command=appelPuls)
 button4Write.grid(row=5, column=3)
 
 button5Write = Button(gui)
 button5Write.config(text='Graph SaO2', width=15, 
-    bg='lightblue', fg='navy', activebackground='cyan',
+    bg='lightblue', fg='navy', activebackground='pale turquoise',
     activeforeground='gray40', command=appelSat)
 button5Write.grid(row=6, column=3)
 
 button6Write = Button(gui)
 button6Write.config(text='Graph FR', width=15, 
-    bg='lightblue', fg='navy', activebackground='cyan',
+    bg='lightblue', fg='navy', activebackground='pale turquoise',
     activeforeground='gray40', command=appelFreq)
 button6Write.grid(row=7, column=3)
 
 button7Write = Button(gui)
 button7Write.config(text='Graph T°C', width=15,
-    bg='lightblue', fg='navy',activebackground='cyan',
+    bg='lightblue', fg='navy',activebackground='pale turquoise',
     activeforeground='gray40', command=appelTemp)
 button7Write.grid(row=8, column=3)
 
 button8Write = Button(gui)
 button8Write.config(text='Graph Hgt', width=15,
-    bg='lightblue', fg='navy',activebackground='cyan',
+    bg='lightblue', fg='navy',activebackground='pale turquoise',
     activeforeground='gray40', command=appelGly)
 button8Write.grid(row=9, column=3)
 
 button9Write = Button(gui)
 button9Write.config(text='Graph Dlrs', width=15,
-    bg='lightblue', fg='navy',activebackground='cyan',
+    bg='lightblue', fg='navy',activebackground='pale turquoise',
     activeforeground='gray40', command=appelDlr)
 button9Write.grid(row=10, column=3)
 

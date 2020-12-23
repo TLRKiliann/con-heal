@@ -1208,107 +1208,99 @@ class MenuBar(Frame):
         self.cmd_Param.pack(side=LEFT, padx=3)
         # Partie déroulante du menu param
         menuParam = Menu(self.cmd_Param)
-        menuParam.add_command(label=new_text, font=('Times 16'), background='black',
+        menuParam.add_command(label=new_text, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.showParam1)
-        menuParam.add_separator()
-        menuParam.add_command(label=new_text2, font=('Times 16'), background='black',
+        #menuParam.add_separator()
+        menuParam.add_command(label=new_text2, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.showParam2)
-        menuParam.add_separator()
-        menuParam.add_command(label=new_text3, font=('Times 16'), background='black',
+        #menuParam.add_separator()
+        menuParam.add_command(label=new_text3, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.showParam3)
-        menuParam.add_separator()
-        menuParam.add_command(label=new_text4, font=('Times 16'), background='black',
+        #menuParam.add_separator()
+        menuParam.add_command(label=new_text4, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.showParam4)
-        menuParam.add_separator()
-        menuParam.add_command(label=new_text5, font=('Times 16'), background='black',
+        #menuParam.add_separator()
+        menuParam.add_command(label=new_text5, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.showParam5)
-        menuParam.add_separator()
-        menuParam.add_command(label=new_text6, font=('Times 16'), background='black',
+        #menuParam.add_separator()
+        menuParam.add_command(label=new_text6, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.showParam6)
-        menuParam.add_separator()
-        menuParam.add_command(label=new_text7, font=('Times 16'), background='black',
+        #menuParam.add_separator()
+        menuParam.add_command(label=new_text7, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.showParam7)
-        menuParam.add_separator()
-        menuParam.add_command(label=new_text7, font=('Times 16'), background='black',
-            activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.showParam7)
-        menuParam.add_separator()
-        menuParam.add_command(label=new_text7, font=('Times 16'), background='black',
-            activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.showParam7)
-        menuParam.add_separator()
-        menuParam.add_command(label=new_text8, font=('Times 16'), background='black',
+        #menuParam.add_separator()
+        menuParam.add_command(label=new_text8, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.showParam8)
-        menuParam.add_separator()
-        menuParam.add_command(label=new_text9, font=('Times 16'), background='black',
+        #menuParam.add_separator()
+        menuParam.add_command(label=new_text9, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.showParam9)
-        menuParam.add_separator()
-        menuParam.add_command(label=new_text10, font=('Times 16'), background='black',
+        #menuParam.add_separator()
+        menuParam.add_command(label=new_text10, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.showParam10)
-        menuParam.add_separator()
-        menuParam.add_command(label=new_text11, font=('Times 16'), background='black',
+        #menuParam.add_separator()
+        menuParam.add_command(label=new_text11, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.showParam11)
-        menuParam.add_separator()
-        menuParam.add_command(label=new_text12, font=('Times 16'), background='black',
+        #menuParam.add_separator()
+        menuParam.add_command(label=new_text12, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.showParam12)
-        menuParam.add_separator()
-        menuParam.add_command(label=new_text13, font=('Times 16'), background='black',
+        #menuParam.add_separator()
+        menuParam.add_command(label=new_text13, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.showParam13)
-        menuParam.add_separator()
-        menuParam.add_command(label=new_text14, font=('Times 16'), background='black',
+        #menuParam.add_separator()
+        menuParam.add_command(label=new_text14, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.showParam14)
-        menuParam.add_separator()
-        menuParam.add_command(label=new_text15, font=('Times 16'), background='black',
+        #menuParam.add_separator()
+        menuParam.add_command(label=new_text15, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.showParam15)
-        menuParam.add_separator()
-        menuParam.add_command(label=new_text16, font=('Times 16'), background='black',
+        #menuParam.add_separator()
+        menuParam.add_command(label=new_text16, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.showParam16)
-        menuParam.add_separator()
-        menuParam.add_command(label=new_text17, font=('Times 16'), background='black',
+        #menuParam.add_separator()
+        menuParam.add_command(label=new_text17, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.showParam17)
-        menuParam.add_separator()
-        menuParam.add_command(label=new_text18, font=('Times 16'), background='black',
+        #menuParam.add_separator()
+        menuParam.add_command(label=new_text18, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.showParam18)
-        menuParam.add_separator()
-        menuParam.add_command(label=new_text19, font=('Times 16'), background='black',
+        #menuParam.add_separator()
+        menuParam.add_command(label=new_text19, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.showParam19)
-        menuParam.add_separator()
-        menuParam.add_command(label=new_text20, font=('Times 16'), background='black',
+        #menuParam.add_separator()
+        menuParam.add_command(label=new_text20, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.showParam20)
-        menuParam.add_separator()
-        menuParam.add_command(label=new_text21, font=('Times 16'), background='black',
+        #menuParam.add_separator()
+        menuParam.add_command(label=new_text21, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.showParam21)
-        menuParam.add_separator()
-        menuParam.add_command(label=new_text22, font=('Times 16'), background='black',
+        #menuParam.add_separator()
+        menuParam.add_command(label=new_text22, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.showParam22)
-        menuParam.add_separator()
-        menuParam.add_command(label=new_text23, font=('Times 16'), background='black',
+        #menuParam.add_separator()
+        menuParam.add_command(label=new_text23, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.showParam23)
-        menuParam.add_separator()
-        menuParam.add_command(label=new_text24, font=('Times 16'), background='black',
+        #menuParam.add_separator()
+        menuParam.add_command(label=new_text24, font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.showParam24)
         # Integration of Vital parameters menu

@@ -1202,6 +1202,119 @@ class MenuBar(Frame):
         cmd_ttt.configure(activeforeground='black', activebackground='cyan',
             menu=meTtt)
 
+        # Vital parameters menu
+        self.cmd_Param=Menubutton(self, text='Vital Parameters', font=("Times 14"),
+            fg='cyan', bg='grey30', relief=GROOVE)
+        self.cmd_Param.pack(side=LEFT, padx=3)
+        # Partie déroulante du menu param
+        menuParam = Menu(self.cmd_Param)
+        menuParam.add_command(label=new_text, font=('Times 16'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.showParam1)
+        menuParam.add_separator()
+        menuParam.add_command(label=new_text2, font=('Times 16'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.showParam2)
+        menuParam.add_separator()
+        menuParam.add_command(label=new_text3, font=('Times 16'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.showParam3)
+        menuParam.add_separator()
+        menuParam.add_command(label=new_text4, font=('Times 16'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.showParam4)
+        menuParam.add_separator()
+        menuParam.add_command(label=new_text5, font=('Times 16'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.showParam5)
+        menuParam.add_separator()
+        menuParam.add_command(label=new_text6, font=('Times 16'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.showParam6)
+        menuParam.add_separator()
+        menuParam.add_command(label=new_text7, font=('Times 16'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.showParam7)
+        menuParam.add_separator()
+        menuParam.add_command(label=new_text7, font=('Times 16'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.showParam7)
+        menuParam.add_separator()
+        menuParam.add_command(label=new_text7, font=('Times 16'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.showParam7)
+        menuParam.add_separator()
+        menuParam.add_command(label=new_text8, font=('Times 16'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.showParam8)
+        menuParam.add_separator()
+        menuParam.add_command(label=new_text9, font=('Times 16'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.showParam9)
+        menuParam.add_separator()
+        menuParam.add_command(label=new_text10, font=('Times 16'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.showParam10)
+        menuParam.add_separator()
+        menuParam.add_command(label=new_text11, font=('Times 16'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.showParam11)
+        menuParam.add_separator()
+        menuParam.add_command(label=new_text12, font=('Times 16'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.showParam12)
+        menuParam.add_separator()
+        menuParam.add_command(label=new_text13, font=('Times 16'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.showParam13)
+        menuParam.add_separator()
+        menuParam.add_command(label=new_text14, font=('Times 16'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.showParam14)
+        menuParam.add_separator()
+        menuParam.add_command(label=new_text15, font=('Times 16'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.showParam15)
+        menuParam.add_separator()
+        menuParam.add_command(label=new_text16, font=('Times 16'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.showParam16)
+        menuParam.add_separator()
+        menuParam.add_command(label=new_text17, font=('Times 16'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.showParam17)
+        menuParam.add_separator()
+        menuParam.add_command(label=new_text18, font=('Times 16'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.showParam18)
+        menuParam.add_separator()
+        menuParam.add_command(label=new_text19, font=('Times 16'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.showParam19)
+        menuParam.add_separator()
+        menuParam.add_command(label=new_text20, font=('Times 16'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.showParam20)
+        menuParam.add_separator()
+        menuParam.add_command(label=new_text21, font=('Times 16'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.showParam21)
+        menuParam.add_separator()
+        menuParam.add_command(label=new_text22, font=('Times 16'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.showParam22)
+        menuParam.add_separator()
+        menuParam.add_command(label=new_text23, font=('Times 16'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.showParam23)
+        menuParam.add_separator()
+        menuParam.add_command(label=new_text24, font=('Times 16'), background='black',
+            activebackground='cyan', foreground='cyan', activeforeground='black',
+            command=boss.showParam24)
+        # Integration of Vital parameters menu
+        self.cmd_Param.configure(activeforeground='black', activebackground='cyan',
+            menu=menuParam)
+
         # BMI menu
         cmd_BMI = Menubutton(self, text='Body Mass Indice', font=("Times 14"),
             fg='cyan', bg='grey30', relief=GROOVE)
@@ -2375,6 +2488,175 @@ class Application(Frame):
 
     def tttMed24(self):
         callTreatment24(self)
+
+    # Func Vital Parameters
+    def showParam1(self):
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
+        subprocess.call("./param/fencap.py")
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
+
+    def showParam2(self):
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
+        subprocess.call("./param/fencap2.py")
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
+
+    def showParam3(self):
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
+        subprocess.call("./param/fencap3.py")
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
+
+    def showParam4(self):
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
+        subprocess.call("./param/fencap4.py")
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
+
+    def showParam5(self):
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
+        subprocess.call("./param/fencap5.py")
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
+
+    def showParam6(self):
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
+        subprocess.call("./param/fencap6.py")
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
+
+    def showParam7(self):
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
+        subprocess.call("./param/fencap7.py")
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
+
+    def showParam8(self):
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
+        subprocess.call("./param/fencap8.py")
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
+
+    def showParam9(self):
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
+        subprocess.call("./param/fencap9.py")
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
+
+    def showParam10(self):
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
+        subprocess.call("./param/fencap10.py")
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
+
+    def showParam11(self):
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
+        subprocess.call("./param/fencap11.py")
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
+
+    def showParam12(self):
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
+        subprocess.call("./param/fencap12.py")
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
+
+    def showParam13(self):
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
+        subprocess.call("./param/fencap13.py")
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
+
+    def showParam14(self):
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
+        subprocess.call("./param/fencap14.py")
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
+
+    def showParam15(self):
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
+        subprocess.call("./param/fencap15.py")
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
+
+    def showParam16(self):
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
+        subprocess.call("./param/fencap16.py")
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
+
+    def showParam17(self):
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
+        subprocess.call("./param/fencap17.py")
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
+
+    def showParam18(self):
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
+        subprocess.call("./param/fencap18.py")
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
+
+    def showParam19(self):
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
+        subprocess.call("./param/fencap19.py")
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
+
+    def showParam20(self):
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
+        subprocess.call("./param/fencap20.py")
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
+
+    def showParam21(self):
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
+        subprocess.call("./param/fencap21.py")
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
+
+    def showParam22(self):
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
+        subprocess.call("./param/fencap22.py")
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
+
+    def showParam23(self):
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
+        subprocess.call("./param/fencap23.py")
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
+
+    def showParam24(self):
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
+        subprocess.call("./param/fencap24.py")
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
 
     # Func BMI
     def calculB(self):

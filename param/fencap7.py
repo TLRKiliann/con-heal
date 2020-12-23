@@ -608,7 +608,7 @@ label7 = Label(gui, text='Entrer la Hgt : ', font=('Times', 14),
     fg='aquamarine', bg='DodgerBlue2', width=15, anchor='e')
 label7.grid(row=9, column=1)
 
-label8 = Label(gui, text='Eva des Dlrs : ', font=('Times', 14),
+label8 = Label(gui, text='Eva dlrs/10 : ', font=('Times', 14),
     fg='aquamarine', bg='DodgerBlue2', width=15, anchor='e')
 label8.grid(row=10, column=1)
 

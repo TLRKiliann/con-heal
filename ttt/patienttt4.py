@@ -127,13 +127,13 @@ def callTreatment4(self):
             if os.path.getsize('./ttt/doc_ttt4/convdose.json'):
                 subprocess.call('./ttt/doc_ttt4/tabs.py')
         except FileNotFoundError as no_tabtreat:
-            print("+ Sorry, it's not possible to show tab of ttt, \
-                convdose.json file missing !", no_tabtreat)
+            print("+ Sorry, it's not possible to show tab of ttt, " \
+                "convdose.json file missing !", no_tabtreat)
             tttTabs()
 
     def tttTabs():
-        messagebox.showinfo("Info", "No ttt recorded for \
-            this patient, convdose.json file missing !") 
+        messagebox.showinfo("Info", "No ttt recorded for " \
+            "this patient, convdose.json file missing !") 
 
     def showReserve():
             #To display tabs of reserve, convres.json 
@@ -142,13 +142,13 @@ def callTreatment4(self):
             if os.path.getsize('./ttt/doc_ttt4/convres.json'):
                 subprocess.call('./ttt/doc_ttt4/tabres.py')
         except FileNotFoundError as no_tabres:
-            print("+ Sorry, it's not possible to show tab of reserve, \
-                convres.json file missing !", no_tabres)
+            print("+ Sorry, it's not possible to show tab of reserve, " \
+                "convres.json file missing !", no_tabres)
             reserveTabs()
 
     def reserveTabs():
-        messagebox.showinfo("Info", "No reserve recorded for \
-            this patient, convres.json file missing !")
+        messagebox.showinfo("Info", "No reserve recorded for " \
+            "this patient, convres.json file missing !")
 
     def deleteTreatment():
             #To earase one line in array
@@ -516,13 +516,13 @@ def callTreatment4(self):
             if os.path.getsize("./ttt/doc_ttt4/intro_ttt.txt"):
                 subprocess.call("./ttt/doc_ttt4/readstory.py")
         except FileNotFoundError as no_storyfile:
-            print("+ Sorry, it's not possible to show tab of ttt, \
-                no ttt has been introduced !", no_storyfile)
+            print("+ Sorry, it's not possible to show tab of ttt, " \
+                "no ttt has been introduced !", no_storyfile)
             noStory()
 
     def noStory():
-        messagebox.showinfo("Info", "None historic of ttt is available, \
-            no ttt has been introduced !") 
+        messagebox.showinfo("Info", "None historic of ttt is available, " \
+            "no ttt has been introduced !") 
 
     self.x14, self.y14 = 500, 180
     self.buttShowttt = Button(self.can, text="Show ttt", width=10, fg='white',

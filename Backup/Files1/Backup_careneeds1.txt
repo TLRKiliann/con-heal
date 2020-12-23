@@ -1,0 +1,17 @@
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
+
+En date du : 23/12/2020 à 17:54:40 :
+Patient name : test totest
++ Surveillance respiratoire requise
++ Surveillance alimentaire et/ou hydratation requise
++ Surveillance du sommeil requise
++ Surveillance posturale et/ou des déplacements requise
++ Surveillance pour éviter les dangers requise
+Eviter les risques de transmissions...
+---
+
+
+
+En date du : 22/12/2020 à 17:55:20 :
+Faire une ps tous les 3 semaines agendées.
+

@@ -1,37 +1,39 @@
-En date du : 22/12/2020 à 16:57:14 :
 
-----------------------------------------------------------
+---------------------------------------------------------
 Date : 23/12/2020
 Patient name : Edward Snowden# Nozinan : (add result of dosage here)
 # Prazine : (add result of dosage here)
 ---------------------------------------------------------
 
 
-----------------------------------------------------------
+---------------------------------------------------------
 Date : 23/12/2020
-Patient name : Edward Snowden# Phenytoine : (add result of dosage here)
+Patient name : Edward Snowden
+# Phenytoine : (add result of dosage here)
 # Sabril : (add result of dosage here)
 ---------------------------------------------------------
 
 
-----------------------------------------------------------
+---------------------------------------------------------
 Date : 23/12/2020
-Patient name : Edward Snowden# Serdolect : (add result of dosage here)
+Patient name : Edward Snowden
+# Serdolect : (add result of dosage here)
 # Solian : (add result of dosage here)
 # Tiapridal : (add result of dosage here)
 ---------------------------------------------------------
 
 
-----------------------------------------------------------
+---------------------------------------------------------
 Date : 23/12/2020
-Patient name : Edward Snowden# Phenobarbital : (add result of dosage here)
+Patient name : Edward Snowden
+# Phenobarbital : (add result of dosage here)
 # Phenytoine : (add result of dosage here)
 # Sabril : (add result of dosage here)
 # Taloxa : (add result of dosage here)
 ---------------------------------------------------------
 
 
-----------------------------------------------------------
+---------------------------------------------------------
 Date : 23/12/2020
 Patient name : Edward Snowden
 # Phenobarbital : (add result of dosage here)

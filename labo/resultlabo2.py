@@ -60,14 +60,14 @@ def callLabo2(self):
             with open('./labo/doc_labo/result2.txt', 'a+') as file2:
                 file.write("\n----------------------------------------------------------\n")
                 file.write("Date : ")
-                file.write(time.strftime("%d/%m/%Y")+ '\n')
+                file.write(time.strftime("%d/%m/%Y") + '\n')
                 file.write("Patient name : ")
-                file.write(entrytext.get())
+                file.write(entrytext.get() + '\n')
                 file2.write("\n---------------------------------------------------------\n")
                 file2.write("Date : ")
                 file2.write(time.strftime("%d/%m/%Y")+ '\n')
                 file2.write("Patient name : ")
-                file2.write(entrytext.get())
+                file2.write(entrytext.get() + '\n')
 
         print(CheckVar1.get())
         if CheckVar1.get()==1:

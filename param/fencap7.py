@@ -665,7 +665,7 @@ buttonDel.grid(row=1, column=4)
 
 buttonWrite = Button(gui)
 buttonWrite.config(text='CAPTURE DATA', width=33, 
-    fg='white', bg='gray60', activeforeground='gray40',
+    fg='white', bg='RoyalBlue3', activeforeground='gray40',
     activebackground='pale turquoise', command=writeData)
 buttonWrite.grid(row=2, column=3, columnspan=4)
 

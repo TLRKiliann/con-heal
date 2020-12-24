@@ -36,7 +36,7 @@ def writeData():
             file.write(str("Heure: "))
             file.write(textHour.get() + '\n')
             file.write(str("Prenom et Nom: "))
-            file.write(textName.get())
+            file.write(textName.get() + '\n')
             file.write(str("TA: "))
             file.write(textTa.get() + " mmHg\n")
             file.write(str("Puls: "))
@@ -310,7 +310,7 @@ def appelFreq():
         if os.path.getsize('./param/aspifile7/freq.json'):
             subprocess.run('./param/aspifile7/aspifreq.py')
             label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
-                "\nFréqu. resp.: " + textFr.get())
+                "\nFrequ. resp.: " + textFr.get())
     except FileNotFoundError as errorgraph4:
         print('+ Sorry the FR plot doesn\'t work ! Data missing !', errorgraph4)
         label['text'] = "Sorry the FR plot doesn\'t work ! Data missing !"
@@ -361,7 +361,7 @@ def delMain():
     """
         To earase Main7.txt
     """
-    Main_MsgBox = messagebox.askquestion("Confirm","Are you sure ?\n"
+    Main_MsgBox = messagebox.askquestion("Confirm", "Are you sure ?\n"
         "It will delete Main7.txt with all data !!!")
     if Main_MsgBox == 'yes':
         try:

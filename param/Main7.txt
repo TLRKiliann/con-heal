@@ -1,0 +1,10 @@
+Date: 24/12/2020
+Heure: 09:26:50
+Prenom et Nom: Julian AssangeTA: 120/78 mmHg
+Puls: 88/min
+SaO2: 98%
+FR: 16/min
+Temperature: 36.5°C
+Glycemie: 5.5 mmol/l
+Douleurs: 8/10
+

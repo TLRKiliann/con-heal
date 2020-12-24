@@ -267,7 +267,8 @@ def appelTens():
     try:
         if os.path.getsize('./param/aspifile7/tensor.json'):
             subprocess.run('./param/aspifile7/aspidata.py')
-            label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
+            label['text'] = ("Date: " + textDate.get() +
+                "\nNom: " + textName.get() + 
                 "\nTension: " + textTa.get())
     except FileNotFoundError as errorgraph1:
         print('+ Sorry the TA plot doesn\'t work ! Data missing !', errorgraph1)
@@ -324,7 +325,7 @@ def appelTemp():
         if os.path.getsize('./param/aspifile7/temp.json'):
             subprocess.run('./param/aspifile7/aspitemp.py')
             label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
-                "\nTempérature: " + textTemp.get())
+                "\nTemperature: " + textTemp.get())
     except FileNotFoundError as errorgraph5:
         print('+ Sorry the Temp plot doesn\'t work ! Data missing !', errorgraph5)
         label['text'] = "Sorry the Temp plot doesn\'t work ! Data missing !"

@@ -2,7 +2,11 @@
     "data": [
         {
             "Date": "24/12/2020",
-            "Temperature": "36.5"
+            "Temperature": "36"
+        },
+        {
+            "Date": "24/12/2020",
+            "Temperature": "56"
         }
     ]
 }

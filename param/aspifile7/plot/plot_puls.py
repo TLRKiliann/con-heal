@@ -57,9 +57,9 @@ list2 = list(map(int, list2))
 show_grid = True
 with plt.style.context(('seaborn-darkgrid')):
     plt.plot(list1, list2)
-    plt.ylabel('Puls/min')
-    plt.xlabel('Dates')
-    plt.title('Relevé des puls/min par date')
+    plt.ylabel('Puls/min', fontsize=12)
+    plt.xlabel('Dates', fontsize=12)
+    plt.title('Relevé des puls/min par date', fontsize=14)
     plt.xticks(rotation=45)
     plt.grid(show_grid)
     plt.show()

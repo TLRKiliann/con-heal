@@ -58,9 +58,9 @@ list2 = list(map(float, list2))
 show_grid = True
 with plt.style.context(('seaborn-darkgrid')):
     plt.plot(list1, list2)
-    plt.ylabel('TA')
-    plt.xlabel('Dates')
-    plt.title('Relevé des tensions (TA) par date')
+    plt.ylabel('TA', fontsize=12)
+    plt.xlabel('Dates', fontsize=12)
+    plt.title('Relevé des tensions (TA) par date', fontsize=14)
     plt.xticks(rotation=45)
     plt.grid(show_grid)
     plt.show()

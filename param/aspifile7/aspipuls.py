@@ -55,4 +55,4 @@ with open('./param/aspifile7/data_puls.json', 'a+') as datafile:
 
 print("\nDownloading 'plot_prog.py'...")
 
-subprocess.call('./param/aspifile7/plot/plot_puls.py')
+subprocess.run('./param/aspifile7/plot/plot_puls.py')

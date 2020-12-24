@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# -*- coding:utf-8 -*-
+# -*- coding: utf-8 -*-
 
 
 import subprocess
@@ -10,21 +10,21 @@ file = open('./param/aspifile7/dlr.json')
 data = json.load(file)
 #file.close
 
-for (key, value) in data.items():
-    print("Key: " + key)
-    print("Valeur: " + str(value))
-    print("\nTo represent the data_get:\n")
-    print(data.get("data"))
-    print("\n")
-    print("Valeur: " + str(value[0]))
-    print("Valeur: " + str(value[1]))
-    print("\n")
-    print("Date: " + str(value[0]["Date"]))
-    print("Douleurs: " + str(value[0]["Douleurs"]))
-    print("\n")
-    print("Date: " + str(value[1]["Date"]))
-    print("Douleurs: " + str(value[1]["Douleurs"]))
-    
+try:
+    for (key, value) in data.items():
+        print("Key: " + key)
+        print("Valeur: " + str(value))
+        print("\nTo represent the data_get:\n")
+        print(data.get("data"))
+        print("\n")
+        print("Valeur: " + str(value[0]))
+        print("\n")
+        print("Date: " + str(value[0]["Date"]))
+        print("Douleurs: " + str(value[0]["Douleurs"]))
+        print("\n")
+except IndexError as ind_dlrs:
+    print("Only one value for kg...", ind_dlrs) 
+
 print("\nList of dates\n")
 
 data_list1 = []
@@ -55,4 +55,4 @@ with open('./param/aspifile7/data_dlr.json', 'a+') as datafile:
 
 print("\nDownloading 'plot_prog.py'...")
 
-subprocess.call('./param/aspifile7/plot/plot_dlr.py')
+subprocess.run('./param/aspifile7/plot/plot_dlr.py')

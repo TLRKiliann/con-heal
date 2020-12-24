@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# -*- coding:utf-8 -*-
+# -*- coding: utf-8 -*-
 
 
 import json
@@ -11,7 +11,6 @@ print("\nListe1 = dates :")
 print("--------------")
 fileO = open('./param/aspifile7/data_datedlr.json')
 list1 = json.load(fileO)
-#f.close
 
 for letter in list1:
     print("list1: " + letter)
@@ -21,7 +20,6 @@ print("--------------------")
 
 fileO = open('./param/aspifile7/data_dlr.json')
 list2 = json.load(fileO)
-#f.close
 
 for letter in list2:
     print("List2: " + letter)
@@ -45,24 +43,30 @@ for key, value in dicolist.items():
 print("\nList of date by entry's order :")
 print("----------------------------------")
 print(list1)
-# How to sort data of list1 to correspond whith list2 ???
-# And for list2 ??? Is it with array ??? 
+
 print("\nList of pain evaluation :")
 print("------------------------")
 print(list2)
 
 #list3 = [int(list2) for list2 in list2]
-list2 = list(map(int, list2))
+try:
+    list2 = list(map(int, list2))
+except ValueError as base_err:
+    print("+ Invalid number (no: . or , !)", base_err)
+    list2 = []
 
-show_grid = True
-with plt.style.context(('seaborn-darkgrid')):
-    plt.plot(list1, list2)
-    plt.ylabel('Dlrs')
-    plt.xlabel('Dates')
-    plt.title('Echelle de la Dlr/10 par date')
-    plt.xticks(rotation=45)
-    plt.grid(show_grid)
-    plt.show()
+try:
+    show_grid = True
+    with plt.style.context('seaborn-darkgrid'):
+        plt.plot(list1, list2, 'o-', color='purple')
+        plt.ylabel('Dlrs', fontsize=12)
+        plt.xlabel('Dates', fontsize=12)
+        plt.title('Pain scale (dlr/10) by date', fontsize=14)
+        plt.xticks(rotation=45)
+        plt.grid(show_grid)
+        plt.show()
+except ValueError as shapes_err:
+    print("Invalid number", shapes_err)
 
 os.remove('./param/aspifile7/data_datedlr.json')
 print("+ File data_datedlr.json removed !")

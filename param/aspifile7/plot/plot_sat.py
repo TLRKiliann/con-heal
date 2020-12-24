@@ -57,9 +57,9 @@ list2 = list(map(int, list2))
 show_grid = True
 with plt.style.context(('seaborn-darkgrid')):
     plt.plot(list1, list2)
-    plt.ylabel('SaO2')
-    plt.xlabel('Dates')
-    plt.title('Relevé des SaO2 en % par date')
+    plt.ylabel('SaO2', fontsize=12)
+    plt.xlabel('Dates', fontsize=12)
+    plt.title('Relevé des SaO2 en % par date', fontsize=14)
     plt.xticks(rotation=45)
     plt.grid(show_grid)
     plt.show()

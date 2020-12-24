@@ -55,4 +55,4 @@ with open('./param/aspifile7/data_fr.json', 'a+') as datafile:
 
 print("\nDownloading 'plot_prog.py'...")
 
-subprocess.call('./param/aspifile7/plot/plot_freq.py')
+subprocess.run('./param/aspifile7/plot/plot_freq.py')

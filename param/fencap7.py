@@ -567,7 +567,7 @@ with open('./newpatient/entryfile7.txt', 'r') as filename:
 gui = Tk()
 gui.title("Vital Parameters")
 gui.configure(background='DodgerBlue2')
-gui.geometry('650x560')
+gui.geometry('650x600')
 
 # Labels
 labelTitle = Label(gui, text="Vital Parameters", 
@@ -666,7 +666,8 @@ buttonDel.config(text='Reinitialize ALL !!!', width=15,
 buttonDel.grid(row=1, column=4)
 
 buttonWrite = Button(gui)
-buttonWrite.config(text='CAPTURE DATA', width=33, 
+buttonWrite.config(text='CAPTURE DATA', width=33,
+    fg='white', bg='RoyalBlue2',
     activeforeground='gray40',
     activebackground='pale turquoise', command=writeData)
 buttonWrite.grid(row=2, column=3, columnspan=4)
@@ -769,7 +770,7 @@ button7Del.config(text='Cancel last Dlrs', width=15,
 button7Del.grid(row=10, column=4)
 
 lower_frame = Frame(gui, bg='DodgerBlue2', bd=10, relief=GROOVE)
-lower_frame.place(relx=0.5, rely=0.68, relwidth=0.90,
+lower_frame.place(relx=0.5, rely=0.66, relwidth=0.9,
     relheight=0.3, anchor='n')
 
 label = Label(lower_frame, text=" ", font=('Arial', 12),

@@ -9,27 +9,41 @@ import os
 
 print("\nListe1 = dates :")
 print("--------------")
-fileO = open('./param/aspifile7/data_date.json')
-list1 = json.load(fileO)
-#f.close
 
-for letter in list1:
-    print("list1: " + letter)
+try:
+    fileO = open('./param/aspifile7/data_date.json')
+    list1 = json.load(fileO)
+except ValueError as err_entry:
+    print("+ Value Error", err_entry)
+
+try:
+    for letter in list1:
+        print("list1: " + letter)
+except NameError as err_list:
+    print("+ Name Error list", err_list)
 
 print("\nList2 = tension :")
 print("--------------------")
 
-fileO = open('./param/aspifile7/data_tension.json')
-list2 = json.load(fileO)
-#f.close
+try:
+    fileO = open('./param/aspifile7/data_tension.json')
+    list2 = json.load(fileO)
+except ValueError as err_entry2:
+    print("+ Value Error", err_entry2)
 
-for letter in list2:
-    print("List2: " + letter)
+try:
+    for letter in list2:
+        print("List2: " + letter)
+except NameError as err_list2:
+    print("+ Name Error list2", err_list2)
 
 dicolist = {}
 
-for list1, list2 in zip(list1, list2):
-    dicolist[list1] = list2
+try:
+    for list1, list2 in zip(list1, list2):
+        dicolist[list1] = list2
+except NameError as not_def:
+    print("+ Name Error list", not_def)
 
 print("\nAffichage du dictionnaire :")
 print("---------------------------")
@@ -46,24 +60,28 @@ for key, value in dicolist.items():
 print("\nListe des dates dans l'ordre des entrées :")
 print("----------------------------------")
 print(list1)
-# How to sort data of list1 to correspond whith list2 ???
-# And for list2 ??? Is it with array ??? 
 print("\nListe des tensions :")
 print("------------------------")
 print(list2)
 
 #list3 = [int(list2) for list2 in list2]
-list2 = list(map(float, list2))
+try:
+    list2 = list(map(float, list2))
+except ValueError as err_val:
+    print("+ False...", err_val)
 
-show_grid = True
-with plt.style.context(('seaborn-darkgrid')):
-    plt.plot(list1, list2)
-    plt.ylabel('TA', fontsize=12)
-    plt.xlabel('Dates', fontsize=12)
-    plt.title('Relevé des tensions (TA) par date', fontsize=14)
-    plt.xticks(rotation=45)
-    plt.grid(show_grid)
-    plt.show()
+try:
+    show_grid = True
+    with plt.style.context(('seaborn-darkgrid')):
+        plt.plot(list1, list2)
+        plt.ylabel('TA', fontsize=12)
+        plt.xlabel('Dates', fontsize=12)
+        plt.title('Relevé des tensions (TA) par date', fontsize=14)
+        plt.xticks(rotation=45)
+        plt.grid(show_grid)
+        plt.show()
+except ValueError as val:
+    print("+ False entry value", val)
 
 os.remove('./param/aspifile7/data_date.json')
 print("+ File data_date.json removed !")

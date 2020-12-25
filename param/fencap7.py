@@ -24,13 +24,13 @@ def writeData():
         and launching aspiFile7.py
     """
     try:
-        if os.path.getsize('./param/Main7.txt'):
-            print("+ File 'Main7.txt' exist !")
+        if os.path.getsize('./param/paramdata7.txt'):
+            print("+ File 'paramdata7.txt' exist !")
     except FileNotFoundError as info:
-        print("The file : 'Main7.txt' doesn't exist !", info)
-        print("File 'Main7.txt' created !")
+        print("The file : 'paramdata7.txt' doesn't exist !", info)
+        print("File 'paramdata7.txt' created !")
     finally:
-        with open('./param/Main7.txt', 'a+') as file:
+        with open('./param/paramdata7.txt', 'a+') as file:
             file.write(str("Date: "))
             file.write(textDate.get() + '\n')
             file.write(str("Heure: "))
@@ -248,8 +248,9 @@ def writeData():
             with open('./param/aspifile7/dlr.json', 'w') as datadlr3:
                 json.dump(dataD, datadlr3, indent=4)
 
-    label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() + 
-        "Tension: " + textTa.get() +" -- "+ "Puls: " + textPuls.get() +
+    label['text'] = ("Date: " + textDate.get() + 
+        "\nNom: " + textName.get() + 
+        "\nTension: " + textTa.get() +" -- " + "Puls: " + textPuls.get() +
         "\nSaO2: " + textSa.get() +" -- "+ "FR: " + textFr.get() +
         "\nTemperature: " + textTemp.get() +
         "\nGlycemie: " + textHgt.get() +
@@ -360,16 +361,16 @@ def appelDlr():
 
 def delMain():
     """
-        To earase Main7.txt
+        To earase paramdata7.txt
     """
     Main_MsgBox = messagebox.askquestion("Confirm", "Are you sure ?\n"
-        "It will delete Main7.txt with all data !!!")
+        "It will delete paramdata7.txt with all data !!!")
     if Main_MsgBox == 'yes':
         try:
-            if os.path.getsize('./param/Main7.txt'):
-                os.remove('./param/Main7.txt')
-                label['text'] = "File Main7.txt has been deleted !"
-                print("+ File Main7.txt has been deleted !")
+            if os.path.getsize('./param/paramdata7.txt'):
+                os.remove('./param/paramdata7.txt')
+                label['text'] = "File paramdata7.txt has been deleted !"
+                print("+ File paramdata7.txt has been deleted !")
         except FileNotFoundError:
             label['text'] = "Sorry, file asked not exist !"
             print('+ Sorry, file asked not exist !')
@@ -546,7 +547,7 @@ def delEvery():
 
 def updateData():
     """
-        Backup for Main7.txt/month
+        Backup for paramdata7.txt/month
     """
     listeDate = ["01/05/2020", "01/06/2020", "01/07/2020",
     "01/08/2020", "01/09/2020", "01/10/2020",
@@ -554,8 +555,8 @@ def updateData():
     for i in listeDate:
         if textDate.get() == i:
             print("Backup of file Main !")
-            shutil.copy('./param/Main7.txt', './Backup/BackupMain7.txt')
-            with open('./param/Main7.txt', 'w'): pass
+            shutil.copy('./param/paramdata7.txt', './Backup/Backupparamdata7.txt')
+            with open('./param/paramdata7.txt', 'w'): pass
         else:
             pass
 
@@ -570,47 +571,47 @@ gui.geometry('650x560')
 
 # Labels
 labelTitle = Label(gui, text="Vital Parameters", 
-    font=('Times 22 bold'), bg='DodgerBlue2', fg='aquamarine')
+    font=('Times 22 bold'), bg='DodgerBlue2', fg='white')
 labelTitle.grid(row=0, column=1, columnspan=4, pady=10)
 
 label = Label(gui, text='Date : ', font=('Times', 14),
-    fg='aquamarine', bg='DodgerBlue2', width=15, anchor='e')
+    fg='white', bg='DodgerBlue2', width=15, anchor='e')
 label.grid(row=1, column=1)
 
 label = Label(gui, text='Heure : ', font=('Times', 14),
-    fg='aquamarine', bg='DodgerBlue2', width=15, anchor='e')
+    fg='white', bg='DodgerBlue2', width=15, anchor='e')
 label.grid(row=2, column=1)
 
 label1 = Label(gui, text='Entrer le Nom : ', font=('Times', 14),
-    fg='aquamarine', bg='DodgerBlue2', width=15, anchor='e')
+    fg='white', bg='DodgerBlue2', width=15, anchor='e')
 label1.grid(row=3, column=1)
 
 label2 = Label(gui, text='Entrer la TA : ', font=('Times', 14),
-    fg='aquamarine', bg='DodgerBlue2', width=15, anchor='e')
+    fg='white', bg='DodgerBlue2', width=15, anchor='e')
 label2.grid(row=4, column=1)
 
 label3 = Label(gui, text='Entrer les Puls : ', font=('Times', 14),
-    fg='aquamarine', bg='DodgerBlue2', width=15, anchor='e')
+    fg='white', bg='DodgerBlue2', width=15, anchor='e')
 label3.grid(row=5, column=1)
 
 label4 = Label(gui, text='Entrer la SaO2 : ', font=('Times', 14),
-    fg='aquamarine', bg='DodgerBlue2', width=15, anchor='e')
+    fg='white', bg='DodgerBlue2', width=15, anchor='e')
 label4.grid(row=6, column=1)
 
 label5 = Label(gui, text='Entrer la FR : ', font=('Times', 14),
-    fg='aquamarine', bg='DodgerBlue2', width=15, anchor='e')
+    fg='white', bg='DodgerBlue2', width=15, anchor='e')
 label5.grid(row=7, column=1)
 
 label6 = Label(gui, text='Entrer la T°C : ', font=('Times', 14),
-    fg='aquamarine', bg='DodgerBlue2', width=15, anchor='e')
+    fg='white', bg='DodgerBlue2', width=15, anchor='e')
 label6.grid(row=8, column=1)
 
 label7 = Label(gui, text='Entrer la Hgt : ', font=('Times', 14),
-    fg='aquamarine', bg='DodgerBlue2', width=15, anchor='e')
+    fg='white', bg='DodgerBlue2', width=15, anchor='e')
 label7.grid(row=9, column=1)
 
 label8 = Label(gui, text='Eva dlrs/10 : ', font=('Times', 14),
-    fg='aquamarine', bg='DodgerBlue2', width=15, anchor='e')
+    fg='white', bg='DodgerBlue2', width=15, anchor='e')
 label8.grid(row=10, column=1)
 
 # Entry
@@ -666,7 +667,7 @@ buttonDel.grid(row=1, column=4)
 
 buttonWrite = Button(gui)
 buttonWrite.config(text='CAPTURE DATA', width=33, 
-    fg='white', bg='RoyalBlue3', activeforeground='gray40',
+    activeforeground='gray40',
     activebackground='pale turquoise', command=writeData)
 buttonWrite.grid(row=2, column=3, columnspan=4)
 
@@ -767,7 +768,7 @@ button7Del.config(text='Cancel last Dlrs', width=15,
     activebackground='red', command=delDlr)
 button7Del.grid(row=10, column=4)
 
-lower_frame = Frame(gui, bg='turquoise1', bd=10, relief=GROOVE)
+lower_frame = Frame(gui, bg='DodgerBlue2', bd=10, relief=GROOVE)
 lower_frame.place(relx=0.5, rely=0.68, relwidth=0.90,
     relheight=0.3, anchor='n')
 

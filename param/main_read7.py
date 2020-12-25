@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-#!-*-encoding:utf-8-*-
+# -*- coding: utf-8 -*-
 
 
 from tkinter import *
+from tkinter import messagebox
 import os
-import subprocess
 
 
-fen=Tk()
+fen = Tk()
 fen.title("Vital parameters")
 fen.configure(background='DodgerBlue2')
 
@@ -17,33 +17,33 @@ bottom = Frame(fen, bg='DodgerBlue2')
 top.pack(side=TOP)
 bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
 
-labelo=Label(fen, text="Vital parameters : ", width=20,
+labelo = Label(fen, text="Vital parameters : ", width=20,
     font='Times 18 bold', fg='cyan', bg='DodgerBlue2')
 labelo.pack(in_=top, side=LEFT, pady=20)
 
-labelallergy=Label(fen, text="Allergy",
+labelallergy = Label(fen, text="Allergy",
     font='Arial 18 bold', fg='coral', bg='DodgerBlue2')
 labelallergy.pack(padx=5, pady=5)
 
 # To read name in Entry widget
 with open('./newpatient/entryfile7.txt', 'r') as filename:
-    line1=filename.readline()
+    line1 = filename.readline()
 
-text_name=StringVar()
-Entryname=Entry(fen, textvariable=text_name)
+text_name = StringVar()
+Entryname = Entry(fen, textvariable=text_name)
 text_name.set(line1[:-1])
 Entryname.pack(in_=top, side=LEFT, pady=20)
 
 # To read allergy in Entry widget
 with open('./allergy/allergyfile7.txt', 'r') as allerfile:
-    line_a=allerfile.readline()
+    line_a = allerfile.readline()
 
-text_all=StringVar()
+text_all = StringVar()
 text_all.set(line_a)
-Entryall=Entry(fen, textvariable=text_all, width=60)
+Entryall = Entry(fen, textvariable=text_all, width=60)
 Entryall.pack(padx=10, pady=5)
 
-textBox=Text(fen, height=15, width=60, font=18)
+textBox = Text(fen, height=15, width=60, font=18)
 textBox.pack(padx=30, pady=30)
 
 def importationFile(fichier, encodage="Utf-8"):
@@ -53,12 +53,16 @@ def importationFile(fichier, encodage="Utf-8"):
     for li in content:
         textBox.insert(END, li)
 
-buttonClose=Button(fen, text="Quit", width=10, fg='white', 
-	bg='RoyalBlue3', activebackground='pale turquoise', 
+buttonClose = Button(fen, text="Quit", width=10, fg='white',
+    bg='RoyalBlue3', activebackground='pale turquoise',
     activeforeground='navy', command=quit)
 buttonClose.pack(side='right', padx=10, pady=10)
 
-importationFile('./param/Main7.txt',
-    encodage="Utf-8")
+try:
+    if os.path.getsize('./param/paramdata7.txt'):
+        importationFile('./param/paramdata7.txt', encodage="Utf-8")
+except FileNotFoundError as nf_file:
+    print("+ File paramdata7 not found !", nf_file)
+    messagebox.showwarning('Warning', 'No recorded data !')
 
 fen.mainloop()

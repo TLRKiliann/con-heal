@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# -*- coding:utf-8 -*-
+# -*- coding: utf-8 -*-
 
 
 import subprocess
@@ -8,23 +8,25 @@ import json
 
 file = open('./param/aspifile7/tensor.json')
 data = json.load(file)
-#file.close
 
-for (key, value) in data.items():
-    print("Key: " + key)
-    print("Valeur: " + str(value))
-    print("\nTo represent the data_get:\n")
-    print(data.get("data"))
-    print("\n")
-    print("Valeur: " + str(value[0]))
-    print("Valeur: " + str(value[1]))
-    print("\n")
-    print("Date: " + str(value[0]["Date"]))
-    print("Tension: " + str(value[0]["Tension"]))
-    print("\n")
-    print("Date: " + str(value[1]["Date"]))
-    print("Tension: " + str(value[1]["Tension"]))
-    
+try:
+    for (key, value) in data.items():
+        print("Key: " + key)
+        print("Valeur: " + str(value))
+        print("\nTo represent the data_get:\n")
+        print(data.get("data"))
+        print("\n")
+        print("Valeur: " + str(value[0]))
+        print("Valeur: " + str(value[1]))
+        print("\n")
+        print("Date: " + str(value[0]["Date"]))
+        print("Tension: " + str(value[0]["Tension"]))
+        print("\n")
+        print("Date: " + str(value[1]["Date"]))
+        print("Tension: " + str(value[1]["Tension"]))
+except IndexError as err_read:
+    print("+ Error from aspidata.py", err_read)
+
 print("\nList of dates\n")
 
 data_list1 = []

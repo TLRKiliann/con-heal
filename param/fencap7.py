@@ -395,9 +395,9 @@ def delTA():
                 data = json.dump(data, file, indent=4)
             label['text'] = "Last value of 'tensor.json' has been deleted !"
             print("Last value of 'tensor.json' has been deleted !")
-    except FileNotFoundError:
+    except (FileNotFoundError, IndexError) as out_err:
         label['text'] = "Sorry, file asked not exist !"
-        print('+ Sorry, file asked not exist !')
+        print('+ Sorry, file asked not exist !', out_err)
 
 def delPuls():
     """

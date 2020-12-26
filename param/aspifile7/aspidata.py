@@ -17,13 +17,10 @@ try:
         print(data.get("data"))
         print("\n")
         print("Valeur: " + str(value[0]))
-        print("Valeur: " + str(value[1]))
         print("\n")
         print("Date: " + str(value[0]["Date"]))
         print("Tension: " + str(value[0]["Tension"]))
         print("\n")
-        print("Date: " + str(value[1]["Date"]))
-        print("Tension: " + str(value[1]["Tension"]))
 except IndexError as err_read:
     print("+ Error from aspidata.py", err_read)
 
@@ -53,4 +50,4 @@ with open('./param/aspifile7/data_tension.json', 'a+') as datafile:
 
 print("\nDownloading 'plot_prog.py'...")
 
-subprocess.run('./param/aspifile7/plot/plot_prog.py')
+subprocess.run('./param/aspifile7/plot/plot_prog.py', check=True)

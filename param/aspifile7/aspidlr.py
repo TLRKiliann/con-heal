@@ -8,7 +8,6 @@ import json
 
 file = open('./param/aspifile7/dlr.json')
 data = json.load(file)
-#file.close
 
 try:
     for (key, value) in data.items():
@@ -55,4 +54,4 @@ with open('./param/aspifile7/data_dlr.json', 'a+') as datafile:
 
 print("\nDownloading 'plot_prog.py'...")
 
-subprocess.run('./param/aspifile7/plot/plot_dlr.py')
+subprocess.run('./param/aspifile7/plot/plot_dlr.py', check=True)

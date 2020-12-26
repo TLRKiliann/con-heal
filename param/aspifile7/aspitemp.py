@@ -8,23 +8,22 @@ import json
 
 file = open('./param/aspifile7/temp.json')
 data = json.load(file)
-#file.close
 
-for (key, value) in data.items():
-    print("Key: " + key)
-    print("Valeur: " + str(value))
-    print("\nTo represent the data_get:\n")
-    print(data.get("data"))
-    print("\n")
-    print("Valeur: " + str(value[0]))
-    print("Valeur: " + str(value[1]))
-    print("\n")
-    print("Date: " + str(value[0]["Date"]))
-    print("Temperature: " + str(value[0]["Temperature"]))
-    print("\n")
-    print("Date: " + str(value[1]["Date"]))
-    print("Temperature: " + str(value[1]["Temperature"]))
-    
+try:
+    for (key, value) in data.items():
+        print("Key: " + key)
+        print("Valeur: " + str(value))
+        print("\nTo represent the data_get:\n")
+        print(data.get("data"))
+        print("\n")
+        print("Valeur: " + str(value[0]))
+        print("\n")
+        print("Date: " + str(value[0]["Date"]))
+        print("Temperature: " + str(value[0]["Temperature"]))
+        print("\n")
+except IndexError as err_read:
+    print("+ Error from aspidata.py", err_read)
+
 print("\nList of dates\n")
 
 data_list1 = []
@@ -55,4 +54,4 @@ with open('./param/aspifile7/data_temp.json', 'a+') as datafile:
 
 print("\nDownloading 'plot_prog.py'...")
 
-subprocess.run('./param/aspifile7/plot/plot_temp.py')
+subprocess.run('./param/aspifile7/plot/plot_temp.py', check=True)

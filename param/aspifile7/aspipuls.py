@@ -8,23 +8,22 @@ import json
 
 file = open('./param/aspifile7/puls.json')
 data = json.load(file)
-#file.close
 
-for (key, value) in data.items():
-    print("Key: " + key)
-    print("Valeur: " + str(value))
-    print("\nTo represent the data_get:\n")
-    print(data.get("data"))
-    print("\n")
-    print("Valeur: " + str(value[0]))
-    print("Valeur: " + str(value[1]))
-    print("\n")
-    print("Date: " + str(value[0]["Date"]))
-    print("Puls: " + str(value[0]["Puls"]))
-    print("\n")
-    print("Date: " + str(value[1]["Date"]))
-    print("Puls: " + str(value[1]["Puls"]))
-    
+try:
+    for (key, value) in data.items():
+        print("Key: " + key)
+        print("Valeur: " + str(value))
+        print("\nTo represent the data_get:\n")
+        print(data.get("data"))
+        print("\n")
+        print("Valeur: " + str(value[0]))
+        print("\n")
+        print("Date: " + str(value[0]["Date"]))
+        print("Puls: " + str(value[0]["Puls"]))
+        print("\n")
+except IndexError as err_read:
+    print("+ Error from aspidata.py", err_read)
+
 print("\nList of dates\n")
 
 data_list1 = []
@@ -55,4 +54,4 @@ with open('./param/aspifile7/data_puls.json', 'a+') as datafile:
 
 print("\nDownloading 'plot_prog.py'...")
 
-subprocess.run('./param/aspifile7/plot/plot_puls.py')
+subprocess.run('./param/aspifile7/plot/plot_puls.py', check=True)

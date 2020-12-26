@@ -68,7 +68,7 @@ print(list2)
 try:
     list2 = list(map(float, list2))
 except ValueError as err_val:
-    print("+ False...", err_val)
+    print("+ False value (no: string or int value)", err_val)
 
 try:
     show_grid = True

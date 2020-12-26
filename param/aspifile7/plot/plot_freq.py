@@ -56,8 +56,8 @@ except ValueError as base_err:
 
 try:
     show_grid = True
-    with plt.style.context(('seaborn-darkgrid')):
-        plt.plot(list1, list2)
+    with plt.style.context('seaborn-darkgrid'):
+        plt.plot(list1, list2, 'o-', color='purple')
         plt.ylabel('FR/min', fontsize=12)
         plt.xlabel('Dates', fontsize=12)
         plt.title('Relevé des fréquences resp (FR/min) par date', fontsize=14)

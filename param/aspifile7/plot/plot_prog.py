@@ -72,7 +72,7 @@ except ValueError as err_val:
 
 try:
     show_grid = True
-    with plt.style.context(('seaborn-darkgrid')):
+    with plt.style.context('seaborn-darkgrid'):
         plt.plot(list1, list2, 'o-', color='purple')
         plt.ylabel('TA', fontsize=12)
         plt.xlabel('Dates', fontsize=12)

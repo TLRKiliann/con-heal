@@ -55,8 +55,8 @@ except ValueError as err_val:
 
 try:
     show_grid = True
-    with plt.style.context(('seaborn-darkgrid')):
-        plt.plot(list1, list2)
+    with plt.style.context('seaborn-darkgrid'):
+        plt.plot(list1, list2, 'o-', color='purple')
         plt.ylabel('Hgt', fontsize=12)
         plt.xlabel('Dates', fontsize=12)
         plt.title('Relevé des Hgt en mmol/l par date', fontsize=14)

@@ -74,8 +74,8 @@ def callLabo2(self):
             print("+ Abilify was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Abilify : (add result of dosage here)\n")
-                    file2.write("# Abilify : (add result of dosage here)\n")
+                    file.write("# Abilify : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Abilify : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Abilify ok, nothing to do")
             
@@ -84,8 +84,8 @@ def callLabo2(self):
             print("+ Clopixol was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Clopixol : (add result of dosage here)\n")
-                    file2.write("# Clopixol : (add result of dosage here)\n")
+                    file.write("# Clopixol : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Clopixol : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Clopixol ok, nothing to do")
 
@@ -94,8 +94,8 @@ def callLabo2(self):
             print("+ Clozapine was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Clozapine : (add result of dosage here)\n")
-                    file2.write("# Clozapine : (add result of dosage here)\n")
+                    file.write("# Clozapine : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Clozapine : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Clozapine ok, nothing to do")
             
@@ -104,8 +104,8 @@ def callLabo2(self):
             print("+ Dogmatil was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Dogmatil : (add result of dosage here)\n")
-                    file2.write("# Dogmatil : (add result of dosage here)\n")
+                    file.write("# Dogmatil : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Dogmatil : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Dogmatil ok, nothing to do")
 
@@ -114,8 +114,8 @@ def callLabo2(self):
             print("+ Entumine was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Entumine : (add result of dosage here)\n")
-                    file2.write("# Entumine : (add result of dosage here)\n")
+                    file.write("# Entumine : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Entumine : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Entumine ok, nothing to do")
 
@@ -124,8 +124,8 @@ def callLabo2(self):
             print("+ Fluanxol was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Fluanxol : (add result of dosage here)\n")
-                    file2.write("# Fluanxol : (add result of dosage here)\n")
+                    file.write("# Fluanxol : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Fluanxol : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Fluanxol ok, nothing to do")
 
@@ -134,8 +134,8 @@ def callLabo2(self):
             print("+ Haldol was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Haldol : (add result of dosage here)\n")
-                    file2.write("# Haldol : (add result of dosage here)\n")
+                    file.write("# Haldol : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Haldol : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Haldol ok, nothing to do")
 
@@ -144,8 +144,8 @@ def callLabo2(self):
             print("+ Invega was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Invega : (add result of dosage here)\n")
-                    file2.write("# Invega : (add result of dosage here)\n")
+                    file.write("# Invega : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Invega : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Invega ok, nothing to do")
 
@@ -154,8 +154,8 @@ def callLabo2(self):
             print("+ Nozinan was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Nozinan : (add result of dosage here)\n")
-                    file2.write("# Nozinan : (add result of dosage here)\n")
+                    file.write("# Nozinan : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Nozinan : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Nozinan ok, nothing to do")
 
@@ -164,8 +164,8 @@ def callLabo2(self):
             print("+ Prazine was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Prazine : (add result of dosage here)\n")
-                    file2.write("# Prazine : (add result of dosage here)\n")
+                    file.write("# Prazine : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Prazine : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Prazine ok, nothing to do")
 
@@ -174,8 +174,8 @@ def callLabo2(self):
             print("+ Quetiapine was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Quetiapine : (add result of dosage here)\n")
-                    file2.write("# Quetiapine : (add result of dosage here)\n")
+                    file.write("# Quetiapine : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Quetiapine : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Quetiapine ok, nothing to do")
 
@@ -184,8 +184,8 @@ def callLabo2(self):
             print("+ Risperdal was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Risperdal : (add result of dosage here)\n")
-                    file2.write("# Risperdal : (add result of dosage here)\n")
+                    file.write("# Risperdal : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Risperdal : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Risperdal ok, nothing to do")
 
@@ -194,8 +194,8 @@ def callLabo2(self):
             print("+ Serdolect was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Serdolect : (add result of dosage here)\n")
-                    file2.write("# Serdolect : (add result of dosage here)\n")
+                    file.write("# Serdolect : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Serdolect : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Serdolect ok, nothing to do")
 
@@ -204,8 +204,8 @@ def callLabo2(self):
             print("+ Solian was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Solian : (add result of dosage here)\n")
-                    file2.write("# Solian : (add result of dosage here)\n")
+                    file.write("# Solian : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Solian : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Solian ok, nothing to do")
 
@@ -214,8 +214,8 @@ def callLabo2(self):
             print("+ Tiapridal was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Tiapridal : (add result of dosage here)\n")
-                    file2.write("# Tiapridal : (add result of dosage here)\n")
+                    file.write("# Tiapridal : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Tiapridal : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Tiapridal ok, nothing to do")
 
@@ -224,8 +224,8 @@ def callLabo2(self):
             print("+ Truxal was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Truxal : (add result of dosage here)\n")
-                    file2.write("# Truxal : (add result of dosage here)\n")
+                    file.write("# Truxal : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Truxal : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Truxal ok, nothing to do")
 
@@ -234,8 +234,8 @@ def callLabo2(self):
             print("+ Zyprexa was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Zyprexa : (add result of dosage here)\n")
-                    file2.write("# Zyprexa : (add result of dosage here)\n")
+                    file.write("# Zyprexa : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Zyprexa : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Zyprexa ok, nothing to do")
 
@@ -244,8 +244,8 @@ def callLabo2(self):
             print("+ Briviact was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Briviact : (add result of dosage here)\n")
-                    file2.write("# Briviact : (add result of dosage here)\n")
+                    file.write("# Briviact : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Briviact : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Briviact ok, nothing to do")
 
@@ -254,8 +254,8 @@ def callLabo2(self):
             print("+ Carbamazepine was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Carbamazepine : (add result of dosage here)\n")
-                    file2.write("# Carbamazepine : (add result of dosage here)\n")
+                    file.write("# Carbamazepine : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Carbamazepine : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Carbamazepine ok, nothing to do")
 
@@ -264,8 +264,8 @@ def callLabo2(self):
             print("+ Depakine was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Depakine : (add result of dosage here)\n")
-                    file2.write("# Depakine : (add result of dosage here)\n")
+                    file.write("# Depakine : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Depakine : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Depakine ok, nothing to do")
 
@@ -274,8 +274,8 @@ def callLabo2(self):
             print("+ Ethosuximide was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Ethosuximide : (add result of dosage here)\n")
-                    file2.write("# Ethosuximide : (add result of dosage here)\n")
+                    file.write("# Ethosuximide : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Ethosuximide : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Ethosuximide ok, nothing to do")
 
@@ -284,8 +284,8 @@ def callLabo2(self):
             print("+ Fycompa was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Fycompa : (add result of dosage here)\n")
-                    file2.write("# Fycompa : (add result of dosage here)\n")
+                    file.write("# Fycompa : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Fycompa : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Fycompa ok, nothing to do")
 
@@ -294,8 +294,8 @@ def callLabo2(self):
             print("+ Gabitril was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Gabitril : (add result of dosage here)\n")
-                    file2.write("# Gabitril : (add result of dosage here)\n")
+                    file.write("# Gabitril : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Gabitril : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Gabitril ok, nothing to do")
 
@@ -304,8 +304,8 @@ def callLabo2(self):
             print("+ Inovelon was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Inovelon : (add result of dosage here)\n")
-                    file2.write("# Inovelon : (add result of dosage here)\n")
+                    file.write("# Inovelon : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Inovelon : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Inovelon ok, nothing to do")
 
@@ -314,8 +314,8 @@ def callLabo2(self):
             print("+ Keppra was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Keppra : (add result of dosage here)\n")
-                    file2.write("# Keppra : (add result of dosage here)\n")
+                    file.write("# Keppra : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Keppra : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Keppra ok, nothing to do")
 
@@ -324,8 +324,8 @@ def callLabo2(self):
             print("+ Lamictal was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Lamictal : (add result of dosage here)\n")
-                    file2.write("# Lamictal : (add result of dosage here)\n")
+                    file.write("# Lamictal : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Lamictal : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Lamictal ok, nothing to do")
 
@@ -334,8 +334,8 @@ def callLabo2(self):
             print("+ Lyrica was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Lyrica : (add result of dosage here)\n")
-                    file2.write("# Lyrica : (add result of dosage here)\n")
+                    file.write("# Lyrica : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Lyrica : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Lyrica ok, nothing to do")
 
@@ -344,8 +344,8 @@ def callLabo2(self):
             print("+ Myzoline was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Myzoline : (add result of dosage here)\n")
-                    file2.write("# Myzoline : (add result of dosage here)\n")
+                    file.write("# Myzoline : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Myzoline : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Myzoline ok, nothing to do")
 
@@ -354,8 +354,8 @@ def callLabo2(self):
             print("+ Neurontin was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Neurontin : (add result of dosage here)\n")
-                    file2.write("# Neurontin : (add result of dosage here)\n")
+                    file.write("# Neurontin : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Neurontin : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Neurontin ok, nothing to do")
 
@@ -364,8 +364,8 @@ def callLabo2(self):
             print("+ Phenobarbital was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Phenobarbital : (add result of dosage here)\n")
-                    file2.write("# Phenobarbital : (add result of dosage here)\n")
+                    file.write("# Phenobarbital : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Phenobarbital : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Phenobarbital ok, nothing to do")
 
@@ -374,8 +374,8 @@ def callLabo2(self):
             print("+ Phenytoine was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Phenytoine : (add result of dosage here)\n")
-                    file2.write("# Phenytoine : (add result of dosage here)\n")
+                    file.write("# Phenytoine : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Phenytoine : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Phenytoine ok, nothing to do")
 
@@ -384,8 +384,8 @@ def callLabo2(self):
             print("+ Sabril was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Sabril : (add result of dosage here)\n")
-                    file2.write("# Sabril : (add result of dosage here)\n")
+                    file.write("# Sabril : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Sabril : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Sabril ok, nothing to do")
 
@@ -394,8 +394,8 @@ def callLabo2(self):
             print("+ Taloxa was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Taloxa : (add result of dosage here)\n")
-                    file2.write("# Taloxa : (add result of dosage here)\n")
+                    file.write("# Taloxa : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Taloxa : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Taloxa ok, nothing to do")
 
@@ -404,8 +404,8 @@ def callLabo2(self):
             print("+ Topamax was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Topamax : (add result of dosage here)\n")
-                    file2.write("# Topamax : (add result of dosage here)\n")
+                    file.write("# Topamax : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Topamax : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Topamax ok, nothing to do")
 
@@ -414,8 +414,8 @@ def callLabo2(self):
             print("+ Trileptal was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Trileptal : (add result of dosage here)\n")
-                    file2.write("# Trileptal : (add result of dosage here)\n")
+                    file.write("# Trileptal : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Trileptal : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Trileptal ok, nothing to do")
 
@@ -424,8 +424,8 @@ def callLabo2(self):
             print("+ Trobalt was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Trobalt : (add result of dosage here)\n")
-                    file2.write("# Trobalt : (add result of dosage here)\n")
+                    file.write("# Trobalt : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Trobalt : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Trobalt ok, nothing to do")
 
@@ -434,8 +434,8 @@ def callLabo2(self):
             print("+ Vimpat was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Vimpat : (add result of dosage here)\n")
-                    file2.write("# Vimpat : (add result of dosage here)\n")
+                    file.write("# Vimpat : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Vimpat : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Vimpat ok, nothing to do")
 
@@ -444,8 +444,8 @@ def callLabo2(self):
             print("+ Zonegran was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Zonegran : (add result of dosage here)\n")
-                    file2.write("# Zonegran : (add result of dosage here)\n")
+                    file.write("# Zonegran : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Zonegran : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Zonegran ok, nothing to do")
 
@@ -454,8 +454,8 @@ def callLabo2(self):
             print("+ Anafranil was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Anafranil : (add result of dosage here)\n")
-                    file2.write("# Anafranil : (add result of dosage here)\n")
+                    file.write("# Anafranil : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Anafranil : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Anafranil ok, nothing to do")
 
@@ -464,8 +464,8 @@ def callLabo2(self):
             print("+ Citalopram was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Citalopram : (add result of dosage here)\n")
-                    file2.write("# Citalopram : (add result of dosage here)\n")
+                    file.write("# Citalopram : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Citalopram : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Citalopram ok, nothing to do")
 
@@ -474,8 +474,8 @@ def callLabo2(self):
             print("+ Cipralex was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Cipralex : (add result of dosage here)\n")
-                    file2.write("# Cipralex : (add result of dosage here)\n")
+                    file.write("# Cipralex : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Cipralex : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Cipralex ok, nothing to do")
 
@@ -484,8 +484,8 @@ def callLabo2(self):
             print("+ Cymbalta was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Cymbalta : (add result of dosage here)\n")
-                    file2.write("# Cymbalta : (add result of dosage here)\n")
+                    file.write("# Cymbalta : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Cymbalta : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Cymbalta ok, nothing to do")
 
@@ -494,8 +494,8 @@ def callLabo2(self):
             print("+ Deroxat was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Deroxat : (add result of dosage here)\n")
-                    file2.write("# Deroxat : (add result of dosage here)\n")
+                    file.write("# Deroxat : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Deroxat : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Deroxat ok, nothing to do")
 
@@ -504,8 +504,8 @@ def callLabo2(self):
             print("+ Effexor was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Effexor : (add result of dosage here)\n")
-                    file2.write("# Effexor : (add result of dosage here)\n")
+                    file.write("# Effexor : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Effexor : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Effexor ok, nothing to do")
 
@@ -514,8 +514,8 @@ def callLabo2(self):
             print("+ Floxifral was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Floxifral : (add result of dosage here)\n")
-                    file2.write("# Floxifral : (add result of dosage here)\n")
+                    file.write("# Floxifral : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Floxifral : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Floxifral ok, nothing to do")
 
@@ -524,8 +524,8 @@ def callLabo2(self):
             print("+ Fluctine was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Fluctine : (add result of dosage here)\n")
-                    file2.write("# Fluctine : (add result of dosage here)\n")
+                    file.write("# Fluctine : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Fluctine : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Fluctine ok, nothing to do")
 
@@ -534,8 +534,8 @@ def callLabo2(self):
             print("+ Ludiomil was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Ludiomil : (add result of dosage here)\n")
-                    file2.write("# Ludiomil : (add result of dosage here)\n")
+                    file.write("# Ludiomil : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Ludiomil : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Ludiomil ok, nothing to do")
 
@@ -544,8 +544,8 @@ def callLabo2(self):
             print("+ Remeron was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Remeron : (add result of dosage here)\n")
-                    file2.write("# Remeron : (add result of dosage here)\n")
+                    file.write("# Remeron : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Remeron : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Remeron ok, nothing to do")
 
@@ -554,8 +554,8 @@ def callLabo2(self):
             print("+ Saroten was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Saroten : (add result of dosage here)\n")
-                    file2.write("# Saroten : (add result of dosage here)\n")
+                    file.write("# Saroten : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Saroten : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Saroten ok, nothing to do")
 
@@ -564,8 +564,8 @@ def callLabo2(self):
             print("+ Sertraline was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Sertraline : (add result of dosage here)\n")
-                    file2.write("# Sertraline : (add result of dosage here)\n")
+                    file.write("# Sertraline : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Sertraline : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Sertraline ok, nothing to do")
 
@@ -574,8 +574,8 @@ def callLabo2(self):
             print("+ Surmontil was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Surmontil : (add result of dosage here)\n")
-                    file2.write("# Surmontil : (add result of dosage here)\n")
+                    file.write("# Surmontil : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Surmontil : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Surmontil ok, nothing to do")
 
@@ -584,8 +584,8 @@ def callLabo2(self):
             print("+ Wellbutrin was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Wellbutrin : (add result of dosage here)\n")
-                    file2.write("# Wellbutrin : (add result of dosage here)\n")
+                    file.write("# Wellbutrin : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Wellbutrin : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Wellbutrin ok, nothing to do")
 
@@ -594,8 +594,8 @@ def callLabo2(self):
             print("+ Lithium was checked !")
             with open('./14besoins/doc_suivi2/patient2_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result2.txt', 'a+') as file2:
-                    file.write("# Lithium : (add result of dosage here)\n")
-                    file2.write("# Lithium : (add result of dosage here)\n")
+                    file.write("# Lithium : " + time.strftime("%d/%m/%Y") + " checked\n")
+                    file2.write("# Lithium : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Lithium ok, nothing to do")
 

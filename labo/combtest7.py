@@ -27,10 +27,10 @@ def saveMyButt():
 def recordOption():
     print("+ Date : " + time.strftime("%d/%m/%Y"))
     print("+ Nom du patient : ", textName.get())
-    with open('./14besoins/doc_suivi7/main_14b.txt', 'a+') as file:
+    with open('./14besoins/doc_suivi7/patient7_14b.txt', 'a+') as file:
         with open('./labo/doc_labo/result7.txt', 'a+') as file_2:
             file.write("\n\n***************************************************************************\n")
-            file.write("\nDate : ")
+            file.write("Date : ")
             file.write(time.strftime("%d/%m/%Y") + '\n')
             file.write("Patient name : ")
             file.write(textName.get())

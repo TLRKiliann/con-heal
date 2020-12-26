@@ -608,7 +608,7 @@ def callLabo17(self):
         messagebox.showinfo("Confirmation", "Record confirmed and finished !")
 
     def comburTips():
-        subprocess.call('./labo/combtest.py')
+        subprocess.run('./labo/combtest17.py', check=True)
 
     def awayOut():
         try:
@@ -1104,12 +1104,19 @@ def callLabo17(self):
     self.C53 = self.can.create_window(self.x57, self.y57,
         window = self.C53)
 
+    self.x58, self.y58 = 1117, 530
+    self.buttonstix = Button(self.can, text='Stix', width=10, bd=3,
+        fg='cyan', bg='RoyalBlue3', activebackground='pale turquoise',
+        highlightbackground='cyan', command=comburTips)
+    self.buttonstix = self.can.create_window(self.x58, self.y58,
+        window = self.buttonstix)
+
     # Printable
-    self.x58, self.y58 = 298, 528
+    self.x59, self.y59 = 298, 528
     self.labelresult4 = Label(self.can, text='--- Printable ---', 
         font="Times 14 bold", width=62,
         height=1, bg='RoyalBlue3', fg='white')
-    self.labelresult4 = self.can.create_window(self.x58, self.y58,
+    self.labelresult4 = self.can.create_window(self.x59, self.y59,
         window = self.labelresult4)
 
     def sheetLabo():
@@ -1130,14 +1137,14 @@ def callLabo17(self):
             os.startfile('./labo/labosheet.pdf') # Windows
 
     # Buttons printable sheet
-    self.x59, self.y59 = 140, 620
+    self.x60, self.y60 = 140, 620
     self.buttonSheet = Button(self.can,
         text="Complete lab sheet", width=15,
         fg='cyan', bg='navy',
         activebackground='pale turquoise',
         command=sheetLabo)
-    self.buttonSheet = self.can.create_window(self.x59,
-        self.y59, window = self.buttonSheet)
+    self.buttonSheet = self.can.create_window(self.x60,
+        self.y60, window = self.buttonSheet)
 
     def sheetMicrobio():
         """
@@ -1156,14 +1163,14 @@ def callLabo17(self):
         else:
             os.startfile('./labo/microbio.pdf') # Windows
 
-    self.x60, self.y60 = 460, 620
+    self.x61, self.y61 = 460, 620
     self.buttonMicro = Button(self.can,
         text="Microbiology sheet", width=15,
         fg='cyan', bg='navy',
         activebackground='pale turquoise',
         command=sheetMicrobio)
-    self.buttonMicro = self.can.create_window(self.x60,
-        self.y60, window = self.buttonMicro)
+    self.buttonMicro = self.can.create_window(self.x61,
+        self.y61, window = self.buttonMicro)
 
     def printLabo():
         """
@@ -1178,35 +1185,35 @@ def callLabo17(self):
         pass
 
     # Lithium
-    self.x61, self.y61 = 790, 528
+    self.x62, self.y62 = 790, 528
     self.labelinfuri = Label(self.can, text='--- Lithium ---', 
         font="Times 14 bold", width=26,
         height=1, bg='RoyalBlue3', fg='white')
-    self.labelinfuri = self.can.create_window(self.x61, self.y61,
+    self.labelinfuri = self.can.create_window(self.x62, self.y62,
         window = self.labelinfuri)
 
-    self.x62, self.y62 = 790, 553
+    self.x63, self.y63 = 790, 553
     CheckVar54 = IntVar()
     self.C54 = Checkbutton(self.can, text="Lithiofor (lithium)", fg='navy', 
         bg='cyan', variable=CheckVar54, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
-    self.C54 = self.can.create_window(self.x62, self.y62,
+    self.C54 = self.can.create_window(self.x63, self.y63,
         window = self.C54)
 
     # Button save and quit
-    self.x63, self.y63 = 790, 620
+    self.x64, self.y64 = 790, 620
     self.buttonsave = Button(self.can, text="Save", width=10, bd=3,
         fg='yellow', bg='RoyalBlue3', activebackground='pale turquoise',
         highlightbackground='cyan', command=recordTofile)
-    self.buttonsave = self.can.create_window(self.x63, self.y63,
+    self.buttonsave = self.can.create_window(self.x64, self.y64,
         window = self.buttonsave)
 
-    self.x64, self.y64 = 1110, 620
+    self.x65, self.y65 = 1110, 620
     self.buttonquit = Button(self.can, text='Return to main menu', width=20, bd=3,
         fg='white', bg='RoyalBlue3', activebackground='pale turquoise',
         highlightbackground='cyan', command=awayOut)
-    self.buttonquit = self.can.create_window(self.x64, self.y64,
+    self.buttonquit = self.can.create_window(self.x65, self.y65,
         window = self.buttonquit)
 
     self.can.configure(scrollregion=self.can.bbox(ALL))

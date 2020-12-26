@@ -31,25 +31,25 @@ def writeData():
         print("File 'paramdata7.txt' created !")
     finally:
         with open('./param/paramdata7.txt', 'a+') as file:
-            file.write(str("Date: "))
+            file.write(str("Date : "))
             file.write(textDate.get() + '\n')
-            file.write(str("Heure: "))
+            file.write(str("Hour : "))
             file.write(textHour.get() + '\n')
-            file.write(str("Prenom et Nom: "))
+            file.write(str("Name and Surname : "))
             file.write(textName.get() + '\n')
-            file.write(str("TA: "))
+            file.write(str("TA : "))
             file.write(textTa.get() + " mmHg\n")
-            file.write(str("Puls: "))
+            file.write(str("Puls : "))
             file.write(textPuls.get() + "/min\n")
-            file.write(str("SaO2: "))
+            file.write(str("SaO2 : "))
             file.write(textSa.get() + "%\n")
-            file.write(str("FR: "))
+            file.write(str("FR : "))
             file.write(textFr.get() + "/min\n")
-            file.write(str("Temperature: "))
+            file.write(str("Temperature : "))
             file.write(textTemp.get() + "°C\n")
-            file.write(str("Glycemie: "))
+            file.write(str("Glycemie : "))
             file.write(textHgt.get() + " mmol/l\n")
-            file.write(str("Douleurs: "))
+            file.write(str("Douleurs (Pain) : "))
             file.write(textDlrs.get() +"/10\n\n")
 
     try:
@@ -395,9 +395,9 @@ def delTA():
                 data = json.dump(data, file, indent=4)
             label['text'] = "Last value of 'tensor.json' has been deleted !"
             print("Last value of 'tensor.json' has been deleted !")
-    except (FileNotFoundError, IndexError) as out_err:
+    except (FileNotFoundError, IndexError) as out_ta:
         label['text'] = "Sorry, file asked not exist !"
-        print('+ Sorry, file asked not exist !', out_err)
+        print('+ Sorry, file asked not exist !', out_ta)
 
 def delPuls():
     """
@@ -416,9 +416,9 @@ def delPuls():
                 data = json.dump(data, file, indent=4)
             label['text'] = "Last value of 'puls.json' has been deleted !"
             print("Last value of 'puls.json' has been deleted !")
-    except FileNotFoundError:
+    except (FileNotFoundError, IndexError) as out_puls:
         label['text'] = "Sorry, file asked not exist !"
-        print('+ Sorry, file asked not exist !')
+        print('+ Sorry, asked not exist !', out_puls)
 
 def delSat():
     """
@@ -437,9 +437,9 @@ def delSat():
                 data = json.dump(data, file, indent=4)
             label['text'] = "Last value of 'sat.json' has been deleted !"
             print("Last value of 'sat.json' has been deleted !")
-    except FileNotFoundError:
+    except (FileNotFoundError, IndexError) as out_sat:
         label['text'] = "Sorry, file asked not exist !"
-        print('+ Sorry, file asked not exist !')
+        print('+ Sorry, file asked not exist !', out_sat)
 
 def delFreq():
     """
@@ -458,9 +458,9 @@ def delFreq():
                 data = json.dump(data, file, indent=4)
             label['text'] = "Last value of 'freq.json' has been deleted !"
             print("Last value of 'freq.json' has been deleted !")
-    except FileNotFoundError:
+    except (FileNotFoundError, IndexError) as out_freq:
         label['text'] = "Sorry, file asked not exist !"
-        print('+ Sorry, file asked not exist !')
+        print('+ Sorry, file asked not exist !', out_freq)
 
 def delTemp():
     """
@@ -479,9 +479,9 @@ def delTemp():
                 data = json.dump(data, file, indent=4)
             label['text'] = "Last value of 'temp.json' has been deleted !"
             print("Last value of 'temp.json' has been deleted !")
-    except FileNotFoundError:
+    except (FileNotFoundError, IndexError) as out_temp:
         label['text'] = "Sorry, file asked not exist !"
-        print('+ Sorry, file asked not exist !')
+        print('+ Sorry, file asked not exist !', out_temp)
 
 def delGly():
     """
@@ -500,9 +500,9 @@ def delGly():
                 data = json.dump(data, file, indent=4)
             label['text'] = "Last value of 'gly.json' has been deleted !"
             print("Last value of 'gly.json' has been deleted !")
-    except FileNotFoundError:
+    except (FileNotFoundError, IndexError) as out_gly:
         label['text'] = "Sorry, file asked not exist !"
-        print('+ Sorry, file asked not exist !')
+        print('+ Sorry, file asked not exist !', out_gly)
 
 def delDlr():
     """
@@ -521,9 +521,9 @@ def delDlr():
                 data = json.dump(data, file, indent=4)
             label['text'] = "Last value of 'dlr.json' has been deleted !"
             print("Last value of 'dlr.json' has been deleted !")
-    except FileNotFoundError:
+    except (FileNotFoundError, IndexError) as out_dlr:
         label['text'] = "Sorry, file asked not exist !"
-        print('+ Sorry, file asked not exist !')
+        print('+ Sorry, file asked not exist !', out_dlr)
 
 def delEvery():
     """
@@ -578,35 +578,35 @@ label = Label(gui, text='Date : ', font=('Times', 14),
     fg='white', bg='DodgerBlue2', width=15, anchor='e')
 label.grid(row=1, column=1)
 
-label = Label(gui, text='Heure : ', font=('Times', 14),
+label = Label(gui, text='Hour : ', font=('Times', 14),
     fg='white', bg='DodgerBlue2', width=15, anchor='e')
 label.grid(row=2, column=1)
 
-label1 = Label(gui, text='Entrer le Nom : ', font=('Times', 14),
+label1 = Label(gui, text='Enter Name : ', font=('Times', 14),
     fg='white', bg='DodgerBlue2', width=15, anchor='e')
 label1.grid(row=3, column=1)
 
-label2 = Label(gui, text='Entrer la TA : ', font=('Times', 14),
+label2 = Label(gui, text='Enter TA : ', font=('Times', 14),
     fg='white', bg='DodgerBlue2', width=15, anchor='e')
 label2.grid(row=4, column=1)
 
-label3 = Label(gui, text='Entrer les Puls : ', font=('Times', 14),
+label3 = Label(gui, text='Enter Puls : ', font=('Times', 14),
     fg='white', bg='DodgerBlue2', width=15, anchor='e')
 label3.grid(row=5, column=1)
 
-label4 = Label(gui, text='Entrer la SaO2 : ', font=('Times', 14),
+label4 = Label(gui, text='Enter SaO2 : ', font=('Times', 14),
     fg='white', bg='DodgerBlue2', width=15, anchor='e')
 label4.grid(row=6, column=1)
 
-label5 = Label(gui, text='Entrer la FR : ', font=('Times', 14),
+label5 = Label(gui, text='Enter FR : ', font=('Times', 14),
     fg='white', bg='DodgerBlue2', width=15, anchor='e')
 label5.grid(row=7, column=1)
 
-label6 = Label(gui, text='Entrer la T°C : ', font=('Times', 14),
+label6 = Label(gui, text='Enter T°C : ', font=('Times', 14),
     fg='white', bg='DodgerBlue2', width=15, anchor='e')
 label6.grid(row=8, column=1)
 
-label7 = Label(gui, text='Entrer la Hgt : ', font=('Times', 14),
+label7 = Label(gui, text='Enter Hgt : ', font=('Times', 14),
     fg='white', bg='DodgerBlue2', width=15, anchor='e')
 label7.grid(row=9, column=1)
 

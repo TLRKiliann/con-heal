@@ -1,0 +1,33 @@
+Date : 26/12/2020
+Hour : 11:35:48
+Name and Surname : Julian Assange
+TA : 120b80 mmHg
+Puls : 89/min
+SaO2 : %
+FR : /min
+Temperature : °C
+Glycemie :  mmol/l
+Douleurs (Pain) : /10
+
+Date : 26/12/2020
+Hour : 11:37:30
+Name and Surname : Julian Assange
+TA : 120/77 mmHg
+Puls : /min
+SaO2 : %
+FR : /min
+Temperature : °C
+Glycemie :  mmol/l
+Douleurs (Pain) : /10
+
+Date : 26/12/2020
+Hour : 11:37:30
+Name and Surname : Julian Assange
+TA : 120'77 mmHg
+Puls : /min
+SaO2 : %
+FR : /min
+Temperature : °C
+Glycemie :  mmol/l
+Douleurs (Pain) : /10
+

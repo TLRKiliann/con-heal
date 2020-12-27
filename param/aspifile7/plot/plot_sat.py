@@ -57,11 +57,12 @@ except ValueError as base_err:
 try:
     show_grid = True
     with plt.style.context('seaborn-darkgrid'):
-        plt.plot(list1, list2, 'o-', color='purple')
+        plt.plot(list1, list2, 'o-', color='blue')
         plt.ylabel('SaO2', fontsize=12)
         plt.xlabel('Dates', fontsize=12)
         plt.title('Relevé des SaO2 en % par date', fontsize=14)
         plt.xticks(rotation=45)
+        plt.legend(['SaO2 %'])
         plt.grid(show_grid)
         plt.show()
 except ValueError as shapes_err:

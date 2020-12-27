@@ -11,7 +11,6 @@ fen = Tk()
 fen.title("Vital parameters")
 fen.configure(background='DodgerBlue2')
 
-# To place side by side labelo + entrylab
 top = Frame(fen, bg='DodgerBlue2')
 bottom = Frame(fen, bg='DodgerBlue2')
 top.pack(side=TOP)
@@ -25,7 +24,6 @@ labelallergy = Label(fen, text="Allergy",
     font='Arial 18 bold', fg='coral', bg='DodgerBlue2')
 labelallergy.pack(padx=5, pady=5)
 
-# To read name in Entry widget
 with open('./newpatient/entryfile7.txt', 'r') as filename:
     line1 = filename.readline()
 
@@ -34,7 +32,6 @@ Entryname = Entry(fen, textvariable=text_name)
 text_name.set(line1[:-1])
 Entryname.pack(in_=top, side=LEFT, pady=20)
 
-# To read allergy in Entry widget
 with open('./allergy/allergyfile7.txt', 'r') as allerfile:
     line_a = allerfile.readline()
 

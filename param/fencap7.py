@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
+
 """
     this script is made to develop
     other butons with functions
 """
+
 
 import tkinter
 from tkinter import *
@@ -565,11 +567,10 @@ with open('./newpatient/entryfile7.txt', 'r') as filename:
     line1=filename.readline()
 
 gui = Tk()
-gui.title("Vital Parameters")
+gui.title("Time-Track")
 gui.configure(background='DodgerBlue2')
 gui.geometry('650x600')
 
-# Labels
 labelTitle = Label(gui, text="Vital Parameters", 
     font=('Times 22 bold'), bg='DodgerBlue2', fg='white')
 labelTitle.grid(row=0, column=1, columnspan=4, pady=10)
@@ -614,21 +615,23 @@ label8 = Label(gui, text='Eva dlrs/10 : ', font=('Times', 14),
     fg='white', bg='DodgerBlue2', width=15, anchor='e')
 label8.grid(row=10, column=1)
 
-# Entry
 time_string = IntVar()
-textDate = Entry(gui, textvariable=time_string, highlightbackground='gray', bd=4)
+textDate = Entry(gui, textvariable=time_string,
+    highlightbackground='gray', bd=4)
 time_string.set(time.strftime("%d/%m/%Y"))
 textDate.grid(row=1, column=2)
 # Directly up to function
 updateData()
 
 time_Htring = IntVar()
-textHour = Entry(gui, textvariable=time_Htring, highlightbackground='gray', bd=4)
+textHour = Entry(gui, textvariable=time_Htring,
+    highlightbackground='gray', bd=4)
 time_Htring.set(time.strftime("%H:%M:%S"))
 textHour.grid(row=2, column=2)
 
 name_text = StringVar()
-textName = Entry(gui, textvariable=name_text, highlightbackground='gray', bd=4)
+textName = Entry(gui, textvariable=name_text,
+    highlightbackground='gray', bd=4)
 name_text.set(line1[:-1])
 textName.grid(row=3, column=2)
 
@@ -654,37 +657,38 @@ textDlrs = Entry(gui, highlightbackground='gray', bd=4)
 textDlrs.grid(row=10, column=2)
 
 button2Write = Button(gui)
-button2Write.config(text='Quit', width=15, bg='lightblue', fg='navy',
-    activebackground='pale turquoise', activeforeground='gray40',
+button2Write.config(text='Quit', width=15,
+    fg='navy', bg='lightblue',
+    activebackground='pale turquoise',
+    activeforeground='gray40',
     command=quit)
 button2Write.grid(row=1, column=3)
 
 buttonDel = Button(gui)
-buttonDel.config(text='Reinitialize ALL !!!', width=15,
-    bg='lightblue', fg='red', activebackground='red',
+buttonDel.config(text='Reinitialize All Data', width=15,
+    bg='coral', fg='yellow', activebackground='red',
     activeforeground='white', command=delEvery)
 buttonDel.grid(row=1, column=4)
 
 buttonWrite = Button(gui)
 buttonWrite.config(text='CAPTURE DATA', width=33,
-    fg='white', bg='RoyalBlue2',
+    fg='navy', bg='lightblue',
     activeforeground='gray40',
     activebackground='pale turquoise', command=writeData)
 buttonWrite.grid(row=2, column=3, columnspan=4)
 
 buttonMainlec = Button(gui)
-buttonMainlec.config(text='Read Main file', width=15, 
+buttonMainlec.config(text='Read All Data', width=15, 
     bg='lightblue', fg='navy', activebackground='pale turquoise',
     activeforeground='gray40', command=mainRead)
 buttonMainlec.grid(row=3, column=3)
 
 buttonDel = Button(gui)
-buttonDel.config(text='Delete Main', width=15, 
+buttonDel.config(text='Delete File of Data', width=15, 
     bg='coral', fg='yellow', activebackground='red',
     activeforeground='white', command=delMain)
 buttonDel.grid(row=3, column=4)
 
-# Buttons
 button3Write = Button(gui)
 button3Write.config(text='Graph TA', width=15, 
     bg='lightblue', fg='navy', activebackground='pale turquoise',

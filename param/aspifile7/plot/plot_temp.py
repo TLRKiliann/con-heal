@@ -61,6 +61,7 @@ try:
         plt.xlabel('Dates', fontsize=12)
         plt.title('Relevé des températures par date', fontsize=14)
         plt.xticks(rotation=45)
+        plt.legend(['Temperatures C°'])
         plt.grid(show_grid)
         plt.show()
 except ValueError as shapes_err:

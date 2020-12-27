@@ -64,7 +64,6 @@ print("\nListe des tensions :")
 print("------------------------")
 print(list2)
 
-#list3 = [int(list2) for list2 in list2]
 try:
     list2 = list(map(float, list2))
 except ValueError as err_val:
@@ -73,11 +72,12 @@ except ValueError as err_val:
 try:
     show_grid = True
     with plt.style.context('seaborn-darkgrid'):
-        plt.plot(list1, list2, 'o-', color='purple')
+        plt.plot(list1, list2, 'o-', color='red')
         plt.ylabel('TA', fontsize=12)
         plt.xlabel('Dates', fontsize=12)
         plt.title('Relevé des tensions (TA) par date', fontsize=14)
         plt.xticks(rotation=45)
+        plt.legend(['TA (blood pressure)'])
         plt.grid(show_grid)
         plt.show()
 except ValueError as val:

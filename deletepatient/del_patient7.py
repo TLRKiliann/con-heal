@@ -222,4 +222,5 @@ def delFuncFile7():
         print("Not found", nf_oldfile6)
 
     print("!!! All files have been deleted !!!")
+    print("Backup in old was made !")
     

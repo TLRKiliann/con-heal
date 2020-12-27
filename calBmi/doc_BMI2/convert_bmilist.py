@@ -84,7 +84,7 @@ with plt.style.context('dark_background'):
     axes.xaxis.set_major_locator(locator)
     ax = plt.gcf().axes[0]
     ax.xaxis.set_major_formatter(formatter)
-    min_date = date2num(datetime.datetime.strptime("01/12/2020", "%d/%m/%Y"))
+    min_date = date2num(datetime.datetime.strptime("01/01/2020", "%d/%m/%Y"))
     max_date = date2num(datetime.datetime.strptime("31/12/2020", "%d/%m/%Y"))
     axes.set_xlim([min_date, max_date])
 

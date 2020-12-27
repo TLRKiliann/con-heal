@@ -7,14 +7,12 @@ from tkinter import messagebox
 import os
 import subprocess
 import json
-import matplotlib
+import datetime
 import matplotlib.pyplot as plt
 from matplotlib import dates
 from matplotlib.dates import date2num
 from matplotlib.dates import AutoDateLocator
-from matplotlib.dates import AutoDateFormatter
-import datetime
-import time
+#from matplotlib.dates import AutoDateFormatter
 
 
 file = open('./calBmi/doc_BMI2/file_kg.json')
@@ -82,11 +80,11 @@ list1 = list(map(str, list1))
 
 converted_dates = list(map(datetime.datetime.strptime, list1, len(list1)*['%d-%m-%Y']))
 x_axis = converted_dates
-formatter = dates.DateFormatter('%d-%m-%Y')
+formatter = dates.DateFormatter('%d/%m/%Y')
 y_axis = list2
 
 show_grid = True
-with plt.style.context('dark_background'):
+with plt.style.context('seaborn_darkgrid'):
     figure, axes = plt.subplots()
     # apply autoformatter for displaying of dates 
     locator = AutoDateLocator()
@@ -94,7 +92,7 @@ with plt.style.context('dark_background'):
     ax = plt.gcf().axes[0]
     ax.xaxis.set_major_formatter(formatter)
     #axes.xaxis.set_major_formatter(AutoDateFormatter(locator))
-    min_date = date2num(datetime.datetime.strptime('01-01-2020', "%d-%m-%Y"))
+    min_date = date2num(datetime.datetime.strptime('01-12-2020', "%d-%m-%Y"))
     max_date = date2num(datetime.datetime.strptime('31-12-2020', "%d-%m-%Y"))
     axes.set_xlim([min_date, max_date])
     #figure.autofmt_xdate()

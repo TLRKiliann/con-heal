@@ -550,17 +550,71 @@ def delEvery():
 def updateData():
     """
         Backup for paramdata7.txt/month
+        Think to change date (4 update)!
     """
-    listeDate = ["01/05/2020", "01/06/2020", "01/07/2020",
-    "01/08/2020", "01/09/2020", "01/10/2020",
-    "01/11/2020","01/12/2020"]
+    listeDate = ["27/12/2020", "01/01/2021", "01/02/2021", "01/03/2021",
+    "01/04/2021", "01/05/2021", "01/06/2021", "01/07/2021",
+    "01/08/2021", "01/09/2021", "01/10/2021", "01/11/2021",
+    "01/12/2021"]
     for i in listeDate:
         if textDate.get() == i:
-            print("Backup of file Main !")
-            shutil.copy('./param/paramdata7.txt', './Backup/Backupparamdata7.txt')
-            with open('./param/paramdata7.txt', 'w'): pass
+            print("Backup of file paramdata7.txt !")
+            shutil.copy('./param/paramdata7.txt', './Backup/Files7/Backup_param7.txt')
+            with open('./param/paramdata7.txt', 'w'):
+                pass
+            eraserParam()
         else:
             pass
+
+def eraserParam():
+    try:
+        if os.path.getsize('./param/aspifile7/temp.json'):
+            os.remove('./param/aspifile7/temp.json')
+            print("temp.json file removed")
+    except FileNotFoundError as err_temp:
+        print("Error file not found", err_temp)
+
+    try:
+        if os.path.getsize('./param/aspifile7/dlr.json'):
+            os.remove('./param/aspifile7/dlr.json')
+            print("dlr.json file removed")
+    except FileNotFoundError as err_dlr:
+        print("Error file not found", err_dlr)
+
+    try:
+        if os.path.getsize('./param/aspifile7/freq.json'):
+            os.remove('./param/aspifile7/freq.json')
+            print("freq.json file removed")
+    except FileNotFoundError as err_freq:
+        print("Error file not found", err_freq)
+
+    try:
+        if os.path.getsize('./param/aspifile7/gly.json'):
+            os.remove('./param/aspifile7/gly.json')
+            print("gly.json file removed")
+    except FileNotFoundError as err_gly:
+        print("Error file not found", err_gly)
+
+    try:
+        if os.path.getsize('./param/aspifile7/puls.json'):
+            os.remove('./param/aspifile7/puls.json')
+            print("puls.json file removed")
+    except FileNotFoundError as err_puls:
+        print("Error file not found", err_puls)
+
+    try:
+        if os.path.getsize('./param/aspifile7/sat.json'):
+            os.remove('./param/aspifile7/sat.json')
+            print("sat.json file removed")
+    except FileNotFoundError as err_sat:
+        print("Error file not found", err_sat)
+
+    try:
+        if os.path.getsize('./param/aspifile7/tensor.json'):
+            os.remove('./param/aspifile7/tensor.json')
+            print("tensor.json file removed")
+    except FileNotFoundError as err_ta:
+        print("Error file not found", err_ta)
 
 # To read name of patient for entry widget
 with open('./newpatient/entryfile7.txt', 'r') as filename:

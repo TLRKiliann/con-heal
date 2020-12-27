@@ -1,0 +1,11 @@
+Date : 27/12/2020
+Hour : 15:26:21
+Name and Surname : Julian Assange
+TA : 199/99 mmHg
+Puls : 88/min
+SaO2 : 99%
+FR : 99/min
+Temperature : 99°C
+Glycemie : 99 mmol/l
+Douleurs (Pain) : 9/10
+

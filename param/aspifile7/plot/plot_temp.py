@@ -79,8 +79,6 @@ try:
 except ValueError as err_val:
     print("+ False value (no: string or int value)", err_val)
 
-# Nouvelle partie qui merde totalement dates dans le désordre !!!
-# Avec 0 devant (agenda ex. help) + conversion de list1 en float !
 converted_dates = list(map(datetime.datetime.strptime, list1, len(list1)*['%d/%m/%Y']))
 x_axis = converted_dates
 formatter = dates.DateFormatter('%d/%m/%Y')

@@ -73,9 +73,9 @@ try:
     show_grid = True
     with plt.style.context('seaborn-darkgrid'):
         plt.plot(list1, list2, 'o-', color='red')
-        plt.ylabel('TA', fontsize=12)
-        plt.xlabel('Dates', fontsize=12)
-        plt.title('Relevé des tensions (TA) par date', fontsize=14)
+        plt.ylabel('TA', fontsize=14)
+        plt.xlabel('Dates', fontsize=14)
+        plt.title('Relevé des tensions (TA) par date', fontsize=16)
         plt.xticks(rotation=45)
         plt.legend(['TA (blood pressure)'])
         plt.grid(show_grid)

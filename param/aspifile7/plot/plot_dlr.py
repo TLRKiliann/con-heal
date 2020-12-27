@@ -59,9 +59,9 @@ try:
     show_grid = True
     with plt.style.context('seaborn-darkgrid'):
         plt.plot(list1, list2, 'o--', color='purple')
-        plt.ylabel('Dlrs', fontsize=12)
-        plt.xlabel('Dates', fontsize=12)
-        plt.title('Pain scale (dlr/10) by date', fontsize=14)
+        plt.ylabel('Dlrs', fontsize=14)
+        plt.xlabel('Dates', fontsize=14)
+        plt.title('Pain scale (dlr/10) by date', fontsize=16)
         plt.xticks(rotation=45)
         plt.legend(['Douleurs (Pain)'])
         plt.grid(show_grid)

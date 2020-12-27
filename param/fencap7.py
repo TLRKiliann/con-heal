@@ -260,7 +260,7 @@ def writeData():
         "\nAll data have been added in json files !")
 
 def mainRead():
-    subprocess.run('./param/main_read7.py')
+    subprocess.run('./param/main_read7.py', check=True)
 
 def appelTens():
     """
@@ -269,7 +269,7 @@ def appelTens():
     """
     try:
         if os.path.getsize('./param/aspifile7/tensor.json'):
-            subprocess.run('./param/aspifile7/aspidata.py')
+            subprocess.run('./param/aspifile7/aspidata.py', check=True)
             label['text'] = ("Date: " + textDate.get() +
                 "\nNom: " + textName.get() + 
                 "\nTension: " + textTa.get())
@@ -284,7 +284,7 @@ def appelPuls():
     """
     try:
         if os.path.getsize('./param/aspifile7/puls.json'):
-            subprocess.run('./param/aspifile7/aspipuls.py')
+            subprocess.run('./param/aspifile7/aspipuls.py', check=True)
             label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
                 "\nPulsations: " + textPuls.get())
     except FileNotFoundError as errorgraph2:
@@ -298,7 +298,7 @@ def appelSat():
     """
     try:
         if os.path.getsize('./param/aspifile7/sat.json'):
-            subprocess.run('./param/aspifile7/aspisat.py')
+            subprocess.run('./param/aspifile7/aspisat.py', check=True)
             label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
                 "\nSaO2: " + textSa.get())
     except FileNotFoundError as errorgraph3:
@@ -312,7 +312,7 @@ def appelFreq():
     """
     try:
         if os.path.getsize('./param/aspifile7/freq.json'):
-            subprocess.run('./param/aspifile7/aspifreq.py')
+            subprocess.run('./param/aspifile7/aspifreq.py', check=True)
             label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
                 "\nFrequ. resp.: " + textFr.get())
     except FileNotFoundError as errorgraph4:
@@ -326,7 +326,7 @@ def appelTemp():
     """
     try:
         if os.path.getsize('./param/aspifile7/temp.json'):
-            subprocess.run('./param/aspifile7/aspitemp.py')
+            subprocess.run('./param/aspifile7/aspitemp.py', check=True)
             label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
                 "\nTemperature: " + textTemp.get())
     except FileNotFoundError as errorgraph5:
@@ -340,7 +340,7 @@ def appelGly():
     """
     try:
         if os.path.getsize('./param/aspifile7/gly.json'):
-            subprocess.run('./param/aspifile7/aspigly.py')
+            subprocess.run('./param/aspifile7/aspigly.py', check=True)
             label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
                 "\nGlycémie: " + textHgt.get())
     except FileNotFoundError as errorgraph6:
@@ -354,7 +354,7 @@ def appelDlr():
     """
     try:
         if os.path.getsize('./param/aspifile7/dlr.json'):
-            subprocess.run('./param/aspifile7/aspidlr.py')
+            subprocess.run('./param/aspifile7/aspidlr.py', check=True)
             label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
                 "\nDouleurs: " + textDlrs.get())
     except FileNotFoundError as errorgraph7:

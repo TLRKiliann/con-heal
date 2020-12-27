@@ -58,9 +58,9 @@ try:
     show_grid = True
     with plt.style.context('seaborn-darkgrid'):
         plt.plot(list1, list2, 'o--', color='red')
-        plt.ylabel('Puls/min', fontsize=12)
-        plt.xlabel('Dates', fontsize=12)
-        plt.title('Relevé des puls/min par date', fontsize=14)
+        plt.ylabel('Puls/min', fontsize=14)
+        plt.xlabel('Dates', fontsize=14)
+        plt.title('Relevé des puls/min par date', fontsize=16)
         plt.xticks(rotation=45)
         plt.legend(['Pulsations/min'])
         plt.grid(show_grid)

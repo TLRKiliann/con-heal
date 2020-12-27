@@ -552,21 +552,39 @@ def updateData():
         Backup for paramdata7.txt/month
         Think to change date (4 update)!
     """
-    listeDate = ["24/12/2020", "01/01/2021", "01/02/2021", "01/03/2021",
-    "01/04/2021", "01/05/2021", "01/06/2021", "01/07/2021",
-    "01/08/2021", "01/09/2021", "01/10/2021", "01/11/2021",
-    "01/12/2021"]
-    for i in listeDate:
-        if textDate.get() == i:
-            print("Backup of file paramdata7.txt !")
-            shutil.copy('./param/paramdata7.txt', './Backup/Files7/Backup_param7.txt')
-            with open('./param/paramdata7.txt', 'w'):
-                pass
-            eraserParam()
-        else:
-            pass
+    listeDate = []
+    with open("./param/updateparam7.json") as file_r:
+        listeDate = json.load(file_r)
+        for index, value in listeDate.items():
+            for x in value:
+                print(x)
+                if time.strftime("%d/%m/%Y") == x:
+                    print("------------------------------")
+                    print("Today : ", x)
+                    print("------------------------------")
+                    print("Backup of files of Vitals Parameters !")
+
+                    try:
+                        if os.path.getsize('./param/paramdata7.txt'):            
+                            print("Backup of file paramdata7.txt !")
+                            shutil.copy('./param/paramdata7.txt',
+                                './Backup/Files7/Backup_param7.txt')
+                    except FileNotFoundError as param_err:
+                        print("+ Error file not found !", param_err)
+
+                    x=str(x)
+                    value.remove(x)
+                    file_w = open("./param/updateparam7.json", "w")
+                    listeDate = json.dump(listeDate, file_w, indent=4)
+                    eraserParam()
 
 def eraserParam():
+    try:
+        if os.path.getsize('./param/paramdata7.txt'):
+            os remove('./param/paramdata7.txt')
+            print("paramdata7.txt file removed")
+    except FileNotFoundError as err_main:
+        print("Error file not found", err_main)
     try:
         if os.path.getsize('./param/aspifile7/temp.json'):
             os.remove('./param/aspifile7/temp.json')

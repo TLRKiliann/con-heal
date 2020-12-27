@@ -26,7 +26,7 @@ def dataBackToSave(self):
                     print("------------------------------")
                     print("Today : ", x)
                     print("------------------------------")
-                    print("Backup of BMI files !")
+                    print("Backup of ALL files !")
 
                     try:
                         if os.path.exists('./newpatient/entryfile.txt'):
@@ -219,18 +219,6 @@ def dataBackToSave(self):
                                 './Backup/Files24/Backup_patient24.txt')
                     except FileNotFoundError as nf_file24:
                         print("Not found", nf_file24)
-
-
-
-                    try:
-                        if os.path.exists('./param/paramdata7.txt'):
-                            print("+ Param 7 exist")
-                            shutil.copy('./param/paramdata7.txt',
-                                './Backup/Files7/Backup_param7.txt')
-                    except FileNotFoundError as nf_param7:
-                        print("Not found", nf_param7)
-
-
 
                     try:
                         if os.path.exists('./calBmi/bmi.txt'):
@@ -1198,3 +1186,4 @@ def dataBackToSave(self):
                     listeDate = json.dump(listeDate, file_w, indent=4)
                     print("--- Backup done ---")
                     messagebox.showinfo('INFO', 'BACKUP done !')
+                    messagebox.showinfo('INFO', 'Go to Global to read one of them !')

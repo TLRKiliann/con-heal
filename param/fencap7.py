@@ -581,7 +581,7 @@ def updateData():
 def eraserParam():
     try:
         if os.path.getsize('./param/paramdata7.txt'):
-            os remove('./param/paramdata7.txt')
+            os.remove('./param/paramdata7.txt')
             print("paramdata7.txt file removed")
     except FileNotFoundError as err_main:
         print("Error file not found", err_main)

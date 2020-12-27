@@ -164,8 +164,8 @@ def delFuncFile7():
             shutil.copy('./Backup/Files7/Backup_param7.txt',
                 './Backup/old/oldfiles7/Backup_param7.txt')
             os.remove('./Backup/Files7/Backup_param7.txt')
-    except FileNotFoundError as nf_oldfile:
-        print("Not found", nf_oldfile)
+    except FileNotFoundError as nf_param:
+        print("Not found", nf_param)
 
     try:
         if os.path.exists('./Backup/Files7/Backup_patient7.txt'):

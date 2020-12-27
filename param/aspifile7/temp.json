@@ -1,52 +1,16 @@
 {
     "data": [
         {
-            "Date": "27/12/2020",
-            "Temperature": "36.4"
+            "Date": "02/12/2020",
+            "Temperature": "36.5"
         },
         {
-            "Date": "27/12/2020",
-            "Temperature": "12,5"
+            "Date": "12/12/2020",
+            "Temperature": "36.9"
         },
         {
-            "Date": "27/12/2020",
-            "Temperature": "36"
-        },
-        {
-            "Date": "27/12/2020",
-            "Temperature": "36.3"
-        },
-        {
-            "Date": "28/12/2020",
-            "Temperature": "36"
-        },
-        {
-            "Date": "27/12/2020",
-            "Temperature": "36"
-        },
-        {
-            "Date": "10/01/2020",
-            "Temperature": "36.7"
-        },
-        {
-            "Date": "06/06/2020",
-            "Temperature": "36.6"
-        },
-        {
-            "Date": "20/06/2020",
-            "Temperature": "36.3"
-        },
-        {
-            "Date": "27/12/2020",
-            "Temperature": "36.8"
-        },
-        {
-            "Date": "04/06/2020",
-            "Temperature": "36.8"
-        },
-        {
-            "Date": "10/08/2020",
-            "Temperature": "36.6"
+            "Date": "23/12/2020",
+            "Temperature": "36.2"
         }
     ]
 }

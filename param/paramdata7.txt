@@ -1,22 +1,33 @@
-Date : 04/06/2020
-Hour : 11:57:37
+Date : 02/12/2020
+Hour : 13:05:25
 Name and Surname : Julian Assange
 TA :  mmHg
 Puls : /min
 SaO2 : %
 FR : /min
-Temperature : 36.8°C
+Temperature : 36.5°C
 Glycemie :  mmol/l
 Douleurs (Pain) : /10
 
-Date : 10/08/2020
-Hour : 11:57:37
+Date : 12/12/2020
+Hour : 13:05:25
 Name and Surname : Julian Assange
 TA :  mmHg
 Puls : /min
 SaO2 : %
 FR : /min
-Temperature : 36.6°C
+Temperature : 36.9°C
+Glycemie :  mmol/l
+Douleurs (Pain) : /10
+
+Date : 23/12/2020
+Hour : 13:05:25
+Name and Surname : Julian Assange
+TA :  mmHg
+Puls : /min
+SaO2 : %
+FR : /min
+Temperature : 36.2°C
 Glycemie :  mmol/l
 Douleurs (Pain) : /10
 

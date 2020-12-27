@@ -59,7 +59,7 @@ try:
         plt.plot(list1, list2, 'o-', color='cyan')
         plt.ylabel('Hgt', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
-        plt.title('Relevé des Hgt en mmol/l par date', fontsize=16)
+        plt.title('Hgt(mmol/l) by Date', fontsize=16)
         plt.xticks(rotation=45)
         plt.grid(show_grid)
         plt.show()

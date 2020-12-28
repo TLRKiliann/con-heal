@@ -38,10 +38,12 @@ def searchDB():
         transdisval.set(row[5])
         diagnosis.set(row[6])
         sqlCon.commit()
+        sqlCon.close()
     except:
-        print("Error with search function in DB")
-        messagebox.showinfo("Data Entry Form", "No Such Record Found !")
-    sqlCon.close()
+        print("Error with function search in DB")
+        messagebox.showwarning('Warning', 'Database no connected !')
+        print("Database no connected !")
+
 
 def diagRecapt(diagnosis):
     try:

@@ -15,6 +15,7 @@
 
 
 from tkinter import *
+from tkinter import messagebox
 from tkinter import ttk
 try:
     import pymysql
@@ -65,18 +66,22 @@ class TrackDB(Frame):
         Allergy = StringVar()
         Transmissible_Disease = StringVar()
         Diagnostic = StringVar()
-        
+
         def searchDB():
-            sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='timetrackconn')
-            cur = sqlCon.cursor()
-            cur.execute("SELECT * from timetrackconn")
-            result = cur.fetchall()
-            if len(result) != 0:
-                self.student_records.delete(*self.student_records.get_children())
-                for row in result:
-                    self.student_records.insert('', END, values = row)
-                sqlCon.commit()
-            sqlCon.close()
+            try:
+                sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='timetrackconn')
+                cur = sqlCon.cursor()
+                cur.execute("SELECT * from timetrackconn")
+                result = cur.fetchall()
+                if len(result) != 0:
+                    self.student_records.delete(*self.student_records.get_children())
+                    for row in result:
+                        self.student_records.insert('', END, values = row)
+                    sqlCon.commit()
+                sqlCon.close()
+            except:
+                messagebox.showwarning('Warning', 'Database no connected !')
+                print("Database no connected !")
 
         self.student_records=ttk.Treeview(self.can, height=24, columns=("stdid", 
             "firstname", "surname", "birth", "allergy", "disease", "maindiagnostic"))
@@ -113,11 +118,9 @@ class TrackDB(Frame):
             activebackground='cyan', activeforeground='RoyalBlue3',
             highlightbackground="white", command=quit)
         self.butBox.pack(side=RIGHT)
-
         self.pack()
-    
         searchDB()
-    
+
     # Method to reconfigure scrollbar every time.
     def onFrameConfigure(self, event):
         '''Reset the scroll region to encompass the inner frame'''

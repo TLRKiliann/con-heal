@@ -159,6 +159,15 @@ def delFuncFile21():
         print("+ File entryfile21.txt does not exist", filefunc19)
 
     try:
+        if os.path.exists('./Backup/Files21/Backup_param21.txt'):
+            print("+ Backup_param21.txt exist")
+            shutil.copy('./Backup/Files21/Backup_param21.txt',
+                './Backup/old/oldfiles21/Backup_param21.txt')
+            os.remove('./Backup/Files21/Backup_param21.txt')
+    except FileNotFoundError as nf_param:
+        print("Not found", nf_param)
+
+    try:
         if os.path.exists('./Backup/Files21/Backup_patient21.txt'):
             print("+ Backup_patient21.txt exist")
             shutil.copy('./Backup/Files21/Backup_patient21.txt',

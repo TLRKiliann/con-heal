@@ -62,7 +62,7 @@ def recordOption():
     if CheckVar4.get()==1:
         print("Surveillance urinaire et/ou fécale requise en ajout")
         with open('./14besoins/doc_suivi16/patient16_14b.txt', 'a+') as file:
-            file.write("+ Surveillance urinaire et/ou fécale requise requise\n")
+            file.write("+ Surveillance urinaire et/ou fécale requise\n")
     else:
         print("Nothing to do")
 

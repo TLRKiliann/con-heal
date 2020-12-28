@@ -580,55 +580,55 @@ def updateData():
 
 def eraserParam():
     try:
-        if os.path.getsize('./param/paramdata7.txt'):
+        if os.path.exists('./param/paramdata7.txt'):
             os.remove('./param/paramdata7.txt')
             print("paramdata7.txt file removed")
     except FileNotFoundError as err_main:
         print("Error file not found", err_main)
     try:
-        if os.path.getsize('./param/aspifile7/temp.json'):
+        if os.path.exists('./param/aspifile7/temp.json'):
             os.remove('./param/aspifile7/temp.json')
             print("temp.json file removed")
     except FileNotFoundError as err_temp:
         print("Error file not found", err_temp)
 
     try:
-        if os.path.getsize('./param/aspifile7/dlr.json'):
+        if os.path.exists('./param/aspifile7/dlr.json'):
             os.remove('./param/aspifile7/dlr.json')
             print("dlr.json file removed")
     except FileNotFoundError as err_dlr:
         print("Error file not found", err_dlr)
 
     try:
-        if os.path.getsize('./param/aspifile7/freq.json'):
+        if os.path.exists('./param/aspifile7/freq.json'):
             os.remove('./param/aspifile7/freq.json')
             print("freq.json file removed")
     except FileNotFoundError as err_freq:
         print("Error file not found", err_freq)
 
     try:
-        if os.path.getsize('./param/aspifile7/gly.json'):
+        if os.path.exists('./param/aspifile7/gly.json'):
             os.remove('./param/aspifile7/gly.json')
             print("gly.json file removed")
     except FileNotFoundError as err_gly:
         print("Error file not found", err_gly)
 
     try:
-        if os.path.getsize('./param/aspifile7/puls.json'):
+        if os.path.exists('./param/aspifile7/puls.json'):
             os.remove('./param/aspifile7/puls.json')
             print("puls.json file removed")
     except FileNotFoundError as err_puls:
         print("Error file not found", err_puls)
 
     try:
-        if os.path.getsize('./param/aspifile7/sat.json'):
+        if os.path.exists('./param/aspifile7/sat.json'):
             os.remove('./param/aspifile7/sat.json')
             print("sat.json file removed")
     except FileNotFoundError as err_sat:
         print("Error file not found", err_sat)
 
     try:
-        if os.path.getsize('./param/aspifile7/tensor.json'):
+        if os.path.exists('./param/aspifile7/tensor.json'):
             os.remove('./param/aspifile7/tensor.json')
             print("tensor.json file removed")
     except FileNotFoundError as err_ta:

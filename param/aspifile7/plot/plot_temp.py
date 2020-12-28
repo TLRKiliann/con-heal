@@ -94,9 +94,9 @@ try:
         ax = plt.gcf().axes[0]
         ax.xaxis.set_major_formatter(formatter)
         #axes.xaxis.set_major_formatter(AutoDateFormatter(locator))
-        min_date = date2num(datetime.datetime.strptime('01/12/2020', "%d/%m/%Y"))
-        max_date = date2num(datetime.datetime.strptime('31/12/2020', "%d/%m/%Y"))
-        axes.set_xlim([min_date, max_date])
+        #min_date = date2num(datetime.datetime.strptime('01/12/2020', "%d/%m/%Y"))
+        #max_date = date2num(datetime.datetime.strptime('31/12/2020', "%d/%m/%Y"))
+        #axes.set_xlim([min_date, max_date])
         #figure.autofmt_xdate()
 
         plt.plot(x_axis, y_axis, 'o-', color='purple')

@@ -8,16 +8,13 @@
 """
 
 
-import tkinter
 from tkinter import *
 from tkinter import messagebox
 import json
 import os
 import subprocess
 import time
-import io
 import sys
-import shutil
 
 
 def writeData():
@@ -250,8 +247,8 @@ def writeData():
             with open('./param/aspifile7/dlr.json', 'w') as datadlr3:
                 json.dump(dataD, datadlr3, indent=4)
 
-    label['text'] = ("Date: " + textDate.get() + 
-        "\nNom: " + textName.get() + 
+    label['text'] = ("Date: " + textDate.get() +
+        "\nNom: " + textName.get() +
         "\nTension: " + textTa.get() +" -- " + "Puls: " + textPuls.get() +
         "\nSaO2: " + textSa.get() +" -- "+ "FR: " + textFr.get() +
         "\nTemperature: " + textTemp.get() +
@@ -271,7 +268,7 @@ def appelTens():
         if os.path.getsize('./param/aspifile7/tensor.json'):
             subprocess.run('./param/aspifile7/aspidata.py', check=True)
             label['text'] = ("Date: " + textDate.get() +
-                "\nNom: " + textName.get() + 
+                "\nNom: " + textName.get() +
                 "\nTension: " + textTa.get())
     except FileNotFoundError as errorgraph1:
         print('+ Sorry the TA plot doesn\'t work ! Data missing !', errorgraph1)
@@ -382,7 +379,7 @@ def delMain():
 
 def delTA():
     """
-        To earase last line 
+        To earase last line
         of tensor.json
     """
     try:
@@ -403,7 +400,7 @@ def delTA():
 
 def delPuls():
     """
-        To earase last line 
+        To earase last line
         of puls.json
     """
     try:
@@ -424,7 +421,7 @@ def delPuls():
 
 def delSat():
     """
-        To earase last line 
+        To earase last line
         of sat.json
     """
     try:
@@ -445,7 +442,7 @@ def delSat():
 
 def delFreq():
     """
-        To earase last line 
+        To earase last line
         of freq.json
     """
     try:
@@ -466,7 +463,7 @@ def delFreq():
 
 def delTemp():
     """
-        To earase last line 
+        To earase last line
         of temp.json
     """
     try:
@@ -487,7 +484,7 @@ def delTemp():
 
 def delGly():
     """
-        To earase last line 
+        To earase last line
         of gly.json
     """
     try:
@@ -508,7 +505,7 @@ def delGly():
 
 def delDlr():
     """
-        To earase last line 
+        To earase last line
         of dlr.json
     """
     try:
@@ -556,7 +553,7 @@ gui.title("Time-Track")
 gui.configure(background='DodgerBlue2')
 gui.geometry('650x600')
 
-labelTitle = Label(gui, text="Vital Parameters", 
+labelTitle = Label(gui, text="Vital Parameters",
     font=('Times 22 bold'), bg='DodgerBlue2', fg='white')
 labelTitle.grid(row=0, column=1, columnspan=4, pady=10)
 
@@ -661,37 +658,37 @@ buttonWrite.config(text='CAPTURE DATA', width=33,
 buttonWrite.grid(row=2, column=3, columnspan=4)
 
 buttonMainlec = Button(gui)
-buttonMainlec.config(text='Read All Data', width=15, 
+buttonMainlec.config(text='Read All Data', width=15,
     bg='lightblue', fg='navy', activebackground='pale turquoise',
     activeforeground='gray40', command=mainRead)
 buttonMainlec.grid(row=3, column=3)
 
 buttonDel = Button(gui)
-buttonDel.config(text='Delete File of Data', width=15, 
+buttonDel.config(text='Delete File of Data', width=15,
     bg='coral', fg='yellow', activebackground='red',
     activeforeground='white', command=delMain)
 buttonDel.grid(row=3, column=4)
 
 button3Write = Button(gui)
-button3Write.config(text='Graph TA', width=15, 
+button3Write.config(text='Graph TA', width=15,
     bg='lightblue', fg='navy', activebackground='pale turquoise',
     activeforeground='gray40', command=appelTens)
 button3Write.grid(row=4, column=3)
 
 button4Write = Button(gui)
-button4Write.config(text='Graph Puls', width=15, 
+button4Write.config(text='Graph Puls', width=15,
     bg='lightblue', fg='navy', activebackground='pale turquoise',
     activeforeground='gray40', command=appelPuls)
 button4Write.grid(row=5, column=3)
 
 button5Write = Button(gui)
-button5Write.config(text='Graph SaO2', width=15, 
+button5Write.config(text='Graph SaO2', width=15,
     bg='lightblue', fg='navy', activebackground='pale turquoise',
     activeforeground='gray40', command=appelSat)
 button5Write.grid(row=6, column=3)
 
 button6Write = Button(gui)
-button6Write.config(text='Graph FR', width=15, 
+button6Write.config(text='Graph FR', width=15,
     bg='lightblue', fg='navy', activebackground='pale turquoise',
     activeforeground='gray40', command=appelFreq)
 button6Write.grid(row=7, column=3)

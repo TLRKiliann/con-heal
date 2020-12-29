@@ -9,7 +9,7 @@ import os
 
 print("\nListe1 = dates :")
 print("--------------")
-fileO = open('./param/aspifile7/data_dategly.json')
+fileO = open('./param/aspifile2/data_dategly.json')
 list1 = json.load(fileO)
 
 for letter in list1:
@@ -18,7 +18,7 @@ for letter in list1:
 print("\nList2 = tension :")
 print("--------------------")
 
-fileO = open('./param/aspifile7/data_gly.json')
+fileO = open('./param/aspifile2/data_gly.json')
 list2 = json.load(fileO)
 
 for letter in list2:
@@ -66,7 +66,7 @@ try:
 except ValueError as shapes_err:
     print("Invalid number", shapes_err)
 
-os.remove('./param/aspifile7/data_dategly.json')
+os.remove('./param/aspifile2/data_dategly.json')
 print("+ File data_dategly.json removed !")
-os.remove('./param/aspifile7/data_gly.json')
+os.remove('./param/aspifile2/data_gly.json')
 print("+ File data_gly.json removed !\n")

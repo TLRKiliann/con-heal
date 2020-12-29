@@ -11,7 +11,7 @@ print("\nListe1 = dates :")
 print("--------------")
 
 try:
-    fileO = open('./param/aspifile7/data_date.json')
+    fileO = open('./param/aspifile2/data_date.json')
     list1 = json.load(fileO)
 except ValueError as err_entry:
     print("+ Value Error", err_entry)
@@ -26,7 +26,7 @@ print("\nList2 = tension :")
 print("--------------------")
 
 try:
-    fileO = open('./param/aspifile7/data_tension.json')
+    fileO = open('./param/aspifile2/data_tension.json')
     list2 = json.load(fileO)
 except ValueError as err_entry2:
     print("+ Value Error", err_entry2)
@@ -83,7 +83,7 @@ try:
 except ValueError as val:
     print("+ False entry value", val)
 
-os.remove('./param/aspifile7/data_date.json')
+os.remove('./param/aspifile2/data_date.json')
 print("+ File data_date.json removed !")
-os.remove('./param/aspifile7/data_tension.json')
+os.remove('./param/aspifile2/data_tension.json')
 print("+ File data_tension.json removed !\n")

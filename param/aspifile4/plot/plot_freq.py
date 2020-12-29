@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# -*- coding:utf-8 -*-
+# -*- coding: utf-8 -*-
 
 
 import json
@@ -9,9 +9,8 @@ import os
 
 print("\nListe1 = dates :")
 print("--------------")
-fileO = open('./param/aspifile/data_datefr.json')
+fileO = open('./param/aspifile7/data_datefr.json')
 list1 = json.load(fileO)
-#f.close
 
 for letter in list1:
     print("list1: " + letter)
@@ -19,9 +18,8 @@ for letter in list1:
 print("\nList2 = FR :")
 print("--------------------")
 
-fileO = open('./param/aspifile/data_fr.json')
+fileO = open('./param/aspifile7/data_fr.json')
 list2 = json.load(fileO)
-#f.close
 
 for letter in list2:
     print("List2: " + letter)
@@ -45,26 +43,32 @@ for key, value in dicolist.items():
 print("\nListe des dates dans l'ordre des entrées :")
 print("----------------------------------")
 print(list1)
-# How to sort data of list1 to correspond whith list2 ???
-# And for list2 ??? Is it with array ??? 
 print("\nListe des frequences respiratoires :")
 print("------------------------")
 print(list2)
 
 #list3 = [int(list2) for list2 in list2]
-list2 = list(map(int, list2))
+try:
+    list2 = list(map(int, list2))
+except ValueError as base_err:
+    print("+ Invalid number (no: . or , !)", base_err)
+    list2 = []
 
-show_grid = True
-with plt.style.context(('seaborn-darkgrid')):
-    plt.plot(list1, list2)
-    plt.ylabel('FR/min')
-    plt.xlabel('Dates')
-    plt.title('Relevé des fréquences resp (FR/min) par date')
-    plt.xticks(rotation=45)
-    plt.grid(show_grid)
-    plt.show()
+try:
+    show_grid = True
+    with plt.style.context('seaborn-darkgrid'):
+        plt.plot(list1, list2, 'o--', color='blue')
+        plt.ylabel('FR/min', fontsize=14)
+        plt.xlabel('Dates', fontsize=14)
+        plt.title('Relevé des fréquences resp (FR/min) par date', fontsize=16)
+        plt.xticks(rotation=45)
+        plt.legend(['Respiratory frequency'])
+        plt.grid(show_grid)
+        plt.show()
+except ValueError as shapes_err:
+    print("Invalid number", shapes_err)
 
-os.remove('./param/aspifile/data_datefr.json')
+os.remove('./param/aspifile7/data_datefr.json')
 print("+ File data_datefr.json removed !")
-os.remove('./param/aspifile/data_fr.json')
+os.remove('./param/aspifile7/data_fr.json')
 print("+ File data_fr.json removed !\n")

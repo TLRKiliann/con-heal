@@ -1,30 +1,29 @@
 #!/usr/bin/python3
-# -*- coding:utf-8 -*-
+# -*- coding: utf-8 -*-
 
 
 import subprocess
 import json
 
 
-file = open('./param/aspifile/dlr.json')
+file = open('./param/aspifile7/dlr.json')
 data = json.load(file)
-#file.close
 
-for (key, value) in data.items():
-    print("Key: " + key)
-    print("Valeur: " + str(value))
-    print("\nTo represent the data_get:\n")
-    print(data.get("data"))
-    print("\n")
-    print("Valeur: " + str(value[0]))
-    print("Valeur: " + str(value[1]))
-    print("\n")
-    print("Date: " + str(value[0]["Date"]))
-    print("Douleurs: " + str(value[0]["Douleurs"]))
-    print("\n")
-    print("Date: " + str(value[1]["Date"]))
-    print("Douleurs: " + str(value[1]["Douleurs"]))
-    
+try:
+    for (key, value) in data.items():
+        print("Key: " + key)
+        print("Valeur: " + str(value))
+        print("\nTo represent the data_get:\n")
+        print(data.get("data"))
+        print("\n")
+        print("Valeur: " + str(value[0]))
+        print("\n")
+        print("Date: " + str(value[0]["Date"]))
+        print("Douleurs: " + str(value[0]["Douleurs"]))
+        print("\n")
+except IndexError as ind_dlrs:
+    print("Only one value for kg...", ind_dlrs) 
+
 print("\nList of dates\n")
 
 data_list1 = []
@@ -34,7 +33,7 @@ for value in zip(value):
 
 print("\nThat seems ok!\n")
 
-with open('./param/aspifile/data_datedlr.json', 'a+') as datafile:
+with open('./param/aspifile7/data_datedlr.json', 'a+') as datafile:
     json.dump(data_list1, datafile, indent=4)
 
 for (key, value) in data.items():
@@ -50,9 +49,9 @@ for value in zip(value):
 
 print("\nThat seems correct!\n")
 
-with open('./param/aspifile/data_dlr.json', 'a+') as datafile:
+with open('./param/aspifile7/data_dlr.json', 'a+') as datafile:
     json.dump(data_list2, datafile, indent=4)
 
 print("\nDownloading 'plot_prog.py'...")
 
-subprocess.call('./param/aspifile/plot/plot_dlr.py')
+subprocess.run('./param/aspifile7/plot/plot_dlr.py', check=True)

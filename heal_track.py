@@ -16,6 +16,7 @@ from boxapp import callBox
 from patcaps import callResident
 from backapp import *
 from Backup.backupfile import dataBackToSave
+from param.backup_month import paramBackToSave
 from labo.resultlabo1 import callLabo1
 from labo.resultlabo2 import callLabo2
 from labo.resultlabo3 import callLabo3
@@ -3502,10 +3503,10 @@ class Application(Frame):
 
     def updateFiletxt(self):
         """
-            To backup all files
-            today !!!
+            It's time to backup !
         """
         dataBackToSave(self)
+        paramBackToSave(self)
 
     def upDateAll(self):
         """

@@ -3,7 +3,7 @@
 
 
 """
-    this script is made to develop
+    This script was made to develop
     other butons with functions
 """
 
@@ -547,93 +547,6 @@ def delEvery():
         label['text'] = "Nothing has been deleted !"
         print("+ Nothing has been deleted !")
 
-def updateData():
-    """
-        Backup for paramdata7.txt/month
-        Think to change date (4 update)!
-    """
-    listeDate = []
-    with open("./param/updateparam7.json") as file_r:
-        listeDate = json.load(file_r)
-        for index, value in listeDate.items():
-            for x in value:
-                print(x)
-                if time.strftime("%d/%m/%Y") == x:
-                    print("------------------------------")
-                    print("Today : ", x)
-                    print("------------------------------")
-                    print("Backup of files of Vitals Parameters !")
-
-                    try:
-                        if os.path.getsize('./param/paramdata7.txt'):            
-                            print("Backup of file paramdata7.txt !")
-                            shutil.copy('./param/paramdata7.txt',
-                                './Backup/Files7/Backup_param7.txt')
-                    except FileNotFoundError as param_err:
-                        print("+ Error file not found !", param_err)
-
-                    x=str(x)
-                    value.remove(x)
-                    file_w = open("./param/updateparam7.json", "w")
-                    listeDate = json.dump(listeDate, file_w, indent=4)
-                    eraserParam()
-
-def eraserParam():
-    try:
-        if os.path.exists('./param/paramdata7.txt'):
-            os.remove('./param/paramdata7.txt')
-            print("paramdata7.txt file removed")
-    except FileNotFoundError as err_main:
-        print("Error file not found", err_main)
-    try:
-        if os.path.exists('./param/aspifile7/temp.json'):
-            os.remove('./param/aspifile7/temp.json')
-            print("temp.json file removed")
-    except FileNotFoundError as err_temp:
-        print("Error file not found", err_temp)
-
-    try:
-        if os.path.exists('./param/aspifile7/dlr.json'):
-            os.remove('./param/aspifile7/dlr.json')
-            print("dlr.json file removed")
-    except FileNotFoundError as err_dlr:
-        print("Error file not found", err_dlr)
-
-    try:
-        if os.path.exists('./param/aspifile7/freq.json'):
-            os.remove('./param/aspifile7/freq.json')
-            print("freq.json file removed")
-    except FileNotFoundError as err_freq:
-        print("Error file not found", err_freq)
-
-    try:
-        if os.path.exists('./param/aspifile7/gly.json'):
-            os.remove('./param/aspifile7/gly.json')
-            print("gly.json file removed")
-    except FileNotFoundError as err_gly:
-        print("Error file not found", err_gly)
-
-    try:
-        if os.path.exists('./param/aspifile7/puls.json'):
-            os.remove('./param/aspifile7/puls.json')
-            print("puls.json file removed")
-    except FileNotFoundError as err_puls:
-        print("Error file not found", err_puls)
-
-    try:
-        if os.path.exists('./param/aspifile7/sat.json'):
-            os.remove('./param/aspifile7/sat.json')
-            print("sat.json file removed")
-    except FileNotFoundError as err_sat:
-        print("Error file not found", err_sat)
-
-    try:
-        if os.path.exists('./param/aspifile7/tensor.json'):
-            os.remove('./param/aspifile7/tensor.json')
-            print("tensor.json file removed")
-    except FileNotFoundError as err_ta:
-        print("Error file not found", err_ta)
-
 # To read name of patient for entry widget
 with open('./newpatient/entryfile7.txt', 'r') as filename:
     line1=filename.readline()
@@ -692,8 +605,6 @@ textDate = Entry(gui, textvariable=time_string,
     highlightbackground='gray', bd=4)
 time_string.set(time.strftime("%d/%m/%Y"))
 textDate.grid(row=1, column=2)
-# Directly up to function
-updateData()
 
 time_Htring = IntVar()
 textHour = Entry(gui, textvariable=time_Htring,

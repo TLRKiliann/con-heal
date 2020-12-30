@@ -58,7 +58,8 @@ def writeData():
                 datastore = json.load(datafile)
                 print(datastore)
             dataTa = datastore
-            dataTa['data'].append({'Date' : textDate.get(), 'Tension' : textTa.get()})
+            dataTa['data'].append({'Date' : textDate.get(),
+                'Tension' : textTa.get()})
             if textTa.get() == "":
                 print("---Pas de VALEUR 'Tension' entrée---")
             else:
@@ -71,7 +72,8 @@ def writeData():
         print("+ File tensor.json created !")
         dataTa = {}
         dataTa['data'] = []
-        dataTa['data'].append({'Date' : textDate.get(), 'Tension' : textTa.get()})
+        dataTa['data'].append({'Date' : textDate.get(),
+            'Tension' : textTa.get()})
         if textTa.get() == "":
             print("---Pas de VALEUR 'Tension' entrée---")
         else:

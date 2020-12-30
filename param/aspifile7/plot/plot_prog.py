@@ -2,9 +2,12 @@
 # -*- coding: utf-8 -*-
 
 
-import json
-import matplotlib.pyplot as plt
 import os
+import json
+import datetime
+import matplotlib.pyplot as plt
+from matplotlib import dates
+from matplotlib.dates import AutoDateLocator
 
 
 print("\nListe1 = dates :")
@@ -55,29 +58,48 @@ list2 = []
 for key, value in dicolist.items():
     list1.append(key)
     list2.append(value)
-    list2 = [item.replace("/", ".") for item in list2]
+    #list2 = [item.replace("/", ".") for item in list2]
     
 print("\nListe des dates dans l'ordre des entrées :")
 print("----------------------------------")
 print(list1)
 print("\nListe des tensions :")
 print("------------------------")
-print(list2)
+print("{}".format(list2))
 
 try:
-    list2 = list(map(float, list2))
+    list1 = list(map(str, list1))
+    print(list1)
+except ValueError as err_vlist1:
+    print("+ False value (no: string or int value)", err_vlist1)
+
+try:
+    list2 = list(map(str, list2))
 except ValueError as err_val:
     print("+ False value (no: string or int value)", err_val)
+
+#converted_dates = list(map(datetime.datetime.strptime, list1, len(list1)*['%d/%m/%Y']))
+x_axis = list1
+#formatter = dates.DateFormatter('%d/%m/%Y')
+#list2 = [item.replace(".", "/") for item in list2]
+y_axis = list2
 
 try:
     show_grid = True
     with plt.style.context('seaborn-darkgrid'):
-        plt.plot(list1, list2, 'o-', color='red')
+        figure, axes = plt.subplots()
+        plt.plot(x_axis, y_axis, 'o-', color='red')
+        for x,y in zip(x_axis, y_axis):
+            label = "{}".format(y)
+            plt.annotate(label, (x,y), textcoords="offset points",
+                xytext=(0,10), ha='center')
+        #plt.xlim(xmin=-3, xmax=10)
         plt.ylabel('TA', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
         plt.title('Relevé des tensions (TA) par date', fontsize=16)
         plt.xticks(rotation=45)
         plt.legend(['TA (blood pressure)'])
+        #plt.gcf().autofmt_xdate(rotation=45)
         plt.grid(show_grid)
         plt.show()
 except ValueError as val:

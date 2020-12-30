@@ -98,8 +98,11 @@ try:
         #max_date = date2num(datetime.datetime.strptime('31/12/2020', "%d/%m/%Y"))
         #axes.set_xlim([min_date, max_date])
         #figure.autofmt_xdate()
-
         plt.plot(x_axis, y_axis, 'o-', color='purple')
+        for x,y in zip(x_axis, y_axis):
+            label = "{:.1f}".format(y)
+            plt.annotate(label, (x,y), textcoords="offset points",
+                xytext=(0,10), ha='center')
         plt.ylabel('T°C', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
         plt.title('Temperature by Date', fontsize=16)

@@ -41,8 +41,10 @@ print("\nList of tensions\n")
 
 data_list2 = []
 for value in zip(value):
-    data_list2.append(value[0]['Tension'])
+    data_list2.append((value[0])['Tension'])
 
+print(data_list2)
+print("\n")
 print("\nThat seems correct!\n")
 
 with open('./param/aspifile7/data_tension.json', 'a+') as datafile:

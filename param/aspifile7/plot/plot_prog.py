@@ -93,7 +93,6 @@ try:
             label = "{}".format(y)
             plt.annotate(label, (x,y), textcoords="offset points",
                 xytext=(0,10), ha='center')
-        #plt.xlim(xmin=-3, xmax=10)
         plt.ylabel('TA', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
         plt.title('Relevé des tensions (TA) par date', fontsize=16)

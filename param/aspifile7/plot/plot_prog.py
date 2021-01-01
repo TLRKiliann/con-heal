@@ -166,13 +166,26 @@ x_axis = list1
 y_axis = list2
 z_axis = list4
 
+# Color style :fivethirtyeight, seaborn-darkgrid
 try:
     show_grid = True
     with plt.style.context('seaborn-darkgrid'):
-        figure, axes = plt.subplots()
+        fig = plt.figure()
+        fig.set_facecolor("black")
+        ax = plt.subplot()
+        ax.tick_params(axis='x', colors='white')
+        ax.tick_params(axis='y', colors='white')
+        #ax.spines['bottom'].set_color('cyan')
+        labelc = plt.ylabel("y-label")
+        labelc.set_color("white")
+        labelc2 = plt.xlabel("x-label")
+        labelc2.set_color("white")
+        labelc3 = plt.title("title")
+        labelc3.set_color("white")
+
         plt.plot(x_axis, y_axis, 'o', color='red')
         plt.plot(x_axis, z_axis, 'o', color='red')
-        plt.ylim(0, 240)
+        #plt.ylim(0, 240)
         plt.vlines(x = x_axis, ymin = z_axis, ymax = y_axis,
            colors = 'blue',
            label = 'vline_multiple - full height')
@@ -189,7 +202,7 @@ try:
 
         plt.ylabel('TA (blood pressure)', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
-        plt.title('Relevé des tensions (TA) par date', fontsize=16)
+        plt.title('Relevé des tensions (TA) par date', fontsize=18)
         plt.xticks(rotation=45)
         plt.legend(['TA (blood pressure)'])
         plt.grid(show_grid)

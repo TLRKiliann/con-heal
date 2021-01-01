@@ -66,7 +66,7 @@ try:
     with plt.style.context('seaborn-darkgrid'):
         figure, axes = plt.subplots()
         plt.plot(x_axis, y_axis, 'o', color='blue')
-        plt.plot(x_axis, y_axis, '--', color='blue')
+        plt.plot(x_axis, y_axis, '--', color='cyan')
         for x,y in zip(x_axis, y_axis):
             label = "{}".format(y)
             plt.annotate(label, (x,y), textcoords="offset points",

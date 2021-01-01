@@ -2,15 +2,15 @@
     "data": [
         {
             "Date": "01/01/2021",
-            "Tension": "140/77"
+            "Temperature": "36.7"
         },
         {
             "Date": "10/01/2021",
-            "Tension": "133/67"
+            "Temperature": "36.3"
         },
         {
             "Date": "20/01/2021",
-            "Tension": "144/67"
+            "Temperature": "36.6"
         }
     ]
 }

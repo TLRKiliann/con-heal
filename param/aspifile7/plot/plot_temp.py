@@ -6,9 +6,9 @@ import os
 import json
 import datetime
 import matplotlib.pyplot as plt
-from matplotlib import dates
-from matplotlib.dates import date2num
-from matplotlib.dates import AutoDateLocator
+#from matplotlib import dates
+#from matplotlib.dates import date2num
+#from matplotlib.dates import AutoDateLocator
 
 
 print("\nListe1 = dates :")
@@ -79,26 +79,17 @@ try:
 except ValueError as err_val:
     print("+ False value (no: string or int value)", err_val)
 
-converted_dates = list(map(datetime.datetime.strptime, list1, len(list1)*['%d/%m/%Y']))
-x_axis = converted_dates
-formatter = dates.DateFormatter('%d/%m/%Y')
+#converted_dates = list(map(datetime.datetime.strptime,
+#    list1, len(list1)*['%d/%m/%Y']))
+x_axis = list1
+#formatter = dates.DateFormatter('%d/%m/%Y')
 y_axis = list2
 
 try:
     show_grid = True
     with plt.style.context('seaborn-darkgrid'):
         figure, axes = plt.subplots()
-        # apply autoformatter for displaying of dates 
-        locator = AutoDateLocator()
-        axes.xaxis.set_major_locator(locator)
-        ax = plt.gcf().axes[0]
-        ax.xaxis.set_major_formatter(formatter)
-        #axes.xaxis.set_major_formatter(AutoDateFormatter(locator))
-        #min_date = date2num(datetime.datetime.strptime('01/12/2020', "%d/%m/%Y"))
-        #max_date = date2num(datetime.datetime.strptime('31/12/2020', "%d/%m/%Y"))
-        #axes.set_xlim([min_date, max_date])
-        #figure.autofmt_xdate()
-        plt.plot(x_axis, y_axis, 'o-', color='purple')
+        plt.plot(x_axis, y_axis, 's--', color='purple')
         for x,y in zip(x_axis, y_axis):
             label = "{:.1f}".format(y)
             plt.annotate(label, (x,y), textcoords="offset points",
@@ -106,9 +97,9 @@ try:
         plt.ylabel('T°C', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
         plt.title('Temperature by Date', fontsize=16)
-        #plt.xticks(rotation=45)
+        plt.xticks(rotation=45)
         plt.legend(['Temperatures C°'])
-        plt.gcf().autofmt_xdate(rotation=45)
+        #plt.gcf().autofmt_xdate(rotation=45)
         plt.grid(show_grid)
         plt.show()
 except ValueError as shapes_err:

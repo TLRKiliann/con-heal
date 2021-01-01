@@ -57,7 +57,8 @@ except ValueError as base_err:
 try:
     show_grid = True
     with plt.style.context('seaborn-darkgrid'):
-        plt.plot(list1, list2, 'o--', color='red')
+        plt.plot(list1, list2, 's', color='red')
+        plt.plot(list1, list2, '--', color='purple')
         plt.ylabel('Puls/min', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
         plt.title('Relevé des puls/min par date', fontsize=16)

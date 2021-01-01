@@ -90,16 +90,16 @@ try:
     show_grid = True
     with plt.style.context('seaborn-darkgrid'):
         figure, axes = plt.subplots()
-        plt.plot(x_axis, y_axis, 'o--', color='red')
+        plt.plot(x_axis, y_axis, 'o', color='purple')
+        plt.plot(x_axis, y_axis, '--', color='red')
         #plt.vlines(x = x_axis, ymin = y_axis, ymax=240,
         #   colors = 'blue',
         #   label = 'vline_multiple - full height')
-
         for x,y in zip(x_axis, y_axis):
             label = "{}".format(y)
             plt.annotate(label, (x,y), textcoords="offset points",
                 xytext=(0,10), ha='center')
-
+        
         plt.ylabel('TA', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
         plt.title('Relevé des tensions (TA) par date', fontsize=16)

@@ -2,6 +2,14 @@
 # -*- coding: utf-8 -*-
 
 
+"""
+    This file is made to make 4 more. I could have made only 3,
+    but I preferred to do it this way. Thus, systol and diastol
+    each have values associated with the dates.
+    Easier to reformat lists for plot_prog.py afterwards.
+"""
+
+
 import subprocess
 import json
 
@@ -29,7 +37,7 @@ print("\nList of dates\n")
 data_list1 = []
 for value in zip(value):
     data_list1.append(value[0]['Date'])
-    
+
 with open('./param/aspifile7/data_date.json', 'a+') as datafile:
     json.dump(data_list1, datafile, indent=4)
 
@@ -74,7 +82,7 @@ print("\nList of dates\n")
 data_listdia = []
 for value in zip(value):
     data_listdia.append(value[0]['Date'])
-    
+
 with open('./param/aspifile7/data_dia.json', 'a+') as datafiled:
     json.dump(data_listdia, datafiled, indent=4)
 

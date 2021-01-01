@@ -23,7 +23,7 @@ def writeData():
         and launching aspiFile7.py
     """
     try:
-        if os.path.getsize('./param/paramdata7.txt'):
+        if os.path.exists('./param/paramdata7.txt'):
             print("+ File 'paramdata7.txt' exist !")
     except FileNotFoundError as info:
         print("The file : 'paramdata7.txt' doesn't exist !", info)
@@ -53,7 +53,7 @@ def writeData():
             file.write(textDlrs.get() +"/10\n\n")
 
     try:
-        if os.path.getsize('./param/aspifile7/systol.json'):
+        if os.path.exists('./param/aspifile7/systol.json'):
             print("+ File 'systol' exist !")
             with open('./param/aspifile7/systol.json', 'r') as datafile:
                 datastore = json.load(datafile)
@@ -83,7 +83,7 @@ def writeData():
                 json.dump(dataTa, datafile, indent=4)
 
     try:
-        if os.path.getsize('./param/aspifile7/diastol.json'):
+        if os.path.exists('./param/aspifile7/diastol.json'):
             print("+ File 'diastol' exist !")
             with open('./param/aspifile7/diastol.json', 'r') as data:
                 datadia = json.load(data)
@@ -113,7 +113,7 @@ def writeData():
                 json.dump(dataDia, data2, indent=4)
 
     try:
-        if os.path.getsize('./param/aspifile7/puls.json'):
+        if os.path.exists('./param/aspifile7/puls.json'):
             print("+ File 'puls' exist !")
             with open('./param/aspifile7/puls.json', 'r') as datapuls:
                 datastore = json.load(datapuls)
@@ -141,7 +141,7 @@ def writeData():
                 json.dump(dataP, datapuls3, indent=4)
 
     try:
-        if os.path.getsize('./param/aspifile7/sat.json'):
+        if os.path.exists('./param/aspifile7/sat.json'):
             print("+ File 'sat' exist !")
             with open('./param/aspifile7/sat.json', 'r') as datasat:
                 datastore = json.load(datasat)
@@ -169,7 +169,7 @@ def writeData():
                 json.dump(dataS, datasat3, indent=4)
 
     try:
-        if os.path.getsize('./param/aspifile7/freq.json'):
+        if os.path.exists('./param/aspifile7/freq.json'):
             print("+ File 'freq' exist !")
             with open('./param/aspifile7/freq.json', 'r') as datafreq:
                 datastore = json.load(datafreq)
@@ -197,7 +197,7 @@ def writeData():
                 json.dump(dataF, datafreq3, indent=4)
 
     try:
-        if os.path.getsize('./param/aspifile7/temp.json'):
+        if os.path.exists('./param/aspifile7/temp.json'):
             print("+ File 'temp' exist !")
             with open('./param/aspifile7/temp.json', 'r') as datatemp:
                 datastore = json.load(datatemp)
@@ -225,7 +225,7 @@ def writeData():
                 json.dump(dataTe2, datatemp3, indent=4)
 
     try:
-        if os.path.getsize('./param/aspifile7/gly.json'):
+        if os.path.exists('./param/aspifile7/gly.json'):
             print("+ File 'gly' exist !")
             with open('./param/aspifile7/gly.json', 'r') as datagly:
                 datastore = json.load(datagly)
@@ -253,7 +253,7 @@ def writeData():
                 json.dump(dataG, datagly3, indent=4)
 
     try:
-        if os.path.getsize('./param/aspifile7/dlr.json'):
+        if os.path.exists('./param/aspifile7/dlr.json'):
             print("+ File 'dlr' exist !")
             with open('./param/aspifile7/dlr.json', 'r') as datadlr:
                 datastore = json.load(datadlr)
@@ -299,7 +299,7 @@ def appelTens():
         and launching matplotlib graph
     """
     try:
-        if os.path.getsize('./param/aspifile7/systol.json'):
+        if os.path.exists('./param/aspifile7/systol.json'):
             subprocess.run('./param/aspifile7/aspidata.py', check=True)
             label['text'] = ("Date: " + textDate.get() +
                 "\nNom: " + textName.get() +
@@ -314,7 +314,7 @@ def appelPuls():
         and launching matplotlib graph
     """
     try:
-        if os.path.getsize('./param/aspifile7/puls.json'):
+        if os.path.exists('./param/aspifile7/puls.json'):
             subprocess.run('./param/aspifile7/aspipuls.py', check=True)
             label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
                 "\nPulsations: " + textPuls.get())
@@ -328,7 +328,7 @@ def appelSat():
         and launching matplotlib graph
     """
     try:
-        if os.path.getsize('./param/aspifile7/sat.json'):
+        if os.path.exists('./param/aspifile7/sat.json'):
             subprocess.run('./param/aspifile7/aspisat.py', check=True)
             label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
                 "\nSaO2: " + textSa.get())
@@ -342,7 +342,7 @@ def appelFreq():
         and launching matplotlib graph
     """
     try:
-        if os.path.getsize('./param/aspifile7/freq.json'):
+        if os.path.exists('./param/aspifile7/freq.json'):
             subprocess.run('./param/aspifile7/aspifreq.py', check=True)
             label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
                 "\nFrequ. resp.: " + textFr.get())
@@ -356,7 +356,7 @@ def appelTemp():
         and launching matplotlib graph
     """
     try:
-        if os.path.getsize('./param/aspifile7/temp.json'):
+        if os.path.exists('./param/aspifile7/temp.json'):
             subprocess.run('./param/aspifile7/aspitemp.py', check=True)
             label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
                 "\nTemperature: " + textTemp.get())
@@ -370,7 +370,7 @@ def appelGly():
         and launching matplotlib graph
     """
     try:
-        if os.path.getsize('./param/aspifile7/gly.json'):
+        if os.path.exists('./param/aspifile7/gly.json'):
             subprocess.run('./param/aspifile7/aspigly.py', check=True)
             label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
                 "\nGlycémie: " + textHgt.get())
@@ -384,7 +384,7 @@ def appelDlr():
         and launching matplotlib graph
     """
     try:
-        if os.path.getsize('./param/aspifile7/dlr.json'):
+        if os.path.exists('./param/aspifile7/dlr.json'):
             subprocess.run('./param/aspifile7/aspidlr.py', check=True)
             label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
                 "\nDouleurs: " + textDlrs.get())
@@ -400,7 +400,7 @@ def delMain():
         "It will delete paramdata7.txt with all data !!!")
     if Main_MsgBox == 'yes':
         try:
-            if os.path.getsize('./param/paramdata7.txt'):
+            if os.path.exists('./param/paramdata7.txt'):
                 os.remove('./param/paramdata7.txt')
                 label['text'] = "File paramdata7.txt has been deleted !"
                 print("+ File paramdata7.txt has been deleted !")
@@ -417,7 +417,7 @@ def delSystol():
         of systol.json
     """
     try:
-        if os.path.getsize('./param/aspifile7/systol.json'):
+        if os.path.exists('./param/aspifile7/systol.json'):
             with open('./param/aspifile7/systol.json', 'r') as filesys:
                 data = json.load(filesys)
             for key, value in data.items():
@@ -439,7 +439,7 @@ def delDia():
         of diastol.json
     """
     try:
-        if os.path.getsize('./param/aspifile7/diastol.json'):
+        if os.path.exists('./param/aspifile7/diastol.json'):
             with open('./param/aspifile7/diastol.json', 'r') as filedia:
                 data = json.load(filedia)
             for key, value in data.items():
@@ -460,7 +460,7 @@ def delPuls():
         of puls.json
     """
     try:
-        if os.path.getsize('./param/aspifile7/puls.json'):
+        if os.path.exists('./param/aspifile7/puls.json'):
             with open('./param/aspifile7/puls.json', 'r') as file:
                 data = json.load(file)
             for key, value in data.items():
@@ -481,7 +481,7 @@ def delSat():
         of sat.json
     """
     try:
-        if os.path.getsize('./param/aspifile7/sat.json'):
+        if os.path.exists('./param/aspifile7/sat.json'):
             with open('./param/aspifile7/sat.json', 'r') as file:
                 data = json.load(file)
             for key, value in data.items():
@@ -502,7 +502,7 @@ def delFreq():
         of freq.json
     """
     try:
-        if os.path.getsize('./param/aspifile7/freq.json'):
+        if os.path.exists('./param/aspifile7/freq.json'):
             with open('./param/aspifile7/freq.json', 'r') as file:
                 data = json.load(file)
             for key, value in data.items():
@@ -523,7 +523,7 @@ def delTemp():
         of temp.json
     """
     try:
-        if os.path.getsize('./param/aspifile7/temp.json'):
+        if os.path.exists('./param/aspifile7/temp.json'):
             with open('./param/aspifile7/temp.json', 'r') as file:
                 data = json.load(file)
             for key, value in data.items():
@@ -544,7 +544,7 @@ def delGly():
         of gly.json
     """
     try:
-        if os.path.getsize('./param/aspifile7/gly.json'):
+        if os.path.exists('./param/aspifile7/gly.json'):
             with open('./param/aspifile7/gly.json', 'r') as file:
                 data = json.load(file)
             for key, value in data.items():
@@ -565,7 +565,7 @@ def delDlr():
         of dlr.json
     """
     try:
-        if os.path.getsize('./param/aspifile7/dlr.json'):
+        if os.path.exists('./param/aspifile7/dlr.json'):
             with open('./param/aspifile7/dlr.json', 'r') as file:
                 data = json.load(file)
             for key, value in data.items():

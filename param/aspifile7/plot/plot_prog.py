@@ -2,12 +2,18 @@
 # -*- coding: utf-8 -*-
 
 
+"""
+    In this file the systol and diastol values are grouped together
+    to make lists containing int values corresponding to the dates.
+    Then, these lists are reused to form y_axis(systol) and
+    z_axis(diastol). x_axis corresponding to the dates.
+"""
+
+
 import os
 import json
 import datetime
 import matplotlib.pyplot as plt
-#from matplotlib import dates
-#from matplotlib.dates import AutoDateLocator
 
 
 print("\nListe1 = dates :")
@@ -176,8 +182,8 @@ try:
                 xytext=(0,10), ha='center')
 
         for x,z in zip(x_axis, z_axis):
-            label = "{}".format(z)
-            plt.annotate(label, (x,z), textcoords="offset points",
+            label2 = "{}".format(z)
+            plt.annotate(label2, (x,z), textcoords="offset points",
                 xytext=(0,-15), ha='center')
 
         plt.ylabel('TA', fontsize=14)
@@ -185,15 +191,19 @@ try:
         plt.title('Relevé des tensions (TA) par date', fontsize=16)
         plt.xticks(rotation=45)
         plt.legend(['TA (blood pressure)'])
-        #plt.gcf().autofmt_xdate(rotation=45)
         plt.grid(show_grid)
         plt.show()
 except ValueError as val:
     print("+ False entry value, ", val)
 
-os.remove('./param/aspifile7/data_date.json')
-os.remove('./param/aspifile7/data_Systol.json')
-print("+ File data_date.json removed !")
-os.remove('./param/aspifile7/data_dia.json')
-os.remove('./param/aspifile7/data_Diastol.json')
-print("+ File data_tension.json removed !\n")
+try:
+    os.remove('./param/aspifile7/data_date.json')
+    os.remove('./param/aspifile7/data_Systol.json')
+    print("+ File data_date.json removed !")
+    print("+ File data_Systol.json removed !")
+    os.remove('./param/aspifile7/data_dia.json')
+    os.remove('./param/aspifile7/data_Diastol.json')
+    print("+ File data_dia.json removed !")
+    print("+ File data_Diastol.json removed !")
+except OSError as os_err:
+    print("+ OS error ! ...", os_err)

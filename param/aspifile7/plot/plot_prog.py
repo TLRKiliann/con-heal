@@ -6,8 +6,8 @@ import os
 import json
 import datetime
 import matplotlib.pyplot as plt
-from matplotlib import dates
-from matplotlib.dates import AutoDateLocator
+#from matplotlib import dates
+#from matplotlib.dates import AutoDateLocator
 
 
 print("\nListe1 = dates :")
@@ -58,8 +58,8 @@ list2 = []
 for key, value in dicolist.items():
     list1.append(key)
     list2.append(value)
-    #list2 = [item.replace("/", ".") for item in list2]
-    
+    #list2 = [item.replace("/", ", ") for item in list2]
+
 print("\nListe des dates dans l'ordre des entrées :")
 print("----------------------------------")
 print(list1)
@@ -79,7 +79,9 @@ except ValueError as err_val:
     print("+ False value (no: string or int value)", err_val)
 
 #converted_dates = list(map(datetime.datetime.strptime, list1, len(list1)*['%d/%m/%Y']))
+#x_axis = list1
 x_axis = list1
+#x = converted_dates[0:2]
 #formatter = dates.DateFormatter('%d/%m/%Y')
 #list2 = [item.replace(".", "/") for item in list2]
 y_axis = list2
@@ -88,11 +90,16 @@ try:
     show_grid = True
     with plt.style.context('seaborn-darkgrid'):
         figure, axes = plt.subplots()
-        plt.plot(x_axis, y_axis, 'o-', color='red')
+        plt.plot(x_axis, y_axis, 'o--', color='red')
+        #plt.vlines(x = x_axis, ymin = y_axis, ymax=240,
+        #   colors = 'blue',
+        #   label = 'vline_multiple - full height')
+
         for x,y in zip(x_axis, y_axis):
             label = "{}".format(y)
             plt.annotate(label, (x,y), textcoords="offset points",
                 xytext=(0,10), ha='center')
+
         plt.ylabel('TA', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
         plt.title('Relevé des tensions (TA) par date', fontsize=16)
@@ -102,7 +109,7 @@ try:
         plt.grid(show_grid)
         plt.show()
 except ValueError as val:
-    print("+ False entry value", val)
+    print("+ False entry value, ", val)
 
 os.remove('./param/aspifile7/data_date.json')
 print("+ File data_date.json removed !")

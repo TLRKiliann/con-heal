@@ -48,17 +48,30 @@ print("\nList of pain evaluation :")
 print("------------------------")
 print(list2)
 
-#list3 = [int(list2) for list2 in list2]
+try:
+    list1 = list(map(str, list1))
+except ValueError as fmt_err:
+    print("+ Invalid number (no: . or , !)", fmt_err)
+
 try:
     list2 = list(map(int, list2))
 except ValueError as base_err:
     print("+ Invalid number (no: . or , !)", base_err)
     list2 = []
 
+x_axis = list1
+y_axis = list2
+
 try:
     show_grid = True
     with plt.style.context('seaborn-darkgrid'):
-        plt.plot(list1, list2, 'o--', color='purple')
+        figure, axes = plt.subplots()
+        plt.plot(x_axis, y_axis, 'o', color='purple')
+        plt.plot(x_axis, y_axis, '--', color='purple')
+        for x,y in zip(x_axis, y_axis):
+            label = "{}".format(y)
+            plt.annotate(label, (x,y), textcoords="offset points",
+                xytext=(0,10), ha='center')
         plt.ylabel('Dlrs', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
         plt.title('Pain scale (dlr/10) by date', fontsize=16)

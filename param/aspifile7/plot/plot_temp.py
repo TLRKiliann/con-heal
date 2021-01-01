@@ -78,18 +78,17 @@ try:
     list2 = list(map(float, list2))
 except ValueError as err_val:
     print("+ False value (no: string or int value)", err_val)
+    list2 = []
 
-#converted_dates = list(map(datetime.datetime.strptime,
-#    list1, len(list1)*['%d/%m/%Y']))
 x_axis = list1
-#formatter = dates.DateFormatter('%d/%m/%Y')
 y_axis = list2
 
 try:
     show_grid = True
     with plt.style.context('seaborn-darkgrid'):
         figure, axes = plt.subplots()
-        plt.plot(x_axis, y_axis, 's--', color='purple')
+        plt.plot(x_axis, y_axis, 'o', color='teal')
+        plt.plot(x_axis, y_axis, '--', color='teal')
         for x,y in zip(x_axis, y_axis):
             label = "{:.1f}".format(y)
             plt.annotate(label, (x,y), textcoords="offset points",

@@ -47,18 +47,30 @@ print("\nListe des pulsations :")
 print("------------------------")
 print(list2)
 
-#list3 = [int(list2) for list2 in list2]
+try:
+    list1 = list(map(str, list1))
+except ValueError as dat_err:
+    print("+ Invalid number (no: . or , !)", dat_err)
+
 try:
     list2 = list(map(int, list2))
 except ValueError as base_err:
     print("+ Invalid number (no: . or , !)", base_err)
     list2 = []
 
+x_axis = list1
+y_axis = list2
+
 try:
     show_grid = True
     with plt.style.context('seaborn-darkgrid'):
-        plt.plot(list1, list2, 's', color='red')
-        plt.plot(list1, list2, '--', color='purple')
+        figure, axes = plt.subplots()
+        plt.plot(x_axis, y_axis, 's', color='orange')
+        plt.plot(x_axis, y_axis, '--', color='red')
+        for x,y in zip(x_axis, y_axis):
+            label = "{}".format(y)
+            plt.annotate(label, (x,y), textcoords="offset points",
+                xytext=(0,10), ha='center')
         plt.ylabel('Puls/min', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
         plt.title('Relevé des puls/min par date', fontsize=16)

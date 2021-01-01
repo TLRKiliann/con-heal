@@ -40,27 +40,41 @@ for key, value in dicolist.items():
     list1.append(key)
     list2.append(value)
     
-print("\nListe des dates dans l'ordre des entrées :")
+print("\nList of dates :")
 print("----------------------------------")
 print(list1)
-print("\nListe des glycemia :")
+print("\nList of glycemia :")
 print("------------------------")
 print(list2)
 
-#list3 = [int(list2) for list2 in list2]
+try:
+    list1 = list(map(str, list1))
+except ValueError as fmt_err:
+    print("+ Invalid number (no: . or , !)", fmt_err)
+
 try:
     list2 = list(map(float, list2))
 except ValueError as err_val:
     print("+ False value (no: string or int value)", err_val)
 
+x_axis = list1
+y_axis = list2
+
 try:
     show_grid = True
     with plt.style.context('seaborn-darkgrid'):
-        plt.plot(list1, list2, 'o-', color='cyan')
+        figure, axes = plt.subplots()
+        plt.plot(x_axis, y_axis, 'o', color='cyan')
+        plt.plot(x_axis, y_axis, '--', color='orange')
+        for x,y in zip(x_axis, y_axis):
+            label = "{}".format(y)
+            plt.annotate(label, (x,y), textcoords="offset points",
+                xytext=(0,10), ha='center')
         plt.ylabel('Hgt', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
         plt.title('Hgt(mmol/l) by Date', fontsize=16)
         plt.xticks(rotation=45)
+        plt.legend(['Glycemia'])
         plt.grid(show_grid)
         plt.show()
 except ValueError as shapes_err:

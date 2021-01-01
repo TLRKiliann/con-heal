@@ -172,6 +172,7 @@ try:
         figure, axes = plt.subplots()
         plt.plot(x_axis, y_axis, 'o', color='red')
         plt.plot(x_axis, z_axis, 'o', color='red')
+        plt.ylim(0, 240)
         plt.vlines(x = x_axis, ymin = z_axis, ymax = y_axis,
            colors = 'blue',
            label = 'vline_multiple - full height')

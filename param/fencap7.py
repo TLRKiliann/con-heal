@@ -37,7 +37,8 @@ def writeData():
             file.write(str("Name and Surname : "))
             file.write(textName.get() + '\n')
             file.write(str("TA : "))
-            file.write(textTa.get() + " mmHg\n")
+            file.write(textTa.get() + '/')
+            file.write(textDia.get() + "mmHg\n")
             file.write(str("Puls : "))
             file.write(textPuls.get() + "/min\n")
             file.write(str("SaO2 : "))
@@ -52,34 +53,64 @@ def writeData():
             file.write(textDlrs.get() +"/10\n\n")
 
     try:
-        if os.path.getsize('./param/aspifile7/tensor.json'):
-            print("+ File 'tensor' exist !")
-            with open('./param/aspifile7/tensor.json', 'r') as datafile:
+        if os.path.getsize('./param/aspifile7/systol.json'):
+            print("+ File 'systol' exist !")
+            with open('./param/aspifile7/systol.json', 'r') as datafile:
                 datastore = json.load(datafile)
                 print(datastore)
             dataTa = datastore
             dataTa['data'].append({'Date' : textDate.get(),
-                'Tension' : textTa.get()})
+                'Systol' : textTa.get()})
             if textTa.get() == "":
-                print("---Pas de VALEUR 'Tension' entrée---")
+                print("---Pas de VALEUR 'Systol' entrée---")
             else:
-                print("---Ok VALEUR 'Tension' entrée---")
-                with open('./param/aspifile7/tensor.json', 'w') as datafile2:
+                print("---Ok VALEUR 'Systol' entrée---")
+                with open('./param/aspifile7/systol.json', 'w') as datafile2:
                     json.dump(dataTa, datafile2, indent=4)
     except FileNotFoundError as outcom:
-        print('+ Sorry, file tensor.json not exist !')
+        print('+ Sorry, file systol.json not exist !')
         print(str(outcom))
-        print("+ File tensor.json created !")
+        print("+ File systol.json created !")
         dataTa = {}
         dataTa['data'] = []
         dataTa['data'].append({'Date' : textDate.get(),
-            'Tension' : textTa.get()})
+            'Systol' : textTa.get()})
         if textTa.get() == "":
-            print("---Pas de VALEUR 'Tension' entrée---")
+            print("---Pas de VALEUR 'Systol' entrée---")
         else:
-            print("---Ok VALEUR 'Tension' entrée---")
-            with open('./param/aspifile7/tensor.json', 'w') as datafile:
+            print("---Ok VALEUR 'Systol' entrée---")
+            with open('./param/aspifile7/systol.json', 'w') as datafile:
                 json.dump(dataTa, datafile, indent=4)
+
+    try:
+        if os.path.getsize('./param/aspifile7/diastol.json'):
+            print("+ File 'diastol' exist !")
+            with open('./param/aspifile7/diastol.json', 'r') as data:
+                datadia = json.load(data)
+                print(datadia)
+            dataDia = datadia
+            dataDia['data'].append({'Date' : textDate.get(),
+                'Diastol' : textDia.get()})
+            if textDia.get() == "":
+                print("---Pas de VALEUR 'Diastol' entrée---")
+            else:
+                print("---Ok VALEUR 'Diastol' entrée---")
+                with open('./param/aspifile7/diastol.json', 'w') as datafile2:
+                    json.dump(dataDia, datafile2, indent=4)
+    except FileNotFoundError as outcom:
+        print('+ Sorry, file diastol.json not exist !')
+        print(str(outcom))
+        print("+ File diastol.json created !")
+        dataDia = {}
+        dataDia['data'] = []
+        dataDia['data'].append({'Date' : textDate.get(),
+            'Diastol' : textDia.get()})
+        if textDia.get() == "":
+            print("---Pas de VALEUR 'Diastol' entrée---")
+        else:
+            print("---Ok VALEUR 'Diastol' entrée---")
+            with open('./param/aspifile7/diastol.json', 'w') as data2:
+                json.dump(dataDia, data2, indent=4)
 
     try:
         if os.path.getsize('./param/aspifile7/puls.json'):
@@ -251,7 +282,8 @@ def writeData():
 
     label['text'] = ("Date: " + textDate.get() +
         "\nNom: " + textName.get() +
-        "\nTension: " + textTa.get() +" -- " + "Puls: " + textPuls.get() +
+        "\nTension: " + textTa.get() + '/' + textDia.get() +
+        " -- " + "Puls: " + textPuls.get() +
         "\nSaO2: " + textSa.get() +" -- "+ "FR: " + textFr.get() +
         "\nTemperature: " + textTemp.get() +
         "\nGlycemie: " + textHgt.get() +
@@ -267,11 +299,11 @@ def appelTens():
         and launching matplotlib graph
     """
     try:
-        if os.path.getsize('./param/aspifile7/tensor.json'):
+        if os.path.getsize('./param/aspifile7/systol.json'):
             subprocess.run('./param/aspifile7/aspidata.py', check=True)
             label['text'] = ("Date: " + textDate.get() +
                 "\nNom: " + textName.get() +
-                "\nTension: " + textTa.get())
+                "\nTension: " + textTa.get() + textDia.get())
     except FileNotFoundError as errorgraph1:
         print('+ Sorry the TA plot doesn\'t work ! Data missing !', errorgraph1)
         label['text'] = "Sorry the TA plot doesn\'t work ! Data missing !"
@@ -379,26 +411,48 @@ def delMain():
         print("+ Nothing has changed !")
         label['text'] = "Nothing has changed !"
 
-def delTA():
+def delSystol():
     """
         To earase last line
-        of tensor.json
+        of systol.json
     """
     try:
-        if os.path.getsize('./param/aspifile7/tensor.json'):
-            with open('./param/aspifile7/tensor.json', 'r') as file:
-                data = json.load(file)
+        if os.path.getsize('./param/aspifile7/systol.json'):
+            with open('./param/aspifile7/systol.json', 'r') as filesys:
+                data = json.load(filesys)
             for key, value in data.items():
-                print("Last value of TA deleted")
+                print("Last value of systol deleted")
                 print(value[-1])
                 del value[-1]
-            with open('./param/aspifile7/tensor.json', 'w') as file:
+            with open('./param/aspifile7/systol.json', 'w') as file:
                 data = json.dump(data, file, indent=4)
-            label['text'] = "Last value of 'tensor.json' has been deleted !"
-            print("Last value of 'tensor.json' has been deleted !")
+            label['text'] = "Last value of 'systol.json' has been deleted !"
+            print("Last value of 'systol.json' has been deleted !")
+            delDia()
     except (FileNotFoundError, IndexError) as out_ta:
         label['text'] = "Sorry, file asked not exist !"
         print('+ Sorry, file asked not exist !', out_ta)
+
+def delDia():
+    """
+        To earase last line
+        of diastol.json
+    """
+    try:
+        if os.path.getsize('./param/aspifile7/diastol.json'):
+            with open('./param/aspifile7/diastol.json', 'r') as filedia:
+                data = json.load(filedia)
+            for key, value in data.items():
+                print("Last value of diastol deleted")
+                print(value[-1])
+                del value[-1]
+            with open('./param/aspifile7/diastol.json', 'w') as file:
+                data = json.dump(data, file, indent=4)
+            label['text'] = "Last value of 'diastol.json' has been deleted !"
+            print("Last value of 'diastol.json' has been deleted !")
+    except (FileNotFoundError, IndexError) as out_dia:
+        label['text'] = "Sorry, file asked not exist !"
+        print('+ Sorry, file asked not exist !', out_dia)
 
 def delPuls():
     """
@@ -533,7 +587,8 @@ def delEvery():
     MsgBox = messagebox.askquestion("Confirm","Are you sure ?\n"
         "It will delete all files with all data !!!")
     if MsgBox == 'yes':
-        delTA()
+        delSystol()
+        delDia()
         delPuls()
         delSat()
         delFreq()
@@ -571,9 +626,13 @@ label1 = Label(gui, text='Enter Name : ', font=('Times', 14),
     fg='white', bg='DodgerBlue2', width=15, anchor='e')
 label1.grid(row=3, column=1)
 
-label2 = Label(gui, text='Enter TA : ', font=('Times', 14),
+label2 = Label(gui, text='Enter Systol : ', font=('Times', 14),
     fg='white', bg='DodgerBlue2', width=15, anchor='e')
-label2.grid(row=4, column=1)
+label2.grid(sticky='e', row=4, column=1)
+
+labelDia = Label(gui, text='Diastolic : ', font=('Times', 14),
+    fg='white', bg='DodgerBlue2', width=10, anchor='e')
+labelDia.grid(row=4, column=2)
 
 label3 = Label(gui, text='Enter Puls : ', font=('Times', 14),
     fg='white', bg='DodgerBlue2', width=15, anchor='e')
@@ -617,8 +676,11 @@ textName = Entry(gui, textvariable=name_text,
 name_text.set(line1[:-1])
 textName.grid(row=3, column=2)
 
-textTa = Entry(gui, highlightbackground='gray', bd=4)
-textTa.grid(row=4, column=2)
+textTa = Entry(gui, highlightbackground='gray', width=4, bd=4)
+textTa.grid(sticky='w', row=4, column=2)
+
+textDia = Entry(gui, highlightbackground='gray', width=4, bd=4)
+textDia.grid(sticky='e', row=4, column=2)
 
 textPuls = Entry(gui, highlightbackground='gray', bd=4)
 textPuls.grid(row=5, column=2)
@@ -716,7 +778,7 @@ button9Write.grid(row=10, column=3)
 button1Del = Button(gui)
 button1Del.config(text='Cancel last TA', width=15,
     bg='coral', fg='yellow', activeforeground='white',
-    activebackground='red', command=delTA)
+    activebackground='red', command=delSystol)
 button1Del.grid(row=4, column=4)
 
 button2Del = Button(gui)

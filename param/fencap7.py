@@ -303,14 +303,14 @@ def appelTens():
             subprocess.run('./param/aspifile7/aspidata.py', check=True)
             label['text'] = ("Date: " + textDate.get() +
                 "\nNom: " + textName.get() +
-                "\nTension: " + textTa.get() + textDia.get())
+                "\nTension: " + textTa.get() + '/' + textDia.get())
     except FileNotFoundError as errorgraph1:
         print('+ Sorry the TA plot doesn\'t work ! Data missing !', errorgraph1)
         label['text'] = "Sorry the TA plot doesn\'t work ! Data missing !"
 
 def appelPuls():
     """
-        to call aspidata.py for recapt data
+        to call aspipuls.py for recapt data
         and launching matplotlib graph
     """
     try:
@@ -324,7 +324,7 @@ def appelPuls():
 
 def appelSat():
     """
-        to call aspidata.py for recapt data
+        to call aspisat.py for recapt data
         and launching matplotlib graph
     """
     try:
@@ -338,7 +338,7 @@ def appelSat():
 
 def appelFreq():
     """
-        to call aspidata.py for recapt data
+        to call aspifreq.py for recapt data
         and launching matplotlib graph
     """
     try:
@@ -352,7 +352,7 @@ def appelFreq():
 
 def appelTemp():
     """
-        to call aspidata.py for recapt data
+        to call aspitemp.py for recapt data
         and launching matplotlib graph
     """
     try:
@@ -366,7 +366,7 @@ def appelTemp():
 
 def appelGly():
     """
-        to call aspidata.py for recapt data
+        to call aspigly.py for recapt data
         and launching matplotlib graph
     """
     try:
@@ -380,7 +380,7 @@ def appelGly():
 
 def appelDlr():
     """
-        to call aspidata.py for recapt data
+        to call aspidlr.py for recapt data
         and launching matplotlib graph
     """
     try:
@@ -394,7 +394,7 @@ def appelDlr():
 
 def delMain():
     """
-        To earase paramdata7.txt
+        To erase paramdata7.txt
     """
     Main_MsgBox = messagebox.askquestion("Confirm", "Are you sure ?\n"
         "It will delete paramdata7.txt with all data !!!")
@@ -413,7 +413,7 @@ def delMain():
 
 def delSystol():
     """
-        To earase last line
+        To erase last line
         of systol.json
     """
     try:
@@ -435,7 +435,7 @@ def delSystol():
 
 def delDia():
     """
-        To earase last line
+        To erase last line
         of diastol.json
     """
     try:
@@ -456,7 +456,7 @@ def delDia():
 
 def delPuls():
     """
-        To earase last line
+        To erase last line
         of puls.json
     """
     try:
@@ -477,7 +477,7 @@ def delPuls():
 
 def delSat():
     """
-        To earase last line
+        To erase last line
         of sat.json
     """
     try:
@@ -498,7 +498,7 @@ def delSat():
 
 def delFreq():
     """
-        To earase last line
+        To erase last line
         of freq.json
     """
     try:
@@ -519,7 +519,7 @@ def delFreq():
 
 def delTemp():
     """
-        To earase last line
+        To erase last line
         of temp.json
     """
     try:
@@ -540,7 +540,7 @@ def delTemp():
 
 def delGly():
     """
-        To earase last line
+        To erase last line
         of gly.json
     """
     try:
@@ -561,7 +561,7 @@ def delGly():
 
 def delDlr():
     """
-        To earase last line
+        To erase last line
         of dlr.json
     """
     try:
@@ -709,7 +709,7 @@ button2Write.config(text='Quit', width=15,
 button2Write.grid(row=1, column=3)
 
 buttonDel = Button(gui)
-buttonDel.config(text='Reinitialize All Data', width=15,
+buttonDel.config(text='Erase Last Values Checked', width=15,
     bg='coral', fg='yellow', activebackground='red',
     activeforeground='white', command=delEvery)
 buttonDel.grid(row=1, column=4)

@@ -186,7 +186,7 @@ try:
             plt.annotate(label2, (x,z), textcoords="offset points",
                 xytext=(0,-15), ha='center')
 
-        plt.ylabel('TA', fontsize=14)
+        plt.ylabel('TA (blood pressure)', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
         plt.title('Relevé des tensions (TA) par date', fontsize=16)
         plt.xticks(rotation=45)

@@ -152,16 +152,18 @@ except ValueError as err_vlist1:
 
 try:
     list2 = list(map(int, list2))
-except ValueError as err_val:
-    print("+ False value (no: string or int value)", err_val)
+except ValueError as err_vallist2:
+    print("+ False value (no: string or float value)", err_vallist2)
     list2 = []
 
 try:
     list4 = list(map(int, list4))
-except ValueError as err_val:
-    print("+ False value (no: string or int value)", err_val)
+except ValueError as err_vallist4:
+    print("+ False value (no: string or float value)", err_vallist4)
     list4 = []
 
+#converted_dates = list(map(datetime.datetime.strptime, list1, len(list1)*['%d/%m/%Y']))
+#formatter = converted_dates.DateFormatter('%d/%m/%Y')
 x_axis = list1
 y_axis = list2
 z_axis = list4
@@ -197,7 +199,7 @@ try:
 
         plt.plot(x_axis, y_axis, 'o', color='red')
         plt.plot(x_axis, z_axis, 'o', color='red')
-        #plt.ylim(0, 240)
+        #plt.ylim(30, 240)
         plt.vlines(x = x_axis, ymin = z_axis, ymax = y_axis,
            colors = 'blue',
            label = 'vline_multiple - full height')
@@ -212,6 +214,7 @@ try:
             plt.annotate(label2, (x,z), textcoords="offset points",
                 xytext=(0,-15), ha='center')
 
+        #plt.gcf().axes[0].xaxis.set_major_formatter(formatter)
         plt.ylabel('TA (blood pressure)', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
         #plt.title('Relevé des tensions (TA) par date', fontsize=18)

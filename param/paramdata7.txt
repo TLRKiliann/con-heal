@@ -31,3 +31,14 @@ Temperature : °C
 Glycemie :  mmol/l
 Douleurs (Pain) : /10
 
+Date : 02/02/2021
+Hour : 11:31:08
+Name and Surname : Julian Assange
+TA : 250/110mmHg
+Puls : /min
+SaO2 : %
+FR : /min
+Temperature : °C
+Glycemie :  mmol/l
+Douleurs (Pain) : /10
+

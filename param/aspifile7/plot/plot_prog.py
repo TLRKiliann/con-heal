@@ -166,22 +166,34 @@ x_axis = list1
 y_axis = list2
 z_axis = list4
 
-# Color style :fivethirtyeight, seaborn-darkgrid
+# Color style :fivethirtyeight, seaborn-darkgrid, bmh, classic
 try:
     show_grid = True
     with plt.style.context('seaborn-darkgrid'):
         fig = plt.figure()
         fig.set_facecolor("black")
+        lab = fig.suptitle('Relevé des tensions (TA) par date',
+            fontsize=18)
+        lab.set_color('aquamarine')
         ax = plt.subplot()
-        ax.tick_params(axis='x', colors='white')
-        ax.tick_params(axis='y', colors='white')
+        ax.tick_params(axis='x', colors='aquamarine')
+        #for tick in ax.get_xticklabels():
+        #    tick.set_color('black')
+        ax.tick_params(axis='y', colors='aquamarine')
+        #for tick in ax.get_yticklabels():
+        #    tick.set_color('black')
+        # with bmh style context :
+        #ax.spines['top'].set_color('cyan')
+        #ax.spines['left'].set_color('cyan')
+        #ax.spines['right'].set_color('cyan')
         #ax.spines['bottom'].set_color('cyan')
         labelc = plt.ylabel("y-label")
-        labelc.set_color("white")
+        labelc.set_color("aquamarine")
         labelc2 = plt.xlabel("x-label")
-        labelc2.set_color("white")
-        labelc3 = plt.title("title")
-        labelc3.set_color("white")
+        labelc2.set_color("aquamarine")
+        #labelc3 = plt.title("Relevé des tensions (TA) par date",
+        #   fontsize=18)
+        #labelc3.set_color('aquamarine')
 
         plt.plot(x_axis, y_axis, 'o', color='red')
         plt.plot(x_axis, z_axis, 'o', color='red')
@@ -202,13 +214,21 @@ try:
 
         plt.ylabel('TA (blood pressure)', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
-        plt.title('Relevé des tensions (TA) par date', fontsize=18)
+        #plt.title('Relevé des tensions (TA) par date', fontsize=18)
         plt.xticks(rotation=45)
         plt.legend(['TA (blood pressure)'])
         plt.grid(show_grid)
         plt.show()
 except ValueError as val:
     print("+ False entry value, ", val)
+    os.remove('./param/aspifile7/data_date.json')
+    os.remove('./param/aspifile7/data_Systol.json')
+    print("+ File data_date.json removed !")
+    print("+ File data_Systol.json removed !")
+    os.remove('./param/aspifile7/data_dia.json')
+    os.remove('./param/aspifile7/data_Diastol.json')
+    print("+ File data_dia.json removed !")
+    print("+ File data_Diastol.json removed !")
 
 try:
     os.remove('./param/aspifile7/data_date.json')

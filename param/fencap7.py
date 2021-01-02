@@ -17,13 +17,14 @@ import time
 import sys
 
 
-def writeData():
+def writeData(textDate, textHour, textName, textTa, textDia,
+    textPuls, textSa, textFr, textTemp, textHgt, textDlrs):
     """
         To export data in a json file
         and launching aspiFile7.py
     """
     try:
-        if os.path.exists('./param/paramdata7.txt'):
+        if os.path.getsize('./param/paramdata7.txt'):
             print("+ File 'paramdata7.txt' exist !")
     except FileNotFoundError as info:
         print("The file : 'paramdata7.txt' doesn't exist !", info)
@@ -53,7 +54,7 @@ def writeData():
             file.write(textDlrs.get() +"/10\n\n")
 
     try:
-        if os.path.exists('./param/aspifile7/systol.json'):
+        if os.path.getsize('./param/aspifile7/systol.json'):
             print("+ File 'systol' exist !")
             with open('./param/aspifile7/systol.json', 'r') as datafile:
                 datastore = json.load(datafile)
@@ -83,12 +84,12 @@ def writeData():
                 json.dump(dataTa, datafile, indent=4)
 
     try:
-        if os.path.exists('./param/aspifile7/diastol.json'):
+        if os.path.getsize('./param/aspifile7/diastol.json'):
             print("+ File 'diastol' exist !")
-            with open('./param/aspifile7/diastol.json', 'r') as data:
-                datadia = json.load(data)
-                print(datadia)
-            dataDia = datadia
+            with open('./param/aspifile7/diastol.json', 'r') as datafile:
+                datastore = json.load(datafile)
+                print(datastore)
+            dataDia = datastore
             dataDia['data'].append({'Date' : textDate.get(),
                 'Diastol' : textDia.get()})
             if textDia.get() == "":
@@ -109,11 +110,11 @@ def writeData():
             print("---Pas de VALEUR 'Diastol' entrée---")
         else:
             print("---Ok VALEUR 'Diastol' entrée---")
-            with open('./param/aspifile7/diastol.json', 'w') as data2:
-                json.dump(dataDia, data2, indent=4)
+            with open('./param/aspifile7/diastol.json', 'w') as datafile:
+                json.dump(dataDia, datafile, indent=4)
 
     try:
-        if os.path.exists('./param/aspifile7/puls.json'):
+        if os.path.getsize('./param/aspifile7/puls.json'):
             print("+ File 'puls' exist !")
             with open('./param/aspifile7/puls.json', 'r') as datapuls:
                 datastore = json.load(datapuls)
@@ -141,7 +142,7 @@ def writeData():
                 json.dump(dataP, datapuls3, indent=4)
 
     try:
-        if os.path.exists('./param/aspifile7/sat.json'):
+        if os.path.getsize('./param/aspifile7/sat.json'):
             print("+ File 'sat' exist !")
             with open('./param/aspifile7/sat.json', 'r') as datasat:
                 datastore = json.load(datasat)
@@ -169,7 +170,7 @@ def writeData():
                 json.dump(dataS, datasat3, indent=4)
 
     try:
-        if os.path.exists('./param/aspifile7/freq.json'):
+        if os.path.getsize('./param/aspifile7/freq.json'):
             print("+ File 'freq' exist !")
             with open('./param/aspifile7/freq.json', 'r') as datafreq:
                 datastore = json.load(datafreq)
@@ -197,7 +198,7 @@ def writeData():
                 json.dump(dataF, datafreq3, indent=4)
 
     try:
-        if os.path.exists('./param/aspifile7/temp.json'):
+        if os.path.getsize('./param/aspifile7/temp.json'):
             print("+ File 'temp' exist !")
             with open('./param/aspifile7/temp.json', 'r') as datatemp:
                 datastore = json.load(datatemp)
@@ -225,7 +226,7 @@ def writeData():
                 json.dump(dataTe2, datatemp3, indent=4)
 
     try:
-        if os.path.exists('./param/aspifile7/gly.json'):
+        if os.path.getsize('./param/aspifile7/gly.json'):
             print("+ File 'gly' exist !")
             with open('./param/aspifile7/gly.json', 'r') as datagly:
                 datastore = json.load(datagly)
@@ -253,7 +254,7 @@ def writeData():
                 json.dump(dataG, datagly3, indent=4)
 
     try:
-        if os.path.exists('./param/aspifile7/dlr.json'):
+        if os.path.getsize('./param/aspifile7/dlr.json'):
             print("+ File 'dlr' exist !")
             with open('./param/aspifile7/dlr.json', 'r') as datadlr:
                 datastore = json.load(datadlr)
@@ -293,13 +294,13 @@ def writeData():
 def mainRead():
     subprocess.run('./param/main_read7.py', check=True)
 
-def appelTens():
+def appelTens(textDate, textName, textTa, textDia):
     """
         to call aspidata.py for recapt data
         and launching matplotlib graph
     """
     try:
-        if os.path.exists('./param/aspifile7/systol.json'):
+        if os.path.getsize('./param/aspifile7/systol.json'):
             subprocess.run('./param/aspifile7/aspidata.py', check=True)
             label['text'] = ("Date: " + textDate.get() +
                 "\nNom: " + textName.get() +
@@ -308,13 +309,13 @@ def appelTens():
         print('+ Sorry the TA plot doesn\'t work ! Data missing !', errorgraph1)
         label['text'] = "Sorry the TA plot doesn\'t work ! Data missing !"
 
-def appelPuls():
+def appelPuls(textDate, textName, textPuls):
     """
         to call aspipuls.py for recapt data
         and launching matplotlib graph
     """
     try:
-        if os.path.exists('./param/aspifile7/puls.json'):
+        if os.path.getsize('./param/aspifile7/puls.json'):
             subprocess.run('./param/aspifile7/aspipuls.py', check=True)
             label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
                 "\nPulsations: " + textPuls.get())
@@ -322,13 +323,13 @@ def appelPuls():
         print('+ Sorry the Puls plot doesn\'t work ! Data missing !', errorgraph2)
         label['text'] = "Sorry the Puls plot doesn\'t work ! Data missing !"
 
-def appelSat():
+def appelSat(textDate, textName, textSa):
     """
         to call aspisat.py for recapt data
         and launching matplotlib graph
     """
     try:
-        if os.path.exists('./param/aspifile7/sat.json'):
+        if os.path.getsize('./param/aspifile7/sat.json'):
             subprocess.run('./param/aspifile7/aspisat.py', check=True)
             label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
                 "\nSaO2: " + textSa.get())
@@ -336,13 +337,13 @@ def appelSat():
         print('+ Sorry the SaO2 plot doesn\'t work ! Data missing !', errorgraph3)
         label['text'] = "Sorry the SaO2 plot doesn\'t work ! Data missing !"
 
-def appelFreq():
+def appelFreq(textDate, textName, textFr):
     """
         to call aspifreq.py for recapt data
         and launching matplotlib graph
     """
     try:
-        if os.path.exists('./param/aspifile7/freq.json'):
+        if os.path.getsize('./param/aspifile7/freq.json'):
             subprocess.run('./param/aspifile7/aspifreq.py', check=True)
             label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
                 "\nFrequ. resp.: " + textFr.get())
@@ -350,13 +351,13 @@ def appelFreq():
         print('+ Sorry the FR plot doesn\'t work ! Data missing !', errorgraph4)
         label['text'] = "Sorry the FR plot doesn\'t work ! Data missing !"
 
-def appelTemp():
+def appelTemp(textDate, textName, textTemp):
     """
         to call aspitemp.py for recapt data
         and launching matplotlib graph
     """
     try:
-        if os.path.exists('./param/aspifile7/temp.json'):
+        if os.path.getsize('./param/aspifile7/temp.json'):
             subprocess.run('./param/aspifile7/aspitemp.py', check=True)
             label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
                 "\nTemperature: " + textTemp.get())
@@ -364,13 +365,13 @@ def appelTemp():
         print('+ Sorry the Temp plot doesn\'t work ! Data missing !', errorgraph5)
         label['text'] = "Sorry the Temp plot doesn\'t work ! Data missing !"
 
-def appelGly():
+def appelGly(textDate, textName, textHgt):
     """
         to call aspigly.py for recapt data
         and launching matplotlib graph
     """
     try:
-        if os.path.exists('./param/aspifile7/gly.json'):
+        if os.path.getsize('./param/aspifile7/gly.json'):
             subprocess.run('./param/aspifile7/aspigly.py', check=True)
             label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
                 "\nGlycémie: " + textHgt.get())
@@ -378,13 +379,13 @@ def appelGly():
         print('+ Sorry the Hgt plot doesn\'t work ! Data missing !', errorgraph6)
         label['text'] = "Sorry the Hgt plot doesn\'t work ! Data missing !"
 
-def appelDlr():
+def appelDlr(textDate, textName, textDlrs):
     """
         to call aspidlr.py for recapt data
         and launching matplotlib graph
     """
     try:
-        if os.path.exists('./param/aspifile7/dlr.json'):
+        if os.path.getsize('./param/aspifile7/dlr.json'):
             subprocess.run('./param/aspifile7/aspidlr.py', check=True)
             label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
                 "\nDouleurs: " + textDlrs.get())
@@ -400,7 +401,7 @@ def delMain():
         "It will delete paramdata7.txt with all data !!!")
     if Main_MsgBox == 'yes':
         try:
-            if os.path.exists('./param/paramdata7.txt'):
+            if os.path.getsize('./param/paramdata7.txt'):
                 os.remove('./param/paramdata7.txt')
                 label['text'] = "File paramdata7.txt has been deleted !"
                 print("+ File paramdata7.txt has been deleted !")
@@ -417,7 +418,7 @@ def delSystol():
         of systol.json
     """
     try:
-        if os.path.exists('./param/aspifile7/systol.json'):
+        if os.path.getsize('./param/aspifile7/systol.json'):
             with open('./param/aspifile7/systol.json', 'r') as filesys:
                 data = json.load(filesys)
             for key, value in data.items():
@@ -439,7 +440,7 @@ def delDia():
         of diastol.json
     """
     try:
-        if os.path.exists('./param/aspifile7/diastol.json'):
+        if os.path.getsize('./param/aspifile7/diastol.json'):
             with open('./param/aspifile7/diastol.json', 'r') as filedia:
                 data = json.load(filedia)
             for key, value in data.items():
@@ -460,7 +461,7 @@ def delPuls():
         of puls.json
     """
     try:
-        if os.path.exists('./param/aspifile7/puls.json'):
+        if os.path.getsize('./param/aspifile7/puls.json'):
             with open('./param/aspifile7/puls.json', 'r') as file:
                 data = json.load(file)
             for key, value in data.items():
@@ -481,7 +482,7 @@ def delSat():
         of sat.json
     """
     try:
-        if os.path.exists('./param/aspifile7/sat.json'):
+        if os.path.getsize('./param/aspifile7/sat.json'):
             with open('./param/aspifile7/sat.json', 'r') as file:
                 data = json.load(file)
             for key, value in data.items():
@@ -502,7 +503,7 @@ def delFreq():
         of freq.json
     """
     try:
-        if os.path.exists('./param/aspifile7/freq.json'):
+        if os.path.getsize('./param/aspifile7/freq.json'):
             with open('./param/aspifile7/freq.json', 'r') as file:
                 data = json.load(file)
             for key, value in data.items():
@@ -523,7 +524,7 @@ def delTemp():
         of temp.json
     """
     try:
-        if os.path.exists('./param/aspifile7/temp.json'):
+        if os.path.getsize('./param/aspifile7/temp.json'):
             with open('./param/aspifile7/temp.json', 'r') as file:
                 data = json.load(file)
             for key, value in data.items():
@@ -544,7 +545,7 @@ def delGly():
         of gly.json
     """
     try:
-        if os.path.exists('./param/aspifile7/gly.json'):
+        if os.path.getsize('./param/aspifile7/gly.json'):
             with open('./param/aspifile7/gly.json', 'r') as file:
                 data = json.load(file)
             for key, value in data.items():
@@ -565,7 +566,7 @@ def delDlr():
         of dlr.json
     """
     try:
-        if os.path.exists('./param/aspifile7/dlr.json'):
+        if os.path.getsize('./param/aspifile7/dlr.json'):
             with open('./param/aspifile7/dlr.json', 'r') as file:
                 data = json.load(file)
             for key, value in data.items():
@@ -676,28 +677,38 @@ textName = Entry(gui, textvariable=name_text,
 name_text.set(line1[:-1])
 textName.grid(row=3, column=2)
 
-textTa = Entry(gui, highlightbackground='gray', width=4, bd=4)
+textsvta = StringVar()
+textTa = Entry(gui, textvariable=textsvta, highlightbackground='gray',
+    width=4, bd=4)
 textTa.grid(sticky='w', row=4, column=2)
 
-textDia = Entry(gui, highlightbackground='gray', width=4, bd=4)
+textsvdia = StringVar()
+textDia = Entry(gui, textvariable=textsvdia, highlightbackground='gray',
+    width=4, bd=4)
 textDia.grid(sticky='e', row=4, column=2)
 
-textPuls = Entry(gui, highlightbackground='gray', bd=4)
+textsvpuls = StringVar()
+textPuls = Entry(gui, textvariable=textsvpuls, highlightbackground='gray', bd=4)
 textPuls.grid(row=5, column=2)
 
-textSa = Entry(gui, highlightbackground='gray', bd=4)
+textsvsa = StringVar()
+textSa = Entry(gui, textvariable=textsvsa, highlightbackground='gray', bd=4)
 textSa.grid(row=6, column=2)
 
-textFr = Entry(gui, highlightbackground='gray', bd=4)
+textsvfr = StringVar()
+textFr = Entry(gui, textvariable=textsvfr, highlightbackground='gray', bd=4)
 textFr.grid(row=7, column=2)
 
-textTemp = Entry(gui, highlightbackground='gray', bd=4)
+textsvtemp = StringVar()
+textTemp = Entry(gui, textvariable=textsvtemp, highlightbackground='gray', bd=4)
 textTemp.grid(row=8, column=2)
 
-textHgt = Entry(gui, highlightbackground='gray', bd=4)
+textsvhgt = StringVar()
+textHgt = Entry(gui, textvariable=textsvhgt, highlightbackground='gray', bd=4)
 textHgt.grid(row=9, column=2)
 
-textDlrs = Entry(gui, highlightbackground='gray', bd=4)
+textsvdlrs = StringVar()
+textDlrs = Entry(gui, textvariable=textsvdlrs, highlightbackground='gray', bd=4)
 textDlrs.grid(row=10, column=2)
 
 button2Write = Button(gui)
@@ -709,7 +720,7 @@ button2Write.config(text='Quit', width=15,
 button2Write.grid(row=1, column=3)
 
 buttonDel = Button(gui)
-buttonDel.config(text='Erase Last Values Checked', width=15,
+buttonDel.config(text='Erase Last Values', width=15,
     bg='coral', fg='yellow', activebackground='red',
     activeforeground='white', command=delEvery)
 buttonDel.grid(row=1, column=4)
@@ -718,7 +729,9 @@ buttonWrite = Button(gui)
 buttonWrite.config(text='CAPTURE DATA', width=33,
     fg='navy', bg='lightblue',
     activeforeground='gray40',
-    activebackground='pale turquoise', command=writeData)
+    activebackground='pale turquoise',
+    command = lambda : writeData(textDate, textHour, textName, textTa, textDia, textPuls,
+        textSa, textFr, textTemp, textHgt, textDlrs))
 buttonWrite.grid(row=2, column=3, columnspan=4)
 
 buttonMainlec = Button(gui)
@@ -736,49 +749,50 @@ buttonDel.grid(row=3, column=4)
 button3Write = Button(gui)
 button3Write.config(text='Graph TA', width=15,
     bg='lightblue', fg='navy', activebackground='pale turquoise',
-    activeforeground='gray40', command=appelTens)
+    activeforeground='gray40',
+    command = lambda : appelTens(textDate, textName, textTa, textDia))
 button3Write.grid(row=4, column=3)
 
 button4Write = Button(gui)
 button4Write.config(text='Graph Puls', width=15,
     bg='lightblue', fg='navy', activebackground='pale turquoise',
-    activeforeground='gray40', command=appelPuls)
+    activeforeground='gray40', command = lambda : appelPuls(textDate, textName, textPuls))
 button4Write.grid(row=5, column=3)
 
 button5Write = Button(gui)
 button5Write.config(text='Graph SaO2', width=15,
     bg='lightblue', fg='navy', activebackground='pale turquoise',
-    activeforeground='gray40', command=appelSat)
+    activeforeground='gray40', command = lambda : appelSat(textDate, textName, textSa))
 button5Write.grid(row=6, column=3)
 
 button6Write = Button(gui)
 button6Write.config(text='Graph FR', width=15,
     bg='lightblue', fg='navy', activebackground='pale turquoise',
-    activeforeground='gray40', command=appelFreq)
+    activeforeground='gray40', command = lambda : appelFreq(textDate, textName, textFr))
 button6Write.grid(row=7, column=3)
 
 button7Write = Button(gui)
 button7Write.config(text='Graph T°C', width=15,
     bg='lightblue', fg='navy',activebackground='pale turquoise',
-    activeforeground='gray40', command=appelTemp)
+    activeforeground='gray40', command = lambda : appelTemp(textDate, textName, textTemp))
 button7Write.grid(row=8, column=3)
 
 button8Write = Button(gui)
 button8Write.config(text='Graph Hgt', width=15,
     bg='lightblue', fg='navy',activebackground='pale turquoise',
-    activeforeground='gray40', command=appelGly)
+    activeforeground='gray40', command = lambda : appelGly(textDate, textName, textHgt))
 button8Write.grid(row=9, column=3)
 
 button9Write = Button(gui)
 button9Write.config(text='Graph Dlrs', width=15,
     bg='lightblue', fg='navy',activebackground='pale turquoise',
-    activeforeground='gray40', command=appelDlr)
+    activeforeground='gray40', command = lambda : appelDlr(textDate, textName, textDlrs))
 button9Write.grid(row=10, column=3)
 
 button1Del = Button(gui)
 button1Del.config(text='Cancel last TA', width=15,
     bg='coral', fg='yellow', activeforeground='white',
-    activebackground='red', command=delSystol)
+    activebackground='red', command = delSystol)
 button1Del.grid(row=4, column=4)
 
 button2Del = Button(gui)

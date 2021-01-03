@@ -60,7 +60,7 @@ def writeData(textDate, textHour, textName, textTa, textDia,
                 datastore = json.load(datafile)
                 print(datastore)
             dataTa = datastore
-            dataTa['data'].append({'Date' : textDate.get(),
+            dataTa['data'].append({'Date' : textDate.get() + ' : ' + textHour.get(),
                 'Systol' : textTa.get()})
             if textTa.get() == "":
                 print("---Pas de VALEUR 'Systol' entrée---")
@@ -74,7 +74,7 @@ def writeData(textDate, textHour, textName, textTa, textDia,
         print("+ File systol.json created !")
         dataTa = {}
         dataTa['data'] = []
-        dataTa['data'].append({'Date' : textDate.get(),
+        dataTa['data'].append({'Date' : textDate.get() + ' : ' + textHour.get(),
             'Systol' : textTa.get()})
         if textTa.get() == "":
             print("---Pas de VALEUR 'Systol' entrée---")
@@ -90,7 +90,7 @@ def writeData(textDate, textHour, textName, textTa, textDia,
                 datastore = json.load(datafile)
                 print(datastore)
             dataDia = datastore
-            dataDia['data'].append({'Date' : textDate.get(),
+            dataDia['data'].append({'Date' : textDate.get() + ' : ' + textHour.get(),
                 'Diastol' : textDia.get()})
             if textDia.get() == "":
                 print("---Pas de VALEUR 'Diastol' entrée---")
@@ -104,7 +104,7 @@ def writeData(textDate, textHour, textName, textTa, textDia,
         print("+ File diastol.json created !")
         dataDia = {}
         dataDia['data'] = []
-        dataDia['data'].append({'Date' : textDate.get(),
+        dataDia['data'].append({'Date' : textDate.get() + ' : ' + textHour.get(),
             'Diastol' : textDia.get()})
         if textDia.get() == "":
             print("---Pas de VALEUR 'Diastol' entrée---")

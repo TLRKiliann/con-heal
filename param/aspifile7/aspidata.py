@@ -32,11 +32,14 @@ try:
 except IndexError as err_read:
     print("+ Error from aspidata.py", err_read)
 
-print("\nList of dates\n")
+print("\nList of dates :\n")
 
 data_list1 = []
 for value in zip(value):
     data_list1.append(value[0]['Date'])
+
+print("--- Data_list1 de aspidata.py :---\n", data_list1)
+print("\n")
 
 with open('./param/aspifile7/data_date.json', 'a+') as datafile:
     json.dump(data_list1, datafile, indent=4)

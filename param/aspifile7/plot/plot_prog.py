@@ -14,6 +14,7 @@ import os
 import json
 import datetime
 import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
 
 
 print("\nListe1 = dates :")
@@ -162,9 +163,9 @@ except ValueError as err_vallist4:
     print("+ False value (no: string or float value)", err_vallist4)
     list4 = []
 
-#converted_dates = list(map(datetime.datetime.strptime, list1, len(list1)*['%d/%m/%Y']))
-#formatter = converted_dates.DateFormatter('%d/%m/%Y')
-x_axis = list1
+xdates = [datetime.datetime.strptime('{:10}'.format(str(li)),'%d/%m/%Y') for li in list1]
+
+x_axis = xdates
 y_axis = list2
 z_axis = list4
 
@@ -214,6 +215,8 @@ try:
             plt.annotate(label2, (x,z), textcoords="offset points",
                 xytext=(0,-15), ha='center')
 
+        plt.gca().xaxis.set_major_locator(mdates.MonthLocator())
+        plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y'))
         #plt.gcf().axes[0].xaxis.set_major_formatter(formatter)
         plt.ylabel('TA (blood pressure)', fontsize=14)
         plt.xlabel('Dates', fontsize=14)

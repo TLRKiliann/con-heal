@@ -627,7 +627,7 @@ label1 = Label(gui, text='Enter Name : ', font=('Times', 14),
     fg='white', bg='DodgerBlue2', width=15, anchor='e')
 label1.grid(row=3, column=1)
 
-label2 = Label(gui, text='Enter Systol : ', font=('Times', 14),
+label2 = Label(gui, text='Enter Systolic : ', font=('Times', 14),
     fg='white', bg='DodgerBlue2', width=15, anchor='e')
 label2.grid(sticky='e', row=4, column=1)
 

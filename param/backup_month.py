@@ -265,6 +265,21 @@ def eraserParam1():
             print("paramdata1.txt file removed")
     except FileNotFoundError as err_main:
         print("Error file not found", err_main)
+
+    try:
+        if os.path.exists('./param/aspifile1/systol.json'):
+            os.remove('./param/aspifile1/systol.json')
+            print("systol.json file removed")
+    except FileNotFoundError as err_syst:
+        print("Error file not found", err_syst)
+
+    try:
+        if os.path.exists('./param/aspifile1/diastol.json'):
+            os.remove('./param/aspifile1/diastol.json')
+            print("diastol.json file removed")
+    except FileNotFoundError as err_diast:
+        print("Error file not found", err_diast)
+
     try:
         if os.path.exists('./param/aspifile1/temp.json'):
             os.remove('./param/aspifile1/temp.json')
@@ -321,6 +336,21 @@ def eraserParam2():
             print("paramdata2.txt file removed")
     except FileNotFoundError as err_main:
         print("Error file not found", err_main)
+
+    try:
+        if os.path.exists('./param/aspifile1/systol.json'):
+            os.remove('./param/aspifile1/systol.json')
+            print("systol.json file removed")
+    except FileNotFoundError as err_syst:
+        print("Error file not found", err_syst)
+
+    try:
+        if os.path.exists('./param/aspifile1/diastol.json'):
+            os.remove('./param/aspifile1/diastol.json')
+            print("diastol.json file removed")
+    except FileNotFoundError as err_diast:
+        print("Error file not found", err_diast)
+
     try:
         if os.path.exists('./param/aspifile2/temp.json'):
             os.remove('./param/aspifile2/temp.json')
@@ -377,6 +407,21 @@ def eraserParam3():
             print("paramdata3.txt file removed")
     except FileNotFoundError as err_main:
         print("Error file not found", err_main)
+
+    try:
+        if os.path.exists('./param/aspifile1/systol.json'):
+            os.remove('./param/aspifile1/systol.json')
+            print("systol.json file removed")
+    except FileNotFoundError as err_syst:
+        print("Error file not found", err_syst)
+
+    try:
+        if os.path.exists('./param/aspifile1/diastol.json'):
+            os.remove('./param/aspifile1/diastol.json')
+            print("diastol.json file removed")
+    except FileNotFoundError as err_diast:
+        print("Error file not found", err_diast)
+
     try:
         if os.path.exists('./param/aspifile3/temp.json'):
             os.remove('./param/aspifile3/temp.json')
@@ -433,6 +478,21 @@ def eraserParam4():
             print("paramdata4.txt file removed")
     except FileNotFoundError as err_main:
         print("Error file not found", err_main)
+
+    try:
+        if os.path.exists('./param/aspifile1/systol.json'):
+            os.remove('./param/aspifile1/systol.json')
+            print("systol.json file removed")
+    except FileNotFoundError as err_syst:
+        print("Error file not found", err_syst)
+
+    try:
+        if os.path.exists('./param/aspifile1/diastol.json'):
+            os.remove('./param/aspifile1/diastol.json')
+            print("diastol.json file removed")
+    except FileNotFoundError as err_diast:
+        print("Error file not found", err_diast)
+
     try:
         if os.path.exists('./param/aspifile4/temp.json'):
             os.remove('./param/aspifile4/temp.json')
@@ -489,6 +549,21 @@ def eraserParam5():
             print("paramdata5.txt file removed")
     except FileNotFoundError as err_main:
         print("Error file not found", err_main)
+
+    try:
+        if os.path.exists('./param/aspifile1/systol.json'):
+            os.remove('./param/aspifile1/systol.json')
+            print("systol.json file removed")
+    except FileNotFoundError as err_syst:
+        print("Error file not found", err_syst)
+
+    try:
+        if os.path.exists('./param/aspifile1/diastol.json'):
+            os.remove('./param/aspifile1/diastol.json')
+            print("diastol.json file removed")
+    except FileNotFoundError as err_diast:
+        print("Error file not found", err_diast)
+
     try:
         if os.path.exists('./param/aspifile5/temp.json'):
             os.remove('./param/aspifile5/temp.json')
@@ -545,6 +620,21 @@ def eraserParam6():
             print("paramdata6.txt file removed")
     except FileNotFoundError as err_main:
         print("Error file not found", err_main)
+
+    try:
+        if os.path.exists('./param/aspifile1/systol.json'):
+            os.remove('./param/aspifile1/systol.json')
+            print("systol.json file removed")
+    except FileNotFoundError as err_syst:
+        print("Error file not found", err_syst)
+
+    try:
+        if os.path.exists('./param/aspifile1/diastol.json'):
+            os.remove('./param/aspifile1/diastol.json')
+            print("diastol.json file removed")
+    except FileNotFoundError as err_diast:
+        print("Error file not found", err_diast)
+
     try:
         if os.path.exists('./param/aspifile6/temp.json'):
             os.remove('./param/aspifile6/temp.json')
@@ -601,6 +691,21 @@ def eraserParam7():
             print("paramdata7.txt file removed")
     except FileNotFoundError as err_main:
         print("Error file not found", err_main)
+
+    try:
+        if os.path.exists('./param/aspifile1/systol.json'):
+            os.remove('./param/aspifile1/systol.json')
+            print("systol.json file removed")
+    except FileNotFoundError as err_syst:
+        print("Error file not found", err_syst)
+
+    try:
+        if os.path.exists('./param/aspifile1/diastol.json'):
+            os.remove('./param/aspifile1/diastol.json')
+            print("diastol.json file removed")
+    except FileNotFoundError as err_diast:
+        print("Error file not found", err_diast)
+
     try:
         if os.path.exists('./param/aspifile7/temp.json'):
             os.remove('./param/aspifile7/temp.json')
@@ -657,6 +762,21 @@ def eraserParam8():
             print("paramdata8.txt file removed")
     except FileNotFoundError as err_main:
         print("Error file not found", err_main)
+
+    try:
+        if os.path.exists('./param/aspifile1/systol.json'):
+            os.remove('./param/aspifile1/systol.json')
+            print("systol.json file removed")
+    except FileNotFoundError as err_syst:
+        print("Error file not found", err_syst)
+
+    try:
+        if os.path.exists('./param/aspifile1/diastol.json'):
+            os.remove('./param/aspifile1/diastol.json')
+            print("diastol.json file removed")
+    except FileNotFoundError as err_diast:
+        print("Error file not found", err_diast)
+
     try:
         if os.path.exists('./param/aspifile8/temp.json'):
             os.remove('./param/aspifile8/temp.json')
@@ -713,6 +833,21 @@ def eraserParam9():
             print("paramdata9.txt file removed")
     except FileNotFoundError as err_main:
         print("Error file not found", err_main)
+
+    try:
+        if os.path.exists('./param/aspifile1/systol.json'):
+            os.remove('./param/aspifile1/systol.json')
+            print("systol.json file removed")
+    except FileNotFoundError as err_syst:
+        print("Error file not found", err_syst)
+
+    try:
+        if os.path.exists('./param/aspifile1/diastol.json'):
+            os.remove('./param/aspifile1/diastol.json')
+            print("diastol.json file removed")
+    except FileNotFoundError as err_diast:
+        print("Error file not found", err_diast)
+
     try:
         if os.path.exists('./param/aspifile9/temp.json'):
             os.remove('./param/aspifile9/temp.json')
@@ -769,6 +904,21 @@ def eraserParam10():
             print("paramdata10.txt file removed")
     except FileNotFoundError as err_main:
         print("Error file not found", err_main)
+
+    try:
+        if os.path.exists('./param/aspifile1/systol.json'):
+            os.remove('./param/aspifile1/systol.json')
+            print("systol.json file removed")
+    except FileNotFoundError as err_syst:
+        print("Error file not found", err_syst)
+
+    try:
+        if os.path.exists('./param/aspifile1/diastol.json'):
+            os.remove('./param/aspifile1/diastol.json')
+            print("diastol.json file removed")
+    except FileNotFoundError as err_diast:
+        print("Error file not found", err_diast)
+
     try:
         if os.path.exists('./param/aspifile10/temp.json'):
             os.remove('./param/aspifile10/temp.json')
@@ -825,6 +975,21 @@ def eraserParam11():
             print("paramdata11.txt file removed")
     except FileNotFoundError as err_main:
         print("Error file not found", err_main)
+
+    try:
+        if os.path.exists('./param/aspifile1/systol.json'):
+            os.remove('./param/aspifile1/systol.json')
+            print("systol.json file removed")
+    except FileNotFoundError as err_syst:
+        print("Error file not found", err_syst)
+
+    try:
+        if os.path.exists('./param/aspifile1/diastol.json'):
+            os.remove('./param/aspifile1/diastol.json')
+            print("diastol.json file removed")
+    except FileNotFoundError as err_diast:
+        print("Error file not found", err_diast)
+
     try:
         if os.path.exists('./param/aspifile11/temp.json'):
             os.remove('./param/aspifile11/temp.json')
@@ -881,6 +1046,21 @@ def eraserParam12():
             print("paramdata12.txt file removed")
     except FileNotFoundError as err_main:
         print("Error file not found", err_main)
+
+    try:
+        if os.path.exists('./param/aspifile1/systol.json'):
+            os.remove('./param/aspifile1/systol.json')
+            print("systol.json file removed")
+    except FileNotFoundError as err_syst:
+        print("Error file not found", err_syst)
+
+    try:
+        if os.path.exists('./param/aspifile1/diastol.json'):
+            os.remove('./param/aspifile1/diastol.json')
+            print("diastol.json file removed")
+    except FileNotFoundError as err_diast:
+        print("Error file not found", err_diast)
+
     try:
         if os.path.exists('./param/aspifile12/temp.json'):
             os.remove('./param/aspifile12/temp.json')
@@ -937,6 +1117,21 @@ def eraserParam13():
             print("paramdata13.txt file removed")
     except FileNotFoundError as err_main:
         print("Error file not found", err_main)
+
+    try:
+        if os.path.exists('./param/aspifile1/systol.json'):
+            os.remove('./param/aspifile1/systol.json')
+            print("systol.json file removed")
+    except FileNotFoundError as err_syst:
+        print("Error file not found", err_syst)
+
+    try:
+        if os.path.exists('./param/aspifile1/diastol.json'):
+            os.remove('./param/aspifile1/diastol.json')
+            print("diastol.json file removed")
+    except FileNotFoundError as err_diast:
+        print("Error file not found", err_diast)
+
     try:
         if os.path.exists('./param/aspifile13/temp.json'):
             os.remove('./param/aspifile13/temp.json')
@@ -993,6 +1188,21 @@ def eraserParam14():
             print("paramdata14.txt file removed")
     except FileNotFoundError as err_main:
         print("Error file not found", err_main)
+
+    try:
+        if os.path.exists('./param/aspifile1/systol.json'):
+            os.remove('./param/aspifile1/systol.json')
+            print("systol.json file removed")
+    except FileNotFoundError as err_syst:
+        print("Error file not found", err_syst)
+
+    try:
+        if os.path.exists('./param/aspifile1/diastol.json'):
+            os.remove('./param/aspifile1/diastol.json')
+            print("diastol.json file removed")
+    except FileNotFoundError as err_diast:
+        print("Error file not found", err_diast)
+
     try:
         if os.path.exists('./param/aspifile14/temp.json'):
             os.remove('./param/aspifile14/temp.json')
@@ -1049,6 +1259,21 @@ def eraserParam15():
             print("paramdata15.txt file removed")
     except FileNotFoundError as err_main:
         print("Error file not found", err_main)
+
+    try:
+        if os.path.exists('./param/aspifile1/systol.json'):
+            os.remove('./param/aspifile1/systol.json')
+            print("systol.json file removed")
+    except FileNotFoundError as err_syst:
+        print("Error file not found", err_syst)
+
+    try:
+        if os.path.exists('./param/aspifile1/diastol.json'):
+            os.remove('./param/aspifile1/diastol.json')
+            print("diastol.json file removed")
+    except FileNotFoundError as err_diast:
+        print("Error file not found", err_diast)
+
     try:
         if os.path.exists('./param/aspifile15/temp.json'):
             os.remove('./param/aspifile15/temp.json')
@@ -1105,6 +1330,21 @@ def eraserParam16():
             print("paramdata16.txt file removed")
     except FileNotFoundError as err_main:
         print("Error file not found", err_main)
+
+    try:
+        if os.path.exists('./param/aspifile1/systol.json'):
+            os.remove('./param/aspifile1/systol.json')
+            print("systol.json file removed")
+    except FileNotFoundError as err_syst:
+        print("Error file not found", err_syst)
+
+    try:
+        if os.path.exists('./param/aspifile1/diastol.json'):
+            os.remove('./param/aspifile1/diastol.json')
+            print("diastol.json file removed")
+    except FileNotFoundError as err_diast:
+        print("Error file not found", err_diast)
+
     try:
         if os.path.exists('./param/aspifile16/temp.json'):
             os.remove('./param/aspifile16/temp.json')
@@ -1161,6 +1401,21 @@ def eraserParam17():
             print("paramdata17.txt file removed")
     except FileNotFoundError as err_main:
         print("Error file not found", err_main)
+
+    try:
+        if os.path.exists('./param/aspifile1/systol.json'):
+            os.remove('./param/aspifile1/systol.json')
+            print("systol.json file removed")
+    except FileNotFoundError as err_syst:
+        print("Error file not found", err_syst)
+
+    try:
+        if os.path.exists('./param/aspifile1/diastol.json'):
+            os.remove('./param/aspifile1/diastol.json')
+            print("diastol.json file removed")
+    except FileNotFoundError as err_diast:
+        print("Error file not found", err_diast)
+
     try:
         if os.path.exists('./param/aspifile17/temp.json'):
             os.remove('./param/aspifile17/temp.json')
@@ -1217,6 +1472,21 @@ def eraserParam18():
             print("paramdata18.txt file removed")
     except FileNotFoundError as err_main:
         print("Error file not found", err_main)
+
+    try:
+        if os.path.exists('./param/aspifile1/systol.json'):
+            os.remove('./param/aspifile1/systol.json')
+            print("systol.json file removed")
+    except FileNotFoundError as err_syst:
+        print("Error file not found", err_syst)
+
+    try:
+        if os.path.exists('./param/aspifile1/diastol.json'):
+            os.remove('./param/aspifile1/diastol.json')
+            print("diastol.json file removed")
+    except FileNotFoundError as err_diast:
+        print("Error file not found", err_diast)
+
     try:
         if os.path.exists('./param/aspifile18/temp.json'):
             os.remove('./param/aspifile18/temp.json')
@@ -1273,6 +1543,21 @@ def eraserParam19():
             print("paramdata19.txt file removed")
     except FileNotFoundError as err_main:
         print("Error file not found", err_main)
+
+    try:
+        if os.path.exists('./param/aspifile1/systol.json'):
+            os.remove('./param/aspifile1/systol.json')
+            print("systol.json file removed")
+    except FileNotFoundError as err_syst:
+        print("Error file not found", err_syst)
+
+    try:
+        if os.path.exists('./param/aspifile1/diastol.json'):
+            os.remove('./param/aspifile1/diastol.json')
+            print("diastol.json file removed")
+    except FileNotFoundError as err_diast:
+        print("Error file not found", err_diast)
+
     try:
         if os.path.exists('./param/aspifile19/temp.json'):
             os.remove('./param/aspifile19/temp.json')
@@ -1329,6 +1614,21 @@ def eraserParam20():
             print("paramdata20.txt file removed")
     except FileNotFoundError as err_main:
         print("Error file not found", err_main)
+
+    try:
+        if os.path.exists('./param/aspifile1/systol.json'):
+            os.remove('./param/aspifile1/systol.json')
+            print("systol.json file removed")
+    except FileNotFoundError as err_syst:
+        print("Error file not found", err_syst)
+
+    try:
+        if os.path.exists('./param/aspifile1/diastol.json'):
+            os.remove('./param/aspifile1/diastol.json')
+            print("diastol.json file removed")
+    except FileNotFoundError as err_diast:
+        print("Error file not found", err_diast)
+
     try:
         if os.path.exists('./param/aspifile20/temp.json'):
             os.remove('./param/aspifile20/temp.json')
@@ -1385,6 +1685,21 @@ def eraserParam21():
             print("paramdata21.txt file removed")
     except FileNotFoundError as err_main:
         print("Error file not found", err_main)
+
+    try:
+        if os.path.exists('./param/aspifile1/systol.json'):
+            os.remove('./param/aspifile1/systol.json')
+            print("systol.json file removed")
+    except FileNotFoundError as err_syst:
+        print("Error file not found", err_syst)
+
+    try:
+        if os.path.exists('./param/aspifile1/diastol.json'):
+            os.remove('./param/aspifile1/diastol.json')
+            print("diastol.json file removed")
+    except FileNotFoundError as err_diast:
+        print("Error file not found", err_diast)
+
     try:
         if os.path.exists('./param/aspifile21/temp.json'):
             os.remove('./param/aspifile21/temp.json')
@@ -1441,6 +1756,21 @@ def eraserParam22():
             print("paramdata22.txt file removed")
     except FileNotFoundError as err_main:
         print("Error file not found", err_main)
+
+    try:
+        if os.path.exists('./param/aspifile1/systol.json'):
+            os.remove('./param/aspifile1/systol.json')
+            print("systol.json file removed")
+    except FileNotFoundError as err_syst:
+        print("Error file not found", err_syst)
+
+    try:
+        if os.path.exists('./param/aspifile1/diastol.json'):
+            os.remove('./param/aspifile1/diastol.json')
+            print("diastol.json file removed")
+    except FileNotFoundError as err_diast:
+        print("Error file not found", err_diast)
+
     try:
         if os.path.exists('./param/aspifile22/temp.json'):
             os.remove('./param/aspifile22/temp.json')
@@ -1497,6 +1827,21 @@ def eraserParam23():
             print("paramdata23.txt file removed")
     except FileNotFoundError as err_main:
         print("Error file not found", err_main)
+
+    try:
+        if os.path.exists('./param/aspifile1/systol.json'):
+            os.remove('./param/aspifile1/systol.json')
+            print("systol.json file removed")
+    except FileNotFoundError as err_syst:
+        print("Error file not found", err_syst)
+
+    try:
+        if os.path.exists('./param/aspifile1/diastol.json'):
+            os.remove('./param/aspifile1/diastol.json')
+            print("diastol.json file removed")
+    except FileNotFoundError as err_diast:
+        print("Error file not found", err_diast)
+
     try:
         if os.path.exists('./param/aspifile23/temp.json'):
             os.remove('./param/aspifile23/temp.json')
@@ -1553,6 +1898,21 @@ def eraserParam24():
             print("paramdata24.txt file removed")
     except FileNotFoundError as err_main:
         print("Error file not found", err_main)
+
+    try:
+        if os.path.exists('./param/aspifile1/systol.json'):
+            os.remove('./param/aspifile1/systol.json')
+            print("systol.json file removed")
+    except FileNotFoundError as err_syst:
+        print("Error file not found", err_syst)
+
+    try:
+        if os.path.exists('./param/aspifile1/diastol.json'):
+            os.remove('./param/aspifile1/diastol.json')
+            print("diastol.json file removed")
+    except FileNotFoundError as err_diast:
+        print("Error file not found", err_diast)
+
     try:
         if os.path.exists('./param/aspifile24/temp.json'):
             os.remove('./param/aspifile24/temp.json')

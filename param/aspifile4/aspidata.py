@@ -14,7 +14,7 @@ import subprocess
 import json
 
 
-file = open('./param/aspifile7/systol.json')
+file = open('./param/aspifile4/systol.json')
 data = json.load(file)
 
 try:
@@ -41,7 +41,7 @@ for value in zip(value):
 print("--- Data_list1 de aspidata.py :---\n", data_list1)
 print("\n")
 
-with open('./param/aspifile7/data_date.json', 'a+') as datafile:
+with open('./param/aspifile4/data_date.json', 'a+') as datafile:
     json.dump(data_list1, datafile, indent=4)
 
 for (key, value) in data.items():
@@ -58,11 +58,11 @@ print(data_list2)
 print("\n")
 print("\nThat seems correct!\n")
 
-with open('./param/aspifile7/data_Systol.json', 'a+') as datafile:
+with open('./param/aspifile4/data_Systol.json', 'a+') as datafile:
     json.dump(data_list2, datafile, indent=4)
 
 #second file ttt
-filedias = open('./param/aspifile7/diastol.json')
+filedias = open('./param/aspifile4/diastol.json')
 data = json.load(filedias)
 
 try:
@@ -86,7 +86,7 @@ data_listdia = []
 for value in zip(value):
     data_listdia.append(value[0]['Date'])
 
-with open('./param/aspifile7/data_dia.json', 'a+') as datafiled:
+with open('./param/aspifile4/data_dia.json', 'a+') as datafiled:
     json.dump(data_listdia, datafiled, indent=4)
 
 for (key, value) in data.items():
@@ -103,9 +103,9 @@ print(data_list2)
 print("\n")
 print("\nThat seems correct!\n")
 
-with open('./param/aspifile7/data_Diastol.json', 'a+') as datafile2d:
+with open('./param/aspifile4/data_Diastol.json', 'a+') as datafile2d:
     json.dump(data_list2, datafile2d, indent=4)
 
 print("\nLoading 'plot_prog.py'...")
 
-subprocess.run('./param/aspifile7/plot/plot_prog.py', check=True)
+subprocess.run('./param/aspifile4/plot/plot_prog.py', check=True)

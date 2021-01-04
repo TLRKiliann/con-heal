@@ -11,7 +11,7 @@ import matplotlib.dates as mdates
 
 print("\nListe1 = dates :")
 print("--------------")
-fileO = open('./param/aspifile12/data_dategly.json')
+fileO = open('./param/aspifile15/data_dategly.json')
 list1 = json.load(fileO)
 
 for letter in list1:
@@ -20,7 +20,7 @@ for letter in list1:
 print("\nList2 = tension :")
 print("--------------------")
 
-fileO = open('./param/aspifile12/data_gly.json')
+fileO = open('./param/aspifile15/data_gly.json')
 list2 = json.load(fileO)
 
 for letter in list2:
@@ -99,9 +99,9 @@ except ValueError as shapes_err:
     print("Invalid number", shapes_err)
 
 try:
-    os.remove('./param/aspifile12/data_dategly.json')
+    os.remove('./param/aspifile15/data_dategly.json')
     print("+ File data_dategly.json removed !")
-    os.remove('./param/aspifile12/data_gly.json')
+    os.remove('./param/aspifile15/data_gly.json')
     print("+ File data_gly.json removed !\n")
 except OSError as os_err:
     print("+ OS error ! ...", os_err)

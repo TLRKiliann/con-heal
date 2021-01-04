@@ -1,17 +1,18 @@
 #!/usr/bin/python3
-# -*- coding:utf-8 -*-
+# -*- coding: utf-8 -*-
 
 
-import json
-import matplotlib.pyplot as plt
 import os
+import json
+import datetime
+import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
 
 
 print("\nListe1 = dates :")
 print("--------------")
-fileO = open('./param/aspifile/data_datefr.json')
+fileO = open('./param/aspifile1/data_datefr.json')
 list1 = json.load(fileO)
-#f.close
 
 for letter in list1:
     print("list1: " + letter)
@@ -19,9 +20,8 @@ for letter in list1:
 print("\nList2 = FR :")
 print("--------------------")
 
-fileO = open('./param/aspifile/data_fr.json')
+fileO = open('./param/aspifile1/data_fr.json')
 list2 = json.load(fileO)
-#f.close
 
 for letter in list2:
     print("List2: " + letter)
@@ -45,26 +45,67 @@ for key, value in dicolist.items():
 print("\nListe des dates dans l'ordre des entrées :")
 print("----------------------------------")
 print(list1)
-# How to sort data of list1 to correspond whith list2 ???
-# And for list2 ??? Is it with array ??? 
 print("\nListe des frequences respiratoires :")
 print("------------------------")
 print(list2)
 
-#list3 = [int(list2) for list2 in list2]
-list2 = list(map(int, list2))
+try:
+    list1 = list(map(str, list1))
+except ValueError as fmt_err:
+    print("+ Invalid number (no: . or , !)", fmt_err)
 
-show_grid = True
-with plt.style.context(('seaborn-darkgrid')):
-    plt.plot(list1, list2)
-    plt.ylabel('FR/min')
-    plt.xlabel('Dates')
-    plt.title('Relevé des fréquences resp (FR/min) par date')
-    plt.xticks(rotation=45)
-    plt.grid(show_grid)
-    plt.show()
+try:
+    list2 = list(map(int, list2))
+except ValueError as base_err:
+    print("+ Invalid number (no: . or , !)", base_err)
+    list2 = []
 
-os.remove('./param/aspifile/data_datefr.json')
-print("+ File data_datefr.json removed !")
-os.remove('./param/aspifile/data_fr.json')
-print("+ File data_fr.json removed !\n")
+xdates = [datetime.datetime.strptime('{:10}'.format(str(li)),'%d/%m/%Y : %H:%M:%S') for li in list1]
+print(xdates)
+
+x_axis = xdates
+y_axis = list2
+
+try:
+    show_grid = True
+    with plt.style.context('seaborn-darkgrid'):
+        #figure, axes = plt.subplots()
+        fig = plt.figure()
+        fig.set_facecolor("grey")
+        lab = fig.suptitle('FR/min by Day',
+            fontsize=18)
+        lab.set_color('white')
+        ax = plt.subplot()
+        ax.tick_params(axis='x', colors='white')
+        ax.tick_params(axis='y', colors='white')
+        labelc = plt.ylabel("y-label")
+        labelc.set_color('white')
+        labelc2 = plt.xlabel("x-label")
+        labelc2.set_color('white')
+
+        plt.plot(x_axis, y_axis, 's', color='blue')
+        plt.plot(x_axis, y_axis, '--', color='cyan')
+        for x,y in zip(x_axis, y_axis):
+            label = "{}".format(y)
+            plt.annotate(label, (x,y), textcoords="offset points",
+                xytext=(0,10), ha='center')
+
+        plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
+        plt.ylabel('FR/min', fontsize=14)
+        plt.xlabel('Dates', fontsize=14)
+        #plt.title('Relevé des fréquences resp (FR/min) par date', fontsize=16)
+        #plt.xticks(rotation=25)
+        plt.legend(['Respiratory Frequency'])
+        plt.gcf().autofmt_xdate(rotation=25)
+        plt.grid(show_grid)
+        plt.show()
+except ValueError as shapes_err:
+    print("Invalid number", shapes_err)
+
+try:
+    os.remove('./param/aspifile1/data_datefr.json')
+    print("+ File data_datefr.json removed !")
+    os.remove('./param/aspifile1/data_fr.json')
+    print("+ File data_fr.json removed !\n")
+except OSError as os_err:
+    print("+ OS error ! ...", os_err)

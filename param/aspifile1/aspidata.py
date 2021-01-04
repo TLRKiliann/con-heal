@@ -1,54 +1,111 @@
 #!/usr/bin/python3
-# -*- coding:utf-8 -*-
+# -*- coding: utf-8 -*-
+
+
+"""
+    This file is made to make 4 more. I could have made only 3,
+    but I preferred to do it this way. Thus, systol and diastol
+    each have values associated with the dates.
+    Easier to reformat lists for plot_prog.py afterwards.
+"""
 
 
 import subprocess
 import json
 
 
-file = open('./param/aspifile/tensor.json')
+file = open('./param/aspifile1/systol.json')
 data = json.load(file)
-#file.close
 
-for (key, value) in data.items():
-    print("Key: " + key)
-    print("Valeur: " + str(value))
-    print("\nTo represent the data_get:\n")
-    print(data.get("data"))
-    print("\n")
-    print("Valeur: " + str(value[0]))
-    print("Valeur: " + str(value[1]))
-    print("\n")
-    print("Date: " + str(value[0]["Date"]))
-    print("Tension: " + str(value[0]["Tension"]))
-    print("\n")
-    print("Date: " + str(value[1]["Date"]))
-    print("Tension: " + str(value[1]["Tension"]))
-    
-print("\nList of dates\n")
+try:
+    for (key, value) in data.items():
+        print("Key: " + key)
+        print("Valeur: " + str(value))
+        print("\nTo represent the data_get:\n")
+        print(data.get("data"))
+        print("\n")
+        print("Valeur: " + str(value[0]))
+        print("\n")
+        print("Date: " + str(value[0]["Date"]))
+        print("Systol: " + str(value[0]["Systol"]))
+        print("\n")
+except IndexError as err_read:
+    print("+ Error from aspidata.py", err_read)
+
+print("\nList of dates :\n")
 
 data_list1 = []
 for value in zip(value):
     data_list1.append(value[0]['Date'])
-    
-with open('./param/aspifile/data_date.json', 'a+') as datafile:
+
+print("--- Data_list1 de aspidata.py :---\n", data_list1)
+print("\n")
+
+with open('./param/aspifile1/data_date.json', 'a+') as datafile:
     json.dump(data_list1, datafile, indent=4)
 
 for (key, value) in data.items():
     print(key, value)
     print("\n")
 
-print("\nList of tensions\n")
+print("\nList of systol :\n")
 
 data_list2 = []
 for value in zip(value):
-    data_list2.append(value[0]['Tension'])
+    data_list2.append((value[0])['Systol'])
 
+print(data_list2)
+print("\n")
 print("\nThat seems correct!\n")
 
-with open('./param/aspifile/data_tension.json', 'a+') as datafile:
+with open('./param/aspifile1/data_Systol.json', 'a+') as datafile:
     json.dump(data_list2, datafile, indent=4)
 
-print("\nDownloading 'plot_prog.py'...")
+#second file ttt
+filedias = open('./param/aspifile1/diastol.json')
+data = json.load(filedias)
 
-subprocess.call('./param/aspifile/plot/plot_prog.py')
+try:
+    for (key, value) in data.items():
+        print("Key: " + key)
+        print("Valeur: " + str(value))
+        print("\nTo represent the data_get:\n")
+        print(data.get("data"))
+        print("\n")
+        print("Valeur: " + str(value[0]))
+        print("\n")
+        print("Date: " + str(value[0]["Date"]))
+        print("Diastol: " + str(value[0]["Diastol"]))
+        print("\n")
+except IndexError as err_readia:
+    print("+ Error from aspidata.py", err_readia)
+
+print("\nList of dates\n")
+
+data_listdia = []
+for value in zip(value):
+    data_listdia.append(value[0]['Date'])
+
+with open('./param/aspifile1/data_dia.json', 'a+') as datafiled:
+    json.dump(data_listdia, datafiled, indent=4)
+
+for (key, value) in data.items():
+    print(key, value)
+    print("\n")
+
+print("\nList of diastol :\n")
+
+data_list2 = []
+for value in zip(value):
+    data_list2.append((value[0])['Diastol'])
+
+print(data_list2)
+print("\n")
+print("\nThat seems correct!\n")
+
+with open('./param/aspifile1/data_Diastol.json', 'a+') as datafile2d:
+    json.dump(data_list2, datafile2d, indent=4)
+
+print("\nLoading 'plot_prog.py'...")
+
+subprocess.run('./param/aspifile1/plot/plot_prog.py', check=True)

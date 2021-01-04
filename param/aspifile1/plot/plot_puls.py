@@ -1,17 +1,18 @@
 #!/usr/bin/python3
-# -*- coding:utf-8 -*-
+# -*- coding: utf-8 -*-
 
 
-import json
-import matplotlib.pyplot as plt
 import os
+import json
+import datetime
+import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
 
 
 print("\nListe1 = dates :")
 print("--------------")
-fileO = open('./param/aspifile/data_datepuls.json')
+fileO = open('./param/aspifile1/data_datepuls.json')
 list1 = json.load(fileO)
-#f.close
 
 for letter in list1:
     print("list1: " + letter)
@@ -19,9 +20,8 @@ for letter in list1:
 print("\nList2 = Puls :")
 print("--------------------")
 
-fileO = open('./param/aspifile/data_puls.json')
+fileO = open('./param/aspifile1/data_puls.json')
 list2 = json.load(fileO)
-#f.close
 
 for letter in list2:
     print("List2: " + letter)
@@ -45,26 +45,57 @@ for key, value in dicolist.items():
 print("\nListe des dates dans l'ordre des entrées :")
 print("----------------------------------")
 print(list1)
-# How to sort data of list1 to correspond whith list2 ???
-# And for list2 ??? Is it with array ??? 
 print("\nListe des pulsations :")
 print("------------------------")
 print(list2)
 
-#list3 = [int(list2) for list2 in list2]
-list2 = list(map(int, list2))
+try:
+    list1 = list(map(str, list1))
+except ValueError as dat_err:
+    print("+ Invalid number (no: . or , !)", dat_err)
 
-show_grid = True
-with plt.style.context(('seaborn-darkgrid')):
-    plt.plot(list1, list2)
-    plt.ylabel('Puls/min')
-    plt.xlabel('Dates')
-    plt.title('Relevé des puls/min par date')
-    plt.xticks(rotation=45)
-    plt.grid(show_grid)
-    plt.show()
+try:
+    list2 = list(map(int, list2))
+except ValueError as base_err:
+    print("+ Invalid number (no: . or , !)", base_err)
+    list2 = []
 
-os.remove('./param/aspifile/data_datepuls.json')
-print("+ File data_datepuls.json removed !")
-os.remove('./param/aspifile/data_puls.json')
-print("+ File data_puls.json removed !\n")
+xdates = [datetime.datetime.strptime('{:10}'.format(str(li)),'%d/%m/%Y : %H:%M:%S') for li in list1]
+print(xdates)
+
+x_axis = xdates
+y_axis = list2
+
+try:
+    show_grid = True
+    with plt.style.context('seaborn-darkgrid'):
+        fig = plt.figure()
+        lab = fig.suptitle('Puls/min by Day',
+            fontsize=18)
+        lab.set_color('black')
+        plt.plot(x_axis, y_axis, 's', color='red')
+        plt.plot(x_axis, y_axis, '--', color='orange')
+        for x,y in zip(x_axis, y_axis):
+            label = "{}".format(y)
+            plt.annotate(label, (x,y), textcoords="offset points",
+                xytext=(0,10), ha='center')
+
+        plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
+        plt.ylabel('Puls/min', fontsize=12)
+        plt.xlabel('Dates', fontsize=12)
+        #plt.title('Relevé des puls/min par date', fontsize=16)
+        #plt.xticks(rotation=25)
+        plt.legend(['Pulsations/min'])
+        plt.gcf().autofmt_xdate(rotation=25)
+        plt.grid(show_grid)
+        plt.show()
+except ValueError as shapes_err:
+    print("Invalid number", shapes_err)
+
+try:
+    os.remove('./param/aspifile1/data_datepuls.json')
+    print("+ File data_datepuls.json removed !")
+    os.remove('./param/aspifile1/data_puls.json')
+    print("+ File data_puls.json removed !\n")
+except OSError as os_err:
+    print("+ OS error ! ...", os_err)

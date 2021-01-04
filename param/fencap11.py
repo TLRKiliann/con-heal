@@ -438,7 +438,7 @@ def delSystol():
                 print(value[-1])
                 del value[-1]
             with open('./param/aspifile7/systol.json', 'w') as file:
-                json.dump(data, file, indent=4)
+                data = json.dump(data, file, indent=4)
             label['text'] = "Last value of 'systol.json' has been deleted !"
             print("Last value of 'systol.json' has been deleted !")
             delDia()
@@ -460,7 +460,7 @@ def delDia():
                 print(value[-1])
                 del value[-1]
             with open('./param/aspifile7/diastol.json', 'w') as file:
-                json.dump(data, file, indent=4)
+                data = json.dump(data, file, indent=4)
             label['text'] = "Last value of 'diastol.json' has been deleted !"
             print("Last value of 'diastol.json' has been deleted !")
     except (FileNotFoundError, IndexError) as out_dia:
@@ -481,7 +481,7 @@ def delPuls():
                 print(value[-1])
                 del value[-1]
             with open('./param/aspifile7/puls.json', 'w') as file:
-                json.dump(data, file, indent=4)
+                data = json.dump(data, file, indent=4)
             label['text'] = "Last value of 'puls.json' has been deleted !"
             print("Last value of 'puls.json' has been deleted !")
     except (FileNotFoundError, IndexError) as out_puls:
@@ -502,7 +502,7 @@ def delSat():
                 print(value[-1])
                 del value[-1]
             with open('./param/aspifile7/sat.json', 'w') as file:
-                json.dump(data, file, indent=4)
+                data = json.dump(data, file, indent=4)
             label['text'] = "Last value of 'sat.json' has been deleted !"
             print("Last value of 'sat.json' has been deleted !")
     except (FileNotFoundError, IndexError) as out_sat:
@@ -523,7 +523,7 @@ def delFreq():
                 print(value[-1])
                 del value[-1]
             with open('./param/aspifile7/freq.json', 'w') as file:
-                json.dump(data, file, indent=4)
+                data = json.dump(data, file, indent=4)
             label['text'] = "Last value of 'freq.json' has been deleted !"
             print("Last value of 'freq.json' has been deleted !")
     except (FileNotFoundError, IndexError) as out_freq:
@@ -544,7 +544,7 @@ def delTemp():
                 print(value[-1])
                 del value[-1]
             with open('./param/aspifile7/temp.json', 'w') as file:
-                json.dump(data, file, indent=4)
+                data = json.dump(data, file, indent=4)
             label['text'] = "Last value of 'temp.json' has been deleted !"
             print("Last value of 'temp.json' has been deleted !")
     except (FileNotFoundError, IndexError) as out_temp:
@@ -565,7 +565,7 @@ def delGly():
                 print(value[-1])
                 del value[-1]
             with open('./param/aspifile7/gly.json', 'w') as file:
-                json.dump(data, file, indent=4)
+                data = json.dump(data, file, indent=4)
             label['text'] = "Last value of 'gly.json' has been deleted !"
             print("Last value of 'gly.json' has been deleted !")
     except (FileNotFoundError, IndexError) as out_gly:
@@ -586,7 +586,7 @@ def delDlr():
                 print(value[-1])
                 del value[-1]
             with open('./param/aspifile7/dlr.json', 'w') as file:
-                json.dump(data, file, indent=4)
+                data = json.dump(data, file, indent=4)
             label['text'] = "Last value of 'dlr.json' has been deleted !"
             print("Last value of 'dlr.json' has been deleted !")
     except (FileNotFoundError, IndexError) as out_dlr:

@@ -1,0 +1,11 @@
+Date : 04/01/2021
+Hour : 23:15:20
+Name and Surname : Julian Assange
+TA : 120/80mmHg
+Puls : /min
+SaO2 : %
+FR : /min
+Temperature : °C
+Glycemie :  mmol/l
+Douleurs (Pain) : /10
+

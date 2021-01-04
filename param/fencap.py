@@ -17,7 +17,8 @@ import time
 import sys
 
 
-def writeData():
+def writeData(textDate, textHour, textName, textTa, textDia,
+    textPuls, textSa, textFr, textTemp, textHgt, textDlrs):
     """
         To export data in a json file
         and launching aspiFile1.py
@@ -37,7 +38,8 @@ def writeData():
             file.write(str("Name and Surname : "))
             file.write(textName.get() + '\n')
             file.write(str("TA : "))
-            file.write(textTa.get() + " mmHg\n")
+            file.write(textTa.get() + '/')
+            file.write(textDia.get() + "mmHg\n")
             file.write(str("Puls : "))
             file.write(textPuls.get() + "/min\n")
             file.write(str("SaO2 : "))
@@ -52,32 +54,64 @@ def writeData():
             file.write(textDlrs.get() +"/10\n\n")
 
     try:
-        if os.path.getsize('./param/aspifile1/tensor.json'):
-            print("+ File 'tensor' exist !")
-            with open('./param/aspifile1/tensor.json', 'r') as datafile:
+        if os.path.getsize('./param/aspifile1/systol.json'):
+            print("+ File 'systol' exist !")
+            with open('./param/aspifile1/systol.json', 'r') as datafile:
                 datastore = json.load(datafile)
                 print(datastore)
             dataTa = datastore
-            dataTa['data'].append({'Date' : textDate.get(), 'Tension' : textTa.get()})
+            dataTa['data'].append({'Date' : textDate.get() + ' : ' + textHour.get(),
+                'Systol' : textTa.get()})
             if textTa.get() == "":
-                print("---Pas de VALEUR 'Tension' entrée---")
+                print("---Pas de VALEUR 'Systol' entrée---")
             else:
-                print("---Ok VALEUR 'Tension' entrée---")
-                with open('./param/aspifile1/tensor.json', 'w') as datafile2:
+                print("---Ok VALEUR 'Systol' entrée---")
+                with open('./param/aspifile1/systol.json', 'w') as datafile2:
                     json.dump(dataTa, datafile2, indent=4)
     except FileNotFoundError as outcom:
-        print('+ Sorry, file tensor.json not exist !')
+        print('+ Sorry, file systol.json not exist !')
         print(str(outcom))
-        print("+ File tensor.json created !")
+        print("+ File systol.json created !")
         dataTa = {}
         dataTa['data'] = []
-        dataTa['data'].append({'Date' : textDate.get(), 'Tension' : textTa.get()})
+        dataTa['data'].append({'Date' : textDate.get() + ' : ' + textHour.get(),
+            'Systol' : textTa.get()})
         if textTa.get() == "":
-            print("---Pas de VALEUR 'Tension' entrée---")
+            print("---Pas de VALEUR 'Systol' entrée---")
         else:
-            print("---Ok VALEUR 'Tension' entrée---")
-            with open('./param/aspifile1/tensor.json', 'w') as datafile:
+            print("---Ok VALEUR 'Systol' entrée---")
+            with open('./param/aspifile1/systol.json', 'w') as datafile:
                 json.dump(dataTa, datafile, indent=4)
+
+    try:
+        if os.path.getsize('./param/aspifile1/diastol.json'):
+            print("+ File 'diastol' exist !")
+            with open('./param/aspifile1/diastol.json', 'r') as datafile:
+                datastore = json.load(datafile)
+                print(datastore)
+            dataDia = datastore
+            dataDia['data'].append({'Date' : textDate.get() + ' : ' + textHour.get(),
+                'Diastol' : textDia.get()})
+            if textDia.get() == "":
+                print("---Pas de VALEUR 'Diastol' entrée---")
+            else:
+                print("---Ok VALEUR 'Diastol' entrée---")
+                with open('./param/aspifile1/diastol.json', 'w') as datafile2:
+                    json.dump(dataDia, datafile2, indent=4)
+    except FileNotFoundError as outcom:
+        print('+ Sorry, file diastol.json not exist !')
+        print(str(outcom))
+        print("+ File diastol.json created !")
+        dataDia = {}
+        dataDia['data'] = []
+        dataDia['data'].append({'Date' : textDate.get() + ' : ' + textHour.get(),
+            'Diastol' : textDia.get()})
+        if textDia.get() == "":
+            print("---Pas de VALEUR 'Diastol' entrée---")
+        else:
+            print("---Ok VALEUR 'Diastol' entrée---")
+            with open('./param/aspifile1/diastol.json', 'w') as datafile:
+                json.dump(dataDia, datafile, indent=4)
 
     try:
         if os.path.getsize('./param/aspifile1/puls.json'):
@@ -86,7 +120,8 @@ def writeData():
                 datastore = json.load(datapuls)
                 print(datastore)
             dataP = datastore
-            dataP['data'].append({'Date' : textDate.get(), 'Puls' : textPuls.get()})
+            dataP['data'].append({'Date' : textDate.get() + ' : ' + textHour.get(),
+                'Puls' : textPuls.get()})
             if textPuls.get() == "":
                 print("---Pas de VALEUR 'Puls' entrée---")
             else:
@@ -99,7 +134,8 @@ def writeData():
         print("+ File puls.json created !")
         dataP = {}
         dataP['data'] = []
-        dataP['data'].append({'Date' : textDate.get(), 'Puls' : textPuls.get()})
+        dataP['data'].append({'Date' : textDate.get() + ' : ' + textHour.get(),
+            'Puls' : textPuls.get()})
         if textPuls.get() == "":
             print("---Pas de VALEUR 'Puls' entrée---")
         else:
@@ -114,7 +150,8 @@ def writeData():
                 datastore = json.load(datasat)
                 print(datastore)
             dataS = datastore
-            dataS['data'].append({'Date' : textDate.get(), 'SaO2' : textSa.get()})
+            dataS['data'].append({'Date' : textDate.get() + ' : ' + textHour.get(),
+                'SaO2' : textSa.get()})
             if textSa.get() == "":
                 print("---Pas de VALEUR 'SaO2' entrée---")
             else:
@@ -127,7 +164,8 @@ def writeData():
         print("+ File sat.json created !")
         dataS = {}
         dataS['data'] = []
-        dataS['data'].append({'Date' : textDate.get(), 'SaO2' : textSa.get()})
+        dataS['data'].append({'Date' : textDate.get() + ' : ' + textHour.get(),
+            'SaO2' : textSa.get()})
         if textSa.get() == "":
             print("---Pas de VALEUR 'SaO2' entrée---")
         else:
@@ -142,7 +180,8 @@ def writeData():
                 datastore = json.load(datafreq)
                 print(datastore)
             dataF = datastore
-            dataF['data'].append({'Date' : textDate.get(), 'FR' : textFr.get()})
+            dataF['data'].append({'Date' : textDate.get() + ' : ' + textHour.get(),
+                'FR' : textFr.get()})
             if textFr.get() == "":
                 print("---Pas de VALEUR 'FR' entrée---")
             else:
@@ -155,7 +194,8 @@ def writeData():
         print("+ File freq.json created !")
         dataF = {}
         dataF['data'] = []
-        dataF['data'].append({'Date' : textDate.get(), 'FR' : textFr.get()})
+        dataF['data'].append({'Date' : textDate.get() + ' : ' + textHour.get(),
+            'FR' : textFr.get()})
         if textFr.get() == "":
             print("---Pas de VALEUR 'FR' entrée---")
         else:
@@ -170,7 +210,8 @@ def writeData():
                 datastore = json.load(datatemp)
                 print(datastore)
             dataTe2 = datastore
-            dataTe2['data'].append({'Date' : textDate.get(), 'Temperature' : textTemp.get()})
+            dataTe2['data'].append({'Date' : textDate.get() + ' : ' + textHour.get(),
+                'Temperature' : textTemp.get()})
             if textTemp.get() == "":
                 print("---Pas de VALEUR 'Temperature' entrée---")
             else:
@@ -183,7 +224,8 @@ def writeData():
         print("+ File temp.json created !")
         dataTe2 = {}
         dataTe2['data'] = []
-        dataTe2['data'].append({'Date' : textDate.get(), 'Temperature' : textTemp.get()})
+        dataTe2['data'].append({'Date' : textDate.get() + ' : ' + textHour.get(),
+            'Temperature' : textTemp.get()})
         if textTemp.get() == "":
             print("---Pas de VALEUR 'Temperature' entrée---")
         else:
@@ -198,7 +240,8 @@ def writeData():
                 datastore = json.load(datagly)
                 print(datastore)
             dataG = datastore
-            dataG['data'].append({'Date' : textDate.get(), 'Glycemie' : textHgt.get()})
+            dataG['data'].append({'Date' : textDate.get() + ' : ' + textHour.get(),
+                'Glycemie' : textHgt.get()})
             if textHgt.get() == "":
                 print("---Pas de VALEUR 'Glycemie' entrée---")
             else:
@@ -211,7 +254,8 @@ def writeData():
         print("+ File gly.json created !")
         dataG = {}
         dataG['data'] = []
-        dataG['data'].append({'Date' : textDate.get(), 'Glycemie' : textHgt.get()})
+        dataG['data'].append({'Date' : textDate.get() + ' : ' + textHour.get(),
+            'Glycemie' : textHgt.get()})
         if textHgt.get() == "":
             print("---Pas de VALEUR 'Glycemie' entrée---")
         else:
@@ -226,7 +270,8 @@ def writeData():
                 datastore = json.load(datadlr)
                 print(datastore)
             dataD = datastore
-            dataD['data'].append({'Date' : textDate.get(), 'Douleurs' : textDlrs.get()})
+            dataD['data'].append({'Date' : textDate.get() + ' : ' + textHour.get(),
+                'Douleurs' : textDlrs.get()})
             if textDlrs.get() == "":
                 print("---Pas de VALEUR 'Douleurs' entrée---")
             else:
@@ -239,7 +284,8 @@ def writeData():
         print("+ File dlr.json created !")
         dataD = {}
         dataD['data'] = []
-        dataD['data'].append({'Date' : textDate.get(), 'Douleurs' : textDlrs.get()})
+        dataD['data'].append({'Date' : textDate.get() + ' : ' + textHour.get(),
+            'Douleurs' : textDlrs.get()})
         if textDlrs.get() == "":
             print("---Pas de VALEUR 'Douleurs' entrée---")
         else:
@@ -249,7 +295,8 @@ def writeData():
 
     label['text'] = ("Date: " + textDate.get() +
         "\nNom: " + textName.get() +
-        "\nTension: " + textTa.get() +" -- " + "Puls: " + textPuls.get() +
+        "\nTension: " + textTa.get() + '/' + textDia.get() +
+        " -- " + "Puls: " + textPuls.get() +
         "\nSaO2: " + textSa.get() +" -- "+ "FR: " + textFr.get() +
         "\nTemperature: " + textTemp.get() +
         "\nGlycemie: " + textHgt.get() +
@@ -257,26 +304,26 @@ def writeData():
         "\nAll data have been added in json files !")
 
 def mainRead():
-    subprocess.run('./param/main_read1.py', check=True)
+    subprocess.run('./param/main_read.py', check=True)
 
-def appelTens():
+def appelTens(textDate, textName, textTa, textDia):
     """
         to call aspidata.py for recapt data
         and launching matplotlib graph
     """
     try:
-        if os.path.getsize('./param/aspifile1/tensor.json'):
+        if os.path.getsize('./param/aspifile1/systol.json'):
             subprocess.run('./param/aspifile1/aspidata.py', check=True)
             label['text'] = ("Date: " + textDate.get() +
                 "\nNom: " + textName.get() +
-                "\nTension: " + textTa.get())
+                "\nTension: " + textTa.get() + '/' + textDia.get())
     except FileNotFoundError as errorgraph1:
         print('+ Sorry the TA plot doesn\'t work ! Data missing !', errorgraph1)
         label['text'] = "Sorry the TA plot doesn\'t work ! Data missing !"
 
-def appelPuls():
+def appelPuls(textDate, textName, textPuls):
     """
-        to call aspidata.py for recapt data
+        to call aspipuls.py for recapt data
         and launching matplotlib graph
     """
     try:
@@ -288,9 +335,9 @@ def appelPuls():
         print('+ Sorry the Puls plot doesn\'t work ! Data missing !', errorgraph2)
         label['text'] = "Sorry the Puls plot doesn\'t work ! Data missing !"
 
-def appelSat():
+def appelSat(textDate, textName, textSa):
     """
-        to call aspidata.py for recapt data
+        to call aspisat.py for recapt data
         and launching matplotlib graph
     """
     try:
@@ -302,9 +349,9 @@ def appelSat():
         print('+ Sorry the SaO2 plot doesn\'t work ! Data missing !', errorgraph3)
         label['text'] = "Sorry the SaO2 plot doesn\'t work ! Data missing !"
 
-def appelFreq():
+def appelFreq(textDate, textName, textFr):
     """
-        to call aspidata.py for recapt data
+        to call aspifreq.py for recapt data
         and launching matplotlib graph
     """
     try:
@@ -316,9 +363,9 @@ def appelFreq():
         print('+ Sorry the FR plot doesn\'t work ! Data missing !', errorgraph4)
         label['text'] = "Sorry the FR plot doesn\'t work ! Data missing !"
 
-def appelTemp():
+def appelTemp(textDate, textName, textTemp):
     """
-        to call aspidata.py for recapt data
+        to call aspitemp.py for recapt data
         and launching matplotlib graph
     """
     try:
@@ -330,9 +377,9 @@ def appelTemp():
         print('+ Sorry the Temp plot doesn\'t work ! Data missing !', errorgraph5)
         label['text'] = "Sorry the Temp plot doesn\'t work ! Data missing !"
 
-def appelGly():
+def appelGly(textDate, textName, textHgt):
     """
-        to call aspidata.py for recapt data
+        to call aspigly.py for recapt data
         and launching matplotlib graph
     """
     try:
@@ -344,9 +391,9 @@ def appelGly():
         print('+ Sorry the Hgt plot doesn\'t work ! Data missing !', errorgraph6)
         label['text'] = "Sorry the Hgt plot doesn\'t work ! Data missing !"
 
-def appelDlr():
+def appelDlr(textDate, textName, textDlrs):
     """
-        to call aspidata.py for recapt data
+        to call aspidlr.py for recapt data
         and launching matplotlib graph
     """
     try:
@@ -360,7 +407,7 @@ def appelDlr():
 
 def delMain():
     """
-        To earase paramdata1.txt
+        To erase paramdata1.txt
     """
     Main_MsgBox = messagebox.askquestion("Confirm", "Are you sure ?\n"
         "It will delete paramdata1.txt with all data !!!")
@@ -377,30 +424,52 @@ def delMain():
         print("+ Nothing has changed !")
         label['text'] = "Nothing has changed !"
 
-def delTA():
+def delSystol():
     """
-        To earase last line
-        of tensor.json
+        To erase last line
+        of systol.json
     """
     try:
-        if os.path.getsize('./param/aspifile1/tensor.json'):
-            with open('./param/aspifile1/tensor.json', 'r') as file:
-                data = json.load(file)
+        if os.path.getsize('./param/aspifile1/systol.json'):
+            with open('./param/aspifile1/systol.json', 'r') as filesys:
+                data = json.load(filesys)
             for key, value in data.items():
-                print("Last value of TA deleted")
+                print("Last value of systol deleted")
                 print(value[-1])
                 del value[-1]
-            with open('./param/aspifile1/tensor.json', 'w') as file:
-                data = json.dump(data, file, indent=4)
-            label['text'] = "Last value of 'tensor.json' has been deleted !"
-            print("Last value of 'tensor.json' has been deleted !")
+            with open('./param/aspifile1/systol.json', 'w') as file:
+                json.dump(data, file, indent=4)
+            label['text'] = "Last value of 'systol.json' has been deleted !"
+            print("Last value of 'systol.json' has been deleted !")
+            delDia()
     except (FileNotFoundError, IndexError) as out_ta:
         label['text'] = "Sorry, file asked not exist !"
         print('+ Sorry, file asked not exist !', out_ta)
 
+def delDia():
+    """
+        To erase last line
+        of diastol.json
+    """
+    try:
+        if os.path.getsize('./param/aspifile1/diastol.json'):
+            with open('./param/aspifile1/diastol.json', 'r') as filedia:
+                data = json.load(filedia)
+            for key, value in data.items():
+                print("Last value of diastol deleted")
+                print(value[-1])
+                del value[-1]
+            with open('./param/aspifile1/diastol.json', 'w') as file:
+                json.dump(data, file, indent=4)
+            label['text'] = "Last value of 'diastol.json' has been deleted !"
+            print("Last value of 'diastol.json' has been deleted !")
+    except (FileNotFoundError, IndexError) as out_dia:
+        label['text'] = "Sorry, file asked not exist !"
+        print('+ Sorry, file asked not exist !', out_dia)
+
 def delPuls():
     """
-        To earase last line
+        To erase last line
         of puls.json
     """
     try:
@@ -412,7 +481,7 @@ def delPuls():
                 print(value[-1])
                 del value[-1]
             with open('./param/aspifile1/puls.json', 'w') as file:
-                data = json.dump(data, file, indent=4)
+                json.dump(data, file, indent=4)
             label['text'] = "Last value of 'puls.json' has been deleted !"
             print("Last value of 'puls.json' has been deleted !")
     except (FileNotFoundError, IndexError) as out_puls:
@@ -421,7 +490,7 @@ def delPuls():
 
 def delSat():
     """
-        To earase last line
+        To erase last line
         of sat.json
     """
     try:
@@ -433,7 +502,7 @@ def delSat():
                 print(value[-1])
                 del value[-1]
             with open('./param/aspifile1/sat.json', 'w') as file:
-                data = json.dump(data, file, indent=4)
+                json.dump(data, file, indent=4)
             label['text'] = "Last value of 'sat.json' has been deleted !"
             print("Last value of 'sat.json' has been deleted !")
     except (FileNotFoundError, IndexError) as out_sat:
@@ -442,7 +511,7 @@ def delSat():
 
 def delFreq():
     """
-        To earase last line
+        To erase last line
         of freq.json
     """
     try:
@@ -454,7 +523,7 @@ def delFreq():
                 print(value[-1])
                 del value[-1]
             with open('./param/aspifile1/freq.json', 'w') as file:
-                data = json.dump(data, file, indent=4)
+                json.dump(data, file, indent=4)
             label['text'] = "Last value of 'freq.json' has been deleted !"
             print("Last value of 'freq.json' has been deleted !")
     except (FileNotFoundError, IndexError) as out_freq:
@@ -463,7 +532,7 @@ def delFreq():
 
 def delTemp():
     """
-        To earase last line
+        To erase last line
         of temp.json
     """
     try:
@@ -475,7 +544,7 @@ def delTemp():
                 print(value[-1])
                 del value[-1]
             with open('./param/aspifile1/temp.json', 'w') as file:
-                data = json.dump(data, file, indent=4)
+                json.dump(data, file, indent=4)
             label['text'] = "Last value of 'temp.json' has been deleted !"
             print("Last value of 'temp.json' has been deleted !")
     except (FileNotFoundError, IndexError) as out_temp:
@@ -484,7 +553,7 @@ def delTemp():
 
 def delGly():
     """
-        To earase last line
+        To erase last line
         of gly.json
     """
     try:
@@ -496,7 +565,7 @@ def delGly():
                 print(value[-1])
                 del value[-1]
             with open('./param/aspifile1/gly.json', 'w') as file:
-                data = json.dump(data, file, indent=4)
+                json.dump(data, file, indent=4)
             label['text'] = "Last value of 'gly.json' has been deleted !"
             print("Last value of 'gly.json' has been deleted !")
     except (FileNotFoundError, IndexError) as out_gly:
@@ -505,7 +574,7 @@ def delGly():
 
 def delDlr():
     """
-        To earase last line
+        To erase last line
         of dlr.json
     """
     try:
@@ -517,7 +586,7 @@ def delDlr():
                 print(value[-1])
                 del value[-1]
             with open('./param/aspifile1/dlr.json', 'w') as file:
-                data = json.dump(data, file, indent=4)
+                json.dump(data, file, indent=4)
             label['text'] = "Last value of 'dlr.json' has been deleted !"
             print("Last value of 'dlr.json' has been deleted !")
     except (FileNotFoundError, IndexError) as out_dlr:
@@ -531,7 +600,8 @@ def delEvery():
     MsgBox = messagebox.askquestion("Confirm","Are you sure ?\n"
         "It will delete all files with all data !!!")
     if MsgBox == 'yes':
-        delTA()
+        delSystol()
+        delDia()
         delPuls()
         delSat()
         delFreq()
@@ -569,9 +639,13 @@ label1 = Label(gui, text='Enter Name : ', font=('Times', 14),
     fg='white', bg='DodgerBlue2', width=15, anchor='e')
 label1.grid(row=3, column=1)
 
-label2 = Label(gui, text='Enter TA : ', font=('Times', 14),
+label2 = Label(gui, text='Enter Systolic : ', font=('Times', 14),
     fg='white', bg='DodgerBlue2', width=15, anchor='e')
-label2.grid(row=4, column=1)
+label2.grid(sticky='e', row=4, column=1)
+
+labelDia = Label(gui, text='Diastolic : ', font=('Times', 14),
+    fg='white', bg='DodgerBlue2', width=10, anchor='e')
+labelDia.grid(row=4, column=2)
 
 label3 = Label(gui, text='Enter Puls : ', font=('Times', 14),
     fg='white', bg='DodgerBlue2', width=15, anchor='e')
@@ -615,25 +689,38 @@ textName = Entry(gui, textvariable=name_text,
 name_text.set(line1[:-1])
 textName.grid(row=3, column=2)
 
-textTa = Entry(gui, highlightbackground='gray', bd=4)
-textTa.grid(row=4, column=2)
+textsvta = StringVar()
+textTa = Entry(gui, textvariable=textsvta, highlightbackground='gray',
+    width=4, bd=4)
+textTa.grid(sticky='w', row=4, column=2)
 
-textPuls = Entry(gui, highlightbackground='gray', bd=4)
+textsvdia = StringVar()
+textDia = Entry(gui, textvariable=textsvdia, highlightbackground='gray',
+    width=4, bd=4)
+textDia.grid(sticky='e', row=4, column=2)
+
+textsvpuls = StringVar()
+textPuls = Entry(gui, textvariable=textsvpuls, highlightbackground='gray', bd=4)
 textPuls.grid(row=5, column=2)
 
-textSa = Entry(gui, highlightbackground='gray', bd=4)
+textsvsa = StringVar()
+textSa = Entry(gui, textvariable=textsvsa, highlightbackground='gray', bd=4)
 textSa.grid(row=6, column=2)
 
-textFr = Entry(gui, highlightbackground='gray', bd=4)
+textsvfr = StringVar()
+textFr = Entry(gui, textvariable=textsvfr, highlightbackground='gray', bd=4)
 textFr.grid(row=7, column=2)
 
-textTemp = Entry(gui, highlightbackground='gray', bd=4)
+textsvtemp = StringVar()
+textTemp = Entry(gui, textvariable=textsvtemp, highlightbackground='gray', bd=4)
 textTemp.grid(row=8, column=2)
 
-textHgt = Entry(gui, highlightbackground='gray', bd=4)
+textsvhgt = StringVar()
+textHgt = Entry(gui, textvariable=textsvhgt, highlightbackground='gray', bd=4)
 textHgt.grid(row=9, column=2)
 
-textDlrs = Entry(gui, highlightbackground='gray', bd=4)
+textsvdlrs = StringVar()
+textDlrs = Entry(gui, textvariable=textsvdlrs, highlightbackground='gray', bd=4)
 textDlrs.grid(row=10, column=2)
 
 button2Write = Button(gui)
@@ -645,7 +732,7 @@ button2Write.config(text='Quit', width=15,
 button2Write.grid(row=1, column=3)
 
 buttonDel = Button(gui)
-buttonDel.config(text='Reinitialize All Data', width=15,
+buttonDel.config(text='Erase Last Values', width=15,
     bg='coral', fg='yellow', activebackground='red',
     activeforeground='white', command=delEvery)
 buttonDel.grid(row=1, column=4)
@@ -654,7 +741,9 @@ buttonWrite = Button(gui)
 buttonWrite.config(text='CAPTURE DATA', width=33,
     fg='navy', bg='lightblue',
     activeforeground='gray40',
-    activebackground='pale turquoise', command=writeData)
+    activebackground='pale turquoise',
+    command = lambda : writeData(textDate, textHour, textName, textTa, textDia, textPuls,
+        textSa, textFr, textTemp, textHgt, textDlrs))
 buttonWrite.grid(row=2, column=3, columnspan=4)
 
 buttonMainlec = Button(gui)
@@ -672,49 +761,50 @@ buttonDel.grid(row=3, column=4)
 button3Write = Button(gui)
 button3Write.config(text='Graph TA', width=15,
     bg='lightblue', fg='navy', activebackground='pale turquoise',
-    activeforeground='gray40', command=appelTens)
+    activeforeground='gray40',
+    command = lambda : appelTens(textDate, textName, textTa, textDia))
 button3Write.grid(row=4, column=3)
 
 button4Write = Button(gui)
 button4Write.config(text='Graph Puls', width=15,
     bg='lightblue', fg='navy', activebackground='pale turquoise',
-    activeforeground='gray40', command=appelPuls)
+    activeforeground='gray40', command = lambda : appelPuls(textDate, textName, textPuls))
 button4Write.grid(row=5, column=3)
 
 button5Write = Button(gui)
 button5Write.config(text='Graph SaO2', width=15,
     bg='lightblue', fg='navy', activebackground='pale turquoise',
-    activeforeground='gray40', command=appelSat)
+    activeforeground='gray40', command = lambda : appelSat(textDate, textName, textSa))
 button5Write.grid(row=6, column=3)
 
 button6Write = Button(gui)
 button6Write.config(text='Graph FR', width=15,
     bg='lightblue', fg='navy', activebackground='pale turquoise',
-    activeforeground='gray40', command=appelFreq)
+    activeforeground='gray40', command = lambda : appelFreq(textDate, textName, textFr))
 button6Write.grid(row=7, column=3)
 
 button7Write = Button(gui)
 button7Write.config(text='Graph T°C', width=15,
     bg='lightblue', fg='navy',activebackground='pale turquoise',
-    activeforeground='gray40', command=appelTemp)
+    activeforeground='gray40', command = lambda : appelTemp(textDate, textName, textTemp))
 button7Write.grid(row=8, column=3)
 
 button8Write = Button(gui)
 button8Write.config(text='Graph Hgt', width=15,
     bg='lightblue', fg='navy',activebackground='pale turquoise',
-    activeforeground='gray40', command=appelGly)
+    activeforeground='gray40', command = lambda : appelGly(textDate, textName, textHgt))
 button8Write.grid(row=9, column=3)
 
 button9Write = Button(gui)
 button9Write.config(text='Graph Dlrs', width=15,
     bg='lightblue', fg='navy',activebackground='pale turquoise',
-    activeforeground='gray40', command=appelDlr)
+    activeforeground='gray40', command = lambda : appelDlr(textDate, textName, textDlrs))
 button9Write.grid(row=10, column=3)
 
 button1Del = Button(gui)
 button1Del.config(text='Cancel last TA', width=15,
     bg='coral', fg='yellow', activeforeground='white',
-    activebackground='red', command=delTA)
+    activebackground='red', command = delSystol)
 button1Del.grid(row=4, column=4)
 
 button2Del = Button(gui)

@@ -2,9 +2,11 @@
 # -*- coding: utf-8 -*-
 
 
-import json
-import matplotlib.pyplot as plt
 import os
+import json
+import datetime
+import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
 
 
 print("\nListe1 = dates :")
@@ -58,15 +60,25 @@ except ValueError as base_err:
     print("+ Invalid number (no: . or , !)", base_err)
     list2 = []
 
-x_axis = list1
+xdates = [datetime.datetime.strptime('{:10}'.format(str(li)),'%d/%m/%Y : %H:%M:%S') for li in list1]
+print(xdates)
+
+x_axis = xdates
 y_axis = list2
 
 try:
     show_grid = True
     with plt.style.context('seaborn-darkgrid'):
-        figure, axes = plt.subplots()
-        plt.plot(x_axis, y_axis, 's', color='orange')
-        plt.plot(x_axis, y_axis, '--', color='red')
+        ax = plt.subplot()
+        ax.tick_params(axis='x', colors='white')
+        ax.tick_params(axis='y', colors='white')
+        labelc = plt.ylabel("y-label")
+        labelc.set_color('white')
+        labelc2 = plt.xlabel("x-label")
+        labelc2.set_color('white')
+        plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
+        plt.plot(x_axis, y_axis, 's', color='red')
+        plt.plot(x_axis, y_axis, '--', color='orange')
         for x,y in zip(x_axis, y_axis):
             label = "{}".format(y)
             plt.annotate(label, (x,y), textcoords="offset points",
@@ -81,7 +93,10 @@ try:
 except ValueError as shapes_err:
     print("Invalid number", shapes_err)
 
-os.remove('./param/aspifile7/data_datepuls.json')
-print("+ File data_datepuls.json removed !")
-os.remove('./param/aspifile7/data_puls.json')
-print("+ File data_puls.json removed !\n")
+try:
+    os.remove('./param/aspifile7/data_datepuls.json')
+    print("+ File data_datepuls.json removed !")
+    os.remove('./param/aspifile7/data_puls.json')
+    print("+ File data_puls.json removed !\n")
+except OSError as os_err:
+    print("+ OS error ! ...", os_err)

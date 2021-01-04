@@ -2,9 +2,11 @@
 # -*- coding: utf-8 -*-
 
 
-import json
-import matplotlib.pyplot as plt
 import os
+import json
+import datetime
+import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
 
 
 print("\nListe1 = dates :")
@@ -57,13 +59,26 @@ try:
 except ValueError as err_val:
     print("+ False value (no: string or int value)", err_val)
 
-x_axis = list1
+xdates = [datetime.datetime.strptime('{:10}'.format(str(li)),'%d/%m/%Y : %H:%M:%S') for li in list1]
+print(xdates)
+
+x_axis = xdates
 y_axis = list2
 
 try:
     show_grid = True
     with plt.style.context('seaborn-darkgrid'):
-        figure, axes = plt.subplots()
+        #figure, axes = plt.subplots()
+        fig = plt.figure()
+        fig.set_facecolor("grey")
+        ax = plt.subplot()
+        ax.tick_params(axis='x', colors='white')
+        ax.tick_params(axis='y', colors='white')
+        labelc = plt.ylabel("y-label")
+        labelc.set_color('white')
+        labelc2 = plt.xlabel("x-label")
+        labelc2.set_color('white')
+        plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
         plt.plot(x_axis, y_axis, 'o', color='cyan')
         plt.plot(x_axis, y_axis, '--', color='orange')
         for x,y in zip(x_axis, y_axis):
@@ -80,7 +95,10 @@ try:
 except ValueError as shapes_err:
     print("Invalid number", shapes_err)
 
-os.remove('./param/aspifile7/data_dategly.json')
-print("+ File data_dategly.json removed !")
-os.remove('./param/aspifile7/data_gly.json')
-print("+ File data_gly.json removed !\n")
+try:
+    os.remove('./param/aspifile7/data_dategly.json')
+    print("+ File data_dategly.json removed !")
+    os.remove('./param/aspifile7/data_gly.json')
+    print("+ File data_gly.json removed !\n")
+except OSError as os_err:
+    print("+ OS error ! ...", os_err)

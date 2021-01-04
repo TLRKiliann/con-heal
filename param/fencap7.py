@@ -120,7 +120,8 @@ def writeData(textDate, textHour, textName, textTa, textDia,
                 datastore = json.load(datapuls)
                 print(datastore)
             dataP = datastore
-            dataP['data'].append({'Date' : textDate.get(), 'Puls' : textPuls.get()})
+            dataP['data'].append({'Date' : textDate.get() + ' : ' + textHour.get(),
+                'Puls' : textPuls.get()})
             if textPuls.get() == "":
                 print("---Pas de VALEUR 'Puls' entrée---")
             else:
@@ -133,7 +134,8 @@ def writeData(textDate, textHour, textName, textTa, textDia,
         print("+ File puls.json created !")
         dataP = {}
         dataP['data'] = []
-        dataP['data'].append({'Date' : textDate.get(), 'Puls' : textPuls.get()})
+        dataP['data'].append({'Date' : textDate.get() + ' : ' + textHour.get(),
+            'Puls' : textPuls.get()})
         if textPuls.get() == "":
             print("---Pas de VALEUR 'Puls' entrée---")
         else:
@@ -148,7 +150,8 @@ def writeData(textDate, textHour, textName, textTa, textDia,
                 datastore = json.load(datasat)
                 print(datastore)
             dataS = datastore
-            dataS['data'].append({'Date' : textDate.get(), 'SaO2' : textSa.get()})
+            dataS['data'].append({'Date' : textDate.get() + ' : ' + textHour.get(),
+                'SaO2' : textSa.get()})
             if textSa.get() == "":
                 print("---Pas de VALEUR 'SaO2' entrée---")
             else:
@@ -161,7 +164,8 @@ def writeData(textDate, textHour, textName, textTa, textDia,
         print("+ File sat.json created !")
         dataS = {}
         dataS['data'] = []
-        dataS['data'].append({'Date' : textDate.get(), 'SaO2' : textSa.get()})
+        dataS['data'].append({'Date' : textDate.get() + ' : ' + textHour.get(),
+            'SaO2' : textSa.get()})
         if textSa.get() == "":
             print("---Pas de VALEUR 'SaO2' entrée---")
         else:
@@ -176,7 +180,8 @@ def writeData(textDate, textHour, textName, textTa, textDia,
                 datastore = json.load(datafreq)
                 print(datastore)
             dataF = datastore
-            dataF['data'].append({'Date' : textDate.get(), 'FR' : textFr.get()})
+            dataF['data'].append({'Date' : textDate.get() + ' : ' + textHour.get(),
+                'FR' : textFr.get()})
             if textFr.get() == "":
                 print("---Pas de VALEUR 'FR' entrée---")
             else:
@@ -189,7 +194,8 @@ def writeData(textDate, textHour, textName, textTa, textDia,
         print("+ File freq.json created !")
         dataF = {}
         dataF['data'] = []
-        dataF['data'].append({'Date' : textDate.get(), 'FR' : textFr.get()})
+        dataF['data'].append({'Date' : textDate.get() + ' : ' + textHour.get(),
+            'FR' : textFr.get()})
         if textFr.get() == "":
             print("---Pas de VALEUR 'FR' entrée---")
         else:
@@ -204,7 +210,8 @@ def writeData(textDate, textHour, textName, textTa, textDia,
                 datastore = json.load(datatemp)
                 print(datastore)
             dataTe2 = datastore
-            dataTe2['data'].append({'Date' : textDate.get(), 'Temperature' : textTemp.get()})
+            dataTe2['data'].append({'Date' : textDate.get() + ' : ' + textHour.get(),
+                'Temperature' : textTemp.get()})
             if textTemp.get() == "":
                 print("---Pas de VALEUR 'Temperature' entrée---")
             else:
@@ -217,7 +224,8 @@ def writeData(textDate, textHour, textName, textTa, textDia,
         print("+ File temp.json created !")
         dataTe2 = {}
         dataTe2['data'] = []
-        dataTe2['data'].append({'Date' : textDate.get(), 'Temperature' : textTemp.get()})
+        dataTe2['data'].append({'Date' : textDate.get() + ' : ' + textHour.get(),
+            'Temperature' : textTemp.get()})
         if textTemp.get() == "":
             print("---Pas de VALEUR 'Temperature' entrée---")
         else:
@@ -232,7 +240,8 @@ def writeData(textDate, textHour, textName, textTa, textDia,
                 datastore = json.load(datagly)
                 print(datastore)
             dataG = datastore
-            dataG['data'].append({'Date' : textDate.get(), 'Glycemie' : textHgt.get()})
+            dataG['data'].append({'Date' : textDate.get() + ' : ' + textHour.get(),
+                'Glycemie' : textHgt.get()})
             if textHgt.get() == "":
                 print("---Pas de VALEUR 'Glycemie' entrée---")
             else:
@@ -245,7 +254,8 @@ def writeData(textDate, textHour, textName, textTa, textDia,
         print("+ File gly.json created !")
         dataG = {}
         dataG['data'] = []
-        dataG['data'].append({'Date' : textDate.get(), 'Glycemie' : textHgt.get()})
+        dataG['data'].append({'Date' : textDate.get() + ' : ' + textHour.get(),
+            'Glycemie' : textHgt.get()})
         if textHgt.get() == "":
             print("---Pas de VALEUR 'Glycemie' entrée---")
         else:
@@ -260,7 +270,8 @@ def writeData(textDate, textHour, textName, textTa, textDia,
                 datastore = json.load(datadlr)
                 print(datastore)
             dataD = datastore
-            dataD['data'].append({'Date' : textDate.get(), 'Douleurs' : textDlrs.get()})
+            dataD['data'].append({'Date' : textDate.get() + ' : ' + textHour.get(),
+                'Douleurs' : textDlrs.get()})
             if textDlrs.get() == "":
                 print("---Pas de VALEUR 'Douleurs' entrée---")
             else:
@@ -273,7 +284,8 @@ def writeData(textDate, textHour, textName, textTa, textDia,
         print("+ File dlr.json created !")
         dataD = {}
         dataD['data'] = []
-        dataD['data'].append({'Date' : textDate.get(), 'Douleurs' : textDlrs.get()})
+        dataD['data'].append({'Date' : textDate.get() + ' : ' + textHour.get(),
+            'Douleurs' : textDlrs.get()})
         if textDlrs.get() == "":
             print("---Pas de VALEUR 'Douleurs' entrée---")
         else:

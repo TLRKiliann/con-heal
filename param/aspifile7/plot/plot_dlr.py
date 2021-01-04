@@ -2,9 +2,11 @@
 # -*- coding: utf-8 -*-
 
 
-import json
-import matplotlib.pyplot as plt
 import os
+import json
+import datetime
+import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
 
 
 print("\nListe1 = dates :")
@@ -59,13 +61,29 @@ except ValueError as base_err:
     print("+ Invalid number (no: . or , !)", base_err)
     list2 = []
 
-x_axis = list1
+xdates = [datetime.datetime.strptime('{:10}'.format(str(li)),'%d/%m/%Y : %H:%M:%S') for li in list1]
+print(xdates)
+
+x_axis = xdates
 y_axis = list2
 
 try:
     show_grid = True
     with plt.style.context('seaborn-darkgrid'):
-        figure, axes = plt.subplots()
+        fig = plt.figure()
+        fig.set_facecolor("grey")
+        lab = fig.suptitle('Pain Scale (dlr/10) by Day',
+            fontsize=18)
+        lab.set_color('white')
+        ax = plt.subplot()
+        ax.tick_params(axis='x', colors='white')
+        ax.tick_params(axis='y', colors='white')
+        labelc = plt.ylabel("y-label")
+        labelc.set_color('white')
+        labelc2 = plt.xlabel("x-label")
+        labelc2.set_color('white')
+        #figure, axes = plt.subplots()
+        plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
         plt.plot(x_axis, y_axis, 'o', color='purple')
         plt.plot(x_axis, y_axis, '--', color='purple')
         for x,y in zip(x_axis, y_axis):
@@ -74,7 +92,7 @@ try:
                 xytext=(0,10), ha='center')
         plt.ylabel('Dlrs', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
-        plt.title('Pain scale (dlr/10) by date', fontsize=16)
+        #plt.title('Pain scale (dlr/10) by date', fontsize=16)
         plt.xticks(rotation=45)
         plt.legend(['Douleurs (Pain)'])
         plt.grid(show_grid)
@@ -82,7 +100,10 @@ try:
 except ValueError as shapes_err:
     print("Invalid number", shapes_err)
 
-os.remove('./param/aspifile7/data_datedlr.json')
-print("+ File data_datedlr.json removed !")
-os.remove('./param/aspifile7/data_dlr.json')
-print("+ File data_dlr.json removed !\n")
+try:
+    os.remove('./param/aspifile7/data_datedlr.json')
+    print("+ File data_datedlr.json removed !")
+    os.remove('./param/aspifile7/data_dlr.json')
+    print("+ File data_dlr.json removed !\n")
+except OSError as os_err:
+    print("+ OS error ! ...", os_err)

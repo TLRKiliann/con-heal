@@ -186,8 +186,7 @@ try:
         labelc.set_color("aquamarine")
         labelc2 = plt.xlabel("x-label")
         labelc2.set_color("aquamarine")
-        #plt.gca().xaxis.set_major_locator(mdates.DayLocator())
-        plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
+        
         plt.plot(x_axis, y_axis, 'o', color='red')
         plt.plot(x_axis, z_axis, 'o', color='red')
         plt.vlines(x = x_axis, ymin = z_axis, ymax = y_axis,
@@ -204,10 +203,13 @@ try:
             plt.annotate(label2, (x,z), textcoords="offset points",
                 xytext=(0,-15), ha='center')
 
+        #plt.gca().xaxis.set_major_locator(mdates.MonthLocator())
+        plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
         plt.ylabel('TA (blood pressure)', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
-        plt.xticks(rotation=25)
+        #plt.xticks(rotation=25)
         plt.legend(['TA (blood pressure)'])
+        plt.gcf().autofmt_xdate(rotation=25)
         plt.grid(show_grid)
         plt.show()
 except ValueError as val:

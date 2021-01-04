@@ -83,18 +83,20 @@ try:
         labelc2 = plt.xlabel("x-label")
         labelc2.set_color('white')
         #figure, axes = plt.subplots()
-        plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
         plt.plot(x_axis, y_axis, 'o', color='purple')
         plt.plot(x_axis, y_axis, '--', color='purple')
         for x,y in zip(x_axis, y_axis):
             label = "{}".format(y)
             plt.annotate(label, (x,y), textcoords="offset points",
                 xytext=(0,10), ha='center')
+
+        plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
         plt.ylabel('Dlrs', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
         #plt.title('Pain scale (dlr/10) by date', fontsize=16)
-        plt.xticks(rotation=25)
+        #plt.xticks(rotation=25)
         plt.legend(['Douleurs (Pain)'])
+        plt.gcf().autofmt_xdate(rotation=25)
         plt.grid(show_grid)
         plt.show()
 except ValueError as shapes_err:

@@ -100,19 +100,21 @@ try:
         labelc.set_color('white')
         labelc2 = plt.xlabel("x-label")
         labelc2.set_color('white')
-        plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
+
         plt.plot(x_axis, y_axis, 'o', color='teal')
         plt.plot(x_axis, y_axis, '--', color='teal')
         for x,y in zip(x_axis, y_axis):
             label = "{:.1f}".format(y)
             plt.annotate(label, (x,y), textcoords="offset points",
                 xytext=(0,10), ha='center')
+
+        plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
         plt.ylabel('T°C', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
         #plt.title('Temperature by Date', fontsize=16)
-        plt.xticks(rotation=25)
+        #plt.xticks(rotation=25)
         plt.legend(['Temperatures C°'])
-        #plt.gcf().autofmt_xdate(rotation=45)
+        plt.gcf().autofmt_xdate(rotation=45)
         plt.grid(show_grid)
         plt.show()
 except ValueError as shapes_err:

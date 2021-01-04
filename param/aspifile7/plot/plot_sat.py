@@ -84,7 +84,7 @@ try:
         labelc2.set_color('white')
         plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
         plt.plot(x_axis, y_axis, 'o', color='blue')
-        plt.plot(x_axis, y_axis, '--', color='cyan')
+        plt.plot(x_axis, y_axis, '--', color='blue')
         for x,y in zip(x_axis, y_axis):
             label = "{}".format(y)
             plt.annotate(label, (x,y), textcoords="offset points",

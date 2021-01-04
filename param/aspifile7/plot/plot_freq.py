@@ -83,7 +83,7 @@ try:
         labelc2 = plt.xlabel("x-label")
         labelc2.set_color('white')
         plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
-        plt.plot(x_axis, y_axis, 'o', color='blue')
+        plt.plot(x_axis, y_axis, 's', color='blue')
         plt.plot(x_axis, y_axis, '--', color='cyan')
         for x,y in zip(x_axis, y_axis):
             label = "{}".format(y)

@@ -6,7 +6,7 @@ import subprocess
 import json
 
 
-file = open('./param/aspifile12/gly.json')
+file = open('./param/aspifile14/gly.json')
 data = json.load(file)
 
 try:
@@ -33,7 +33,7 @@ for value in zip(value):
 
 print("\nThat seems ok!\n")
 
-with open('./param/aspifile12/data_dategly.json', 'a+') as datafile:
+with open('./param/aspifile14/data_dategly.json', 'a+') as datafile:
     json.dump(data_list1, datafile, indent=4)
 
 for (key, value) in data.items():
@@ -49,9 +49,9 @@ for value in zip(value):
 
 print("\nThat seems correct!\n")
 
-with open('./param/aspifile12/data_gly.json', 'a+') as datafile:
+with open('./param/aspifile14/data_gly.json', 'a+') as datafile:
     json.dump(data_list2, datafile, indent=4)
 
 print("\nDownloading 'plot_prog.py'...")
 
-subprocess.run('./param/aspifile12/plot/plot_gly.py', check=True)
+subprocess.run('./param/aspifile14/plot/plot_gly.py', check=True)

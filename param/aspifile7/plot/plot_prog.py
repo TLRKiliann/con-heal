@@ -188,7 +188,6 @@ try:
         labelc2.set_color("aquamarine")
         #plt.gca().xaxis.set_major_locator(mdates.DayLocator())
         plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
-        
         plt.plot(x_axis, y_axis, 'o', color='red')
         plt.plot(x_axis, z_axis, 'o', color='red')
         plt.vlines(x = x_axis, ymin = z_axis, ymax = y_axis,

@@ -170,7 +170,7 @@ x_axis = xdates
 y_axis = list2
 z_axis = list4
 
-# Color style :fivethirtyeight, seaborn-darkgrid, bmh, classic
+# Color style : fivethirtyeight, seaborn-darkgrid, bmh, classic
 try:
     show_grid = True
     with plt.style.context('seaborn-darkgrid'):

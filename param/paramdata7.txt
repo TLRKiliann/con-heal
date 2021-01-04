@@ -9,3 +9,47 @@ Temperature : °C
 Glycemie :  mmol/l
 Douleurs (Pain) : /10
 
+Date : 04/01/2021
+Hour : 00:51:02
+Name and Surname : Julian Assange
+TA : 90/77mmHg
+Puls : /min
+SaO2 : %
+FR : /min
+Temperature : °C
+Glycemie :  mmol/l
+Douleurs (Pain) : /10
+
+Date : 10/01/2021
+Hour : 00:51:02
+Name and Surname : Julian Assange
+TA : 130/89mmHg
+Puls : /min
+SaO2 : %
+FR : /min
+Temperature : °C
+Glycemie :  mmol/l
+Douleurs (Pain) : /10
+
+Date : 20/01/2021
+Hour : 00:51:02
+Name and Surname : Julian Assange
+TA : 189/76mmHg
+Puls : /min
+SaO2 : %
+FR : /min
+Temperature : °C
+Glycemie :  mmol/l
+Douleurs (Pain) : /10
+
+Date : 04/02/2021
+Hour : 00:54:57
+Name and Surname : Julian Assange
+TA : 120/77mmHg
+Puls : /min
+SaO2 : %
+FR : /min
+Temperature : °C
+Glycemie :  mmol/l
+Douleurs (Pain) : /10
+

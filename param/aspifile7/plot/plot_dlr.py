@@ -93,7 +93,7 @@ try:
         plt.ylabel('Dlrs', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
         #plt.title('Pain scale (dlr/10) by date', fontsize=16)
-        plt.xticks(rotation=45)
+        plt.xticks(rotation=25)
         plt.legend(['Douleurs (Pain)'])
         plt.grid(show_grid)
         plt.show()

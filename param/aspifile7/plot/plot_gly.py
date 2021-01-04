@@ -68,9 +68,11 @@ y_axis = list2
 try:
     show_grid = True
     with plt.style.context('seaborn-darkgrid'):
-        #figure, axes = plt.subplots()
         fig = plt.figure()
-        fig.set_facecolor("grey")
+        fig.set_facecolor('grey')
+        lab = fig.suptitle('Hgt(mmol/l) by Day',
+            fontsize=18)
+        lab.set_color('white')
         ax = plt.subplot()
         ax.tick_params(axis='x', colors='white')
         ax.tick_params(axis='y', colors='white')
@@ -87,8 +89,8 @@ try:
                 xytext=(0,10), ha='center')
         plt.ylabel('Hgt', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
-        plt.title('Hgt(mmol/l) by Date', fontsize=16)
-        plt.xticks(rotation=45)
+        #plt.title('Hgt(mmol/l) by Date', fontsize=16)
+        plt.xticks(rotation=25)
         plt.legend(['Glycemia'])
         plt.grid(show_grid)
         plt.show()

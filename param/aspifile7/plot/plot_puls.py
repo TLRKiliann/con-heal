@@ -69,13 +69,10 @@ y_axis = list2
 try:
     show_grid = True
     with plt.style.context('seaborn-darkgrid'):
-        ax = plt.subplot()
-        ax.tick_params(axis='x', colors='white')
-        ax.tick_params(axis='y', colors='white')
-        labelc = plt.ylabel("y-label")
-        labelc.set_color('white')
-        labelc2 = plt.xlabel("x-label")
-        labelc2.set_color('white')
+        fig = plt.figure()
+        lab = fig.suptitle('Puls/min by Day',
+            fontsize=18)
+        lab.set_color('black')
         plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d/%m/%Y : %H:%M:%S'))
         plt.plot(x_axis, y_axis, 's', color='red')
         plt.plot(x_axis, y_axis, '--', color='orange')
@@ -83,10 +80,10 @@ try:
             label = "{}".format(y)
             plt.annotate(label, (x,y), textcoords="offset points",
                 xytext=(0,10), ha='center')
-        plt.ylabel('Puls/min', fontsize=14)
-        plt.xlabel('Dates', fontsize=14)
-        plt.title('Relevé des puls/min par date', fontsize=16)
-        plt.xticks(rotation=45)
+        plt.ylabel('Puls/min', fontsize=12)
+        plt.xlabel('Dates', fontsize=12)
+        #plt.title('Relevé des puls/min par date', fontsize=16)
+        plt.xticks(rotation=25)
         plt.legend(['Pulsations/min'])
         plt.grid(show_grid)
         plt.show()

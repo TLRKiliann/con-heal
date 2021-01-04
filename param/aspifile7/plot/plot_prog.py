@@ -207,7 +207,7 @@ try:
 
         plt.ylabel('TA (blood pressure)', fontsize=14)
         plt.xlabel('Dates', fontsize=14)
-        plt.xticks(rotation=45)
+        plt.xticks(rotation=25)
         plt.legend(['TA (blood pressure)'])
         plt.grid(show_grid)
         plt.show()

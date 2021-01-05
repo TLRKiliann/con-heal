@@ -94,8 +94,8 @@ with plt.style.context('dark_background'):
     ax = plt.gcf().axes[0]
     ax.xaxis.set_major_formatter(formatter)
     #axes.xaxis.set_major_formatter(AutoDateFormatter(locator))
-    min_date = date2num(datetime.datetime.strptime('01-01-2020', "%d-%m-%Y"))
-    max_date = date2num(datetime.datetime.strptime('31-12-2020', "%d-%m-%Y"))
+    min_date = date2num(datetime.datetime.strptime('01-01-2021', "%d-%m-%Y"))
+    max_date = date2num(datetime.datetime.strptime('31-12-2021', "%d-%m-%Y"))
     axes.set_xlim([min_date, max_date])
     #figure.autofmt_xdate()
 
@@ -152,8 +152,8 @@ try:
         plt.xlabel('Dates', fontsize=14)
         plt.title('Kg by Date customised', fontsize=16)
         plt.legend(['kg/date'])
-        plt.grid(show_grid)
         plt.gcf().autofmt_xdate(rotation=45)
+        plt.grid(show_grid)
         plt.show()
 except NameError as data_err:
     print("Data BMI error", data_err)

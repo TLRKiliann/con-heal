@@ -93,7 +93,7 @@ with plt.style.context(('dark_background')):
     max_date = date2num(datetime.datetime.strptime("31-12-2021", "%d-%m-%Y"))
     axes.set_xlim([min_date, max_date])
 
-    plt.bar(x_axis, y_axis, width=3, color='yellow')
+    plt.bar(x_axis, y_axis, width=1, color='yellow')
     plt.ylabel('BMI', fontsize=14)
     plt.xlabel('Dates', fontsize=14)
     plt.title('BMI by Date', fontsize=16)

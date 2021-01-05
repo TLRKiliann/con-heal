@@ -49,7 +49,7 @@ labelName.pack(pady=10)
 monthVal=StringVar()
 month_start = Entry(gui, textvariable=monthVal, 
     highlightbackground='light sky blue', bd=4)
-monthVal.set("00-00-2020")
+monthVal.set("00-00-2021")
 month_start.pack()
 
 labelName = Label(gui)
@@ -61,7 +61,7 @@ labelName.pack(pady=10)
 monthEnd=StringVar()
 month_end = Entry(gui, textvariable=monthEnd, 
     highlightbackground='light sky blue', bd=4)
-monthEnd.set("00-00-2020")
+monthEnd.set("00-00-2021")
 month_end.pack()
 
 bouton1 = Button(gui, text="Enter", width=8, bd=3,

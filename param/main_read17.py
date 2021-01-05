@@ -24,7 +24,7 @@ labelallergy = Label(fen, text="Allergy",
     font='Arial 18 bold', fg='coral', bg='DodgerBlue2')
 labelallergy.pack(padx=5, pady=5)
 
-with open('./newpatient/entryfile10.txt', 'r') as filename:
+with open('./newpatient/entryfile17.txt', 'r') as filename:
     line1 = filename.readline()
 
 text_name = StringVar()
@@ -32,7 +32,7 @@ Entryname = Entry(fen, textvariable=text_name)
 text_name.set(line1[:-1])
 Entryname.pack(in_=top, side=LEFT, pady=20)
 
-with open('./allergy/allergyfile10.txt', 'r') as allerfile:
+with open('./allergy/allergyfile17.txt', 'r') as allerfile:
     line_a = allerfile.readline()
 
 text_all = StringVar()
@@ -56,10 +56,10 @@ buttonClose = Button(fen, text="Quit", width=10, fg='white',
 buttonClose.pack(side='right', padx=10, pady=10)
 
 try:
-    if os.path.getsize('./param/paramdata10.txt'):
-        importationFile('./param/paramdata10.txt', encodage="Utf-8")
+    if os.path.getsize('./param/paramdata17.txt'):
+        importationFile('./param/paramdata17.txt', encodage="Utf-8")
 except FileNotFoundError as nf_file:
-    print("+ File paramdata10 not found !", nf_file)
+    print("+ File paramdata17 not found !", nf_file)
     messagebox.showwarning('Warning', 'No recorded data !')
 
 fen.mainloop()

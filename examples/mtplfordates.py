@@ -1,3 +1,22 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
+from tkinter import *
+from tkinter import messagebox
+import os
+import subprocess
+import json
+import matplotlib
+import matplotlib.pyplot as plt
+from matplotlib import dates
+from matplotlib.dates import date2num
+from matplotlib.dates import AutoDateLocator
+from matplotlib.dates import AutoDateFormatter
+import datetime
+import time
+
+
+# Such as param
 try:
     show_grid = True
     with plt.style.context('seaborn-darkgrid'):
@@ -53,3 +72,28 @@ try:
         plt.show()
 except ValueError as val:
     print("+ False entry value, ", val)
+
+# Such as BMI
+show_grid = True
+with plt.style.context('dark_background'):
+    figure, axes = plt.subplots()
+    # apply autoformatter for displaying of dates 
+    locator = AutoDateLocator()
+    axes.xaxis.set_major_locator(locator)
+    ax = plt.gcf().axes[0]
+    ax.xaxis.set_major_formatter(formatter)
+    #axes.xaxis.set_major_formatter(AutoDateFormatter(locator))
+    min_date = date2num(datetime.datetime.strptime('01-01-2020', "%d-%m-%Y"))
+    max_date = date2num(datetime.datetime.strptime('31-12-2020', "%d-%m-%Y"))
+    axes.set_xlim([min_date, max_date])
+    #figure.autofmt_xdate()
+
+    plt.plot(x_axis, y_axis, 'o-', color='cyan')
+    plt.ylabel('Kg', fontsize=14)
+    plt.xlabel('Dates', fontsize=14)
+    plt.title('Kg by Date', fontsize=16)
+    #plt.xticks(rotation=45)
+    plt.legend(['kg/date'])
+    plt.grid(show_grid)
+    plt.gcf().autofmt_xdate(rotation=45)
+    plt.show()

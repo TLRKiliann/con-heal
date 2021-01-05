@@ -1,0 +1,44 @@
+Date : 01/01/2021
+Hour : 18:50:59
+Name and Surname : David Copperfield
+TA : 120/80mmHg
+Puls : 78/min
+SaO2 : 98%
+FR : 16/min
+Temperature : 36.3°C
+Glycemie : 6.5 mmol/l
+Douleurs (Pain) : 8/10
+
+Date : 05/01/2021
+Hour : 18:53:39
+Name and Surname : David Copperfield
+TA : 144/89mmHg
+Puls : 89/min
+SaO2 : 98%
+FR : 17/min
+Temperature : 36.4°C
+Glycemie : 6.4 mmol/l
+Douleurs (Pain) : 4/10
+
+Date : 15/01/2021
+Hour : 19:10:11
+Name and Surname : David Copperfield
+TA : 133/76mmHg
+Puls : 82/min
+SaO2 : 98%
+FR : 15/min
+Temperature : 36.4°C
+Glycemie : 6.7 mmol/l
+Douleurs (Pain) : 2/10
+
+Date : 20/01/2021
+Hour : 19:10:11
+Name and Surname : David Copperfield
+TA : 129/79mmHg
+Puls : 84/min
+SaO2 : 99%
+FR : 17/min
+Temperature : 36.6°C
+Glycemie : 6.3 mmol/l
+Douleurs (Pain) : 0/10
+

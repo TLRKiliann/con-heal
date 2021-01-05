@@ -1,0 +1,42 @@
+Date : 01-01-2021
+Heure : 18:55:49
+Prenom et Nom : David Copperfield
+Poids : 78
+Taille : 1.86
+BMI : 22.546
+
+Date : 05-01-2021
+Heure : 18:55:49
+Prenom et Nom : David Copperfield
+Poids : 75
+Taille : 1.86
+BMI : 21.679
+
+Date : 15-01-2021
+Heure : 19:02:34
+Prenom et Nom : David Copperfield
+Poids : 74.500
+Taille : 1.86
+BMI : 21.534
+
+Date : 20-01-2021
+Heure : 19:02:34
+Prenom et Nom : David Copperfield
+Poids : 76
+Taille : 1.86
+BMI : 21.968
+
+Date : 30-01-2021
+Heure : 19:02:34
+Prenom et Nom : David Copperfield
+Poids : 75
+Taille : 1.86
+BMI : 21.679
+
+Date : 05-02-2021
+Heure : 19:16:41
+Prenom et Nom : David Copperfield
+Poids : 75
+Taille : 1.86
+BMI : 21.679
+

@@ -21,7 +21,7 @@ print("\nListe1 = dates :")
 print("--------------")
 
 try:
-    fileO = open('./param/aspifile12/data_date.json')
+    fileO = open('./param/aspifile23/data_date.json')
     list1 = json.load(fileO)
 except ValueError as err_entry:
     print("+ Value Error", err_entry)
@@ -36,7 +36,7 @@ print("\nList2 = systol :")
 print("--------------------")
 
 try:
-    fileO = open('./param/aspifile12/data_Systol.json')
+    fileO = open('./param/aspifile23/data_Systol.json')
     list2 = json.load(fileO)
 except ValueError as err_entry2:
     print("+ Value Error", err_entry2)
@@ -92,7 +92,7 @@ print("\nListe3 = dates :")
 print("--------------")
 
 try:
-    file3 = open('./param/aspifile12/data_dia.json')
+    file3 = open('./param/aspifile23/data_dia.json')
     list3 = json.load(file3)
 except ValueError as err_entry:
     print("+ Value Error", err_entry)
@@ -107,7 +107,7 @@ print("\nList4 = diastol :")
 print("--------------------")
 
 try:
-    file4 = open('./param/aspifile12/data_Diastol.json')
+    file4 = open('./param/aspifile23/data_Diastol.json')
     list4 = json.load(file4)
 except ValueError as err_entry2:
     print("+ Value Error", err_entry2)
@@ -216,12 +216,12 @@ except ValueError as val:
     print("+ False entry value, ", val)
 
 try:
-    os.remove('./param/aspifile12/data_date.json')
-    os.remove('./param/aspifile12/data_Systol.json')
+    os.remove('./param/aspifile23/data_date.json')
+    os.remove('./param/aspifile23/data_Systol.json')
     print("+ File data_date.json removed !")
     print("+ File data_Systol.json removed !")
-    os.remove('./param/aspifile12/data_dia.json')
-    os.remove('./param/aspifile12/data_Diastol.json')
+    os.remove('./param/aspifile23/data_dia.json')
+    os.remove('./param/aspifile23/data_Diastol.json')
     print("+ File data_dia.json removed !")
     print("+ File data_Diastol.json removed !")
 except OSError as os_err:

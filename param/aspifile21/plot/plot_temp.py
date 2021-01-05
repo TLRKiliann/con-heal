@@ -13,7 +13,7 @@ print("\nListe1 = dates :")
 print("--------------")
 
 try:
-    fileO = open('./param/aspifile12/data_datetemp.json')
+    fileO = open('./param/aspifile21/data_datetemp.json')
     list1 = json.load(fileO)
 except ValueError as err_entry:
     print("+ Value Error", err_entry)
@@ -28,7 +28,7 @@ print("\nList2 = temperatures :")
 print("--------------------")
 
 try:
-    file1 = open('./param/aspifile12/data_temp.json')
+    file1 = open('./param/aspifile21/data_temp.json')
     list2 = json.load(file1)
 except ValueError as err_entry2:
     print("+ Value Error", err_entry2)
@@ -121,9 +121,9 @@ except ValueError as shapes_err:
     print("Invalid number", shapes_err)
 
 try:
-    os.remove('./param/aspifile12/data_datetemp.json')
+    os.remove('./param/aspifile21/data_datetemp.json')
     print("+ File data_datetemp.json removed !")
-    os.remove('./param/aspifile12/data_temp.json')
+    os.remove('./param/aspifile21/data_temp.json')
     print("+ File data_temp.json removed !\n")
 except OSError as os_err:
     print("+ OS error ! ...", os_err)

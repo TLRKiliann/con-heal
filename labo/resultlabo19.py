@@ -608,7 +608,11 @@ def callLabo19(self):
         messagebox.showinfo("Confirmation", "Record confirmed and finished !")
 
     def comburTips():
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
         subprocess.run('./labo/combtest19.py', check=True)
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
 
     def awayOut():
         try:

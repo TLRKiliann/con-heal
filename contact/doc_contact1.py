@@ -26,7 +26,7 @@ def doctorWind(self):
             with open('./contact/contactdoc1.txt', 'w') as testf:
                 print("+ File contactdoc1.txt created !", testf)
 
-        self.x1, self.y1 = 900, 350
+        self.x1, self.y1 = 900, 370
         self.txtBox = Text(self.can, height=18, width=40, font=18, relief=SUNKEN)
         self.txtBox.delete('1.0', END)
         self.txtBox.update()
@@ -59,13 +59,13 @@ def doctorWind(self):
 
         try:
             if os.path.getsize('./contact/contactdoc2.txt'):
-                print("+ Ok, contactdoc2.txt exist (t1)")
+                print("+ Ok, contactdoc2.txt exist (t2)")
         except FileNotFoundError as nfd2:
             print("+ No file contactdoc2.txt exist (Error3)", nfd2)
             with open('./contact/contactdoc2.txt', 'w') as testfd2:
                 print("+ File contactdoc2.txt created !", testfd2)
 
-        self.x2, self.y2 = 900, 820
+        self.x2, self.y2 = 900, 890
         self.txtBox2 = Text(self.can, height=18, width=40, font=18, relief=SUNKEN)
         self.txtBox2.delete('1.0', END)
         self.txtBox2.update()
@@ -98,13 +98,13 @@ def doctorWind(self):
 
         try:
             if os.path.getsize('./contact/contactdoc3.txt'):
-                print("+ Ok, contactdoc3.txt exist (t1)")
+                print("+ Ok, contactdoc3.txt exist (t3)")
         except FileNotFoundError as nfd3:
             print("+ No file contactdoc3.txt exist (Error5)", nfd3)
             with open('./contact/contactdoc3.txt', 'w') as testfd3:
                 print("+ File contactdoc3.txt created !", testfd3)
 
-        self.x3, self.y3 = 900, 1270
+        self.x3, self.y3 = 900, 1410
         self.txtBox3 = Text(self.can, height=18, width=40, font=18, relief=SUNKEN)
         self.txtBox3.delete('1.0', END)
         self.txtBox3.update()
@@ -114,7 +114,7 @@ def doctorWind(self):
             if os.path.exists('./contact/contactdoc3.txt'):
                 with open('./contact/contactdoc3.txt', 'r') as policydoc3:
                     doc3line1 = policydoc3.readline()
-                    docspecial = policydoc3.readline()
+                    doc3special = policydoc3.readline()
                     doc3phone = policydoc3.readline()
                     doc3iphone2 = policydoc3.readline()
                     doc3street = policydoc3.readline()
@@ -123,7 +123,7 @@ def doctorWind(self):
                     doc3fax = policydoc3.readline()
                 self.txtBox3.insert(INSERT, "--- Data Doctor 3 ---\n")
                 self.txtBox3.insert(END, "\nDoctor : " + doc3line1)
-                self.txtBox2.insert(END, "\nSpecialization : " + docspecial)
+                self.txtBox2.insert(END, "\nSpecialization : " + doc3special)
                 self.txtBox3.insert(END, "\nPhone : " + doc3phone)
                 self.txtBox3.insert(END, "\nMobile : " + doc3iphone2)
                 self.txtBox3.insert(END, "\nStreet : " + doc3street)
@@ -134,7 +134,6 @@ def doctorWind(self):
                 pass
         except FileNotFoundError as err_r3:
             print("+ No file contactdoc3.txt exist (Error6)", err_r3)
-
 
     def recorderData(namentry, txtspec1, specentry1, txtphone,
         phonentry, txtmobile, mobilentry, addrtxt, addrentry,
@@ -284,7 +283,7 @@ def doctorWind(self):
 
         allInData()
 
-    allInData()
+    #allInData()
 
     # Label title
     self.x11, self.y11 = 250, 100
@@ -507,12 +506,12 @@ def doctorWind(self):
     self.wspeclab2_window = self.can.create_window(self.x63, self.y63,
         window = self.speclab2)
 
-    self.txtspec2 = line2
+    self.txtspec2 = docline2
     self.x64, self.y64 = 450, 770
     self.txtspec2 = StringVar()
     self.specentry2 = Entry(self.can, textvariable=self.txtspec2,
         highlightbackground='grey', bd=3)
-    self.txtspec2.set(line2[:-1])
+    self.txtspec2.set(docline2[:-1])
     self.wspecentry2_window = self.can.create_window(self.x64, self.y64,
         window = self.specentry2)
 
@@ -654,7 +653,7 @@ def doctorWind(self):
 
     try:
         self.txt_doc3 = doc3line1
-        self.x81, self.y81 = 450, 1190
+        self.x81, self.y81 = 450, 1240
         self.txt_doc3 = StringVar()
         self.namentry3 = Entry(self.can, textvariable=self.txt_doc3,
             highlightbackground='grey', bd=4)
@@ -664,24 +663,24 @@ def doctorWind(self):
     except UnboundLocalError as err_doc3:
         print("+ File 1 not created ! (Error21)", err_doc3)
 
-    self.x82, self.y82 = 250, 1240
+    self.x82, self.y82 = 250, 1290
     self.speclab3 = Label(self.can, text="Specialization :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wspeclab3_window = self.can.create_window(self.x82, self.y82,
         window = self.speclab3)
 
-    self.txtspec3 = line2
-    self.x83, self.y83 = 450, 1240
+    self.txtspec3 = doc3line2
+    self.x83, self.y83 = 450, 1290
     self.txtspec3 = StringVar()
     self.specentry3 = Entry(self.can, textvariable=self.txtspec3,
         highlightbackground='grey', bd=3)
-    self.txtspec3.set(docline2[:-1])
+    self.txtspec3.set(doc3line2[:-1])
     self.wspecentry3_window = self.can.create_window(self.x83, self.y83,
         window = self.specentry3)
 
     # Phone
-    self.x84, self.y84 = 250, 1290
+    self.x84, self.y84 = 250, 1340
     self.phonelabel3 = Label(self.can, text="Phone :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
@@ -689,7 +688,7 @@ def doctorWind(self):
         window = self.phonelabel3)
 
     self.txtphone3 = doc3line3
-    self.x85, self.y85 = 450, 1290
+    self.x85, self.y85 = 450, 1340
     self.txtphone3 = StringVar()
     self.phonentry3 = Entry(self.can, textvariable=self.txtphone3,
         highlightbackground='grey', bd=3)
@@ -698,7 +697,7 @@ def doctorWind(self):
         window = self.phonentry3)
 
     # Mobile
-    self.x86, self.y86 = 250, 1340
+    self.x86, self.y86 = 250, 1390
     self.lblmobile3 = Label(self.can, text="Mobile :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
@@ -706,7 +705,7 @@ def doctorWind(self):
         window = self.lblmobile3)
 
     self.txtmobile3 = doc3line4
-    self.x87, self.y87 = 450, 1340
+    self.x87, self.y87 = 450, 1390
     self.txtmobile3 = StringVar()
     self.mobilentry3 = Entry(self.can, textvariable=self.txtmobile3,
         highlightbackground='grey', bd=3)
@@ -715,7 +714,7 @@ def doctorWind(self):
         window = self.mobilentry3)
 
     # Street
-    self.x88, self.y88 = 250, 1390
+    self.x88, self.y88 = 250, 1440
     self.addrlabel3 = Label(self.can, text="Street :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
@@ -723,7 +722,7 @@ def doctorWind(self):
         window = self.addrlabel3)
 
     self.addrtxt3 = doc3line5
-    self.x89, self.y89 = 450, 1390
+    self.x89, self.y89 = 450, 1440
     self.addrtxt3 = StringVar()
     self.addrentry3 = Entry(self.can, textvariable=self.addrtxt3,
         highlightbackground='grey', bd=4)
@@ -731,7 +730,7 @@ def doctorWind(self):
     self.waddrentry3_window = self.can.create_window(self.x89, self.y89,
         window = self.addrentry3)
 
-    self.x90, self.y90 = 250, 1440
+    self.x90, self.y90 = 250, 1490
     self.labcity3 = Label(self.can, text="City :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
@@ -739,7 +738,7 @@ def doctorWind(self):
         window = self.labcity3)
 
     self.citytxt3 = doc3line6
-    self.x91, self.y91 = 450, 1440
+    self.x91, self.y91 = 450, 1490
     self.citytxt3 = StringVar()
     self.cityentry3 = Entry(self.can, textvariable=self.citytxt3,
         highlightbackground='grey', bd=4)
@@ -748,7 +747,7 @@ def doctorWind(self):
         window = self.cityentry3)
 
     # e-mail
-    self.x92, self.y92 = 250, 1490
+    self.x92, self.y92 = 250, 1540
     self.mailabel3 = Label(self.can, text="e-mail :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
@@ -756,7 +755,7 @@ def doctorWind(self):
         window = self.mailabel3)
 
     self.mailtxt3 = doc3line7
-    self.x93, self.y93 = 450, 1490
+    self.x93, self.y93 = 450, 1540
     self.mailtxt3 = StringVar()
     self.entrymail3 = Entry(self.can, textvariable=self.mailtxt3,
         highlightbackground='grey', bd=3)
@@ -765,7 +764,7 @@ def doctorWind(self):
         window = self.entrymail3)
 
     # Fax
-    self.x94, self.y94 = 250, 1560
+    self.x94, self.y94 = 250, 1590
     self.lblfax3 = Label(self.can, text="Fax :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
@@ -773,7 +772,7 @@ def doctorWind(self):
         window = self.lblfax3)
 
     self.faxtxt3 = doc3line8
-    self.x95, self.y95 = 450, 1560
+    self.x95, self.y95 = 450, 1590
     self.faxtxt3 = StringVar()
     self.entryfax3 = Entry(self.can, textvariable=self.faxtxt3,
         highlightbackground='grey', bd=3)
@@ -781,7 +780,7 @@ def doctorWind(self):
     self.wentryfax3_window = self.can.create_window(self.x95, self.y95,
         window = self.entryfax3)
 
-    self.x96, self.y96 = 350, 1630
+    self.x96, self.y96 = 350, 1670
     self.bat96 = Button(self.can, text="Save Modifications", font=16,
         width=30, bd=3, bg='RoyalBlue3', fg='yellow',
         highlightbackground='cyan',

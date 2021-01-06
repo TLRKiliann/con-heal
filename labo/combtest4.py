@@ -88,7 +88,7 @@ textName = tk.Entry(app)
 name_text = tk.StringVar()
 textName = tk.Entry(textvariable=name_text,
     highlightbackground='gray', bd=4)
-name_text.set(line1)
+name_text.set(line1[:-1])
 textName.grid(row=0, column=4, columnspan=8)
 
 # ttk.Label 

@@ -1,2 +1,2 @@
 --- DIAGNOSTICS ---
-diagnotest
+Hysteria

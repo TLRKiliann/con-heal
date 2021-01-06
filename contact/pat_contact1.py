@@ -27,7 +27,7 @@ def Window(self):
                 print("+ File contact1.txt created !")
 
         self.x1, self.y1 = 900, 380
-        self.txtBox = Text(self.can, height=20, width=40, font=18, relief=SUNKEN)
+        self.txtBox = Text(self.can, height=24, width=40, font=18, relief=SUNKEN)
         self.txtBox.delete('1.0', END)
         self.txtBox.update()
         self.ftxtBox_window = self.can.create_window(self.x1, self.y1, window=self.txtBox)
@@ -44,6 +44,8 @@ def Window(self):
                     email = policyfile.readline()
                     assu = policyfile.readline()
                     polins = policyfile.readline()
+                    civilstat = policyfile.readline()
+                    confessionstat = policyfile.readline()
                 self.txtBox.insert(INSERT, "--- Data Patient ---\n")
                 self.txtBox.insert(END, "\nPatient name : " + line1)
                 self.txtBox.insert(END, "\nBirthdate : " + line2)
@@ -54,27 +56,29 @@ def Window(self):
                 self.txtBox.insert(END, "\ne-mail : " + email)
                 self.txtBox.insert(END, "\nInsurance : " + assu)
                 self.txtBox.insert(END, "\nPolicy : " + polins)
+                self.txtBox.insert(END, "\nCivil status : " + civilstat)
+                self.txtBox.insert(END, "\nConfession : " + confessionstat)
             else:
                 pass
         except FileNotFoundError as err_r:
-            print("+ No file contact1.txt exist", err_r)
+            print("+ No file contact1.txt exist (Error1)", err_r)
 
     def recorderData(namentry, birthvar, native, nativaentry, txtphone, phonentry,
-        addrtxt, addrentry, citytxt, cityentry, mailtxt, entrymail,
-        assurance, entryassu, policy, entrypolicy):
+        addrtxt, addrentry, citytxt, cityentry, mailtxt, entrymail, assurance, entryassu,
+        policy, entrypolicy, civil, entrycivil, confess, entryconfess):
         """
             Display origin
         """
         self.x1, self.y1 = 900, 380
-        self.txtBox = Text(self.can, height=20, width=40, font=18, relief=SUNKEN)
+        self.txtBox = Text(self.can, height=24, width=40, font=18, relief=SUNKEN)
         self.txtBox.delete('1.0', END)
         self.ftxtBox_window = self.can.create_window(self.x1, self.y1, window=self.txtBox)
 
         try:
             if os.path.getsize('./contact/contact1.txt'):
-                print("+ Ok, contact1.txt exist (t2)")
+                print("+ Ok, contact1.txt exist")
         except FileNotFoundError as errfnf:
-            print("+ No file contact1.txt exist", errfnf)
+            print("+ No file contact1.txt exist (Error2)", errfnf)
             with open('./contact/contact1.txt', 'w') as testf:
                 print("+ File contact1.txt created !")
 
@@ -89,6 +93,8 @@ def Window(self):
                 iofile.write("\n" + entrymail.get())
                 iofile.write("\n" + entryassu.get())
                 iofile.write("\n" + entrypolicy.get())
+                iofile.write("\n" + entrycivil.get())
+                iofile.write("\n" + entryconfess.get())
         except FileNotFoundError as fn:
             print("+ File not found !", fn)
 
@@ -96,7 +102,7 @@ def Window(self):
             if os.path.getsize('./contact/finalfile1.txt'):
                 os.remove('./contact/finalfile1.txt')
         except FileNotFoundError as err_termin:
-            print("+ finalfile1 not found !(t2)", err_termin)
+            print("+ finalfile1 not found !(Error3)", err_termin)
             with open('./contact/finalfile1.txt', 'a+'):
                 print("+ finalfile1.txt exist!")
         try:
@@ -110,8 +116,10 @@ def Window(self):
                 terminfile.write("\ne-mail : " + entrymail.get())
                 terminfile.write("\nInsurance : " + entryassu.get())
                 terminfile.write("\nPolicy : " + entrypolicy.get())
+                terminfile.write("\nCivil status : " + entrycivil.get())
+                terminfile.write("\nConfession : " + entryconfess.get())
         except FileNotFoundError as err2_final:
-            print("+ finalfile1.txt not created (t2)", err2_final)
+            print("+ finalfile1.txt not created (Error4)", err2_final)
 
         allInData()
 
@@ -173,8 +181,10 @@ def Window(self):
             line7 = namefile.readline()
             line8 = namefile.readline()
             line9 = namefile.readline()
+            line10 = namefile.readline()
+            line11 = namefile.readline()
     except FileNotFoundError as callfile:
-        print("+ File contact1.txt doesn't exist !", callfile)
+        print("+ File contact1.txt doesn't exist ! (Error5)", callfile)
 
     # Native
     self.x15, self.y15 = 250, 250
@@ -294,8 +304,42 @@ def Window(self):
     self.wentrypolicy_window = self.can.create_window(self.x51, self.y51,
         window = self.entrypolicy)
 
-    self.x52, self.y52 = 350, 620
-    self.b52 = Button(self.can, text="Save", font=16,
+    # Civil status
+    self.x52, self.y52 = 250, 600
+    self.labcivil = Label(self.can, text="Civil Status :",
+        font=('helvetica', 18, 'bold'),
+        bg='DodgerBlue2', fg='white')
+    self.wlabcivil_window = self.can.create_window(self.x52, self.y52,
+        window = self.labcivil)
+
+    self.civil = line10
+    self.x53, self.y53 = 450, 600
+    self.civil = StringVar()
+    self.entrycivil = Entry(self.can, textvariable=self.civil,
+        highlightbackground='grey', bd=3)
+    self.civil.set(line10)
+    self.wentrycivil_window = self.can.create_window(self.x53, self.y53,
+        window = self.entrycivil)
+
+    # Religious Confession
+    self.x54, self.y54 = 250, 650
+    self.labconfess = Label(self.can, text="Confession :",
+        font=('helvetica', 18, 'bold'),
+        bg='DodgerBlue2', fg='white')
+    self.wlabconfess_window = self.can.create_window(self.x54, self.y54,
+        window = self.labconfess)
+
+    self.confess = line11
+    self.x55, self.y55 = 450, 650
+    self.confess = StringVar()
+    self.entryconfess = Entry(self.can, textvariable=self.confess,
+        highlightbackground='grey', bd=3)
+    self.confess.set(line11)
+    self.wentryconfess_window = self.can.create_window(self.x55, self.y55,
+        window = self.entryconfess)
+
+    self.x56, self.y56 = 350, 720
+    self.b56 = Button(self.can, text="Save Modifications", font=16,
         width=30, bd=3, bg='RoyalBlue3', fg='yellow',
         highlightbackground='cyan',
         activebackground='pale turquoise',
@@ -303,7 +347,8 @@ def Window(self):
             self.native, self.nativaentry, self.txtphone, self.phonentry,
             self.addrtxt, self.addrentry, self.citytxt, self.cityentry,
             self.mailtxt, self.entrymail, self.assurance, self.entryassu,
-            self.policy, self.entrypolicy))
-    self.fb52_window = self.can.create_window(self.x52, self.y52, window=self.b52)
+            self.policy, self.entrypolicy, self.civil, self.entrycivil,
+            self.confess, self.entryconfess))
+    self.fb56_window = self.can.create_window(self.x56, self.y56, window=self.b56)
 
     self.can.configure(scrollregion=self.can.bbox(ALL))

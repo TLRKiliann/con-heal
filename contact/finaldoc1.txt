@@ -1,7 +1,8 @@
 Doctor : Lynnett Pick
-Phone : 293472894
-Mobile : 1287389132
-Street : Wisteria Lane Av.
-City : Fairview
-e-mail : fake@mail.com
-Fax : 3928748924
+Specialization : Dentiste
+Phone : 082389047
+Mobile : 0762834264
+Street : WesleyAlley
+City : Fairewiev
+e-mail : denta@gmail.com
+Fax : 23947832

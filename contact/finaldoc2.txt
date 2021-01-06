@@ -1,7 +1,7 @@
-Doctor : 000
-Phone : 1
-Mobile : 2
-Street : 3
-City : 4
-e-mail : 5
-Fax : 6
+Doctor : For Fun
+Phone : 0770890999
+Mobile : 044781817
+Street : Blue-Rain 4
+City : Wellness
+e-mail : dr.artzt@gmail.com
+Fax : 0217368716

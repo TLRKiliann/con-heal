@@ -240,7 +240,7 @@ def homecsWind(self):
         window = self.entrymail)
 
     self.x52, self.y52 = 350, 520
-    self.b52 = Button(self.can, text="Save", font=16,
+    self.b52 = Button(self.can, text="Save Modifications", font=16,
         width=30, bd=3, bg='RoyalBlue3', fg='yellow',
         highlightbackground='cyan',
         activebackground='pale turquoise',

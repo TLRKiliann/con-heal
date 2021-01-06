@@ -123,7 +123,7 @@ def doctorWind(self):
                     doc3fax = policydoc3.readline()
                 self.txtBox3.insert(INSERT, "--- Data Doctor 3 ---\n")
                 self.txtBox3.insert(END, "\nDoctor : " + doc3line1)
-                self.txtBox2.insert(END, "\nSpecialization : " + doc3special)
+                self.txtBox3.insert(END, "\nSpecialization : " + doc3special)
                 self.txtBox3.insert(END, "\nPhone : " + doc3phone)
                 self.txtBox3.insert(END, "\nMobile : " + doc3iphone2)
                 self.txtBox3.insert(END, "\nStreet : " + doc3street)
@@ -282,8 +282,8 @@ def doctorWind(self):
             print("+ finaldoc3.txt not created (Error15)", err_final3)
 
         allInData()
-
-    #allInData()
+    # To display all textbox when opening window.
+    allInData()
 
     # Label title
     self.x11, self.y11 = 250, 100

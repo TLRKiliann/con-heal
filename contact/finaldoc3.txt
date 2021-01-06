@@ -1,8 +1,8 @@
-Doctor : 1111111
+Doctor : Alain Kuppfer
 Specialization : endo
-Phone : 9
-Mobile : 00
-Street : 11
-City : 12
-e-mail : 13
-Fax : 7234
+Phone : 82367432
+Mobile : 081276378
+Street : Evil-dead 666
+City : Hell
+e-mail : diabolo@gmail.com
+Fax : 87126382716

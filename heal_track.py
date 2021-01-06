@@ -8,10 +8,10 @@ import time
 import datetime as dt
 import os
 import subprocess
-from contact.pat_contact1 import Window
-from contact.doc_contact1 import doctorWind
-from contact.family_contact1 import famWind
-from contact.hcs_contact1 import homecsWind
+from contact.conpact.pat_contact1 import Window
+from contact.conpact.doc_contact1 import doctorWind
+from contact.conpact.family_contact1 import famWind
+from contact.conpact.hcs_contact1 import homecsWind
 from boxapp import callBox
 from patcaps import callResident
 from backapp import *

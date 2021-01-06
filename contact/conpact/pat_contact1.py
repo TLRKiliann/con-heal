@@ -19,22 +19,22 @@ def Window(self):
             First page
         """
         try:
-            if os.path.getsize('./contact/contact1.txt'):
+            if os.path.getsize('./contact/conpact/contact1.txt'):
                 print("+ Ok, contact1.txt exist (t1)")
         except FileNotFoundError as errfnf:
             print("+ No file contact1.txt exist", errfnf)
-            with open('./contact/contact1.txt', 'w') as testf:
+            with open('./contact/conpact/contact1.txt', 'w') as testf:
                 print("+ File contact1.txt created !")
 
-        self.x1, self.y1 = 900, 380
+        self.x1, self.y1 = 900, 420
         self.txtBox = Text(self.can, height=24, width=40, font=18, relief=SUNKEN)
         self.txtBox.delete('1.0', END)
         self.txtBox.update()
         self.ftxtBox_window = self.can.create_window(self.x1, self.y1, window=self.txtBox)
 
         try:
-            if os.path.exists('./contact/contact1.txt'):
-                with open('./contact/contact1.txt', 'r') as policyfile:
+            if os.path.exists('./contact/conpact/contact1.txt'):
+                with open('./contact/conpact/contact1.txt', 'r') as policyfile:
                     line1 = policyfile.readline()
                     line2 = policyfile.readline()
                     native = policyfile.readline()
@@ -69,21 +69,21 @@ def Window(self):
         """
             Display origin
         """
-        self.x1, self.y1 = 900, 380
+        self.x1, self.y1 = 900, 420
         self.txtBox = Text(self.can, height=24, width=40, font=18, relief=SUNKEN)
         self.txtBox.delete('1.0', END)
         self.ftxtBox_window = self.can.create_window(self.x1, self.y1, window=self.txtBox)
 
         try:
-            if os.path.getsize('./contact/contact1.txt'):
+            if os.path.getsize('./contact/conpact/contact1.txt'):
                 print("+ Ok, contact1.txt exist")
         except FileNotFoundError as errfnf:
             print("+ No file contact1.txt exist (Error2)", errfnf)
-            with open('./contact/contact1.txt', 'w') as testf:
+            with open('./contact/conpact/contact1.txt', 'w') as testf:
                 print("+ File contact1.txt created !")
 
         try:
-            with open('./contact/contact1.txt', 'w') as iofile:
+            with open('./contact/conpact/contact1.txt', 'w') as iofile:
                 iofile.write(namentry.get())
                 iofile.write("\n" + birthvar)
                 iofile.write("\n" + nativaentry.get())
@@ -99,14 +99,14 @@ def Window(self):
             print("+ File not found !", fn)
 
         try:
-            if os.path.getsize('./contact/finalfile1.txt'):
-                os.remove('./contact/finalfile1.txt')
+            if os.path.getsize('./contact/conpact/finalfile1.txt'):
+                os.remove('./contact/conpact/finalfile1.txt')
         except FileNotFoundError as err_termin:
             print("+ finalfile1 not found !(Error3)", err_termin)
-            with open('./contact/finalfile1.txt', 'a+'):
+            with open('./contact/conpact/finalfile1.txt', 'a+'):
                 print("+ finalfile1.txt exist!")
         try:
-            with open('./contact/finalfile1.txt', 'w') as terminfile:
+            with open('./contact/conpact/finalfile1.txt', 'w') as terminfile:
                 terminfile.write("Patient name : " + namentry.get())
                 terminfile.write("\nBirthdate : " + birthvar)
                 terminfile.write("\nNative : " + nativaentry.get())
@@ -171,7 +171,7 @@ def Window(self):
         print("+ File 1 not created !", ub_error1)
 
     try:
-        with open('./contact/contact1.txt', 'r') as namefile:
+        with open('./contact/conpact/contact1.txt', 'r') as namefile:
             linex = namefile.readline()
             liney = namefile.readline()
             line3 = namefile.readline()
@@ -300,7 +300,7 @@ def Window(self):
     self.policy = StringVar()
     self.entrypolicy = Entry(self.can, textvariable=self.policy,
         highlightbackground='grey', bd=3)
-    self.policy.set(line9)
+    self.policy.set(line9[:-1])
     self.wentrypolicy_window = self.can.create_window(self.x51, self.y51,
         window = self.entrypolicy)
 
@@ -317,7 +317,7 @@ def Window(self):
     self.civil = StringVar()
     self.entrycivil = Entry(self.can, textvariable=self.civil,
         highlightbackground='grey', bd=3)
-    self.civil.set(line10)
+    self.civil.set(line10[:-1])
     self.wentrycivil_window = self.can.create_window(self.x53, self.y53,
         window = self.entrycivil)
 

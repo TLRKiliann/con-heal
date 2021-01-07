@@ -2314,23 +2314,6 @@ class Application(Frame):
     def contacthcsystem_7(self):
         homecsWind7(self)
 
-    #def callDataPat(self):
-    #    launchData(self)
-
-    def contact_num4(self):
-        subprocess.run('./contact/pat_contact4.py', check=True)
-
-    def contact_num5(self):
-        subprocess.run('./contact/pat_contact5.py', check=True)
-
-    def contact_num6(self):
-        subprocess.run('./contact/pat_contact6.py', check=True)
-
-    def contact_num7(self):
-        subprocess.run('./contact/pat_contact7.py', check=True)
-
-
-
 
     def contact_num8(self):
         subprocess.run('./contact/pat_contact8.py', check=True)

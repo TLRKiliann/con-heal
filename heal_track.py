@@ -597,13 +597,13 @@ class MenuBar(Frame):
         contact.pack(side=LEFT, padx=3)
         contchck = Menu(contact)
         me1 = Menu(contchck)
-        me1.add_command(label='Patient', font=('Times 12'), background='black',
+        me1.add_command(label='Patient Data', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num1)
-        me1.add_command(label='Familiy', font=('Times 12'), background='black',
+        me1.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contactfamily_1)
-        me1.add_command(label='Doctor', font=('Times 12'), background='black',
+        me1.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contactdoctor_1)
         me1.add_command(label='Home care system', font=('Times 12'), background='black',
@@ -613,13 +613,13 @@ class MenuBar(Frame):
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me1)
         me2 = Menu(contchck)
-        me2.add_command(label='Patient', font=('Times 12'), background='black',
+        me2.add_command(label='Patient Data', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num2)
-        me2.add_command(label='Familiy', font=('Times 12'), background='black',
+        me2.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contactfamily_2)
-        me2.add_command(label='Doctor', font=('Times 12'), background='black',
+        me2.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contactdoctor_2)
         me2.add_command(label='Home care system', font=('Times 12'), background='black',
@@ -629,13 +629,13 @@ class MenuBar(Frame):
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me2)
         me3 = Menu(contchck)
-        me3.add_command(label='Patient', font=('Times 12'), background='black',
+        me3.add_command(label='Patient Data', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num3)
-        me3.add_command(label='Familiy', font=('Times 12'), background='black',
+        me3.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contactfamily_3)
-        me3.add_command(label='Doctor', font=('Times 12'), background='black',
+        me3.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contactdoctor_3)
         me3.add_command(label='Home care system', font=('Times 12'), background='black',
@@ -645,13 +645,13 @@ class MenuBar(Frame):
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me3)
         me4 = Menu(contchck)
-        me4.add_command(label='Patient', font=('Times 12'), background='black',
+        me4.add_command(label='Patient Data', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num4)
-        me4.add_command(label='Familiy', font=('Times 12'), background='black',
+        me4.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contactfamily_4)
-        me4.add_command(label='Doctor', font=('Times 12'), background='black',
+        me4.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contactdoctor_4)
         me4.add_command(label='Home care system', font=('Times 12'), background='black',
@@ -661,13 +661,13 @@ class MenuBar(Frame):
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me4)
         me5 = Menu(contchck)
-        me5.add_command(label='Patient', font=('Times 12'), background='black',
+        me5.add_command(label='Patient Data', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num5)
-        me5.add_command(label='Familiy', font=('Times 12'), background='black',
+        me5.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contactfamily_5)
-        me5.add_command(label='Doctor', font=('Times 12'), background='black',
+        me5.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contactdoctor_5)
         me5.add_command(label='Home care system', font=('Times 12'), background='black',
@@ -677,13 +677,13 @@ class MenuBar(Frame):
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me5)
         me6 = Menu(contchck)
-        me6.add_command(label='Patient', font=('Times 12'), background='black',
+        me6.add_command(label='Patient Data', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num6)
-        me6.add_command(label='Familiy', font=('Times 12'), background='black',
+        me6.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contactfamily_6)
-        me6.add_command(label='Doctor', font=('Times 12'), background='black',
+        me6.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contactdoctor_6)
         me6.add_command(label='Home care system', font=('Times 12'), background='black',
@@ -693,13 +693,13 @@ class MenuBar(Frame):
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me6)
         me7 = Menu(contchck)
-        me7.add_command(label='Patient', font=('Times 12'), background='black',
+        me7.add_command(label='Patient Data', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num7)
-        me7.add_command(label='Familiy', font=('Times 12'), background='black',
+        me7.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contactfamily_7)
-        me7.add_command(label='Doctor', font=('Times 12'), background='black',
+        me7.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contactdoctor_7)
         me7.add_command(label='Home care system', font=('Times 12'), background='black',
@@ -709,13 +709,13 @@ class MenuBar(Frame):
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me7)
         me8 = Menu(contchck)
-        me8.add_command(label='Patient', font=('Times 12'), background='black',
+        me8.add_command(label='Patient Data', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num8)
-        me8.add_command(label='Familiy', font=('Times 12'), background='black',
+        me8.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num8)
-        me8.add_command(label='Doctor', font=('Times 12'), background='black',
+        me8.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num8)
         me8.add_command(label='Home care system', font=('Times 12'), background='black',
@@ -725,13 +725,13 @@ class MenuBar(Frame):
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me8)
         me9 = Menu(contchck)
-        me9.add_command(label='Patient', font=('Times 12'), background='black',
+        me9.add_command(label='Patient Data', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num9)
-        me9.add_command(label='Familiy', font=('Times 12'), background='black',
+        me9.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num9)
-        me9.add_command(label='Doctor', font=('Times 12'), background='black',
+        me9.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num9)
         me9.add_command(label='Home care system', font=('Times 12'), background='black',
@@ -741,13 +741,13 @@ class MenuBar(Frame):
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me9)
         me10 = Menu(contchck)
-        me10.add_command(label='Patient', font=('Times 12'), background='black',
+        me10.add_command(label='Patient Data', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num10)
-        me10.add_command(label='Familiy', font=('Times 12'), background='black',
+        me10.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num10)
-        me10.add_command(label='Doctor', font=('Times 12'), background='black',
+        me10.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num10)
         me10.add_command(label='Home care system', font=('Times 12'), background='black',
@@ -757,13 +757,13 @@ class MenuBar(Frame):
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me10)
         me11 = Menu(contchck)
-        me11.add_command(label='Patient', font=('Times 12'), background='black',
+        me11.add_command(label='Patient Data', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num11)
-        me11.add_command(label='Familiy', font=('Times 12'), background='black',
+        me11.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num11)
-        me11.add_command(label='Doctor', font=('Times 12'), background='black',
+        me11.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num11)
         me11.add_command(label='Home care system', font=('Times 12'), background='black',
@@ -773,13 +773,13 @@ class MenuBar(Frame):
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me11)
         me12 = Menu(contchck)
-        me12.add_command(label='Patient', font=('Times 12'), background='black',
+        me12.add_command(label='Patient Data', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num12)
-        me12.add_command(label='Familiy', font=('Times 12'), background='black',
+        me12.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num12)
-        me12.add_command(label='Doctor', font=('Times 12'), background='black',
+        me12.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num12)
         me12.add_command(label='Home care system', font=('Times 12'), background='black',
@@ -789,13 +789,13 @@ class MenuBar(Frame):
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me12)
         me13 = Menu(contchck)
-        me13.add_command(label='Patient', font=('Times 12'), background='black',
+        me13.add_command(label='Patient Data', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num13)
-        me13.add_command(label='Familiy', font=('Times 12'), background='black',
+        me13.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num13)
-        me13.add_command(label='Doctor', font=('Times 12'), background='black',
+        me13.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num13)
         me13.add_command(label='Home care system', font=('Times 12'), background='black',
@@ -805,13 +805,13 @@ class MenuBar(Frame):
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me13)
         me14 = Menu(contchck)
-        me14.add_command(label='Patient', font=('Times 12'), background='black',
+        me14.add_command(label='Patient Data', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num14)
-        me14.add_command(label='Familiy', font=('Times 12'), background='black',
+        me14.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num14)
-        me14.add_command(label='Doctor', font=('Times 12'), background='black',
+        me14.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num14)
         me14.add_command(label='Home care system', font=('Times 12'), background='black',
@@ -821,13 +821,13 @@ class MenuBar(Frame):
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me14)
         me15 = Menu(contchck)
-        me15.add_command(label='Patient', font=('Times 12'), background='black',
+        me15.add_command(label='Patient Data', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num15)
-        me15.add_command(label='Familiy', font=('Times 12'), background='black',
+        me15.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num15)
-        me15.add_command(label='Doctor', font=('Times 12'), background='black',
+        me15.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num15)
         me15.add_command(label='Home care system', font=('Times 12'), background='black',
@@ -837,13 +837,13 @@ class MenuBar(Frame):
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me15)
         me16 = Menu(contchck)
-        me16.add_command(label='Patient', font=('Times 12'), background='black',
+        me16.add_command(label='Patient Data', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num16)
-        me16.add_command(label='Familiy', font=('Times 12'), background='black',
+        me16.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num16)
-        me16.add_command(label='Doctor', font=('Times 12'), background='black',
+        me16.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num16)
         me16.add_command(label='Home care system', font=('Times 12'), background='black',
@@ -853,13 +853,13 @@ class MenuBar(Frame):
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me16)
         me17 = Menu(contchck)
-        me17.add_command(label='Patient', font=('Times 12'), background='black',
+        me17.add_command(label='Patient Data', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num17)
-        me17.add_command(label='Familiy', font=('Times 12'), background='black',
+        me17.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num17)
-        me17.add_command(label='Doctor', font=('Times 12'), background='black',
+        me17.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num17)
         me17.add_command(label='Home care system', font=('Times 12'), background='black',
@@ -869,13 +869,13 @@ class MenuBar(Frame):
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me17)
         me18 = Menu(contchck)
-        me18.add_command(label='Patient', font=('Times 12'), background='black',
+        me18.add_command(label='Patient Data', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num18)
-        me18.add_command(label='Familiy', font=('Times 12'), background='black',
+        me18.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num18)
-        me18.add_command(label='Doctor', font=('Times 12'), background='black',
+        me18.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num18)
         me18.add_command(label='Home care system', font=('Times 12'), background='black',
@@ -885,13 +885,13 @@ class MenuBar(Frame):
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me18)
         me19 = Menu(contchck)
-        me19.add_command(label='Patient', font=('Times 12'), background='black',
+        me19.add_command(label='Patient Data', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num19)
-        me19.add_command(label='Familiy', font=('Times 12'), background='black',
+        me19.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num19)
-        me19.add_command(label='Doctor', font=('Times 12'), background='black',
+        me19.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num19)
         me19.add_command(label='Home care system', font=('Times 12'), background='black',
@@ -901,13 +901,13 @@ class MenuBar(Frame):
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me19)
         me20 = Menu(contchck)
-        me20.add_command(label='Patient', font=('Times 12'), background='black',
+        me20.add_command(label='Patient Data', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num20)
-        me20.add_command(label='Familiy', font=('Times 12'), background='black',
+        me20.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num20)
-        me20.add_command(label='Doctor', font=('Times 12'), background='black',
+        me20.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num20)
         me20.add_command(label='Home care system', font=('Times 12'), background='black',
@@ -917,13 +917,13 @@ class MenuBar(Frame):
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me20)
         me21 = Menu(contchck)
-        me21.add_command(label='Patient', font=('Times 12'), background='black',
+        me21.add_command(label='Patient Data', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num21)
-        me21.add_command(label='Familiy', font=('Times 12'), background='black',
+        me21.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num21)
-        me21.add_command(label='Doctor', font=('Times 12'), background='black',
+        me21.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num21)
         me21.add_command(label='Home care system', font=('Times 12'), background='black',
@@ -933,13 +933,13 @@ class MenuBar(Frame):
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me21)
         me22 = Menu(contchck)
-        me22.add_command(label='Patient', font=('Times 12'), background='black',
+        me22.add_command(label='Patient Data', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num22)
-        me22.add_command(label='Familiy', font=('Times 12'), background='black',
+        me22.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num22)
-        me22.add_command(label='Doctor', font=('Times 12'), background='black',
+        me22.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num22)
         me22.add_command(label='Home care system', font=('Times 12'), background='black',
@@ -949,13 +949,13 @@ class MenuBar(Frame):
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me22)
         me23 = Menu(contchck)
-        me23.add_command(label='Patient', font=('Times 12'), background='black',
+        me23.add_command(label='Patient Data', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num23)
-        me23.add_command(label='Familiy', font=('Times 12'), background='black',
+        me23.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num23)
-        me23.add_command(label='Doctor', font=('Times 12'), background='black',
+        me23.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num23)
         me23.add_command(label='Home care system', font=('Times 12'), background='black',
@@ -965,13 +965,13 @@ class MenuBar(Frame):
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me23)
         me24 = Menu(contchck)
-        me24.add_command(label='Patient', font=('Times 12'), background='black',
+        me24.add_command(label='Patient Data', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num24)
-        me24.add_command(label='Familiy', font=('Times 12'), background='black',
+        me24.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num24)
-        me24.add_command(label='Doctor', font=('Times 12'), background='black',
+        me24.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contact_num24)
         me24.add_command(label='Home care system', font=('Times 12'), background='black',

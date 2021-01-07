@@ -1,11 +1,11 @@
-Patient name : Julia Roberts
-Birthdate : 09/03/1962
-Native : Berlin
+Patient name : Michael Jordan
+Birthdate : 23/02/1976
+Native : Chicago
 Phone : 077 339 65 45
 Street : Blvd Sun-Street 68
-City : Kansastate
+City : Chicago
 e-mail : zut@gmail.com
-Insurance : Helsan
+Insurance : Basket-ball
 Policy : 9767897583
-Civil status : Maried
-Confession : Christ
+Civil status : homeless
+Confession : None

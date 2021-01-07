@@ -6,7 +6,7 @@ from tkinter import *
 import os
 
 
-def homecsWind3(self):
+def homecsWind7(self):
     """
         Main function to define 
         design for contact interface.
@@ -19,11 +19,11 @@ def homecsWind3(self):
             First page
         """
         try:
-            if os.path.getsize('./contact/conpact3/hcscontact1.txt'):
+            if os.path.getsize('./contact/conpact7/hcscontact1.txt'):
                 print("+ Ok, hcscontact1.txt exist (t1)")
         except FileNotFoundError as errfnf:
             print("+ No file hcscontact1.txt exist (Error1) !", errfnf)
-            with open('./contact/conpact3/hcscontact1.txt', 'w') as testf:
+            with open('./contact/conpact7/hcscontact1.txt', 'w') as testf:
                 print("+ File hcscontact1.txt created !")
 
         self.x1, self.y1 = 900, 330
@@ -33,8 +33,8 @@ def homecsWind3(self):
         self.ftxtBox_window = self.can.create_window(self.x1, self.y1, window=self.txtBox)
 
         try:
-            if os.path.exists('./contact/conpact3/hcscontact1.txt'):
-                with open('./contact/conpact3/hcscontact1.txt', 'r') as policyfile:
+            if os.path.exists('./contact/conpact7/hcscontact1.txt'):
+                with open('./contact/conpact7/hcscontact1.txt', 'r') as policyfile:
                     line1 = policyfile.readline()
                     phone = policyfile.readline()
                     iphone2 = policyfile.readline()
@@ -54,11 +54,11 @@ def homecsWind3(self):
             print("+ No file hcscontact1.txt exist (Error2) !", err_r)
 
         try:
-            if os.path.getsize('./contact/conpact3/hcscontact2.txt'):
+            if os.path.getsize('./contact/conpact7/hcscontact2.txt'):
                 print("+ Ok, hcscontact2.txt exist (t1)")
         except FileNotFoundError as errfnf2:
             print("+ No file hcscontact2.txt exist (Error3) !", errfnf2)
-            with open('./contact/conpact3/hcscontact2.txt', 'w') as testf:
+            with open('./contact/conpact7/hcscontact2.txt', 'w') as testf:
                 print("+ File hcscontact2.txt created !")
 
         self.x2, self.y2 = 900, 750
@@ -68,8 +68,8 @@ def homecsWind3(self):
         self.ftxtBox2_window = self.can.create_window(self.x2, self.y2, window=self.txtBox2)
 
         try:
-            if os.path.exists('./contact/conpact3/hcscontact2.txt'):
-                with open('./contact/conpact3/hcscontact2.txt', 'r') as secondfile:
+            if os.path.exists('./contact/conpact7/hcscontact2.txt'):
+                with open('./contact/conpact7/hcscontact2.txt', 'r') as secondfile:
                     nameline = secondfile.readline()
                     phone_line = secondfile.readline()
                     iphone_line= secondfile.readline()
@@ -95,15 +95,15 @@ def homecsWind3(self):
             Display origin
         """
         try:
-            if os.path.getsize('./contact/conpact3/hcscontact1.txt'):
+            if os.path.getsize('./contact/conpact7/hcscontact1.txt'):
                 print("+ Ok, hcscontact1.txt exist (t2)")
         except FileNotFoundError as errfnf:
             print("+ No file hcscontact1.txt exist (Error5) !", errfnf)
-            with open('./contact/conpact3/hcscontact1.txt', 'w') as testf:
+            with open('./contact/conpact7/hcscontact1.txt', 'w') as testf:
                 print("+ File hcscontact1.txt created !")
 
         try:
-            with open('./contact/conpact3/hcscontact1.txt', 'w') as iofile:
+            with open('./contact/conpact7/hcscontact1.txt', 'w') as iofile:
                 iofile.write(namentry.get())
                 iofile.write("\n" + phonentry.get())
                 iofile.write("\n" + mobilentry.get())
@@ -114,14 +114,14 @@ def homecsWind3(self):
             print("+ File hcscontact1.txt not found (Error6) !", fn)
 
         try:
-            if os.path.getsize('./contact/conpact3/finalhcs1.txt'):
-                os.remove('./contact/conpact3/finalhcs1.txt')
+            if os.path.getsize('./contact/conpact7/finalhcs1.txt'):
+                os.remove('./contact/conpact7/finalhcs1.txt')
         except FileNotFoundError as err_termin:
             print("+ finalhcs1 not found (Error7) !", err_termin)
-            with open('./contact/conpact3/finalhcs1.txt', 'a+'):
+            with open('./contact/conpact7/finalhcs1.txt', 'a+'):
                 print("+ finalhcs1.txt exist!")
         try:
-            with open('./contact/conpact3/finalhcs1.txt', 'w') as terminfile:
+            with open('./contact/conpact7/finalhcs1.txt', 'w') as terminfile:
                 terminfile.write("Name : " + namentry.get())
                 terminfile.write("\nPhone : " + phonentry.get())
                 terminfile.write("\nPhone : " + mobilentry.get())
@@ -140,15 +140,15 @@ def homecsWind3(self):
             Display origin
         """
         try:
-            if os.path.getsize('./contact/conpact3/hcscontact2.txt'):
+            if os.path.getsize('./contact/conpact7/hcscontact2.txt'):
                 print("+ Ok, hcscontact2.txt exist (t3)")
         except FileNotFoundError as errfnf:
             print("+ No file hcscontact2.txt exist (Error9) !", errfnf)
-            with open('./contact/conpact3/hcscontact2.txt', 'w') as testf:
+            with open('./contact/conpact7/hcscontact2.txt', 'w') as testf:
                 print("+ File hcscontact2.txt created !")
 
         try:
-            with open('./contact/conpact3/hcscontact2.txt', 'w') as copyfile:
+            with open('./contact/conpact7/hcscontact2.txt', 'w') as copyfile:
                 copyfile.write(name_twoentry.get())
                 copyfile.write("\n" + twophonentry.get())
                 copyfile.write("\n" + mobile_toentry.get())
@@ -159,14 +159,14 @@ def homecsWind3(self):
             print("+ File not found (Error10) !", fn)
 
         try:
-            if os.path.getsize('./contact/conpact3/finalhcs2.txt'):
-                os.remove('./contact/conpact3/finalhcs2.txt')
+            if os.path.getsize('./contact/conpact7/finalhcs2.txt'):
+                os.remove('./contact/conpact7/finalhcs2.txt')
         except FileNotFoundError as err_termin:
             print("+ finalhcs2 not found (Error11) !", err_termin)
-            with open('./contact/conpact3/finalhcs2.txt', 'a+'):
+            with open('./contact/conpact7/finalhcs2.txt', 'a+'):
                 print("+ finalhcs2.txt exist!")
         try:
-            with open('./contact/conpact3/finalhcs2.txt', 'w') as secterfile:
+            with open('./contact/conpact7/finalhcs2.txt', 'w') as secterfile:
                 secterfile.write("Name : " + name_twoentry.get())
                 secterfile.write("\nPhone : " + twophonentry.get())
                 secterfile.write("\nPhone : " + mobile_toentry.get())
@@ -205,7 +205,7 @@ def homecsWind3(self):
         window = self.labelname)
 
     try:
-        with open('./contact/conpact3/hcscontact1.txt', 'r') as namefile:
+        with open('./contact/conpact7/hcscontact1.txt', 'r') as namefile:
             linex = namefile.readline()
             line2 = namefile.readline()
             line3 = namefile.readline()
@@ -331,7 +331,7 @@ def homecsWind3(self):
         window = self.lblname2)
 
     try:
-        with open('./contact/conpact3/hcscontact2.txt', 'r') as namefile:
+        with open('./contact/conpact7/hcscontact2.txt', 'r') as namefile:
            two_linex = namefile.readline()
            two_line2 = namefile.readline()
            two_line3 = namefile.readline()

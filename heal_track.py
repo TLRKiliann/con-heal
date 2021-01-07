@@ -2235,29 +2235,29 @@ class Application(Frame):
         homecsWind(self)
 
     # Contact patient 2
-    def contact_num1(self):
+    def contact_num2(self):
         Window2(self)
 
-    def contactfamily_1(self):
+    def contactfamily_2(self):
         famWind2(self)
 
-    def contactdoctor_1(self):
+    def contactdoctor_2(self):
         doctorWind2(self)
 
-    def contacthcsystem_1(self):
+    def contacthcsystem_2(self):
         homecsWind2(self)
 
     # Contact patient 3
-    def contact_num1(self):
+    def contact_num3(self):
         Window3(self)
 
-    def contactfamily_1(self):
+    def contactfamily_3(self):
         famWind3(self)
 
-    def contactdoctor_1(self):
+    def contactdoctor_3(self):
         doctorWind3(self)
 
-    def contacthcsystem_1(self):
+    def contacthcsystem_3(self):
         homecsWind3(self)
 
     #def callDataPat(self):

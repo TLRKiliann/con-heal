@@ -53,17 +53,47 @@ def homecsWind(self):
         except FileNotFoundError as err_r:
             print("+ No file hcscontact1.txt exist", err_r)
 
+        try:
+            if os.path.getsize('./contact/conpact/hcscontact2.txt'):
+                print("+ Ok, hcscontact2.txt exist (t1)")
+        except FileNotFoundError as errfnf2:
+            print("+ No file hcscontact2.txt exist", errfnf2)
+            with open('./contact/conpact/hcscontact2.txt', 'w') as testf:
+                print("+ File hcscontact2.txt created !")
+
+        self.x2, self.y2 = 900, 760
+        self.txtBox2 = Text(self.can, height=15, width=40, font=18, relief=SUNKEN)
+        self.txtBox2.delete('1.0', END)
+        self.txtBox2.update()
+        self.ftxtBox2_window = self.can.create_window(self.x2, self.y2, window=self.txtBox2)
+
+        try:
+            if os.path.exists('./contact/conpact/hcscontact2.txt'):
+                with open('./contact/conpact/hcscontact2.txt', 'r') as secondfile:
+                    nameline = secondfile.readline()
+                    phone_line = secondfile.readline()
+                    iphone_line= secondfile.readline()
+                    street_line = secondfile.readline()
+                    state_line = secondfile.readline()
+                    email_line = secondfile.readline()
+                self.txtBox2.insert(INSERT, "--- Data Home Care System 2 ---\n")
+                self.txtBox2.insert(END, "\nName : " + nameline)
+                self.txtBox2.insert(END, "\nPhone : " + phone_line)
+                self.txtBox2.insert(END, "\nMobile : " + iphone_line)
+                self.txtBox2.insert(END, "\nStreet : " + street_line)
+                self.txtBox2.insert(END, "\nCity : " + state_line)
+                self.txtBox2.insert(END, "\ne-mail : " + email_line)
+            else:
+                pass
+        except FileNotFoundError as err_line:
+            print("+ No file hcscontact2.txt exist", err_line)
+
     def recorderData(namentry, txtphone, phonentry, txtmobile,
         mobilentry, addrtxt, addrentry, citytxt, cityentry,
         mailtxt, entrymail):
         """
             Display origin
         """
-        self.x1, self.y1 = 900, 330
-        self.txtBox = Text(self.can, height=15, width=40, font=18, relief=SUNKEN)
-        self.txtBox.delete('1.0', END)
-        self.ftxtBox_window = self.can.create_window(self.x1, self.y1, window=self.txtBox)
-
         try:
             if os.path.getsize('./contact/conpact/hcscontact1.txt'):
                 print("+ Ok, hcscontact1.txt exist (t2)")
@@ -100,6 +130,51 @@ def homecsWind(self):
                 terminfile.write("\ne-mail : " + entrymail.get())
         except FileNotFoundError as err2_final:
             print("+ finalhcs1.txt not created (t2)", err2_final)
+
+        allInData()
+
+    def recordersecData(name_twoentry, txt_twophone, twophonentry,
+        txt_twomobile, mobile_toentry, addr_twotxt, addr_twoentry,
+        twocitytxt, city_twoentry, mail_twotxt, entry_twomail):
+        """
+            Display origin
+        """
+        try:
+            if os.path.getsize('./contact/conpact/hcscontact2.txt'):
+                print("+ Ok, hcscontact2.txt exist (t3)")
+        except FileNotFoundError as errfnf:
+            print("+ No file hcscontact2.txt exist", errfnf)
+            with open('./contact/conpact/hcscontact2.txt', 'w') as testf:
+                print("+ File hcscontact2.txt created !")
+
+        try:
+            with open('./contact/conpact/hcscontact2.txt', 'w') as copyfile:
+                copyfile.write(name_twoentry.get())
+                copyfile.write("\n" + twophonentry.get())
+                copyfile.write("\n" + mobile_toentry.get())
+                copyfile.write("\n" + addr_twoentry.get())
+                copyfile.write("\n" + city_twoentry.get())
+                copyfile.write("\n" + entry_twomail.get())
+        except FileNotFoundError as fn:
+            print("+ File not found !", fn)
+
+        try:
+            if os.path.getsize('./contact/conpact/finalhcs2.txt'):
+                os.remove('./contact/conpact/finalhcs2.txt')
+        except FileNotFoundError as err_termin:
+            print("+ finalhcs2 not found !(t3)", err_termin)
+            with open('./contact/conpact/finalhcs2.txt', 'a+'):
+                print("+ finalhcs2.txt exist!")
+        try:
+            with open('./contact/conpact/finalhcs2.txt', 'w') as secterfile:
+                secterfile.write("Name : " + name_twoentry.get())
+                secterfile.write("\nPhone : " + twophonentry.get())
+                secterfile.write("\nPhone : " + mobile_toentry.get())
+                secterfile.write("\nStreet : " + addr_twoentry.get())
+                secterfile.write("\nCity : " + city_twoentry.get())
+                secterfile.write("\ne-mail : " + entry_twomail.get())
+        except FileNotFoundError as err2_final:
+            print("+ finalhcs2.txt not created (t3)", err2_final)
 
         allInData()
 
@@ -249,5 +324,135 @@ def homecsWind(self):
             self.addrtxt, self.addrentry, self.citytxt, self.cityentry,
             self.mailtxt, self.entrymail))
     self.fb52_window = self.can.create_window(self.x52, self.y52, window=self.b52)
+
+    # Name 2
+    self.x101, self.y101 = 250, 620
+    self.lblname2 = Label(self.can, text="Name :",
+        font=('helvetica', 18, 'bold'),
+        bg='DodgerBlue2', fg='white')
+    self.wlblname2_window = self.can.create_window(self.x101, self.y101,
+        window = self.lblname2)
+
+    try:
+        with open('./contact/conpact/hcscontact1.txt', 'r') as namefile:
+           two_linex = namefile.readline()
+           two_line2 = namefile.readline()
+           two_line3 = namefile.readline()
+           two_line4 = namefile.readline()
+           two_line5 = namefile.readline()
+           two_line6 = namefile.readline()
+           two_line7 = namefile.readline()
+           two_line8 = namefile.readline()
+           two_line9 = namefile.readline()
+    except FileNotFoundError as callfile:
+        print("+ File hcscontact1.txt doesn't exist !", callfile)
+
+    try:
+        self.txt_twopat = two_linex
+        self.x102, self.y102 = 450, 620
+        self.txt_twopat = StringVar()
+        self.name_twoentry = Entry(self.can, textvariable=self.txt_twopat,
+            highlightbackground='grey', bd=4)
+        self.txt_twopat.set(two_linex[:-1])
+        self.wname_twoentry_window = self.can.create_window(self.x102, self.y102,
+            window = self.name_twoentry)
+    except UnboundLocalError as ub_error1:
+        print("+ File 1 not created !", ub_error1)
+
+    # Phone
+    self.x103, self.y103 = 250, 670
+    self.lbl_phone = Label(self.can, text="Phone :",
+        font=('helvetica', 18, 'bold'),
+        bg='DodgerBlue2', fg='white')
+    self.wlbl_phone_window = self.can.create_window(self.x103, self.y103,
+        window = self.lbl_phone)
+
+    self.txt_twophone = two_line2
+    self.x104, self.y104 = 450, 670
+    self.txt_twophone = StringVar()
+    self.twophonentry = Entry(self.can, textvariable=self.txt_twophone,
+        highlightbackground='grey', bd=3)
+    self.txt_twophone.set(two_line2[:-1])
+    self.wtwophonentry_window = self.can.create_window(self.x104, self.y104,
+        window = self.twophonentry)
+
+    # Mobile
+    self.x105, self.y105 = 250, 720
+    self.twolbl_mobile = Label(self.can, text="Mobile :",
+        font=('helvetica', 18, 'bold'),
+        bg='DodgerBlue2', fg='white')
+    self.wtwolbl_mobile_window = self.can.create_window(self.x105, self.y105,
+        window = self.twolbl_mobile)
+
+    self.txt_twomobile = two_line3
+    self.x106, self.y106 = 450, 720
+    self.txt_twomobile = StringVar()
+    self.mobile_toentry = Entry(self.can, textvariable=self.txt_twomobile,
+        highlightbackground='grey', bd=3)
+    self.txt_twomobile.set(two_line3[:-1])
+    self.wmobile_toentry_window = self.can.create_window(self.x106, self.y106,
+        window = self.mobile_toentry)
+
+    # Street
+    self.x110, self.y110 = 250, 770
+    self.lbl_twoaddr = Label(self.can, text="Street :",
+        font=('helvetica', 18, 'bold'),
+        bg='DodgerBlue2', fg='white')
+    self.wlbl_twoaddr_window = self.can.create_window(self.x110, self.y110,
+        window = self.lbl_twoaddr)
+
+    self.addr_twotxt = two_line4
+    self.x111, self.y111 = 450, 770
+    self.addr_twotxt = StringVar()
+    self.addr_twoentry = Entry(self.can, textvariable=self.addr_twotxt,
+        highlightbackground='grey', bd=4)
+    self.addr_twotxt.set(two_line4[:-1])
+    self.waddr_twoentry_window = self.can.create_window(self.x111, self.y111,
+        window = self.addr_twoentry)
+
+    self.x112, self.y112 = 250, 820
+    self.lbl_twocity = Label(self.can, text="City :",
+        font=('helvetica', 18, 'bold'),
+        bg='DodgerBlue2', fg='white')
+    self.wlbl_twocity_window = self.can.create_window(self.x112, self.y112,
+        window = self.lbl_twocity)
+
+    self.twocitytxt = two_line5
+    self.x113, self.y113 = 450, 820
+    self.twocitytxt = StringVar()
+    self.city_twoentry = Entry(self.can, textvariable=self.twocitytxt,
+        highlightbackground='grey', bd=4)
+    self.twocitytxt.set(two_line5[:-1])
+    self.wcity_twoentry_window = self.can.create_window(self.x113, self.y113,
+        window = self.city_twoentry)
+
+    # e-mail
+    self.x114, self.y114 = 250, 870
+    self.lblmail2 = Label(self.can, text="e-mail :",
+        font=('helvetica', 18, 'bold'),
+        bg='DodgerBlue2', fg='white')
+    self.wlblmail2_window = self.can.create_window(self.x114, self.y114,
+        window = self.lblmail2)
+
+    self.mail_twotxt = two_line6
+    self.x115, self.y115 = 450, 870
+    self.mail_twotxt = StringVar()
+    self.entry_twomail = Entry(self.can, textvariable=self.mail_twotxt,
+        highlightbackground='grey', bd=3)
+    self.mail_twotxt.set(two_line6)
+    self.wentry_twomail_window = self.can.create_window(self.x115, self.y115,
+        window = self.entry_twomail)
+
+    self.x116, self.y116 = 350, 940
+    self.b116 = Button(self.can, text="Save Modifications", font=16,
+        width=30, bd=3, bg='RoyalBlue3', fg='yellow',
+        highlightbackground='cyan',
+        activebackground='pale turquoise',
+        command = lambda: recordersecData(self.name_twoentry, self.txt_twophone,
+            self.twophonentry, self.txt_twomobile, self.mobile_toentry,
+            self.addr_twotxt, self.addr_twoentry, self.twocitytxt, self.city_twoentry,
+            self.mail_twotxt, self.entry_twomail))
+    self.fb116_window = self.can.create_window(self.x116, self.y116,
+        window=self.b116)
 
     self.can.configure(scrollregion=self.can.bbox(ALL))

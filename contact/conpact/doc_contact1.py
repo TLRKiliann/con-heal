@@ -141,11 +141,6 @@ def doctorWind(self):
         """
             Display origin
         """
-        self.x1, self.y1 = 900, 350
-        self.txtBox = Text(self.can, height=15, width=40, font=18, relief=SUNKEN)
-        self.txtBox.delete('1.0', END)
-        self.ftxtBox_window = self.can.create_window(self.x1, self.y1, window=self.txtBox)
-
         try:
             if os.path.getsize('./contact/conpact/contactdoc1.txt'):
                 print("+ Ok, contactdoc1.txt exist")

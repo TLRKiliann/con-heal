@@ -129,7 +129,7 @@ def Window(self):
         window = self.lbltitle)
 
     # Label title2
-    self.x12, self.y12 = 470, 100
+    self.x12, self.y12 = 450, 100
     self.labtitle = Label(self.can, text="Patient",
         font=('Times', 40, 'italic'),
         bg='DodgerBlue2', fg='coral')

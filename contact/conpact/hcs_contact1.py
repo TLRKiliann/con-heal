@@ -272,7 +272,7 @@ def homecsWind(self):
         window = self.lbltitle)
 
     # Label title2
-    self.x12, self.y12 = 600, 100
+    self.x12, self.y12 = 580, 100
     self.labtitle = Label(self.can, text="Home Care System",
         font=('Times', 40, 'italic'),
         bg='DodgerBlue2', fg='coral')

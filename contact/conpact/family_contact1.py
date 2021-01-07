@@ -41,7 +41,7 @@ def famWind(self):
                     street = policyfile.readline()
                     state = policyfile.readline()
                     email = policyfile.readline()
-                self.txtBox.insert(INSERT, "--- Data Family ---\n")
+                self.txtBox.insert(INSERT, "--- Data Relationship ---\n")
                 self.txtBox.insert(END, "\nName : " + line1)
                 self.txtBox.insert(END, "\nPhone : " + phone)
                 self.txtBox.insert(END, "\nMobile : " + iphone2)
@@ -109,8 +109,8 @@ def famWind(self):
         window = self.lbltitle)
 
     # Label title2
-    self.x12, self.y12 = 470, 100
-    self.labtitle = Label(self.can, text="Family",
+    self.x12, self.y12 = 510, 100
+    self.labtitle = Label(self.can, text="Relationship",
         font=('Times', 40, 'italic'),
         bg='DodgerBlue2', fg='coral')
     self.wlabtitle_window = self.can.create_window(self.x12, self.y12,

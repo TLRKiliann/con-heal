@@ -618,13 +618,13 @@ class MenuBar(Frame):
             command=boss.contact_num2)
         me2.add_command(label='Familiy', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num2)
+            command=boss.contactfamily_2)
         me2.add_command(label='Doctor', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num2)
+            command=boss.contactdoctor_2)
         me2.add_command(label='Home care system', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num2)
+            command=boss.contacthcsystem_2)
         contchck.add_cascade(label=new_text2, underline=0, font=('Times 12'),
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me2)
@@ -634,13 +634,13 @@ class MenuBar(Frame):
             command=boss.contact_num3)
         me3.add_command(label='Familiy', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num3)
+            command=boss.contactfamily_3)
         me3.add_command(label='Doctor', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num3)
+            command=boss.contactdoctor_3)
         me3.add_command(label='Home care system', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num3)
+            command=boss.contacthcsystem_3)
         contchck.add_cascade(label=new_text3, underline=0, font=('Times 12'),
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me3)

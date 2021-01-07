@@ -1,5 +1,5 @@
-Patient name : test totest
-Birthdate : 09/07/2001
+Patient name : Edward Snowden
+Birthdate : 02/07/1964
 Native : Berlin
 Phone : 077 339 65 45
 Street : Blvd Sun-Street 68

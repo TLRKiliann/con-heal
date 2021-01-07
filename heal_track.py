@@ -25,7 +25,6 @@ from contact.conpact3.pat_contact3 import Window3
 from contact.conpact3.doc_contact3 import doctorWind3
 from contact.conpact3.family_contact3 import famWind3
 from contact.conpact3.hcs_contact3 import homecsWind3
-"""
 from contact.conpact4.pat_contact4 import Window4
 from contact.conpact4.doc_contact4 import doctorWind4
 from contact.conpact4.family_contact4 import famWind4
@@ -42,6 +41,7 @@ from contact.conpact7.pat_contact7 import Window7
 from contact.conpact7.doc_contact7 import doctorWind7
 from contact.conpact7.family_contact7 import famWind7
 from contact.conpact7.hcs_contact7 import homecsWind7
+"""
 from contact.conpact8.pat_contact8 import Window8
 from contact.conpact8.doc_contact8 import doctorWind8
 from contact.conpact8.family_contact8 import famWind8
@@ -650,13 +650,13 @@ class MenuBar(Frame):
             command=boss.contact_num4)
         me4.add_command(label='Familiy', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num4)
+            command=boss.contactfamily_4)
         me4.add_command(label='Doctor', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num4)
+            command=boss.contactdoctor_4)
         me4.add_command(label='Home care system', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num4)
+            command=boss.contacthcsystem_4)
         contchck.add_cascade(label=new_text4, underline=0, font=('Times 12'),
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me4)
@@ -666,13 +666,13 @@ class MenuBar(Frame):
             command=boss.contact_num5)
         me5.add_command(label='Familiy', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num5)
+            command=boss.contactfamily_5)
         me5.add_command(label='Doctor', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num5)
+            command=boss.contactdoctor_5)
         me5.add_command(label='Home care system', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num5)
+            command=boss.contacthcsystem_5)
         contchck.add_cascade(label=new_text5, underline=0, font=('Times 12'),
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me5)
@@ -682,13 +682,13 @@ class MenuBar(Frame):
             command=boss.contact_num6)
         me6.add_command(label='Familiy', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num6)
+            command=boss.contactfamily_6)
         me6.add_command(label='Doctor', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num6)
+            command=boss.contactdoctor_6)
         me6.add_command(label='Home care system', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num6)
+            command=boss.contacthcsystem_6)
         contchck.add_cascade(label=new_text6, underline=0, font=('Times 12'),
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me6)
@@ -698,13 +698,13 @@ class MenuBar(Frame):
             command=boss.contact_num7)
         me7.add_command(label='Familiy', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num7)
+            command=boss.contactfamily_7)
         me7.add_command(label='Doctor', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num7)
+            command=boss.contactdoctor_7)
         me7.add_command(label='Home care system', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num7)
+            command=boss.contacthcsystem_7)
         contchck.add_cascade(label=new_text7, underline=0, font=('Times 12'),
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me7)
@@ -2262,6 +2262,58 @@ class Application(Frame):
     def contacthcsystem_3(self):
         homecsWind3(self)
 
+    # Contact patient 4
+    def contact_num4(self):
+        Window4(self)
+
+    def contactfamily_4(self):
+        famWind4(self)
+
+    def contactdoctor_4(self):
+        doctorWind4(self)
+
+    def contacthcsystem_4(self):
+        homecsWind4(self)
+
+    # Contact patient 5
+    def contact_num5(self):
+        Window5(self)
+
+    def contactfamily_5(self):
+        famWind5(self)
+
+    def contactdoctor_5(self):
+        doctorWind5(self)
+
+    def contacthcsystem_5(self):
+        homecsWind5(self)
+
+    # Contact patient 6
+    def contact_num6(self):
+        Window6(self)
+
+    def contactfamily_6(self):
+        famWind6(self)
+
+    def contactdoctor_6(self):
+        doctorWind6(self)
+
+    def contacthcsystem_6(self):
+        homecsWind6(self)
+
+    # Contact patient 7
+    def contact_num7(self):
+        Window7(self)
+
+    def contactfamily_7(self):
+        famWind7(self)
+
+    def contactdoctor_7(self):
+        doctorWind7(self)
+
+    def contacthcsystem_7(self):
+        homecsWind7(self)
+
     #def callDataPat(self):
     #    launchData(self)
 
@@ -2276,6 +2328,9 @@ class Application(Frame):
 
     def contact_num7(self):
         subprocess.run('./contact/pat_contact7.py', check=True)
+
+
+
 
     def contact_num8(self):
         subprocess.run('./contact/pat_contact8.py', check=True)

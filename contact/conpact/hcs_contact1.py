@@ -100,7 +100,7 @@ def homecsWind(self):
         self.txtBox3 = Text(self.can, height=13, width=40, font=18, relief=SUNKEN)
         self.txtBox3.delete('1.0', END)
         self.txtBox3.update()
-        self.ftxtBox3_window = self.can.create_window(self.x3, self.y3, window=self.txtBox2)
+        self.ftxtBox3_window = self.can.create_window(self.x3, self.y3, window=self.txtBox3)
 
         try:
             if os.path.exists('./contact/conpact/hcscontact3.txt'):
@@ -111,7 +111,7 @@ def homecsWind(self):
                     street_line3 = secondfile.readline()
                     state_line3 = secondfile.readline()
                     email_line3 = secondfile.readline()
-                self.txtBox3.insert(INSERT, "--- Data Home Care System 2 ---\n")
+                self.txtBox3.insert(INSERT, "--- Data Home Care System 3 ---\n")
                 self.txtBox3.insert(END, "\nName : " + nameline3)
                 self.txtBox3.insert(END, "\nPhone : " + phone_line3)
                 self.txtBox3.insert(END, "\nMobile : " + iphone_line3)

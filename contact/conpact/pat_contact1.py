@@ -27,7 +27,7 @@ def Window(self):
                 print("+ File contact1.txt created !")
 
         self.x1, self.y1 = 900, 420
-        self.txtBox = Text(self.can, height=24, width=40, font=18, relief=SUNKEN)
+        self.txtBox = Text(self.can, height=23, width=40, font=18, relief=SUNKEN)
         self.txtBox.delete('1.0', END)
         self.txtBox.update()
         self.ftxtBox_window = self.can.create_window(self.x1, self.y1, window=self.txtBox)
@@ -69,11 +69,6 @@ def Window(self):
         """
             Display origin
         """
-        self.x1, self.y1 = 900, 420
-        self.txtBox = Text(self.can, height=24, width=40, font=18, relief=SUNKEN)
-        self.txtBox.delete('1.0', END)
-        self.ftxtBox_window = self.can.create_window(self.x1, self.y1, window=self.txtBox)
-
         try:
             if os.path.getsize('./contact/conpact/contact1.txt'):
                 print("+ Ok, contact1.txt exist")

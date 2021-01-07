@@ -27,7 +27,7 @@ def famWind(self):
                 print("+ File famycontact1.txt created !")
 
         self.x1, self.y1 = 900, 330
-        self.txtBox = Text(self.can, height=15, width=40, font=18, relief=SUNKEN)
+        self.txtBox = Text(self.can, height=13, width=40, font=18, relief=SUNKEN)
         self.txtBox.delete('1.0', END)
         self.txtBox.update()
         self.ftxtBox_window = self.can.create_window(self.x1, self.y1, window=self.txtBox)
@@ -59,11 +59,6 @@ def famWind(self):
         """
             Display origin
         """
-        self.x1, self.y1 = 900, 330
-        self.txtBox = Text(self.can, height=15, width=40, font=18, relief=SUNKEN)
-        self.txtBox.delete('1.0', END)
-        self.ftxtBox_window = self.can.create_window(self.x1, self.y1, window=self.txtBox)
-
         try:
             if os.path.getsize('./contact/conpact/famycontact1.txt'):
                 print("+ Ok, famycontact1.txt exist (t2)")
@@ -137,9 +132,6 @@ def famWind(self):
             line4 = namefile.readline()
             line5 = namefile.readline()
             line6 = namefile.readline()
-            line7 = namefile.readline()
-            line8 = namefile.readline()
-            line9 = namefile.readline()
     except FileNotFoundError as callfile:
         print("+ File famycontact1.txt doesn't exist !", callfile)
 

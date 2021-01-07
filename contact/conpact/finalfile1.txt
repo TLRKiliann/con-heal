@@ -3,7 +3,7 @@ Birthdate : 09/07/2001
 Native : Berlin
 Phone : 077 339 65 45
 Street : Blvd Sun-Street 68
-City : Kansas
+City : Kansastate
 e-mail : zut@gmail.com
 Insurance : Helsan
 Policy : 9767897583

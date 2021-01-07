@@ -27,7 +27,7 @@ def doctorWind(self):
                 print("+ File contactdoc1.txt created !", testf)
 
         self.x1, self.y1 = 900, 370
-        self.txtBox = Text(self.can, height=18, width=40, font=18, relief=SUNKEN)
+        self.txtBox = Text(self.can, height=17, width=40, font=18, relief=SUNKEN)
         self.txtBox.delete('1.0', END)
         self.txtBox.update()
         self.ftxtBox_window = self.can.create_window(self.x1, self.y1, window=self.txtBox)
@@ -66,7 +66,7 @@ def doctorWind(self):
                 print("+ File contactdoc2.txt created !", testfd2)
 
         self.x2, self.y2 = 900, 890
-        self.txtBox2 = Text(self.can, height=18, width=40, font=18, relief=SUNKEN)
+        self.txtBox2 = Text(self.can, height=17, width=40, font=18, relief=SUNKEN)
         self.txtBox2.delete('1.0', END)
         self.txtBox2.update()
         self.ftxtBox2_window = self.can.create_window(self.x2, self.y2, window=self.txtBox2)
@@ -105,7 +105,7 @@ def doctorWind(self):
                 print("+ File contactdoc3.txt created !", testfd3)
 
         self.x3, self.y3 = 900, 1410
-        self.txtBox3 = Text(self.can, height=18, width=40, font=18, relief=SUNKEN)
+        self.txtBox3 = Text(self.can, height=17, width=40, font=18, relief=SUNKEN)
         self.txtBox3.delete('1.0', END)
         self.txtBox3.update()
         self.ftxtBox3_window = self.can.create_window(self.x3, self.y3, window=self.txtBox3)

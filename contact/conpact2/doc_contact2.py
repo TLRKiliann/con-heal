@@ -443,7 +443,7 @@ def doctorWind2(self):
     self.faxtxt = StringVar()
     self.entryfax = Entry(self.can, textvariable=self.faxtxt,
         highlightbackground='grey', bd=3)
-    self.faxtxt.set(line8[:-1])
+    self.faxtxt.set(line8)
     self.wentryfax_window = self.can.create_window(self.x51, self.y51,
         window = self.entryfax)
 
@@ -771,7 +771,7 @@ def doctorWind2(self):
     self.faxtxt3 = StringVar()
     self.entryfax3 = Entry(self.can, textvariable=self.faxtxt3,
         highlightbackground='grey', bd=3)
-    self.faxtxt3.set(doc3line8[:-1])
+    self.faxtxt3.set(doc3line8)
     self.wentryfax3_window = self.can.create_window(self.x95, self.y95,
         window = self.entryfax3)
 

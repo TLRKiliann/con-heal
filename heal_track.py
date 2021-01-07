@@ -25,6 +25,7 @@ from contact.conpact3.pat_contact3 import Window3
 from contact.conpact3.doc_contact3 import doctorWind3
 from contact.conpact3.family_contact3 import famWind3
 from contact.conpact3.hcs_contact3 import homecsWind3
+"""
 from contact.conpact4.pat_contact4 import Window4
 from contact.conpact4.doc_contact4 import doctorWind4
 from contact.conpact4.family_contact4 import famWind4
@@ -109,6 +110,7 @@ from contact.conpact24.pat_contact24 import Window24
 from contact.conpact24.doc_contact24 import doctorWind24
 from contact.conpact24.family_contact24 import famWind24
 from contact.conpact24.hcs_contact24 import homecsWind24
+"""
 from labo.resultlabo1 import callLabo1
 from labo.resultlabo2 import callLabo2
 from labo.resultlabo3 import callLabo3

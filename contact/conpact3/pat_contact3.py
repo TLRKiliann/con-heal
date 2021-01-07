@@ -145,7 +145,7 @@ def Window3(self):
         window = self.labelname)
 
     try:
-        with open('./newpatient/entryfile.txt', 'r') as namefile:
+        with open('./newpatient/entryfile3.txt', 'r') as namefile:
             line1 = namefile.readline()
             line2 = namefile.readline()
             txt_pat = line1

@@ -8,15 +8,107 @@ import time
 import datetime as dt
 import os
 import subprocess
-from contact.conpact.pat_contact1 import Window
-from contact.conpact.doc_contact1 import doctorWind
-from contact.conpact.family_contact1 import famWind
-from contact.conpact.hcs_contact1 import homecsWind
 from boxapp import callBox
 from patcaps import callResident
 from backapp import *
 from Backup.backupfile import dataBackToSave
 from param.backup_month import paramBackToSave
+from contact.conpact.pat_contact1 import Window
+from contact.conpact.doc_contact1 import doctorWind
+from contact.conpact.family_contact1 import famWind
+from contact.conpact.hcs_contact1 import homecsWind
+from contact.conpact2.pat_contact2 import Window2
+from contact.conpact2.doc_contact2 import doctorWind2
+from contact.conpact2.family_contact2 import famWind2
+from contact.conpact2.hcs_contact2 import homecsWind2
+from contact.conpact3.pat_contact3 import Window3
+from contact.conpact3.doc_contact3 import doctorWind3
+from contact.conpact3.family_contact3 import famWind3
+from contact.conpact3.hcs_contact3 import homecsWind3
+from contact.conpact4.pat_contact4 import Window4
+from contact.conpact4.doc_contact4 import doctorWind4
+from contact.conpact4.family_contact4 import famWind4
+from contact.conpact4.hcs_contact4 import homecsWind4
+from contact.conpact5.pat_contact5 import Window5
+from contact.conpact5.doc_contact5 import doctorWind5
+from contact.conpact5.family_contact5 import famWind5
+from contact.conpact5.hcs_contact5 import homecsWind5
+from contact.conpact6.pat_contact6 import Window6
+from contact.conpact6.doc_contact6 import doctorWind6
+from contact.conpact6.family_contact6 import famWind6
+from contact.conpact6.hcs_contact6 import homecsWind6
+from contact.conpact7.pat_contact7 import Window7
+from contact.conpact7.doc_contact7 import doctorWind7
+from contact.conpact7.family_contact7 import famWind7
+from contact.conpact7.hcs_contact7 import homecsWind7
+from contact.conpact8.pat_contact8 import Window8
+from contact.conpact8.doc_contact8 import doctorWind8
+from contact.conpact8.family_contact8 import famWind8
+from contact.conpact8.hcs_contact8 import homecsWind8
+from contact.conpact9.pat_contact9 import Window9
+from contact.conpact9.doc_contact9 import doctorWind9
+from contact.conpact9.family_contact9 import famWind9
+from contact.conpact9.hcs_contact9 import homecsWind9
+from contact.conpact10.pat_contact10 import Window10
+from contact.conpact10.doc_contact10 import doctorWind10
+from contact.conpact10.family_contact10 import famWind10
+from contact.conpact10.hcs_contact10 import homecsWind10
+from contact.conpact11.pat_contact11 import Window11
+from contact.conpact11.doc_contact11 import doctorWind11
+from contact.conpact11.family_contact11 import famWind11
+from contact.conpact11.hcs_contact11 import homecsWind11
+from contact.conpact12.pat_contact12 import Window12
+from contact.conpact12.doc_contact12 import doctorWind12
+from contact.conpact12.family_contact12 import famWind12
+from contact.conpact12.hcs_contact12 import homecsWind12
+from contact.conpact13.pat_contact13 import Window13
+from contact.conpact13.doc_contact13 import doctorWind13
+from contact.conpact13.family_contact13 import famWind13
+from contact.conpact13.hcs_contact13 import homecsWind13
+from contact.conpact14.pat_contact14 import Window14
+from contact.conpact14.doc_contact14 import doctorWind14
+from contact.conpact14.family_contact14 import famWind14
+from contact.conpact14.hcs_contact14 import homecsWind14
+from contact.conpact15.pat_contact15 import Window15
+from contact.conpact15.doc_contact15 import doctorWind15
+from contact.conpact15.family_contact15 import famWind15
+from contact.conpact15.hcs_contact15 import homecsWind15
+from contact.conpact16.pat_contact16 import Window16
+from contact.conpact16.doc_contact16 import doctorWind16
+from contact.conpact16.family_contact16 import famWind16
+from contact.conpact16.hcs_contact16 import homecsWind16
+from contact.conpact17.pat_contact17 import Window17
+from contact.conpact17.doc_contact17 import doctorWind17
+from contact.conpact17.family_contact17 import famWind17
+from contact.conpact17.hcs_contact17 import homecsWind17
+from contact.conpact18.pat_contact18 import Window18
+from contact.conpact18.doc_contact18 import doctorWind18
+from contact.conpact18.family_contact18 import famWind18
+from contact.conpact18.hcs_contact18 import homecsWind18
+from contact.conpact19.pat_contact19 import Window19
+from contact.conpact19.doc_contact19 import doctorWind19
+from contact.conpact19.family_contact19 import famWind19
+from contact.conpact19.hcs_contact19 import homecsWind19
+from contact.conpact20.pat_contact20 import Window20
+from contact.conpact20.doc_contact20 import doctorWind20
+from contact.conpact20.family_contact20 import famWind20
+from contact.conpact20.hcs_contact20 import homecsWind20
+from contact.conpact21.pat_contact21 import Window21
+from contact.conpact21.doc_contact21 import doctorWind21
+from contact.conpact21.family_contact21 import famWind21
+from contact.conpact21.hcs_contact21 import homecsWind21
+from contact.conpact22.pat_contact22 import Window22
+from contact.conpact22.doc_contact22 import doctorWind22
+from contact.conpact22.family_contact22 import famWind22
+from contact.conpact22.hcs_contact22 import homecsWind22
+from contact.conpact23.pat_contact23 import Window23
+from contact.conpact23.doc_contact23 import doctorWind23
+from contact.conpact23.family_contact23 import famWind23
+from contact.conpact23.hcs_contact23 import homecsWind23
+from contact.conpact24.pat_contact24 import Window24
+from contact.conpact24.doc_contact24 import doctorWind24
+from contact.conpact24.family_contact24 import famWind24
+from contact.conpact24.hcs_contact24 import homecsWind24
 from labo.resultlabo1 import callLabo1
 from labo.resultlabo2 import callLabo2
 from labo.resultlabo3 import callLabo3
@@ -2142,14 +2234,34 @@ class Application(Frame):
     def contacthcsystem_1(self):
         homecsWind(self)
 
+    # Contact patient 2
+    def contact_num1(self):
+        Window2(self)
+
+    def contactfamily_1(self):
+        famWind2(self)
+
+    def contactdoctor_1(self):
+        doctorWind2(self)
+
+    def contacthcsystem_1(self):
+        homecsWind2(self)
+
+    # Contact patient 3
+    def contact_num1(self):
+        Window3(self)
+
+    def contactfamily_1(self):
+        famWind3(self)
+
+    def contactdoctor_1(self):
+        doctorWind3(self)
+
+    def contacthcsystem_1(self):
+        homecsWind3(self)
+
     #def callDataPat(self):
     #    launchData(self)
-
-    def contact_num2(self):
-        subprocess.run('./contact/pat_contact2.py', check=True)
-
-    def contact_num3(self):
-        subprocess.run('./contact/pat_contact3.py', check=True)
 
     def contact_num4(self):
         subprocess.run('./contact/pat_contact4.py', check=True)

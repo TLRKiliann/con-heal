@@ -88,6 +88,41 @@ def homecsWind6(self):
         except FileNotFoundError as err_line:
             print("+ No file hcscontact2.txt exist (Error4) !", err_line)
 
+        try:
+            if os.path.getsize('./contact/conpact6/hcscontact3.txt'):
+                print("+ Ok, hcscontact3.txt exist (t1)")
+        except FileNotFoundError as errfnf2:
+            print("+ No file hcscontact3.txt exist (Error3) !", errfnf2)
+            with open('./contact/conpact6/hcscontact3.txt', 'w') as testf:
+                print("+ File hcscontact3.txt created !")
+
+        self.x3, self.y3 = 900, 1170
+        self.txtBox3 = Text(self.can, height=13, width=40, font=18, relief=SUNKEN)
+        self.txtBox3.delete('1.0', END)
+        self.txtBox3.update()
+        self.ftxtBox3_window = self.can.create_window(self.x3, self.y3, window=self.txtBox3)
+
+        try:
+            if os.path.exists('./contact/conpact6/hcscontact3.txt'):
+                with open('./contact/conpact6/hcscontact3.txt', 'r') as secondfile:
+                    nameline3 = secondfile.readline()
+                    phone_line3 = secondfile.readline()
+                    iphone_line3= secondfile.readline()
+                    street_line3 = secondfile.readline()
+                    state_line3 = secondfile.readline()
+                    email_line3 = secondfile.readline()
+                self.txtBox3.insert(INSERT, "--- Data Home Care System 3 ---\n")
+                self.txtBox3.insert(END, "\nName : " + nameline3)
+                self.txtBox3.insert(END, "\nPhone : " + phone_line3)
+                self.txtBox3.insert(END, "\nMobile : " + iphone_line3)
+                self.txtBox3.insert(END, "\nStreet : " + street_line3)
+                self.txtBox3.insert(END, "\nCity : " + state_line3)
+                self.txtBox3.insert(END, "\ne-mail : " + email_line3)
+            else:
+                pass
+        except FileNotFoundError as err_line:
+            print("+ No file hcscontact3.txt exist (Error4) !", err_line)
+
     def recorderData(namentry, txtphone, phonentry, txtmobile,
         mobilentry, addrtxt, addrentry, citytxt, cityentry,
         mailtxt, entrymail):
@@ -120,6 +155,7 @@ def homecsWind6(self):
             print("+ finalhcs1 not found (Error7) !", err_termin)
             with open('./contact/conpact6/finalhcs1.txt', 'a+'):
                 print("+ finalhcs1.txt exist!")
+
         try:
             with open('./contact/conpact6/finalhcs1.txt', 'w') as terminfile:
                 terminfile.write("Name : " + namentry.get())
@@ -165,6 +201,7 @@ def homecsWind6(self):
             print("+ finalhcs2 not found (Error11) !", err_termin)
             with open('./contact/conpact6/finalhcs2.txt', 'a+'):
                 print("+ finalhcs2.txt exist!")
+
         try:
             with open('./contact/conpact6/finalhcs2.txt', 'w') as secterfile:
                 secterfile.write("Name : " + name_twoentry.get())
@@ -175,6 +212,52 @@ def homecsWind6(self):
                 secterfile.write("\ne-mail : " + entry_twomail.get())
         except FileNotFoundError as err2_final:
             print("+ finalhcs2.txt not created (Error12) !", err2_final)
+
+        allInData()
+
+    def recorderthirdData(name_thirdentry, txt_thirdphone, thirdphonentry,
+        txt_thirdmobile, mobile_thirdentry, addr_thirdtxt, addr_thirdentry,
+        thirdcitytxt, city_thirdentry, mail_thirdtxt, entry_thirdmail):
+        """
+            Display origin
+        """
+        try:
+            if os.path.getsize('./contact/conpact6/hcscontact3.txt'):
+                print("+ Ok, hcscontact3.txt exist (t3)")
+        except FileNotFoundError as errfnf:
+            print("+ No file hcscontact3.txt exist (Error13) !", errfnf)
+            with open('./contact/conpact6/hcscontact3.txt', 'w') as testf:
+                print("+ File hcscontact3.txt created !")
+
+        try:
+            with open('./contact/conpact6/hcscontact3.txt', 'w') as copyfile:
+                copyfile.write(name_thirdentry.get())
+                copyfile.write("\n" + thirdphonentry.get())
+                copyfile.write("\n" + mobile_thirdentry.get())
+                copyfile.write("\n" + addr_thirdentry.get())
+                copyfile.write("\n" + city_thirdentry.get())
+                copyfile.write("\n" + entry_thirdmail.get())
+        except FileNotFoundError as fn:
+            print("+ File not found (Error14) !", fn)
+
+        try:
+            if os.path.getsize('./contact/conpact6/finalhcs3.txt'):
+                os.remove('./contact/conpact6/finalhcs3.txt')
+        except FileNotFoundError as err_termin:
+            print("+ finalhcs3 not found (Error15) !", err_termin)
+            with open('./contact/conpact6/finalhcs3.txt', 'a+'):
+                print("+ finalhcs3.txt exist!")
+
+        try:
+            with open('./contact/conpact6/finalhcs3.txt', 'w') as secterfile:
+                secterfile.write("Name : " + name_thirdentry.get())
+                secterfile.write("\nPhone : " + thirdphonentry.get())
+                secterfile.write("\nPhone : " + mobile_thirdentry.get())
+                secterfile.write("\nStreet : " + addr_thirdentry.get())
+                secterfile.write("\nCity : " + city_thirdentry.get())
+                secterfile.write("\ne-mail : " + entry_thirdmail.get())
+        except FileNotFoundError as err2_final3:
+            print("+ finalhcs3.txt not created (Error16) !", err2_final3)
 
         allInData()
 
@@ -189,7 +272,7 @@ def homecsWind6(self):
         window = self.lbltitle)
 
     # Label title2
-    self.x12, self.y12 = 600, 100
+    self.x12, self.y12 = 580, 100
     self.labtitle = Label(self.can, text="Home Care System",
         font=('Times', 40, 'italic'),
         bg='DodgerBlue2', fg='coral')
@@ -339,7 +422,7 @@ def homecsWind6(self):
            two_line5 = namefile.readline()
            two_line6 = namefile.readline()
     except FileNotFoundError as callfile:
-        print("+ File hcscontact1.txt doesn't exist (Error15) !", callfile)
+        print("+ File hcscontact2.txt doesn't exist (Error15) !", callfile)
 
     try:
         self.txt_twopat = two_linex
@@ -448,5 +531,132 @@ def homecsWind6(self):
             self.mail_twotxt, self.entry_twomail))
     self.fb116_window = self.can.create_window(self.x116, self.y116,
         window=self.b116)
+
+    # Name 3
+    self.x120, self.y120 = 250, 1040
+    self.lblname2 = Label(self.can, text="Name :",
+        font=('helvetica', 18, 'bold'),
+        bg='DodgerBlue2', fg='white')
+    self.wlblname2_window = self.can.create_window(self.x120, self.y120,
+        window = self.lblname2)
+
+    try:
+        with open('./contact/conpact6/hcscontact3.txt', 'r') as namefile3:
+           third_linex = namefile3.readline()
+           third_line2 = namefile3.readline()
+           third_line3 = namefile3.readline()
+           third_line4 = namefile3.readline()
+           third_line5 = namefile3.readline()
+           third_line6 = namefile3.readline()
+    except FileNotFoundError as callfile3:
+        print("+ File hcscontact3.txt doesn't exist (Error17) !", callfile3)
+
+    try:
+        self.txt_thirdpat = third_linex
+        self.x121, self.y121 = 450, 1040
+        self.txt_thirdpat = StringVar()
+        self.name_thirdentry = Entry(self.can, textvariable=self.txt_thirdpat,
+            highlightbackground='grey', bd=4)
+        self.txt_thirdpat.set(third_linex[:-1])
+        self.wname_thirdentry_window = self.can.create_window(self.x121, self.y121,
+            window = self.name_thirdentry)
+    except UnboundLocalError as ub_error3:
+        print("+ File 1 not created (Error18) !", ub_error3)
+
+    # Phone
+    self.x122, self.y122 = 250, 1090
+    self.lbl_thirdphone = Label(self.can, text="Phone :",
+        font=('helvetica', 18, 'bold'),
+        bg='DodgerBlue2', fg='white')
+    self.wlbl_thirdphone_window = self.can.create_window(self.x122, self.y122,
+        window = self.lbl_thirdphone)
+
+    self.txt_thirdphone = third_line2
+    self.x123, self.y123 = 450, 1090
+    self.txt_thirdphone = StringVar()
+    self.thirdphonentry = Entry(self.can, textvariable=self.txt_thirdphone,
+        highlightbackground='grey', bd=3)
+    self.txt_thirdphone.set(third_line2[:-1])
+    self.wthirdphonentry_window = self.can.create_window(self.x123, self.y123,
+        window = self.thirdphonentry)
+
+    # Mobile
+    self.x124, self.y124 = 250, 1140
+    self.thirdlbl_mobile = Label(self.can, text="Mobile :",
+        font=('helvetica', 18, 'bold'),
+        bg='DodgerBlue2', fg='white')
+    self.wthirdlbl_mobile_window = self.can.create_window(self.x124, self.y124,
+        window = self.thirdlbl_mobile)
+
+    self.txt_thirdmobile = third_line3
+    self.x125, self.y125 = 450, 1140
+    self.txt_thirdmobile = StringVar()
+    self.mobile_thirdentry = Entry(self.can, textvariable=self.txt_thirdmobile,
+        highlightbackground='grey', bd=3)
+    self.txt_thirdmobile.set(third_line3[:-1])
+    self.wmobile_thirdentry_window = self.can.create_window(self.x125, self.y125,
+        window = self.mobile_thirdentry)
+
+    # Street
+    self.x126, self.y126 = 250, 1190
+    self.lbl_thirdaddr = Label(self.can, text="Street :",
+        font=('helvetica', 18, 'bold'),
+        bg='DodgerBlue2', fg='white')
+    self.wlbl_thirdaddr_window = self.can.create_window(self.x126, self.y126,
+        window = self.lbl_thirdaddr)
+
+    self.addr_thirdtxt = third_line4
+    self.x127, self.y127 = 450, 1190
+    self.addr_thirdtxt = StringVar()
+    self.addr_thirdentry = Entry(self.can, textvariable=self.addr_thirdtxt,
+        highlightbackground='grey', bd=4)
+    self.addr_thirdtxt.set(third_line4[:-1])
+    self.waddr_thirdentry_window = self.can.create_window(self.x127, self.y127,
+        window = self.addr_thirdentry)
+
+    self.x128, self.y128 = 250, 1240
+    self.lbl_thirdcity = Label(self.can, text="City :",
+        font=('helvetica', 18, 'bold'),
+        bg='DodgerBlue2', fg='white')
+    self.wlbl_thirdcity_window = self.can.create_window(self.x128, self.y128,
+        window = self.lbl_thirdcity)
+
+    self.thirdcitytxt = third_line5
+    self.x129, self.y129 = 450, 1240
+    self.thirdcitytxt = StringVar()
+    self.city_thirdentry = Entry(self.can, textvariable=self.thirdcitytxt,
+        highlightbackground='grey', bd=4)
+    self.thirdcitytxt.set(third_line5[:-1])
+    self.wcity_thirdentry_window = self.can.create_window(self.x129, self.y129,
+        window = self.city_thirdentry)
+
+    # e-mail
+    self.x130, self.y130 = 250, 1290
+    self.labelmail3 = Label(self.can, text="e-mail :",
+        font=('helvetica', 18, 'bold'),
+        bg='DodgerBlue2', fg='white')
+    self.wlabelmail3_window = self.can.create_window(self.x130, self.y130,
+        window = self.labelmail3)
+
+    self.mail_thirdtxt = third_line6
+    self.x131, self.y131 = 450, 1290
+    self.mail_thirdtxt = StringVar()
+    self.entry_thirdmail = Entry(self.can, textvariable=self.mail_thirdtxt,
+        highlightbackground='grey', bd=3)
+    self.mail_thirdtxt.set(third_line6)
+    self.wentry_thirdmail_window = self.can.create_window(self.x131, self.y131,
+        window = self.entry_thirdmail)
+
+    self.x132, self.y132 = 350, 1360
+    self.b132 = Button(self.can, text="Save Modifications", font=16,
+        width=30, bd=3, bg='RoyalBlue3', fg='yellow',
+        highlightbackground='cyan',
+        activebackground='pale turquoise',
+        command = lambda: recorderthirdData(self.name_thirdentry, self.txt_thirdphone,
+            self.thirdphonentry, self.txt_thirdmobile, self.mobile_thirdentry,
+            self.addr_thirdtxt, self.addr_thirdentry, self.thirdcitytxt,
+            self.city_thirdentry, self.mail_thirdtxt, self.entry_thirdmail))
+    self.fb132_window = self.can.create_window(self.x132, self.y132,
+        window=self.b132)
 
     self.can.configure(scrollregion=self.can.bbox(ALL))

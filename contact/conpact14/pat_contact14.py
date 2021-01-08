@@ -6,7 +6,7 @@ from tkinter import *
 import os
 
 
-def Window7(self):
+def Window14(self):
     """
         Main function to define 
         design for contact interface.
@@ -19,11 +19,11 @@ def Window7(self):
             First page
         """
         try:
-            if os.path.getsize('./contact/conpact7/contact1.txt'):
+            if os.path.getsize('./contact/conpact14/contact1.txt'):
                 print("+ Ok, contact1.txt exist (t1)")
         except FileNotFoundError as errfnf:
             print("+ No file contact1.txt exist", errfnf)
-            with open('./contact/conpact7/contact1.txt', 'w') as testf:
+            with open('./contact/conpact14/contact1.txt', 'w') as testf:
                 print("+ File contact1.txt created !")
 
         self.x1, self.y1 = 900, 420
@@ -33,8 +33,8 @@ def Window7(self):
         self.ftxtBox_window = self.can.create_window(self.x1, self.y1, window=self.txtBox)
 
         try:
-            if os.path.exists('./contact/conpact7/contact1.txt'):
-                with open('./contact/conpact7/contact1.txt', 'r') as policyfile:
+            if os.path.exists('./contact/conpact14/contact1.txt'):
+                with open('./contact/conpact14/contact1.txt', 'r') as policyfile:
                     line1 = policyfile.readline()
                     line2 = policyfile.readline()
                     native = policyfile.readline()
@@ -70,15 +70,15 @@ def Window7(self):
             Display origin
         """
         try:
-            if os.path.getsize('./contact/conpact7/contact1.txt'):
+            if os.path.getsize('./contact/conpact14/contact1.txt'):
                 print("+ Ok, contact1.txt exist")
         except FileNotFoundError as errfnf:
             print("+ No file contact1.txt exist (Error2)", errfnf)
-            with open('./contact/conpact7/contact1.txt', 'w') as testf:
+            with open('./contact/conpact14/contact1.txt', 'w') as testf:
                 print("+ File contact1.txt created !")
 
         try:
-            with open('./contact/conpact7/contact1.txt', 'w') as iofile:
+            with open('./contact/conpact14/contact1.txt', 'w') as iofile:
                 iofile.write(namentry.get())
                 iofile.write("\n" + birthvar)
                 iofile.write("\n" + nativaentry.get())
@@ -94,14 +94,14 @@ def Window7(self):
             print("+ File not found !", fn)
 
         try:
-            if os.path.getsize('./contact/conpact7/finalfile1.txt'):
-                os.remove('./contact/conpact7/finalfile1.txt')
+            if os.path.getsize('./contact/conpact14/finalfile1.txt'):
+                os.remove('./contact/conpact14/finalfile1.txt')
         except FileNotFoundError as err_termin:
             print("+ finalfile1 not found !(Error3)", err_termin)
-            with open('./contact/conpact7/finalfile1.txt', 'a+'):
+            with open('./contact/conpact14/finalfile1.txt', 'a+'):
                 print("+ finalfile1.txt exist!")
         try:
-            with open('./contact/conpact7/finalfile1.txt', 'w') as terminfile:
+            with open('./contact/conpact14/finalfile1.txt', 'w') as terminfile:
                 terminfile.write("Patient name : " + namentry.get())
                 terminfile.write("\nBirthdate : " + birthvar)
                 terminfile.write("\nNative : " + nativaentry.get())
@@ -145,7 +145,7 @@ def Window7(self):
         window = self.labelname)
 
     try:
-        with open('./newpatient/entryfile7.txt', 'r') as namefile:
+        with open('./newpatient/entryfile14.txt', 'r') as namefile:
             line1 = namefile.readline()
             line2 = namefile.readline()
             txt_pat = line1
@@ -166,7 +166,7 @@ def Window7(self):
         print("+ File 1 not created !", ub_error1)
 
     try:
-        with open('./contact/conpact7/contact1.txt', 'r') as namefile:
+        with open('./contact/conpact14/contact1.txt', 'r') as namefile:
             linex = namefile.readline()
             liney = namefile.readline()
             line3 = namefile.readline()

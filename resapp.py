@@ -38,7 +38,7 @@ def dispResFunc():
                     dose_ttt = (str(value[x]["Dosage"]))
                     print(dose_ttt)
                     MSBTTT2 = messagebox.showwarning('Warning',
-                        'Look at TTT, there is a ttt to stop at' + " " + word_ttstop + " " + \
+                        'Look at R, there is a ttt to stop at' + " " + word_ttstop + " " + \
                         'for : ' + "\n" + res_text1 + "Date of end : " + date_end + "\n" + \
                         name_treat + "\n" + dose_ttt)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
@@ -91,7 +91,7 @@ def dispResFunc():
                     dose_ttt2 = (str(value[x]["Dosage"]))
                     print(dose_ttt2)
                     MSBTTT2 = messagebox.showwarning('Warning',
-                        'Look at TTT, there is a ttt to stop at' + " " + word_ttstop2 + " " + \
+                        'Look at R, there is a ttt to stop at' + " " + word_ttstop2 + " " + \
                         'for : ' + "\n" + res_text2 + "Date of end : " + date_end2 + "\n" + name_treat2 + \
                         "\n" + dose_ttt2)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
@@ -144,7 +144,7 @@ def dispResFunc():
                     dose_ttt3 = (str(value[x]["Dosage"]))
                     print(dose_ttt3)
                     MSBTTT3 = messagebox.showwarning('Warning',
-                        'Look at TTT, there is a ttt to stop at' + " " + word_ttstop3 + " " + \
+                        'Look at R, there is a ttt to stop at' + " " + word_ttstop3 + " " + \
                         'for : ' + "\n" + res_text3 + "Date of end : " + date_end3 + "\n" + name_treat3 + \
                         "\n" + dose_ttt3)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
@@ -197,7 +197,7 @@ def dispResFunc():
                     dose_ttt4 = (str(value[x]["Dosage"]))
                     print(dose_ttt4)
                     MSBTTT4 = messagebox.showwarning('Warning',
-                        'Look at TTT, there is a ttt to stop at' + " " + word_ttstop4 + " " + \
+                        'Look at R, there is a ttt to stop at' + " " + word_ttstop4 + " " + \
                         'for : ' + "\n" + res_text4 + "Date of end : " + date_end4 + "\n" + name_treat4 + \
                         "\n" + dose_ttt4)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
@@ -250,7 +250,7 @@ def dispResFunc():
                     dose_ttt5 = (str(value[x]["Dosage"]))
                     print(dose_ttt5)
                     MSBTTT5 = messagebox.showwarning('Warning',
-                        'Look at TTT, there is a ttt to stop at' + " " + word_ttstop5 + " " + \
+                        'Look at R, there is a ttt to stop at' + " " + word_ttstop5 + " " + \
                         'for : ' + "\n" + res_text5 + "Date of end : " + date_end5 + "\n" + name_treat5 + \
                         "\n" + dose_ttt5)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
@@ -303,7 +303,7 @@ def dispResFunc():
                     dose_ttt6 = (str(value[x]["Dosage"]))
                     print(dose_ttt6)
                     MSBTTT6 = messagebox.showwarning('Warning',
-                        'Look at TTT, there is a ttt to stop at' + " " + word_ttstop6 + " " + \
+                        'Look at R, there is a ttt to stop at' + " " + word_ttstop6 + " " + \
                         'for : ' + "\n" + res_text6 + "Date of end : " + date_end6 + "\n" + name_treat6 + \
                         "\n" + dose_ttt6)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
@@ -356,7 +356,7 @@ def dispResFunc():
                     dose_ttt7 = (str(value[x]["Dosage"]))
                     print(dose_ttt7)
                     MSBTTT7 = messagebox.showwarning('Warning',
-                        'Look at TTT, there is a ttt to stop at' + " " + word_ttstop7 + " " + \
+                        'Look at R, there is a ttt to stop at' + " " + word_ttstop7 + " " + \
                         'for : ' + "\n" + res_text7 + "Date of end : " + date_end7 + "\n" + name_treat7 + \
                         "\n" + dose_ttt7)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
@@ -409,7 +409,7 @@ def dispResFunc():
                     dose_ttt8 = (str(value[x]["Dosage"]))
                     print(dose_ttt8)
                     MSBTTT8 = messagebox.showwarning('Warning',
-                        'Look at TTT, there is a ttt to stop at' + " " + word_ttstop8 + " " + \
+                        'Look at R, there is a ttt to stop at' + " " + word_ttstop8 + " " + \
                         'for : ' + "\n" + res_text8 + "Date of end : " + date_end8 + "\n" + name_treat8 + \
                         "\n" + dose_ttt8)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
@@ -462,7 +462,7 @@ def dispResFunc():
                     dose_ttt9 = (str(value[x]["Dosage"]))
                     print(dose_ttt9)
                     MSBTTT9 = messagebox.showwarning('Warning',
-                        'Look at TTT, there is a ttt to stop at' + " " + word_ttstop9 + " " + \
+                        'Look at R, there is a ttt to stop at' + " " + word_ttstop9 + " " + \
                         'for : ' + "\n" + res_text9 + "Date of end : " + date_end9 + "\n" + name_treat9 + \
                         "\n" + dose_ttt9)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
@@ -515,7 +515,7 @@ def dispResFunc():
                     dose_ttt10 = (str(value[x]["Dosage"]))
                     print(dose_ttt10)
                     MSBTTT10 = messagebox.showwarning('Warning',
-                        'Look at TTT, there is a ttt to stop at' + " " + word_ttstop10 + " " + \
+                        'Look at R, there is a ttt to stop at' + " " + word_ttstop10 + " " + \
                         'for : ' + "\n" + res_text10 + "Date of end : " + date_end10 + "\n" + name_treat10 + \
                         "\n" + dose_ttt10)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
@@ -568,7 +568,7 @@ def dispResFunc():
                     dose_ttt11 = (str(value[x]["Dosage"]))
                     print(dose_ttt11)
                     MSBTTT11 = messagebox.showwarning('Warning',
-                        'Look at TTT, there is a ttt to stop at' + " " + word_ttstop11 + " " + \
+                        'Look at R, there is a ttt to stop at' + " " + word_ttstop11 + " " + \
                         'for : ' + "\n" + res_text11 + "Date of end : " + date_end11 + "\n" + name_treat11 + \
                         "\n" + dose_ttt11)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
@@ -621,7 +621,7 @@ def dispResFunc():
                     dose_ttt12 = (str(value[x]["Dosage"]))
                     print(dose_ttt12)
                     MSBTTT12 = messagebox.showwarning('Warning',
-                        'Look at TTT, there is a ttt to stop at' + " " + word_ttstop12 + " " + \
+                        'Look at R, there is a ttt to stop at' + " " + word_ttstop12 + " " + \
                         'for : ' + "\n" + res_text12 + "Date of end : " + date_end12 + "\n" + name_treat12 + \
                         "\n" + dose_ttt12)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
@@ -674,7 +674,7 @@ def dispResFunc():
                     dose_ttt13 = (str(value[x]["Dosage"]))
                     print(dose_ttt13)
                     MSBTTT13 = messagebox.showwarning('Warning',
-                        'Look at TTT, there is a ttt to stop at' + " " + word_ttstop13 + " " + \
+                        'Look at R, there is a ttt to stop at' + " " + word_ttstop13 + " " + \
                         'for : ' + "\n" + res_text13 + "Date of end : " + date_end13 + "\n" + name_treat13 + \
                         "\n" + dose_ttt13)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
@@ -727,7 +727,7 @@ def dispResFunc():
                     dose_ttt14 = (str(value[x]["Dosage"]))
                     print(dose_ttt14)
                     MSBTTT14 = messagebox.showwarning('Warning',
-                        'Look at TTT, there is a ttt to stop at' + " " + word_ttstop14 + " " + \
+                        'Look at R, there is a ttt to stop at' + " " + word_ttstop14 + " " + \
                         'for : ' + "\n" + res_text14 + "Date of end : " + date_end14 + "\n" + name_treat14 + \
                         "\n" + dose_ttt14)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
@@ -780,7 +780,7 @@ def dispResFunc():
                     dose_ttt15 = (str(value[x]["Dosage"]))
                     print(dose_ttt15)
                     MSBTTT15 = messagebox.showwarning('Warning',
-                        'Look at TTT, there is a ttt to stop at' + " " + word_ttstop15 + " " + \
+                        'Look at R, there is a ttt to stop at' + " " + word_ttstop15 + " " + \
                         'for : ' + "\n" + res_text15 + "Date of end : " + date_end15 + "\n" + name_treat15 + \
                         "\n" + dose_ttt15)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
@@ -833,7 +833,7 @@ def dispResFunc():
                     dose_ttt16 = (str(value[x]["Dosage"]))
                     print(dose_ttt16)
                     MSBTTT16 = messagebox.showwarning('Warning',
-                        'Look at TTT, there is a ttt to stop at' + " " + word_ttstop16 + " " + \
+                        'Look at R, there is a ttt to stop at' + " " + word_ttstop16 + " " + \
                         'for : ' + "\n" + res_text16 + "Date of end : " + date_end16 + "\n" + name_treat16 + \
                         "\n" + dose_ttt16)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
@@ -886,7 +886,7 @@ def dispResFunc():
                     dose_ttt17 = (str(value[x]["Dosage"]))
                     print(dose_ttt17)
                     MSBTTT17 = messagebox.showwarning('Warning',
-                        'Look at TTT, there is a ttt to stop at' + " " + word_ttstop17 + " " + \
+                        'Look at R, there is a ttt to stop at' + " " + word_ttstop17 + " " + \
                         'for : ' + "\n" + res_text17 + "Date of end : " + date_end17 + "\n" + name_treat17 + \
                         "\n" + dose_ttt17)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
@@ -939,7 +939,7 @@ def dispResFunc():
                     dose_ttt18 = (str(value[x]["Dosage"]))
                     print(dose_ttt18)
                     MSBTTT18 = messagebox.showwarning('Warning',
-                        'Look at TTT, there is a ttt to stop at' + " " + word_ttstop18 + " " + \
+                        'Look at R, there is a ttt to stop at' + " " + word_ttstop18 + " " + \
                         'for : ' + "\n" + res_text18 + "Date of end : " + date_end18 + "\n" + name_treat18 + \
                         "\n" + dose_ttt18)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
@@ -992,7 +992,7 @@ def dispResFunc():
                     dose_ttt19 = (str(value[x]["Dosage"]))
                     print(dose_ttt19)
                     MSBTTT19 = messagebox.showwarning('Warning',
-                        'Look at TTT, there is a ttt to stop at' + " " + word_ttstop19 + " " + \
+                        'Look at R, there is a ttt to stop at' + " " + word_ttstop19 + " " + \
                         'for : ' + "\n" + res_text19 + "Date of end : " + date_end19 + "\n" + name_treat19 + \
                         "\n" + dose_ttt19)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
@@ -1046,7 +1046,7 @@ def dispResFunc():
                     dose_ttt20 = (str(value[x]["Dosage"]))
                     print(dose_ttt20)
                     MSBTTT20 = messagebox.showwarning('Warning',
-                        'Look at TTT, there is a ttt to stop at' + " " + word_ttstop20 + " " + \
+                        'Look at R, there is a ttt to stop at' + " " + word_ttstop20 + " " + \
                         'for : ' + "\n" + res_text20 + "Date of end : " + date_end20 + "\n" + name_treat20 + \
                         "\n" + dose_ttt20)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
@@ -1099,7 +1099,7 @@ def dispResFunc():
                     dose_ttt21 = (str(value[x]["Dosage"]))
                     print(dose_ttt21)
                     MSBTTT21 = messagebox.showwarning('Warning',
-                        'Look at TTT, there is a ttt to stop at' + " " + word_ttstop21 + " " + \
+                        'Look at R, there is a ttt to stop at' + " " + word_ttstop21 + " " + \
                         'for : ' + "\n" + res_text21 + "Date of end : " + date_end21 + "\n" + name_treat21 + \
                         "\n" + dose_ttt21)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
@@ -1152,7 +1152,7 @@ def dispResFunc():
                     dose_ttt22 = (str(value[x]["Dosage"]))
                     print(dose_ttt22)
                     MSBTTT22 = messagebox.showwarning('Warning',
-                        'Look at TTT, there is a ttt to stop at' + " " + word_ttstop22 + " " + \
+                        'Look at R, there is a ttt to stop at' + " " + word_ttstop22 + " " + \
                         'for : ' + "\n" + res_text22 + "Date of end : " + date_end22 + "\n" + name_treat22 + \
                         "\n" + dose_ttt22)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
@@ -1205,7 +1205,7 @@ def dispResFunc():
                     dose_ttt23 = (str(value[x]["Dosage"]))
                     print(dose_ttt23)
                     MSBTTT23 = messagebox.showwarning('Warning',
-                        'Look at TTT, there is a ttt to stop at' + " " + word_ttstop23 + " " + \
+                        'Look at R, there is a ttt to stop at' + " " + word_ttstop23 + " " + \
                         'for : ' + "\n" + res_text23 + "Date of end : " + date_end23 + "\n" + name_treat23 + \
                         "\n" + dose_ttt23)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\
@@ -1258,7 +1258,7 @@ def dispResFunc():
                     dose_ttt24 = (str(value[x]["Dosage"]))
                     print(dose_ttt24)
                     MSBTTT24 = messagebox.showwarning('Warning',
-                        'Look at TTT, there is a ttt to stop at' + " " + word_ttstop24 + " " + \
+                        'Look at R, there is a ttt to stop at' + " " + word_ttstop24 + " " + \
                         'for : ' + "\n" + res_text24 + "Date of end : " + date_end24 + "\n" + name_treat24 + \
                         "\n" + dose_ttt24)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the R : "\

@@ -1,0 +1,33 @@
+Date : 08/01/2021
+Heure : 16:14:30
+Name : Bruce Willis
+Date of introduction : 08 January 2021
+Nom du ttt : Clopixol
+Dosage du ttt : 10 gttes (1mg/ml)
+Réserve : Oui
+1ère intention : Oui
+Date of end : 08/08/2021
+Signature : etc
+
+Date : 08/01/2021
+Heure : 16:14:30
+Name : Bruce Willis
+Date of introduction : 08 April 2004
+Nom du ttt : Temesta expidet
+Dosage du ttt : 1 mg
+Réserve : Oui
+2ème intention : Oui
+Date of end : 08/01/2021
+Signature : etc
+
+Date : 08/01/2021
+Heure : 16:20:47
+Name : Bruce Willis
+Date of introduction : 03 March 2004
+Nom du ttt : Truxal
+Dosage du ttt : 10 mg1
+Réserve : Oui
+2ème intention : Oui
+Date of end : 09/01/2021
+Signature : etc
+

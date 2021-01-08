@@ -20,7 +20,7 @@ def dispTttBox():
     # Patient 1
     try:
         with open('./newpatient/entryfile.txt', 'r') as namefile:
-            line_text1 = namefile.readline()
+            ttt_text1 = namefile.readline()
     except FileNotFoundError as callfile:
         print("File entryfile.txt doesn't exist !", callfile)
 
@@ -41,10 +41,10 @@ def dispTttBox():
                     print(dose_ttt)
                     MSBTTT2 = messagebox.showwarning('Warning',
                         'Look at TTT, there is a ttt to stop at' + " " + word_ttstop + " " + \
-                        'for : ' + "\n" + line_text1 + "Date of end : " + date_end + "\n" + name_treat + \
+                        'for : ' + "\n" + ttt_text1 + "Date of end : " + date_end + "\n" + name_treat + \
                         "\n" + dose_ttt)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the ttt : "\
-                        + name_treat + " " + dose_ttt + " of " + line_text1 + " ?")
+                        + name_treat + " " + dose_ttt + " of " + ttt_text1 + " ?")
                     if MSGBOX == 1:
                         print("Reminder stop !")
                         file = open('./ttt/doc_ttt/convdose.json')
@@ -101,7 +101,7 @@ def dispTttBox():
                         'for : ' + "\n" + ttt_text2 + "Date of end : " + date_end2 + "\n" + name_treat2 + \
                         "\n" + dose_ttt2)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the ttt : "\
-                        + name_treat2 + " " + dose_ttt2 + " of " + line_text2 + " ?")
+                        + name_treat2 + " " + dose_ttt2 + " of " + ttt_text2 + " ?")
                     if MSGBOX == 1:
                         print("Reminder stop !")
                         file = open('./ttt/doc_ttt2/convdose.json')
@@ -158,7 +158,7 @@ def dispTttBox():
                         'for : ' + "\n" + ttt_text3 + "Date of end : " + date_end3 + "\n" + name_treat3 + \
                         "\n" + dose_ttt3)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the ttt : "\
-                        + name_treat3 + " " + dose_ttt3 + " of " + line_text3 + " ?")
+                        + name_treat3 + " " + dose_ttt3 + " of " + ttt_text3 + " ?")
                     if MSGBOX == 1:
                         print("Reminder stop !")
                         file = open('./ttt/doc_ttt3/convdose.json')
@@ -215,7 +215,7 @@ def dispTttBox():
                         'for : ' + "\n" + ttt_text4 + "Date of end : " + date_end4 + "\n" + name_treat4 + \
                         "\n" + dose_ttt4)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the ttt : "\
-                        + name_treat4 + " " + dose_ttt4 + " of " + line_text4 + " ?")
+                        + name_treat4 + " " + dose_ttt4 + " of " + ttt_text4 + " ?")
                     if MSGBOX == 1:
                         print("Reminder stop !")
                         file = open('./ttt/doc_ttt4/convdose.json')
@@ -272,7 +272,7 @@ def dispTttBox():
                         'for : ' + "\n" + ttt_text5 + "Date of end : " + date_end5 + "\n" + name_treat5 + \
                         "\n" + dose_ttt5)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the ttt : "\
-                        + name_treat5 + " " + dose_ttt5 + " of " + line_text5 + " ?")
+                        + name_treat5 + " " + dose_ttt5 + " of " + ttt_text5 + " ?")
                     if MSGBOX == 1:
                         print("Reminder stop !")
                         file = open('./ttt/doc_ttt5/convdose.json')
@@ -329,7 +329,7 @@ def dispTttBox():
                         'for : ' + "\n" + ttt_text6 + "Date of end : " + date_end6 + "\n" + name_treat6 + \
                         "\n" + dose_ttt6)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the ttt : "\
-                        + name_treat6 + " " + dose_ttt6 + " of " + line_text6 + " ?")
+                        + name_treat6 + " " + dose_ttt6 + " of " + ttt_text6 + " ?")
                     if MSGBOX == 1:
                         print("Reminder stop !")
                         file = open('./ttt/doc_ttt6/convdose.json')
@@ -386,7 +386,7 @@ def dispTttBox():
                         'for : ' + "\n" + ttt_text7 + "Date of end : " + date_end7 + "\n" + name_treat7 + \
                         "\n" + dose_ttt7)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the ttt : "\
-                        + name_treat7 + " " + dose_ttt7 + " of " + line_text7 + " ?")
+                        + name_treat7 + " " + dose_ttt7 + " of " + ttt_text7 + " ?")
                     if MSGBOX == 1:
                         print("Reminder stop !")
                         file = open('./ttt/doc_ttt7/convdose.json')
@@ -443,7 +443,7 @@ def dispTttBox():
                         'for : ' + "\n" + ttt_text8 + "Date of end : " + date_end8 + "\n" + name_treat8 + \
                         "\n" + dose_ttt8)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the ttt : "\
-                        + name_treat8 + " " + dose_ttt8 + " of " + line_text8 + " ?")
+                        + name_treat8 + " " + dose_ttt8 + " of " + ttt_text8 + " ?")
                     if MSGBOX == 1:
                         print("Reminder stop !")
                         file = open('./ttt/doc_ttt8/convdose.json')
@@ -500,7 +500,7 @@ def dispTttBox():
                         'for : ' + "\n" + ttt_text9 + "Date of end : " + date_end9 + "\n" + name_treat9 + \
                         "\n" + dose_ttt9)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the ttt : "\
-                        + name_treat9 + " " + dose_ttt9 + " of " + line_text9 + " ?")
+                        + name_treat9 + " " + dose_ttt9 + " of " + ttt_text9 + " ?")
                     if MSGBOX == 1:
                         print("Reminder stop !")
                         file = open('./ttt/doc_ttt9/convdose.json')
@@ -557,7 +557,7 @@ def dispTttBox():
                         'for : ' + "\n" + ttt_text10 + "Date of end : " + date_end10 + "\n" + name_treat10 + \
                         "\n" + dose_ttt10)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the ttt : "\
-                        + name_treat10 + " " + dose_ttt10 + " of " + line_text10 + " ?")
+                        + name_treat10 + " " + dose_ttt10 + " of " + ttt_text10 + " ?")
                     if MSGBOX == 1:
                         print("Reminder stop !")
                         file = open('./ttt/doc_ttt10/convdose.json')
@@ -614,7 +614,7 @@ def dispTttBox():
                         'for : ' + "\n" + ttt_text11 + "Date of end : " + date_end11 + "\n" + name_treat11 + \
                         "\n" + dose_ttt11)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the ttt : "\
-                        + name_treat11 + " " + dose_ttt11 + " of " + line_text11 + " ?")
+                        + name_treat11 + " " + dose_ttt11 + " of " + ttt_text11 + " ?")
                     if MSGBOX == 1:
                         print("Reminder stop !")
                         file = open('./ttt/doc_ttt11/convdose.json')
@@ -671,7 +671,7 @@ def dispTttBox():
                         'for : ' + "\n" + ttt_text12 + "Date of end : " + date_end12 + "\n" + name_treat12 + \
                         "\n" + dose_ttt12)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the ttt : "\
-                        + name_treat12 + " " + dose_ttt12 + " of " + line_text12 + " ?")
+                        + name_treat12 + " " + dose_ttt12 + " of " + ttt_text12 + " ?")
                     if MSGBOX == 1:
                         print("Reminder stop !")
                         file = open('./ttt/doc_ttt12/convdose.json')
@@ -728,7 +728,7 @@ def dispTttBox():
                         'for : ' + "\n" + ttt_text13 + "Date of end : " + date_end13 + "\n" + name_treat13 + \
                         "\n" + dose_ttt13)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the ttt : "\
-                        + name_treat13 + " " + dose_ttt13 + " of " + line_text13 + " ?")
+                        + name_treat13 + " " + dose_ttt13 + " of " + ttt_text13 + " ?")
                     if MSGBOX == 1:
                         print("Reminder stop !")
                         file = open('./ttt/doc_ttt13/convdose.json')
@@ -785,7 +785,7 @@ def dispTttBox():
                         'for : ' + "\n" + ttt_text14 + "Date of end : " + date_end14 + "\n" + name_treat14 + \
                         "\n" + dose_ttt14)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the ttt : "\
-                        + name_treat14 + " " + dose_ttt14 + " of " + line_text14 + " ?")
+                        + name_treat14 + " " + dose_ttt14 + " of " + ttt_text14 + " ?")
                     if MSGBOX == 1:
                         print("Reminder stop !")
                         file = open('./ttt/doc_ttt14/convdose.json')
@@ -842,7 +842,7 @@ def dispTttBox():
                         'for : ' + "\n" + ttt_text15 + "Date of end : " + date_end15 + "\n" + name_treat15 + \
                         "\n" + dose_ttt15)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the ttt : "\
-                        + name_treat15 + " " + dose_ttt15 + " of " + line_text15 + " ?")
+                        + name_treat15 + " " + dose_ttt15 + " of " + ttt_text15 + " ?")
                     if MSGBOX == 1:
                         print("Reminder stop !")
                         file = open('./ttt/doc_ttt15/convdose.json')
@@ -899,7 +899,7 @@ def dispTttBox():
                         'for : ' + "\n" + ttt_text16 + "Date of end : " + date_end16 + "\n" + name_treat16 + \
                         "\n" + dose_ttt16)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the ttt : "\
-                        + name_treat16 + " " + dose_ttt16 + " of " + line_text16 + " ?")
+                        + name_treat16 + " " + dose_ttt16 + " of " + ttt_text16 + " ?")
                     if MSGBOX == 1:
                         print("Reminder stop !")
                         file = open('./ttt/doc_ttt16/convdose.json')
@@ -956,7 +956,7 @@ def dispTttBox():
                         'for : ' + "\n" + ttt_text17 + "Date of end : " + date_end17 + "\n" + name_treat17 + \
                         "\n" + dose_ttt17)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the ttt : "\
-                        + name_treat17 + " " + dose_ttt17 + " of " + line_text17 + " ?")
+                        + name_treat17 + " " + dose_ttt17 + " of " + ttt_text17 + " ?")
                     if MSGBOX == 1:
                         print("Reminder stop !")
                         file = open('./ttt/doc_ttt17/convdose.json')
@@ -1013,7 +1013,7 @@ def dispTttBox():
                         'for : ' + "\n" + ttt_text18 + "Date of end : " + date_end18 + "\n" + name_treat18 + \
                         "\n" + dose_ttt18)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the ttt : "\
-                        + name_treat18 + " " + dose_ttt18 + " of " + line_text18 + " ?")
+                        + name_treat18 + " " + dose_ttt18 + " of " + ttt_text18 + " ?")
                     if MSGBOX == 1:
                         print("Reminder stop !")
                         file = open('./ttt/doc_ttt18/convdose.json')
@@ -1070,7 +1070,7 @@ def dispTttBox():
                         'for : ' + "\n" + ttt_text19 + "Date of end : " + date_end19 + "\n" + name_treat19 + \
                         "\n" + dose_ttt19)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the ttt : "\
-                        + name_treat19 + " " + dose_ttt19 + " of " + line_text19 + " ?")
+                        + name_treat19 + " " + dose_ttt19 + " of " + ttt_text19 + " ?")
                     if MSGBOX == 1:
                         print("Reminder stop !")
                         file = open('./ttt/doc_ttt19/convdose.json')
@@ -1127,7 +1127,7 @@ def dispTttBox():
                         'for : ' + "\n" + ttt_text20 + "Date of end : " + date_end20 + "\n" + name_treat20 + \
                         "\n" + dose_ttt20)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the ttt : "\
-                        + name_treat20 + " " + dose_ttt20 + " of " + line_text20 + " ?")
+                        + name_treat20 + " " + dose_ttt20 + " of " + ttt_text20 + " ?")
                     if MSGBOX == 1:
                         print("Reminder stop !")
                         file = open('./ttt/doc_ttt20/convdose.json')
@@ -1184,7 +1184,7 @@ def dispTttBox():
                         'for : ' + "\n" + ttt_text21 + "Date of end : " + date_end21 + "\n" + name_treat21 + \
                         "\n" + dose_ttt21)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the ttt : "\
-                        + name_treat21 + " " + dose_ttt21 + " of " + line_text21 + " ?")
+                        + name_treat21 + " " + dose_ttt21 + " of " + ttt_text21 + " ?")
                     if MSGBOX == 1:
                         print("Reminder stop !")
                         file = open('./ttt/doc_ttt20/convdose.json')
@@ -1241,7 +1241,7 @@ def dispTttBox():
                         'for : ' + "\n" + ttt_text22 + "Date of end : " + date_end22 + "\n" + name_treat22 + \
                         "\n" + dose_ttt22)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the ttt : "\
-                        + name_treat22 + " " + dose_ttt22 + " of " + line_text22 + " ?")
+                        + name_treat22 + " " + dose_ttt22 + " of " + ttt_text22 + " ?")
                     if MSGBOX == 1:
                         print("Reminder stop !")
                         file = open('./ttt/doc_ttt22/convdose.json')
@@ -1298,7 +1298,7 @@ def dispTttBox():
                         'for : ' + "\n" + ttt_text23 + "Date of end : " + date_end23 + "\n" + name_treat23 + \
                         "\n" + dose_ttt23)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the ttt : "\
-                        + name_treat23 + " " + dose_ttt23 + " of " + line_text23 + " ?")
+                        + name_treat23 + " " + dose_ttt23 + " of " + ttt_text23 + " ?")
                     if MSGBOX == 1:
                         print("Reminder stop !")
                         file = open('./ttt/doc_ttt23/convdose.json')
@@ -1355,7 +1355,7 @@ def dispTttBox():
                         'for : ' + "\n" + ttt_text24 + "Date of end : " + date_end24 + "\n" + name_treat24 + \
                         "\n" + dose_ttt24)
                     MSGBOX = messagebox.askyesno("Ask", "Do you want to stop this reminder for the ttt : "\
-                        + name_treat24 + " " + dose_ttt24 + " of " + line_text24 + " ?")
+                        + name_treat24 + " " + dose_ttt24 + " of " + ttt_text24 + " ?")
                     if MSGBOX == 1:
                         print("Reminder stop !")
                         file = open('./ttt/doc_ttt24/convdose.json')

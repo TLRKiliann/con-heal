@@ -2014,31 +2014,31 @@ class Application(Frame):
         self.can.delete(ALL)
         self.photo=PhotoImage(file='./syno_gif/pyt2.gif')
         self.item=self.can.create_image(625, 350, image=self.photo)
-        self.can.create_text(500, 20, anchor=NW,
+        self.can.create_text(400, 20, anchor=NW,
             text="- MAPAPP -\n\n"
 
             "Usefull functionalities :\n"
             "----------------------------\n"
-            "---> A backup is preview for every first day of each month\n"
+            "---> Backup is scheduled every 15 days\n"
             "---> Display if a treatment or reserve ends the next day\n"
-            "---> Agenda is verified every day and pop-up"
-            "to show you if an appointment is fixed for tomorrow\n\n"
+            "---> Agenda is verified every day and a reminder appear to show you" \
+            " if an appointment is fixed for tomorrow\n\n"
 
             "How to use heal-track :\n\n"
 
             "To make a patient entry : \n"
 
-            "Entry or Add patient (read below) ---> Allergy + Intolerance --->"
+            "Entry or Add patient (read below) ---> Allergy + Intolerance --->" \
             " 14 Needs ---> Care and Monitoring :\n"
             "-----------------------------------------------------------------"
             "---------------------------------------------------------\n"
-            "Use 'Entry' button to enter for first time new patient. Use 'Add "
+            "Use 'Entry' button to enter for first time new patient. Use 'Add " \
             "patient' once time all patients were enter \n"
             "(button to replace a patient who's left with delete button).\n"
-            "Once time, patient had added use 'allergy' button to enter an allergy "
+            "Once time, patient had added use 'allergy' button to enter an allergy " \
             "if none, write and enter 'none'!\n"
             "You can also use 'Intolerance' in the Menu Bar to complete 'allergy'.\n"
-            "After it, Care and Monitoring is available only if you have entered one "
+            "After it, Care and Monitoring is available only if you have entered one " \
             "or more needs of patient.\n"
             "1 ---> Enter data of patient\n"
             "2 ---> Use Refresh (button)\n"

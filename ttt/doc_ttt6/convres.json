@@ -1,0 +1,37 @@
+{
+    "data": [
+        {
+            "Date": "08/01/2021",
+            "Date of introduction": "08 January 2021",
+            "Date of end": "08/08/2021",
+            "Treatment": "Clopixol",
+            "Dosage": "10 gttes (1mg/ml)",
+            "Reserve": 1,
+            "First-line": 1,
+            "Second-line": 0,
+            "Number/24h": "1"
+        },
+        {
+            "Date": "08/01/2021",
+            "Date of introduction": "08 April 2004",
+            "Date of end": "08/01/2021",
+            "Treatment": "Temesta expidet",
+            "Dosage": "1 mg",
+            "Reserve": 1,
+            "First-line": 0,
+            "Second-line": 1,
+            "Number/24h": "2"
+        },
+        {
+            "Date": "08/01/2021",
+            "Date of introduction": "03 March 2004",
+            "Date of end": "09/01/2021",
+            "Treatment": "Truxal",
+            "Dosage": "10 mg1",
+            "Reserve": 1,
+            "First-line": 0,
+            "Second-line": 1,
+            "Number/24h": "2"
+        }
+    ]
+}

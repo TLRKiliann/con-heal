@@ -6,7 +6,7 @@ from tkinter import *
 import os
 
 
-def famWind7(self):
+def famWind22(self):
     """
         Main function to define 
         design for contact interface.
@@ -19,11 +19,11 @@ def famWind7(self):
             First page
         """
         try:
-            if os.path.getsize('./contact/conpact7/famycontact1.txt'):
+            if os.path.getsize('./contact/conpact22/famycontact1.txt'):
                 print("+ Ok, famycontact1.txt exist (t1)")
         except FileNotFoundError as errfnf:
             print("+ No file famycontact1.txt exist", errfnf)
-            with open('./contact/conpact7/famycontact1.txt', 'w') as testf:
+            with open('./contact/conpact22/famycontact1.txt', 'w') as testf:
                 print("+ File famycontact1.txt created !")
 
         self.x1, self.y1 = 900, 330
@@ -33,8 +33,8 @@ def famWind7(self):
         self.ftxtBox_window = self.can.create_window(self.x1, self.y1, window=self.txtBox)
 
         try:
-            if os.path.exists('./contact/conpact7/famycontact1.txt'):
-                with open('./contact/conpact7/famycontact1.txt', 'r') as policyfile:
+            if os.path.exists('./contact/conpact22/famycontact1.txt'):
+                with open('./contact/conpact22/famycontact1.txt', 'r') as policyfile:
                     line1 = policyfile.readline()
                     phone = policyfile.readline()
                     iphone2 = policyfile.readline()
@@ -60,15 +60,15 @@ def famWind7(self):
             Display origin
         """
         try:
-            if os.path.getsize('./contact/conpact7/famycontact1.txt'):
+            if os.path.getsize('./contact/conpact22/famycontact1.txt'):
                 print("+ Ok, famycontact1.txt exist (t2)")
         except FileNotFoundError as errfnf:
             print("+ No file famycontact1.txt exist", errfnf)
-            with open('./contact/conpact7/famycontact1.txt', 'w') as testf:
+            with open('./contact/conpact22/famycontact1.txt', 'w') as testf:
                 print("+ File famycontact1.txt created !")
 
         try:
-            with open('./contact/conpact7/famycontact1.txt', 'w') as iofile:
+            with open('./contact/conpact22/famycontact1.txt', 'w') as iofile:
                 iofile.write(namentry.get())
                 iofile.write("\n" + phonentry.get())
                 iofile.write("\n" + mobilentry.get())
@@ -79,14 +79,14 @@ def famWind7(self):
             print("+ File not found !", fn)
 
         try:
-            if os.path.getsize('./contact/conpact7/finalfam1.txt'):
-                os.remove('./contact/conpact7/finalfam1.txt')
+            if os.path.getsize('./contact/conpact22/finalfam1.txt'):
+                os.remove('./contact/conpact22/finalfam1.txt')
         except FileNotFoundError as err_termin:
             print("+ finalfam1 not found !(t2)", err_termin)
-            with open('./contact/conpact7/finalfam1.txt', 'a+'):
+            with open('./contact/conpact22/finalfam1.txt', 'a+'):
                 print("+ finalfam1.txt exist!")
         try:
-            with open('./contact/conpact7/finalfam1.txt', 'w') as terminfile:
+            with open('./contact/conpact22/finalfam1.txt', 'w') as terminfile:
                 terminfile.write("Name : " + namentry.get())
                 terminfile.write("\nPhone : " + phonentry.get())
                 terminfile.write("\nPhone : " + mobilentry.get())
@@ -125,7 +125,7 @@ def famWind7(self):
         window = self.labelname)
 
     try:
-        with open('./contact/conpact7/famycontact1.txt', 'r') as namefile:
+        with open('./contact/conpact22/famycontact1.txt', 'r') as namefile:
             linex = namefile.readline()
             line2 = namefile.readline()
             line3 = namefile.readline()

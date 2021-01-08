@@ -2013,6 +2013,7 @@ class Application(Frame):
             and how to use app
         """
         self.can.delete(ALL)
+        self.can.configure(background='black')
         self.photo=PhotoImage(file='./syno_gif/pyt2.gif')
         self.item=self.can.create_image(625, 350, image=self.photo)
         self.can.create_text(400, 20, anchor=NW,
@@ -2045,7 +2046,7 @@ class Application(Frame):
             "2 ---> Write data of patient and press 'enter'\n"
             "3 ---> Use Refresh (button)\n"
             "4 ---> Click on 'Intolerances' (in menubar) and press enter.\n"
-            "5 ---> Use 'Update' button to write intolerances into DB\n"
+            "5 ---> Use 'Update' button to write allergia into DB\n"
             "6 ---> Click on 14 Needs ()\n"
             "7 ---> Care and monitoring\n\n"
 
@@ -2054,6 +2055,8 @@ class Application(Frame):
             "+ 14 Needs (V. Henderson)\n"
             "+ Labo (dosage of neuroleptic)\n"
             "+ Stix (button into Labo)\n"
+
+            "!!! WARNING !!! : don't enter allergia before intolerance, otherwise it will be erased...\n"
 
             "\nDevelopped on Linux Xubuntu (xfce4) Voyager 18.04 by ko@l@tr33\n",
             font=('Times', 13), fill='aquamarine')

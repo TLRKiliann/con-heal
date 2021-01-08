@@ -45,7 +45,6 @@ def searchDB():
         messagebox.showwarning('Warning', 'Database no connected !')
         print("Database no connected !")
 
-
 def diagRecapt(diagnosis):
     try:
         if os.path.getsize('./diag/doc_diag11/diagrecap11.txt'):
@@ -102,7 +101,7 @@ def uptopat(idpatient, patient_num, firstpat, firstname_pat,
             print("+ File 'entryfile11.txt' exist !")
             os.remove('./newpatient/entryfile11.txt')
             searchLineName10(firstpat, surname, birthvalue,
-                allergia, transdisval, diagnosis)
+            	allergia, transdisval, diagnosis)
     else:
         pass
 
@@ -138,7 +137,7 @@ labelID.pack(pady=10)
 idpatient = StringVar()
 patient_num = Entry(gui, textvariable=idpatient,
     highlightbackground='light sky blue', bd=4)
-idpatient.set('10')
+idpatient.set('11')
 patient_num.pack()
 
 labelname = Label(gui, text='Name : ',

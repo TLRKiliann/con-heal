@@ -1,0 +1,33 @@
+Date : 02/01/2021
+Hour : 23:06:34
+Name and Surname : Ian Curtis
+TA : 120/80mmHg
+Puls : 80/min
+SaO2 : 99%
+FR : 16/min
+Temperature : 36.2°C
+Glycemie : 5.9 mmol/l
+Douleurs (Pain) : 0/10
+
+Date : 05/01/2021
+Hour : 23:06:34
+Name and Surname : Ian Curtis
+TA : 133/77mmHg
+Puls : 76/min
+SaO2 : 98%
+FR : 15/min
+Temperature : 36.8°C
+Glycemie : 6.3 mmol/l
+Douleurs (Pain) : 2/10
+
+Date : 08/01/2021
+Hour : 23:06:34
+Name and Surname : Ian Curtis
+TA : 125/88mmHg
+Puls : 83/min
+SaO2 : 99%
+FR : 17/min
+Temperature : 36.6°C
+Glycemie : 6.2 mmol/l
+Douleurs (Pain) : 1/10
+

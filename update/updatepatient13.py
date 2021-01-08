@@ -45,7 +45,6 @@ def searchDB():
         messagebox.showwarning('Warning', 'Database no connected !')
         print("Database no connected !")
 
-
 def diagRecapt(diagnosis):
     try:
         if os.path.getsize('./diag/doc_diag13/diagrecap13.txt'):
@@ -138,7 +137,7 @@ labelID.pack(pady=10)
 idpatient = StringVar()
 patient_num = Entry(gui, textvariable=idpatient,
     highlightbackground='light sky blue', bd=4)
-idpatient.set('10')
+idpatient.set('13')
 patient_num.pack()
 
 labelname = Label(gui, text='Name : ',

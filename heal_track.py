@@ -2019,8 +2019,8 @@ class Application(Frame):
 
             "Usefull functionalities :\n"
             "----------------------------\n"
-            "---> Backup is scheduled every 15 days\n"
-            "---> Display if a treatment or reserve ends the next day\n"
+            "---> Backup is scheduled every 5 days and each month for Vital Parameters and BMI\n"
+            "---> Display if a treatment or reserve ends the next day and print a stop into tabs\n"
             "---> Agenda is verified every day and a reminder appear to show you" \
             " if an appointment is fixed for tomorrow\n\n"
 
@@ -2035,21 +2035,24 @@ class Application(Frame):
             "Use 'Entry' button to enter for first time new patient. Use 'Add " \
             "patient' once time all patients were enter \n"
             "(button to replace a patient who's left with delete button).\n"
-            "Once time, patient had added use 'allergy' button to enter an allergy " \
-            "if none, write and enter 'none'!\n"
+            "Once time, patient had added use 'Update' button to enter an allergy " \
+            "if none, write 'none' and press enter !\n"
             "You can also use 'Intolerance' in the Menu Bar to complete 'allergy'.\n"
             "After it, Care and Monitoring is available only if you have entered one " \
             "or more needs of patient.\n"
-            "1 ---> Enter data of patient\n"
-            "2 ---> Use Refresh (button)\n"
-            "3 ---> Intolerances\n"
-            "4 ---> 14 Needs\n"
-            "5 ---> Care and monitoring\n\n"
+            "1 ---> Press 'add patient' (button)\n"
+            "2 ---> Write data of patient and press 'enter'\n"
+            "3 ---> Use Refresh (button)\n"
+            "4 ---> Click on 'Intolerances' (in menubar) and press enter.\n"
+            "5 ---> Use 'Update' button to write intolerances into DB\n"
+            "6 ---> Click on 14 Needs ()\n"
+            "7 ---> Care and monitoring\n\n"
 
             "Care and monitoring retrieve all data from :\n"
             "----------------------------------------------------\n"
             "+ 14 Needs (V. Henderson)\n"
             "+ Labo (dosage of neuroleptic)\n"
+            "+ Stix (button into Labo)\n"
 
             "\nDevelopped on Linux Xubuntu (xfce4) Voyager 18.04 by ko@l@tr33\n",
             font=('Times', 13), fill='aquamarine')

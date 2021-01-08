@@ -6,7 +6,7 @@ from tkinter import *
 import os
 
 
-def doctorWind7(self):
+def doctorWind20(self):
     """
         Main function to define 
         design for contact interface.
@@ -19,11 +19,11 @@ def doctorWind7(self):
             First page
         """
         try:
-            if os.path.getsize('./contact/conpact7/contactdoc1.txt'):
+            if os.path.getsize('./contact/conpact20/contactdoc1.txt'):
                 print("+ Ok, contactdoc1.txt exist (t1)")
         except FileNotFoundError as errfnf:
             print("+ No file contactdoc1.txt exist (Error1)", errfnf)
-            with open('./contact/conpact7/contactdoc1.txt', 'w') as testf:
+            with open('./contact/conpact20/contactdoc1.txt', 'w') as testf:
                 print("+ File contactdoc1.txt created !", testf)
 
         self.x1, self.y1 = 900, 370
@@ -33,8 +33,8 @@ def doctorWind7(self):
         self.ftxtBox_window = self.can.create_window(self.x1, self.y1, window=self.txtBox)
 
         try:
-            if os.path.exists('./contact/conpact7/contactdoc1.txt'):
-                with open('./contact/conpact7/contactdoc1.txt', 'r') as policyfile:
+            if os.path.exists('./contact/conpact20/contactdoc1.txt'):
+                with open('./contact/conpact20/contactdoc1.txt', 'r') as policyfile:
                     line1 = policyfile.readline()
                     spec = policyfile.readline()
                     phone = policyfile.readline()
@@ -58,11 +58,11 @@ def doctorWind7(self):
             print("+ No file contactdoc1.txt exist (Error2)", err_r)
 
         try:
-            if os.path.getsize('./contact/conpact7/contactdoc2.txt'):
+            if os.path.getsize('./contact/conpact20/contactdoc2.txt'):
                 print("+ Ok, contactdoc2.txt exist (t2)")
         except FileNotFoundError as nfd2:
             print("+ No file contactdoc2.txt exist (Error3)", nfd2)
-            with open('./contact/conpact7/contactdoc2.txt', 'w') as testfd2:
+            with open('./contact/conpact20/contactdoc2.txt', 'w') as testfd2:
                 print("+ File contactdoc2.txt created !", testfd2)
 
         self.x2, self.y2 = 900, 890
@@ -72,8 +72,8 @@ def doctorWind7(self):
         self.ftxtBox2_window = self.can.create_window(self.x2, self.y2, window=self.txtBox2)
 
         try:
-            if os.path.exists('./contact/conpact7/contactdoc2.txt'):
-                with open('./contact/conpact7/contactdoc2.txt', 'r') as policydoc:
+            if os.path.exists('./contact/conpact20/contactdoc2.txt'):
+                with open('./contact/conpact20/contactdoc2.txt', 'r') as policydoc:
                     docline1 = policydoc.readline()
                     docspecia = policydoc.readline()
                     docphone = policydoc.readline()
@@ -97,11 +97,11 @@ def doctorWind7(self):
             print("+ No file contactdoc2.txt exist (Error4)", err_r3)
 
         try:
-            if os.path.getsize('./contact/conpact7/contactdoc3.txt'):
+            if os.path.getsize('./contact/conpact20/contactdoc3.txt'):
                 print("+ Ok, contactdoc3.txt exist (t3)")
         except FileNotFoundError as nfd3:
             print("+ No file contactdoc3.txt exist (Error5)", nfd3)
-            with open('./contact/conpact7/contactdoc3.txt', 'w') as testfd3:
+            with open('./contact/conpact20/contactdoc3.txt', 'w') as testfd3:
                 print("+ File contactdoc3.txt created !", testfd3)
 
         self.x3, self.y3 = 900, 1410
@@ -111,8 +111,8 @@ def doctorWind7(self):
         self.ftxtBox3_window = self.can.create_window(self.x3, self.y3, window=self.txtBox3)
 
         try:
-            if os.path.exists('./contact/conpact7/contactdoc3.txt'):
-                with open('./contact/conpact7/contactdoc3.txt', 'r') as policydoc3:
+            if os.path.exists('./contact/conpact20/contactdoc3.txt'):
+                with open('./contact/conpact20/contactdoc3.txt', 'r') as policydoc3:
                     doc3line1 = policydoc3.readline()
                     doc3special = policydoc3.readline()
                     doc3phone = policydoc3.readline()
@@ -142,15 +142,15 @@ def doctorWind7(self):
             Display origin
         """
         try:
-            if os.path.getsize('./contact/conpact7/contactdoc1.txt'):
+            if os.path.getsize('./contact/conpact20/contactdoc1.txt'):
                 print("+ Ok, contactdoc1.txt exist")
         except FileNotFoundError as errfnf:
             print("+ No file contactdoc1.txt exist (Error7)", errfnf)
-            with open('./contact/conpact7/contactdoc1.txt', 'w') as testf:
+            with open('./contact/conpact20/contactdoc1.txt', 'w') as testf:
                 print("+ File contactdoc1.txt created !")
 
         try:
-            with open('./contact/conpact7/contactdoc1.txt', 'w') as iofile:
+            with open('./contact/conpact20/contactdoc1.txt', 'w') as iofile:
                 iofile.write(namentry.get())
                 iofile.write("\n" + specentry1.get())
                 iofile.write("\n" + phonentry.get())
@@ -163,14 +163,14 @@ def doctorWind7(self):
             print("+ File not found !", fn)
 
         try:
-            if os.path.getsize('./contact/conpact7/finaldoc1.txt'):
-                os.remove('./contact/conpact7/finaldoc1.txt')
+            if os.path.getsize('./contact/conpact20/finaldoc1.txt'):
+                os.remove('./contact/conpact20/finaldoc1.txt')
         except FileNotFoundError as err_termin:
             print("+ finaldoc1 not found !(Error8)", err_termin)
-            with open('./contact/conpact7/finaldoc1.txt', 'a+'):
+            with open('./contact/conpact20/finaldoc1.txt', 'a+'):
                 print("+ finaldoc1.txt exist!")
         try:
-            with open('./contact/conpact7/finaldoc1.txt', 'w') as terminfile:
+            with open('./contact/conpact20/finaldoc1.txt', 'w') as terminfile:
                 terminfile.write("Doctor : " + namentry.get())
                 terminfile.write("\nSpecialization : " + specentry1.get())
                 terminfile.write("\nPhone : " + phonentry.get())
@@ -189,15 +189,15 @@ def doctorWind7(self):
         citytxt2, cityentry2, mailtxt2, entrymail2, faxtxt2, entryfax2):
 
         try:
-            if os.path.getsize('./contact/conpact7/contactdoc2.txt'):
+            if os.path.getsize('./contact/conpact20/contactdoc2.txt'):
                 print("+ Ok, contactdoc2.txt exist")
         except FileNotFoundError as errfnf2:
             print("+ No file contactdoc2.txt exist (Error10)", errfnf2)
-            with open('./contact/conpact7/contactdoc2.txt', 'w') as testf2:
+            with open('./contact/conpact20/contactdoc2.txt', 'w') as testf2:
                 print("+ File contactdoc2.txt created !", testf2)
 
         try:
-            with open('./contact/conpact7/contactdoc2.txt', 'w') as datadoc:
+            with open('./contact/conpact20/contactdoc2.txt', 'w') as datadoc:
                 datadoc.write(namentry2.get())
                 datadoc.write("\n" + specentry2.get())
                 datadoc.write("\n" + phonentry2.get())
@@ -210,14 +210,14 @@ def doctorWind7(self):
             print("+ File not found !", fn2)
 
         try:
-            if os.path.getsize('./contact/conpact7/finaldoc2.txt'):
-                os.remove('./contact/conpact7/finaldoc2.txt')
+            if os.path.getsize('./contact/conpact20/finaldoc2.txt'):
+                os.remove('./contact/conpact20/finaldoc2.txt')
         except FileNotFoundError as err_termin2:
             print("+ finaldoc2 not found !(Error11)", err_termin2)
-            with open('./contact/conpact7/finaldoc2.txt', 'a+'):
+            with open('./contact/conpact20/finaldoc2.txt', 'a+'):
                 print("+ finaldoc2.txt exist!")
         try:
-            with open('./contact/conpact7/finaldoc2.txt', 'w') as finalf:
+            with open('./contact/conpact20/finaldoc2.txt', 'w') as finalf:
                 finalf.write("Doctor : " + namentry2.get())
                 finalf.write("\nSpecialization : " + specentry2.get())
                 finalf.write("\nPhone : " + phonentry2.get())
@@ -236,15 +236,15 @@ def doctorWind7(self):
         citytxt3, cityentry3, mailtxt3, entrymail3, faxtxt3, entryfax3):
 
         try:
-            if os.path.getsize('./contact/conpact7/contactdoc3.txt'):
+            if os.path.getsize('./contact/conpact20/contactdoc3.txt'):
                 print("+ Ok, contactdoc3.txt exist")
         except FileNotFoundError as errfnf3:
             print("+ No file contactdoc3.txt exist (Error13)", errfnf3)
-            with open('./contact/conpact7/contactdoc3.txt', 'w') as testf3:
+            with open('./contact/conpact20/contactdoc3.txt', 'w') as testf3:
                 print("+ File contactdoc3.txt created !", testf3)
 
         try:
-            with open('./contact/conpact7/contactdoc3.txt', 'w') as datadoc3:
+            with open('./contact/conpact20/contactdoc3.txt', 'w') as datadoc3:
                 datadoc3.write(namentry3.get())
                 datadoc3.write("\n" + specentry3.get())
                 datadoc3.write("\n" + phonentry3.get())
@@ -257,14 +257,14 @@ def doctorWind7(self):
             print("+ File not found !", fn3)
 
         try:
-            if os.path.getsize('./contact/conpact7/finaldoc3.txt'):
-                os.remove('./contact/conpact7/finaldoc3.txt')
+            if os.path.getsize('./contact/conpact20/finaldoc3.txt'):
+                os.remove('./contact/conpact20/finaldoc3.txt')
         except FileNotFoundError as err_termin3:
             print("+ finaldoc3 not found !(Error14)", err_termin3)
-            with open('./contact/conpact7/finaldoc3.txt', 'a+'):
+            with open('./contact/conpact20/finaldoc3.txt', 'a+'):
                 print("+ finaldoc3.txt exist!")
         try:
-            with open('./contact/conpact7/finaldoc3.txt', 'w') as finalf3:
+            with open('./contact/conpact20/finaldoc3.txt', 'w') as finalf3:
                 finalf3.write("Doctor : " + namentry3.get())
                 finalf3.write("\nSpecialization : " + specentry3.get())
                 finalf3.write("\nPhone : " + phonentry3.get())
@@ -305,7 +305,7 @@ def doctorWind7(self):
         window = self.labelname)
 
     try:
-        with open('./contact/conpact7/contactdoc1.txt', 'r') as namefile:
+        with open('./contact/conpact20/contactdoc1.txt', 'r') as namefile:
             linex = namefile.readline()
             line2 = namefile.readline()
             line3 = namefile.readline()
@@ -469,7 +469,7 @@ def doctorWind7(self):
         window = self.lbldocname)
 
     try:
-        with open('./contact/conpact7/contactdoc2.txt', 'r') as docfile2:
+        with open('./contact/conpact20/contactdoc2.txt', 'r') as docfile2:
             docline1 = docfile2.readline()
             docline2 = docfile2.readline()
             docline3 = docfile2.readline()
@@ -634,7 +634,7 @@ def doctorWind7(self):
         window = self.lbldocname3)
 
     try:
-        with open('./contact/conpact7/contactdoc3.txt', 'r') as docfile3:
+        with open('./contact/conpact20/contactdoc3.txt', 'r') as docfile3:
             doc3line1 = docfile3.readline()
             doc3line2 = docfile3.readline()
             doc3line3 = docfile3.readline()

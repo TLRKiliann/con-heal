@@ -712,13 +712,13 @@ class MenuBar(Frame):
             command=boss.contact_num8)
         me8.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num8)
+            command=boss.contactfamily_8)
         me8.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num8)
+            command=boss.contactdoctor_8)
         me8.add_command(label='Home care system', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num8)
+            command=boss.contacthcsystem_8)
         contchck.add_cascade(label=new_text8, underline=0, font=('Times 12'),
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me8)
@@ -728,13 +728,13 @@ class MenuBar(Frame):
             command=boss.contact_num9)
         me9.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num9)
+            command=boss.contactfamily_9)
         me9.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num9)
+            command=boss.contactdoctor_9)
         me9.add_command(label='Home care system', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num9)
+            command=boss.contacthcsystem_9)
         contchck.add_cascade(label=new_text9, underline=0, font=('Times 12'),
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me9)
@@ -744,13 +744,13 @@ class MenuBar(Frame):
             command=boss.contact_num10)
         me10.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num10)
+            command=boss.contactfamily_10)
         me10.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num10)
+            command=boss.contactdoctor_10)
         me10.add_command(label='Home care system', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num10)
+            command=boss.contacthcsystem_10)
         contchck.add_cascade(label=new_text10, underline=0, font=('Times 12'),
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me10)
@@ -760,13 +760,13 @@ class MenuBar(Frame):
             command=boss.contact_num11)
         me11.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num11)
+            command=boss.contactfamily_11)
         me11.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num11)
+            command=boss.contactdoctor_11)
         me11.add_command(label='Home care system', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num11)
+            command=boss.contacthcsystem_11)
         contchck.add_cascade(label=new_text11, underline=0, font=('Times 12'),
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me11)
@@ -776,13 +776,13 @@ class MenuBar(Frame):
             command=boss.contact_num12)
         me12.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num12)
+            command=boss.contactfamily_12)
         me12.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num12)
+            command=boss.contactdoctor_12)
         me12.add_command(label='Home care system', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num12)
+            command=boss.contacthcsystem_12)
         contchck.add_cascade(label=new_text12, underline=0, font=('Times 12'),
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me12)
@@ -792,13 +792,13 @@ class MenuBar(Frame):
             command=boss.contact_num13)
         me13.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num13)
+            command=boss.contactfamily_13)
         me13.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num13)
+            command=boss.contactdoctor_13)
         me13.add_command(label='Home care system', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num13)
+            command=boss.contacthcsystem_13)
         contchck.add_cascade(label=new_text13, underline=0, font=('Times 12'),
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me13)
@@ -808,13 +808,13 @@ class MenuBar(Frame):
             command=boss.contact_num14)
         me14.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num14)
+            command=boss.contactfamily_14)
         me14.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num14)
+            command=boss.contactdoctor_14)
         me14.add_command(label='Home care system', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num14)
+            command=boss.contacthcsystem_14)
         contchck.add_cascade(label=new_text14, underline=0, font=('Times 12'),
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me14)
@@ -824,13 +824,13 @@ class MenuBar(Frame):
             command=boss.contact_num15)
         me15.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num15)
+            command=boss.contactfamily_15)
         me15.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num15)
+            command=boss.contactdoctor_15)
         me15.add_command(label='Home care system', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num15)
+            command=boss.contacthcsystem_15)
         contchck.add_cascade(label=new_text15, underline=0, font=('Times 12'),
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me15)
@@ -840,13 +840,13 @@ class MenuBar(Frame):
             command=boss.contact_num16)
         me16.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num16)
+            command=boss.contactfamily_16)
         me16.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num16)
+            command=boss.contactdoctor_16)
         me16.add_command(label='Home care system', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num16)
+            command=boss.contacthcsystem_16)
         contchck.add_cascade(label=new_text16, underline=0, font=('Times 12'),
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me16)
@@ -856,13 +856,13 @@ class MenuBar(Frame):
             command=boss.contact_num17)
         me17.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num17)
+            command=boss.contactfamily_17)
         me17.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num17)
+            command=boss.contactdoctor_17)
         me17.add_command(label='Home care system', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num17)
+            command=boss.contacthcsystem_17)
         contchck.add_cascade(label=new_text17, underline=0, font=('Times 12'),
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me17)
@@ -872,13 +872,13 @@ class MenuBar(Frame):
             command=boss.contact_num18)
         me18.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num18)
+            command=boss.contactfamily_18)
         me18.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num18)
+            command=boss.contactdoctor_18)
         me18.add_command(label='Home care system', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num18)
+            command=boss.contacthcsystem_18)
         contchck.add_cascade(label=new_text18, underline=0, font=('Times 12'),
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me18)
@@ -888,13 +888,13 @@ class MenuBar(Frame):
             command=boss.contact_num19)
         me19.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num19)
+            command=boss.contactfamily_19)
         me19.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num19)
+            command=boss.contactdoctor_19)
         me19.add_command(label='Home care system', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num19)
+            command=boss.contacthcsystem_19)
         contchck.add_cascade(label=new_text19, underline=0, font=('Times 12'),
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me19)
@@ -904,13 +904,13 @@ class MenuBar(Frame):
             command=boss.contact_num20)
         me20.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num20)
+            command=boss.contactfamily_20)
         me20.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num20)
+            command=boss.contactdoctor_20)
         me20.add_command(label='Home care system', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num20)
+            command=boss.contacthcsystem_20)
         contchck.add_cascade(label=new_text20, underline=0, font=('Times 12'),
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me20)
@@ -920,13 +920,13 @@ class MenuBar(Frame):
             command=boss.contact_num21)
         me21.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num21)
+            command=boss.contactfamily_21)
         me21.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num21)
+            command=boss.contactdoctor_21)
         me21.add_command(label='Home care system', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num21)
+            command=boss.contacthcsystem_21)
         contchck.add_cascade(label=new_text21, underline=0, font=('Times 12'),
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me21)
@@ -936,13 +936,13 @@ class MenuBar(Frame):
             command=boss.contact_num22)
         me22.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num22)
+            command=boss.contactfamily_22)
         me22.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num22)
+            command=boss.contactdoctor_22)
         me22.add_command(label='Home care system', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num22)
+            command=boss.contacthcsystem_22)
         contchck.add_cascade(label=new_text22, underline=0, font=('Times 12'),
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me22)
@@ -952,13 +952,13 @@ class MenuBar(Frame):
             command=boss.contact_num23)
         me23.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num23)
+            command=boss.contactfamily_23)
         me23.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num23)
+            command=boss.contactdoctor_23)
         me23.add_command(label='Home care system', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num23)
+            command=boss.contacthcsystem_23)
         contchck.add_cascade(label=new_text23, underline=0, font=('Times 12'),
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me23)
@@ -968,13 +968,13 @@ class MenuBar(Frame):
             command=boss.contact_num24)
         me24.add_command(label='Relation - Family', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num24)
+            command=boss.contactfamily_24)
         me24.add_command(label="Doctors' Data", font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num24)
+            command=boss.contactdoctor_24)
         me24.add_command(label='Home care system', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
-            command=boss.contact_num24)
+            command=boss.contacthcsystem_24)
         contchck.add_cascade(label=new_text24, underline=0, font=('Times 12'),
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me24)

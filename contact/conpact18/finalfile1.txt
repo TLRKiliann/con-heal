@@ -1,6 +1,6 @@
-Patient name : Julia Roberts
-Birthdate : 09/03/1962
-Native : Berlin
+Patient name : Tim Berners Lee
+Birthdate : 02/03/1963
+Native : Switzerland
 Phone : 077 339 65 45
 Street : Blvd Sun-Street 68
 City : Kansastate

@@ -1,6 +1,6 @@
-Patient name : Julia Roberts
-Birthdate : 09/03/1962
-Native : Berlin
+Patient name : Clint Eastwood
+Birthdate : 05/07/1943
+Native : Texas
 Phone : 077 339 65 45
 Street : Blvd Sun-Street 68
 City : Kansastate

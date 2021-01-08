@@ -1,11 +1,11 @@
 Patient name : test totest
 Birthdate : 09/07/2001
-Native : Berlin
+Native : Ontario
 Phone : 077 339 65 45
 Street : Blvd Sun-Street 68
 City : Kansastate
 e-mail : zut@gmail.com
-Insurance : Helsan
+Insurance : HealthCare
 Policy : 9767897583
 Civil status : Maried
 Confession : Christ

@@ -41,7 +41,6 @@ from contact.conpact7.pat_contact7 import Window7
 from contact.conpact7.doc_contact7 import doctorWind7
 from contact.conpact7.family_contact7 import famWind7
 from contact.conpact7.hcs_contact7 import homecsWind7
-"""
 from contact.conpact8.pat_contact8 import Window8
 from contact.conpact8.doc_contact8 import doctorWind8
 from contact.conpact8.family_contact8 import famWind8
@@ -110,7 +109,6 @@ from contact.conpact24.pat_contact24 import Window24
 from contact.conpact24.doc_contact24 import doctorWind24
 from contact.conpact24.family_contact24 import famWind24
 from contact.conpact24.hcs_contact24 import homecsWind24
-"""
 from labo.resultlabo1 import callLabo1
 from labo.resultlabo2 import callLabo2
 from labo.resultlabo3 import callLabo3
@@ -2314,60 +2312,228 @@ class Application(Frame):
     def contacthcsystem_7(self):
         homecsWind7(self)
 
-
+    # Contact patient 8
     def contact_num8(self):
-        subprocess.run('./contact/pat_contact8.py', check=True)
+        Window8(self)
 
+    def contactfamily_8(self):
+        famWind8(self)
+
+    def contactdoctor_8(self):
+        doctorWind8(self)
+
+    def contacthcsystem_8(self):
+        homecsWind8(self)
+
+    # Contact patient 9
     def contact_num9(self):
-        subprocess.run('./contact/pat_contact9.py', check=True)
+        Window9(self)
 
+    def contactfamily_9(self):
+        famWind9(self)
+
+    def contactdoctor_9(self):
+        doctorWind9(self)
+
+    def contacthcsystem_9(self):
+        homecsWind9(self)
+
+    # Contact patient 10
     def contact_num10(self):
-        subprocess.run('./contact/pat_contact10.py', check=True)
+        Window10(self)
 
+    def contactfamily_10(self):
+        famWind10(self)
+
+    def contactdoctor_10(self):
+        doctorWind10(self)
+
+    def contacthcsystem_10(self):
+        homecsWind10(self)
+
+    # Contact patient 11
     def contact_num11(self):
-        subprocess.run('./contact/pat_contact11.py', check=True)
+        Window11(self)
 
+    def contactfamily_11(self):
+        famWind11(self)
+
+    def contactdoctor_11(self):
+        doctorWind11(self)
+
+    def contacthcsystem_11(self):
+        homecsWind11(self)
+
+    # Contact patient 12
     def contact_num12(self):
-        subprocess.run('./contact/pat_contact12.py', check=True)
+        Window12(self)
 
+    def contactfamily_12(self):
+        famWind12(self)
+
+    def contactdoctor_12(self):
+        doctorWind12(self)
+
+    def contacthcsystem_12(self):
+        homecsWind12(self)
+
+    # Contact patient 13
     def contact_num13(self):
-        subprocess.run('./contact/pat_contact13.py', check=True)
+        Window13(self)
 
+    def contactfamily_13(self):
+        famWind13(self)
+
+    def contactdoctor_13(self):
+        doctorWind13(self)
+
+    def contacthcsystem_13(self):
+        homecsWind13(self)
+
+    # Contact patient 14
     def contact_num14(self):
-        subprocess.run('./contact/pat_contact14.py', check=True)
+        Window14(self)
 
+    def contactfamily_14(self):
+        famWind14(self)
+
+    def contactdoctor_14(self):
+        doctorWind14(self)
+
+    def contacthcsystem_14(self):
+        homecsWind14(self)
+
+    # Contact patient 15
     def contact_num15(self):
-        subprocess.run('./contact/pat_contact15.py', check=True)
+        Window15(self)
 
+    def contactfamily_15(self):
+        famWind15(self)
+
+    def contactdoctor_15(self):
+        doctorWind15(self)
+
+    def contacthcsystem_15(self):
+        homecsWind15(self)
+
+    # Contact patient 16
     def contact_num16(self):
-        subprocess.run('./contact/pat_contact16.py', check=True)
+        Window16(self)
 
+    def contactfamily_16(self):
+        famWind16(self)
+
+    def contactdoctor_16(self):
+        doctorWind16(self)
+
+    def contacthcsystem_16(self):
+        homecsWind16(self)
+
+    # Contact patient 17
     def contact_num17(self):
-        subprocess.run('./contact/pat_contact17.py', check=True)
+        Window17(self)
 
+    def contactfamily_17(self):
+        famWind17(self)
+
+    def contactdoctor_17(self):
+        doctorWind17(self)
+
+    def contacthcsystem_17(self):
+        homecsWind17(self)
+
+    # Contact patient 18
     def contact_num18(self):
-        subprocess.run('./contact/pat_contact18.py', check=True)
+        Window18(self)
 
+    def contactfamily_18(self):
+        famWind18(self)
+
+    def contactdoctor_18(self):
+        doctorWind18(self)
+
+    def contacthcsystem_18(self):
+        homecsWind18(self)
+
+    # Contact patient 19
     def contact_num19(self):
-        subprocess.run('./contact/pat_contact19.py', check=True)
+        Window19(self)
 
+    def contactfamily_19(self):
+        famWind19(self)
+
+    def contactdoctor_19(self):
+        doctorWind19(self)
+
+    def contacthcsystem_19(self):
+        homecsWind19(self)
+
+    # Contact patient 20
     def contact_num20(self):
-        subprocess.run('./contact/pat_contact20.py', check=True)
+        Window20(self)
 
+    def contactfamily_20(self):
+        famWind20(self)
+
+    def contactdoctor_20(self):
+        doctorWind20(self)
+
+    def contacthcsystem_20(self):
+        homecsWind20(self)
+
+    # Contact patient 21
     def contact_num21(self):
-        subprocess.run('./contact/pat_contact21.py', check=True)
+        Window21(self)
 
+    def contactfamily_21(self):
+        famWind21(self)
+
+    def contactdoctor_21(self):
+        doctorWind21(self)
+
+    def contacthcsystem_21(self):
+        homecsWind21(self)
+
+    # Contact patient 22
     def contact_num22(self):
-        subprocess.run('./contact/pat_contact22.py', check=True)
+        Window22(self)
 
+    def contactfamily_22(self):
+        famWind22(self)
+
+    def contactdoctor_22(self):
+        doctorWind22(self)
+
+    def contacthcsystem_22(self):
+        homecsWind22(self)
+
+    # Contact patient 23
     def contact_num23(self):
-        subprocess.run('./contact/pat_contact23.py', check=True)
+        Window23(self)
 
+    def contactfamily_23(self):
+        famWind23(self)
+
+    def contactdoctor_23(self):
+        doctorWind23(self)
+
+    def contacthcsystem_23(self):
+        homecsWind23(self)
+
+    # Contact patient 24
     def contact_num24(self):
-        subprocess.run('./contact/pat_contact24.py', check=True)
+        Window24(self)
+
+    def contactfamily_24(self):
+        famWind24(self)
+
+    def contactdoctor_24(self):
+        doctorWind24(self)
+
+    def contacthcsystem_24(self):
+        homecsWind24(self)
 
     # CheckBox 14 needs OK
-    # ON WORK !!!
     def besoinsCoche(self):
         subprocess.Popen('./14besoins/checkb.py', shell=True)
 

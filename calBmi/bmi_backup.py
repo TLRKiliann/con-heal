@@ -18,7 +18,7 @@ import time
 import shutil
 
 
-def paramBackToSave(self):
+def bmiBackToSave(self):
     """
         Backup for bmi7.txt/month
         Think to change date (4 update)!

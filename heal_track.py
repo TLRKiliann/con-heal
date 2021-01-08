@@ -13,6 +13,7 @@ from patcaps import callResident
 from backapp import *
 from Backup.backupfile import dataBackToSave
 from param.backup_month import paramBackToSave
+from calBmi.bmi_backup import bmiBackToSave
 from contact.conpact.pat_contact1 import Window
 from contact.conpact.doc_contact1 import doctorWind
 from contact.conpact.family_contact1 import famWind
@@ -3828,6 +3829,7 @@ class Application(Frame):
         """
         dataBackToSave(self)
         paramBackToSave(self)
+        bmiBackToSave(self)
 
     def upDateAll(self):
         """

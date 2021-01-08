@@ -1,16 +1,24 @@
----####-|--- Affichage des besoins du patient à surveiller ---|-####---
 
-En date du : 06/11/2020 à 21:27:14 :
-Patient name : Bruce Willis
-+ Surveillance urinaire et/ou fécale requise requise
-2x/j surveiller et accompagner aux WC.
----
+----------------------------------------------------------
+Date : 08/01/2021
+Patient name : 3x3c t3ch
+# Keppra : 08/01/2021 checked
+# Lyrica : 08/01/2021 checked
+for 15/01/2021 at 08h00 !!!
+---------------------------------------------------------
 
 
 
-En date du : 06/11/2020 à 21:27:53 :
-Monsieur a pris la tête à tout le monde aujourd'hui.
-Il est ensuite sorti en faisant des doigts d'honneur à tlm.
-La police l'a arrêté.
-Et nous l'a ramené.
+En date du : 08/01/2021 à 16:45:07 :
+
+
+***************************************************************************
+Date : 08/01/2021
+Patient name : 3x3c t3chpH : 6 Leuco : +3 Nit : + Pro : +1 Glu : +2 Ket : neg Ery : +2 Hb : +3
+***************************************************************************
+
+
+En date du : 08/01/2021 à 16:46:23 :
+Appelé le Dr Truc pour indication d'infection urinaire. Il m'a donné pour 
+consigne de donner 2x/j ciproxine 500 mg pdt 7 j.
 

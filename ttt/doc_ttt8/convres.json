@@ -1,0 +1,15 @@
+{
+    "data": [
+        {
+            "Date": "08/01/2021",
+            "Date of introduction": "02 June 2001",
+            "Date of end": "22/11/2021",
+            "Treatment": "Enthumine",
+            "Dosage": "25 mg",
+            "Reserve": 1,
+            "First-line": 0,
+            "Second-line": 0,
+            "Number/24h": "1"
+        }
+    ]
+}

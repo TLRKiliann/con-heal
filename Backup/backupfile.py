@@ -277,140 +277,332 @@ def dataBackToSave(self):
                         print("Not found", nf_ttt7)
 
                     try:
+                        if os.path.exists('./ttt/doc_ttt8/intro_ttt.txt'):
+                            print("+ ttt 8 copied")
+                            shutil.copy('./ttt/doc_ttt8/intro_ttt.txt',
+                                './Backup/Files8/Backup_res8.txt')
+                    except FileNotFoundError as nf_ttt8:
+                        print("Not found", nf_ttt8)
+
+                    try:
+                        if os.path.exists('./ttt/doc_ttt9/intro_ttt.txt'):
+                            print("+ ttt 9 copied")
+                            shutil.copy('./ttt/doc_ttt9/intro_ttt.txt',
+                                './Backup/Files9/Backup_res9.txt')
+                    except FileNotFoundError as nf_ttt9:
+                        print("Not found", nf_ttt9)
+
+                    try:
+                        if os.path.exists('./ttt/doc_ttt10/intro_ttt.txt'):
+                            print("+ ttt 10 copied")
+                            shutil.copy('./ttt/doc_ttt10/intro_ttt.txt',
+                                './Backup/Files10/Backup_res10.txt')
+                    except FileNotFoundError as nf_ttt10:
+                        print("Not found", nf_ttt10)
+
+                    try:
+                        if os.path.exists('./ttt/doc_ttt11/intro_ttt.txt'):
+                            print("+ ttt 11 copied")
+                            shutil.copy('./ttt/doc_ttt11/intro_ttt.txt',
+                                './Backup/Files11/Backup_res11.txt')
+                    except FileNotFoundError as nf_ttt11:
+                        print("Not found", nf_ttt11)
+
+                    try:
+                        if os.path.exists('./ttt/doc_ttt12/intro_ttt.txt'):
+                            print("+ ttt 12 copied")
+                            shutil.copy('./ttt/doc_ttt12/intro_ttt.txt',
+                                './Backup/Files12/Backup_res12.txt')
+                    except FileNotFoundError as nf_ttt12:
+                        print("Not found", nf_ttt12)
+
+                    try:
+                        if os.path.exists('./ttt/doc_ttt13/intro_ttt.txt'):
+                            print("+ ttt 13 copied")
+                            shutil.copy('./ttt/doc_ttt13/intro_ttt.txt',
+                                './Backup/Files13/Backup_res13.txt')
+                    except FileNotFoundError as nf_ttt13:
+                        print("Not found", nf_ttt13)
+
+                    try:
+                        if os.path.exists('./ttt/doc_ttt14/intro_ttt.txt'):
+                            print("+ ttt 14 copied")
+                            shutil.copy('./ttt/doc_ttt14/intro_ttt.txt',
+                                './Backup/Files14/Backup_res14.txt')
+                    except FileNotFoundError as nf_ttt14:
+                        print("Not found", nf_ttt14)
+
+                    try:
+                        if os.path.exists('./ttt/doc_ttt15/intro_ttt.txt'):
+                            print("+ ttt 15 copied")
+                            shutil.copy('./ttt/doc_ttt15/intro_ttt.txt',
+                                './Backup/Files15/Backup_res15.txt')
+                    except FileNotFoundError as nf_ttt15:
+                        print("Not found", nf_ttt15)
+
+                    try:
+                        if os.path.exists('./ttt/doc_ttt16/intro_ttt.txt'):
+                            print("+ ttt 16 copied")
+                            shutil.copy('./ttt/doc_ttt16/intro_ttt.txt',
+                                './Backup/Files16/Backup_res16.txt')
+                    except FileNotFoundError as nf_ttt16:
+                        print("Not found", nf_ttt16)
+
+                    try:
+                        if os.path.exists('./ttt/doc_ttt17/intro_ttt.txt'):
+                            print("+ ttt 17 copied")
+                            shutil.copy('./ttt/doc_ttt17/intro_ttt.txt',
+                                './Backup/Files17/Backup_res17.txt')
+                    except FileNotFoundError as nf_ttt17:
+                        print("Not found", nf_ttt17)
+
+                    try:
+                        if os.path.exists('./ttt/doc_ttt18/intro_ttt.txt'):
+                            print("+ ttt 18 copied")
+                            shutil.copy('./ttt/doc_ttt18/intro_ttt.txt',
+                                './Backup/Files18/Backup_res18.txt')
+                    except FileNotFoundError as nf_ttt18:
+                        print("Not found", nf_ttt18)
+
+                    try:
+                        if os.path.exists('./ttt/doc_ttt19/intro_ttt.txt'):
+                            print("+ ttt 19 copied")
+                            shutil.copy('./ttt/doc_ttt19/intro_ttt.txt',
+                                './Backup/Files19/Backup_res19.txt')
+                    except FileNotFoundError as nf_ttt19:
+                        print("Not found", nf_ttt19)
+
+                    try:
+                        if os.path.exists('./ttt/doc_ttt20/intro_ttt.txt'):
+                            print("+ ttt 20 copied")
+                            shutil.copy('./ttt/doc_ttt20/intro_ttt.txt',
+                                './Backup/Files20/Backup_res20.txt')
+                    except FileNotFoundError as nf_ttt20:
+                        print("Not found", nf_ttt20)
+
+                    try:
+                        if os.path.exists('./ttt/doc_ttt21/intro_ttt.txt'):
+                            print("+ ttt 21 copied")
+                            shutil.copy('./ttt/doc_ttt21/intro_ttt.txt',
+                                './Backup/Files21/Backup_res21.txt')
+                    except FileNotFoundError as nf_ttt21:
+                        print("Not found", nf_ttt21)
+
+                    try:
+                        if os.path.exists('./ttt/doc_ttt22/intro_ttt.txt'):
+                            print("+ ttt 22 copied")
+                            shutil.copy('./ttt/doc_ttt22/intro_ttt.txt',
+                                './Backup/Files22/Backup_res22.txt')
+                    except FileNotFoundError as nf_ttt22:
+                        print("Not found", nf_ttt22)
+
+                    try:
+                        if os.path.exists('./ttt/doc_ttt23/intro_ttt.txt'):
+                            print("+ ttt 23 copied")
+                            shutil.copy('./ttt/doc_ttt23/intro_ttt.txt',
+                                './Backup/Files23/Backup_res23.txt')
+                    except FileNotFoundError as nf_ttt23:
+                        print("Not found", nf_ttt23)
+
+                    try:
+                        if os.path.exists('./ttt/doc_ttt24/intro_ttt.txt'):
+                            print("+ ttt 24 copied")
+                            shutil.copy('./ttt/doc_ttt24/intro_ttt.txt',
+                                './Backup/Files24/Backup_res24.txt')
+                    except FileNotFoundError as nf_ttt24:
+                        print("Not found", nf_ttt24)
+
+                    try:
+                        if os.path.exists('./ttt/doc_ttt/intro_res.txt'):
+                            print("+ ttt 1 copied")
+                            shutil.copy('./ttt/doc_ttt/intro_res.txt',
+                                './Backup/Files1/Backup_ttt.txt')
+                    except FileNotFoundError as nf_res:
+                        print("Not found", nf_res)
+
+                    try:
+                        if os.path.exists('./ttt/doc_ttt2/intro_res.txt'):
+                            print("+ ttt 2 copied")
+                            shutil.copy('./ttt/doc_ttt2/intro_res.txt',
+                                './Backup/Files2/Backup_ttt2.txt')
+                    except FileNotFoundError as nf_res2:
+                        print("Not found", nf_res2)
+
+                    try:
+                        if os.path.exists('./ttt/doc_ttt3/intro_res.txt'):
+                            print("+ ttt 3 copied")
+                            shutil.copy('./ttt/doc_ttt3/intro_res.txt',
+                                './Backup/Files3/Backup_ttt3.txt')
+                    except FileNotFoundError as nf_res3:
+                        print("Not found", nf_res3)
+
+                    try:
+                        if os.path.exists('./ttt/doc_ttt4/intro_res.txt'):
+                            print("+ ttt 4 copied")
+                            shutil.copy('./ttt/doc_ttt4/intro_res.txt',
+                                './Backup/Files4/Backup_ttt4.txt')
+                    except FileNotFoundError as nf_res4:
+                        print("Not found", nf_res4)
+
+                    try:
+                        if os.path.exists('./ttt/doc_ttt5/intro_res.txt'):
+                            print("+ ttt 5 copied")
+                            shutil.copy('./ttt/doc_ttt5/intro_res.txt',
+                                './Backup/Files5/Backup_ttt5.txt')
+                    except FileNotFoundError as nf_res5:
+                        print("Not found", nf_res5)
+
+                    try:
+                        if os.path.exists('./ttt/doc_ttt6/intro_res.txt'):
+                            print("+ ttt 6 copied")
+                            shutil.copy('./ttt/doc_ttt6/intro_res.txt',
+                                './Backup/Files6/Backup_ttt6.txt')
+                    except FileNotFoundError as nf_res6:
+                        print("Not found", nf_res6)
+
+                    try:
+                        if os.path.exists('./ttt/doc_ttt7/intro_res.txt'):
+                            print("+ ttt 7 copied")
+                            shutil.copy('./ttt/doc_ttt7/intro_res.txt',
+                                './Backup/Files7/Backup_ttt7.txt')
+                    except FileNotFoundError as nf_res7:
+                        print("Not found", nf_res7)
+
+                    try:
                         if os.path.exists('./ttt/doc_ttt8/intro_res.txt'):
                             print("+ ttt 8 copied")
                             shutil.copy('./ttt/doc_ttt8/intro_res.txt',
                                 './Backup/Files8/Backup_res8.txt')
-                    except FileNotFoundError as nf_ttt8:
-                        print("Not found", nf_ttt8)
+                    except FileNotFoundError as nf_res8:
+                        print("Not found", nf_res8)
 
                     try:
                         if os.path.exists('./ttt/doc_ttt9/intro_res.txt'):
                             print("+ ttt 9 copied")
                             shutil.copy('./ttt/doc_ttt9/intro_res.txt',
                                 './Backup/Files9/Backup_res9.txt')
-                    except FileNotFoundError as nf_ttt9:
-                        print("Not found", nf_ttt9)
+                    except FileNotFoundError as nf_res9:
+                        print("Not found", nf_res9)
 
                     try:
                         if os.path.exists('./ttt/doc_ttt10/intro_res.txt'):
                             print("+ ttt 10 copied")
                             shutil.copy('./ttt/doc_ttt10/intro_res.txt',
                                 './Backup/Files10/Backup_res10.txt')
-                    except FileNotFoundError as nf_ttt10:
-                        print("Not found", nf_ttt10)
+                    except FileNotFoundError as nf_res10:
+                        print("Not found", nf_res10)
 
                     try:
                         if os.path.exists('./ttt/doc_ttt11/intro_res.txt'):
                             print("+ ttt 11 copied")
                             shutil.copy('./ttt/doc_ttt11/intro_res.txt',
                                 './Backup/Files11/Backup_res11.txt')
-                    except FileNotFoundError as nf_ttt11:
-                        print("Not found", nf_ttt11)
+                    except FileNotFoundError as nf_res11:
+                        print("Not found", nf_res11)
 
                     try:
                         if os.path.exists('./ttt/doc_ttt12/intro_res.txt'):
                             print("+ ttt 12 copied")
                             shutil.copy('./ttt/doc_ttt12/intro_res.txt',
                                 './Backup/Files12/Backup_res12.txt')
-                    except FileNotFoundError as nf_ttt12:
-                        print("Not found", nf_ttt12)
+                    except FileNotFoundError as nf_res12:
+                        print("Not found", nf_res12)
 
                     try:
                         if os.path.exists('./ttt/doc_ttt13/intro_res.txt'):
                             print("+ ttt 13 copied")
                             shutil.copy('./ttt/doc_ttt13/intro_res.txt',
                                 './Backup/Files13/Backup_res13.txt')
-                    except FileNotFoundError as nf_ttt13:
-                        print("Not found", nf_ttt13)
+                    except FileNotFoundError as nf_res13:
+                        print("Not found", nf_res13)
 
                     try:
                         if os.path.exists('./ttt/doc_ttt14/intro_res.txt'):
                             print("+ ttt 14 copied")
                             shutil.copy('./ttt/doc_ttt14/intro_res.txt',
                                 './Backup/Files14/Backup_res14.txt')
-                    except FileNotFoundError as nf_ttt14:
-                        print("Not found", nf_ttt14)
+                    except FileNotFoundError as nf_res14:
+                        print("Not found", nf_res14)
 
                     try:
                         if os.path.exists('./ttt/doc_ttt15/intro_res.txt'):
                             print("+ ttt 15 copied")
                             shutil.copy('./ttt/doc_ttt15/intro_res.txt',
                                 './Backup/Files15/Backup_res15.txt')
-                    except FileNotFoundError as nf_ttt15:
-                        print("Not found", nf_ttt15)
+                    except FileNotFoundError as nf_res15:
+                        print("Not found", nf_res15)
 
                     try:
                         if os.path.exists('./ttt/doc_ttt16/intro_res.txt'):
                             print("+ ttt 16 copied")
                             shutil.copy('./ttt/doc_ttt16/intro_res.txt',
                                 './Backup/Files16/Backup_res16.txt')
-                    except FileNotFoundError as nf_ttt16:
-                        print("Not found", nf_ttt16)
+                    except FileNotFoundError as nf_res16:
+                        print("Not found", nf_res16)
 
                     try:
                         if os.path.exists('./ttt/doc_ttt17/intro_res.txt'):
                             print("+ ttt 17 copied")
                             shutil.copy('./ttt/doc_ttt17/intro_res.txt',
                                 './Backup/Files17/Backup_res17.txt')
-                    except FileNotFoundError as nf_ttt17:
-                        print("Not found", nf_ttt17)
+                    except FileNotFoundError as nf_res17:
+                        print("Not found", nf_res17)
 
                     try:
                         if os.path.exists('./ttt/doc_ttt18/intro_res.txt'):
                             print("+ ttt 18 copied")
                             shutil.copy('./ttt/doc_ttt18/intro_res.txt',
                                 './Backup/Files18/Backup_res18.txt')
-                    except FileNotFoundError as nf_ttt18:
-                        print("Not found", nf_ttt18)
+                    except FileNotFoundError as nf_res18:
+                        print("Not found", nf_res18)
 
                     try:
                         if os.path.exists('./ttt/doc_ttt19/intro_res.txt'):
                             print("+ ttt 19 copied")
                             shutil.copy('./ttt/doc_ttt19/intro_res.txt',
                                 './Backup/Files19/Backup_res19.txt')
-                    except FileNotFoundError as nf_ttt19:
-                        print("Not found", nf_ttt19)
+                    except FileNotFoundError as nf_res19:
+                        print("Not found", nf_res19)
 
                     try:
                         if os.path.exists('./ttt/doc_ttt20/intro_res.txt'):
                             print("+ ttt 20 copied")
                             shutil.copy('./ttt/doc_ttt20/intro_res.txt',
                                 './Backup/Files20/Backup_res20.txt')
-                    except FileNotFoundError as nf_ttt20:
-                        print("Not found", nf_ttt20)
+                    except FileNotFoundError as nf_res20:
+                        print("Not found", nf_res20)
 
                     try:
                         if os.path.exists('./ttt/doc_ttt21/intro_res.txt'):
                             print("+ ttt 21 copied")
                             shutil.copy('./ttt/doc_ttt21/intro_res.txt',
                                 './Backup/Files21/Backup_res21.txt')
-                    except FileNotFoundError as nf_ttt21:
-                        print("Not found", nf_ttt21)
+                    except FileNotFoundError as nf_res21:
+                        print("Not found", nf_res21)
 
                     try:
                         if os.path.exists('./ttt/doc_ttt22/intro_res.txt'):
                             print("+ ttt 22 copied")
                             shutil.copy('./ttt/doc_ttt22/intro_res.txt',
                                 './Backup/Files22/Backup_res22.txt')
-                    except FileNotFoundError as nf_ttt22:
-                        print("Not found", nf_ttt22)
+                    except FileNotFoundError as nf_res22:
+                        print("Not found", nf_res22)
 
                     try:
                         if os.path.exists('./ttt/doc_ttt23/intro_res.txt'):
                             print("+ ttt 23 copied")
                             shutil.copy('./ttt/doc_ttt23/intro_res.txt',
                                 './Backup/Files23/Backup_res23.txt')
-                    except FileNotFoundError as nf_ttt23:
-                        print("Not found", nf_ttt23)
+                    except FileNotFoundError as nf_res23:
+                        print("Not found", nf_res23)
 
                     try:
                         if os.path.exists('./ttt/doc_ttt24/intro_res.txt'):
                             print("+ ttt 24 copied")
                             shutil.copy('./ttt/doc_ttt24/intro_res.txt',
                                 './Backup/Files24/Backup_res24.txt')
-                    except FileNotFoundError as nf_ttt24:
-                        print("Not found", nf_ttt24)
+                    except FileNotFoundError as nf_res24:
+                        print("Not found", nf_res24)
 
                     try:
                         if os.path.exists('./diag/doc_diag/diagrecap1.txt'):

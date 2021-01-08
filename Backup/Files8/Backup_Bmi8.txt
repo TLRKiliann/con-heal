@@ -229,3 +229,10 @@ Poids : 75
 Taille : 1.86
 BMI : 21.679
 
+Date : 08-01-2021
+Heure : 18:27:32
+Prenom et Nom : David Copperfield
+Poids : 75
+Taille : 1.86
+BMI : 21.679
+

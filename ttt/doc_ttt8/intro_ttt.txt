@@ -4,8 +4,10 @@ Name : David Copperfield
 Date of introduction : 02 June 2001
 Nom du ttt : Clopixol
 Dosage du ttt : 10 mg
-Réserve : Oui
-1ère intention : Oui
+Matin : 1
+Midi : 2
+Soir : 1
+Nuit : 2
 Date of end : 09/01/2021
 Signature : etc
 
@@ -15,7 +17,10 @@ Name : David Copperfield
 Date of introduction : 02 June 2001
 Nom du ttt : Enthumine
 Dosage du ttt : 25 mg
-Réserve : Oui
+Matin : 1
+
+Soir : 1
+
 Date of end : 22/11/2021
 Signature : etc
 

@@ -438,3 +438,25 @@ Temperature : 36.5°C
 Glycemie : 6.8 mmol/l
 Douleurs (Pain) : 1/10
 
+Date : 07/01/2021
+Hour : 18:25:24
+Name and Surname : David Copperfield
+TA : 120/80mmHg
+Puls : 88/min
+SaO2 : 99%
+FR : 16/min
+Temperature : 36.6°C
+Glycemie : 6.7 mmol/l
+Douleurs (Pain) : 8/10
+
+Date : 08/01/2021
+Hour : 18:28:15
+Name and Surname : David Copperfield
+TA : 170/66mmHg
+Puls : 89/min
+SaO2 : 99%
+FR : 99/min
+Temperature : 99°C
+Glycemie : 99 mmol/l
+Douleurs (Pain) : 9/10
+

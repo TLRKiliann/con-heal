@@ -44,7 +44,6 @@ def searchDB():
         messagebox.showwarning('Warning', 'Database no connected !')
         print("Database no connected !")
 
-
 def diagRecapt(diagnosis):
     try:
         if os.path.getsize('./diag/doc_diag2/diagrecap2.txt'):

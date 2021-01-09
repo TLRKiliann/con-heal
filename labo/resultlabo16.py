@@ -58,7 +58,7 @@ def callLabo16(self):
         print("Nom du patient : ", entrytext.get())
         with open('./14besoins/doc_suivi16/patient16_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result16.txt', 'a+') as file2:
-                file.write("\n----------------------------------------------------------\n")
+                file.write("----------------------------------------------------------\n")
                 file.write("Date : ")
                 file.write(time.strftime("%d/%m/%Y")+ '\n')
                 file.write("Patient name : ")

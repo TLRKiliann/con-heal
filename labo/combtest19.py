@@ -29,7 +29,7 @@ def recordOption():
     print("+ Nom du patient : ", textName.get())
     with open('./14besoins/doc_suivi19/patient19_14b.txt', 'a+') as file:
         with open('./labo/doc_labo/result19.txt', 'a+') as file_2:
-            file.write("\n\n***************************************************************************\n")
+            file.write("\n***************************************************************************\n")
             file.write("Date : ")
             file.write(time.strftime("%d/%m/%Y") + '\n')
             file.write("Patient name : ")

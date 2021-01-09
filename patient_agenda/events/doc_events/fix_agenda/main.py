@@ -72,7 +72,7 @@ def searchExpress():
 regexpi_var = StringVar()
 reachDate = Entry(gui, textvariable=regexpi_var, width=10, 
     highlightbackground='light sky blue', bd=3)
-regexpi_var.set("00/00/2020")
+regexpi_var.set("00/00/2021")
 reachDate.pack(in_=top2, side=LEFT, pady=10)
 
 labelhour = Label(gui, text='Hour : ',

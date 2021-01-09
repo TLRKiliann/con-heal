@@ -1,42 +1,8 @@
-En date du : 22/12/2020 à 16:57:14 :
-
-----------------------------------------------------------
-Date : 23/12/2020
-Patient name : Edward Snowden# Nozinan : (add result of dosage here)
-# Prazine : (add result of dosage here)
----------------------------------------------------------
+En date du : 09/01/2021 à 10:38:20 :
 
 
-----------------------------------------------------------
-Date : 23/12/2020
-Patient name : Edward Snowden# Phenytoine : (add result of dosage here)
-# Sabril : (add result of dosage here)
----------------------------------------------------------
-
-
-----------------------------------------------------------
-Date : 23/12/2020
-Patient name : Edward Snowden# Serdolect : (add result of dosage here)
-# Solian : (add result of dosage here)
-# Tiapridal : (add result of dosage here)
----------------------------------------------------------
-
-
-----------------------------------------------------------
-Date : 23/12/2020
-Patient name : Edward Snowden# Phenobarbital : (add result of dosage here)
-# Phenytoine : (add result of dosage here)
-# Sabril : (add result of dosage here)
-# Taloxa : (add result of dosage here)
----------------------------------------------------------
-
-
-----------------------------------------------------------
-Date : 23/12/2020
-Patient name : Edward Snowden
-# Phenobarbital : (add result of dosage here)
-# Phenytoine : (add result of dosage here)
-# Sabril : (add result of dosage here)
-# Taloxa : (add result of dosage here)
----------------------------------------------------------
+***************************************************************************
+Date : 09/01/2021
+Patient name : Edward SnowdenpH : 5 Leuco : +2 Nit : + Pro : +1 Glu : neg Ket : neg Ery : neg Hb : neg
+***************************************************************************
 

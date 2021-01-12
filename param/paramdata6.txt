@@ -1,0 +1,22 @@
+Date : 01/01/2021
+Hour : 18:02:02
+Name and Surname : Bruce Willis
+TA : 120/90mmHg
+Puls : 80/min
+SaO2 : 99%
+FR : 16/min
+Temperature : 36.6°C
+Glycemie : 4.5 mmol/l
+Douleurs (Pain) : 8/10
+
+Date : 05/01/2021
+Hour : 18:02:02
+Name and Surname : Bruce Willis
+TA : 138/86mmHg
+Puls : 83/min
+SaO2 : 96%
+FR : 17/min
+Temperature : 36.4°C
+Glycemie : 6.3 mmol/l
+Douleurs (Pain) : 4/10
+

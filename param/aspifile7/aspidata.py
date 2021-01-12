@@ -107,6 +107,8 @@ with open('./param/aspifile7/data_Diastol.json', 'a+') as datafile2d:
     json.dump(data_list2, datafile2d, indent=4)
 
 print("\nLoading 'plot_prog.py'...")
-subprocess.run(["scp", "./param/aspifile7/diastol.json", "esteban@192.168.18.8:~/doc_txt/diastol.json"])
-subprocess.run(["scp", "./param/aspifile7/systol.json", "esteban@192.168.18.8:~/doc_txt/systol.json"])
+subprocess.run(["scp", "./param/aspifile7/diastol.json",
+    "esteban@192.168.18.8:~/doc_txt/diastol.json"])
+subprocess.run(["scp", "./param/aspifile7/systol.json",
+    "esteban@192.168.18.8:~/doc_txt/systol.json"])
 subprocess.run('./param/aspifile7/plot/plot_prog.py', check=True)

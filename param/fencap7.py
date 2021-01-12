@@ -17,6 +17,11 @@ import time
 import sys
 
 
+subprocess.run(["scp", "esteban@192.168.18.8:~/doc_txt/diastol.json",
+    "./param/aspifile7/"])
+subprocess.run(["scp", "esteban@192.168.18.8:~/doc_txt/systol.json",
+    "./param/aspifile7/"])
+
 def writeData(textDate, textHour, textName, textTa, textDia,
     textPuls, textSa, textFr, textTemp, textHgt, textDlrs):
     """

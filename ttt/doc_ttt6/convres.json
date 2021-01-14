@@ -12,15 +12,48 @@
             "Number/24h": "1"
         },
         {
-            "Date": "08/01/2021",
-            "Date of introduction": "08 April 2004",
-            "Date of end": "08/01/2021",
-            "Treatment": "Temesta expidet",
-            "Dosage": "1 mg",
+            "Date": "14/01/2021",
+            "Date of introduction": "03 April 2004",
+            "Date of end": "19/01/2021",
+            "Treatment": "Depakine chrono",
+            "Dosage": "500 mg",
+            "Reserve": 1,
+            "First-line": 1,
+            "Second-line": 0,
+            "Number/24h": "1"
+        },
+        {
+            "Date": "14/01/2021",
+            "Date of introduction": "06 March 2006",
+            "Date of end": "18/04/2021",
+            "Treatment": "Clopixol",
+            "Dosage": "60 mg",
             "Reserve": 1,
             "First-line": 0,
             "Second-line": 1,
             "Number/24h": "2"
+        },
+        {
+            "Date": "14/01/2021",
+            "Date of introduction": "22 March 2018",
+            "Date of end": "16/02/2021",
+            "Treatment": "Temesta",
+            "Dosage": "2,5 mg",
+            "Reserve": 1,
+            "First-line": 0,
+            "Second-line": 1,
+            "Number/24h": "1"
+        },
+        {
+            "Date": "14/01/2021",
+            "Date of introduction": "14 January 2021",
+            "Date of end": "26/08/2030",
+            "Treatment": "Effexor",
+            "Dosage": "75 mg",
+            "Reserve": 1,
+            "First-line": 1,
+            "Second-line": 0,
+            "Number/24h": "1"
         }
     ]
 }

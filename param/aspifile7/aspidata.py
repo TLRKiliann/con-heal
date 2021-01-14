@@ -12,6 +12,7 @@
 
 import subprocess
 import json
+import pexpect
 
 
 file = open('./param/aspifile7/systol.json')
@@ -106,9 +107,51 @@ print("\nThat seems correct!\n")
 with open('./param/aspifile7/data_Diastol.json', 'a+') as datafile2d:
     json.dump(data_list2, datafile2d, indent=4)
 
-print("\nLoading 'plot_prog.py'...")
+"""
+This track ask you password...
 subprocess.run(["scp", "./param/aspifile7/diastol.json",
     "esteban@192.168.18.8:~/doc_txt/diastol.json"])
 subprocess.run(["scp", "./param/aspifile7/systol.json",
     "esteban@192.168.18.8:~/doc_txt/systol.json"])
+"""
+
+try:
+    var_password  = "Ql3dBp_e@m"
+    var_commandsys = ("scp ./param/aspifile7/systol.json esteban@192.168.18.8:~/doc_txt/systol.json")
+    #make sure in the above command that username and hostname are according to your server
+    sys_child = pexpect.spawn(var_commandsys)
+    i = sys_child.expect(["password:", pexpect.EOF])
+
+    if i == 0: # send password                
+            sys_child.sendline(var_password)
+            sys_child.expect(pexpect.EOF)
+            print("No problem ! Upload done !!!")
+    elif i == 1: 
+            print("Got the key or connection timeout")
+            pass
+
+except Exception as e:
+    print("Oops ! Something went wrong buddy...")
+    print(e)
+
+try:
+    tovar_password  = "Ql3dBp_e@m"
+    var_commandia = ("scp ./param/aspifile7/diastol.json esteban@192.168.18.8:~/doc_txt/diastol.json")
+    #make sure in the above command that username and hostname are according to your server
+    var_child = pexpect.spawn(var_commandia)
+    fu = var_child.expect(["password:", pexpect.EOF])
+
+    if fu == 0: # send password
+            var_child.sendline(tovar_password)
+            var_child.expect(pexpect.EOF)
+            print("No problem ! Upload done !!!")
+    elif fu == 1: 
+            print("Got the key or connection timeout")
+            pass
+
+except Exception as ex:
+    print("Oops ! Something went wrong buddy...")
+    print(ex)
+
+print("\nLoading 'plot_prog.py'...")
 subprocess.run('./param/aspifile7/plot/plot_prog.py', check=True)

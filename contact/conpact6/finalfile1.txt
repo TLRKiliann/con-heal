@@ -1,6 +1,6 @@
-Patient name : Julia Roberts
-Birthdate : 09/03/1962
-Native : Berlin
+Patient name : Bruce Willis
+Birthdate : 03/09/1967
+Native : USA
 Phone : 077 339 65 45
 Street : Blvd Sun-Street 68
 City : Kansastate

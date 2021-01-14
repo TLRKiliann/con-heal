@@ -12,15 +12,48 @@
             "Nuit": ""
         },
         {
-            "Date": "08/01/2021",
-            "Date of introduction": "08 April 2004",
-            "Date of end": "08/01/2021",
-            "Treatment": "Temesta expidet",
-            "Dosage": "1 mg",
+            "Date": "14/01/2021",
+            "Date of introduction": "03 April 2004",
+            "Date of end": "19/01/2021",
+            "Treatment": "Depakine chrono",
+            "Dosage": "500 mg",
             "Matin": "1",
             "Midi": "1",
+            "Soir": "2",
+            "Nuit": ""
+        },
+        {
+            "Date": "14/01/2021",
+            "Date of introduction": "06 March 2006",
+            "Date of end": "18/04/2021",
+            "Treatment": "Clopixol",
+            "Dosage": "60 mg",
+            "Matin": "1",
+            "Midi": "",
             "Soir": "1",
-            "Nuit": "1"
+            "Nuit": ""
+        },
+        {
+            "Date": "14/01/2021",
+            "Date of introduction": "22 March 2018",
+            "Date of end": "16/02/2021",
+            "Treatment": "Temesta",
+            "Dosage": "2,5 mg",
+            "Matin": "1",
+            "Midi": "",
+            "Soir": "1",
+            "Nuit": ""
+        },
+        {
+            "Date": "14/01/2021",
+            "Date of introduction": "14 January 2021",
+            "Date of end": "26/08/2030",
+            "Treatment": "Effexor",
+            "Dosage": "75 mg",
+            "Matin": "1",
+            "Midi": "",
+            "Soir": "2",
+            "Nuit": ""
         }
     ]
 }

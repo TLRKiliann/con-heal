@@ -116,7 +116,7 @@ subprocess.run(["scp", "./param/aspifile7/systol.json",
 """
 
 try:
-    var_password  = "Ql3dBp_e@m"
+    var_password  = "----"
     var_commandsys = ("scp ./param/aspifile7/systol.json esteban@192.168.18.8:~/doc_txt/systol.json")
     #make sure in the above command that username and hostname are according to your server
     sys_child = pexpect.spawn(var_commandsys)
@@ -135,7 +135,7 @@ except Exception as e:
     print(e)
 
 try:
-    tovar_password  = "Ql3dBp_e@m"
+    tovar_password  = "----"
     var_commandia = ("scp ./param/aspifile7/diastol.json esteban@192.168.18.8:~/doc_txt/diastol.json")
     #make sure in the above command that username and hostname are according to your server
     var_child = pexpect.spawn(var_commandia)

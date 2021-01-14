@@ -19,7 +19,7 @@ import pexpect
 
 
 try:
-    var_password  = "Ql3dBp_e@m"
+    var_password  = "----"
     var_commandsys = ("scp esteban@192.168.18.8:~/doc_txt/systol.json ./param/aspifile7/")
     #make sure in the above command that username and hostname are according to your server
     child = pexpect.spawn(var_commandsys)
@@ -38,7 +38,7 @@ except Exception as e:
     print(e)
 
 try:
-    tovar_password  = "Ql3dBp_e@m"
+    tovar_password  = "----"
     var_commandia = ("scp esteban@192.168.18.8:~/doc_txt/diastol.json ./param/aspifile7/")
     #make sure in the above command that username and hostname are according to your server
     var_child = pexpect.spawn(var_commandia)

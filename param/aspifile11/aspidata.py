@@ -106,6 +106,21 @@ print("\nThat seems correct!\n")
 with open('./param/aspifile11/data_Diastol.json', 'a+') as datafile2d:
     json.dump(data_list2, datafile2d, indent=4)
 
-print("\nLoading 'plot_prog.py'...")
+try:
+    proc = subprocess.run(["scp", "./param/paramdata11.txt",
+        "pi@192.168.18.12:~/tt_doc/doc_txt11/paramdata11.txt"],
+        stderr=subprocess.PIPE)
+    print("Result SCP transfert : %s" % repr(proc.stderr))
+    secproc = subprocess.run(["scp", "./param/aspifile11/diastol.json",
+        "pi@192.168.18.12:~/tt_doc/doc_txt11/diastol.json"],
+        stderr=subprocess.PIPE)
+    print("Result SCP transfert : %s" % repr(secproc.stderr))
+    thirdproc = subprocess.run(["scp", "./param/aspifile11/systol.json",
+        "pi@192.168.18.12:~/tt_doc/doc_txt11/systol.json"],
+        stderr=subprocess.PIPE)
+    print("Result SCP transfert : %s" % repr(thirdproc.stderr))
+except (OSError, FileNotFoundError) as e_failed:
+    print("+ SCP transfert (upload) failed", e_failed)
 
+print("\nLoading 'plot_prog.py'...")
 subprocess.run('./param/aspifile11/plot/plot_prog.py', check=True)

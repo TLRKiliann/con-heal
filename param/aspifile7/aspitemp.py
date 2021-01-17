@@ -52,6 +52,13 @@ print("\nThat seems correct!\n")
 with open('./param/aspifile7/data_temp.json', 'a+') as datafile:
     json.dump(data_list2, datafile, indent=4)
 
-print("\nDownloading 'plot_prog.py'...")
+try:
+    subprocess.run(["scp", "./param/paramdata7.txt",
+        "pi@192.168.18.12:~/doc_txt7/paramdata7.txt"])
+    subprocess.run(["scp", "./param/aspifile7/temp.json",
+        "pi@192.168.18.12:~/doc_txt7/temp.json"])
+except (OSError, FileNotFoundError) as e_failed:
+    print("+ SCP transfert (upload) failed", e_failed)
 
+print("\nLoading 'plot_prog.py'...")
 subprocess.run('./param/aspifile7/plot/plot_temp.py', check=True)

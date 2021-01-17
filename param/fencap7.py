@@ -34,24 +34,33 @@ except OSError as e:
 """
 
 try:
-    subprocess.run(["scp", "pi@192.168.18.12:~/doc_txt7/paramdata7.txt",
-        "./param/"])
-    subprocess.run(["scp", "pi@192.168.18.12:~/doc_txt7/diastol.json",
-        "./param/aspifile7/"])
-    subprocess.run(["scp", "pi@192.168.18.12:~/doc_txt7/dlr.json",
-        "./param/aspifile7/"])
-    subprocess.run(["scp", "pi@192.168.18.12:~/doc_txt7/freq.json",
-        "./param/aspifile7/"])
-    subprocess.run(["scp", "pi@192.168.18.12:~/doc_txt7/gly.json",
-        "./param/aspifile7/"])
-    subprocess.run(["scp", "pi@192.168.18.12:~/doc_txt7/puls.json",
-        "./param/aspifile7/"])
-    subprocess.run(["scp", "pi@192.168.18.12:~/doc_txt7/sat.json",
-        "./param/aspifile7/"])
-    subprocess.run(["scp", "pi@192.168.18.12:~/doc_txt7/systol.json",
-        "./param/aspifile7/"])
-    subprocess.run(["scp", "pi@192.168.18.12:~/doc_txt7/temp.json",
-        "./param/aspifile7/"])
+    proc = subprocess.run(["scp", "pi@192.168.18.12:~/doc_txt7/paramdata7.txt",
+        "./param/"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    print("Error SCP transfert : %s" % repr(proc.stderr))
+    secproc = subprocess.run(["scp", "pi@192.168.18.12:~/doc_txt7/diastol.json",
+        "./param/aspifile7/"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    print("Error SCP transfert : %s" % repr(secproc.stderr))
+    thirdproc = subprocess.run(["scp", "pi@192.168.18.12:~/doc_txt7/dlr.json",
+        "./param/aspifile7/"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    print("Error SCP transfert : %s" % repr(thirdproc.stderr))
+    forthproc = subprocess.run(["scp", "pi@192.168.18.12:~/doc_txt7/freq.json",
+        "./param/aspifile7/"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    print("Error SCP transfert : %s" % repr(forthproc.stderr))
+    fivthproc = subprocess.run(["scp", "pi@192.168.18.12:~/doc_txt7/gly.json",
+        "./param/aspifile7/"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    print("Error SCP transfert : %s" % repr(fivthproc.stderr))
+    sixthproc = subprocess.run(["scp", "pi@192.168.18.12:~/doc_txt7/puls.json",
+        "./param/aspifile7/"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    print("Error SCP transfert : %s" % repr(sixthproc.stderr))
+    sevenproc = subprocess.run(["scp", "pi@192.168.18.12:~/doc_txt7/sat.json",
+        "./param/aspifile7/"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    print("Error SCP transfert : %s" % repr(sevenproc.stderr))
+    eightproc = subprocess.run(["scp", "pi@192.168.18.12:~/doc_txt7/systol.json",
+        "./param/aspifile7/"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    print("Error SCP transfert : %s" % repr(eightproc.stderr))
+    ninethproc = subprocess.run(["scp", "pi@192.168.18.12:~/doc_txt7/temp.json",
+        "./param/aspifile7/"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    print("Error SCP transfert : %s" % repr(ninethproc.stderr))
 except (OSError, FileNotFoundError) as e_failed:
     print("+ SCP transfert (download) failed", e_failed)
 

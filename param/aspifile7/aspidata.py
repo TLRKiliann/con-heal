@@ -120,20 +120,8 @@ try:
         "pi@192.168.18.12:~/doc_txt7/paramdata7.txt"])
     subprocess.run(["scp", "./param/aspifile7/diastol.json",
         "pi@192.168.18.12:~/doc_txt7/diastol.json"])
-    subprocess.run(["scp", "./param/aspifile7/dlr.json",
-        "pi@192.168.18.12:~/doc_txt7/dlr.json"])
-    subprocess.run(["scp", "./param/aspifile7/freq.json",
-        "pi@192.168.18.12:~/doc_txt7/freq.json"])
-    subprocess.run(["scp", "./param/aspifile7/gly.json",
-        "pi@192.168.18.12:~/doc_txt7/gly.json"])
-    subprocess.run(["scp", "./param/aspifile7/puls.json",
-        "pi@192.168.18.12:~/doc_txt7/puls.json"])
-    subprocess.run(["scp", "./param/aspifile7/sat.json",
-        "pi@192.168.18.12:~/doc_txt7/sat.json"])
     subprocess.run(["scp", "./param/aspifile7/systol.json",
         "pi@192.168.18.12:~/doc_txt7/systol.json"])
-    subprocess.run(["scp", "./param/aspifile7/temp.json",
-        "pi@192.168.18.12:~/doc_txt7/temp.json"])
 except (OSError, FileNotFoundError) as e_failed:
     print("+ SCP transfert (upload) failed", e_failed)
 

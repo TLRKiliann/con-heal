@@ -3,8 +3,9 @@
 
 
 """
-    This script was made to develop
-    other butons with functions
+    This main app introduce parameters
+    and send back graphical matplotlib
+    representations.
 """
 
 
@@ -15,54 +16,45 @@ import os
 import subprocess
 import time
 import sys
-import pexpect
 
-
-try:
-    var_password  = "----"
-    var_commandsys = ("scp esteban@192.168.18.8:~/doc_txt/systol.json ./param/aspifile7/")
-    #make sure in the above command that username and hostname are according to your server
-    child = pexpect.spawn(var_commandsys)
-    i = child.expect(["password:", pexpect.EOF])
-
-    if i == 0: # send password
-            child.sendline(var_password)
-            child.expect(pexpect.EOF)
-            print("No problem ! Download done !!!")
-    elif i == 1: 
-            print("Got the key or connection timeout")
-            pass
-
-except Exception as e:
-    print("Oops ! Something went wrong buddy...")
-    print(e)
-
-try:
-    tovar_password  = "----"
-    var_commandia = ("scp esteban@192.168.18.8:~/doc_txt/diastol.json ./param/aspifile7/")
-    #make sure in the above command that username and hostname are according to your server
-    var_child = pexpect.spawn(var_commandia)
-    fu = var_child.expect(["password:", pexpect.EOF])
-
-    if fu == 0: # send password
-            var_child.sendline(tovar_password)
-            var_child.expect(pexpect.EOF)
-            print("No problem ! Download done !!!")
-    elif fu == 1: 
-            print("Got the key or connection timeout")
-            pass
-
-except Exception as ex:
-    print("Oops ! Something went wrong buddy...")
-    print(ex)
 
 """
-This step asking password...
-subprocess.run(["scp", "esteban@192.168.18.8:~/doc_txt/diastol.json",
-    "./param/aspifile7/"])
-subprocess.run(["scp", "esteban@192.168.18.8:~/doc_txt/systol.json",
-    "./param/aspifile7/"])
+    To connect to the server with public key
+    ssh -i ~/.ssh/demo_rsa serv@192.168.x.x
 """
+"""
+user = "pi"
+host = "192.168.18.12"
+try:
+    out = subprocess.check_output(["ssh", "-i", "~/.ssh/demo_rsa", "-p", "22",
+        "{}@{}".format(user, host)])
+    print(out)
+except OSError as e:
+    print("+ SSH connection failed", e)
+"""
+
+try:
+    subprocess.run(["scp", "pi@192.168.18.12:~/doc_txt7/paramdata7.txt",
+        "./param/"])
+    subprocess.run(["scp", "pi@192.168.18.12:~/doc_txt7/diastol.json",
+        "./param/aspifile7/"])
+    subprocess.run(["scp", "pi@192.168.18.12:~/doc_txt7/dlr.json",
+        "./param/aspifile7/"])
+    subprocess.run(["scp", "pi@192.168.18.12:~/doc_txt7/freq.json",
+        "./param/aspifile7/"])
+    subprocess.run(["scp", "pi@192.168.18.12:~/doc_txt7/gly.json",
+        "./param/aspifile7/"])
+    subprocess.run(["scp", "pi@192.168.18.12:~/doc_txt7/puls.json",
+        "./param/aspifile7/"])
+    subprocess.run(["scp", "pi@192.168.18.12:~/doc_txt7/sat.json",
+        "./param/aspifile7/"])
+    subprocess.run(["scp", "pi@192.168.18.12:~/doc_txt7/systol.json",
+        "./param/aspifile7/"])
+    subprocess.run(["scp", "pi@192.168.18.12:~/doc_txt7/temp.json",
+        "./param/aspifile7/"])
+except (OSError, FileNotFoundError) as e_failed:
+    print("+ SCP transfert (download) failed", e_failed)
+
 
 def writeData(textDate, textHour, textName, textTa, textDia,
     textPuls, textSa, textFr, textTemp, textHgt, textDlrs):

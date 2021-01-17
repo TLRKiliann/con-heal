@@ -12,7 +12,6 @@
 
 import subprocess
 import json
-import pexpect
 
 
 file = open('./param/aspifile7/systol.json')
@@ -106,52 +105,37 @@ print("\nThat seems correct!\n")
 
 with open('./param/aspifile7/data_Diastol.json', 'a+') as datafile2d:
     json.dump(data_list2, datafile2d, indent=4)
-
 """
-This track ask you password...
-subprocess.run(["scp", "./param/aspifile7/diastol.json",
-    "esteban@192.168.18.8:~/doc_txt/diastol.json"])
-subprocess.run(["scp", "./param/aspifile7/systol.json",
-    "esteban@192.168.18.8:~/doc_txt/systol.json"])
+user = "pi"
+host = "192.168.18.12"
+try:
+    out = subprocess.check_output(["ssh", "-i", "~/.ssh/demo_rsa", "-p", "22",
+        "{}@{}".format(user, host), command])
+    print(out)
+except OSError as e:
+    print("+ SSH connection failed", e)
 """
-
 try:
-    var_password  = "----"
-    var_commandsys = ("scp ./param/aspifile7/systol.json esteban@192.168.18.8:~/doc_txt/systol.json")
-    #make sure in the above command that username and hostname are according to your server
-    sys_child = pexpect.spawn(var_commandsys)
-    i = sys_child.expect(["password:", pexpect.EOF])
-
-    if i == 0: # send password                
-            sys_child.sendline(var_password)
-            sys_child.expect(pexpect.EOF)
-            print("No problem ! Upload done !!!")
-    elif i == 1: 
-            print("Got the key or connection timeout")
-            pass
-
-except Exception as e:
-    print("Oops ! Something went wrong buddy...")
-    print(e)
-
-try:
-    tovar_password  = "----"
-    var_commandia = ("scp ./param/aspifile7/diastol.json esteban@192.168.18.8:~/doc_txt/diastol.json")
-    #make sure in the above command that username and hostname are according to your server
-    var_child = pexpect.spawn(var_commandia)
-    fu = var_child.expect(["password:", pexpect.EOF])
-
-    if fu == 0: # send password
-            var_child.sendline(tovar_password)
-            var_child.expect(pexpect.EOF)
-            print("No problem ! Upload done !!!")
-    elif fu == 1: 
-            print("Got the key or connection timeout")
-            pass
-
-except Exception as ex:
-    print("Oops ! Something went wrong buddy...")
-    print(ex)
+    subprocess.run(["scp", "./param/paramdata7.txt",
+        "pi@192.168.18.12:~/doc_txt7/paramdata7.txt"])
+    subprocess.run(["scp", "./param/aspifile7/diastol.json",
+        "pi@192.168.18.12:~/doc_txt7/diastol.json"])
+    subprocess.run(["scp", "./param/aspifile7/dlr.json",
+        "pi@192.168.18.12:~/doc_txt7/dlr.json"])
+    subprocess.run(["scp", "./param/aspifile7/freq.json",
+        "pi@192.168.18.12:~/doc_txt7/freq.json"])
+    subprocess.run(["scp", "./param/aspifile7/gly.json",
+        "pi@192.168.18.12:~/doc_txt7/gly.json"])
+    subprocess.run(["scp", "./param/aspifile7/puls.json",
+        "pi@192.168.18.12:~/doc_txt7/puls.json"])
+    subprocess.run(["scp", "./param/aspifile7/sat.json",
+        "pi@192.168.18.12:~/doc_txt7/sat.json"])
+    subprocess.run(["scp", "./param/aspifile7/systol.json",
+        "pi@192.168.18.12:~/doc_txt7/systol.json"])
+    subprocess.run(["scp", "./param/aspifile7/temp.json",
+        "pi@192.168.18.12:~/doc_txt7/temp.json"])
+except (OSError, FileNotFoundError) as e_failed:
+    print("+ SCP transfert (upload) failed", e_failed)
 
 print("\nLoading 'plot_prog.py'...")
 subprocess.run('./param/aspifile7/plot/plot_prog.py', check=True)

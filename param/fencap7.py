@@ -10,6 +10,8 @@
 
 
 from tkinter import *
+import tkinter as tk
+from tkinter import ttk
 from tkinter import messagebox
 import json
 import os
@@ -22,18 +24,35 @@ import sys
     To connect to the server with public key
     ssh -i ~/.ssh/demo_rsa serv@192.168.x.x
 """
-"""
-user = "pi"
-host = "192.168.18.12"
-try:
-    out = subprocess.check_output(["ssh", "-i", "~/.ssh/demo_rsa", "-p", "22",
-        "{}@{}".format(user, host)])
-    print(out)
-except OSError as e:
-    print("+ SSH connection failed", e)
-"""
 
-try:
+
+teams = range(5)
+
+def button_command():
+
+    popup = tk.Tk()
+    popup.title("Loading window")
+    tk.Label(popup, text="Loading...").grid(row=0,column=0)
+
+    progress = 0
+    progress_var = tk.DoubleVar()
+    progress_bar = ttk.Progressbar(popup, length=300, variable=progress_var, maximum=4)
+    progress_bar.grid(row=1, column=0)#.pack(fill=tk.X, expand=1, side=tk.BOTTOM)
+    popup.pack_slaves()
+
+    progress_step = float(5.5/len(teams))
+    for team in teams:
+        popup.update()
+        time.sleep(1) # launch task
+        progress += progress_step
+        progress_var.set(progress)
+
+    #Y a pas plus propre ? Non, je ne crois pas (pas trouvé mieux pour le moment...)
+    #cmd = 'python3 angel.py'
+    #os.system(cmd)
+    #Oui il y a mieux! subprocess passe par POSIX.sh et il retourne les erreurs python
+    #dans la console contrairement à os.system qui lui est par défaut et ne prend pas le 
+    #même chemin d'accès.
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt7/paramdata7.txt",
         "./param/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -61,9 +80,9 @@ try:
     ninethproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt7/temp.json",
         "./param/aspifile7/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(ninethproc.stderr))
-except (OSError, FileNotFoundError) as e_failed:
-    print("+ SCP transfert (download) failed", e_failed)
+    popup.destroy()
 
+button_command()
 
 def writeData(textDate, textHour, textName, textTa, textDia,
     textPuls, textSa, textFr, textTemp, textHgt, textDlrs):

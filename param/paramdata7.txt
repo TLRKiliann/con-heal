@@ -1,44 +1,11 @@
-Date : 15/01/2021
-Hour : 14:19:48
-Name and Surname : Julian Assange
-TA : 120/88mmHg
-Puls : /min
-SaO2 : %
-FR : /min
-Temperature : °C
-Glycemie :  mmol/l
-Douleurs (Pain) : /10
-
 Date : 17/01/2021
-Hour : 14:21:15
+Hour : 15:16:34
 Name and Surname : Julian Assange
-TA : 133/77mmHg
-Puls : /min
-SaO2 : %
-FR : /min
-Temperature : °C
-Glycemie :  mmol/l
-Douleurs (Pain) : /10
-
-Date : 17/01/2021
-Hour : 14:28:23
-Name and Surname : Julian Assange
-TA : 188/89mmHg
-Puls : 199/min
+TA : 110/70mmHg
+Puls : 80/min
 SaO2 : 99%
-FR : 88/min
-Temperature : 77°C
-Glycemie : 7 mmol/l
-Douleurs (Pain) : 7/10
-
-Date : 18/01/2021
-Hour : 14:33:47
-Name and Surname : Julian Assange
-TA : 180/90mmHg
-Puls : 89/min
-SaO2 : 96%
-FR : 18/min
-Temperature : 37.5°C
-Glycemie : 7.7 mmol/l
-Douleurs (Pain) : 8/10
+FR : 16/min
+Temperature : 36°C
+Glycemie : 6.8 mmol/l
+Douleurs (Pain) : 2/10
 

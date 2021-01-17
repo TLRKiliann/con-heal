@@ -35,32 +35,32 @@ except OSError as e:
 
 try:
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/doc_txt7/paramdata7.txt",
-        "./param/"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    print("Error SCP transfert : %s" % repr(proc.stderr))
+        "./param/"], stderr=subprocess.PIPE)
+    print("Result SCP transfert : %s" % repr(proc.stderr))
     secproc = subprocess.run(["scp", "pi@192.168.18.12:~/doc_txt7/diastol.json",
-        "./param/aspifile7/"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    print("Error SCP transfert : %s" % repr(secproc.stderr))
+        "./param/aspifile7/"], stderr=subprocess.PIPE)
+    print("Result SCP transfert : %s" % repr(secproc.stderr))
     thirdproc = subprocess.run(["scp", "pi@192.168.18.12:~/doc_txt7/dlr.json",
-        "./param/aspifile7/"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    print("Error SCP transfert : %s" % repr(thirdproc.stderr))
+        "./param/aspifile7/"], stderr=subprocess.PIPE)
+    print("Result SCP transfert : %s" % repr(thirdproc.stderr))
     forthproc = subprocess.run(["scp", "pi@192.168.18.12:~/doc_txt7/freq.json",
-        "./param/aspifile7/"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    print("Error SCP transfert : %s" % repr(forthproc.stderr))
+        "./param/aspifile7/"], stderr=subprocess.PIPE)
+    print("Result SCP transfert : %s" % repr(forthproc.stderr))
     fivthproc = subprocess.run(["scp", "pi@192.168.18.12:~/doc_txt7/gly.json",
-        "./param/aspifile7/"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    print("Error SCP transfert : %s" % repr(fivthproc.stderr))
+        "./param/aspifile7/"], stderr=subprocess.PIPE)
+    print("Result SCP transfert : %s" % repr(fivthproc.stderr))
     sixthproc = subprocess.run(["scp", "pi@192.168.18.12:~/doc_txt7/puls.json",
-        "./param/aspifile7/"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    print("Error SCP transfert : %s" % repr(sixthproc.stderr))
+        "./param/aspifile7/"], stderr=subprocess.PIPE)
+    print("Result SCP transfert : %s" % repr(sixthproc.stderr))
     sevenproc = subprocess.run(["scp", "pi@192.168.18.12:~/doc_txt7/sat.json",
-        "./param/aspifile7/"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    print("Error SCP transfert : %s" % repr(sevenproc.stderr))
+        "./param/aspifile7/"], stderr=subprocess.PIPE)
+    print("Result SCP transfert : %s" % repr(sevenproc.stderr))
     eightproc = subprocess.run(["scp", "pi@192.168.18.12:~/doc_txt7/systol.json",
-        "./param/aspifile7/"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    print("Error SCP transfert : %s" % repr(eightproc.stderr))
+        "./param/aspifile7/"], stderr=subprocess.PIPE)
+    print("Result SCP transfert : %s" % repr(eightproc.stderr))
     ninethproc = subprocess.run(["scp", "pi@192.168.18.12:~/doc_txt7/temp.json",
-        "./param/aspifile7/"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    print("Error SCP transfert : %s" % repr(ninethproc.stderr))
+        "./param/aspifile7/"], stderr=subprocess.PIPE)
+    print("Result SCP transfert : %s" % repr(ninethproc.stderr))
 except (OSError, FileNotFoundError) as e_failed:
     print("+ SCP transfert (download) failed", e_failed)
 
@@ -377,7 +377,8 @@ def appelPuls(textDate, textName, textPuls):
     try:
         if os.path.getsize('./param/aspifile7/puls.json'):
             subprocess.run('./param/aspifile7/aspipuls.py', check=True)
-            label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
+            label['text'] = ("Date: " + textDate.get() +
+                "\nNom: " + textName.get() +
                 "\nPulsations: " + textPuls.get())
     except FileNotFoundError as errorgraph2:
         print('+ Sorry the Puls plot doesn\'t work ! Data missing !', errorgraph2)
@@ -391,7 +392,8 @@ def appelSat(textDate, textName, textSa):
     try:
         if os.path.getsize('./param/aspifile7/sat.json'):
             subprocess.run('./param/aspifile7/aspisat.py', check=True)
-            label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
+            label['text'] = ("Date: " + textDate.get() +
+                "\nNom: " + textName.get() +
                 "\nSaO2: " + textSa.get())
     except FileNotFoundError as errorgraph3:
         print('+ Sorry the SaO2 plot doesn\'t work ! Data missing !', errorgraph3)
@@ -405,7 +407,8 @@ def appelFreq(textDate, textName, textFr):
     try:
         if os.path.getsize('./param/aspifile7/freq.json'):
             subprocess.run('./param/aspifile7/aspifreq.py', check=True)
-            label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
+            label['text'] = ("Date: " + textDate.get() +
+                "\nNom: " + textName.get() +
                 "\nFrequ. resp.: " + textFr.get())
     except FileNotFoundError as errorgraph4:
         print('+ Sorry the FR plot doesn\'t work ! Data missing !', errorgraph4)
@@ -419,7 +422,8 @@ def appelTemp(textDate, textName, textTemp):
     try:
         if os.path.getsize('./param/aspifile7/temp.json'):
             subprocess.run('./param/aspifile7/aspitemp.py', check=True)
-            label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
+            label['text'] = ("Date: " + textDate.get() +
+                "\nNom: " + textName.get() +
                 "\nTemperature: " + textTemp.get())
     except FileNotFoundError as errorgraph5:
         print('+ Sorry the Temp plot doesn\'t work ! Data missing !', errorgraph5)
@@ -433,7 +437,8 @@ def appelGly(textDate, textName, textHgt):
     try:
         if os.path.getsize('./param/aspifile7/gly.json'):
             subprocess.run('./param/aspifile7/aspigly.py', check=True)
-            label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
+            label['text'] = ("Date: " + textDate.get() +
+                "\nNom: " + textName.get() +
                 "\nGlycémie: " + textHgt.get())
     except FileNotFoundError as errorgraph6:
         print('+ Sorry the Hgt plot doesn\'t work ! Data missing !', errorgraph6)
@@ -447,7 +452,8 @@ def appelDlr(textDate, textName, textDlrs):
     try:
         if os.path.getsize('./param/aspifile7/dlr.json'):
             subprocess.run('./param/aspifile7/aspidlr.py', check=True)
-            label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
+            label['text'] = ("Date: " + textDate.get() +
+                "\nNom: " + textName.get() +
                 "\nDouleurs: " + textDlrs.get())
     except FileNotFoundError as errorgraph7:
         print('Sorry the Dlrs plot doesn\'t work ! Data missing !', errorgraph7)

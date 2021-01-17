@@ -105,23 +105,20 @@ print("\nThat seems correct!\n")
 
 with open('./param/aspifile7/data_Diastol.json', 'a+') as datafile2d:
     json.dump(data_list2, datafile2d, indent=4)
-"""
-user = "pi"
-host = "192.168.18.12"
+
 try:
-    out = subprocess.check_output(["ssh", "-i", "~/.ssh/demo_rsa", "-p", "22",
-        "{}@{}".format(user, host), command])
-    print(out)
-except OSError as e:
-    print("+ SSH connection failed", e)
-"""
-try:
-    subprocess.run(["scp", "./param/paramdata7.txt",
-        "pi@192.168.18.12:~/doc_txt7/paramdata7.txt"])
-    subprocess.run(["scp", "./param/aspifile7/diastol.json",
-        "pi@192.168.18.12:~/doc_txt7/diastol.json"])
-    subprocess.run(["scp", "./param/aspifile7/systol.json",
-        "pi@192.168.18.12:~/doc_txt7/systol.json"])
+    proc = subprocess.run(["scp", "./param/paramdata7.txt",
+        "pi@192.168.18.12:~/doc_txt7/paramdata7.txt"],
+        stderr=subprocess.PIPE)
+    print("Result SCP transfert : %s" % repr(proc.stderr))
+    secproc = subprocess.run(["scp", "./param/aspifile7/diastol.json",
+        "pi@192.168.18.12:~/doc_txt7/diastol.json"],
+        stderr=subprocess.PIPE)
+    print("Result SCP transfert : %s" % repr(secproc.stderr))
+    thirdproc = subprocess.run(["scp", "./param/aspifile7/systol.json",
+        "pi@192.168.18.12:~/doc_txt7/systol.json"],
+        stderr=subprocess.PIPE)
+    print("Result SCP transfert : %s" % repr(thirdproc.stderr))
 except (OSError, FileNotFoundError) as e_failed:
     print("+ SCP transfert (upload) failed", e_failed)
 

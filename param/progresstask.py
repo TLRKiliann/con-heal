@@ -2,39 +2,30 @@
 # -*- coding : utf-8 -*-
 
 
+from tkinter import *
 import tkinter as tk
 from tkinter import ttk
-from time import sleep
+import time
+import os
+import sys
 import subprocess
+import threading
 
-teams = range(4)
 
-def button_command():
+#Define your Progress Bar function, 
+def task(root):
+    root.title("Downloading")
+    ft = ttk.Frame()
+    ft.pack(expand=True, fill=BOTH, side=TOP)
+    pb_hD = ttk.Progressbar(ft, length=200, orient='horizontal', mode='indeterminate')
+    pb_hD.pack(expand=True, fill=BOTH, side=TOP)
+    pb_hD.start(50)
+    root.mainloop()
 
-    popup = tk.Tk()
-    popup.title("Loading window")
-    popup.configure(bg="DodgerBlue2")
-    tk.Label(popup, text="Loading...").grid(row=0,column=0)
-
-    progress = 0
-    progress_var = tk.DoubleVar()
-    progress_bar = ttk.Progressbar(popup, length=300, variable=progress_var, maximum=4)
-    progress_bar.grid(row=1, column=0)#.pack(fill=tk.X, expand=1, side=tk.BOTTOM)
-    popup.pack_slaves()
-
-    progress_step = float(5.5/len(teams))
-    for team in teams:
-        popup.update()
-        sleep(1) # launch task
-        progress += progress_step
-        progress_var.set(progress)
-
-    #Y a pas plus propre ? Non, je ne crois pas (pas trouvé mieux pour le moment...)
-    #cmd = 'python3 angel.py'
-    #os.system(cmd)
-    #Oui il y a mieux! subprocess passe par POSIX.sh et il retourne les erreurs python
-    #dans la console contrairement à os.system qui lui est par défaut et ne prend pas le 
-    #même chemin d'accès.
+# Define the process of unknown duration with root as one of the input And once done,
+# add root.quit() at the end.
+def process_of_unknown_duration(root):
+    time.sleep(0.1)
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt7/paramdata7.txt",
         "./param/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -62,7 +53,16 @@ def button_command():
     ninethproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt7/temp.json",
         "./param/aspifile7/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(ninethproc.stderr))
-    #popup.destroy()
-    return 0
+    print('Done')
+    # linux, mac
+    print('My pid is', os.getpid())
+    root.quit() # To destroy threading
 
-button_command()
+def Main():
+    root = tk.Tk()
+    t1 = threading.Thread(target=process_of_unknown_duration, args=(root,))
+    print(t1)
+    t1.start()
+    task(root) # This will block while the mainloop runs
+    t1.join()
+    root.destroy() # To destroy completely window

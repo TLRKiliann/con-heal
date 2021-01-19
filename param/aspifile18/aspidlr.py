@@ -64,5 +64,5 @@ try:
 except (OSError, FileNotFoundError) as e_failed:
     print("+ SCP transfert (upload) failed", e_failed)
 
-print("\nDownloading 'plot_prog.py'...")
+print("\nLoading 'plot_dlr.py'...")
 subprocess.run('./param/aspifile18/plot/plot_dlr.py', check=True)

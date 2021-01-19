@@ -25,38 +25,6 @@ def tocallprogressbar():
     Main()
 tocallprogressbar()
 
-try:
-    proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt1/paramdata1.txt",
-        "./param/"], stderr=subprocess.PIPE)
-    print("Result SCP transfert : %s" % repr(proc.stderr))
-    secproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt1/diastol.json",
-        "./param/aspifile1/"], stderr=subprocess.PIPE)
-    print("Result SCP transfert : %s" % repr(secproc.stderr))
-    thirdproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt1/dlr.json",
-        "./param/aspifile1/"], stderr=subprocess.PIPE)
-    print("Result SCP transfert : %s" % repr(thirdproc.stderr))
-    forthproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt1/freq.json",
-        "./param/aspifile1/"], stderr=subprocess.PIPE)
-    print("Result SCP transfert : %s" % repr(forthproc.stderr))
-    fivthproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt1/gly.json",
-        "./param/aspifile1/"], stderr=subprocess.PIPE)
-    print("Result SCP transfert : %s" % repr(fivthproc.stderr))
-    sixthproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt1/puls.json",
-        "./param/aspifile1/"], stderr=subprocess.PIPE)
-    print("Result SCP transfert : %s" % repr(sixthproc.stderr))
-    sevenproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt1/sat.json",
-        "./param/aspifile1/"], stderr=subprocess.PIPE)
-    print("Result SCP transfert : %s" % repr(sevenproc.stderr))
-    eightproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt1/systol.json",
-        "./param/aspifile1/"], stderr=subprocess.PIPE)
-    print("Result SCP transfert : %s" % repr(eightproc.stderr))
-    ninethproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt1/temp.json",
-        "./param/aspifile1/"], stderr=subprocess.PIPE)
-    print("Result SCP transfert : %s" % repr(ninethproc.stderr))
-except (OSError, FileNotFoundError) as e_failed:
-    print("+ SCP transfert (download) failed", e_failed)
-
-
 def writeData(textDate, textHour, textName, textTa, textDia,
     textPuls, textSa, textFr, textTemp, textHgt, textDlrs):
     """

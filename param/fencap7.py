@@ -10,27 +10,20 @@
 
 
 from tkinter import *
-import tkinter as tk
-from tkinter import ttk
 from tkinter import messagebox
 import json
 import os
 import subprocess
 import time
-import sys
-#import threading
-from progresstask import Main
+from progresstask7 import Main
 
-"""
-    To connect to the server with public key
-    ssh -i ~/.ssh/demo_rsa serv@192.168.x.x
-"""
 
 def tocallprogressbar():
+    """
+        To display progress bar with current download
+    """
     Main()
 tocallprogressbar()
-
-#subprocess.run("./param/progresstask.py", check=True)
 
 def writeData(textDate, textHour, textName, textTa, textDia,
     textPuls, textSa, textFr, textTemp, textHgt, textDlrs):

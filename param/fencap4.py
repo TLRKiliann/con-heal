@@ -3,8 +3,9 @@
 
 
 """
-    This script was made to develop
-    other butons with functions
+    This main app introduce parameters
+    and send back graphical matplotlib
+    representations.
 """
 
 
@@ -14,8 +15,15 @@ import json
 import os
 import subprocess
 import time
-import sys
+from progresstask4 import Main
 
+
+def tocallprogressbar():
+    """
+        To display progress bar with current download
+    """
+    Main()
+tocallprogressbar()
 
 try:
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt4/paramdata4.txt",

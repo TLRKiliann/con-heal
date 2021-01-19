@@ -309,7 +309,7 @@ def writeData(textDate, textHour, textName, textTa, textDia,
         "\nTemperature: " + textTemp.get() +
         "\nGlycemie: " + textHgt.get() +
         "\nDouleurs: " + textDlrs.get() +
-        "\nAll data have been added in json files. Press Graph to verify !")
+        "\nAll data have been added in json files. Press Graph to upload data !")
 
 def mainRead():
     subprocess.run('./param/main_read.py', check=True)

@@ -20,3 +20,14 @@ Temperature : 36.3°C
 Glycemie : 5.9 mmol/l
 Douleurs (Pain) : 0/10
 
+Date : 19/01/2021
+Hour : 20:30:28
+Name and Surname : test totest
+TA : 120/90mmHg
+Puls : 88/min
+SaO2 : %
+FR : /min
+Temperature : °C
+Glycemie :  mmol/l
+Douleurs (Pain) : /10
+

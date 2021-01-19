@@ -3,8 +3,9 @@
 
 
 """
-    This script was made to develop
-    other butons with functions
+    This main app introduce parameters
+    and send back graphical matplotlib
+    representations.
 """
 
 
@@ -14,40 +15,15 @@ import json
 import os
 import subprocess
 import time
-import sys
+from progresstask12 import Main
 
 
-try:
-    proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt12/paramdata12.txt",
-        "./param/"], stderr=subprocess.PIPE)
-    print("Result SCP transfert : %s" % repr(proc.stderr))
-    secproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt12/diastol.json",
-        "./param/aspifile12/"], stderr=subprocess.PIPE)
-    print("Result SCP transfert : %s" % repr(secproc.stderr))
-    thirdproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt12/dlr.json",
-        "./param/aspifile12/"], stderr=subprocess.PIPE)
-    print("Result SCP transfert : %s" % repr(thirdproc.stderr))
-    forthproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt12/freq.json",
-        "./param/aspifile12/"], stderr=subprocess.PIPE)
-    print("Result SCP transfert : %s" % repr(forthproc.stderr))
-    fivthproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt12/gly.json",
-        "./param/aspifile12/"], stderr=subprocess.PIPE)
-    print("Result SCP transfert : %s" % repr(fivthproc.stderr))
-    sixthproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt12/puls.json",
-        "./param/aspifile12/"], stderr=subprocess.PIPE)
-    print("Result SCP transfert : %s" % repr(sixthproc.stderr))
-    sevenproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt12/sat.json",
-        "./param/aspifile12/"], stderr=subprocess.PIPE)
-    print("Result SCP transfert : %s" % repr(sevenproc.stderr))
-    eightproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt12/systol.json",
-        "./param/aspifile12/"], stderr=subprocess.PIPE)
-    print("Result SCP transfert : %s" % repr(eightproc.stderr))
-    ninethproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt12/temp.json",
-        "./param/aspifile12/"], stderr=subprocess.PIPE)
-    print("Result SCP transfert : %s" % repr(ninethproc.stderr))
-except (OSError, FileNotFoundError) as e_failed:
-    print("+ SCP transfert (download) failed", e_failed)
-
+def tocallprogressbar():
+    """
+        To display progress bar with current download
+    """
+    Main()
+tocallprogressbar()
 
 def writeData(textDate, textHour, textName, textTa, textDia,
     textPuls, textSa, textFr, textTemp, textHgt, textDlrs):

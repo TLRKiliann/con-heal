@@ -41,7 +41,7 @@ list2 = []
 for key, value in dicolist.items():
     list1.append(key)
     list2.append(value)
-    
+
 print("\nList of date by entry's order :")
 print("----------------------------------")
 print(list1)

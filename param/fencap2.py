@@ -16,6 +16,7 @@ import os
 import subprocess
 import time
 from progresstask2 import Main
+from uploadbar import uploadmain
 
 
 def tocallprogressbar():
@@ -319,6 +320,10 @@ def appelTens(textDate, textName, textTa, textDia):
         to call aspidata.py for recapt data
         and launching matplotlib graph
     """
+
+    def uploadcall():
+        uploadmain()
+    uploadcall()
     try:
         if os.path.getsize('./param/aspifile2/systol.json'):
             subprocess.run('./param/aspifile2/aspidata.py', check=True)

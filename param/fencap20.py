@@ -16,6 +16,7 @@ import os
 import subprocess
 import time
 from progresstask20 import Main
+from uploadbar import uploadmain
 
 
 def tocallprogressbar():
@@ -309,7 +310,7 @@ def writeData(textDate, textHour, textName, textTa, textDia,
         "\nTemperature: " + textTemp.get() +
         "\nGlycemie: " + textHgt.get() +
         "\nDouleurs: " + textDlrs.get() +
-        "\nAll data have been added in json files !")
+        "\nAll data have been added in json files. Press Graph to upload data !")
 
 def mainRead():
     subprocess.run('./param/main_read20.py', check=True)
@@ -321,10 +322,12 @@ def appelTens(textDate, textName, textTa, textDia):
     """
     try:
         if os.path.getsize('./param/aspifile20/systol.json'):
+            uploadcall()
             subprocess.run('./param/aspifile20/aspidata.py', check=True)
             label['text'] = ("Date: " + textDate.get() +
                 "\nNom: " + textName.get() +
                 "\nTension: " + textTa.get() + '/' + textDia.get())
+            callmsg()
     except FileNotFoundError as errorgraph1:
         print('+ Sorry the TA plot doesn\'t work ! Data missing !', errorgraph1)
         label['text'] = "Sorry the TA plot doesn\'t work ! Data missing !"
@@ -336,10 +339,12 @@ def appelPuls(textDate, textName, textPuls):
     """
     try:
         if os.path.getsize('./param/aspifile20/puls.json'):
+            uploadcall()
             subprocess.run('./param/aspifile20/aspipuls.py', check=True)
             label['text'] = ("Date: " + textDate.get() +
                 "\nNom: " + textName.get() +
                 "\nPulsations: " + textPuls.get())
+            callmsg()
     except FileNotFoundError as errorgraph2:
         print('+ Sorry the Puls plot doesn\'t work ! Data missing !', errorgraph2)
         label['text'] = "Sorry the Puls plot doesn\'t work ! Data missing !"
@@ -351,10 +356,12 @@ def appelSat(textDate, textName, textSa):
     """
     try:
         if os.path.getsize('./param/aspifile20/sat.json'):
+            uploadcall()
             subprocess.run('./param/aspifile20/aspisat.py', check=True)
             label['text'] = ("Date: " + textDate.get() +
                 "\nNom: " + textName.get() +
                 "\nSaO2: " + textSa.get())
+            callmsg()
     except FileNotFoundError as errorgraph3:
         print('+ Sorry the SaO2 plot doesn\'t work ! Data missing !', errorgraph3)
         label['text'] = "Sorry the SaO2 plot doesn\'t work ! Data missing !"
@@ -366,10 +373,12 @@ def appelFreq(textDate, textName, textFr):
     """
     try:
         if os.path.getsize('./param/aspifile20/freq.json'):
+            uploadcall()
             subprocess.run('./param/aspifile20/aspifreq.py', check=True)
             label['text'] = ("Date: " + textDate.get() +
                 "\nNom: " + textName.get() +
                 "\nFrequ. resp.: " + textFr.get())
+            callmsg()
     except FileNotFoundError as errorgraph4:
         print('+ Sorry the FR plot doesn\'t work ! Data missing !', errorgraph4)
         label['text'] = "Sorry the FR plot doesn\'t work ! Data missing !"
@@ -381,10 +390,12 @@ def appelTemp(textDate, textName, textTemp):
     """
     try:
         if os.path.getsize('./param/aspifile20/temp.json'):
+            uploadcall()
             subprocess.run('./param/aspifile20/aspitemp.py', check=True)
             label['text'] = ("Date: " + textDate.get() +
                 "\nNom: " + textName.get() +
                 "\nTemperature: " + textTemp.get())
+            callmsg()
     except FileNotFoundError as errorgraph5:
         print('+ Sorry the Temp plot doesn\'t work ! Data missing !', errorgraph5)
         label['text'] = "Sorry the Temp plot doesn\'t work ! Data missing !"
@@ -396,10 +407,12 @@ def appelGly(textDate, textName, textHgt):
     """
     try:
         if os.path.getsize('./param/aspifile20/gly.json'):
+            uploadcall()
             subprocess.run('./param/aspifile20/aspigly.py', check=True)
             label['text'] = ("Date: " + textDate.get() +
                 "\nNom: " + textName.get() +
                 "\nGlycémie: " + textHgt.get())
+            callmsg()
     except FileNotFoundError as errorgraph6:
         print('+ Sorry the Hgt plot doesn\'t work ! Data missing !', errorgraph6)
         label['text'] = "Sorry the Hgt plot doesn\'t work ! Data missing !"
@@ -411,13 +424,21 @@ def appelDlr(textDate, textName, textDlrs):
     """
     try:
         if os.path.getsize('./param/aspifile20/dlr.json'):
+            uploadcall()
             subprocess.run('./param/aspifile20/aspidlr.py', check=True)
             label['text'] = ("Date: " + textDate.get() +
                 "\nNom: " + textName.get() +
                 "\nDouleurs: " + textDlrs.get())
+            callmsg()
     except FileNotFoundError as errorgraph7:
         print('Sorry the Dlrs plot doesn\'t work ! Data missing !', errorgraph7)
         label['text'] = "Sorry the Dlrs plot doesn\'t work ! Data missing !"
+
+def uploadcall():
+    uploadmain()
+
+def callmsg():
+    messagebox.showinfo("INFO", "Data uploaded !")
 
 def delMain():
     """

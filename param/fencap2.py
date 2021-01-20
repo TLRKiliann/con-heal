@@ -320,12 +320,9 @@ def appelTens(textDate, textName, textTa, textDia):
         to call aspidata.py for recapt data
         and launching matplotlib graph
     """
-
-    def uploadcall():
-        uploadmain()
-    uploadcall()
     try:
         if os.path.getsize('./param/aspifile2/systol.json'):
+            uploadcall()
             subprocess.run('./param/aspifile2/aspidata.py', check=True)
             label['text'] = ("Date: " + textDate.get() +
                 "\nNom: " + textName.get() +
@@ -342,6 +339,7 @@ def appelPuls(textDate, textName, textPuls):
     """
     try:
         if os.path.getsize('./param/aspifile2/puls.json'):
+            uploadcall()
             subprocess.run('./param/aspifile2/aspipuls.py', check=True)
             label['text'] = ("Date: " + textDate.get() +
                 "\nNom: " + textName.get() +
@@ -358,6 +356,7 @@ def appelSat(textDate, textName, textSa):
     """
     try:
         if os.path.getsize('./param/aspifile2/sat.json'):
+            uploadcall()
             subprocess.run('./param/aspifile2/aspisat.py', check=True)
             label['text'] = ("Date: " + textDate.get() +
                 "\nNom: " + textName.get() +
@@ -374,6 +373,7 @@ def appelFreq(textDate, textName, textFr):
     """
     try:
         if os.path.getsize('./param/aspifile2/freq.json'):
+            uploadcall()
             subprocess.run('./param/aspifile2/aspifreq.py', check=True)
             label['text'] = ("Date: " + textDate.get() +
                 "\nNom: " + textName.get() +
@@ -390,6 +390,7 @@ def appelTemp(textDate, textName, textTemp):
     """
     try:
         if os.path.getsize('./param/aspifile2/temp.json'):
+            uploadcall()
             subprocess.run('./param/aspifile2/aspitemp.py', check=True)
             label['text'] = ("Date: " + textDate.get() +
                 "\nNom: " + textName.get() +
@@ -406,6 +407,7 @@ def appelGly(textDate, textName, textHgt):
     """
     try:
         if os.path.getsize('./param/aspifile2/gly.json'):
+            uploadcall()
             subprocess.run('./param/aspifile2/aspigly.py', check=True)
             label['text'] = ("Date: " + textDate.get() +
                 "\nNom: " + textName.get() +
@@ -422,6 +424,7 @@ def appelDlr(textDate, textName, textDlrs):
     """
     try:
         if os.path.getsize('./param/aspifile2/dlr.json'):
+            uploadcall()
             subprocess.run('./param/aspifile2/aspidlr.py', check=True)
             label['text'] = ("Date: " + textDate.get() +
                 "\nNom: " + textName.get() +
@@ -430,6 +433,9 @@ def appelDlr(textDate, textName, textDlrs):
     except FileNotFoundError as errorgraph7:
         print('Sorry the Dlrs plot doesn\'t work ! Data missing !', errorgraph7)
         label['text'] = "Sorry the Dlrs plot doesn\'t work ! Data missing !"
+
+def uploadcall():
+    uploadmain()
 
 def callmsg():
     messagebox.showinfo("INFO", "Data uploaded !")

@@ -22,12 +22,20 @@ def task(root):
         Define Progress Bar function
     """
     root.title("Downloading")
-    ft = ttk.Frame()
-    ft.pack(expand=True, fill=BOTH, side=TOP)
-    pb_hD = ttk.Progressbar(ft, length=200, orient='horizontal',
-        mode='indeterminate', maximum=20)
-    pb_hD.pack(expand=True, fill=BOTH, side=TOP)
-    pb_hD.start(50)
+    s = ttk.Style()
+    s.theme_use('alt')
+    s.configure('blue.Horizontal.TProgressbar',
+        troughcolor = '#4d4d4d',
+        troughrelief = 'flat',
+        background = '#2f92ff')
+
+    pb_hD = ttk.Progressbar(root,
+        style = 'blue.Horizontal.TProgressbar',
+        orient = 'horizontal',
+        length = 200,
+        mode = 'indeterminate')
+    pb_hD.pack()
+    pb_hD.start(20)
     root.mainloop()
 
 def process_of_unknown_duration(root):
@@ -36,7 +44,7 @@ def process_of_unknown_duration(root):
         with root as one of the input And once
         done, add root.quit() at the end.
     """
-    time.sleep(0.2)
+    time.sleep(2)
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt10/paramdata10.txt",
         "./param/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))

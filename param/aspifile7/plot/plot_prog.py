@@ -175,18 +175,17 @@ try:
     show_grid = True
     with plt.style.context('seaborn-darkgrid'):
         fig = plt.figure()
-        fig.set_facecolor("black")
+        fig.set_facecolor('aqua')
         lab = fig.suptitle('Blood Pressure (TA) by Day',
             fontsize=18)
-        lab.set_color('aquamarine')
+        lab.set_color('navy')
         ax = plt.subplot()
-        ax.tick_params(axis='x', colors='aquamarine')
-        ax.tick_params(axis='y', colors='aquamarine')
+        ax.tick_params(axis='x', colors='navy')
+        ax.tick_params(axis='y', colors='navy')
         labelc = plt.ylabel("y-label")
-        labelc.set_color("aquamarine")
+        labelc.set_color('navy')
         labelc2 = plt.xlabel("x-label")
-        labelc2.set_color("aquamarine")
-        
+        labelc2.set_color('navy')
         plt.plot(x_axis, y_axis, 'o', color='red')
         plt.plot(x_axis, z_axis, 'o', color='red')
         plt.vlines(x = x_axis, ymin = z_axis, ymax = y_axis,

@@ -1,0 +1,11 @@
+Date : 21/01/2021
+Hour : 22:08:59
+Name and Surname : Julia Roberts
+TA : 120/90mmHg
+Puls : 88/min
+SaO2 : 98%
+FR : 17/min
+Temperature : 36.6°C
+Glycemie : 6.7 mmol/l
+Douleurs (Pain) : 2/10
+

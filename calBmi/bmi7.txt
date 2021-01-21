@@ -1,0 +1,14 @@
+Date : 21-01-2021
+Heure : 22:34:53
+Prenom et Nom : Julian Assange
+Poids : 75
+Taille : 1.86
+BMI : 21.679
+
+Date : 30-01-2021
+Heure : 22:34:53
+Prenom et Nom : Julian Assange
+Poids : 77
+Taille : 1.86
+BMI : 22.257
+

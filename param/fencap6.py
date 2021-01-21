@@ -327,7 +327,7 @@ def appelTens(textDate, textName, textTa, textDia):
             label['text'] = ("Date: " + textDate.get() +
                 "\nNom: " + textName.get() +
                 "\nTension: " + textTa.get() + '/' + textDia.get())
-            callmsg()
+            #callmsg()
     except FileNotFoundError as errorgraph1:
         print('+ Sorry the TA plot doesn\'t work ! Data missing !', errorgraph1)
         label['text'] = "Sorry the TA plot doesn\'t work ! Data missing !"
@@ -344,7 +344,7 @@ def appelPuls(textDate, textName, textPuls):
             label['text'] = ("Date: " + textDate.get() +
                 "\nNom: " + textName.get() +
                 "\nPulsations: " + textPuls.get())
-            callmsg()
+            #callmsg()
     except FileNotFoundError as errorgraph2:
         print('+ Sorry the Puls plot doesn\'t work ! Data missing !', errorgraph2)
         label['text'] = "Sorry the Puls plot doesn\'t work ! Data missing !"
@@ -361,7 +361,7 @@ def appelSat(textDate, textName, textSa):
             label['text'] = ("Date: " + textDate.get() +
                 "\nNom: " + textName.get() +
                 "\nSaO2: " + textSa.get())
-            callmsg()
+            #callmsg()
     except FileNotFoundError as errorgraph3:
         print('+ Sorry the SaO2 plot doesn\'t work ! Data missing !', errorgraph3)
         label['text'] = "Sorry the SaO2 plot doesn\'t work ! Data missing !"
@@ -378,7 +378,7 @@ def appelFreq(textDate, textName, textFr):
             label['text'] = ("Date: " + textDate.get() +
                 "\nNom: " + textName.get() +
                 "\nFrequ. resp.: " + textFr.get())
-            callmsg()
+            #callmsg()
     except FileNotFoundError as errorgraph4:
         print('+ Sorry the FR plot doesn\'t work ! Data missing !', errorgraph4)
         label['text'] = "Sorry the FR plot doesn\'t work ! Data missing !"
@@ -395,7 +395,7 @@ def appelTemp(textDate, textName, textTemp):
             label['text'] = ("Date: " + textDate.get() +
                 "\nNom: " + textName.get() +
                 "\nTemperature: " + textTemp.get())
-            callmsg()
+            #callmsg()
     except FileNotFoundError as errorgraph5:
         print('+ Sorry the Temp plot doesn\'t work ! Data missing !', errorgraph5)
         label['text'] = "Sorry the Temp plot doesn\'t work ! Data missing !"
@@ -412,7 +412,7 @@ def appelGly(textDate, textName, textHgt):
             label['text'] = ("Date: " + textDate.get() +
                 "\nNom: " + textName.get() +
                 "\nGlycémie: " + textHgt.get())
-            callmsg()
+            #callmsg()
     except FileNotFoundError as errorgraph6:
         print('+ Sorry the Hgt plot doesn\'t work ! Data missing !', errorgraph6)
         label['text'] = "Sorry the Hgt plot doesn\'t work ! Data missing !"
@@ -429,7 +429,7 @@ def appelDlr(textDate, textName, textDlrs):
             label['text'] = ("Date: " + textDate.get() +
                 "\nNom: " + textName.get() +
                 "\nDouleurs: " + textDlrs.get())
-            callmsg()
+            #callmsg()
     except FileNotFoundError as errorgraph7:
         print('Sorry the Dlrs plot doesn\'t work ! Data missing !', errorgraph7)
         label['text'] = "Sorry the Dlrs plot doesn\'t work ! Data missing !"
@@ -437,8 +437,8 @@ def appelDlr(textDate, textName, textDlrs):
 def uploadcall():
     uploadmain()
 
-def callmsg():
-    messagebox.showinfo("INFO", "Data uploaded !")
+#def callmsg():
+#    messagebox.showinfo("INFO", "Data uploaded !")
 
 def delMain():
     """

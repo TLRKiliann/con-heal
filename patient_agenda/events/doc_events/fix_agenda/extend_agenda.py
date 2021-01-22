@@ -119,15 +119,11 @@ def retrieve_input():
     os.remove('./patient_agenda/events/patient_calendar.txt')
 
     print("+ os.listdir after new file created : ")
-    print(os.listdir('./patient_agenda/events/doc_events/'\
-        'fix_agenda/agenda_saved/'))
+    print(os.listdir('./patient_agenda/events/doc_events/fix_agenda/agenda_saved/'))
 
-    shutil.copy("./patient_agenda/events/doc_events/" \
-        "fix_agenda/agenda_saved", "./Backup/Files1")
-    print("+ Agenda 1 copied to ./Backup/Files1")
-
-    proc = subprocess.run(["scp", "-r", "./patient_agenda/events/doc_events/" \
-        "fix_agenda/agenda_saved", "pi@192.168.18.12:~/tt_doc/doc_txt1"],
+    proc = subprocess.run(["scp", "-r",
+        "./patient_agenda/events/doc_events/fix_agenda/agenda_saved",
+        "pi@192.168.18.12:~/tt_doc/doc_txt1"],
         stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     print("\n+ Ok, agenda 1 notified and copied to server.\n")

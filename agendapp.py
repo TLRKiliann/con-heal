@@ -60,7 +60,7 @@ def dispAgBox():
                                                     print("+ There is noway : ")
                                                     print(line[0:10])
                                                 elif magicword in line:
-                                                    mtd = magicword.replace("/", "$")
+                                                    mtd = magicword.replace("/", ".")
                                                     print("+ It is magicword : ")
                                                     print(line)
                                                     write_f = open(os.path.join(path, file), 'w')

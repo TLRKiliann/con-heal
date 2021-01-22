@@ -4,14 +4,15 @@
 
 from tkinter import *
 from tkinter import messagebox
-import os
-import time
 import datetime
+import os
+import subprocess
+import shutil
 
 
 def dispAgBox():
     """
-    Display messagebox for agenda if an 
+    Display messagebox for agenda if an
     appointment has been fixed for tomorrow.
     Display nothing if rdv canceled
     """
@@ -34,7 +35,7 @@ def dispAgBox():
                     for i in range(0, len(lines)):
                         line = lines[i]
                         if dateagenda in line:
-                            print("Nous y voici !") 
+                            print("Nous y voici !")                            
                             print(lines[i])
                             print(lines[i+1])
                             print(lines[i+2])
@@ -47,7 +48,6 @@ def dispAgBox():
                             if MSGREM1 == 1:
                                 magicword = (datetime.datetime.now() + datetime.timedelta(\
                                     days=1)).strftime('%d/%m/%Y')
-                                nodesir = " Rdv past--> "
                                 for path, dirs, files in os.walk('./patient_agenda/events/'\
                                     'doc_events/fix_agenda/agenda_saved/'):
                                     for file in files:
@@ -60,15 +60,16 @@ def dispAgBox():
                                                     print("+ There is noway : ")
                                                     print(line[0:10])
                                                 elif magicword in line:
+                                                    mtd = magicword.replace("/", "$")
                                                     print("+ It is magicword : ")
-                                                    print(line[0:10])
+                                                    print(line)
                                                     write_f = open(os.path.join(path, file), 'w')
-                                                    write_f.write(" Rdv past--> " + lines[i+1] + \
+                                                    write_f.write("Rdv past--> " + mtd + lines[i+1] + \
                                                         lines[i+2] + "\n")
-                                                    print("Modification finish")
+                                                    print("+ Modification finish")
                                                     break
                                                 else:
-                                                    print("None file has been writted")
+                                                    print("+ None file has been written")
                                                     break
                             else:
                                 pass
@@ -76,6 +77,25 @@ def dispAgBox():
         print("File 1 has not been found", infofile1)
     else:
         ("Error unknow")
+
+    try:
+        for path, dirs, files in os.walk('./patient_agenda/events/'\
+            'doc_events/fix_agenda/agenda_saved/'):
+            for file in files:
+                with open(os.path.join(path, file), 'r') as read_f:
+                    lines = read_f.readlines()
+                    for line in lines:
+                        pastf = "Rdv past--> "
+                        if line[0:12] == pastf:
+                            print(line)
+                            shutil.copy(os.path.join(path, file), "./Backup/Files1")
+                            proc = subprocess.run(["scp", "-r", "./Backup/Files1",
+                                "pi@192.168.18.12:~/tt_doc/doc_txt1"],
+                                stderr=subprocess.PIPE)
+                            print("Result SCP transfert : %s" % repr(proc.stderr))
+                            print("\n+ Ok, ---RDV PAST--- notified and copied to server.\n")
+    except (FileNotFoundError) as err_finfi:
+        print("+ File 1 not found", err_finfi)
 
     # Patient 2
     try:
@@ -96,7 +116,7 @@ def dispAgBox():
                     for i in range(0, len(lines)):
                         line = lines[i]
                         if dateagenda in line:
-                            print("Nous y voici !") 
+                            print("Nous y voici !")
                             print(lines[i])
                             print(lines[i+1])
                             print(lines[i+2])
@@ -157,7 +177,7 @@ def dispAgBox():
                     for i in range(0, len(lines)):
                         line = lines[i]
                         if dateagenda in line:
-                            print("Nous y voici !") 
+                            print("Nous y voici !")
                             print(lines[i])
                             print(lines[i+1])
                             print(lines[i+2])
@@ -218,7 +238,7 @@ def dispAgBox():
                     for i in range(0, len(lines)):
                         line = lines[i]
                         if dateagenda in line:
-                            print("Nous y voici !") 
+                            print("Nous y voici !")
                             print(lines[i])
                             print(lines[i+1])
                             print(lines[i+2])
@@ -279,7 +299,7 @@ def dispAgBox():
                     for i in range(0, len(lines)):
                         line = lines[i]
                         if dateagenda in line:
-                            print("Nous y voici !") 
+                            print("Nous y voici !")
                             print(lines[i])
                             print(lines[i+1])
                             print(lines[i+2])
@@ -340,7 +360,7 @@ def dispAgBox():
                     for i in range(0, len(lines)):
                         line = lines[i]
                         if dateagenda in line:
-                            print("Nous y voici !") 
+                            print("Nous y voici !")
                             print(lines[i])
                             print(lines[i+1])
                             print(lines[i+2])
@@ -401,7 +421,7 @@ def dispAgBox():
                     for i in range(0, len(lines)):
                         line = lines[i]
                         if dateagenda in line:
-                            print("Nous y voici !") 
+                            print("Nous y voici !")
                             print(lines[i])
                             print(lines[i+1])
                             print(lines[i+2])
@@ -462,7 +482,7 @@ def dispAgBox():
                     for i in range(0, len(lines)):
                         line = lines[i]
                         if dateagenda in line:
-                            print("Nous y voici !") 
+                            print("Nous y voici !")
                             print(lines[i])
                             print(lines[i+1])
                             print(lines[i+2])
@@ -523,7 +543,7 @@ def dispAgBox():
                     for i in range(0, len(lines)):
                         line = lines[i]
                         if dateagenda in line:
-                            print("Nous y voici !") 
+                            print("Nous y voici !")
                             print(lines[i])
                             print(lines[i+1])
                             print(lines[i+2])
@@ -584,7 +604,7 @@ def dispAgBox():
                     for i in range(0, len(lines)):
                         line = lines[i]
                         if dateagenda in line:
-                            print("Nous y voici !") 
+                            print("Nous y voici !")
                             print(lines[i])
                             print(lines[i+1])
                             print(lines[i+2])
@@ -645,7 +665,7 @@ def dispAgBox():
                     for i in range(0, len(lines)):
                         line = lines[i]
                         if dateagenda in line:
-                            print("Nous y voici !") 
+                            print("Nous y voici !")
                             print(lines[i])
                             print(lines[i+1])
                             print(lines[i+2])
@@ -706,7 +726,7 @@ def dispAgBox():
                     for i in range(0, len(lines)):
                         line = lines[i]
                         if dateagenda in line:
-                            print("Nous y voici !") 
+                            print("Nous y voici !")
                             print(lines[i])
                             print(lines[i+1])
                             print(lines[i+2])
@@ -767,7 +787,7 @@ def dispAgBox():
                     for i in range(0, len(lines)):
                         line = lines[i]
                         if dateagenda in line:
-                            print("Nous y voici !") 
+                            print("Nous y voici !")
                             print(lines[i])
                             print(lines[i+1])
                             print(lines[i+2])
@@ -828,7 +848,7 @@ def dispAgBox():
                     for i in range(0, len(lines)):
                         line = lines[i]
                         if dateagenda in line:
-                            print("Nous y voici !") 
+                            print("Nous y voici !")
                             print(lines[i])
                             print(lines[i+1])
                             print(lines[i+2])
@@ -889,7 +909,7 @@ def dispAgBox():
                     for i in range(0, len(lines)):
                         line = lines[i]
                         if dateagenda in line:
-                            print("Nous y voici !") 
+                            print("Nous y voici !")
                             print(lines[i])
                             print(lines[i+1])
                             print(lines[i+2])
@@ -950,7 +970,7 @@ def dispAgBox():
                     for i in range(0, len(lines)):
                         line = lines[i]
                         if dateagenda in line:
-                            print("Nous y voici !") 
+                            print("Nous y voici !")
                             print(lines[i])
                             print(lines[i+1])
                             print(lines[i+2])
@@ -1011,7 +1031,7 @@ def dispAgBox():
                     for i in range(0, len(lines)):
                         line = lines[i]
                         if dateagenda in line:
-                            print("Nous y voici !") 
+                            print("Nous y voici !")
                             print(lines[i])
                             print(lines[i+1])
                             print(lines[i+2])
@@ -1072,7 +1092,7 @@ def dispAgBox():
                     for i in range(0, len(lines)):
                         line = lines[i]
                         if dateagenda in line:
-                            print("Nous y voici !") 
+                            print("Nous y voici !")
                             print(lines[i])
                             print(lines[i+1])
                             print(lines[i+2])
@@ -1133,7 +1153,7 @@ def dispAgBox():
                     for i in range(0, len(lines)):
                         line = lines[i]
                         if dateagenda in line:
-                            print("Nous y voici !") 
+                            print("Nous y voici !")
                             print(lines[i])
                             print(lines[i+1])
                             print(lines[i+2])
@@ -1194,7 +1214,7 @@ def dispAgBox():
                     for i in range(0, len(lines)):
                         line = lines[i]
                         if dateagenda in line:
-                            print("Nous y voici !") 
+                            print("Nous y voici !")
                             print(lines[i])
                             print(lines[i+1])
                             print(lines[i+2])
@@ -1255,7 +1275,7 @@ def dispAgBox():
                     for i in range(0, len(lines)):
                         line = lines[i]
                         if dateagenda in line:
-                            print("Nous y voici !") 
+                            print("Nous y voici !")
                             print(lines[i])
                             print(lines[i+1])
                             print(lines[i+2])
@@ -1316,7 +1336,7 @@ def dispAgBox():
                     for i in range(0, len(lines)):
                         line = lines[i]
                         if dateagenda in line:
-                            print("Nous y voici !") 
+                            print("Nous y voici !")
                             print(lines[i])
                             print(lines[i+1])
                             print(lines[i+2])
@@ -1377,7 +1397,7 @@ def dispAgBox():
                     for i in range(0, len(lines)):
                         line = lines[i]
                         if dateagenda in line:
-                            print("Nous y voici !") 
+                            print("Nous y voici !")
                             print(lines[i])
                             print(lines[i+1])
                             print(lines[i+2])
@@ -1438,7 +1458,7 @@ def dispAgBox():
                     for i in range(0, len(lines)):
                         line = lines[i]
                         if dateagenda in line:
-                            print("Nous y voici !") 
+                            print("Nous y voici !")
                             print(lines[i])
                             print(lines[i+1])
                             print(lines[i+2])

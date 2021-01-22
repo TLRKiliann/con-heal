@@ -89,6 +89,8 @@ def dispAgBox():
                         if line[0:12] == pastf:
                             shutil.copy(os.path.join(path, file), "./Backup/Files1")
                             print("+ Agenda 1 copied to ./Backup/Files1")
+                        else:
+                            break
     except (FileNotFoundError, OSError) as err_finfi:
         print("+ File 1 not found", err_finfi)
 

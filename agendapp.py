@@ -47,6 +47,7 @@ def dispAgBox():
                             if MSGREM1 == 1:
                                 magicword = (datetime.datetime.now() + datetime.timedelta(\
                                     days=1)).strftime('%d/%m/%Y')
+                                nodesir = " Rdv past--> "
                                 for path, dirs, files in os.walk('./patient_agenda/events/'\
                                     'doc_events/fix_agenda/agenda_saved/'):
                                     for file in files:
@@ -62,7 +63,7 @@ def dispAgBox():
                                                     print("+ It is magicword : ")
                                                     print(line[0:10])
                                                     write_f = open(os.path.join(path, file), 'w')
-                                                    write_f.write("Rdv past-->" + lines[i+1] + \
+                                                    write_f.write(" Rdv past--> " + lines[i+1] + \
                                                         lines[i+2] + "\n")
                                                     print("Modification finish")
                                                     break
@@ -123,7 +124,7 @@ def dispAgBox():
                                                     print("+ It is magicword : ")
                                                     print(line[0:10])
                                                     write_f = open(os.path.join(path, file), 'w')
-                                                    write_f.write("Rdv past-->" + lines[i+1] + \
+                                                    write_f.write(" Rdv past--> " + lines[i+1] + \
                                                         lines[i+2] + "\n")
                                                     print("Modification finish")
                                                     break
@@ -184,7 +185,7 @@ def dispAgBox():
                                                     print("+ It is magicword : ")
                                                     print(line[0:10])
                                                     write_f = open(os.path.join(path, file), 'w')
-                                                    write_f.write("Rdv past-->" + lines[i+1] + \
+                                                    write_f.write(" Rdv past--> " + lines[i+1] + \
                                                         lines[i+2] + "\n")
                                                     print("Modification finish")
                                                     break
@@ -245,7 +246,7 @@ def dispAgBox():
                                                     print("+ It is magicword : ")
                                                     print(line[0:10])
                                                     write_f = open(os.path.join(path, file), 'w')
-                                                    write_f.write("Rdv past-->" + lines[i+1] + \
+                                                    write_f.write(" Rdv past--> " + lines[i+1] + \
                                                         lines[i+2] + "\n")
                                                     print("Modification finish")
                                                     break
@@ -306,7 +307,7 @@ def dispAgBox():
                                                     print("+ It is magicword : ")
                                                     print(line[0:10])
                                                     write_f = open(os.path.join(path, file), 'w')
-                                                    write_f.write("Rdv past-->" + lines[i+1] + \
+                                                    write_f.write(" Rdv past--> " + lines[i+1] + \
                                                         lines[i+2] + "\n")
                                                     print("Modification finish")
                                                     break
@@ -367,7 +368,7 @@ def dispAgBox():
                                                     print("+ It is magicword : ")
                                                     print(line[0:10])
                                                     write_f = open(os.path.join(path, file), 'w')
-                                                    write_f.write("Rdv past-->" + lines[i+1] + \
+                                                    write_f.write(" Rdv past--> " + lines[i+1] + \
                                                         lines[i+2] + "\n")
                                                     print("Modification finish")
                                                     break
@@ -428,7 +429,7 @@ def dispAgBox():
                                                     print("+ It is magicword : ")
                                                     print(line[0:10])
                                                     write_f = open(os.path.join(path, file), 'w')
-                                                    write_f.write("Rdv past-->" + lines[i+1] + \
+                                                    write_f.write(" Rdv past--> " + lines[i+1] + \
                                                         lines[i+2] + "\n")
                                                     print("Modification finish")
                                                     break
@@ -489,7 +490,7 @@ def dispAgBox():
                                                     print("+ It is magicword : ")
                                                     print(line[0:10])
                                                     write_f = open(os.path.join(path, file), 'w')
-                                                    write_f.write("Rdv past-->" + lines[i+1] + \
+                                                    write_f.write(" Rdv past--> " + lines[i+1] + \
                                                         lines[i+2] + "\n")
                                                     print("Modification finish")
                                                     break
@@ -550,7 +551,7 @@ def dispAgBox():
                                                     print("+ It is magicword : ")
                                                     print(line[0:10])
                                                     write_f = open(os.path.join(path, file), 'w')
-                                                    write_f.write("Rdv past-->" + lines[i+1] + \
+                                                    write_f.write(" Rdv past--> " + lines[i+1] + \
                                                         lines[i+2] + "\n")
                                                     print("Modification finish")
                                                     break
@@ -611,7 +612,7 @@ def dispAgBox():
                                                     print("+ It is magicword : ")
                                                     print(line[0:10])
                                                     write_f = open(os.path.join(path, file), 'w')
-                                                    write_f.write("Rdv past-->" + lines[i+1] + \
+                                                    write_f.write(" Rdv past--> " + lines[i+1] + \
                                                         lines[i+2] + "\n")
                                                     print("Modification finish")
                                                     break
@@ -672,7 +673,7 @@ def dispAgBox():
                                                     print("+ It is magicword : ")
                                                     print(line[0:10])
                                                     write_f = open(os.path.join(path, file), 'w')
-                                                    write_f.write("Rdv past-->" + lines[i+1] + \
+                                                    write_f.write(" Rdv past--> " + lines[i+1] + \
                                                         lines[i+2] + "\n")
                                                     print("Modification finish")
                                                     break
@@ -733,7 +734,7 @@ def dispAgBox():
                                                     print("+ It is magicword : ")
                                                     print(line[0:10])
                                                     write_f = open(os.path.join(path, file), 'w')
-                                                    write_f.write("Rdv past-->" + lines[i+1] + \
+                                                    write_f.write(" Rdv past--> " + lines[i+1] + \
                                                         lines[i+2] + "\n")
                                                     print("Modification finish")
                                                     break
@@ -794,7 +795,7 @@ def dispAgBox():
                                                     print("+ It is magicword : ")
                                                     print(line[0:10])
                                                     write_f = open(os.path.join(path, file), 'w')
-                                                    write_f.write("Rdv past-->" + lines[i+1] + \
+                                                    write_f.write(" Rdv past--> " + lines[i+1] + \
                                                         lines[i+2] + "\n")
                                                     print("Modification finish")
                                                     break
@@ -855,7 +856,7 @@ def dispAgBox():
                                                     print("+ It is magicword : ")
                                                     print(line[0:10])
                                                     write_f = open(os.path.join(path, file), 'w')
-                                                    write_f.write("Rdv past-->" + lines[i+1] + \
+                                                    write_f.write(" Rdv past--> " + lines[i+1] + \
                                                         lines[i+2] + "\n")
                                                     print("Modification finish")
                                                     break
@@ -916,7 +917,7 @@ def dispAgBox():
                                                     print("+ It is magicword : ")
                                                     print(line[0:10])
                                                     write_f = open(os.path.join(path, file), 'w')
-                                                    write_f.write("Rdv past-->" + lines[i+1] + \
+                                                    write_f.write(" Rdv past--> " + lines[i+1] + \
                                                         lines[i+2] + "\n")
                                                     print("Modification finish")
                                                     break
@@ -977,7 +978,7 @@ def dispAgBox():
                                                     print("+ It is magicword : ")
                                                     print(line[0:10])
                                                     write_f = open(os.path.join(path, file), 'w')
-                                                    write_f.write("Rdv past-->" + lines[i+1] + \
+                                                    write_f.write(" Rdv past--> " + lines[i+1] + \
                                                         lines[i+2] + "\n")
                                                     print("Modification finish")
                                                     break
@@ -1038,7 +1039,7 @@ def dispAgBox():
                                                     print("+ It is magicword : ")
                                                     print(line[0:10])
                                                     write_f = open(os.path.join(path, file), 'w')
-                                                    write_f.write("Rdv past-->" + lines[i+1] + \
+                                                    write_f.write(" Rdv past--> " + lines[i+1] + \
                                                         lines[i+2] + "\n")
                                                     print("Modification finish")
                                                     break
@@ -1099,7 +1100,7 @@ def dispAgBox():
                                                     print("+ It is magicword : ")
                                                     print(line[0:10])
                                                     write_f = open(os.path.join(path, file), 'w')
-                                                    write_f.write("Rdv past-->" + lines[i+1] + \
+                                                    write_f.write(" Rdv past--> " + lines[i+1] + \
                                                         lines[i+2] + "\n")
                                                     print("Modification finish")
                                                     break
@@ -1160,7 +1161,7 @@ def dispAgBox():
                                                     print("+ It is magicword : ")
                                                     print(line[0:10])
                                                     write_f = open(os.path.join(path, file), 'w')
-                                                    write_f.write("Rdv past-->" + lines[i+1] + \
+                                                    write_f.write(" Rdv past--> " + lines[i+1] + \
                                                         lines[i+2] + "\n")
                                                     print("Modification finish")
                                                     break
@@ -1221,7 +1222,7 @@ def dispAgBox():
                                                     print("+ It is magicword : ")
                                                     print(line[0:10])
                                                     write_f = open(os.path.join(path, file), 'w')
-                                                    write_f.write("Rdv past-->" + lines[i+1] + \
+                                                    write_f.write(" Rdv past--> " + lines[i+1] + \
                                                         lines[i+2] + "\n")
                                                     print("Modification finish")
                                                     break
@@ -1282,7 +1283,7 @@ def dispAgBox():
                                                     print("+ It is magicword : ")
                                                     print(line[0:10])
                                                     write_f = open(os.path.join(path, file), 'w')
-                                                    write_f.write("Rdv past-->" + lines[i+1] + \
+                                                    write_f.write(" Rdv past--> " + lines[i+1] + \
                                                         lines[i+2] + "\n")
                                                     print("Modification finish")
                                                     break
@@ -1343,7 +1344,7 @@ def dispAgBox():
                                                     print("+ It is magicword : ")
                                                     print(line[0:10])
                                                     write_f = open(os.path.join(path, file), 'w')
-                                                    write_f.write("Rdv past-->" + lines[i+1] + \
+                                                    write_f.write(" Rdv past--> " + lines[i+1] + \
                                                         lines[i+2] + "\n")
                                                     print("Modification finish")
                                                     break
@@ -1404,7 +1405,7 @@ def dispAgBox():
                                                     print("+ It is magicword : ")
                                                     print(line[0:10])
                                                     write_f = open(os.path.join(path, file), 'w')
-                                                    write_f.write("Rdv past-->" + lines[i+1] + \
+                                                    write_f.write(" Rdv past--> " + lines[i+1] + \
                                                         lines[i+2] + "\n")
                                                     print("Modification finish")
                                                     break
@@ -1465,7 +1466,7 @@ def dispAgBox():
                                                     print("+ It is magicword : ")
                                                     print(line[0:10])
                                                     write_f = open(os.path.join(path, file), 'w')
-                                                    write_f.write("Rdv past-->" + lines[i+1] + \
+                                                    write_f.write(" Rdv past--> " + lines[i+1] + \
                                                         lines[i+2] + "\n")
                                                     print("Modification finish")
                                                     break

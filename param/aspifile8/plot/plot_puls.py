@@ -70,11 +70,21 @@ try:
     show_grid = True
     with plt.style.context('seaborn-darkgrid'):
         fig = plt.figure()
+        fig.set_facecolor('aqua')
         lab = fig.suptitle('Puls/min by Day',
             fontsize=18)
-        lab.set_color('black')
+        lab.set_color('navy')
+        lab.set_color('navy')
+        ax = plt.subplot()
+        ax.tick_params(axis='x', colors='navy')
+        ax.tick_params(axis='y', colors='navy')
+        labelc = plt.ylabel("y-label")
+        labelc.set_color('navy')
+        labelc2 = plt.xlabel("x-label")
+        labelc2.set_color('navy')
         plt.plot(x_axis, y_axis, 's', color='red')
         plt.plot(x_axis, y_axis, '--', color='orange')
+        
         for x,y in zip(x_axis, y_axis):
             label = "{}".format(y)
             plt.annotate(label, (x,y), textcoords="offset points",

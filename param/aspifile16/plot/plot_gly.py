@@ -69,17 +69,17 @@ try:
     show_grid = True
     with plt.style.context('seaborn-darkgrid'):
         fig = plt.figure()
-        fig.set_facecolor('grey')
+        fig.set_facecolor("aqua")
         lab = fig.suptitle('Hgt(mmol/l) by Day',
             fontsize=18)
-        lab.set_color('white')
+        lab.set_color('navy')
         ax = plt.subplot()
-        ax.tick_params(axis='x', colors='white')
-        ax.tick_params(axis='y', colors='white')
+        ax.tick_params(axis='x', colors='navy')
+        ax.tick_params(axis='y', colors='navy')
         labelc = plt.ylabel("y-label")
-        labelc.set_color('white')
+        labelc.set_color('navy')
         labelc2 = plt.xlabel("x-label")
-        labelc2.set_color('white')
+        labelc2.set_color('navy')
         plt.plot(x_axis, y_axis, 'o', color='orange')
         plt.plot(x_axis, y_axis, '--', color='orange')
         for x,y in zip(x_axis, y_axis):

@@ -72,7 +72,7 @@ try:
         fig = plt.figure()
         lab = fig.suptitle('Puls/min by Day',
             fontsize=18)
-        lab.set_color('black')
+        lab.set_color('aqua')
         plt.plot(x_axis, y_axis, 's', color='red')
         plt.plot(x_axis, y_axis, '--', color='orange')
         for x,y in zip(x_axis, y_axis):

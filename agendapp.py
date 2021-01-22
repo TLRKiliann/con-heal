@@ -64,12 +64,12 @@ def dispAgBox():
                                                     print("+ It is magicword : ")
                                                     print(line)
                                                     write_f = open(os.path.join(path, file), 'w')
-                                                    write_f.write("Rdv past--> " + mtd + lines[i+1] + \
-                                                        lines[i+2] + "\n")
+                                                    write_f.write("Rdv past--> " + mtd + "\n" +
+                                                        lines[i+1] + lines[i+2] + "\n")
                                                     print("+ Modification finish")
                                                     break
                                                 else:
-                                                    print("+ None file has been written")
+                                                    print("+ None file has been changed")
                                                     break
                             else:
                                 pass
@@ -82,20 +82,20 @@ def dispAgBox():
         for path, dirs, files in os.walk('./patient_agenda/events/'\
             'doc_events/fix_agenda/agenda_saved/'):
             for file in files:
-                with open(os.path.join(path, file), 'r') as read_f:
-                    lines = read_f.readlines()
+                with open(os.path.join(path, file), 'r') as r_file:
+                    lines = r_file.readlines()
                     for line in lines:
                         pastf = "Rdv past--> "
                         if line[0:12] == pastf:
-                            print(line)
                             shutil.copy(os.path.join(path, file), "./Backup/Files1")
-                            proc = subprocess.run(["scp", "-r", "./Backup/Files1",
-                                "pi@192.168.18.12:~/tt_doc/doc_txt1"],
-                                stderr=subprocess.PIPE)
-                            print("Result SCP transfert : %s" % repr(proc.stderr))
-                            print("\n+ Ok, ---RDV PAST--- notified and copied to server.\n")
-    except (FileNotFoundError) as err_finfi:
+                            print("+ Agenda 1 copied to ./Backup/Files1")
+    except (FileNotFoundError, OSError) as err_finfi:
         print("+ File 1 not found", err_finfi)
+
+    proc = subprocess.run(["scp", "-r", "./Backup/Files1",
+        "pi@192.168.18.12:~/tt_doc/doc_txt1"], stderr=subprocess.PIPE)
+    print("Result SCP transfert : %s" % repr(proc.stderr))
+    print("\n+ Ok, ---RDV PAST--- notified and copied to server.\n")
 
     # Patient 2
     try:

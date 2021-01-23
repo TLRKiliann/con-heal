@@ -99,7 +99,7 @@ def retrieve_input():
     'fix_agenda/fixed_rdv.txt'
     main_path = './patient_agenda/events/doc_events/'\
     'fix_agenda/agenda_saved'
-    dst_path = './Backup/File1'
+    dst_path = './Backup/Files1'
 
     files = [None] * 100
     for x in range(0, 100):
@@ -121,7 +121,7 @@ def retrieve_input():
     print("+ os.listdir after new file created : ")
     print(os.listdir('./patient_agenda/events/doc_events/fix_agenda/agenda_saved'))
 
-    shutil.copytree(main_path, dst_path)
+    shutil.copytree(main_path, dst_path, dirs_exist_ok=True)
 
     proc = subprocess.run(["scp", "-r",
         "./patient_agenda/events/doc_events/fix_agenda/agenda_saved",

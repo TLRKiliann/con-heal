@@ -98,8 +98,8 @@ def retrieve_input():
     origin_path = './patient_agenda/events/doc_events/'\
     'fix_agenda/fixed_rdv.txt'
     main_path = './patient_agenda/events/doc_events/'\
-    'fix_agenda/agenda_saved'
-    dst_path = './Backup/Files1'
+    'fix_agenda/agenda_saved/'
+    dst_path = './Backup/Files1/'
 
     files = [None] * 100
     for x in range(0, 100):
@@ -119,9 +119,7 @@ def retrieve_input():
     os.remove('./patient_agenda/events/patient_calendar.txt')
 
     print("+ os.listdir after new file created : ")
-    print(os.listdir('./patient_agenda/events/doc_events/fix_agenda/agenda_saved'))
-
-    shutil.copytree(main_path, dst_path, dirs_exist_ok=True)
+    print(os.listdir('./patient_agenda/events/doc_events/fix_agenda/agenda_saved/'))
 
     proc = subprocess.run(["scp", "-r",
         "./patient_agenda/events/doc_events/fix_agenda/agenda_saved",
@@ -129,9 +127,9 @@ def retrieve_input():
         stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
-        print("+ './Backup/Files1' downloaded !")
+        print("+ './Backup/Files1' uploaded !")
     else:
-        print("+ No file to download !")
+        print("+ No file to upload !")
         messagebox.showerror("Error", "./Backup/Files1 not uploaded")
 
 

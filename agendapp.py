@@ -60,14 +60,23 @@ def dispAgBox():
     else:
         ("Error unknow")
 
+    try:
+        # To copy to ./Backup/Files1
+        src = r'./patient_agenda/events/doc_events/fix_agenda/agenda_saved'
+        dst = r'./Backup/Files1'
+        shutil.copy(os.path.join(src, file), dst)
+    except (OSError, FileNotFoundError) as e:
+        print("+ No files from agenda_1 copied !!!", e)
+
+    # To upload to server
     proc = subprocess.run(["scp", "-r", "./Backup/Files1",
         "pi@192.168.18.12:~/tt_doc/doc_txt1"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
-        print("+ './Backup/Files1' downloaded !")
+        print("+ './Backup/Files1' uploaded !")
     else:
-        print("+ No file to download !")
-        messagebox.showerror("Error", "./Backup/Files1 not uploaded")
+        print("+ No file to upload !")
+        messagebox.showerror("Error", "./Backup/Files1 not uploaded !")
 
     # Patient 2
     try:
@@ -112,14 +121,23 @@ def dispAgBox():
     else:
         ("Error unknow")
 
+    # To copy to ./Backup/Files2
+    try:
+        # To copy to ./Backup/Files2
+        src2 = r'./patient_agenda/events2/doc_events/fix_agenda/agenda_saved'
+        dst2 = r'./Backup/Files2'
+        shutil.copy(os.path.join(src2, file), dst2)
+    except (OSError, FileNotFoundError) as e2:
+        print("+ No files from agenda_2 copied !!!", e2)
+    
     secproc = subprocess.run(["scp", "-r", "./Backup/Files2",
         "pi@192.168.18.12:~/tt_doc/doc_txt2"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if secproc.stderr == b'':
-        print("+ './Backup/Files2' downloaded !")
+        print("+ './Backup/Files2' uploaded !")
     else:
-        print("+ No file to download !")
-        messagebox.showerror("Error", "./Backup/Files2 not uploaded")
+        print("+ No file to upload !")
+        messagebox.showerror("Error", "./Backup/Files2 not uploaded !")
 
     # Patient 3
     try:

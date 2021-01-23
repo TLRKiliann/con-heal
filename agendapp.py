@@ -5,6 +5,7 @@
 from tkinter import *
 from tkinter import messagebox
 import datetime
+import time
 import os
 import subprocess
 import shutil
@@ -50,27 +51,27 @@ def dispAgBox():
                                     days=1)).strftime('%d/%m/%Y')
                                 for path, dirs, files in os.walk('./patient_agenda/events/'\
                                     'doc_events/fix_agenda/agenda_saved/'):
-                                    for file in files:
-                                        with open(os.path.join(path, file), 'r') as read_f:
-                                            lines = read_f.readlines()
-                                            for line in lines:
-                                                line = lines[i]
-                                                noway = "Fixed on :"
-                                                if line[0:10] == noway:
-                                                    print("+ There is noway : ")
-                                                    print(line[0:10])
-                                                elif magicword in line:
-                                                    mtd = magicword.replace("/", ".")
-                                                    print("+ It is magicword : ")
-                                                    print(line)
-                                                    write_f = open(os.path.join(path, file), 'w')
-                                                    write_f.write("Rdv past--> " + mtd + "\n" +
-                                                        lines[i+1] + lines[i+2] + "\n")
-                                                    print("+ Modification finish")
-                                                    break
-                                                else:
-                                                    print("+ None file has been changed")
-                                                    break
+                                        for file in files:
+                                            with open(os.path.join(path, file), 'r') as read_f:
+                                                lines = read_f.readlines()
+                                                for line in lines:
+                                                    line = lines[i]
+                                                    noway = "Fixed on :"
+                                                    if line[0:10] == noway:
+                                                        print("+ There is noway : ")
+                                                        print(line[0:10])
+                                                    elif magicword in line:
+                                                        mtd = magicword.replace("/", ".")
+                                                        print("+ It is magicword : ")
+                                                        print(mtd)
+                                                        write_f = open(os.path.join(path, file), 'w')
+                                                        write_f.write("Rdv past--> " + mtd + "\n" +
+                                                            lines[i+1] + lines[i+2] + "\n")
+                                                        print("+ Modification finish")
+                                                        break
+                                                    else:
+                                                        print("+ None file has been changed")
+                                                        break
                             else:
                                 pass
     except (FileNotFoundError, IndexError) as infofile1:

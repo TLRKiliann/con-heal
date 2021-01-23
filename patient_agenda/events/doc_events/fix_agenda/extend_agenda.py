@@ -88,8 +88,7 @@ def retrieve_input():
     # Create the directory 
     # 'agenda_saved' in 
     # './patient_agenda/events/doc_events/fix_agenda' 
-    topath = './patient_agenda/events/doc_events/'\
-    'fix_agenda/agenda_saved'
+    topath = './patient_agenda/events/doc_events/fix_agenda/agenda_saved'
 
     try:
         os.mkdir(topath)
@@ -113,6 +112,8 @@ def retrieve_input():
             print("+ Out of range !!! (more than 100 files)")
             break
 
+    #with open('./patient_agenda/events/doc_events/fix_agenda/rdv_copy.txt', '+a') as f_rdv:
+    """
     os.remove('./patient_agenda/events/doc_events/fix_agenda/fixed_rdv.txt')
     os.remove('./patient_agenda/events/doc_events/fix_agenda/patient_value.json')
     os.remove('./patient_agenda/events/doc_events/patient_rdv.json')
@@ -127,6 +128,7 @@ def retrieve_input():
         stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     print("\n+ Ok, agenda 1 notified and copied to server.\n")
+    """
 
 def messFromSafeButt():
     """

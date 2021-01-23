@@ -121,6 +121,14 @@ def retrieve_input():
     print("+ os.listdir after new file created : ")
     print(os.listdir('./patient_agenda/events/doc_events/fix_agenda/agenda_saved/'))
 
+    try:
+        # To copy to ./Backup/Files1
+        src = r'./patient_agenda/events/doc_events/fix_agenda/agenda_saved'
+        dst = r'./Backup/Files1'
+        shutil.copy(os.path.join(src, file), dst)
+    except (OSError, FileNotFoundError) as e:
+        print("+ No files from agenda_1 copied !!!", e)
+
     proc = subprocess.run(["scp", "-r",
         "./patient_agenda/events/doc_events/fix_agenda/agenda_saved",
         "pi@192.168.18.12:~/tt_doc/doc_txt1"],

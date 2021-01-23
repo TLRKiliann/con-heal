@@ -26,7 +26,7 @@ def dispAgBox():
         print("No file entryfile.txt exist", fileout1)
 
     try:
-        dateagenda = (datetime.datetime.now() + datetime.timedelta(\
+        magicword = (datetime.datetime.now() + datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
         for path, dirs, files in os.walk('./patient_agenda/events/'
             'doc_events/fix_agenda/agenda_saved/'):
@@ -35,43 +35,23 @@ def dispAgBox():
                     lines = read_f.readlines()
                     for i in range(0, len(lines)):
                         line = lines[i]
-                        if dateagenda in line:
-                            print("Nous y voici !")                            
+                        if magicword in line:
+                            print("Nous y voici !")
                             print(lines[i])
                             print(lines[i+1])
                             print(lines[i+2])
                             messagebox.showwarning('Info', 'Look at AGENDA, '
                                 'there is an appointment tomorrow for : ' \
-                                + new_text1 + lines[i] + lines[i+1] + \
+                                + new_text2 + lines[i] + lines[i+1] + \
                                 lines[i+2])
 
                             MSGREM1 = messagebox.askyesno("Ask", "Do you want to stop reminders ?")
                             if MSGREM1 == 1:
-                                magicword = (datetime.datetime.now() + datetime.timedelta(\
-                                    days=1)).strftime('%d/%m/%Y')
-                                for path, dirs, files in os.walk('./patient_agenda/events/'\
-                                    'doc_events/fix_agenda/agenda_saved/'):
-                                        for file in files:
-                                            with open(os.path.join(path, file), 'r') as read_f:
-                                                lines = read_f.readlines()
-                                                for line in lines:
-                                                    line = lines[i]
-                                                    noway = "Fixed on :"
-                                                    if line[0:10] == noway:
-                                                        print("+ There is noway : ")
-                                                        print(line[0:10])
-                                                    elif magicword in line:
-                                                        mtd = magicword.replace("/", ".")
-                                                        print("+ It is magicword : ")
-                                                        print(mtd)
-                                                        write_f = open(os.path.join(path, file), 'w')
-                                                        write_f.write("Rdv past--> " + mtd + "\n" +
-                                                            lines[i+1] + lines[i+2] + "\n")
-                                                        print("+ Modification finish")
-                                                        break
-                                                    else:
-                                                        print("+ None file has been changed")
-                                                        break
+                                write_f = open(os.path.join(path, file), 'w')
+                                write_f.write(" Rdv past--> " + lines[i+1] + \
+                                    lines[i+2] + "\n")
+                                print("+ Modification finish")
+                                break
                             else:
                                 pass
     except (FileNotFoundError, IndexError) as infofile1:
@@ -98,7 +78,11 @@ def dispAgBox():
     proc = subprocess.run(["scp", "-r", "./Backup/Files1",
         "pi@192.168.18.12:~/tt_doc/doc_txt1"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
-    print("\n+ Ok, ---RDV PAST--- notified and copied to server.\n")
+    if proc.stderr == b'':
+        print("+ './Backup/Files1' downloaded !")
+    else:
+        print("+ No file to download !")
+        messagebox.showerror("Error", "./Backup/Files1 not uploaded")
 
     # Patient 2
     try:
@@ -109,7 +93,7 @@ def dispAgBox():
         print("No file entryfile2.txt exist", fileout2)
 
     try:
-        dateagenda = (datetime.datetime.now() + datetime.timedelta(\
+        magicword = (datetime.datetime.now() + datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
         for path, dirs, files in os.walk('./patient_agenda/events2/'
             'doc_events/fix_agenda/agenda_saved/'):
@@ -118,7 +102,7 @@ def dispAgBox():
                     lines = read_f.readlines()
                     for i in range(0, len(lines)):
                         line = lines[i]
-                        if dateagenda in line:
+                        if magicword in line:
                             print("Nous y voici !")
                             print(lines[i])
                             print(lines[i+1])
@@ -130,36 +114,42 @@ def dispAgBox():
 
                             MSGREM2 = messagebox.askyesno("Ask", "Do you want to stop reminders ?")
                             if MSGREM2 == 1:
-                                magicword = (datetime.datetime.now() + datetime.timedelta(\
-                                    days=1)).strftime('%d/%m/%Y')
-                                for path, dirs, files in os.walk('./patient_agenda/events2/'\
-                                    'doc_events/fix_agenda/agenda_saved/'):
-                                    for file in files:
-                                        with open(os.path.join(path, file), 'r') as read_f:
-                                            lines = read_f.readlines()
-                                            for line in lines:
-                                                line = lines[i]
-                                                noway = "Fixed on :"
-                                                if line[0:10] == noway:
-                                                    print("+ There is noway : ")
-                                                    print(line[0:10])
-                                                elif magicword in line:
-                                                    print("+ It is magicword : ")
-                                                    print(line[0:10])
-                                                    write_f = open(os.path.join(path, file), 'w')
-                                                    write_f.write(" Rdv past--> " + lines[i+1] + \
-                                                        lines[i+2] + "\n")
-                                                    print("Modification finish")
-                                                    break
-                                                else:
-                                                    print("None file has been writted")
-                                                    break
+                                write_f = open(os.path.join(path, file), 'w')
+                                write_f.write(" Rdv past--> " + lines[i+1] + \
+                                    lines[i+2] + "\n")
+                                print("+ Modification finish")
+                                break
                             else:
                                 pass
     except (FileNotFoundError, IndexError) as infofile2:
         print("File 2 has not been found", infofile2)
     else:
         ("Error unknow")
+
+    try:
+        for path, dirs, files in os.walk('./patient_agenda/events2/'\
+            'doc_events/fix_agenda/agenda_saved/'):
+            for file in files:
+                with open(os.path.join(path, file), 'r') as r_file:
+                    lines = r_file.readlines()
+                    for line in lines:
+                        pastf = "Rdv past--> "
+                        if line[0:12] == pastf:
+                            shutil.copy(os.path.join(path, file), "./Backup/Files2")
+                            print("+ Agenda 1 copied to ./Backup/Files2")
+                        else:
+                            break
+    except (FileNotFoundError, OSError) as err_finfi:
+        print("+ File 1 not found", err_finfi)
+
+    secproc = subprocess.run(["scp", "-r", "./Backup/Files2",
+        "pi@192.168.18.12:~/tt_doc/doc_txt2"], stderr=subprocess.PIPE)
+    print("Result SCP transfert : %s" % repr(proc.stderr))
+    if secproc.stderr == b'':
+        print("+ './Backup/Files2' downloaded !")
+    else:
+        print("+ No file to download !")
+        messagebox.showerror("Error", "./Backup/Files2 not uploaded")
 
     # Patient 3
     try:

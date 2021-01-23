@@ -99,8 +99,8 @@ def retrieve_input():
     origin_path = './patient_agenda/events2/doc_events/'\
     'fix_agenda/fixed_rdv.txt'
     main_path = './patient_agenda/events2/doc_events/'\
-    'fix_agenda/agenda_saved/'
-    dst_path = './Backup/File1'
+    'fix_agenda/agenda_saved'
+    dst_path = './Backup/File2'
 
     files = [None] * 100
     for x in range(0, 100):
@@ -121,15 +121,15 @@ def retrieve_input():
 
     print("+ os.listdir after new file created : ")
     print(os.listdir('./patient_agenda/events2/doc_events/'\
-        'fix_agenda/agenda_saved/'))
+        'fix_agenda/agenda_saved'))
 
-    shutil.copy(main_path, dst_path)
+    shutil.copytree(main_path, os.path.join(main_path, dst_path))
 
     secproc = subprocess.run(["scp", "-r",
         "./patient_agenda/events2/doc_events/fix_agenda/agenda_saved",
         "pi@192.168.18.12:~/tt_doc/doc_txt2"],
         stderr=subprocess.PIPE)
-    print("Result SCP transfert : %s" % repr(proc.stderr))
+    print("Result SCP transfert : %s" % repr(secproc.stderr))
     if secproc.stderr == b'':
         print("+ './Backup/Files2' downloaded !")
     else:

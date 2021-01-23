@@ -42,7 +42,7 @@ def dispAgBox():
                             print(lines[i+2])
                             messagebox.showwarning('Info', 'Look at AGENDA, '
                                 'there is an appointment tomorrow for : ' \
-                                + new_text2 + lines[i] + lines[i+1] + \
+                                + new_text1 + lines[i] + lines[i+1] + \
                                 lines[i+2])
 
                             MSGREM1 = messagebox.askyesno("Ask", "Do you want to stop reminders ?")

@@ -4,11 +4,11 @@
 
 import tkinter
 from tkinter import *
+from tkinter import messagebox
 import os
 import subprocess
 import time
 import shutil
-from tkinter import messagebox
 
 
 fen = Tk()

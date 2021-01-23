@@ -99,6 +99,7 @@ def retrieve_input():
     'fix_agenda/fixed_rdv.txt'
     main_path = './patient_agenda/events/doc_events/'\
     'fix_agenda/agenda_saved/'
+    dst_path = './Backup/File1'
 
     files = [None] * 100
     for x in range(0, 100):
@@ -112,7 +113,6 @@ def retrieve_input():
             print("+ Out of range !!! (more than 100 files)")
             break
 
-    #with open('./patient_agenda/events/doc_events/fix_agenda/rdv_copy.txt', '+a') as f_rdv:
     os.remove('./patient_agenda/events/doc_events/fix_agenda/fixed_rdv.txt')
     os.remove('./patient_agenda/events/doc_events/fix_agenda/patient_value.json')
     os.remove('./patient_agenda/events/doc_events/patient_rdv.json')
@@ -121,12 +121,18 @@ def retrieve_input():
     print("+ os.listdir after new file created : ")
     print(os.listdir('./patient_agenda/events/doc_events/fix_agenda/agenda_saved/'))
 
+    shutil.copy(main_path, dst_path)
+
     proc = subprocess.run(["scp", "-r",
         "./patient_agenda/events/doc_events/fix_agenda/agenda_saved",
         "pi@192.168.18.12:~/tt_doc/doc_txt1"],
         stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
-    print("\n+ Ok, agenda 1 notified and copied to server.\n")
+    if proc.stderr == b'':
+        print("+ './Backup/Files1' downloaded !")
+    else:
+        print("+ No file to download !")
+        messagebox.showerror("Error", "./Backup/Files1 not uploaded")
 
 
 def messFromSafeButt():

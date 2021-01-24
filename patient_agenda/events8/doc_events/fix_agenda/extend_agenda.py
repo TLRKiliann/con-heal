@@ -121,7 +121,26 @@ def retrieve_input():
     print("+ os.listdir after new file created : ")
     print(os.listdir('./patient_agenda/events8/doc_events/'\
         'fix_agenda/agenda_saved/'))
-    
+
+    # To copy to ./Backup/Files8
+    try:
+        src8 = r'./patient_agenda/events8/doc_events/fix_agenda/agenda_saved'
+        dst8 = r'./Backup/Files8'
+        shutil.copy(os.path.join(src8, file), dst8)
+    except (OSError, FileNotFoundError) as e8:
+        print("+ No files from agenda_8 copied !!!", e8)
+
+    secproc = subprocess.run(["scp", "-r",
+        "./patient_agenda/events8/doc_events/fix_agenda/agenda_saved",
+        "pi@192.168.18.12:~/tt_doc/doc_txt8"],
+        stderr=subprocess.PIPE)
+    print("Result SCP transfert : %s" % repr(secproc.stderr))
+    if secproc.stderr == b'':
+        print("+ './Backup/Files8' uploaded !")
+    else:
+        print("+ No file to upload !")
+        messagebox.showerror("Error", "./Backup/Files8 not uploaded")
+
 def messFromSafeButt():
     """
         To save data when user

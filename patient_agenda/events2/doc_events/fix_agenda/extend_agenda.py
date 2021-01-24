@@ -130,7 +130,7 @@ def retrieve_input():
                 with open(os.path.join(path, file), 'r') as read_f:
                     lines = read_f.readlines()
     except (OSError, FileNotFoundError) as err_loop:
-        print("+ Loop for file doesn't work !", err_loop)
+        print("+ Loop for agenda 2 doesn't work !", err_loop)
 
     # To copy to ./Backup/Files2
     try:

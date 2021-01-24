@@ -124,7 +124,6 @@ def retrieve_input():
 
     # To copy to ./Backup/Files2
     try:
-        # To copy to ./Backup/Files2
         src2 = r'./patient_agenda/events2/doc_events/fix_agenda/agenda_saved'
         dst2 = r'./Backup/Files2'
         shutil.copy(os.path.join(src2, file), dst2)

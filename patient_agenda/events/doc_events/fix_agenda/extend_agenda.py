@@ -121,8 +121,8 @@ def retrieve_input():
     print("+ os.listdir after new file created : ")
     print(os.listdir('./patient_agenda/events/doc_events/fix_agenda/agenda_saved/'))
 
+    # To copy to ./Backup/Files1
     try:
-        # To copy to ./Backup/Files1
         src = r'./patient_agenda/events/doc_events/fix_agenda/agenda_saved'
         dst = r'./Backup/Files1'
         shutil.copy(os.path.join(src, file), dst)
@@ -139,7 +139,6 @@ def retrieve_input():
     else:
         print("+ No file to upload !")
         messagebox.showerror("Error", "./Backup/Files1 not uploaded")
-
 
 def messFromSafeButt():
     """

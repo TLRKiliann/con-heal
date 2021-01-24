@@ -80,10 +80,10 @@ def retrieve_input():
     """
     inputValue = textBox.get("1.0", "end-1c" + '\n')
     print(inputValue)
-    file = open('./patient_agenda/events24/doc_events/'\
+    file_w = open('./patient_agenda/events24/doc_events/'\
         'fix_agenda/fixed_rdv.txt', 'w')
-    file.write(textBox.get("1.0", "end-1c") + '\n\n')
-    file.close()
+    file_w.write(textBox.get("1.0", "end-1c") + '\n\n')
+    file_w.close()
 
     # Create the directory 
     # 'agenda_saved' in 
@@ -101,27 +101,59 @@ def retrieve_input():
     main_path = './patient_agenda/events24/doc_events/'\
     'fix_agenda/agenda_saved/'
 
-    files = [None] * 100
+    allfiles = [None] * 100
     for x in range(0, 100):
-        files[x] = "file" + str(x) + ".txt"
-        if not os.path.exists(main_path + files[x]):
-            shutil.copy(origin_path, main_path + files[x])
+        allfiles[x] = "file" + str(x) + ".txt"
+        if not os.path.exists(main_path + allfiles[x]):
+            shutil.copy(origin_path, main_path + allfiles[x])
             break
-        elif os.path.exists(main_path + files[x]):
+        elif os.path.exists(main_path + allfiles[x]):
             x += 1
         else:
             print("+ Out of range !!! (more than 100 files)")
             break
 
-    os.remove('./patient_agenda/events24/doc_events/fix_agenda/fixed_rdv.txt')
-    os.remove('./patient_agenda/events24/doc_events/fix_agenda/patient_value.json')
-    os.remove('./patient_agenda/events24/doc_events/patient_rdv.json')
-    os.remove('./patient_agenda/events24/patient_calendar.txt')
+    try:
+        os.remove('./patient_agenda/events24/doc_events/fix_agenda/fixed_rdv.txt')
+        os.remove('./patient_agenda/events24/doc_events/fix_agenda/patient_value.json')
+        os.remove('./patient_agenda/events24/doc_events/patient_rdv.json')
+        os.remove('./patient_agenda/events24/patient_calendar.txt')
+    except (OSError, FileNotFoundError) as err_rm:
+        print("os.remove doesn't work for agenda 24", err_rm)
 
     print("+ os.listdir after new file created : ")
     print(os.listdir('./patient_agenda/events24/doc_events/'\
         'fix_agenda/agenda_saved/'))
-    
+
+    # To difine file for next try
+    try:
+        for path, dirs, files in os.walk('./patient_agenda/events24/'
+            'doc_events/fix_agenda/agenda_saved/'):
+            for file in files:
+                with open(os.path.join(path, file), 'r') as read_f:
+                    lines = read_f.readlines()
+    except (OSError, FileNotFoundError) as err_loop:
+        print("+ Loop for agenda 24 doesn't work !", err_loop)
+
+    # To copy to ./Backup/Files10
+    try:
+        src24 = r'./patient_agenda/events24/doc_events/fix_agenda/agenda_saved'
+        dst24 = r'./Backup/Files24'
+        shutil.copy(os.path.join(src24, file), dst24)
+    except (OSError, FileNotFoundError) as e24:
+        print("+ No files from agenda_24 copied !!!", e24)
+
+    secproc = subprocess.run(["scp", "-r",
+        "./patient_agenda/events24/doc_events/fix_agenda/agenda_saved",
+        "pi@192.168.18.12:~/tt_doc/doc_txt24"],
+        stderr=subprocess.PIPE)
+    print("Result SCP transfert : %s" % repr(secproc.stderr))
+    if secproc.stderr == b'':
+        print("+ './Backup/Files24' uploaded !")
+    else:
+        print("+ No file to upload !")
+        messagebox.showerror("Error", "./Backup/Files24 not uploaded")
+
 def messFromSafeButt():
     """
         To save data when user

@@ -6,7 +6,7 @@ from tkinter import *
 from tkinter import ttk
 from tkinter import messagebox
 from subprocess import run
-
+from tt_download import launchdownload
 
 window = Tk()
 window.title('ACCESS')
@@ -29,6 +29,8 @@ def closeWindow():
         heal_track.py !
     """
     window.destroy()
+    launchdownload()
+
 
 def validentry():
     """

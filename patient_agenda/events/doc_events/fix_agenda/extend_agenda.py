@@ -118,7 +118,7 @@ def retrieve_input():
         os.remove('./patient_agenda/events/doc_events/patient_rdv.json')
         os.remove('./patient_agenda/events/patient_calendar.txt')
     except (OSError, FileNotFoundError) as err_rm:
-        print("OS error or FileNotFound", err_rm)
+        print("os.remove doesn't work for agenda 1", err_rm)
 
     print("+ os.listdir after new file created : ")
     print(os.listdir('./patient_agenda/events/doc_events/fix_agenda/agenda_saved/'))
@@ -130,7 +130,7 @@ def retrieve_input():
                 with open(os.path.join(path, file), 'r') as read_f:
                     lines = read_f.readlines()
     except (OSError, FileNotFoundError) as err_loop:
-        print("+ OSError or FileNotFoundError", err_loop)
+        print("+ Loop for file doesn't work !", err_loop)
 
     # To copy to ./Backup/Files1
     try:

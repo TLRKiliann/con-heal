@@ -99,7 +99,6 @@ def retrieve_input():
     'fix_agenda/fixed_rdv.txt'
     main_path = './patient_agenda/events/doc_events/'\
     'fix_agenda/agenda_saved/'
-    dst_path = './Backup/Files1/'
 
     files = [None] * 100
     for x in range(0, 100):

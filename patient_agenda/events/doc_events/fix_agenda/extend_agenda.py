@@ -123,6 +123,7 @@ def retrieve_input():
     print("+ os.listdir after new file created : ")
     print(os.listdir('./patient_agenda/events/doc_events/fix_agenda/agenda_saved/'))
 
+    # To difine file for next try (to be optimize with next)
     try:
         for path, dirs, files in os.walk('./patient_agenda/events/'
             'doc_events/fix_agenda/agenda_saved/'):

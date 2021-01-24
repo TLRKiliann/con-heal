@@ -125,7 +125,7 @@ def retrieve_input():
     print(os.listdir('./patient_agenda/events3/doc_events/'\
         'fix_agenda/agenda_saved/'))
 
-    # To difine file for next try
+    # To difine file for next try ()
     try:
         for path, dirs, files in os.walk('./patient_agenda/events3/'
             'doc_events/fix_agenda/agenda_saved/'):

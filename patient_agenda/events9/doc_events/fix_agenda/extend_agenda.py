@@ -80,10 +80,10 @@ def retrieve_input():
     """
     inputValue = textBox.get("1.0", "end-1c" + '\n')
     print(inputValue)
-    file = open('./patient_agenda/events9/doc_events/'\
+    file_w = open('./patient_agenda/events9/doc_events/'\
         'fix_agenda/fixed_rdv.txt', 'w')
-    file.write(textBox.get("1.0", "end-1c") + '\n\n')
-    file.close()
+    file_w.write(textBox.get("1.0", "end-1c") + '\n\n')
+    file_w.close()
 
     # Create the directory 
     # 'agenda_saved' in 
@@ -101,26 +101,39 @@ def retrieve_input():
     main_path = './patient_agenda/events9/doc_events/'\
     'fix_agenda/agenda_saved/'
 
-    files = [None] * 100
+    allfiles = [None] * 100
     for x in range(0, 100):
-        files[x] = "file" + str(x) + ".txt"
-        if not os.path.exists(main_path + files[x]):
-            shutil.copy(origin_path, main_path + files[x])
+        allfiles[x] = "file" + str(x) + ".txt"
+        if not os.path.exists(main_path + allfiles[x]):
+            shutil.copy(origin_path, main_path + allfiles[x])
             break
-        elif os.path.exists(main_path + files[x]):
+        elif os.path.exists(main_path + allfiles[x]):
             x += 1
         else:
             print("+ Out of range !!! (more than 100 files)")
             break
 
-    os.remove('./patient_agenda/events9/doc_events/fix_agenda/fixed_rdv.txt')
-    os.remove('./patient_agenda/events9/doc_events/fix_agenda/patient_value.json')
-    os.remove('./patient_agenda/events9/doc_events/patient_rdv.json')
-    os.remove('./patient_agenda/events9/patient_calendar.txt')
+    try:
+        os.remove('./patient_agenda/events9/doc_events/fix_agenda/fixed_rdv.txt')
+        os.remove('./patient_agenda/events9/doc_events/fix_agenda/patient_value.json')
+        os.remove('./patient_agenda/events9/doc_events/patient_rdv.json')
+        os.remove('./patient_agenda/events9/patient_calendar.txt')
+    except (OSError, FileNotFoundError) as err_rm:
+        print("os.remove doesn't work for agenda 9", err_rm)
 
     print("+ os.listdir after new file created : ")
     print(os.listdir('./patient_agenda/events9/doc_events/'\
         'fix_agenda/agenda_saved/'))
+
+    # To difine file for next try
+    try:
+        for path, dirs, files in os.walk('./patient_agenda/events9/'
+            'doc_events/fix_agenda/agenda_saved/'):
+            for file in files:
+                with open(os.path.join(path, file), 'r') as read_f:
+                    lines = read_f.readlines()
+    except (OSError, FileNotFoundError) as err_loop:
+        print("+ Loop for agenda 9 doesn't work !", err_loop)
 
     # To copy to ./Backup/Files9
     try:

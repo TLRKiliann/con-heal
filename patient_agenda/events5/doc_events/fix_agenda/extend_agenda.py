@@ -119,7 +119,7 @@ def retrieve_input():
         os.remove('./patient_agenda/events5/doc_events/patient_rdv.json')
         os.remove('./patient_agenda/events5/patient_calendar.txt')
     except (OSError, FileNotFoundError) as err_rm:
-        print("os.remove doesn't work for agenda 4", err_rm)
+        print("os.remove doesn't work for agenda 5", err_rm)
 
     print("+ os.listdir after new file created : ")
     print(os.listdir('./patient_agenda/events5/doc_events/'\

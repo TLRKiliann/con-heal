@@ -16,7 +16,6 @@ import threading
 import time
 import subprocess
 import os
-from shootransfert import loaderfile
 
 
 def task(root):
@@ -304,4 +303,3 @@ def launchdownload():
     task(root) # This will block while the mainloop runs
     treat.join()
     root.destroy() # To destroy completely window
-    shootransfert()

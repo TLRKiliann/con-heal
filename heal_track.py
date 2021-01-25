@@ -159,7 +159,12 @@ from ttt.patienttt22 import callTreatment22
 from ttt.patienttt23 import callTreatment23
 from ttt.patienttt24 import callTreatment24
 import passw
+from shootransfert import loaderfile
 
+
+def tocopyfiles():
+    loaderfile()
+tocopyfiles()
 
 class ScrollCanvas(tk.Frame):
     """

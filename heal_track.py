@@ -3,6 +3,8 @@
 
 
 from tkinter import *
+import tkinter as tk
+from tkinter import ttk
 from tkinter import messagebox
 import time
 import datetime as dt
@@ -158,18 +160,18 @@ from ttt.patienttt21 import callTreatment21
 from ttt.patienttt22 import callTreatment22
 from ttt.patienttt23 import callTreatment23
 from ttt.patienttt24 import callTreatment24
-import passw
+#import passw
 
 
-class ScrollCanvas(Frame):
+class ScrollCanvas(tk.Frame):
     """
         To prepare ScrollBar for main application.
     """
     def __init__(self, boss=None):
-        Frame.__init__(self, borderwidth=borderwidth, relief=relief)
+        tk.Frame.__init__(self, borderwidth=borderwidth, relief=relief)
         self.can = Canvas(self, width=width, height=height, bd=bd,
             bg=bg, relief=relief)
-        self.frame = Frame(self.can)
+        self.frame = tk.Frame(self.can)
         self.vsb = Scrollbar(self, orient=VERTICAL, command=self.can.yview)
         self.can.configure(yscrollcommand=self.vsb.set)
         self.vsb.pack(side=RIGHT, fill=Y)
@@ -178,14 +180,14 @@ class ScrollCanvas(Frame):
                                   tags="self.frame")
         self.frame.bind("<Configure>", self.onFrameConfigure)
 
-class MenuBar(Frame):
+class MenuBar(tk.Frame):
     """
         Wrapp down
     """
     def __init__(self, boss=None):
-        Frame.__init__(self, borderwidth=5, bg='RoyalBlue3', padx=0)
+        tk.Frame.__init__(self, borderwidth=5, bg='RoyalBlue3', padx=0)
         # 1st menu
-        fileMenu = Menubutton(self, text='Menu', fg='white',
+        fileMenu = tk.Menubutton(self, text='Menu', fg='white',
             font=("Times 14"), bg='grey30', relief=GROOVE)
         new_text = StringVar()
         new_text2 = StringVar()
@@ -479,7 +481,7 @@ class MenuBar(Frame):
 
         fileMenu.pack(side=LEFT, padx=3)
         # Partie déroulante du menu 1st
-        me1 = Menu(fileMenu, tearoff=0)
+        me1 = tk.Menu(fileMenu, tearoff=0)
         me1.add_command(label='Start Page', underline=0, font=("Times 14 bold"),
             background='black',activebackground='aquamarine',
             foreground='aquamarine', activeforeground='black',
@@ -509,7 +511,7 @@ class MenuBar(Frame):
             menu=me1)
 
         # Agenda menu
-        cmd_agenda = Menubutton(self, text='Agenda', font=("Times 14"),
+        cmd_agenda = tk.Menubutton(self, text='Agenda', font=("Times 14"),
             fg='cyan', bg='grey30', relief=GROOVE)
         cmd_agenda.pack(side=LEFT, padx=3)
         me3 = Menu(cmd_agenda)
@@ -591,10 +593,10 @@ class MenuBar(Frame):
             menu=me3)
 
         # Contact menu
-        contact = Menubutton(self, text='Contacts', font=("Times 14"),
+        contact = tk.Menubutton(self, text='Contacts', font=("Times 14"),
             fg='cyan', bg='grey30', relief=GROOVE)
         contact.pack(side=LEFT, padx=3)
-        contchck = Menu(contact)
+        contchck = tk.Menu(contact)
         me1 = Menu(contchck)
         me1.add_command(label='Patient Data', font=('Times 12'), background='black',
             activebackground='cyan', foreground='cyan', activeforeground='black',
@@ -982,7 +984,7 @@ class MenuBar(Frame):
         contact.configure(activeforeground='black', activebackground='cyan', menu=contchck)
 
         # 14 besoins menu
-        cmd_Besoins = Menubutton(self, text='14 Needs', font=("Times 14"),
+        cmd_Besoins = tk.Menubutton(self, text='14 Needs', font=("Times 14"),
             fg='cyan', bg='grey30', relief=GROOVE)
         cmd_Besoins.pack(side=LEFT, padx=3)
         # Partie déroulante du menu 14b
@@ -1087,7 +1089,7 @@ class MenuBar(Frame):
             menu=me4)
 
         # Helth and care menu
-        cmd_Soins = Menubutton(self, text='Care and monitoring', font=("Times 14"),
+        cmd_Soins = tk.Menubutton(self, text='Care and monitoring', font=("Times 14"),
             fg='cyan', bg='grey30', relief=GROOVE)
         cmd_Soins.pack(side=LEFT, padx=3)
         # Partie déroulante du menu health and care
@@ -1192,7 +1194,7 @@ class MenuBar(Frame):
             menu=meSoins)
 
         # Treatments
-        cmd_ttt = Menubutton(self, text='Treatments', font=("Times 14"),
+        cmd_ttt = tk.Menubutton(self, text='Treatments', font=("Times 14"),
             fg='cyan', bg='grey30', relief=GROOVE)
         cmd_ttt.pack(side=LEFT, padx=3)
         # Partie déroulante du menu health and care
@@ -1297,7 +1299,7 @@ class MenuBar(Frame):
             menu=meTtt)
 
         # Vital parameters menu
-        self.cmd_Param=Menubutton(self, text='Vital Parameters', font=("Times 14"),
+        self.cmd_Param = tk.Menubutton(self, text='Vital Parameters', font=("Times 14"),
             fg='cyan', bg='grey30', relief=GROOVE)
         self.cmd_Param.pack(side=LEFT, padx=3)
         # Partie déroulante du menu param
@@ -1402,7 +1404,7 @@ class MenuBar(Frame):
             menu=menuParam)
 
         # BMI menu
-        cmd_BMI = Menubutton(self, text='Body Mass Indice', font=("Times 14"),
+        cmd_BMI = tk.Menubutton(self, text='Body Mass Indice', font=("Times 14"),
             fg='cyan', bg='grey30', relief=GROOVE)
         cmd_BMI.pack(side=LEFT, padx=3)
         # drop-down portion of BMI menu
@@ -1484,7 +1486,7 @@ class MenuBar(Frame):
             menu=meBmi)
 
         # Medical Visite
-        cmd_Vmed = Menubutton(self, text='Medical Visit', font=("Times 14"),
+        cmd_Vmed = tk.Menubutton(self, text='Medical Visit', font=("Times 14"),
             fg='cyan', bg='grey30', relief=GROOVE)
         cmd_Vmed.pack(side=LEFT, padx=3)
         # drop-down portion of vmed
@@ -1566,7 +1568,7 @@ class MenuBar(Frame):
             menu=meVmed)
 
         # Nutrition menu for intolerance and hate meals
-        cmd_Print = Menubutton(self, text='Intolerance All.', font=("Times 14"),
+        cmd_Print = tk.Menubutton(self, text='Intolerance All.', font=("Times 14"),
             fg='cyan', bg='grey30', relief=GROOVE)
         cmd_Print.pack(side=LEFT, padx=3)
         # drop-down portion of nutrition
@@ -1648,7 +1650,7 @@ class MenuBar(Frame):
             menu=mePrint)
 
         # Menu for showing all Graphs togather per patient
-        cmd_backup=Menubutton(self, text='Global', font=("Times 14"), fg='cyan',
+        cmd_backup = tk.Menubutton(self, text='Global', font=("Times 14"), fg='cyan',
             bg='grey30', relief=GROOVE)
         cmd_backup.pack(side=LEFT, padx=3)
         # drop-down portion of Graphics menu
@@ -1843,12 +1845,12 @@ class MenuBar(Frame):
         cmd_backup.configure(activeforeground='black', activebackground='cyan', menu=me1)
 
 # Application principale (Main app)
-class Application(Frame):
+class Application(tk.Frame):
     """
         Main app to display first page.
     """
     def __init__(self, boss=None):
-        Frame.__init__(self, borderwidth=5, bg='RoyalBlue4', padx=20, pady=20, relief=GROOVE)
+        tk.Frame.__init__(self, borderwidth=5, bg='RoyalBlue4', padx=20, pady=20, relief=GROOVE)
         self.master.title('Time-Track Developed by ko@l@tr33 - 2020')
         self.master.withdraw()
         self.master.update_idletasks()  # Update "requested size" from geometry manager
@@ -1862,14 +1864,14 @@ class Application(Frame):
         self.mBar.pack(side=TOP, fill=X, expand=YES)
 
         self.can = Canvas(self, width=1250, height=700, bg='black')
-        self.frame = Frame(self.can)
+        self.frame = tk.Frame(self.can)
         # ScrollCanvas limite de la zone à parcourir avec la barre 1250 - 700
         self.vsb = Scrollbar(self, orient=VERTICAL, command=self.can.yview)
         self.can.configure(yscrollcommand=self.vsb.set)
         self.vsb.pack(side=RIGHT, fill=Y)
         self.can.create_window((4,4), window=self.frame, anchor=NW, tags="self.frame")
         
-        self.clock_label = Label(self, text="", fg="white", bg="RoyalBlue3",
+        self.clock_label = tk.Label(self, text="", fg="white", bg="RoyalBlue3",
             font=("helvetica", 18, 'bold'))
         self.clock_label.pack(side=TOP, fill=X, expand=YES)
         self.clock_label.after(200, self.tick)
@@ -1894,21 +1896,21 @@ class Application(Frame):
         self.button1_window = self.can.create_window(75, 30, anchor=CENTER,
             window=self.button1)
         # Pycon button
-        self.button2 = Button(self, text="DATABASE", font=('Times 18 bold'),
+        self.button2 = tk.Button(self, text="DATABASE", font=('Times 18 bold'),
             bg='RoyalBlue3', fg='white', command = self.funcPyCon)
         self.button2.configure(width=15, bd=3, highlightbackground='RoyalBlue4',
             activebackground='pale turquoise')
         self.button2_window = self.can.create_window(300, 450, anchor=CENTER,
             window=self.button2)
         # Synopsis button
-        self.button3 = Button(self, text="TEXTBOX", font=('Times 18 bold'),
+        self.button3 = tk.Button(self, text="TEXTBOX", font=('Times 18 bold'),
             bg='RoyalBlue3', fg='white', command = self.showSynopsis)
         self.button3.configure(width=15, bd=3, highlightbackground='RoyalBlue4',
             activebackground='pale turquoise')
         self.button3_window = self.can.create_window(625, 450, anchor=CENTER,
             window=self.button3)
         # Psychotabs button
-        self.button4 = Button(self, text="RESIDENTS", font=('Times 18 bold'),
+        self.button4 = tk.Button(self, text="RESIDENTS", font=('Times 18 bold'),
             bg='RoyalBlue3', fg='white', command = self.showPatients)
         self.button4.configure(width=15, bd=3, highlightbackground='RoyalBlue4',
             activebackground='pale turquoise')
@@ -1980,30 +1982,30 @@ class Application(Frame):
         """
             Info for button on first page
         """
-        self.lab=Tk()
+        self.lab=tk.Tk()
         self.lab.title("ATCD")
         self.lab.configure(bg="grey22")
 
-        self.labFra=LabelFrame(self.lab, text="\nWelcome !",
+        self.labFra=ttk.LabelFrame(self.lab, text="\nWelcome !",
             font=("Arial 12"),fg='cyan', bg='grey22')
         self.labFra.pack(padx=5, pady=5)
-        self.separator = Frame(self.labFra, height=2, bd=1,
+        self.separator = tk.Frame(self.labFra, height=2, bd=1,
             relief=SUNKEN)
 
-        self.lab4=Label(self.labFra, text="\nInfo",
+        self.lab4=ttk.Label(self.labFra, text="\nInfo",
             font=('Times 16 bold'), fg='cyan', bg='grey22').pack()
-        self.separator = Frame(self.labFra, height=2, bd=1, relief=SUNKEN)
+        self.separator = tk.Frame(self.labFra, height=2, bd=1, relief=SUNKEN)
         self.separator.pack(fill=X, padx=100, pady=3)
 
-        self.lab5=Label(self.labFra, justify=LEFT, fg='cyan',
+        self.lab5=ttk.Label(self.labFra, justify=LEFT, fg='cyan',
             bg='grey22', font=('Times', 14),
             text="\nMenu Bar, DB, Textbox and Residents are the most usefull skills\n"
             "to perform onto this app ! If you need help, you can go to MapApp to\n"
             "access map of this app and understand how the app is used ;)\n\n"
             "Enjoy it !\n").pack(padx=10)
-        self.separator = Frame(self.labFra, height=2, bd=1, relief=SUNKEN)
+        self.separator = tk.Frame(self.labFra, height=2, bd=1, relief=SUNKEN)
         self.separator.pack(fill=X, padx=30, pady=3)
-        self.lab6=Label(self.labFra, justify=LEFT, fg='cyan',
+        self.lab6=ttk.Label(self.labFra, justify=LEFT, fg='cyan',
             bg='grey22', font=('Times', 14),
             text="Path : Menu Bar --> Menu --> MapApp").pack(padx=10, pady=10)
 

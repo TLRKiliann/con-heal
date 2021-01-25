@@ -3,14 +3,17 @@
 
 
 from tkinter import *
+import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
 from subprocess import run
 from tt_download import launchdownload
 
-window = Tk()
+
+window = tk.Tk()
+window.style=ttk.Style()
 window.title('ACCESS')
-window.configure(bg='DodgerBlue2')
+window.configure(bg='RoyalBlue3')
 
 def hangonwin():
     """
@@ -52,7 +55,7 @@ def validentry():
 
 labelname = ttk.Label(window, text='Enter username :',
     font=('Times New Roman', 14, 'bold'),
-    foreground="white", background="DodgerBlue2")
+    foreground="white", background="RoyalBlue3")
 labelname.pack(pady=10)
 
 entryname = StringVar()
@@ -61,15 +64,16 @@ namenter.pack(padx=10)
 
 labelpass = ttk.Label(window, text='Enter password :',
     font=('Times New Roman', 14, 'bold'),
-    foreground="white", background="DodgerBlue2")
+    foreground="white", background="RoyalBlue3")
 labelpass.pack(pady=10)
 
 getpass = StringVar()
 passentry = ttk.Entry(window, textvariable=getpass, show='*')
 passentry.pack(padx=10)
 
-buttonvalidate = ttk.Button(window, text='Validate',
+buttonvalidate = tk.Button(window, text='Validate',
+    foreground='yellow', background='navy',
     command=validentry)
 buttonvalidate.pack(pady=10)
 
-mainloop()
+window.mainloop()

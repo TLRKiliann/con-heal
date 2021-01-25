@@ -202,4 +202,9 @@ def loaderfile():
 
     # Don't need for Vital Parameters...
     # Don't need for BMI...
+    
+    # Requiered for ttt + res
+    # Requiered for labo
+    # Required for VM, Diag, 14needs
+
 

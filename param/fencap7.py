@@ -17,7 +17,7 @@ import json
 import os
 import subprocess
 import time
-from progresstask7 import Main
+from progresstask7 import downloader
 from uploadbar import uploadmain
 
 
@@ -25,7 +25,7 @@ def tocallprogressbar():
     """
         To display progress bar with current download
     """
-    Main()
+    downloader()
 tocallprogressbar()
 
 def writeData(textDate, textHour, textName, textTa, textDia,

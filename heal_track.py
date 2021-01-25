@@ -7,8 +7,6 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
 import time
-import datetime as dt
-import os
 import subprocess
 from boxapp import callBox
 from patcaps import callResident
@@ -611,7 +609,7 @@ class MenuBar(tk.Frame):
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contacthcsystem_1)
         contchck.add_cascade(label=new_text, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me1)
         me2 = Menu(contchck)
         me2.add_command(label='Patient Data', font=('Times 12'), background='black',
@@ -627,7 +625,7 @@ class MenuBar(tk.Frame):
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contacthcsystem_2)
         contchck.add_cascade(label=new_text2, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me2)
         me3 = Menu(contchck)
         me3.add_command(label='Patient Data', font=('Times 12'), background='black',
@@ -643,7 +641,7 @@ class MenuBar(tk.Frame):
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contacthcsystem_3)
         contchck.add_cascade(label=new_text3, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me3)
         me4 = Menu(contchck)
         me4.add_command(label='Patient Data', font=('Times 12'), background='black',
@@ -659,7 +657,7 @@ class MenuBar(tk.Frame):
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contacthcsystem_4)
         contchck.add_cascade(label=new_text4, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me4)
         me5 = Menu(contchck)
         me5.add_command(label='Patient Data', font=('Times 12'), background='black',
@@ -675,7 +673,7 @@ class MenuBar(tk.Frame):
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contacthcsystem_5)
         contchck.add_cascade(label=new_text5, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me5)
         me6 = Menu(contchck)
         me6.add_command(label='Patient Data', font=('Times 12'), background='black',
@@ -691,7 +689,7 @@ class MenuBar(tk.Frame):
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contacthcsystem_6)
         contchck.add_cascade(label=new_text6, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me6)
         me7 = Menu(contchck)
         me7.add_command(label='Patient Data', font=('Times 12'), background='black',
@@ -707,7 +705,7 @@ class MenuBar(tk.Frame):
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contacthcsystem_7)
         contchck.add_cascade(label=new_text7, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me7)
         me8 = Menu(contchck)
         me8.add_command(label='Patient Data', font=('Times 12'), background='black',
@@ -723,7 +721,7 @@ class MenuBar(tk.Frame):
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contacthcsystem_8)
         contchck.add_cascade(label=new_text8, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me8)
         me9 = Menu(contchck)
         me9.add_command(label='Patient Data', font=('Times 12'), background='black',
@@ -739,7 +737,7 @@ class MenuBar(tk.Frame):
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contacthcsystem_9)
         contchck.add_cascade(label=new_text9, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me9)
         me10 = Menu(contchck)
         me10.add_command(label='Patient Data', font=('Times 12'), background='black',
@@ -755,7 +753,7 @@ class MenuBar(tk.Frame):
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contacthcsystem_10)
         contchck.add_cascade(label=new_text10, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me10)
         me11 = Menu(contchck)
         me11.add_command(label='Patient Data', font=('Times 12'), background='black',
@@ -771,7 +769,7 @@ class MenuBar(tk.Frame):
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contacthcsystem_11)
         contchck.add_cascade(label=new_text11, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me11)
         me12 = Menu(contchck)
         me12.add_command(label='Patient Data', font=('Times 12'), background='black',
@@ -787,7 +785,7 @@ class MenuBar(tk.Frame):
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contacthcsystem_12)
         contchck.add_cascade(label=new_text12, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me12)
         me13 = Menu(contchck)
         me13.add_command(label='Patient Data', font=('Times 12'), background='black',
@@ -803,7 +801,7 @@ class MenuBar(tk.Frame):
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contacthcsystem_13)
         contchck.add_cascade(label=new_text13, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me13)
         me14 = Menu(contchck)
         me14.add_command(label='Patient Data', font=('Times 12'), background='black',
@@ -819,7 +817,7 @@ class MenuBar(tk.Frame):
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contacthcsystem_14)
         contchck.add_cascade(label=new_text14, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me14)
         me15 = Menu(contchck)
         me15.add_command(label='Patient Data', font=('Times 12'), background='black',
@@ -835,7 +833,7 @@ class MenuBar(tk.Frame):
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contacthcsystem_15)
         contchck.add_cascade(label=new_text15, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me15)
         me16 = Menu(contchck)
         me16.add_command(label='Patient Data', font=('Times 12'), background='black',
@@ -851,7 +849,7 @@ class MenuBar(tk.Frame):
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contacthcsystem_16)
         contchck.add_cascade(label=new_text16, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me16)
         me17 = Menu(contchck)
         me17.add_command(label='Patient Data', font=('Times 12'), background='black',
@@ -867,7 +865,7 @@ class MenuBar(tk.Frame):
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contacthcsystem_17)
         contchck.add_cascade(label=new_text17, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me17)
         me18 = Menu(contchck)
         me18.add_command(label='Patient Data', font=('Times 12'), background='black',
@@ -883,7 +881,7 @@ class MenuBar(tk.Frame):
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contacthcsystem_18)
         contchck.add_cascade(label=new_text18, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me18)
         me19 = Menu(contchck)
         me19.add_command(label='Patient Data', font=('Times 12'), background='black',
@@ -899,7 +897,7 @@ class MenuBar(tk.Frame):
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contacthcsystem_19)
         contchck.add_cascade(label=new_text19, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me19)
         me20 = Menu(contchck)
         me20.add_command(label='Patient Data', font=('Times 12'), background='black',
@@ -915,7 +913,7 @@ class MenuBar(tk.Frame):
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contacthcsystem_20)
         contchck.add_cascade(label=new_text20, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me20)
         me21 = Menu(contchck)
         me21.add_command(label='Patient Data', font=('Times 12'), background='black',
@@ -931,7 +929,7 @@ class MenuBar(tk.Frame):
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contacthcsystem_21)
         contchck.add_cascade(label=new_text21, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me21)
         me22 = Menu(contchck)
         me22.add_command(label='Patient Data', font=('Times 12'), background='black',
@@ -947,7 +945,7 @@ class MenuBar(tk.Frame):
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contacthcsystem_22)
         contchck.add_cascade(label=new_text22, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me22)
         me23 = Menu(contchck)
         me23.add_command(label='Patient Data', font=('Times 12'), background='black',
@@ -963,7 +961,7 @@ class MenuBar(tk.Frame):
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contacthcsystem_23)
         contchck.add_cascade(label=new_text23, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me23)
         me24 = Menu(contchck)
         me24.add_command(label='Patient Data', font=('Times 12'), background='black',
@@ -979,7 +977,7 @@ class MenuBar(tk.Frame):
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.contacthcsystem_24)
         contchck.add_cascade(label=new_text24, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me24)
         contact.configure(activeforeground='black', activebackground='cyan', menu=contchck)
 
@@ -1660,42 +1658,42 @@ class MenuBar(tk.Frame):
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.allFilesBackup)
         me1.add_cascade(label=new_text, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me2)
         me3=Menu(me1)
         me3.add_command(label='All Files.txt', underline=0, font=('Times 12'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.allFilesBackup2)
         me1.add_cascade(label=new_text2, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me3)
         me4=Menu(me1)
         me4.add_command(label='All Files.txt', underline=0, font=('Times 12'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.allFilesBackup3)
         me1.add_cascade(label=new_text3, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me4)
         me5=Menu(me1)
         me5.add_command(label='All Files.txt', underline=0, font=('Times 12'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.allFilesBackup4)
         me1.add_cascade(label=new_text4, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me5)
         me6=Menu(me1)
         me6.add_command(label='All Files.txt', underline=0, font=('Times 12'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.allFilesBackup5)
         me1.add_cascade(label=new_text5, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me6)
         me7=Menu(me1)
         me7.add_command(label='All Files.txt', underline=0, font=('Times 12'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.allFilesBackup6)
         me1.add_cascade(label=new_text6, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me7)
         me8=Menu(me1)
         me8.add_command(label='All Files.txt', underline=0, font=('Times 12'),
@@ -1703,7 +1701,7 @@ class MenuBar(tk.Frame):
             foreground='cyan', activeforeground='black', command=boss.allFilesBackup7)
         # Integration of sub-menu
         me1.add_cascade(label=new_text7, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me8)
         me9=Menu(me1)
         me9.add_command(label='All Files.txt', underline=0, font=('Times 12'),
@@ -1711,7 +1709,7 @@ class MenuBar(tk.Frame):
             foreground='cyan', activeforeground='black', command=boss.allFilesBackup8)
         # Integration of sub-menu
         me1.add_cascade(label=new_text8, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me9)
         me10=Menu(me1)
         me10.add_command(label='All Files.txt', underline=0, font=('Times 12'),
@@ -1719,7 +1717,7 @@ class MenuBar(tk.Frame):
             foreground='cyan', activeforeground='black', command=boss.allFilesBackup9)
         # Integration of sub-menu
         me1.add_cascade(label=new_text9, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me10)
         me11=Menu(me1)
         me11.add_command(label='All Files.txt', underline=0, font=('Times 12'),
@@ -1727,7 +1725,7 @@ class MenuBar(tk.Frame):
             foreground='cyan', activeforeground='black', command=boss.allFilesBackup10)
         # Integration of sub-menu
         me1.add_cascade(label=new_text10, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me11)
         me12=Menu(me1)
         me12.add_command(label='All Files.txt', underline=0, font=('Times 12'),
@@ -1735,7 +1733,7 @@ class MenuBar(tk.Frame):
             foreground='cyan', activeforeground='black', command=boss.allFilesBackup11)
         # Integration of sub-menu
         me1.add_cascade(label=new_text11, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me12)
         me13=Menu(me1)
         me13.add_command(label='All Files.txt', underline=0, font=('Times 12'),
@@ -1743,7 +1741,7 @@ class MenuBar(tk.Frame):
             foreground='cyan', activeforeground='black', command=boss.allFilesBackup12)
         # Integration of sub-menu
         me1.add_cascade(label=new_text12, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me13)
         me14=Menu(me1)
         me14.add_command(label='All Files.txt', underline=0, font=('Times 12'),
@@ -1751,7 +1749,7 @@ class MenuBar(tk.Frame):
             foreground='cyan', activeforeground='black', command=boss.allFilesBackup13)
         # Integration of sub-menu
         me1.add_cascade(label=new_text13, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me14)
         me15=Menu(me1)
         me15.add_command(label='All Files.txt', underline=0, font=('Times 12'),
@@ -1759,7 +1757,7 @@ class MenuBar(tk.Frame):
             foreground='cyan', activeforeground='black', command=boss.allFilesBackup14)
         # Integration of sub-menu
         me1.add_cascade(label=new_text14, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me15)
         me16=Menu(me1)
         me16.add_command(label='All Files.txt', underline=0, font=('Times 12'),
@@ -1767,7 +1765,7 @@ class MenuBar(tk.Frame):
             foreground='cyan', activeforeground='black', command=boss.allFilesBackup15)
         # Integration of sub-menu
         me1.add_cascade(label=new_text15, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me16)
         me17=Menu(me1)
         me17.add_command(label='All Files.txt', underline=0, font=('Times 12'),
@@ -1775,7 +1773,7 @@ class MenuBar(tk.Frame):
             foreground='cyan', activeforeground='black', command=boss.allFilesBackup16)
         # Integration of sub-menu
         me1.add_cascade(label=new_text16, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me17)
         me18=Menu(me1)
         me18.add_command(label='All Files.txt', underline=0, font=('Times 12'),
@@ -1783,7 +1781,7 @@ class MenuBar(tk.Frame):
             foreground='cyan', activeforeground='black', command=boss.allFilesBackup17)
         # Integration of sub-menu
         me1.add_cascade(label=new_text17, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me18)
         me19=Menu(me1)
         me19.add_command(label='All Files.txt', underline=0, font=('Times 12'),
@@ -1791,7 +1789,7 @@ class MenuBar(tk.Frame):
             foreground='cyan', activeforeground='black', command=boss.allFilesBackup18)
         # Integration of sub-menu
         me1.add_cascade(label=new_text18, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me19)
         me20=Menu(me1)
         me20.add_command(label='All Files.txt', underline=0, font=('Times 12'),
@@ -1799,7 +1797,7 @@ class MenuBar(tk.Frame):
             foreground='cyan', activeforeground='black', command=boss.allFilesBackup19)
         # Integration of sub-menu
         me1.add_cascade(label=new_text19, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me20)
         me21=Menu(me1)
         me21.add_command(label='All Files.txt', underline=0, font=('Times 12'),
@@ -1807,7 +1805,7 @@ class MenuBar(tk.Frame):
             foreground='cyan', activeforeground='black', command=boss.allFilesBackup20)
         # Integration of sub-menu
         me1.add_cascade(label=new_text20, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me21)
         me22=Menu(me1)
         me22.add_command(label='All Files.txt', underline=0, font=('Times 12'),
@@ -1815,7 +1813,7 @@ class MenuBar(tk.Frame):
             foreground='cyan', activeforeground='black', command=boss.allFilesBackup21)
         # Integration of sub-menu
         me1.add_cascade(label=new_text21, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me22)
         me23=Menu(me1)
         me23.add_command(label='All Files.txt', underline=0, font=('Times 12'),
@@ -1823,7 +1821,7 @@ class MenuBar(tk.Frame):
             foreground='cyan', activeforeground='black', command=boss.allFilesBackup22)
         # Integration of sub-menu
         me1.add_cascade(label=new_text22, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me23)
         me24=Menu(me1)
         me24.add_command(label='All Files.txt', underline=0, font=('Times 12'),
@@ -1831,7 +1829,7 @@ class MenuBar(tk.Frame):
             foreground='cyan', activeforeground='black', command=boss.allFilesBackup23)
         # Integration of sub-menu
         me1.add_cascade(label=new_text23, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me24)
         me25=Menu(me1)
         me25.add_command(label='All Files.txt', underline=0, font=('Times 12'),
@@ -1839,7 +1837,7 @@ class MenuBar(tk.Frame):
             foreground='cyan', activeforeground='black', command=boss.allFilesBackup24)
         # Integration of sub-menu
         me1.add_cascade(label=new_text24, underline=0, font=('Times 12'),
-            background='black', foreground='cyan', 
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me25)
         # Integration of Graph menu
         cmd_backup.configure(activeforeground='black', activebackground='cyan', menu=me1)
@@ -1870,7 +1868,7 @@ class Application(tk.Frame):
         self.can.configure(yscrollcommand=self.vsb.set)
         self.vsb.pack(side=RIGHT, fill=Y)
         self.can.create_window((4,4), window=self.frame, anchor=NW, tags="self.frame")
-        
+
         self.clock_label = tk.Label(self, text="", fg="white", bg="RoyalBlue3",
             font=("helvetica", 18, 'bold'))
         self.clock_label.pack(side=TOP, fill=X, expand=YES)
@@ -1880,7 +1878,7 @@ class Application(tk.Frame):
         self.photo = PhotoImage(file='./syno_gif/fondcolorbg4.png')
         self.item = self.can.create_image(625, 350, image=self.photo)
         # Insertion of text
-        self.can.create_text(625, 350, anchor=CENTER, 
+        self.can.create_text(625, 350, anchor=CENTER,
             text="Python 3.6 - Tkinter 8.6 - GIMP 2.8",
             font=('Times New Roman', 18, 'bold'), fill='turquoise')
         self.can.create_text(1240, 670, anchor=NE, text="ko@l@tr33",
@@ -1889,7 +1887,7 @@ class Application(tk.Frame):
         self.frame.bind("<Configure>", self.onFrameConfigure)
         self.can.pack(side=LEFT, fill=BOTH, expand=YES)
         # 3 buttons on welcome page.
-        self.button1 = Button(self, text="Info", font=('Times 14 bold'),
+        self.button1 = tk.Button(self, text="Info", font=('Times 14 bold'),
             bg='grey17', fg='cyan', command = self.frameInfo)
         self.button1.configure(width=10, bd=3, highlightbackground='grey10',
             activebackground='pale turquoise')
@@ -2058,7 +2056,8 @@ class Application(tk.Frame):
             "+ Labo (dosage of neuroleptic)\n"
             "+ Stix (button into Labo)\n"
 
-            "!!! WARNING !!! : don't enter allergia before intolerance, otherwise it will be erased...\n"
+            "!!! WARNING !!! : don't enter allergia before intolerance," \
+            "otherwise it will be erased...\n"
 
             "\nDevelopped on Linux Xubuntu (xfce4) Voyager 18.04 by ko@l@tr33\n",
             font=('Times', 13), fill='aquamarine')
@@ -3152,32 +3151,32 @@ class Application(tk.Frame):
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient1.py", check=True)
         self.master.deiconify()
-        
+
     def visitMed2(self):
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient2.py", check=True)
         self.master.deiconify()
-        
+
     def visitMed3(self):
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient3.py", check=True)
         self.master.deiconify()
-        
+
     def visitMed4(self):
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient4.py", check=True)
         self.master.deiconify()
-        
+
     def visitMed5(self):
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient5.py", check=True)
         self.master.deiconify()
-        
+
     def visitMed6(self):
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient6.py", check=True)
         self.master.deiconify()
-        
+
     def visitMed7(self):
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient7.py", check=True)
@@ -3838,7 +3837,7 @@ class Application(tk.Frame):
 
     def upDateAll(self):
         """
-            To reset app by pressing 
+            To reset app by pressing
             refresh button. Close,
             open directly and update
             data from patcaps.py !

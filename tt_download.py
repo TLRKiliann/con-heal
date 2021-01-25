@@ -16,7 +16,7 @@ import threading
 import time
 import subprocess
 import os
-#from shootransfert import loaderfile
+from shootransfert import loaderfile
 
 
 def task(root):
@@ -24,9 +24,9 @@ def task(root):
         Define Progress Bar function
     """
     root.title("Downloading")
-    s = ttk.Style()
-    s.theme_use('alt')
-    s.configure('blue.Horizontal.TProgressbar',
+    style = ttk.Style()
+    style.theme_use('alt')
+    style.configure('blue.Horizontal.TProgressbar',
         troughcolor = '#4d4d4d',
         troughrelief = 'flat',
         background = '#2f92ff')
@@ -297,11 +297,11 @@ def launchdownload():
         To start app with thread !
     """
     root = tk.Tk()
-    t1 = threading.Thread(target=process_of_unknown_duration, args=(root,))
-    #print(t1)
-    t1.start()
+    treat = threading.Thread(target=process_of_unknown_duration, args=(root,))
+    #print(treat)
+    treat.start()
     print("Download...")
     task(root) # This will block while the mainloop runs
-    t1.join()
+    treat.join()
     root.destroy() # To destroy completely window
-    #shootransfert()
+    shootransfert()

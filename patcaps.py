@@ -3,6 +3,8 @@
 
 
 from tkinter import *
+import tkinter as tk
+from tkinter import ttk
 import sys
 import os
 import time
@@ -21,21 +23,21 @@ def callResident(self):
     """    
     self.can.delete(ALL)
     self.can.configure(background='DodgerBlue2')
-    self.photo = PhotoImage(file='./syno_gif/title_tt3.png')
+    self.photo = tk.PhotoImage(file='./syno_gif/title_tt3.png')
     self.item_image = self.can.create_image(625, 85, image=self.photo)
 
     # Display date
     self.x1, self.y1 = 1140, 40
-    self.data_time = StringVar()
-    self.datew = Entry(self.can, textvariable=self.data_time, 
-        width=10, bd=3, highlightbackground='grey')
+    self.data_time = tk.StringVar()
+    self.datew = tk.Entry(self.can, textvariable=self.data_time, 
+        width=9, bd=3, highlightbackground='grey')
     self.data_time.set(time.strftime("%d/%m/%Y"))
     self.fdatew_window = self.can.create_window(self.x1, self.y1,
         window=self.datew)
 
     # To introduce a new pytient
     self.x3, self.y3 = 125, 160
-    self.b3 = Button(self.can, text="New Entry", font=16,
+    self.b3 = tk.Button(self.can, text="New Entry", font=16,
         width=10, bd=3, bg='RoyalBlue3', fg='white',
         highlightbackground='pale turquoise',
         activebackground='pale turquoise',
@@ -45,7 +47,7 @@ def callResident(self):
 
     # To add one patient and files
     self.x4, self.y4 = 325, 160
-    self.b4 = Button(self.can, text="Add patient", font=16,
+    self.b4 = tk.Button(self.can, text="Add patient", font=16,
         width=10, bd=3, bg='RoyalBlue3', fg='white',
         highlightbackground='pale turquoise',
         activebackground='pale turquoise',
@@ -55,7 +57,7 @@ def callResident(self):
     
     # To refresh canvas + menu bar
     self.x5, self.y5 = 525, 160
-    self.b5 = Button(self.can, text="Refresh", font=16,
+    self.b5 = tk.Button(self.can, text="Refresh", font=16,
         width=10, bd=3, bg='RoyalBlue3', fg='SpringGreen2',
         highlightbackground='pale turquoise',
         activebackground='pale turquoise',
@@ -65,7 +67,7 @@ def callResident(self):
 
     # To delete one patient and all files
     self.x6, self.y6 = 725, 160
-    self.b6 = Button(self.can, text="Delete patient", font=16,
+    self.b6 = tk.Button(self.can, text="Delete patient", font=16,
         width=10, bd=3, bg='RoyalBlue3', fg='coral',
         highlightbackground='pale turquoise',
         activebackground='red',
@@ -75,7 +77,7 @@ def callResident(self):
 
     # To go to resident page
     self.x6, self.y6 = 925, 160
-    self.b6 = Button(self.can, text="TextBox", font=16,
+    self.b6 = tk.Button(self.can, text="TextBox", font=16,
         width=10, bd=3, bg='RoyalBlue3', fg='white',
         highlightbackground='pale turquoise',
         activebackground='pale turquoise',
@@ -85,7 +87,7 @@ def callResident(self):
 
     # DB
     self.x7, self.y7 = 1125, 160
-    self.b7 = Button(self.can, text="DataBase", font=16,
+    self.b7 = tk.Button(self.can, text="DataBase", font=16,
         width=10, bd=3, bg='RoyalBlue3', fg='white',
         highlightbackground='pale turquoise',
         activebackground='pale turquoise',
@@ -118,7 +120,7 @@ def callResident(self):
         print("+ File 1 not created !", ub_error1)
 
     self.x11, self.y11 = 291, 230
-    self.b11 = Button(self.can, text="Update", font=16,
+    self.b11 = tk.Button(self.can, text="Update", font=16,
         width=8, fg='white', bg='SteelBlue2',
         activebackground='pale turquoise',
         command=self.updateLink)
@@ -126,7 +128,7 @@ def callResident(self):
         self.y11, window=self.b11)
 
     self.x12, self.y12 = 449, 230
-    self.b12 = Button(self.can, text="Diagnostic + ATCD",
+    self.b12 = tk.Button(self.can, text="Diagnostic + ATCD",
         font=16, width=18, fg='white', bg='SteelBlue2',
         activebackground='pale turquoise',
         command=self.diag1)
@@ -134,7 +136,7 @@ def callResident(self):
         self.y12, window=self.b12)
 
     self.x13, self.y13 = 617, 230
-    self.b13 = Button(self.can, text="Treatments",
+    self.b13 = tk.Button(self.can, text="Treatments",
         font=16, width=10, fg='white', bg='SteelBlue2',
         activebackground='pale turquoise',
         command=self.tttMed1)
@@ -142,7 +144,7 @@ def callResident(self):
         self.y13, window=self.b13)
 
     self.x14, self.y14 = 745, 230
-    self.b14 = Button(self.can, text="Laboratory",
+    self.b14 = tk.Button(self.can, text="Laboratory",
         font=16, width=10, fg='white', bg='SteelBlue2',
         activebackground='pale turquoise',
         command=self.laboResult)
@@ -150,7 +152,7 @@ def callResident(self):
         self.y14, window=self.b14)
 
     self.x15, self.y15 = 873, 230
-    self.b15 = Button(self.can, text="Medical Visit",
+    self.b15 = tk.Button(self.can, text="Medical Visit",
         font=16, width=10, fg='white', bg='SteelBlue2',
         activebackground='pale turquoise',
         command=self.visitMed)
@@ -158,7 +160,7 @@ def callResident(self):
         self.y15, window=self.b15)
 
     self.x16, self.y16 = 1001, 230
-    self.b16 = Button(self.can, text="Intolerance",
+    self.b16 = tk.Button(self.can, text="Intolerance",
         font=16, width=10, fg='white', bg='SteelBlue2',
         activebackground='pale turquoise',
         command=self.nutritionMenu)
@@ -166,7 +168,7 @@ def callResident(self):
         self.y16, window=self.b16)
 
     self.x17, self.y17 = 1129, 230
-    self.b17 = Button(self.can, text="BMI",
+    self.b17 = tk.Button(self.can, text="BMI",
         font=16, width=10, fg='white', bg='SteelBlue2',
         activebackground='pale turquoise',
         command=self.calculB)

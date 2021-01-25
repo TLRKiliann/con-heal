@@ -11,7 +11,9 @@ from tt_download import launchdownload
 
 
 window = tk.Tk()
-window.style=ttk.Style()
+window.style = ttk.Style()
+window.style.configure('TButton', font=('Helvetica', 11),
+    foreground='yellow', background='navy')
 window.title('ACCESS')
 window.configure(bg='RoyalBlue3')
 
@@ -58,8 +60,9 @@ labelname = ttk.Label(window, text='Enter username :',
     foreground="white", background="RoyalBlue3")
 labelname.pack(pady=10)
 
-entryname = StringVar()
+entryname = tk.StringVar()
 namenter = ttk.Entry(window, textvariable=entryname)
+namenter.focus()
 namenter.pack(padx=10)
 
 labelpass = ttk.Label(window, text='Enter password :',
@@ -67,13 +70,12 @@ labelpass = ttk.Label(window, text='Enter password :',
     foreground="white", background="RoyalBlue3")
 labelpass.pack(pady=10)
 
-getpass = StringVar()
+getpass = tk.StringVar()
 passentry = ttk.Entry(window, textvariable=getpass, show='*')
+passentry.focus()
 passentry.pack(padx=10)
 
-buttonvalidate = tk.Button(window, text='Validate',
-    foreground='yellow', background='navy',
-    command=validentry)
+buttonvalidate = ttk.Button(window, text='Validate', command=validentry)
 buttonvalidate.pack(pady=10)
 
 window.mainloop()

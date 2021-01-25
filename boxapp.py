@@ -3,6 +3,8 @@
 
 
 from tkinter import *
+import tkinter as tk
+from tkinter import ttk
 import subprocess
 import os
 import time
@@ -28,26 +30,26 @@ def callBox(self):
 
     # Display date
     self.x1, self.y1 = 1140, 40
-    self.Date_write=Entry(self.can)
-    self.data_time=StringVar()
-    self.Date_write=Entry(self.can, textvariable=self.data_time, 
-        width=10, bd=3, highlightbackground='grey')
+    self.Date_write=ttk.Entry(self.can)
+    self.data_time=tk.StringVar()
+    self.Date_write=tk.Entry(self.can, textvariable=self.data_time, 
+        width=9, bd=3, highlightbackground='grey')
     self.data_time.set(time.strftime("%d/%m/%Y"))
     self.Date_write=self.can.create_window(self.x1, self.y1,
         window=self.Date_write)
 
     # To go to resident page
     self.x6, self.y6 = 100, 40
-    self.b6=Button(self.can, width=10, font=16, bd=3, bg='RoyalBlue3', fg='white', 
+    self.b6=tk.Button(self.can, width=10, font=16, bd=3, bg='RoyalBlue3', fg='white', 
         highlightbackground='cyan', activebackground='pale turquoise',
         activeforeground='white', text="Resident page", command=self.showPatients)
     self.fb6=self.can.create_window(self.x6, self.y6, window=self.b6)
 
     # TextBox
     self.x63, self.y63 = 625, 350
-    self.t63=Text(self.can, height=30, width=80, font=18, relief=SUNKEN)
-    self.t63.insert(INSERT, "Previously (yesterday last infos) : ")
-    self.t63.insert(END, (datetime.datetime.now() + \
+    self.t63 = tk.Text(self.can, height=30, width=80, font=18, relief=SUNKEN)
+    self.t63.insert(tk.INSERT, "Previously (yesterday last infos) : ")
+    self.t63.insert(tk.END, (datetime.datetime.now() + \
         datetime.timedelta(days=-1)).strftime('%d/%m/%Y'))
     self.ft63=self.can.create_window(self.x63, self.y63, window=self.t63)
 

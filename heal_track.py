@@ -167,13 +167,13 @@ class ScrollCanvas(tk.Frame):
     """
     def __init__(self, boss=None):
         tk.Frame.__init__(self, borderwidth=borderwidth, relief=relief)
-        self.can = Canvas(self, width=width, height=height, bd=bd,
+        self.can = tk.Canvas(self, width=width, height=height, bd=bd,
             bg=bg, relief=relief)
         self.frame = tk.Frame(self.can)
-        self.vsb = Scrollbar(self, orient=VERTICAL, command=self.can.yview)
+        self.vsb = tk.Scrollbar(self, orient=VERTICAL, command=self.can.yview)
         self.can.configure(yscrollcommand=self.vsb.set)
-        self.vsb.pack(side=RIGHT, fill=Y)
-        self.can.pack(side=LEFT, fill=BOTH, expand=YES)
+        self.vsb.pack(side=tk.RIGHT, fill=Y)
+        self.can.pack(side=tk.LEFT, fill=BOTH, expand=YES)
         self.can.create_window((4,4), window=self.frame, anchor=NW,
                                   tags="self.frame")
         self.frame.bind("<Configure>", self.onFrameConfigure)
@@ -1861,21 +1861,21 @@ class Application(tk.Frame):
         self.mBar = MenuBar(self)
         self.mBar.pack(side=TOP, fill=X, expand=YES)
 
-        self.can = Canvas(self, width=1250, height=700, bg='black')
+        self.can = tk.Canvas(self, width=1250, height=700, bg='black')
         self.frame = tk.Frame(self.can)
         # ScrollCanvas limite de la zone à parcourir avec la barre 1250 - 700
-        self.vsb = Scrollbar(self, orient=VERTICAL, command=self.can.yview)
+        self.vsb = tk.Scrollbar(self, orient=VERTICAL, command=self.can.yview)
         self.can.configure(yscrollcommand=self.vsb.set)
-        self.vsb.pack(side=RIGHT, fill=Y)
+        self.vsb.pack(side=tk.RIGHT, fill=Y)
         self.can.create_window((4,4), window=self.frame, anchor=NW, tags="self.frame")
 
         self.clock_label = tk.Label(self, text="", fg="white", bg="RoyalBlue3",
             font=("helvetica", 18, 'bold'))
-        self.clock_label.pack(side=TOP, fill=X, expand=YES)
+        self.clock_label.pack(side=tk.TOP, fill=X, expand=YES)
         self.clock_label.after(200, self.tick)
 
         # Insertion of picture
-        self.photo = PhotoImage(file='./syno_gif/fondcolorbg4.png')
+        self.photo = tk.PhotoImage(file='./syno_gif/fondcolorbg4.png')
         self.item = self.can.create_image(625, 350, image=self.photo)
         # Insertion of text
         self.can.create_text(625, 350, anchor=CENTER,
@@ -1980,22 +1980,22 @@ class Application(tk.Frame):
         """
             Info for button on first page
         """
-        self.lab=tk.Tk()
+        self.lab = tk.Tk()
         self.lab.title("ATCD")
         self.lab.configure(bg="grey22")
 
-        self.labFra=ttk.LabelFrame(self.lab, text="\nWelcome !",
+        self.labFra = tk.LabelFrame(self.lab, text="\nWelcome !",
             font=("Arial 12"),fg='cyan', bg='grey22')
         self.labFra.pack(padx=5, pady=5)
         self.separator = tk.Frame(self.labFra, height=2, bd=1,
             relief=SUNKEN)
 
-        self.lab4=ttk.Label(self.labFra, text="\nInfo",
+        self.lab4 = tk.Label(self.labFra, text="\nInfo",
             font=('Times 16 bold'), fg='cyan', bg='grey22').pack()
         self.separator = tk.Frame(self.labFra, height=2, bd=1, relief=SUNKEN)
         self.separator.pack(fill=X, padx=100, pady=3)
 
-        self.lab5=ttk.Label(self.labFra, justify=LEFT, fg='cyan',
+        self.lab5 = tk.Label(self.labFra, justify=LEFT, fg='cyan',
             bg='grey22', font=('Times', 14),
             text="\nMenu Bar, DB, Textbox and Residents are the most usefull skills\n"
             "to perform onto this app ! If you need help, you can go to MapApp to\n"
@@ -2003,7 +2003,7 @@ class Application(tk.Frame):
             "Enjoy it !\n").pack(padx=10)
         self.separator = tk.Frame(self.labFra, height=2, bd=1, relief=SUNKEN)
         self.separator.pack(fill=X, padx=30, pady=3)
-        self.lab6=ttk.Label(self.labFra, justify=LEFT, fg='cyan',
+        self.lab6 = tk.Label(self.labFra, justify=LEFT, fg='cyan',
             bg='grey22', font=('Times', 14),
             text="Path : Menu Bar --> Menu --> MapApp").pack(padx=10, pady=10)
 
@@ -2014,7 +2014,7 @@ class Application(tk.Frame):
         """
         self.can.delete(ALL)
         self.can.configure(background='black')
-        self.photo=PhotoImage(file='./syno_gif/pyt2.gif')
+        self.photo = tk.PhotoImage(file='./syno_gif/pyt2.gif')
         self.item=self.can.create_image(625, 350, image=self.photo)
         self.can.create_text(400, 20, anchor=NW,
             text="- MAPAPP -\n\n"

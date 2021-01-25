@@ -19,15 +19,11 @@ from patcaps import callResident
 def callBox(self):
     self.can.delete(ALL)
     self.can.configure(background='DodgerBlue2')
-    #self.photo=PhotoImage(file='./syno_gif/title_tt.png')
-    #self.item=self.can.create_image(625, 85, image=self.photo)
-
     # To backup (main file)
     self.updateFiletxt()
     dispAgBox()
     dispTttBox()
     dispResFunc()
-
     # Display date
     self.x1, self.y1 = 1140, 40
     self.Date_write = ttk.Entry(self.can)
@@ -37,14 +33,12 @@ def callBox(self):
     self.data_time.set(time.strftime("%d/%m/%Y"))
     self.Date_write=self.can.create_window(self.x1, self.y1,
         window=self.Date_write)
-
     # To go to resident page
     self.x6, self.y6 = 100, 40
     self.b6 = tk.Button(self.can, width=10, font=16, bd=3, bg='RoyalBlue3', fg='white', 
         highlightbackground='cyan', activebackground='pale turquoise',
         activeforeground='white', text="Resident page", command=self.showPatients)
     self.fb6=self.can.create_window(self.x6, self.y6, window=self.b6)
-
     # TextBox
     self.x63, self.y63 = 625, 350
     self.t63 = tk.Text(self.can, height=30, width=80, font=18, relief=SUNKEN)

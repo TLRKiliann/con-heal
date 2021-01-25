@@ -15,6 +15,7 @@
 
 
 from tkinter import *
+import tkinter as tk
 from tkinter import messagebox
 from tkinter import ttk
 try:
@@ -25,12 +26,12 @@ except ImportError as err_report:
     pass
 
 
-class ScrollCanvas(Frame):
+class ScrollCanvas(tk.Frame):
     """
         To prepare ScrollBar for main application.
     """
     def __init__(self, boss=None):
-        Frame.__init__(self, borderwidth=borderwidth, relief=relief)
+        tk.Frame.__init__(self, borderwidth=borderwidth, relief=relief)
         self.can = Canvas(self, width=width, height=height, bd=bd,
             bg=bg, relief=relief)
         self.frame = Frame(self.can)
@@ -42,12 +43,12 @@ class ScrollCanvas(Frame):
                                   tags="self.frame")
         self.frame.bind("<Configure>", self.onFrameConfigure)
 
-class TrackDB(Frame):
+class TrackDB(tk.Frame):
     """
         Main app to display first page.
     """
     def __init__(self, boss=None):
-        Frame.__init__(self, borderwidth=5, bg='RoyalBlue4', padx=20, pady=20, relief=GROOVE)
+        tk.Frame.__init__(self, borderwidth=5, bg='RoyalBlue4', padx=20, pady=20, relief=GROOVE)
         self.master.title('Heal-Track Developed by ko@l@tr33 - 2020')
         # ScrollCanvas limite de la zone à parcourir avec la barre
         self.can = Canvas(self, width=1250, height=800, bg='white')
@@ -59,13 +60,13 @@ class TrackDB(Frame):
         self.frame.bind("<Configure>", self.onFrameConfigure)
         self.can.pack(side=LEFT, fill=BOTH, expand=YES)
 
-        ID = StringVar()
-        Firstname = StringVar()
-        Surname = StringVar()
-        Date_of_Birth = StringVar()
-        Allergy = StringVar()
-        Transmissible_Disease = StringVar()
-        Diagnostic = StringVar()
+        ID = tk.StringVar()
+        Firstname = tk.StringVar()
+        Surname = tk.StringVar()
+        Date_of_Birth = tk.StringVar()
+        Allergy = tk.StringVar()
+        Transmissible_Disease = tk.StringVar()
+        Diagnostic = tk.StringVar()
 
         def searchDB():
             try:
@@ -107,17 +108,17 @@ class TrackDB(Frame):
         self.student_records.pack(fill=BOTH, expand=YES)
 
         #self.student_records.bind("<ButtonRelease-1>", PyDataBaseInfo)
-        self.btnSearch = Button(self.can, text="Refresh", font=('arial', 12, 'bold'),
+        self.btnSearch = tk.Button(self.can, text="Refresh", font=('arial', 12, 'bold'),
             padx=8, width=16, height=1, fg='white', bg='RoyalBlue4', bd=3, 
             activebackground='cyan', activeforeground='RoyalBlue3',
             highlightbackground="white", command=searchDB)
-        self.btnSearch.pack(side=LEFT)
+        self.btnSearch.pack(side=tk.LEFT)
 
-        self.butBox = Button(self.can, text="Quit", font=('arial', 12, 'bold'),
+        self.butBox = tk.Button(self.can, text="Quit", font=('arial', 12, 'bold'),
             padx=8, width=16, height=1, fg='white', bg='RoyalBlue4', bd=3,
             activebackground='cyan', activeforeground='RoyalBlue3',
             highlightbackground="white", command=quit)
-        self.butBox.pack(side=RIGHT)
+        self.butBox.pack(side=tk.RIGHT)
         self.pack()
         searchDB()
 

@@ -72,7 +72,6 @@ labelpass.pack(pady=10)
 
 getpass = tk.StringVar()
 passentry = ttk.Entry(window, textvariable=getpass, show='*')
-passentry.focus()
 passentry.pack(padx=10)
 
 buttonvalidate = ttk.Button(window, text='Validate', command=validentry)

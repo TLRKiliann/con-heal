@@ -158,7 +158,7 @@ from ttt.patienttt21 import callTreatment21
 from ttt.patienttt22 import callTreatment22
 from ttt.patienttt23 import callTreatment23
 from ttt.patienttt24 import callTreatment24
-#import passw
+import passw
 
 
 class ScrollCanvas(tk.Frame):

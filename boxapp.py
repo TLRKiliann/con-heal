@@ -30,7 +30,7 @@ def callBox(self):
 
     # Display date
     self.x1, self.y1 = 1140, 40
-    self.Date_write=ttk.Entry(self.can)
+    self.Date_write = ttk.Entry(self.can)
     self.data_time=tk.StringVar()
     self.Date_write=tk.Entry(self.can, textvariable=self.data_time, 
         width=9, bd=3, highlightbackground='grey')
@@ -40,7 +40,7 @@ def callBox(self):
 
     # To go to resident page
     self.x6, self.y6 = 100, 40
-    self.b6=tk.Button(self.can, width=10, font=16, bd=3, bg='RoyalBlue3', fg='white', 
+    self.b6 = tk.Button(self.can, width=10, font=16, bd=3, bg='RoyalBlue3', fg='white', 
         highlightbackground='cyan', activebackground='pale turquoise',
         activeforeground='white', text="Resident page", command=self.showPatients)
     self.fb6=self.can.create_window(self.x6, self.y6, window=self.b6)

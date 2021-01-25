@@ -106,7 +106,7 @@ def callResident(self):
         self.data_time = line1
         self.x10, self.y10 = 149, 230
         self.new_data1 = StringVar()
-        self.d10 = Entry(self.can,
+        self.d10 = tk.Entry(self.can,
             textvariable=self.new_data1,
             highlightbackground='grey', bd=4)
         if line1 == '-':
@@ -186,7 +186,7 @@ def callResident(self):
         self.new_data2 = line2
         self.x20, self.y20 = 149, 262
         self.new_data2 = StringVar()
-        self.d20 = Entry(self.can, textvariable=self.new_data2,
+        self.d20 = tk.Entry(self.can, textvariable=self.new_data2,
             highlightbackground='grey', bd=4)
         if line2 == '--':
             line2 = line2
@@ -265,7 +265,7 @@ def callResident(self):
         self.new_data3 = line3
         self.x30, self.y30 = 149, 294
         self.new_data3 = StringVar()
-        self.d30 = Entry(self.can, textvariable=self.new_data3,
+        self.d30 = tk.Entry(self.can, textvariable=self.new_data3,
             highlightbackground='grey', bd=4)
         if line3 == '---':
             line3 = line3
@@ -344,7 +344,7 @@ def callResident(self):
         self.new_data4 = line4
         self.x40, self.y40 = 149, 326
         self.new_data4 = StringVar()
-        self.d40 = Entry(self.can,
+        self.d40 = tk.Entry(self.can,
             textvariable=self.new_data4,
             highlightbackground='grey', bd=4)
         if line4 == '----':
@@ -424,7 +424,7 @@ def callResident(self):
         self.new_data5 = line5
         self.x50, self.y50 = 149, 358
         self.new_data5 = StringVar()
-        self.d50 = Entry(self.can,
+        self.d50 = tk.Entry(self.can,
             textvariable=self.new_data5,
             highlightbackground='grey', bd=4)
         if line5 == '-----':
@@ -504,7 +504,7 @@ def callResident(self):
         self.new_data6 = line6
         self.x60, self.y60 = 149, 390
         self.new_data6 = StringVar()
-        self.d60 = Entry(self.can, textvariable=self.new_data6,
+        self.d60 = tk.Entry(self.can, textvariable=self.new_data6,
             highlightbackground='grey', bd=4)
         if line6 == '------':
             line6 = line6
@@ -583,7 +583,7 @@ def callResident(self):
         self.new_data7 = line7
         self.x70, self.y70 = 149, 422
         self.new_data7 = StringVar()
-        self.d70 = Entry(self.can, textvariable=self.new_data7,
+        self.d70 = tk.Entry(self.can, textvariable=self.new_data7,
             highlightbackground='grey', bd=4)
         if line7 == '-------':
             line7 = line7
@@ -662,7 +662,7 @@ def callResident(self):
         self.new_data8 = line8
         self.x80, self.y80 = 149, 454
         self.new_data8 = StringVar()
-        self.d80 = Entry(self.can, textvariable=self.new_data8,
+        self.d80 = tk.Entry(self.can, textvariable=self.new_data8,
             highlightbackground='grey', bd=4)
         if line8 == '--------':
             line8 = line8
@@ -741,7 +741,7 @@ def callResident(self):
         self.new_data9 = line9
         self.x90, self.y90 = 149, 486
         self.new_data9 = StringVar()
-        self.d90 = Entry(self.can, textvariable=self.new_data9,
+        self.d90 = tk.Entry(self.can, textvariable=self.new_data9,
             highlightbackground='grey', bd=4)
         if line9 == '---------':
             line9 = line9
@@ -820,7 +820,7 @@ def callResident(self):
         self.new_data10 = line10
         self.x100, self.y100 = 149, 518
         self.new_data10 = StringVar()
-        self.d100 = Entry(self.can, textvariable=self.new_data10,
+        self.d100 = tk.Entry(self.can, textvariable=self.new_data10,
             highlightbackground='grey', bd=4)
         if line10 == '----------':
             line10 = line10
@@ -899,7 +899,7 @@ def callResident(self):
         self.new_data11 = line11
         self.x110, self.y110 = 149, 550
         self.new_data11 = StringVar()
-        self.d110 = Entry(self.can, textvariable=self.new_data11,
+        self.d110 = tk.Entry(self.can, textvariable=self.new_data11,
             highlightbackground='grey', bd=4)
         if line11 == '-----------':
             line11 = line11
@@ -978,7 +978,7 @@ def callResident(self):
         self.new_data12 = line12
         self.x120, self.y120 = 149, 582
         self.new_data12 = StringVar()
-        self.d120 = Entry(self.can, textvariable=self.new_data12,
+        self.d120 = tk.Entry(self.can, textvariable=self.new_data12,
             highlightbackground='grey', bd=4)
         if line12 == '------------':
             line12 = line12
@@ -1057,7 +1057,7 @@ def callResident(self):
         self.new_data13 = line13
         self.x130, self.y130 = 149, 614
         self.new_data13 = StringVar()
-        self.d130 = Entry(self.can, textvariable=self.new_data13,
+        self.d130 = tk.Entry(self.can, textvariable=self.new_data13,
             highlightbackground='grey', bd=4)
         if line13 == '-------------':
             line13 = line13
@@ -1136,7 +1136,7 @@ def callResident(self):
         self.new_data14 = line14
         self.x140, self.y140 = 149, 646
         self.new_data14 = StringVar()
-        self.d140 = Entry(self.can, textvariable=self.new_data14,
+        self.d140 = tk.Entry(self.can, textvariable=self.new_data14,
             highlightbackground='grey', bd=4)
         if line14 == '--------------':
             line14 = line14
@@ -1215,7 +1215,7 @@ def callResident(self):
         self.new_data15 = line15
         self.x150, self.y150 = 149, 678
         self.new_data15 = StringVar()
-        self.d150 = Entry(self.can, textvariable=self.new_data15,
+        self.d150 = tk.Entry(self.can, textvariable=self.new_data15,
             highlightbackground='grey', bd=4)
         if line15 == '---------------':
             line15 = line15
@@ -1294,7 +1294,7 @@ def callResident(self):
         self.new_data16 = line16
         self.x160, self.y160 = 149, 710
         self.new_data16 = StringVar()
-        self.d160 = Entry(self.can, textvariable=self.new_data16,
+        self.d160 = tk.Entry(self.can, textvariable=self.new_data16,
             highlightbackground='grey', bd=4)
         if line16 == '----------------':
             line16 = line16
@@ -1373,7 +1373,7 @@ def callResident(self):
         self.new_data17 = line17
         self.x170, self.y170 = 149, 742
         self.new_data17 = StringVar()
-        self.d170 = Entry(self.can, textvariable=self.new_data17,
+        self.d170 = tk.Entry(self.can, textvariable=self.new_data17,
             highlightbackground='grey', bd=4)
         if line17 == '-----------------':
             line17 = line17
@@ -1452,7 +1452,7 @@ def callResident(self):
         self.new_data18 = line18
         self.x180, self.y180 = 149, 774
         self.new_data18 = StringVar()
-        self.d180 = Entry(self.can, textvariable=self.new_data18,
+        self.d180 = tk.Entry(self.can, textvariable=self.new_data18,
             highlightbackground='grey', bd=4)
         if line18 == '------------------':
             line18 = line18
@@ -1531,7 +1531,7 @@ def callResident(self):
         self.new_data19 = line19
         self.x190, self.y190 = 149, 806
         self.new_data19 = StringVar()
-        self.d190 = Entry(self.can, textvariable=self.new_data19,
+        self.d190 = tk.Entry(self.can, textvariable=self.new_data19,
             highlightbackground='grey', bd=4)
         if line19 == '-------------------':
             line19 = line19
@@ -1610,7 +1610,7 @@ def callResident(self):
         self.new_data20 = line20
         self.x200, self.y200 = 149, 838
         self.new_data20 = StringVar()
-        self.d200 = Entry(self.can, textvariable=self.new_data20,
+        self.d200 = tk.Entry(self.can, textvariable=self.new_data20,
             highlightbackground='grey', bd=4)
         if line20 == '--------------------':
             line20 = line20
@@ -1689,7 +1689,7 @@ def callResident(self):
         self.new_data21 = line21
         self.x210, self.y210 = 149, 870
         self.new_data21 = StringVar()
-        self.d210 = Entry(self.can, textvariable=self.new_data21,
+        self.d210 = tk.Entry(self.can, textvariable=self.new_data21,
             highlightbackground='grey', bd=4)
         if line21 == '---------------------':
             line21 = line21
@@ -1768,7 +1768,7 @@ def callResident(self):
         self.new_data22 = line22
         self.x220, self.y220 = 149, 902
         self.new_data22 = StringVar()
-        self.d220 = Entry(self.can, textvariable=self.new_data22,
+        self.d220 = tk.Entry(self.can, textvariable=self.new_data22,
             highlightbackground='grey', bd=4)
         if line22 == '----------------------':
             line22 = line22
@@ -1847,7 +1847,7 @@ def callResident(self):
         self.new_data23 = line23
         self.x230, self.y230 = 149, 934
         self.new_data23 = StringVar()
-        self.d230 = Entry(self.can, textvariable=self.new_data23,
+        self.d230 = tk.Entry(self.can, textvariable=self.new_data23,
             highlightbackground='grey', bd=4)
         if line23 == '-----------------------':
             line23 = line23
@@ -1926,7 +1926,7 @@ def callResident(self):
         self.new_data24 = line24
         self.x240, self.y240 = 149, 966
         self.new_data24 = StringVar()
-        self.d240 = Entry(self.can, textvariable=self.new_data24,
+        self.d240 = tk.Entry(self.can, textvariable=self.new_data24,
           highlightbackground='grey', bd=4)
         if line24 == '------------------------':
             line24 = line24

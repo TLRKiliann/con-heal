@@ -11,7 +11,6 @@
 
 from tkinter import *
 import tkinter as tk
-from tkinter import ttk
 from tkinter import messagebox
 import json
 import os
@@ -659,7 +658,6 @@ gui = tk.Tk()
 gui.title("Time-Track")
 gui.configure(background='DodgerBlue2')
 gui.geometry('650x600')
-gui.style=ttk.Style()
 
 labelTitle = tk.Label(gui, text="Vital Parameters",
     font=('Times 22 bold'), bg='DodgerBlue2', fg='white')

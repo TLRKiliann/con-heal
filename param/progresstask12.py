@@ -48,30 +48,92 @@ def process_of_unknown_duration(root):
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt12/paramdata12.txt",
         "./param/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
+    if proc.stderr == b'':
+        print("+ File paramdata12.txt downloaded !")
+        #messagebox.showinfo("INFO", "paramdata12.txt downloaded")
+    else:
+        print("+ No file to download !")
+        messagebox.showerror("Error", "No paramdata12.txt to download")
+
     secproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt12/diastol.json",
         "./param/aspifile12/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(secproc.stderr))
+    if secproc.stderr == b'':
+        print("+ File diastol.json downloaded !")
+        #messagebox.showinfo("INFO", "diastol.json downloaded")
+    else:
+        print("+ No file to download !")
+        messagebox.showerror("Error", "No diastol.json to download")
+
     thirdproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt12/dlr.json",
         "./param/aspifile12/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(thirdproc.stderr))
+    if thirdproc.stderr == b'':
+        print("+ File dlr.json downloaded !")
+        #messagebox.showinfo("INFO", "dlr.json downloaded")
+    else:
+        print("+ No file to download !")
+        messagebox.showerror("Error", "No dlr.json to download")
+
     forthproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt12/freq.json",
         "./param/aspifile12/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(forthproc.stderr))
+    if forthproc.stderr == b'':
+        print("+ File freq.json downloaded !")
+        #messagebox.showinfo("INFO", "freq.json downloaded")
+    else:
+        print("+ No file to download !")
+        messagebox.showerror("Error", "No freq.json to download")
+
     fivthproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt12/gly.json",
         "./param/aspifile12/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(fivthproc.stderr))
+    if fivthproc.stderr == b'':
+        print("+ File gly.json downloaded !")
+        #messagebox.showinfo("INFO", "gly.json downloaded")
+    else:
+        print("+ No file to download !")
+        messagebox.showerror("Error", "No gly.json to download")
+
     sixthproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt12/puls.json",
         "./param/aspifile12/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(sixthproc.stderr))
+    if sixthproc.stderr == b'':
+        print("+ File puls.json downloaded !")
+        #messagebox.showinfo("INFO", "puls.json downloaded")
+    else:
+        print("+ No file to download !")
+        messagebox.showerror("Error", "No puls.json to download")
+
     sevenproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt12/sat.json",
         "./param/aspifile12/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(sevenproc.stderr))
+    if sevenproc.stderr == b'':
+        print("+ File sat.json downloaded !")
+        #messagebox.showinfo("INFO", "sat.json downloaded")
+    else:
+        print("+ No file to download !")
+        messagebox.showerror("Error", "No sat.json to download")
+
     eightproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt12/systol.json",
         "./param/aspifile12/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(eightproc.stderr))
+    if eightproc.stderr == b'':
+        print("+ File systol.json downloaded !")
+        #messagebox.showinfo("INFO", "systol.json downloaded")
+    else:
+        print("+ No file to download !")
+        messagebox.showerror("Error", "No systol.json to download")
+
     ninethproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt12/temp.json",
         "./param/aspifile12/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(ninethproc.stderr))
+    if ninethproc.stderr == b'':
+        print("+ File temp.json downloaded !")
+        #messagebox.showinfo("INFO", "temp.json downloaded")
+    else:
+        print("+ No file to download !")
+        messagebox.showerror("Error", "No temp.json to download")
     print('Done')
     # linux, mac
     print('My pid is', os.getpid())

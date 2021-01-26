@@ -11,9 +11,9 @@ import threading
 
 def task(root):
     root.title("Upload")
-    s = ttk.Style()
-    s.theme_use('alt')
-    s.configure('blue.Horizontal.TProgressbar',
+    style = ttk.Style()
+    style.theme_use('alt')
+    style.configure('blue.Horizontal.TProgressbar',
         troughcolor = '#4d4d4d',
         troughrelief = 'flat',
         background = '#2f92ff')
@@ -34,8 +34,8 @@ def process_of_unknown_duration(root):
 
 def uploadmain():
     root = tk.Tk()
-    t1=threading.Thread(target=process_of_unknown_duration, args=(root,))
-    t1.start()
+    thrd=threading.Thread(target=process_of_unknown_duration, args=(root,))
+    thrd.start()
     task(root)  # This will block while the mainloop runs
-    t1.join()
+    thrd.join()
     root.destroy()

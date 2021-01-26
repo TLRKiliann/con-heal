@@ -7,7 +7,7 @@ import tkinter as tk
 from tkinter import filedialog
 
 
-""" 
+"""
     To access to backup files
     from the main file time-track.py
     with a GUI textbox
@@ -41,7 +41,7 @@ def backupFuncPatient(self):
     except TypeError as type_err:
         print("+ Type (of files) Error !", type_err)
     except UnboundLocalError as unb_err:
-            print("+ Unbound Local Error", unb_err)
+        print("+ Unbound Local Error", unb_err)
 
 def backupFuncPatient2(self):
     self.fen=tk.Tk()
@@ -70,7 +70,7 @@ def backupFuncPatient2(self):
     except TypeError as type_err:
         print("+ Type (of files) Error !", type_err)
     except UnboundLocalError as unb_err:
-            print("+ Unbound Local Error", unb_err)
+        print("+ Unbound Local Error", unb_err)
 
 def backupFuncPatient3(self):
     self.fen=tk.Tk()
@@ -99,7 +99,7 @@ def backupFuncPatient3(self):
     except TypeError as type_err:
         print("+ Type (of files) Error !", type_err)
     except UnboundLocalError as unb_err:
-            print("+ Unbound Local Error", unb_err)
+        print("+ Unbound Local Error", unb_err)
 
 def backupFuncPatient4(self):
     self.fen=tk.Tk()
@@ -128,7 +128,7 @@ def backupFuncPatient4(self):
     except TypeError as type_err:
         print("+ Type (of files) Error !", type_err)
     except UnboundLocalError as unb_err:
-            print("+ Unbound Local Error", unb_err)
+        print("+ Unbound Local Error", unb_err)
 
 def backupFuncPatient5(self):
     self.fen=tk.Tk()
@@ -157,7 +157,7 @@ def backupFuncPatient5(self):
     except TypeError as type_err:
         print("+ Type (of files) Error !", type_err)
     except UnboundLocalError as unb_err:
-            print("+ Unbound Local Error", unb_err)
+        print("+ Unbound Local Error", unb_err)
 
 def backupFuncPatient6(self):
     self.fen=tk.Tk()
@@ -186,7 +186,7 @@ def backupFuncPatient6(self):
     except TypeError as type_err:
         print("+ Type (of files) Error !", type_err)
     except UnboundLocalError as unb_err:
-            print("+ Unbound Local Error", unb_err)
+        print("+ Unbound Local Error", unb_err)
 
 def backupFuncPatient7(self):
     self.fen=tk.Tk()
@@ -215,7 +215,7 @@ def backupFuncPatient7(self):
     except TypeError as type_err:
         print("+ Type (of files) Error !", type_err)
     except UnboundLocalError as unb_err:
-            print("+ Unbound Local Error", unb_err)
+        print("+ Unbound Local Error", unb_err)
 
 def backupFuncPatient8(self):
     self.fen=tk.Tk()
@@ -244,7 +244,7 @@ def backupFuncPatient8(self):
     except TypeError as type_err:
         print("+ Type (of files) Error !", type_err)
     except UnboundLocalError as unb_err:
-            print("+ Unbound Local Error", unb_err)
+        print("+ Unbound Local Error", unb_err)
 
 def backupFuncPatient9(self):
     self.fen=tk.Tk()
@@ -273,7 +273,7 @@ def backupFuncPatient9(self):
     except TypeError as type_err:
         print("+ Type (of files) Error !", type_err)
     except UnboundLocalError as unb_err:
-            print("+ Unbound Local Error", unb_err)
+        print("+ Unbound Local Error", unb_err)
 
 def backupFuncPatient10(self):
     self.fen=tk.Tk()
@@ -302,7 +302,7 @@ def backupFuncPatient10(self):
     except TypeError as type_err:
         print("+ Type (of files) Error !", type_err)
     except UnboundLocalError as unb_err:
-            print("+ Unbound Local Error", unb_err)
+        print("+ Unbound Local Error", unb_err)
 
 def backupFuncPatient11(self):
     self.fen=tk.Tk()
@@ -331,7 +331,7 @@ def backupFuncPatient11(self):
     except TypeError as type_err:
         print("+ Type (of files) Error !", type_err)
     except UnboundLocalError as unb_err:
-            print("+ Unbound Local Error", unb_err)
+        print("+ Unbound Local Error", unb_err)
 
 def backupFuncPatient12(self):
     self.fen=tk.Tk()
@@ -360,7 +360,7 @@ def backupFuncPatient12(self):
     except TypeError as type_err:
         print("+ Type (of files) Error !", type_err)
     except UnboundLocalError as unb_err:
-            print("+ Unbound Local Error", unb_err)
+        print("+ Unbound Local Error", unb_err)
 
 def backupFuncPatient13(self):
     self.fen=tk.Tk()
@@ -389,7 +389,7 @@ def backupFuncPatient13(self):
     except TypeError as type_err:
         print("+ Type (of files) Error !", type_err)
     except UnboundLocalError as unb_err:
-            print("+ Unbound Local Error", unb_err)
+        print("+ Unbound Local Error", unb_err)
 
 def backupFuncPatient14(self):
     self.fen=tk.Tk()
@@ -418,7 +418,7 @@ def backupFuncPatient14(self):
     except TypeError as type_err:
         print("+ Type (of files) Error !", type_err)
     except UnboundLocalError as unb_err:
-            print("+ Unbound Local Error", unb_err)
+        print("+ Unbound Local Error", unb_err)
 
 def backupFuncPatient15(self):
     self.fen=tk.Tk()
@@ -447,7 +447,7 @@ def backupFuncPatient15(self):
     except TypeError as type_err:
         print("+ Type (of files) Error !", type_err)
     except UnboundLocalError as unb_err:
-            print("+ Unbound Local Error", unb_err)
+        print("+ Unbound Local Error", unb_err)
 
 def backupFuncPatient16(self):
     self.fen=tk.Tk()
@@ -476,7 +476,7 @@ def backupFuncPatient16(self):
     except TypeError as type_err:
         print("+ Type (of files) Error !", type_err)
     except UnboundLocalError as unb_err:
-            print("+ Unbound Local Error", unb_err)
+        print("+ Unbound Local Error", unb_err)
 
 def backupFuncPatient17(self):
     self.fen=tk.Tk()
@@ -505,7 +505,7 @@ def backupFuncPatient17(self):
     except TypeError as type_err:
         print("+ Type (of files) Error !", type_err)
     except UnboundLocalError as unb_err:
-            print("+ Unbound Local Error", unb_err)
+        print("+ Unbound Local Error", unb_err)
 
 def backupFuncPatient18(self):
     self.fen=tk.Tk()
@@ -534,7 +534,7 @@ def backupFuncPatient18(self):
     except TypeError as type_err:
         print("+ Type (of files) Error !", type_err)
     except UnboundLocalError as unb_err:
-            print("+ Unbound Local Error", unb_err)
+        print("+ Unbound Local Error", unb_err)
 
 def backupFuncPatient19(self):
     self.fen=tk.Tk()
@@ -563,7 +563,7 @@ def backupFuncPatient19(self):
     except TypeError as type_err:
         print("+ Type (of files) Error !", type_err)
     except UnboundLocalError as unb_err:
-            print("+ Unbound Local Error", unb_err)
+        print("+ Unbound Local Error", unb_err)
 
 def backupFuncPatient20(self):
     self.fen=tk.Tk()
@@ -592,7 +592,7 @@ def backupFuncPatient20(self):
     except TypeError as type_err:
         print("+ Type (of files) Error !", type_err)
     except UnboundLocalError as unb_err:
-            print("+ Unbound Local Error", unb_err)
+        print("+ Unbound Local Error", unb_err)
 
 def backupFuncPatient21(self):
     self.fen=tk.Tk()
@@ -621,7 +621,7 @@ def backupFuncPatient21(self):
     except TypeError as type_err:
         print("+ Type (of files) Error !", type_err)
     except UnboundLocalError as unb_err:
-            print("+ Unbound Local Error", unb_err)
+        print("+ Unbound Local Error", unb_err)
 
 def backupFuncPatient22(self):
     self.fen=tk.Tk()
@@ -650,7 +650,7 @@ def backupFuncPatient22(self):
     except TypeError as type_err:
         print("+ Type (of files) Error !", type_err)
     except UnboundLocalError as unb_err:
-            print("+ Unbound Local Error", unb_err)
+        print("+ Unbound Local Error", unb_err)
 
 def backupFuncPatient23(self):
     self.fen=tk.Tk()
@@ -679,7 +679,7 @@ def backupFuncPatient23(self):
     except TypeError as type_err:
         print("+ Type (of files) Error !", type_err)
     except UnboundLocalError as unb_err:
-            print("+ Unbound Local Error", unb_err)
+        print("+ Unbound Local Error", unb_err)
 
 def backupFuncPatient24(self):
     self.fen=tk.Tk()
@@ -708,4 +708,4 @@ def backupFuncPatient24(self):
     except TypeError as type_err:
         print("+ Type (of files) Error !", type_err)
     except UnboundLocalError as unb_err:
-            print("+ Unbound Local Error", unb_err)
+        print("+ Unbound Local Error", unb_err)

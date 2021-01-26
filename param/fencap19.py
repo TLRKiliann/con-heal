@@ -10,6 +10,7 @@
 
 
 from tkinter import *
+import tkinter as tk
 from tkinter import messagebox
 import json
 import os
@@ -653,112 +654,112 @@ def delEvery():
 with open('./newpatient/entryfile19.txt', 'r') as filename:
     line1=filename.readline()
 
-gui = Tk()
+gui = tk.Tk()
 gui.title("Time-Track")
 gui.configure(background='DodgerBlue2')
 gui.geometry('650x600')
 
-labelTitle = Label(gui, text="Vital Parameters",
+labelTitle = tk.Label(gui, text="Vital Parameters",
     font=('Times 22 bold'), bg='DodgerBlue2', fg='white')
 labelTitle.grid(row=0, column=1, columnspan=4, pady=10)
 
-label = Label(gui, text='Date : ', font=('Times', 14),
+label = tk.Label(gui, text='Date : ', font=('Times', 14),
     fg='white', bg='DodgerBlue2', width=15, anchor='e')
 label.grid(row=1, column=1)
 
-label = Label(gui, text='Hour : ', font=('Times', 14),
+label = tk.Label(gui, text='Hour : ', font=('Times', 14),
     fg='white', bg='DodgerBlue2', width=15, anchor='e')
 label.grid(row=2, column=1)
 
-label1 = Label(gui, text='Enter Name : ', font=('Times', 14),
+label1 = tk.Label(gui, text='Enter Name : ', font=('Times', 14),
     fg='white', bg='DodgerBlue2', width=15, anchor='e')
 label1.grid(row=3, column=1)
 
-label2 = Label(gui, text='Enter Systolic : ', font=('Times', 14),
+label2 = tk.Label(gui, text='Enter Systolic : ', font=('Times', 14),
     fg='white', bg='DodgerBlue2', width=15, anchor='e')
 label2.grid(sticky='e', row=4, column=1)
 
-labelDia = Label(gui, text='Diastolic : ', font=('Times', 14),
+labelDia = tk.Label(gui, text='Diastolic : ', font=('Times', 14),
     fg='white', bg='DodgerBlue2', width=10, anchor='e')
 labelDia.grid(row=4, column=2)
 
-label3 = Label(gui, text='Enter Puls : ', font=('Times', 14),
+label3 = tk.Label(gui, text='Enter Puls : ', font=('Times', 14),
     fg='white', bg='DodgerBlue2', width=15, anchor='e')
 label3.grid(row=5, column=1)
 
-label4 = Label(gui, text='Enter SaO2 : ', font=('Times', 14),
+label4 = tk.Label(gui, text='Enter SaO2 : ', font=('Times', 14),
     fg='white', bg='DodgerBlue2', width=15, anchor='e')
 label4.grid(row=6, column=1)
 
-label5 = Label(gui, text='Enter FR : ', font=('Times', 14),
+label5 = tk.Label(gui, text='Enter FR : ', font=('Times', 14),
     fg='white', bg='DodgerBlue2', width=15, anchor='e')
 label5.grid(row=7, column=1)
 
-label6 = Label(gui, text='Enter T°C : ', font=('Times', 14),
+label6 = tk.Label(gui, text='Enter T°C : ', font=('Times', 14),
     fg='white', bg='DodgerBlue2', width=15, anchor='e')
 label6.grid(row=8, column=1)
 
-label7 = Label(gui, text='Enter Hgt : ', font=('Times', 14),
+label7 = tk.Label(gui, text='Enter Hgt : ', font=('Times', 14),
     fg='white', bg='DodgerBlue2', width=15, anchor='e')
 label7.grid(row=9, column=1)
 
-label8 = Label(gui, text='Eva dlrs/10 : ', font=('Times', 14),
+label8 = tk.Label(gui, text='Eva dlrs/10 : ', font=('Times', 14),
     fg='white', bg='DodgerBlue2', width=15, anchor='e')
 label8.grid(row=10, column=1)
 
-time_string = IntVar()
-textDate = Entry(gui, textvariable=time_string,
+time_string = tk.IntVar()
+textDate = tk.Entry(gui, textvariable=time_string,
     highlightbackground='gray', bd=4)
 time_string.set(time.strftime("%d/%m/%Y"))
 textDate.grid(row=1, column=2)
 
-time_Htring = IntVar()
-textHour = Entry(gui, textvariable=time_Htring,
+time_Htring = tk.IntVar()
+textHour = tk.Entry(gui, textvariable=time_Htring,
     highlightbackground='gray', bd=4)
 time_Htring.set(time.strftime("%H:%M:%S"))
 textHour.grid(row=2, column=2)
 
-name_text = StringVar()
-textName = Entry(gui, textvariable=name_text,
+name_text = tk.StringVar()
+textName = tk.Entry(gui, textvariable=name_text,
     highlightbackground='gray', bd=4)
 name_text.set(line1[:-1])
 textName.grid(row=3, column=2)
 
-textsvta = StringVar()
-textTa = Entry(gui, textvariable=textsvta, highlightbackground='gray',
+textsvta = tk.StringVar()
+textTa = tk.Entry(gui, textvariable=textsvta, highlightbackground='gray',
     width=4, bd=4)
 textTa.grid(sticky='w', row=4, column=2)
 
-textsvdia = StringVar()
-textDia = Entry(gui, textvariable=textsvdia, highlightbackground='gray',
+textsvdia = tk.StringVar()
+textDia = tk.Entry(gui, textvariable=textsvdia, highlightbackground='gray',
     width=4, bd=4)
 textDia.grid(sticky='e', row=4, column=2)
 
-textsvpuls = StringVar()
-textPuls = Entry(gui, textvariable=textsvpuls, highlightbackground='gray', bd=4)
+textsvpuls = tk.StringVar()
+textPuls = tk.Entry(gui, textvariable=textsvpuls, highlightbackground='gray', bd=4)
 textPuls.grid(row=5, column=2)
 
-textsvsa = StringVar()
-textSa = Entry(gui, textvariable=textsvsa, highlightbackground='gray', bd=4)
+textsvsa = tk.StringVar()
+textSa = tk.Entry(gui, textvariable=textsvsa, highlightbackground='gray', bd=4)
 textSa.grid(row=6, column=2)
 
-textsvfr = StringVar()
-textFr = Entry(gui, textvariable=textsvfr, highlightbackground='gray', bd=4)
+textsvfr = tk.StringVar()
+textFr = tk.Entry(gui, textvariable=textsvfr, highlightbackground='gray', bd=4)
 textFr.grid(row=7, column=2)
 
-textsvtemp = StringVar()
-textTemp = Entry(gui, textvariable=textsvtemp, highlightbackground='gray', bd=4)
+textsvtemp = tk.StringVar()
+textTemp = tk.Entry(gui, textvariable=textsvtemp, highlightbackground='gray', bd=4)
 textTemp.grid(row=8, column=2)
 
-textsvhgt = StringVar()
-textHgt = Entry(gui, textvariable=textsvhgt, highlightbackground='gray', bd=4)
+textsvhgt = tk.StringVar()
+textHgt = tk.Entry(gui, textvariable=textsvhgt, highlightbackground='gray', bd=4)
 textHgt.grid(row=9, column=2)
 
-textsvdlrs = StringVar()
-textDlrs = Entry(gui, textvariable=textsvdlrs, highlightbackground='gray', bd=4)
+textsvdlrs = tk.StringVar()
+textDlrs = tk.Entry(gui, textvariable=textsvdlrs, highlightbackground='gray', bd=4)
 textDlrs.grid(row=10, column=2)
 
-button2Write = Button(gui)
+button2Write = tk.Button(gui)
 button2Write.config(text='Quit', width=15,
     fg='navy', bg='lightblue',
     activebackground='pale turquoise',
@@ -766,13 +767,13 @@ button2Write.config(text='Quit', width=15,
     command=quit)
 button2Write.grid(row=1, column=3)
 
-buttonDel = Button(gui)
+buttonDel = tk.Button(gui)
 buttonDel.config(text='Erase Last Values', width=15,
     bg='coral', fg='yellow', activebackground='red',
     activeforeground='white', command=delEvery)
 buttonDel.grid(row=1, column=4)
 
-buttonWrite = Button(gui)
+buttonWrite = tk.Button(gui)
 buttonWrite.config(text='CAPTURE DATA', width=33,
     fg='navy', bg='lightblue',
     activeforeground='gray40',
@@ -781,108 +782,108 @@ buttonWrite.config(text='CAPTURE DATA', width=33,
         textSa, textFr, textTemp, textHgt, textDlrs))
 buttonWrite.grid(row=2, column=3, columnspan=4)
 
-buttonMainlec = Button(gui)
+buttonMainlec = tk.Button(gui)
 buttonMainlec.config(text='Read All Data', width=15,
     bg='lightblue', fg='navy', activebackground='pale turquoise',
     activeforeground='gray40', command=mainRead)
 buttonMainlec.grid(row=3, column=3)
 
-buttonDel = Button(gui)
+buttonDel = tk.Button(gui)
 buttonDel.config(text='Delete File of Data', width=15,
     bg='coral', fg='yellow', activebackground='red',
     activeforeground='white', command=delMain)
 buttonDel.grid(row=3, column=4)
 
-button3Write = Button(gui)
+button3Write = tk.Button(gui)
 button3Write.config(text='Graph TA', width=15,
     bg='lightblue', fg='navy', activebackground='pale turquoise',
     activeforeground='gray40',
     command = lambda : appelTens(textDate, textName, textTa, textDia))
 button3Write.grid(row=4, column=3)
 
-button4Write = Button(gui)
+button4Write = tk.Button(gui)
 button4Write.config(text='Graph Puls', width=15,
     bg='lightblue', fg='navy', activebackground='pale turquoise',
     activeforeground='gray40', command = lambda : appelPuls(textDate, textName, textPuls))
 button4Write.grid(row=5, column=3)
 
-button5Write = Button(gui)
+button5Write = tk.Button(gui)
 button5Write.config(text='Graph SaO2', width=15,
     bg='lightblue', fg='navy', activebackground='pale turquoise',
     activeforeground='gray40', command = lambda : appelSat(textDate, textName, textSa))
 button5Write.grid(row=6, column=3)
 
-button6Write = Button(gui)
+button6Write = tk.Button(gui)
 button6Write.config(text='Graph FR', width=15,
     bg='lightblue', fg='navy', activebackground='pale turquoise',
     activeforeground='gray40', command = lambda : appelFreq(textDate, textName, textFr))
 button6Write.grid(row=7, column=3)
 
-button7Write = Button(gui)
+button7Write = tk.Button(gui)
 button7Write.config(text='Graph T°C', width=15,
     bg='lightblue', fg='navy',activebackground='pale turquoise',
     activeforeground='gray40', command = lambda : appelTemp(textDate, textName, textTemp))
 button7Write.grid(row=8, column=3)
 
-button8Write = Button(gui)
+button8Write = tk.Button(gui)
 button8Write.config(text='Graph Hgt', width=15,
     bg='lightblue', fg='navy',activebackground='pale turquoise',
     activeforeground='gray40', command = lambda : appelGly(textDate, textName, textHgt))
 button8Write.grid(row=9, column=3)
 
-button9Write = Button(gui)
+button9Write = tk.Button(gui)
 button9Write.config(text='Graph Dlrs', width=15,
     bg='lightblue', fg='navy',activebackground='pale turquoise',
     activeforeground='gray40', command = lambda : appelDlr(textDate, textName, textDlrs))
 button9Write.grid(row=10, column=3)
 
-button1Del = Button(gui)
+button1Del = tk.Button(gui)
 button1Del.config(text='Cancel last TA', width=15,
     bg='coral', fg='yellow', activeforeground='white',
     activebackground='red', command = delSystol)
 button1Del.grid(row=4, column=4)
 
-button2Del = Button(gui)
+button2Del = tk.Button(gui)
 button2Del.config(text='Cancel last Puls', width=15,
     bg='coral', fg='yellow', activeforeground='white',
     activebackground='red', command=delPuls)
 button2Del.grid(row=5, column=4)
 
-button3Del = Button(gui)
+button3Del = tk.Button(gui)
 button3Del.config(text='Cancel last SaO2', width=15,
     bg='coral', fg='yellow', activeforeground='white',
     activebackground='red', command=delSat)
 button3Del.grid(row=6, column=4)
 
-button4Del = Button(gui)
+button4Del = tk.Button(gui)
 button4Del.config(text='Cancel last FR', width=15,
     bg='coral', fg='yellow', activeforeground='white',
     activebackground='red', command=delFreq)
 button4Del.grid(row=7, column=4)
 
-button5Del = Button(gui)
+button5Del = tk.Button(gui)
 button5Del.config(text='Cancel last T°C', width=15,
     bg='coral', fg='yellow', activeforeground='white',
     activebackground='red', command=delTemp)
 button5Del.grid(row=8, column=4)
 
-button6Del = Button(gui)
+button6Del = tk.Button(gui)
 button6Del.config(text='Cancel last Hgt', width=15,
     bg='coral', fg='yellow', activeforeground='white',
     activebackground='red', command=delGly)
 button6Del.grid(row=9, column=4)
 
-button7Del = Button(gui)
+button7Del = tk.Button(gui)
 button7Del.config(text='Cancel last Dlrs', width=15,
     bg='coral', fg='yellow', activeforeground='white',
     activebackground='red', command=delDlr)
 button7Del.grid(row=10, column=4)
 
-lower_frame = Frame(gui, bg='DodgerBlue2', bd=10, relief=GROOVE)
+lower_frame = tk.Frame(gui, bg='DodgerBlue2', bd=10, relief=GROOVE)
 lower_frame.place(relx=0.5, rely=0.66, relwidth=0.9,
     relheight=0.3, anchor='n')
 
-label = Label(lower_frame, text=" ", font=('Arial', 12),
+label = tk.Label(lower_frame, text=" ", font=('Arial', 12),
     bg='white', anchor='nw', justify='left')
 label.place(relwidth=1, relheight=1)
 

@@ -3,6 +3,7 @@
 
 
 from tkinter import *
+import tkinter as tk
 import os
 
 
@@ -27,8 +28,8 @@ def famWind(self):
                 print("+ File famycontact1.txt created !")
 
         self.x1, self.y1 = 900, 330
-        self.txtBox = Text(self.can, height=13, width=40, font=18, relief=SUNKEN)
-        self.txtBox.delete('1.0', END)
+        self.txtBox = tk.Text(self.can, height=13, width=40, font=18, relief=SUNKEN)
+        self.txtBox.delete('1.0', tk.END)
         self.txtBox.update()
         self.ftxtBox_window = self.can.create_window(self.x1, self.y1, window=self.txtBox)
 
@@ -41,13 +42,13 @@ def famWind(self):
                     street = policyfile.readline()
                     state = policyfile.readline()
                     email = policyfile.readline()
-                self.txtBox.insert(INSERT, "--- Data Relationship ---\n")
-                self.txtBox.insert(END, "\nName : " + line1)
-                self.txtBox.insert(END, "\nPhone : " + phone)
-                self.txtBox.insert(END, "\nMobile : " + iphone2)
-                self.txtBox.insert(END, "\nStreet : " + street)
-                self.txtBox.insert(END, "\nCity : " + state)
-                self.txtBox.insert(END, "\ne-mail : " + email)
+                self.txtBox.insert(tk.INSERT, "--- Data Relationship ---\n")
+                self.txtBox.insert(tk.END, "\nName : " + line1)
+                self.txtBox.insert(tk.END, "\nPhone : " + phone)
+                self.txtBox.insert(tk.END, "\nMobile : " + iphone2)
+                self.txtBox.insert(tk.END, "\nStreet : " + street)
+                self.txtBox.insert(tk.END, "\nCity : " + state)
+                self.txtBox.insert(tk.END, "\ne-mail : " + email)
             else:
                 pass
         except FileNotFoundError as err_r:
@@ -102,7 +103,7 @@ def famWind(self):
 
     # Label title
     self.x11, self.y11 = 250, 100
-    self.lbltitle = Label(self.can, text="Contact",
+    self.lbltitle = tk.Label(self.can, text="Contact",
         font=('helvetica', 40, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wlbltitle_window = self.can.create_window(self.x11, self.y11,
@@ -110,7 +111,7 @@ def famWind(self):
 
     # Label title2
     self.x12, self.y12 = 510, 100
-    self.labtitle = Label(self.can, text="Relationship",
+    self.labtitle = tk.Label(self.can, text="Relationship",
         font=('Times', 40, 'italic'),
         bg='DodgerBlue2', fg='coral')
     self.wlabtitle_window = self.can.create_window(self.x12, self.y12,
@@ -118,7 +119,7 @@ def famWind(self):
 
     # Name
     self.x1, self.y1 = 250, 200
-    self.labelname = Label(self.can, text="Name :",
+    self.labelname = tk.Label(self.can, text="Name :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wlabelname_window = self.can.create_window(self.x1, self.y1,
@@ -138,8 +139,8 @@ def famWind(self):
     try:
         self.txt_pat = linex
         self.x2, self.y2 = 450, 200
-        self.txt_pat = StringVar()
-        self.namentry = Entry(self.can, textvariable=self.txt_pat,
+        self.txt_pat = tk.StringVar()
+        self.namentry = tk.Entry(self.can, textvariable=self.txt_pat,
             highlightbackground='grey', bd=4)
         self.txt_pat.set(linex[:-1])
         self.wnamentry_window = self.can.create_window(self.x2, self.y2,
@@ -149,7 +150,7 @@ def famWind(self):
 
     # Phone
     self.x20, self.y20 = 250, 250
-    self.phonelabel = Label(self.can, text="Phone :",
+    self.phonelabel = tk.Label(self.can, text="Phone :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wphonelabel_window = self.can.create_window(self.x20, self.y20,
@@ -157,8 +158,8 @@ def famWind(self):
 
     self.txtphone = line2
     self.x21, self.y21 = 450, 250
-    self.txtphone = StringVar()
-    self.phonentry = Entry(self.can, textvariable=self.txtphone,
+    self.txtphone = tk.StringVar()
+    self.phonentry = tk.Entry(self.can, textvariable=self.txtphone,
         highlightbackground='grey', bd=3)
     self.txtphone.set(line2[:-1])
     self.wphonentry_window = self.can.create_window(self.x21, self.y21,
@@ -166,7 +167,7 @@ def famWind(self):
 
     # Mobile
     self.x20, self.y20 = 250, 300
-    self.lblmobile = Label(self.can, text="Mobile :",
+    self.lblmobile = tk.Label(self.can, text="Mobile :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wlblmobile_window = self.can.create_window(self.x20, self.y20,
@@ -174,8 +175,8 @@ def famWind(self):
 
     self.txtmobile = line3
     self.x21, self.y21 = 450, 300
-    self.txtmobile = StringVar()
-    self.mobilentry = Entry(self.can, textvariable=self.txtmobile,
+    self.txtmobile = tk.StringVar()
+    self.mobilentry = tk.Entry(self.can, textvariable=self.txtmobile,
         highlightbackground='grey', bd=3)
     self.txtmobile.set(line3[:-1])
     self.wmobilentry_window = self.can.create_window(self.x21, self.y21,
@@ -183,7 +184,7 @@ def famWind(self):
 
     # Street
     self.x30, self.y30 = 250, 350
-    self.addrlabel = Label(self.can, text="Street :",
+    self.addrlabel = tk.Label(self.can, text="Street :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.waddrlabel_window = self.can.create_window(self.x30, self.y30,
@@ -191,15 +192,15 @@ def famWind(self):
 
     self.addrtxt = line4
     self.x31, self.y31 = 450, 350
-    self.addrtxt = StringVar()
-    self.addrentry = Entry(self.can, textvariable=self.addrtxt,
+    self.addrtxt = tk.StringVar()
+    self.addrentry = tk.Entry(self.can, textvariable=self.addrtxt,
         highlightbackground='grey', bd=4)
     self.addrtxt.set(line4[:-1])
     self.waddrentry_window = self.can.create_window(self.x31, self.y31,
         window = self.addrentry)
 
     self.x32, self.y32 = 250, 400
-    self.labcity = Label(self.can, text="City :",
+    self.labcity = tk.Label(self.can, text="City :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wlabcity_window = self.can.create_window(self.x32, self.y32,
@@ -207,8 +208,8 @@ def famWind(self):
 
     self.citytxt = line5
     self.x33, self.y33 = 450, 400
-    self.citytxt = StringVar()
-    self.cityentry = Entry(self.can, textvariable=self.citytxt,
+    self.citytxt = tk.StringVar()
+    self.cityentry = tk.Entry(self.can, textvariable=self.citytxt,
         highlightbackground='grey', bd=4)
     self.citytxt.set(line5[:-1])
     self.wcityentry_window = self.can.create_window(self.x33, self.y33,
@@ -216,7 +217,7 @@ def famWind(self):
 
     # e-mail
     self.x40, self.y40 = 250, 450
-    self.mailabel = Label(self.can, text="e-mail :",
+    self.mailabel = tk.Label(self.can, text="e-mail :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wmailabel_window = self.can.create_window(self.x40, self.y40,
@@ -224,15 +225,15 @@ def famWind(self):
 
     self.mailtxt = line6
     self.x41, self.y41 = 450, 450
-    self.mailtxt = StringVar()
-    self.entrymail = Entry(self.can, textvariable=self.mailtxt,
+    self.mailtxt = tk.StringVar()
+    self.entrymail = tk.Entry(self.can, textvariable=self.mailtxt,
         highlightbackground='grey', bd=3)
     self.mailtxt.set(line6)
     self.wentrymail_window = self.can.create_window(self.x41, self.y41,
         window = self.entrymail)
 
     self.x52, self.y52 = 350, 520
-    self.b52 = Button(self.can, text="Save Modifications", font=16,
+    self.b52 = tk.Button(self.can, text="Save Modifications", font=16,
         width=30, bd=3, bg='RoyalBlue3', fg='yellow',
         highlightbackground='cyan',
         activebackground='pale turquoise',

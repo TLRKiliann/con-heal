@@ -140,7 +140,7 @@ def process_of_unknown_duration(root):
     print('My pid is', os.getpid())
     root.quit() # To destroy threading
 
-def Main():
+def downloadata():
     """
         To start app with thread !
     """

@@ -16,15 +16,16 @@ import json
 import os
 import subprocess
 import time
-from progresstask5 import Main
-from uploadbar import uploadmain
+from downloader.progresstask5 import downloadata
+from uploader.uploadbar import uploadmain
+from uploader.upload5 import uploadata
 
 
 def tocallprogressbar():
     """
         To display progress bar with current download
     """
-    Main()
+    downloadata()
 tocallprogressbar()
 
 def writeData(textDate, textHour, textName, textTa, textDia,
@@ -312,6 +313,11 @@ def writeData(textDate, textHour, textName, textTa, textDia,
         "\nGlycemie: " + textHgt.get() +
         "\nDouleurs: " + textDlrs.get() +
         "\nAll data have been added in json files. Press Graph to upload data !")
+
+    uploadfunc()
+
+def uploadfunc():
+    uploadata()
 
 def mainRead():
     subprocess.run('./param/main_read5.py', check=True)

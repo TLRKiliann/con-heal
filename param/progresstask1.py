@@ -46,7 +46,7 @@ def process_of_unknown_duration(root):
         done, add root.quit() at the end.
     """
     time.sleep(2)
-    proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt1/paramdata1.txt",
+    proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt1/Files1/paramdata1.txt",
         "./param/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
@@ -56,7 +56,7 @@ def process_of_unknown_duration(root):
         print("+ No file to download !")
         messagebox.showerror("Error", "No paramdata1.txt to download")
 
-    secproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt1/diastol.json",
+    secproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt1/Files1/diastol.json",
         "./param/aspifile1/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(secproc.stderr))
     if secproc.stderr == b'':
@@ -66,7 +66,7 @@ def process_of_unknown_duration(root):
         print("+ No file to download !")
         messagebox.showerror("Error", "No diastol.json to download")
 
-    thirdproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt1/dlr.json",
+    thirdproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt1/Files1/dlr.json",
         "./param/aspifile1/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(thirdproc.stderr))
     if thirdproc.stderr == b'':
@@ -76,7 +76,7 @@ def process_of_unknown_duration(root):
         print("+ No file to download !")
         messagebox.showerror("Error", "No dlr.json to download")
 
-    forthproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt1/freq.json",
+    forthproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt1/Files1/freq.json",
         "./param/aspifile1/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(forthproc.stderr))
     if forthproc.stderr == b'':
@@ -86,7 +86,7 @@ def process_of_unknown_duration(root):
         print("+ No file to download !")
         messagebox.showerror("Error", "No freq.json to download")
 
-    fivthproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt1/gly.json",
+    fivthproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt1/Files1/gly.json",
         "./param/aspifile1/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(fivthproc.stderr))
     if fivthproc.stderr == b'':
@@ -96,7 +96,7 @@ def process_of_unknown_duration(root):
         print("+ No file to download !")
         messagebox.showerror("Error", "No gly.json to download")
 
-    sixthproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt1/puls.json",
+    sixthproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt1/Files1/puls.json",
         "./param/aspifile1/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(sixthproc.stderr))
     if sixthproc.stderr == b'':
@@ -106,7 +106,7 @@ def process_of_unknown_duration(root):
         print("+ No file to download !")
         messagebox.showerror("Error", "No puls.json to download")
 
-    sevenproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt1/sat.json",
+    sevenproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt1/Files1/sat.json",
         "./param/aspifile1/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(sevenproc.stderr))
     if sevenproc.stderr == b'':
@@ -116,7 +116,7 @@ def process_of_unknown_duration(root):
         print("+ No file to download !")
         messagebox.showerror("Error", "No sat.json to download")
 
-    eightproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt1/systol.json",
+    eightproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt1/Files1/systol.json",
         "./param/aspifile1/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(eightproc.stderr))
     if eightproc.stderr == b'':
@@ -126,7 +126,7 @@ def process_of_unknown_duration(root):
         print("+ No file to download !")
         messagebox.showerror("Error", "No systol.json to download")
 
-    ninethproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt1/temp.json",
+    ninethproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt1/Files1/temp.json",
         "./param/aspifile1/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(ninethproc.stderr))
     if ninethproc.stderr == b'':

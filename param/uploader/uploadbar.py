@@ -29,7 +29,7 @@ def task(root):
 
 def process_of_unknown_duration(root):
     time.sleep(2)
-    print('Done')
+    print('Upload done')
     root.quit()
 
 def uploadmain():

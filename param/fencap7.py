@@ -16,15 +16,15 @@ import json
 import os
 import subprocess
 import time
-from progresstask7 import downloader
-from uploadbar import uploadmain
-
+from downloader.progresstask7 import downloadata
+from uploader.uploadbar import uploadmain
+from uploader.upload7 import uploadata
 
 def tocallprogressbar():
     """
         To display progress bar with current download
     """
-    downloader()
+    downloadata()
 tocallprogressbar()
 
 def writeData(textDate, textHour, textName, textTa, textDia,
@@ -312,6 +312,11 @@ def writeData(textDate, textHour, textName, textTa, textDia,
         "\nGlycemie: " + textHgt.get() +
         "\nDouleurs: " + textDlrs.get() +
         "\nAll data have been added in json files. Press Graph to upload data !")
+
+    uploadfunc()
+
+def uploadfunc():
+    uploadata()
 
 def mainRead():
     subprocess.run('./param/main_read7.py', check=True)
@@ -779,7 +784,7 @@ buttonWrite.config(text='CAPTURE DATA', width=33,
     activeforeground='gray40',
     activebackground='pale turquoise',
     command = lambda : writeData(textDate, textHour, textName, textTa,
-    	textDia, textPuls, textSa, textFr, textTemp, textHgt, textDlrs))
+        textDia, textPuls, textSa, textFr, textTemp, textHgt, textDlrs))
 buttonWrite.grid(row=2, column=3, columnspan=4)
 
 buttonMainlec = tk.Button(gui)

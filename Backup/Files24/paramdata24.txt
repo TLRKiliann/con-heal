@@ -1,0 +1,11 @@
+Date : 27/01/2021
+Hour : 23:35:35
+Name and Surname : Vincent La Paz
+TA : 120/90mmHg
+Puls : 90/min
+SaO2 : 90%
+FR : 18/min
+Temperature : 37°C
+Glycemie : 5.6 mmol/l
+Douleurs (Pain) : 1/10
+

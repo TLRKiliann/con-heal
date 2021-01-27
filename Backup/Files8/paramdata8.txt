@@ -1,0 +1,11 @@
+Date : 10/01/2021
+Hour : 11:09:20
+Name and Surname : David Copperfield
+TA : 120/90mmHg
+Puls : 88/min
+SaO2 : 99%
+FR : 16/min
+Temperature : 36°C
+Glycemie : 5.5 mmol/l
+Douleurs (Pain) : 0/10
+

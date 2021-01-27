@@ -1,0 +1,11 @@
+Date : 27/01/2021
+Hour : 19:28:51
+Name and Surname : Kevin Mitnick
+TA : 90/77mmHg
+Puls : 78/min
+SaO2 : 97%
+FR : 15/min
+Temperature : 36.9°C
+Glycemie : 5.4 mmol/l
+Douleurs (Pain) : 0/10
+

@@ -54,11 +54,11 @@ with open('./param/aspifile4/data_gly.json', 'a+') as datafile:
 
 try:
     proc = subprocess.run(["scp", "./param/paramdata4.txt",
-        "pi@192.168.18.12:~/tt_doc/doc_txt4/paramdata4.txt"],
+        "pi@192.168.18.12:~/tt_doc/doc_txt4/Files4/paramdata4.txt"],
         stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     secproc = subprocess.run(["scp", "./param/aspifile4/gly.json",
-        "pi@192.168.18.12:~/tt_doc/doc_txt4/gly.json"],
+        "pi@192.168.18.12:~/tt_doc/doc_txt4/Files4/gly.json"],
         stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(secproc.stderr))
 except (OSError, FileNotFoundError) as e_failed:

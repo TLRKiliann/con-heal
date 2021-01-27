@@ -108,15 +108,15 @@ with open('./param/aspifile2/data_Diastol.json', 'a+') as datafile2d:
 
 try:
     proc = subprocess.run(["scp", "./param/paramdata2.txt",
-        "pi@192.168.18.12:~/tt_doc/doc_txt2/paramdata2.txt"],
+        "pi@192.168.18.12:~/tt_doc/doc_txt2/Files2/paramdata2.txt"],
         stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     secproc = subprocess.run(["scp", "./param/aspifile2/diastol.json",
-        "pi@192.168.18.12:~/tt_doc/doc_txt2/diastol.json"],
+        "pi@192.168.18.12:~/tt_doc/doc_txt2/Files2/diastol.json"],
         stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(secproc.stderr))
     thirdproc = subprocess.run(["scp", "./param/aspifile2/systol.json",
-        "pi@192.168.18.12:~/tt_doc/doc_txt2/systol.json"],
+        "pi@192.168.18.12:~/tt_doc/doc_txt2/Files2/systol.json"],
         stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(thirdproc.stderr))
 except (OSError, FileNotFoundError) as e_failed:

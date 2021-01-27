@@ -1,0 +1,33 @@
+Date : 17/01/2021
+Hour : 17:23:57
+Name and Surname : test totest
+TA : 120/90mmHg
+Puls : 99/min
+SaO2 : 98%
+FR : 15/min
+Temperature : 37°C
+Glycemie : 4.6 mmol/l
+Douleurs (Pain) : 2/10
+
+Date : 19/01/2021
+Hour : 20:09:10
+Name and Surname : test totest
+TA : 120/88mmHg
+Puls : 78/min
+SaO2 : 93%
+FR : 15/min
+Temperature : 36.3°C
+Glycemie : 5.9 mmol/l
+Douleurs (Pain) : 0/10
+
+Date : 19/01/2021
+Hour : 20:30:28
+Name and Surname : test totest
+TA : 120/90mmHg
+Puls : 88/min
+SaO2 : %
+FR : /min
+Temperature : °C
+Glycemie :  mmol/l
+Douleurs (Pain) : /10
+

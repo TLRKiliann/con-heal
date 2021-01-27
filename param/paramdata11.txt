@@ -1,0 +1,11 @@
+Date : 27/01/2021
+Hour : 19:53:23
+Name and Surname : 3x3c t3ch
+TA : /mmHg
+Puls : /min
+SaO2 : %
+FR : /min
+Temperature : °C
+Glycemie :  mmol/l
+Douleurs (Pain) : /10
+

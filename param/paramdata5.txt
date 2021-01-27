@@ -1,0 +1,11 @@
+Date : 27/01/2021
+Hour : 13:03:29
+Name and Surname : Michael Jordan
+TA : 120/90mmHg
+Puls : 88/min
+SaO2 : 94%
+FR : 16/min
+Temperature : 36.7°C
+Glycemie : 5.9 mmol/l
+Douleurs (Pain) : 1/10
+

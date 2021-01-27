@@ -31,3 +31,14 @@ Temperature : °C
 Glycemie :  mmol/l
 Douleurs (Pain) : /10
 
+Date : 27/01/2021
+Hour : 22:37:00
+Name and Surname : Pierre Weck
+TA : 125/90mmHg
+Puls : 88/min
+SaO2 : 98%
+FR : 16/min
+Temperature : 36°C
+Glycemie : 5.5 mmol/l
+Douleurs (Pain) : 1/10
+

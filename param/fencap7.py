@@ -20,6 +20,7 @@ from downloader.progresstask7 import downloadata
 from uploader.uploadbar import uploadmain
 from uploader.upload7 import uploadata
 
+
 def tocallprogressbar():
     """
         To display progress bar with current download

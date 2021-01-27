@@ -3,6 +3,7 @@
 
 
 from tkinter import *
+import tkinter as tk
 import os
 
 
@@ -27,8 +28,8 @@ def doctorWind14(self):
                 print("+ File contactdoc1.txt created !", testf)
 
         self.x1, self.y1 = 900, 370
-        self.txtBox = Text(self.can, height=17, width=40, font=18, relief=SUNKEN)
-        self.txtBox.delete('1.0', END)
+        self.txtBox = tk.Text(self.can, height=17, width=40, font=18, relief=SUNKEN)
+        self.txtBox.delete('1.0', tk.END)
         self.txtBox.update()
         self.ftxtBox_window = self.can.create_window(self.x1, self.y1, window=self.txtBox)
 
@@ -43,15 +44,15 @@ def doctorWind14(self):
                     state = policyfile.readline()
                     email = policyfile.readline()
                     fax = policyfile.readline()
-                self.txtBox.insert(INSERT, "--- Data Doctor ---\n")
-                self.txtBox.insert(END, "\nDoctor : " + line1)
-                self.txtBox.insert(END, "\nSpecialization : " + spec)
-                self.txtBox.insert(END, "\nPhone : " + phone)
-                self.txtBox.insert(END, "\nMobile : " + iphone2)
-                self.txtBox.insert(END, "\nStreet : " + street)
-                self.txtBox.insert(END, "\nCity : " + state)
-                self.txtBox.insert(END, "\ne-mail : " + email)
-                self.txtBox.insert(END, "\nFax : " + fax)
+                self.txtBox.insert(tk.INSERT, "--- Data Doctor ---\n")
+                self.txtBox.insert(tk.END, "\nDoctor : " + line1)
+                self.txtBox.insert(tk.END, "\nSpecialization : " + spec)
+                self.txtBox.insert(tk.END, "\nPhone : " + phone)
+                self.txtBox.insert(tk.END, "\nMobile : " + iphone2)
+                self.txtBox.insert(tk.END, "\nStreet : " + street)
+                self.txtBox.insert(tk.END, "\nCity : " + state)
+                self.txtBox.insert(tk.END, "\ne-mail : " + email)
+                self.txtBox.insert(tk.END, "\nFax : " + fax)
             else:
                 pass
         except FileNotFoundError as err_r:
@@ -66,8 +67,8 @@ def doctorWind14(self):
                 print("+ File contactdoc2.txt created !", testfd2)
 
         self.x2, self.y2 = 900, 890
-        self.txtBox2 = Text(self.can, height=17, width=40, font=18, relief=SUNKEN)
-        self.txtBox2.delete('1.0', END)
+        self.txtBox2 = tk.Text(self.can, height=17, width=40, font=18, relief=SUNKEN)
+        self.txtBox2.delete('1.0', tk.END)
         self.txtBox2.update()
         self.ftxtBox2_window = self.can.create_window(self.x2, self.y2, window=self.txtBox2)
 
@@ -82,15 +83,15 @@ def doctorWind14(self):
                     docstate = policydoc.readline()
                     docemail = policydoc.readline()
                     docfax = policydoc.readline()
-                self.txtBox2.insert(INSERT, "--- Data Doctor 2 ---\n")
-                self.txtBox2.insert(END, "\nDoctor : " + docline1)
-                self.txtBox2.insert(END, "\nSpecialization : " + docspecia)
-                self.txtBox2.insert(END, "\nPhone : " + docphone)
-                self.txtBox2.insert(END, "\nMobile : " + dociphone2)
-                self.txtBox2.insert(END, "\nStreet : " + docstreet)
-                self.txtBox2.insert(END, "\nCity : " + docstate)
-                self.txtBox2.insert(END, "\ne-mail : " + docemail)
-                self.txtBox2.insert(END, "\nFax : " + docfax)
+                self.txtBox2.insert(tk.INSERT, "--- Data Doctor 2 ---\n")
+                self.txtBox2.insert(tk.END, "\nDoctor : " + docline1)
+                self.txtBox2.insert(tk.END, "\nSpecialization : " + docspecia)
+                self.txtBox2.insert(tk.END, "\nPhone : " + docphone)
+                self.txtBox2.insert(tk.END, "\nMobile : " + dociphone2)
+                self.txtBox2.insert(tk.END, "\nStreet : " + docstreet)
+                self.txtBox2.insert(tk.END, "\nCity : " + docstate)
+                self.txtBox2.insert(tk.END, "\ne-mail : " + docemail)
+                self.txtBox2.insert(tk.END, "\nFax : " + docfax)
             else:
                 pass
         except FileNotFoundError as err_r3:
@@ -105,8 +106,8 @@ def doctorWind14(self):
                 print("+ File contactdoc3.txt created !", testfd3)
 
         self.x3, self.y3 = 900, 1410
-        self.txtBox3 = Text(self.can, height=17, width=40, font=18, relief=SUNKEN)
-        self.txtBox3.delete('1.0', END)
+        self.txtBox3 = tk.Text(self.can, height=17, width=40, font=18, relief=SUNKEN)
+        self.txtBox3.delete('1.0', tk.END)
         self.txtBox3.update()
         self.ftxtBox3_window = self.can.create_window(self.x3, self.y3, window=self.txtBox3)
 
@@ -121,15 +122,15 @@ def doctorWind14(self):
                     doc3state = policydoc3.readline()
                     doc3email = policydoc3.readline()
                     doc3fax = policydoc3.readline()
-                self.txtBox3.insert(INSERT, "--- Data Doctor 3 ---\n")
-                self.txtBox3.insert(END, "\nDoctor : " + doc3line1)
-                self.txtBox3.insert(END, "\nSpecialization : " + doc3special)
-                self.txtBox3.insert(END, "\nPhone : " + doc3phone)
-                self.txtBox3.insert(END, "\nMobile : " + doc3iphone2)
-                self.txtBox3.insert(END, "\nStreet : " + doc3street)
-                self.txtBox3.insert(END, "\nCity : " + doc3state)
-                self.txtBox3.insert(END, "\ne-mail : " + doc3email)
-                self.txtBox3.insert(END, "\nFax : " + doc3fax)
+                self.txtBox3.insert(tk.INSERT, "--- Data Doctor 3 ---\n")
+                self.txtBox3.insert(tk.END, "\nDoctor : " + doc3line1)
+                self.txtBox3.insert(tk.END, "\nSpecialization : " + doc3special)
+                self.txtBox3.insert(tk.END, "\nPhone : " + doc3phone)
+                self.txtBox3.insert(tk.END, "\nMobile : " + doc3iphone2)
+                self.txtBox3.insert(tk.END, "\nStreet : " + doc3street)
+                self.txtBox3.insert(tk.END, "\nCity : " + doc3state)
+                self.txtBox3.insert(tk.END, "\ne-mail : " + doc3email)
+                self.txtBox3.insert(tk.END, "\nFax : " + doc3fax)
             else:
                 pass
         except FileNotFoundError as err_r3:
@@ -282,7 +283,7 @@ def doctorWind14(self):
 
     # Label title
     self.x11, self.y11 = 250, 100
-    self.lbltitle = Label(self.can, text="Contact",
+    self.lbltitle = tk.Label(self.can, text="Contact",
         font=('helvetica', 40, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wlbltitle_window = self.can.create_window(self.x11, self.y11,
@@ -290,7 +291,7 @@ def doctorWind14(self):
 
     # Label title2
     self.x12, self.y12 = 460, 100
-    self.labtitle = Label(self.can, text="Doctors",
+    self.labtitle = tk.Label(self.can, text="Doctors",
         font=('Times', 40, 'italic'),
         bg='DodgerBlue2', fg='coral')
     self.wlabtitle_window = self.can.create_window(self.x12, self.y12,
@@ -298,7 +299,7 @@ def doctorWind14(self):
 
     # Doctor 1
     self.x1, self.y1 = 250, 200
-    self.labelname = Label(self.can, text="Doctor :",
+    self.labelname = tk.Label(self.can, text="Doctor :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wlabelname_window = self.can.create_window(self.x1, self.y1,
@@ -320,8 +321,8 @@ def doctorWind14(self):
     try:
         self.txt_pat = linex
         self.x2, self.y2 = 450, 200
-        self.txt_pat = StringVar()
-        self.namentry = Entry(self.can, textvariable=self.txt_pat,
+        self.txt_pat = tk.StringVar()
+        self.namentry = tk.Entry(self.can, textvariable=self.txt_pat,
             highlightbackground='grey', bd=4)
         self.txt_pat.set(linex[:-1])
         self.wnamentry_window = self.can.create_window(self.x2, self.y2,
@@ -331,7 +332,7 @@ def doctorWind14(self):
 
     # Specialization
     self.x20, self.y20 = 250, 250
-    self.speclab1 = Label(self.can, text="Specialization :",
+    self.speclab1 = tk.Label(self.can, text="Specialization :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wspeclab1_window = self.can.create_window(self.x20, self.y20,
@@ -339,8 +340,8 @@ def doctorWind14(self):
 
     self.txtspec1 = line2
     self.x21, self.y21 = 450, 250
-    self.txtspec1 = StringVar()
-    self.specentry1 = Entry(self.can, textvariable=self.txtspec1,
+    self.txtspec1 = tk.StringVar()
+    self.specentry1 = tk.Entry(self.can, textvariable=self.txtspec1,
         highlightbackground='grey', bd=3)
     self.txtspec1.set(line2[:-1])
     self.wspecentry1_window = self.can.create_window(self.x21, self.y21,
@@ -348,7 +349,7 @@ def doctorWind14(self):
 
     # Phone
     self.x22, self.y22 = 250, 300
-    self.phonelabel = Label(self.can, text="Phone :",
+    self.phonelabel = tk.Label(self.can, text="Phone :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wphonelabel_window = self.can.create_window(self.x22, self.y22,
@@ -356,8 +357,8 @@ def doctorWind14(self):
 
     self.txtphone = line3
     self.x23, self.y23 = 450, 300
-    self.txtphone = StringVar()
-    self.phonentry = Entry(self.can, textvariable=self.txtphone,
+    self.txtphone = tk.StringVar()
+    self.phonentry = tk.Entry(self.can, textvariable=self.txtphone,
         highlightbackground='grey', bd=3)
     self.txtphone.set(line3[:-1])
     self.wphonentry_window = self.can.create_window(self.x23, self.y23,
@@ -365,7 +366,7 @@ def doctorWind14(self):
 
     # Mobile
     self.x24, self.y24 = 250, 350
-    self.lblmobile = Label(self.can, text="Mobile :",
+    self.lblmobile = tk.Label(self.can, text="Mobile :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wlblmobile_window = self.can.create_window(self.x24, self.y24,
@@ -373,8 +374,8 @@ def doctorWind14(self):
 
     self.txtmobile = line4
     self.x25, self.y25 = 450, 350
-    self.txtmobile = StringVar()
-    self.mobilentry = Entry(self.can, textvariable=self.txtmobile,
+    self.txtmobile = tk.StringVar()
+    self.mobilentry = tk.Entry(self.can, textvariable=self.txtmobile,
         highlightbackground='grey', bd=3)
     self.txtmobile.set(line4[:-1])
     self.wmobilentry_window = self.can.create_window(self.x25, self.y25,
@@ -382,7 +383,7 @@ def doctorWind14(self):
 
     # Street
     self.x30, self.y30 = 250, 400
-    self.addrlabel = Label(self.can, text="Street :",
+    self.addrlabel = tk.Label(self.can, text="Street :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.waddrlabel_window = self.can.create_window(self.x30, self.y30,
@@ -390,15 +391,15 @@ def doctorWind14(self):
 
     self.addrtxt = line5
     self.x31, self.y31 = 450, 400
-    self.addrtxt = StringVar()
-    self.addrentry = Entry(self.can, textvariable=self.addrtxt,
+    self.addrtxt = tk.StringVar()
+    self.addrentry = tk.Entry(self.can, textvariable=self.addrtxt,
         highlightbackground='grey', bd=4)
     self.addrtxt.set(line5[:-1])
     self.waddrentry_window = self.can.create_window(self.x31, self.y31,
         window = self.addrentry)
 
     self.x32, self.y32 = 250, 450
-    self.labcity = Label(self.can, text="City :",
+    self.labcity = tk.Label(self.can, text="City :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wlabcity_window = self.can.create_window(self.x32, self.y32,
@@ -406,8 +407,8 @@ def doctorWind14(self):
 
     self.citytxt = line6
     self.x33, self.y33 = 450, 450
-    self.citytxt = StringVar()
-    self.cityentry = Entry(self.can, textvariable=self.citytxt,
+    self.citytxt = tk.StringVar()
+    self.cityentry = tk.Entry(self.can, textvariable=self.citytxt,
         highlightbackground='grey', bd=4)
     self.citytxt.set(line6[:-1])
     self.wcityentry_window = self.can.create_window(self.x33, self.y33,
@@ -415,7 +416,7 @@ def doctorWind14(self):
 
     # e-mail
     self.x40, self.y40 = 250, 500
-    self.mailabel = Label(self.can, text="e-mail :",
+    self.mailabel = tk.Label(self.can, text="e-mail :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wmailabel_window = self.can.create_window(self.x40, self.y40,
@@ -423,8 +424,8 @@ def doctorWind14(self):
 
     self.mailtxt = line7
     self.x41, self.y41 = 450, 500
-    self.mailtxt = StringVar()
-    self.entrymail = Entry(self.can, textvariable=self.mailtxt,
+    self.mailtxt = tk.StringVar()
+    self.entrymail = tk.Entry(self.can, textvariable=self.mailtxt,
         highlightbackground='grey', bd=3)
     self.mailtxt.set(line7[:-1])
     self.wentrymail_window = self.can.create_window(self.x41, self.y41,
@@ -432,7 +433,7 @@ def doctorWind14(self):
 
     # Fax
     self.x50, self.y50 = 250, 550
-    self.lblfax = Label(self.can, text="Fax :",
+    self.lblfax = tk.Label(self.can, text="Fax :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wlblfax_window = self.can.create_window(self.x50, self.y50,
@@ -440,15 +441,15 @@ def doctorWind14(self):
 
     self.faxtxt = line8
     self.x51, self.y51 = 450, 550
-    self.faxtxt = StringVar()
-    self.entryfax = Entry(self.can, textvariable=self.faxtxt,
+    self.faxtxt = tk.StringVar()
+    self.entryfax = tk.Entry(self.can, textvariable=self.faxtxt,
         highlightbackground='grey', bd=3)
     self.faxtxt.set(line8)
     self.wentryfax_window = self.can.create_window(self.x51, self.y51,
         window = self.entryfax)
 
     self.x52, self.y52 = 350, 620
-    self.b52 = Button(self.can, text="Save Modifications", font=16,
+    self.b52 = tk.Button(self.can, text="Save Modifications", font=16,
         width=30, bd=3, bg='RoyalBlue3', fg='yellow',
         highlightbackground='cyan',
         activebackground='pale turquoise',
@@ -462,7 +463,7 @@ def doctorWind14(self):
 
     # Doctor 2
     self.x60, self.y60 = 250, 720
-    self.lbldocname = Label(self.can, text="Doctor :",
+    self.lbldocname = tk.Label(self.can, text="Doctor :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wlbldocname_window = self.can.create_window(self.x60, self.y60,
@@ -484,8 +485,8 @@ def doctorWind14(self):
     try:
         self.txt_doc2 = docline1
         self.x62, self.y62 = 450, 720
-        self.txt_doc2 = StringVar()
-        self.namentry2 = Entry(self.can, textvariable=self.txt_doc2,
+        self.txt_doc2 = tk.StringVar()
+        self.namentry2 = tk.Entry(self.can, textvariable=self.txt_doc2,
             highlightbackground='grey', bd=4)
         self.txt_doc2.set(docline1[:-1])
         self.wnamentry2_window = self.can.create_window(self.x62, self.y62,
@@ -495,7 +496,7 @@ def doctorWind14(self):
 
     # Specialization
     self.x63, self.y63 = 250, 770
-    self.speclab2 = Label(self.can, text="Specialization :",
+    self.speclab2 = tk.Label(self.can, text="Specialization :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wspeclab2_window = self.can.create_window(self.x63, self.y63,
@@ -503,8 +504,8 @@ def doctorWind14(self):
 
     self.txtspec2 = docline2
     self.x64, self.y64 = 450, 770
-    self.txtspec2 = StringVar()
-    self.specentry2 = Entry(self.can, textvariable=self.txtspec2,
+    self.txtspec2 = tk.StringVar()
+    self.specentry2 = tk.Entry(self.can, textvariable=self.txtspec2,
         highlightbackground='grey', bd=3)
     self.txtspec2.set(docline2[:-1])
     self.wspecentry2_window = self.can.create_window(self.x64, self.y64,
@@ -512,7 +513,7 @@ def doctorWind14(self):
 
     # Phone
     self.x65, self.y65 = 250, 820
-    self.phonelabel2 = Label(self.can, text="Phone :",
+    self.phonelabel2 = tk.Label(self.can, text="Phone :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wphonelabel2_window = self.can.create_window(self.x65, self.y65,
@@ -520,8 +521,8 @@ def doctorWind14(self):
 
     self.txtphone2 = docline3
     self.x66, self.y66 = 450, 820
-    self.txtphone2 = StringVar()
-    self.phonentry2 = Entry(self.can, textvariable=self.txtphone2,
+    self.txtphone2 = tk.StringVar()
+    self.phonentry2 = tk.Entry(self.can, textvariable=self.txtphone2,
         highlightbackground='grey', bd=3)
     self.txtphone2.set(docline3[:-1])
     self.wphonentry2_window = self.can.create_window(self.x66, self.y66,
@@ -529,7 +530,7 @@ def doctorWind14(self):
 
     # Mobile
     self.x67, self.y67 = 250, 870
-    self.lblmobile2 = Label(self.can, text="Mobile :",
+    self.lblmobile2 = tk.Label(self.can, text="Mobile :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wlblmobile2_window = self.can.create_window(self.x67, self.y67,
@@ -537,8 +538,8 @@ def doctorWind14(self):
 
     self.txtmobile2 = docline4
     self.x68, self.y68 = 450, 870
-    self.txtmobile2 = StringVar()
-    self.mobilentry2 = Entry(self.can, textvariable=self.txtmobile2,
+    self.txtmobile2 = tk.StringVar()
+    self.mobilentry2 = tk.Entry(self.can, textvariable=self.txtmobile2,
         highlightbackground='grey', bd=3)
     self.txtmobile2.set(docline4[:-1])
     self.wmobilentry2_window = self.can.create_window(self.x68, self.y68,
@@ -546,7 +547,7 @@ def doctorWind14(self):
 
     # Street
     self.x69, self.y69 = 250, 920
-    self.addrlabel2 = Label(self.can, text="Street :",
+    self.addrlabel2 = tk.Label(self.can, text="Street :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.waddrlabel2_window = self.can.create_window(self.x69, self.y69,
@@ -554,15 +555,15 @@ def doctorWind14(self):
 
     self.addrtxt2 = docline5
     self.x70, self.y70 = 450, 920
-    self.addrtxt2 = StringVar()
-    self.addrentry2 = Entry(self.can, textvariable=self.addrtxt2,
+    self.addrtxt2 = tk.StringVar()
+    self.addrentry2 = tk.Entry(self.can, textvariable=self.addrtxt2,
         highlightbackground='grey', bd=4)
     self.addrtxt2.set(docline5[:-1])
     self.waddrentry2_window = self.can.create_window(self.x70, self.y70,
         window = self.addrentry2)
 
     self.x71, self.y71 = 250, 970
-    self.labcity2 = Label(self.can, text="City :",
+    self.labcity2 = tk.Label(self.can, text="City :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wlabcity2_window = self.can.create_window(self.x71, self.y71,
@@ -570,8 +571,8 @@ def doctorWind14(self):
 
     self.citytxt2 = docline6
     self.x72, self.y72 = 450, 970
-    self.citytxt2 = StringVar()
-    self.cityentry2 = Entry(self.can, textvariable=self.citytxt2,
+    self.citytxt2 = tk.StringVar()
+    self.cityentry2 = tk.Entry(self.can, textvariable=self.citytxt2,
         highlightbackground='grey', bd=4)
     self.citytxt2.set(docline6[:-1])
     self.wcityentry2_window = self.can.create_window(self.x72, self.y72,
@@ -579,7 +580,7 @@ def doctorWind14(self):
 
     # e-mail
     self.x73, self.y73 = 250, 1020
-    self.mailabel2 = Label(self.can, text="e-mail :",
+    self.mailabel2 = tk.Label(self.can, text="e-mail :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wmailabel2_window = self.can.create_window(self.x73, self.y73,
@@ -587,8 +588,8 @@ def doctorWind14(self):
 
     self.mailtxt2 = docline7
     self.x74, self.y74 = 450, 1020
-    self.mailtxt2 = StringVar()
-    self.entrymail2 = Entry(self.can, textvariable=self.mailtxt2,
+    self.mailtxt2 = tk.StringVar()
+    self.entrymail2 = tk.Entry(self.can, textvariable=self.mailtxt2,
         highlightbackground='grey', bd=3)
     self.mailtxt2.set(docline7[:-1])
     self.wentrymail2_window = self.can.create_window(self.x74, self.y74,
@@ -596,7 +597,7 @@ def doctorWind14(self):
 
     # Fax
     self.x75, self.y75 = 250, 1070
-    self.lblfax2 = Label(self.can, text="Fax :",
+    self.lblfax2 = tk.Label(self.can, text="Fax :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wlblfax2_window = self.can.create_window(self.x75, self.y75,
@@ -604,15 +605,15 @@ def doctorWind14(self):
 
     self.faxtxt2 = docline8
     self.x76, self.y76 = 450, 1070
-    self.faxtxt2 = StringVar()
-    self.entryfax2 = Entry(self.can, textvariable=self.faxtxt2,
+    self.faxtxt2 = tk.StringVar()
+    self.entryfax2 = tk.Entry(self.can, textvariable=self.faxtxt2,
         highlightbackground='grey', bd=3)
     self.faxtxt2.set(docline8)
     self.wentryfax2_window = self.can.create_window(self.x76, self.y76,
         window = self.entryfax2)
 
     self.x77, self.y77 = 350, 1140
-    self.bat77 = Button(self.can, text="Save Modifications", font=16,
+    self.bat77 = tk.Button(self.can, text="Save Modifications", font=16,
         width=30, bd=3, bg='RoyalBlue3', fg='yellow',
         highlightbackground='cyan',
         activebackground='pale turquoise',
@@ -627,7 +628,7 @@ def doctorWind14(self):
 
     # Doctor 3
     self.x80, self.y80 = 250, 1240
-    self.lbldocname3 = Label(self.can, text="Doctor :",
+    self.lbldocname3 = tk.Label(self.can, text="Doctor :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wlbldocname3_window = self.can.create_window(self.x80, self.y80,
@@ -649,8 +650,8 @@ def doctorWind14(self):
     try:
         self.txt_doc3 = doc3line1
         self.x81, self.y81 = 450, 1240
-        self.txt_doc3 = StringVar()
-        self.namentry3 = Entry(self.can, textvariable=self.txt_doc3,
+        self.txt_doc3 = tk.StringVar()
+        self.namentry3 = tk.Entry(self.can, textvariable=self.txt_doc3,
             highlightbackground='grey', bd=4)
         self.txt_doc3.set(doc3line1[:-1])
         self.wnamentry3_window = self.can.create_window(self.x81, self.y81,
@@ -659,7 +660,7 @@ def doctorWind14(self):
         print("+ File 1 not created ! (Error21)", err_doc3)
 
     self.x82, self.y82 = 250, 1290
-    self.speclab3 = Label(self.can, text="Specialization :",
+    self.speclab3 = tk.Label(self.can, text="Specialization :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wspeclab3_window = self.can.create_window(self.x82, self.y82,
@@ -667,8 +668,8 @@ def doctorWind14(self):
 
     self.txtspec3 = doc3line2
     self.x83, self.y83 = 450, 1290
-    self.txtspec3 = StringVar()
-    self.specentry3 = Entry(self.can, textvariable=self.txtspec3,
+    self.txtspec3 = tk.StringVar()
+    self.specentry3 = tk.Entry(self.can, textvariable=self.txtspec3,
         highlightbackground='grey', bd=3)
     self.txtspec3.set(doc3line2[:-1])
     self.wspecentry3_window = self.can.create_window(self.x83, self.y83,
@@ -676,7 +677,7 @@ def doctorWind14(self):
 
     # Phone
     self.x84, self.y84 = 250, 1340
-    self.phonelabel3 = Label(self.can, text="Phone :",
+    self.phonelabel3 = tk.Label(self.can, text="Phone :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wphonelabel3_window = self.can.create_window(self.x84, self.y84,
@@ -684,8 +685,8 @@ def doctorWind14(self):
 
     self.txtphone3 = doc3line3
     self.x85, self.y85 = 450, 1340
-    self.txtphone3 = StringVar()
-    self.phonentry3 = Entry(self.can, textvariable=self.txtphone3,
+    self.txtphone3 = tk.StringVar()
+    self.phonentry3 = tk.Entry(self.can, textvariable=self.txtphone3,
         highlightbackground='grey', bd=3)
     self.txtphone3.set(doc3line3[:-1])
     self.wphonentry3_window = self.can.create_window(self.x85, self.y85,
@@ -693,7 +694,7 @@ def doctorWind14(self):
 
     # Mobile
     self.x86, self.y86 = 250, 1390
-    self.lblmobile3 = Label(self.can, text="Mobile :",
+    self.lblmobile3 = tk.Label(self.can, text="Mobile :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wlblmobile3_window = self.can.create_window(self.x86, self.y86,
@@ -701,8 +702,8 @@ def doctorWind14(self):
 
     self.txtmobile3 = doc3line4
     self.x87, self.y87 = 450, 1390
-    self.txtmobile3 = StringVar()
-    self.mobilentry3 = Entry(self.can, textvariable=self.txtmobile3,
+    self.txtmobile3 = tk.StringVar()
+    self.mobilentry3 = tk.Entry(self.can, textvariable=self.txtmobile3,
         highlightbackground='grey', bd=3)
     self.txtmobile3.set(doc3line4[:-1])
     self.wmobilentry3_window = self.can.create_window(self.x87, self.y87,
@@ -710,7 +711,7 @@ def doctorWind14(self):
 
     # Street
     self.x88, self.y88 = 250, 1440
-    self.addrlabel3 = Label(self.can, text="Street :",
+    self.addrlabel3 = tk.Label(self.can, text="Street :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.waddrlabel3_window = self.can.create_window(self.x88, self.y88,
@@ -718,15 +719,15 @@ def doctorWind14(self):
 
     self.addrtxt3 = doc3line5
     self.x89, self.y89 = 450, 1440
-    self.addrtxt3 = StringVar()
-    self.addrentry3 = Entry(self.can, textvariable=self.addrtxt3,
+    self.addrtxt3 = tk.StringVar()
+    self.addrentry3 = tk.Entry(self.can, textvariable=self.addrtxt3,
         highlightbackground='grey', bd=4)
     self.addrtxt3.set(doc3line5[:-1])
     self.waddrentry3_window = self.can.create_window(self.x89, self.y89,
         window = self.addrentry3)
 
     self.x90, self.y90 = 250, 1490
-    self.labcity3 = Label(self.can, text="City :",
+    self.labcity3 = tk.Label(self.can, text="City :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wlabcity3_window = self.can.create_window(self.x90, self.y90,
@@ -734,8 +735,8 @@ def doctorWind14(self):
 
     self.citytxt3 = doc3line6
     self.x91, self.y91 = 450, 1490
-    self.citytxt3 = StringVar()
-    self.cityentry3 = Entry(self.can, textvariable=self.citytxt3,
+    self.citytxt3 = tk.StringVar()
+    self.cityentry3 = tk.Entry(self.can, textvariable=self.citytxt3,
         highlightbackground='grey', bd=4)
     self.citytxt3.set(doc3line6[:-1])
     self.wcityentry3_window = self.can.create_window(self.x91, self.y91,
@@ -743,7 +744,7 @@ def doctorWind14(self):
 
     # e-mail
     self.x92, self.y92 = 250, 1540
-    self.mailabel3 = Label(self.can, text="e-mail :",
+    self.mailabel3 = tk.Label(self.can, text="e-mail :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wmailabel3_window = self.can.create_window(self.x92, self.y92,
@@ -751,8 +752,8 @@ def doctorWind14(self):
 
     self.mailtxt3 = doc3line7
     self.x93, self.y93 = 450, 1540
-    self.mailtxt3 = StringVar()
-    self.entrymail3 = Entry(self.can, textvariable=self.mailtxt3,
+    self.mailtxt3 = tk.StringVar()
+    self.entrymail3 = tk.Entry(self.can, textvariable=self.mailtxt3,
         highlightbackground='grey', bd=3)
     self.mailtxt3.set(doc3line7[:-1])
     self.wentrymail3_window = self.can.create_window(self.x93, self.y93,
@@ -760,7 +761,7 @@ def doctorWind14(self):
 
     # Fax
     self.x94, self.y94 = 250, 1590
-    self.lblfax3 = Label(self.can, text="Fax :",
+    self.lblfax3 = tk.Label(self.can, text="Fax :",
         font=('helvetica', 18, 'bold'),
         bg='DodgerBlue2', fg='white')
     self.wlblfax3_window = self.can.create_window(self.x94, self.y94,
@@ -768,15 +769,15 @@ def doctorWind14(self):
 
     self.faxtxt3 = doc3line8
     self.x95, self.y95 = 450, 1590
-    self.faxtxt3 = StringVar()
-    self.entryfax3 = Entry(self.can, textvariable=self.faxtxt3,
+    self.faxtxt3 = tk.StringVar()
+    self.entryfax3 = tk.Entry(self.can, textvariable=self.faxtxt3,
         highlightbackground='grey', bd=3)
     self.faxtxt3.set(doc3line8)
     self.wentryfax3_window = self.can.create_window(self.x95, self.y95,
         window = self.entryfax3)
 
     self.x96, self.y96 = 350, 1670
-    self.bat96 = Button(self.can, text="Save Modifications", font=16,
+    self.bat96 = tk.Button(self.can, text="Save Modifications", font=16,
         width=30, bd=3, bg='RoyalBlue3', fg='yellow',
         highlightbackground='cyan',
         activebackground='pale turquoise',

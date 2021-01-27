@@ -9,3 +9,14 @@ Temperature : °C
 Glycemie :  mmol/l
 Douleurs (Pain) : /10
 
+Date : 27/01/2021
+Hour : 20:01:55
+Name and Surname : 3x3c t3ch
+TA : 120/90mmHg
+Puls : 80/min
+SaO2 : 90%
+FR : 16/min
+Temperature : 36.6°C
+Glycemie : 5.4 mmol/l
+Douleurs (Pain) : 1/10
+

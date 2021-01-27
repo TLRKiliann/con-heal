@@ -1,0 +1,22 @@
+Date : 27/01/2021
+Hour : 19:53:57
+Name and Surname : Clint Eastwood
+TA : 130/90mmHg
+Puls : 80/min
+SaO2 : %
+FR : 16/min
+Temperature : 36.2°C
+Glycemie : 5.7 mmol/l
+Douleurs (Pain) : 1/10
+
+Date : 27/01/2021
+Hour : 19:54:53
+Name and Surname : Clint Eastwood
+TA : /mmHg
+Puls : /min
+SaO2 : 99%
+FR : /min
+Temperature : °C
+Glycemie :  mmol/l
+Douleurs (Pain) : /10
+

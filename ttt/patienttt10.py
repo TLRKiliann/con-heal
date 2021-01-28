@@ -415,11 +415,15 @@ def callTreatment10(self):
                     json.dump(dataDose, datafile, indent=4)
 
     def copyResMess():
-        #MessageBox to ensure if it's well done.
+        """
+            MessageBox to ensure if it's well done.
+            Call function to upload res files.
+        """
         MsgBoxayn = messagebox.askyesno('Record', 'Do you want to save ?')
         if MsgBoxayn == 1:
             print("Ok to save")
             copyToReserve()
+            resupload()
             #app.destroy()
         else:
             messagebox.showinfo('Return', 'You will return to the application')
@@ -510,6 +514,32 @@ def callTreatment10(self):
             print("+ Ok, value 'Treatment' introduced---")
             with open('./ttt/doc_ttt10/convres.json', 'w') as datafile:
                 json.dump(dataDose, datafile, indent=4)
+
+    def resupload():
+        """
+            Launch upload res files to server.
+        """
+        proc = subprocess.run(["scp", "./ttt/doc_ttt10/intro_res.txt",
+            "pi@192.168.18.12:~/tt_doc/doc_txt10/Files10/intro_res.txt"],
+            stderr=subprocess.PIPE)
+        print("Result SCP transfert : %s" % repr(proc.stderr))
+        if proc.stderr == b'':
+            print("+ File intro_res.txt uploaded !")
+            messagebox.showinfo("INFO", "intro_res.txt uploaded...")
+        else:
+            print("+ No file to upload !")
+            messagebox.showerror("Error", "No intro_res.txt to upload...")
+
+        secproc = subprocess.run(["scp", "./ttt/doc_ttt10/convres.json",
+            "pi@192.168.18.12:~/tt_doc/doc_txt10/Files10/convres.json"],
+            stderr=subprocess.PIPE)
+        print("Result SCP transfert : %s" % repr(secproc.stderr))
+        if secproc.stderr == b'':
+            print("+ File convres.json uploaded !")
+            messagebox.showinfo("INFO", "convres.json uploaded...")
+        else:
+            print("+ No file to upload !")
+            messagebox.showerror("Error", "No convres.json to upload...")
 
     def readFileStory():
         try:

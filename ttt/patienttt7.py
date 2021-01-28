@@ -332,6 +332,7 @@ def callTreatment7(self):
         if MsgBoxayes == 1:
             print("Ok to save")
             copyToFile()
+            tttupload()
             #app.destroy()
         else:
             messagebox.showinfo('Return', 'You will return to the application')
@@ -413,6 +414,32 @@ def callTreatment7(self):
                 print("---Ok value 'Treatment' introduced---")
                 with open('./ttt/doc_ttt7/convdose.json', 'w') as datafile:
                     json.dump(dataDose, datafile, indent=4)
+
+    def tttupload():
+        """
+            Launch upload ttt files to server.
+        """
+        proc = subprocess.run(["scp", "./ttt/doc_ttt7/intro_ttt.txt",
+            "pi@192.168.18.12:~/tt_doc/doc_txt7/Files7/intro_ttt.txt"],
+            stderr=subprocess.PIPE)
+        print("Result SCP transfert : %s" % repr(proc.stderr))
+        if proc.stderr == b'':
+            print("+ File intro_ttt.txt uploaded !")
+            messagebox.showinfo("INFO", "intro_ttt.txt uploaded...")
+        else:
+            print("+ No file to upload !")
+            messagebox.showerror("Error", "No intro_ttt.txt to upload...")
+
+        secproc = subprocess.run(["scp", "./ttt/doc_ttt7/convdose.json",
+            "pi@192.168.18.12:~/tt_doc/doc_txt7/Files7/convdose.json"],
+            stderr=subprocess.PIPE)
+        print("Result SCP transfert : %s" % repr(secproc.stderr))
+        if secproc.stderr == b'':
+            print("+ File convdose.json uploaded !")
+            messagebox.showinfo("INFO", "convdose.json uploaded...")
+        else:
+            print("+ No file to upload !")
+            messagebox.showerror("Error", "No convdose.json to upload...")
 
     def copyResMess():
         """

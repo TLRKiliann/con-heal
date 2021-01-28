@@ -87,6 +87,17 @@
             "First-line": 1,
             "Second-line": 0,
             "Number/24h": "2"
+        },
+        {
+            "Date": "28/01/2021",
+            "Date of introduction": "",
+            "Date of end": "//",
+            "Treatment": "Drug 33",
+            "Dosage": "33 mg",
+            "Reserve": 1,
+            "First-line": 1,
+            "Second-line": 0,
+            "Number/24h": "3"
         }
     ]
 }

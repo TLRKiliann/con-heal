@@ -1,0 +1,13 @@
+Date : 28/01/2021
+Heure : 10:46:37
+Name : Pierre Weck
+Date of introduction : 02 May 2002
+Nom du ttt : Drug1
+Dosage du ttt : 10 mg
+Matin : 1
+
+Soir : 1
+
+Date of end : 16/03/2021
+Signature : etc
+

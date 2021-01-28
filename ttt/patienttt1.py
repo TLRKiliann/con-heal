@@ -162,7 +162,7 @@ def callTreatment1(self):
                     print("+ File 'convdose' exist !")
                     with open('./ttt/doc_ttt/convdose.json', 'r') as datafile:
                         datastore = json.load(datafile)
-                    
+
                     dataDose = datastore
                     for key, value in dataDose.items():
                         if self.deleteTreat.get() == value[0]['Treatment']:
@@ -176,7 +176,7 @@ def callTreatment1(self):
                         elif self.deleteTreat.get() == value[2]['Treatment']:
                             del value[2]
                             print("+ TTT earased !")
-                            
+
                         elif self.deleteTreat.get() == value[3]['Treatment']:
                             del value[3]
                             print("+ TTT earased !")
@@ -415,18 +415,24 @@ def callTreatment1(self):
                     json.dump(dataDose, datafile, indent=4)
 
     def copyResMess():
-        #MessageBox to ensure if it's well done.
+        """
+            MessageBox to ensure if it's well done.
+            Call function to upload res files.
+        """
         MsgBoxayn = messagebox.askyesno('Record', 'Do you want to save ?')
         if MsgBoxayn == 1:
             print("Ok to save")
             copyToReserve()
+            resupload()
             #app.destroy()
         else:
             messagebox.showinfo('Return', 'You will return to the application')
 
     def copyToReserve():
-        #To write all data to intro_res.txt
-        #to reuse them after.
+        """
+            To write all data to intro_res.txt
+            to reuse them after.
+        """
         with open('./ttt/doc_ttt/intro_res.txt', '+a') as file:
             file.write(str("Date : "))
             file.write(self.textDate.get() + '\n')
@@ -510,6 +516,32 @@ def callTreatment1(self):
             print("+ Ok, value 'Treatment' introduced---")
             with open('./ttt/doc_ttt/convres.json', 'w') as datafile:
                 json.dump(dataDose, datafile, indent=4)
+
+    def resupload():
+        """
+            Launch upload res files to server.
+        """
+        proc = subprocess.run(["scp", "./ttt/doc_ttt/intro_res.txt",
+            "pi@192.168.18.12:~/tt_doc/doc_txt1/Files1/intro_res.txt"],
+            stderr=subprocess.PIPE)
+        print("Result SCP transfert : %s" % repr(proc.stderr))
+        if proc.stderr == b'':
+            print("+ File intro_res.txt uploaded !")
+            messagebox.showinfo("INFO", "intro_res.txt uploaded...")
+        else:
+            print("+ No file to upload !")
+            messagebox.showerror("Error", "No intro_res.txt to upload...")
+
+        secproc = subprocess.run(["scp", "./ttt/doc_ttt/convres.json",
+            "pi@192.168.18.12:~/tt_doc/doc_txt1/Files1/convres.json"],
+            stderr=subprocess.PIPE)
+        print("Result SCP transfert : %s" % repr(secproc.stderr))
+        if secproc.stderr == b'':
+            print("+ File convres.json uploaded !")
+            messagebox.showinfo("INFO", "convres.json uploaded...")
+        else:
+            print("+ No file to upload !")
+            messagebox.showerror("Error", "No convres.json to upload...")
 
     def readFileStory():
         try:
@@ -665,7 +697,7 @@ def callTreatment1(self):
                                         '21', '22', '23', '24',
                                         '25', '26', '27', '28',
                                         '29', '30', '31']
-    
+
     self.x28, self.y28 = 700, 310
     self.labelFinishDay = Label(self.can,
         text = "Choose the day :", font=12, fg='white', bg='DodgerBlue2')
@@ -742,15 +774,15 @@ def callTreatment1(self):
     self.comboFinishYear_window = self.can.create_window(self.x33, self.y33, window=self.comboFinishYear)
 
     self.x34, self.y34 = 100, 380
-    self.checkLab = Label(self.can, text="Doses :", font=('Arial 14 bold'), 
+    self.checkLab = Label(self.can, text="Doses :", font=('Arial 14 bold'),
         fg='aquamarine', bg='DodgerBlue2')
     self.checkLab_window = self.can.create_window(self.x34, self.y34, window=self.checkLab)
 
     self.x35, self.y35 = 100, 420
     self.CheckVarMatin = IntVar()
-    self.Cma = Checkbutton(self.can, text="Morning --->", fg='navy', 
-        bg='cyan', variable=self.CheckVarMatin, 
-        onvalue=1, offvalue=0, height=1, 
+    self.Cma = Checkbutton(self.can, text="Morning --->", fg='navy',
+        bg='cyan', variable=self.CheckVarMatin,
+        onvalue=1, offvalue=0, height=1,
         width=15, anchor='w')
     self.Cma_window = self.can.create_window(self.x35, self.y35, window=self.Cma)
 
@@ -760,7 +792,7 @@ def callTreatment1(self):
     self.LabDose_window = self.can.create_window(self.x36, self.y36, window=self.LabDose)
 
     self.x37, self.y37 = 500, 380
-    self.DosaLab = Label(self.can, text="Unity :", font=('Arial 14 bold'), 
+    self.DosaLab = Label(self.can, text="Unity :", font=('Arial 14 bold'),
         fg='aquamarine', bg='DodgerBlue2')
     self.DosaLab_window = self.can.create_window(self.x37, self.y37, window=self.DosaLab)
 
@@ -770,7 +802,7 @@ def callTreatment1(self):
 
     self.x39, self.y39 = 100, 460
     self.CheckVarMidi = IntVar()
-    self.Cmi = Checkbutton(self.can, text="Noon --->", fg='navy', 
+    self.Cmi = Checkbutton(self.can, text="Noon --->", fg='navy',
         bg='cyan', variable=self.CheckVarMidi, 
         onvalue=1, offvalue=0, height=1, 
         width=15, anchor='w')
@@ -787,8 +819,8 @@ def callTreatment1(self):
 
     self.x42, self.y42 = 100, 500
     self.CheckVarSoir = IntVar()
-    self.Csoir = Checkbutton(self.can, text="Evening --->", fg='navy', 
-        bg='cyan', variable=self.CheckVarSoir, 
+    self.Csoir = Checkbutton(self.can, text="Evening --->", fg='navy',
+        bg='cyan', variable=self.CheckVarSoir,
         onvalue=1, offvalue=0, height=1, 
         width=15, anchor='w')
     self.Csoir_window = self.can.create_window(self.x42, self.y42, window=self.Csoir)
@@ -804,9 +836,9 @@ def callTreatment1(self):
 
     self.x45, self.y45 = 100, 540
     self.CheckVarNuit = IntVar()
-    self.Cnuit = Checkbutton(self.can, text="Night --->", fg='navy', 
-        bg='cyan', variable=self.CheckVarNuit, 
-        onvalue=1, offvalue=0, height=1, 
+    self.Cnuit = Checkbutton(self.can, text="Night --->", fg='navy',
+        bg='cyan', variable=self.CheckVarNuit,
+        onvalue=1, offvalue=0, height=1,
         width=15, anchor='w')
     self.Cnuit_window = self.can.create_window(self.x45, self.y45, window=self.Cnuit)
 
@@ -833,7 +865,7 @@ def callTreatment1(self):
 
     self.x51, self.y51 = 700, 460
     self.CheckVar1 = IntVar()
-    self.C1 = Checkbutton(self.can, text="Reserve", fg='navy', 
+    self.C1 = Checkbutton(self.can, text="Reserve", fg='navy',
         bg='pale green', variable=self.CheckVar1, 
         onvalue=1, offvalue=0, height=1, 
         width=16, anchor='w')
@@ -841,7 +873,7 @@ def callTreatment1(self):
 
     self.x52, self.y52 = 700, 500
     self.CheckVar2 = IntVar()
-    self.C2 = Checkbutton(self.can, text="First-line", fg='navy', 
+    self.C2 = Checkbutton(self.can, text="First-line", fg='navy',
         bg='pale green', variable=self.CheckVar2, 
         onvalue=1, offvalue=0, height=1, 
         width=16, anchor='w')
@@ -849,7 +881,7 @@ def callTreatment1(self):
 
     self.x53, self.y53 = 700, 540
     self.CheckVar3 = IntVar()
-    self.C3 = Checkbutton(self.can, text="Second-line", fg='navy', 
+    self.C3 = Checkbutton(self.can, text="Second-line", fg='navy',
         bg='pale green', variable=self.CheckVar3, 
         onvalue=1, offvalue=0, height=1, 
         width=16, anchor='w')

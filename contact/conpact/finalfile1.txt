@@ -1,5 +1,5 @@
-Patient name : test totest
-Birthdate : 09/07/2001
+Patient name : Pierre Weck
+Birthdate : 03/04/1983
 Native : Ontario
 Phone : 077 339 65 45
 Street : Blvd Sun-Street 68

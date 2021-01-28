@@ -327,7 +327,10 @@ def callTreatment7(self):
             messagebox.showinfo('Return', 'Reserve not earased')
 
     def copyTttMess():
-            #MessageBox to ensure if it's well done.
+        """
+            MessageBox to ensure if it's well done.
+            Call function to upload ttt files.
+        """
         MsgBoxayes = messagebox.askyesno('Record', 'Do you want to save ?')
         if MsgBoxayes == 1:
             print("Ok to save")

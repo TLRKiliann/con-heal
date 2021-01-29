@@ -200,15 +200,15 @@ Hbchoosen['values'] = (' neg',
 Hbchoosen.grid(row=2, column=8)
 Hbchoosen.current(0)
 
-buttSave=Button(app, text='Save', width=8, bd=3,
+buttSave=tk.Button(app, text='Save', width=8, bd=3,
     fg='cyan', bg='RoyalBlue3',
-    activebackground='dark turquoise',
+    activebackground='pale turquoise',
     highlightbackground='grey17', command=saveMyButt)
 buttSave.grid(row=2, column=9, padx=10)
 
-buttQuit=Button(app, text='Quit', width=8, bd=3,
+buttQuit=tk.Button(app, text='Quit', width=8, bd=3,
     fg='white', bg='RoyalBlue3',
-    activebackground='dark turquoise',
+    activebackground='pale turquoise',
     highlightbackground='grey17', command=quit)
 buttQuit.grid(row=3, column=9, padx=10, pady=10)
 

@@ -248,6 +248,8 @@ def backload():
     # Don't need for Vital Parameters...
     # Don't need for BMI...
 
-    # Requiered for ttt + res
-    # Requiered for labo
-    # Required for VM, Diag, 14needs, contact
+    # Don't need for ttt + res
+    # Don't need for labo
+    # Don't need for VM, Diag, 14needs, contact
+
+    # Only needed for allergy and diag(to improved!!!)

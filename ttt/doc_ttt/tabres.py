@@ -267,7 +267,7 @@ class app(Frame):
                 self.entries[20].insert(0, list3[1])
                 self.entries[21].insert(0, list4[1])
                 self.entries[22].insert(0, list5[1])
-                self.entries[23].insert(0, list6[1]) 
+                self.entries[23].insert(0, list6[1])
 
                 self.entries[24].insert(0, liststart[2])
                 self.entries[25].insert(0, listend[2])

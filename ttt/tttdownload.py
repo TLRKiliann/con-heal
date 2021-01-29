@@ -9,6 +9,7 @@
 
 
 from tkinter import messagebox
+from ttt.bardownload import downloadatattt
 import subprocess
 
 
@@ -17,6 +18,7 @@ def downloadttt1():
         to download ttt files from server before
         to start with ttt interface.
     """
+    downloadatattt()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt1/Files1/intro_ttt.txt",
         "./ttt/doc_ttt/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -62,6 +64,7 @@ def downloadttt2():
         to download ttt files from server before
         to start with ttt interface.
     """
+    downloadatattt()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt2/Files2/intro_ttt.txt",
         "./ttt/doc_ttt2/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -107,6 +110,7 @@ def downloadttt3():
         to download ttt files from server before
         to start with ttt interface.
     """
+    downloadatattt()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt3/Files3/intro_ttt.txt",
         "./ttt/doc_ttt3/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -152,6 +156,7 @@ def downloadttt4():
         to download ttt files from server before
         to start with ttt interface.
     """
+    downloadatattt()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt4/Files4/intro_ttt.txt",
         "./ttt/doc_ttt4/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -197,6 +202,7 @@ def downloadttt5():
         to download ttt files from server before
         to start with ttt interface.
     """
+    downloadatattt()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt5/Files5/intro_ttt.txt",
         "./ttt/doc_ttt5/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -242,6 +248,7 @@ def downloadttt6():
         to download ttt files from server before
         to start with ttt interface.
     """
+    downloadatattt()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt6/Files6/intro_ttt.txt",
         "./ttt/doc_ttt6/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -287,6 +294,7 @@ def downloadttt7():
         to download ttt files from server before
         to start with ttt interface.
     """
+    downloadatattt()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt7/Files7/intro_ttt.txt",
         "./ttt/doc_ttt7/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -332,6 +340,7 @@ def downloadttt8():
         to download ttt files from server before
         to start with ttt interface.
     """
+    downloadatattt()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt8/Files8/intro_ttt.txt",
         "./ttt/doc_ttt8/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -377,6 +386,7 @@ def downloadttt9():
         to download ttt files from server before
         to start with ttt interface.
     """
+    downloadatattt()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt9/Files9/intro_ttt.txt",
         "./ttt/doc_ttt9/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -422,6 +432,7 @@ def downloadttt10():
         to download ttt files from server before
         to start with ttt interface.
     """
+    downloadatattt()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt10/Files10/intro_ttt.txt",
         "./ttt/doc_ttt10/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -467,6 +478,7 @@ def downloadttt11():
         to download ttt files from server before
         to start with ttt interface.
     """
+    downloadatattt()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt11/Files11/intro_ttt.txt",
         "./ttt/doc_ttt11/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -512,6 +524,7 @@ def downloadttt12():
         to download ttt files from server before
         to start with ttt interface.
     """
+    downloadatattt()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt12/Files12/intro_ttt.txt",
         "./ttt/doc_ttt12/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -557,6 +570,7 @@ def downloadttt13():
         to download ttt files from server before
         to start with ttt interface.
     """
+    downloadatattt()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt13/Files13/intro_ttt.txt",
         "./ttt/doc_ttt13/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -602,6 +616,7 @@ def downloadttt14():
         to download ttt files from server before
         to start with ttt interface.
     """
+    downloadatattt()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt14/Files14/intro_ttt.txt",
         "./ttt/doc_ttt14/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -647,6 +662,7 @@ def downloadttt15():
         to download ttt files from server before
         to start with ttt interface.
     """
+    downloadatattt()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt15/Files15/intro_ttt.txt",
         "./ttt/doc_ttt15/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -692,6 +708,7 @@ def downloadttt16():
         to download ttt files from server before
         to start with ttt interface.
     """
+    downloadatattt()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt16/Files16/intro_ttt.txt",
         "./ttt/doc_ttt16/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -737,6 +754,7 @@ def downloadttt17():
         to download ttt files from server before
         to start with ttt interface.
     """
+    downloadatattt()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt17/Files17/intro_ttt.txt",
         "./ttt/doc_ttt17/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -782,6 +800,7 @@ def downloadttt18():
         to download ttt files from server before
         to start with ttt interface.
     """
+    downloadatattt()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt18/Files18/intro_ttt.txt",
         "./ttt/doc_ttt18/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -827,6 +846,7 @@ def downloadttt19():
         to download ttt files from server before
         to start with ttt interface.
     """
+    downloadatattt()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt19/Files19/intro_ttt.txt",
         "./ttt/doc_ttt19/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -872,6 +892,7 @@ def downloadttt20():
         to download ttt files from server before
         to start with ttt interface.
     """
+    downloadatattt()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt20/Files20/intro_ttt.txt",
         "./ttt/doc_ttt20/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -917,6 +938,7 @@ def downloadttt21():
         to download ttt files from server before
         to start with ttt interface.
     """
+    downloadatattt()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt21/Files21/intro_ttt.txt",
         "./ttt/doc_ttt21/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -962,6 +984,7 @@ def downloadttt22():
         to download ttt files from server before
         to start with ttt interface.
     """
+    downloadatattt()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt22/Files22/intro_ttt.txt",
         "./ttt/doc_ttt22/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -1007,6 +1030,7 @@ def downloadttt23():
         to download ttt files from server before
         to start with ttt interface.
     """
+    downloadatattt()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt23/Files23/intro_ttt.txt",
         "./ttt/doc_ttt23/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -1052,6 +1076,7 @@ def downloadttt24():
         to download ttt files from server before
         to start with ttt interface.
     """
+    downloadatattt()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt24/Files24/intro_ttt.txt",
         "./ttt/doc_ttt24/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))

@@ -74,7 +74,7 @@ def recordOption():
             file_2.write("\n***************************************************************************\n\n")
 
 def confRec():
-    MsgBox2msg = messagebox.showinfo("Confirmation", "Record confirmed and finished !")
+    messagebox.showinfo("Confirmation", "Record confirmed and finished !")
 
 ttk.Label(app, text="Stix", font=("Times 28 bold"), foreground='aquamarine',
     background='gray17').grid(row=0, column=1, columnspan=4)

@@ -15,7 +15,6 @@ app.configure(bg='gray17')
 
 def saveMyButt():
     MsgBox = messagebox.askyesno('Record', 'Results will be saved into Care and Monitoring, ok ?')
-
     if MsgBox == 1:
         print("Ok data saved")
         recordOption()
@@ -75,7 +74,7 @@ def recordOption():
             file_2.write("\n***************************************************************************\n\n")
 
 def confRec():
-    MsgBox2msg = messagebox.showinfo("Confirmation", "Record confirmed and finished !")
+    messagebox.showinfo("Confirmation", "Record confirmed and finished !")
 
 ttk.Label(app, text="Stix", font=("Times 28 bold"), foreground='aquamarine',
     background='gray17').grid(row=0, column=1, columnspan=4)

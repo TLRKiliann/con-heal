@@ -2751,18 +2751,23 @@ class Application(tk.Frame):
         callTreatment2(self)
 
     def tttMed3(self):
+        downloadttt3()
         callTreatment3(self)
 
     def tttMed4(self):
+        downloadttt4()
         callTreatment4(self)
 
     def tttMed5(self):
+        downloadttt5()
         callTreatment5(self)
 
     def tttMed6(self):
+        downloadttt6()
         callTreatment6(self)
 
     def tttMed7(self):
+        downloadttt7()
         callTreatment7(self)
 
     def tttMed8(self):

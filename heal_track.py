@@ -110,6 +110,7 @@ from contact.conpact24.pat_contact24 import Window24
 from contact.conpact24.doc_contact24 import doctorWind24
 from contact.conpact24.family_contact24 import famWind24
 from contact.conpact24.hcs_contact24 import homecsWind24
+from labo.labodownload import *
 from labo.resultlabo1 import callLabo1
 from labo.resultlabo2 import callLabo2
 from labo.resultlabo3 import callLabo3
@@ -2838,6 +2839,80 @@ class Application(tk.Frame):
         downloadttt24()
         callTreatment24(self)
 
+    # Func labo
+    def laboResult(self):
+        labodownload1()
+        callLabo1(self)
+
+    def laboResult2(self):
+        callLabo2(self)
+
+    def laboResult3(self):
+        callLabo3(self)
+
+    def laboResult4(self):
+        callLabo4(self)
+
+    def laboResult5(self):
+        callLabo5(self)
+
+    def laboResult6(self):
+        callLabo6(self)
+
+    def laboResult7(self):
+        callLabo7(self)
+
+    def laboResult8(self):
+        callLabo8(self)
+
+    def laboResult9(self):
+        callLabo9(self)
+
+    def laboResult10(self):
+        callLabo10(self)
+
+    def laboResult11(self):
+        callLabo11(self)
+
+    def laboResult12(self):
+        callLabo12(self)
+
+    def laboResult13(self):
+        callLabo13(self)
+
+    def laboResult14(self):
+        callLabo14(self)
+
+    def laboResult15(self):
+        callLabo15(self)
+
+    def laboResult16(self):
+        callLabo16(self)
+
+    def laboResult17(self):
+        callLabo17(self)
+
+    def laboResult18(self):
+        callLabo18(self)
+
+    def laboResult19(self):
+        callLabo19(self)
+
+    def laboResult20(self):
+        callLabo20(self)
+
+    def laboResult21(self):
+        callLabo21(self)
+
+    def laboResult22(self):
+        callLabo22(self)
+
+    def laboResult23(self):
+        callLabo23(self)
+
+    def laboResult24(self):
+        callLabo24(self)
+
     # Func Vital Parameters
     def showParam1(self):
         self.master.wm_attributes('-alpha', 0.8)
@@ -3493,79 +3568,6 @@ class Application(tk.Frame):
         self.master.withdraw()
         subprocess.run("./diag/diag_patient24.py", check=True)
         self.master.deiconify()
-
-    # Func labo
-    def laboResult(self):
-        callLabo1(self)
-
-    def laboResult2(self):
-        callLabo2(self)
-
-    def laboResult3(self):
-        callLabo3(self)
-
-    def laboResult4(self):
-        callLabo4(self)
-
-    def laboResult5(self):
-        callLabo5(self)
-
-    def laboResult6(self):
-        callLabo6(self)
-
-    def laboResult7(self):
-        callLabo7(self)
-
-    def laboResult8(self):
-        callLabo8(self)
-
-    def laboResult9(self):
-        callLabo9(self)
-
-    def laboResult10(self):
-        callLabo10(self)
-
-    def laboResult11(self):
-        callLabo11(self)
-
-    def laboResult12(self):
-        callLabo12(self)
-
-    def laboResult13(self):
-        callLabo13(self)
-
-    def laboResult14(self):
-        callLabo14(self)
-
-    def laboResult15(self):
-        callLabo15(self)
-
-    def laboResult16(self):
-        callLabo16(self)
-
-    def laboResult17(self):
-        callLabo17(self)
-
-    def laboResult18(self):
-        callLabo18(self)
-
-    def laboResult19(self):
-        callLabo19(self)
-
-    def laboResult20(self):
-        callLabo20(self)
-
-    def laboResult21(self):
-        callLabo21(self)
-
-    def laboResult22(self):
-        callLabo22(self)
-
-    def laboResult23(self):
-        callLabo23(self)
-
-    def laboResult24(self):
-        callLabo24(self)
 
     # Menu print
     def nutritionMenu(self):

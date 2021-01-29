@@ -31,7 +31,7 @@ def task(root):
     pb_hD.start(10)
     root.mainloop()
 
-def process_of_unknown_duration(root):
+def process_launched(root):
     """
         Define the process of unknown duration
         with root as one of the input And once
@@ -41,9 +41,9 @@ def process_of_unknown_duration(root):
     print('My pid is', os.getpid())
     root.quit() # To destroy threading
 
-def downloadatattt():
+def labodata():
     root = tk.Tk()
-    t1 = threading.Thread(target=process_of_unknown_duration, args=(root,))
+    t1 = threading.Thread(target=process_launched, args=(root,))
     #print(t1)
     t1.start()
     print("Download...")

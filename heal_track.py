@@ -2771,54 +2771,71 @@ class Application(tk.Frame):
         callTreatment7(self)
 
     def tttMed8(self):
+        downloadttt8()
         callTreatment8(self)
 
     def tttMed9(self):
+        downloadttt9()
         callTreatment9(self)
 
     def tttMed10(self):
+        downloadttt10()
         callTreatment10(self)
 
     def tttMed11(self):
+        downloadttt11()
         callTreatment11(self)
 
     def tttMed12(self):
+        downloadttt12()
         callTreatment12(self)
 
     def tttMed13(self):
+        downloadttt13()
         callTreatment13(self)
 
     def tttMed14(self):
+        downloadttt14()
         callTreatment14(self)
 
     def tttMed15(self):
+        downloadttt15()
         callTreatment15(self)
 
     def tttMed16(self):
+        downloadttt16()
         callTreatment16(self)
 
     def tttMed17(self):
+        downloadttt17()
         callTreatment17(self)
 
     def tttMed18(self):
+        downloadttt18()
         callTreatment18(self)
 
     def tttMed19(self):
+        downloadttt19()
         callTreatment19(self)
 
     def tttMed20(self):
+        downloadttt20()
         callTreatment20(self)
 
     def tttMed21(self):
+        downloadttt21()
         callTreatment21(self)
 
     def tttMed22(self):
+        downloadttt22()
         callTreatment22(self)
 
     def tttMed23(self):
+        downloadttt23()
         callTreatment23(self)
 
     def tttMed24(self):
+        downloadttt24()
         callTreatment24(self)
 
     # Func Vital Parameters

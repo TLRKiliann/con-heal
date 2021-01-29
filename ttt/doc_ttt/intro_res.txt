@@ -1,99 +1,11 @@
-Date : 28/01/2021
-Heure : 10:46:37
+Date : 29/01/2021
+Heure : 16:55:26
 Name : Pierre Weck
-Date of introduction : 02 May 2002
+Date of introduction : 04 February 2010
 Nom du ttt : Drug1
-Dosage du ttt : 10 mg
-Réserve : Oui
-1ère intention : Oui
-Date of end : 16/03/2021
-Signature : etc
-
-Date : 28/01/2021
-Heure : 11:00:02
-Name : Pierre Weck
-Date of introduction : 
-Nom du ttt : Drug2
-Dosage du ttt : 20 mg
+Dosage du ttt : mcg/ml/mg/UI/gttes
 Réserve : Oui
 2ème intention : Oui
-Date of end : //
-Signature : etc
-
-Date : 28/01/2021
-Heure : 11:00:02
-Name : Pierre Weck
-Date of introduction : 
-Nom du ttt : Drug2
-Dosage du ttt : 20 mg
-Réserve : Oui
-2ème intention : Oui
-Date of end : //
-Signature : etc
-
-Date : 28/01/2021
-Heure : 11:02:08
-Name : Pierre Weck
-Date of introduction : 
-Nom du ttt : Drug2
-Dosage du ttt : 20 mg
-Réserve : Oui
-2ème intention : Oui
-Date of end : //
-Signature : etc
-
-Date : 28/01/2021
-Heure : 11:07:38
-Name : Pierre Weck
-Date of introduction : 04 March 2001
-Nom du ttt : Drug3
-Dosage du ttt : 30 mg
-Réserve : Oui
-1ère intention : Oui
-Date of end : 05/02/2021
-Signature : etc
-
-Date : 28/01/2021
-Heure : 11:07:38
-Name : Pierre Weck
-Date of introduction : 04 March 2001
-Nom du ttt : Drug3
-Dosage du ttt : 30 mg
-Réserve : Oui
-1ère intention : Oui
-Date of end : 05/02/2021
-Signature : etc
-
-Date : 28/01/2021
-Heure : 11:09:38
-Name : Pierre Weck
-Date of introduction : 
-Nom du ttt : Drug4
-Dosage du ttt : 40 mg
-Réserve : Oui
-1ère intention : Oui
-Date of end : //
-Signature : etc
-
-Date : 28/01/2021
-Heure : 11:10:54
-Name : Pierre Weck
-Date of introduction : 
-Nom du ttt : Drug1
-Dosage du ttt : 2mg
-Réserve : Oui
-1ère intention : Oui
-Date of end : //
-Signature : etc
-
-Date : 28/01/2021
-Heure : 11:22:21
-Name : Pierre Weck
-Date of introduction : 
-Nom du ttt : Drug 33
-Dosage du ttt : 33 mg
-Réserve : Oui
-1ère intention : Oui
-Date of end : //
+Date of end : 06/03/2021
 Signature : etc
 

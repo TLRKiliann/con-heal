@@ -134,6 +134,7 @@ from labo.resultlabo21 import callLabo21
 from labo.resultlabo22 import callLabo22
 from labo.resultlabo23 import callLabo23
 from labo.resultlabo24 import callLabo24
+from ttt.tttdownload import *
 from ttt.patienttt1 import callTreatment1
 from ttt.patienttt2 import callTreatment2
 from ttt.patienttt3 import callTreatment3
@@ -158,7 +159,7 @@ from ttt.patienttt21 import callTreatment21
 from ttt.patienttt22 import callTreatment22
 from ttt.patienttt23 import callTreatment23
 from ttt.patienttt24 import callTreatment24
-import passw
+#import passw
 from shootransfert import loaderfile
 
 
@@ -2742,9 +2743,11 @@ class Application(tk.Frame):
 
     # treatments
     def tttMed1(self):
+        downloadttt1()
         callTreatment1(self)
 
     def tttMed2(self):
+        downloadttt2()
         callTreatment2(self)
 
     def tttMed3(self):

@@ -1,11 +1,11 @@
 {
     "data": [
         {
-            "Date": "28/01/2021",
-            "Date of introduction": "02 May 2002",
-            "Date of end": "16/03/2021",
+            "Date": "29/01/2021",
+            "Date of introduction": "04 February 2010",
+            "Date of end": "06/03/2021",
             "Treatment": "Drug1",
-            "Dosage": "10 mg",
+            "Dosage": "mcg/ml/mg/UI/gttes",
             "Matin": "1",
             "Midi": "",
             "Soir": "1",

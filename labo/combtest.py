@@ -7,6 +7,7 @@ import tkinter as tk
 from tkinter import ttk 
 from tkinter import messagebox
 import time
+import subprocess
 
 
 app = tk.Tk()
@@ -18,6 +19,7 @@ def saveMyButt():
     if MsgBox == 1:
         print("Ok data saved")
         recordOption()
+        uploadata()
         confRec()
         app.destroy()
     else:
@@ -73,6 +75,32 @@ def recordOption():
             file_2.write(Hbchoosen.get())
             file_2.write("\n***************************************************************************\n\n")
 
+def uploadata():
+    """
+        To upload data on server after creating files
+    """
+    proc = subprocess.run(["scp", "./14besoins/doc_suivi/patient1_14b.txt",
+        "pi@192.168.18.12:~/tt_doc/doc_txt1/Files1/patient1_14b.txt"],
+        stderr=subprocess.PIPE)
+    print("Result SCP transfert : %s" % repr(proc.stderr))
+    if proc.stderr == b'':
+        print("+ File patient1_14b.txt uploaded !")
+        messagebox.showinfo("INFO", "patient1_14b.txt uploaded...")
+    else:
+        print("+ No file to upload !")
+        messagebox.showerror("Error", "No patient1_14b.txt to upload...")
+
+    secproc = subprocess.run(["scp", "./labo/doc_labo/result.txt",
+        "pi@192.168.18.12:~/tt_doc/doc_txt1/Files1/result.txt"],
+        stderr=subprocess.PIPE)
+    print("Result SCP transfert : %s" % repr(secproc.stderr))
+    if secproc.stderr == b'':
+        print("+ File result.txt uploaded !")
+        messagebox.showinfo("INFO", "result.txt uploaded...")
+    else:
+        print("+ No file to upload !")
+        messagebox.showerror("Error", "No result.txt to upload...")
+
 def confRec():
     messagebox.showinfo("Confirmation", "Record confirmed and finished !")
 
@@ -83,9 +111,8 @@ ttk.Label(app, text="Stix", font=("Times 28 bold"), foreground='aquamarine',
 with open('./newpatient/entryfile.txt', 'r') as filename:
     line1=filename.readline()
 
-textName = tk.Entry(app)
 name_text = tk.StringVar()
-textName = tk.Entry(textvariable=name_text,
+textName = tk.Entry(app, textvariable=name_text,
     highlightbackground='gray', bd=4)
 name_text.set(line1[:-1])
 textName.grid(row=0, column=4, columnspan=8)

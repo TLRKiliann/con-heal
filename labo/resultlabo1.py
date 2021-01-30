@@ -3,7 +3,7 @@
 
 
 from tkinter import *
-import tkinter
+import tkinter as tk
 from tkinter import messagebox
 import os
 import subprocess
@@ -19,7 +19,7 @@ def callLabo1(self):
     self.can.configure(bg='DodgerBlue2')
 
     self.x1, self.y1 = 540, 45
-    self.labelname = Label(self.can, text="Labo check",
+    self.labelname = tk.Label(self.can, text="Labo check",
         font=('helvetica', 18, 'bold'), width=10,
         height=2, bg='DodgerBlue2', fg='white')
     self.labelname = self.can.create_window(self.x1, self.y1,
@@ -36,7 +36,7 @@ def callLabo1(self):
         window = self.entryname)
 
     self.x3, self.y3 = 625, 100
-    self.labelresult = Label(self.can, text='--- Neuroleptiques ---',
+    self.labelresult = tk.Label(self.can, text='--- Neuroleptiques ---',
         font="Times 14 bold", width=135,
         height=1, bg='RoyalBlue3', fg='white')
     self.labelresult = self.can.create_window(self.x3, self.y3,
@@ -47,6 +47,7 @@ def callLabo1(self):
         if MsgBox == 1:
             print("Ok, data saved")
             recordOption()
+            uploadata()
             confRec()
             #self.can.delete(ALL) # ---
             self.showPatients()
@@ -604,6 +605,32 @@ def callLabo1(self):
                 endfile.write("---------------------------------------------------------\n\n")
                 endfile2.write("---------------------------------------------------------\n\n")
 
+    def uploadata():
+        """
+            To upload data on server after creating files
+        """
+        proc = subprocess.run(["scp", "./14besoins/doc_suivi/patient1_14b.txt",
+            "pi@192.168.18.12:~/tt_doc/doc_txt1/Files1/patient1_14b.txt"],
+            stderr=subprocess.PIPE)
+        print("Result SCP transfert : %s" % repr(proc.stderr))
+        if proc.stderr == b'':
+            print("+ File patient1_14b.txt uploaded !")
+            messagebox.showinfo("INFO", "patient1_14b.txt uploaded...")
+        else:
+            print("+ No file to upload !")
+            messagebox.showerror("Error", "No patient1_14b.txt to upload...")
+
+        secproc = subprocess.run(["scp", "./labo/doc_labo/result.txt",
+            "pi@192.168.18.12:~/tt_doc/doc_txt1/Files1/result.txt"],
+            stderr=subprocess.PIPE)
+        print("Result SCP transfert : %s" % repr(secproc.stderr))
+        if secproc.stderr == b'':
+            print("+ File result.txt uploaded !")
+            messagebox.showinfo("INFO", "result.txt uploaded...")
+        else:
+            print("+ No file to upload !")
+            messagebox.showerror("Error", "No result.txt to upload...")
+
     def confRec():
         messagebox.showinfo("Confirmation", "Record confirmed and finished !")
 
@@ -622,8 +649,8 @@ def callLabo1(self):
             print("Error from labo to way out", p_out)
 
     self.x4, self.y4 = 134, 125
-    CheckVar1 = IntVar()
-    self.C1 = Checkbutton(self.can, text="Abilify (aripiprazol)", fg='navy',
+    CheckVar1 = tk.IntVar()
+    self.C1 = tk.Checkbutton(self.can, text="Abilify (aripiprazol)", fg='navy',
         bg='cyan', variable=CheckVar1,
         onvalue=1, offvalue=0, height=1,
         width=26, anchor="w")
@@ -631,8 +658,8 @@ def callLabo1(self):
         window = self.C1)
 
     self.x5, self.y5 = 134, 148
-    CheckVar2 = IntVar()
-    self.C2 = Checkbutton(self.can, text="Clopixol (zuclopenthixol)", fg='navy',
+    CheckVar2 = tk.IntVar()
+    self.C2 = tk.Checkbutton(self.can, text="Clopixol (zuclopenthixol)", fg='navy',
         bg='cyan', variable=CheckVar2,
         onvalue=1, offvalue=0, height=1,
         width=26, anchor="w")
@@ -640,8 +667,8 @@ def callLabo1(self):
         window = self.C2)
 
     self.x6, self.y6 = 134, 171
-    CheckVar3 = IntVar()
-    self.C3 = Checkbutton(self.can, text="Clozapine (clopin, leponex)", fg='navy',
+    CheckVar3 = tk.IntVar()
+    self.C3 = tk.Checkbutton(self.can, text="Clozapine (clopin, leponex)", fg='navy',
         bg='cyan', variable=CheckVar3,
         onvalue=1, offvalue=0, height=1,
         width=26, anchor="w")
@@ -649,8 +676,8 @@ def callLabo1(self):
         window = self.C3)
 
     self.x7, self.y7 = 134, 194
-    CheckVar4 = IntVar()
-    self.C4 = Checkbutton(self.can, text="Dogmatil (sulprid)", fg='navy',
+    CheckVar4 = tk.IntVar()
+    self.C4 = tk.Checkbutton(self.can, text="Dogmatil (sulprid)", fg='navy',
         bg='cyan', variable=CheckVar4,
         onvalue=1, offvalue=0, height=1,
         width=26, anchor="w")
@@ -658,8 +685,8 @@ def callLabo1(self):
         window = self.C4)
 
     self.x8, self.y8 = 134, 217
-    CheckVar5 = IntVar()
-    self.C5 = Checkbutton(self.can, text="Entumine (clotiapin)", fg='navy',
+    CheckVar5 = tk.IntVar()
+    self.C5 = tk.Checkbutton(self.can, text="Entumine (clotiapin)", fg='navy',
         bg='cyan', variable=CheckVar5,
         onvalue=1, offvalue=0, height=1,
         width=26, anchor="w")
@@ -667,8 +694,8 @@ def callLabo1(self):
         window = self.C5)
 
     self.x9, self.y9 = 461, 125
-    CheckVar6 = IntVar()
-    self.C6 = Checkbutton(self.can, text="Fluanxol (flupentixol)", fg='navy',
+    CheckVar6 = tk.IntVar()
+    self.C6 = tk.Checkbutton(self.can, text="Fluanxol (flupentixol)", fg='navy',
         bg='cyan', variable=CheckVar6,
         onvalue=1, offvalue=0, height=1,
         width=26, anchor="w")
@@ -676,8 +703,8 @@ def callLabo1(self):
         window = self.C6)
 
     self.x10, self.y10 = 461, 148
-    CheckVar7 = IntVar()
-    self.C7 = Checkbutton(self.can, text="Haldol (haloperidol)", fg='navy', 
+    CheckVar7 = tk.IntVar()
+    self.C7 = tk.Checkbutton(self.can, text="Haldol (haloperidol)", fg='navy', 
         bg='cyan', variable=CheckVar7, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -685,8 +712,8 @@ def callLabo1(self):
         window = self.C7)
 
     self.x11, self.y11 = 461, 171
-    CheckVar8 = IntVar()
-    self.C8 = Checkbutton(self.can, text="Invega (paliperidon)", fg='navy', 
+    CheckVar8 = tk.IntVar()
+    self.C8 = tk.Checkbutton(self.can, text="Invega (paliperidon)", fg='navy', 
         bg='cyan', variable=CheckVar8, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -694,8 +721,8 @@ def callLabo1(self):
         window = self.C8)
 
     self.x12, self.y12 = 461, 194
-    CheckVar9 = IntVar()
-    self.C9 = Checkbutton(self.can, text="Nozinan (levomepromazin)", fg='navy', 
+    CheckVar9 = tk.IntVar()
+    self.C9 = tk.Checkbutton(self.can, text="Nozinan (levomepromazin)", fg='navy', 
         bg='cyan', variable=CheckVar9, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -703,8 +730,8 @@ def callLabo1(self):
         window = self.C9)
 
     self.x13, self.y13 = 461, 217
-    CheckVar10 = IntVar()
-    self.C10 = Checkbutton(self.can, text="Prazine (promazin)", fg='navy', 
+    CheckVar10 = tk.IntVar()
+    self.C10 = tk.Checkbutton(self.can, text="Prazine (promazin)", fg='navy', 
         bg='cyan', variable=CheckVar10, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -712,8 +739,8 @@ def callLabo1(self):
         window = self.C10)
 
     self.x14, self.y14 = 790, 125
-    CheckVar12 = IntVar()
-    self.C12 = Checkbutton(self.can, text="Quetiapine (seroquel, sequase)", fg='navy',
+    CheckVar12 = tk.IntVar()
+    self.C12 = tk.Checkbutton(self.can, text="Quetiapine (seroquel, sequase)", fg='navy',
         bg='cyan', variable=CheckVar12,
         onvalue=1, offvalue=0, height=1,
         width=26, anchor="w")
@@ -721,8 +748,8 @@ def callLabo1(self):
         window = self.C12)
 
     self.x15, self.y15 = 790, 148
-    CheckVar13 = IntVar()
-    self.C13 = Checkbutton(self.can, text="Risperdal (risperidon)", fg='navy', 
+    CheckVar13 = tk.IntVar()
+    self.C13 = tk.Checkbutton(self.can, text="Risperdal (risperidon)", fg='navy', 
         bg='cyan', variable=CheckVar13, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -730,8 +757,8 @@ def callLabo1(self):
         window = self.C13)
 
     self.x16, self.y16 = 790, 171
-    CheckVar14 = IntVar()
-    self.C14 = Checkbutton(self.can, text="Serdolect (sertindol)", fg='navy', 
+    CheckVar14 = tk.IntVar()
+    self.C14 = tk.Checkbutton(self.can, text="Serdolect (sertindol)", fg='navy', 
         bg='cyan', variable=CheckVar14, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -739,8 +766,8 @@ def callLabo1(self):
         window = self.C14)
 
     self.x17, self.y17 = 790, 194
-    CheckVar15 = IntVar()
-    self.C15 = Checkbutton(self.can, text="Solian (amisulprid)", fg='navy', 
+    CheckVar15 = tk.IntVar()
+    self.C15 = tk.Checkbutton(self.can, text="Solian (amisulprid)", fg='navy', 
         bg='cyan', variable=CheckVar15, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -748,8 +775,8 @@ def callLabo1(self):
         window = self.C15)
 
     self.x18, self.y18 = 790, 217
-    CheckVar16 = IntVar()
-    self.C16 = Checkbutton(self.can, text="Tiapridal (tiaprid)", fg='navy', 
+    CheckVar16 = tk.IntVar()
+    self.C16 = tk.Checkbutton(self.can, text="Tiapridal (tiaprid)", fg='navy', 
         bg='cyan', variable=CheckVar16, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -757,8 +784,8 @@ def callLabo1(self):
         window = self.C16)
 
     self.x19, self.y19 = 1117, 125
-    CheckVar17 = IntVar()
-    self.C17 = Checkbutton(self.can, text="Truxal (chlorprothixen)", fg='navy',
+    CheckVar17 = tk.IntVar()
+    self.C17 = tk.Checkbutton(self.can, text="Truxal (chlorprothixen)", fg='navy',
         bg='cyan', variable=CheckVar17,
         onvalue=1, offvalue=0, height=1,
         width=26, anchor="w")
@@ -766,8 +793,8 @@ def callLabo1(self):
         window = self.C17)
 
     self.x20, self.y20 = 1117, 148
-    CheckVar18 = IntVar()
-    self.C18 = Checkbutton(self.can, text="Zyprexa (olanzapin)", fg='navy',
+    CheckVar18 = tk.IntVar()
+    self.C18 = tk.Checkbutton(self.can, text="Zyprexa (olanzapin)", fg='navy',
         bg='cyan', variable=CheckVar18,
         onvalue=1, offvalue=0, height=1,
         width=26, anchor="w")
@@ -776,18 +803,18 @@ def callLabo1(self):
 
     # MAE
     self.x21, self.y21 = 625, 243
-    self.labelresult2 = Label(self.can, text='--- Médicaments anti-épileptiques ---',
+    self.labelresult2 = tk.Label(self.can, text='--- Médicaments anti-épileptiques ---',
         font="Times 14 bold", width=135,
         height=1, bg='RoyalBlue3', fg='white')
     self.labelresult2 = self.can.create_window(self.x21, self.y21,
         window = self.labelresult2)
 
-    #separator = Label(self.can, height=5, bd=2, relief=SUNKEN)
+    #separator = tk.Label(self.can, height=5, bd=2, relief=SUNKEN)
     #separator.grid(sticky='ns', row=2, column=1)
 
     self.x22, self.y22 = 134, 268
-    CheckVar19 = IntVar()
-    self.C19 = Checkbutton(self.can, text="Briviact (brivaracetam)", fg='navy',
+    CheckVar19 = tk.IntVar()
+    self.C19 = tk.Checkbutton(self.can, text="Briviact (brivaracetam)", fg='navy',
         bg='cyan', variable=CheckVar19,
         onvalue=1, offvalue=0, height=1,
         width=26, anchor="w")
@@ -795,8 +822,8 @@ def callLabo1(self):
         window = self.C19)
 
     self.x23, self.y23 = 134, 291
-    CheckVar20 = IntVar()
-    self.C20 = Checkbutton(self.can, text="Carbamazepine (tegretol)", fg='navy',
+    CheckVar20 = tk.IntVar()
+    self.C20 = tk.Checkbutton(self.can, text="Carbamazepine (tegretol)", fg='navy',
         bg='cyan', variable=CheckVar20,
         onvalue=1, offvalue=0, height=1,
         width=26, anchor="w")
@@ -804,8 +831,8 @@ def callLabo1(self):
         window = self.C20)
     
     self.x24, self.y24 = 134, 314
-    CheckVar21 = IntVar()
-    self.C21 = Checkbutton(self.can, text="Depakine (valproate)", fg='navy',
+    CheckVar21 = tk.IntVar()
+    self.C21 = tk.Checkbutton(self.can, text="Depakine (valproate)", fg='navy',
         bg='cyan', variable=CheckVar21, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -813,8 +840,8 @@ def callLabo1(self):
         window = self.C21)
 
     self.x25, self.y25 = 134, 337
-    CheckVar22 = IntVar()
-    self.C22 = Checkbutton(self.can, text="Ethosuximide (petinimid)", fg='navy',
+    CheckVar22 = tk.IntVar()
+    self.C22 = tk.Checkbutton(self.can, text="Ethosuximide (petinimid)", fg='navy',
         bg='cyan', variable=CheckVar22, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -822,8 +849,8 @@ def callLabo1(self):
         window = self.C22)
 
     self.x26, self.y26 = 134, 360
-    CheckVar23 = IntVar()
-    self.C23 = Checkbutton(self.can, text="Fycompa (perampanel)", fg='navy',
+    CheckVar23 = tk.IntVar()
+    self.C23 = tk.Checkbutton(self.can, text="Fycompa (perampanel)", fg='navy',
         bg='cyan', variable=CheckVar23, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -831,8 +858,8 @@ def callLabo1(self):
         window = self.C23)
 
     self.x27, self.y27 = 134, 383
-    CheckVar24 = IntVar()
-    self.C24 = Checkbutton(self.can, text="Gabitril (tiagabine)", fg='navy',
+    CheckVar24 = tk.IntVar()
+    self.C24 = tk.Checkbutton(self.can, text="Gabitril (tiagabine)", fg='navy',
         bg='cyan', variable=CheckVar24, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -840,8 +867,8 @@ def callLabo1(self):
         window = self.C24)
     
     self.x28, self.y28 = 461, 268
-    CheckVar25 = IntVar()
-    self.C25 = Checkbutton(self.can, text="Inovelon (rufinamid)", fg='navy',
+    CheckVar25 = tk.IntVar()
+    self.C25 = tk.Checkbutton(self.can, text="Inovelon (rufinamid)", fg='navy',
         bg='cyan', variable=CheckVar25, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -849,8 +876,8 @@ def callLabo1(self):
         window = self.C25)
 
     self.x29, self.y29 = 461, 291
-    CheckVar26 = IntVar()
-    self.C26 = Checkbutton(self.can, text="Keppra (levetiracetam)", fg='navy',
+    CheckVar26 = tk.IntVar()
+    self.C26 = tk.Checkbutton(self.can, text="Keppra (levetiracetam)", fg='navy',
         bg='cyan', variable=CheckVar26, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -858,8 +885,8 @@ def callLabo1(self):
         window = self.C26)
 
     self.x30, self.y30 = 461, 314
-    CheckVar27 = IntVar()
-    self.C27 = Checkbutton(self.can, text="Lamictal (lamotrigine)", fg='navy',
+    CheckVar27 = tk.IntVar()
+    self.C27 = tk.Checkbutton(self.can, text="Lamictal (lamotrigine)", fg='navy',
         bg='cyan', variable=CheckVar27, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -867,8 +894,8 @@ def callLabo1(self):
         window = self.C27)
 
     self.x31, self.y31 = 461, 337
-    CheckVar28 = IntVar()
-    self.C28 = Checkbutton(self.can, text="Lyrica (pregabalin)", fg='navy', 
+    CheckVar28 = tk.IntVar()
+    self.C28 = tk.Checkbutton(self.can, text="Lyrica (pregabalin)", fg='navy', 
         bg='cyan', variable=CheckVar28, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -876,8 +903,8 @@ def callLabo1(self):
         window = self.C28)
 
     self.x32, self.y32 = 461, 360
-    CheckVar29 = IntVar()
-    self.C29 = Checkbutton(self.can, text="Myzoline (primidon)", fg='navy', 
+    CheckVar29 = tk.IntVar()
+    self.C29 = tk.Checkbutton(self.can, text="Myzoline (primidon)", fg='navy', 
         bg='cyan', variable=CheckVar29, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -885,8 +912,8 @@ def callLabo1(self):
         window = self.C29)
 
     self.x33, self.y33 = 461, 383
-    CheckVar30 = IntVar()
-    self.C30 = Checkbutton(self.can, text="Neurontin (gabapentin)", fg='navy', 
+    CheckVar30 = tk.IntVar()
+    self.C30 = tk.Checkbutton(self.can, text="Neurontin (gabapentin)", fg='navy', 
         bg='cyan', variable=CheckVar30, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -894,8 +921,8 @@ def callLabo1(self):
         window = self.C30)
 
     self.x34, self.y34 = 790, 268
-    CheckVar31 = IntVar()
-    self.C31 = Checkbutton(self.can, text="Phenobarbital (aphenylbarbit)", fg='navy', 
+    CheckVar31 = tk.IntVar()
+    self.C31 = tk.Checkbutton(self.can, text="Phenobarbital (aphenylbarbit)", fg='navy', 
         bg='cyan', variable=CheckVar31, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -903,8 +930,8 @@ def callLabo1(self):
         window = self.C31)
 
     self.x35, self.y35 = 790, 291
-    CheckVar32 = IntVar()
-    self.C32 = Checkbutton(self.can, text="Phenytoïne", fg='navy', 
+    CheckVar32 = tk.IntVar()
+    self.C32 = tk.Checkbutton(self.can, text="Phenytoïne", fg='navy', 
         bg='cyan', variable=CheckVar32, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -912,8 +939,8 @@ def callLabo1(self):
         window = self.C32)
 
     self.x36, self.y36 = 790, 314
-    CheckVar33 = IntVar()
-    self.C33 = Checkbutton(self.can, text="Sabril (vigabatrin)", fg='navy', 
+    CheckVar33 = tk.IntVar()
+    self.C33 = tk.Checkbutton(self.can, text="Sabril (vigabatrin)", fg='navy', 
         bg='cyan', variable=CheckVar33, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -921,8 +948,8 @@ def callLabo1(self):
         window = self.C33)
 
     self.x37, self.y37 = 790, 337
-    CheckVar34 = IntVar()
-    self.C34 = Checkbutton(self.can, text="Taloxa (felbamate)", fg='navy', 
+    CheckVar34 = tk.IntVar()
+    self.C34 = tk.Checkbutton(self.can, text="Taloxa (felbamate)", fg='navy', 
         bg='cyan', variable=CheckVar34, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -930,8 +957,8 @@ def callLabo1(self):
         window = self.C34)
 
     self.x38, self.y38 = 790, 360
-    CheckVar35 = IntVar()
-    self.C35 = Checkbutton(self.can, text="Topamax (topiramate)", fg='navy', 
+    CheckVar35 = tk.IntVar()
+    self.C35 = tk.Checkbutton(self.can, text="Topamax (topiramate)", fg='navy', 
         bg='cyan', variable=CheckVar35, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -939,8 +966,8 @@ def callLabo1(self):
         window = self.C35)
 
     self.x39, self.y39 = 790, 383
-    CheckVar36 = IntVar()
-    self.C36 = Checkbutton(self.can, text="Trileptal (oxcarbazepin)", fg='navy', 
+    CheckVar36 = tk.IntVar()
+    self.C36 = tk.Checkbutton(self.can, text="Trileptal (oxcarbazepin)", fg='navy', 
         bg='cyan', variable=CheckVar36, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -948,8 +975,8 @@ def callLabo1(self):
         window = self.C36)
 
     self.x40, self.y40 = 1117, 268
-    CheckVar37 = IntVar()
-    self.C37 = Checkbutton(self.can, text="Trobalt (retigabin)", fg='navy', 
+    CheckVar37 = tk.IntVar()
+    self.C37 = tk.Checkbutton(self.can, text="Trobalt (retigabin)", fg='navy', 
         bg='cyan', variable=CheckVar37, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -957,8 +984,8 @@ def callLabo1(self):
         window = self.C37)
 
     self.x41, self.y41 = 1117, 291
-    CheckVar38 = IntVar()
-    self.C38 = Checkbutton(self.can, text="Vimpat (lacosamid)", fg='navy', 
+    CheckVar38 = tk.IntVar()
+    self.C38 = tk.Checkbutton(self.can, text="Vimpat (lacosamid)", fg='navy', 
         bg='cyan', variable=CheckVar38, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -966,8 +993,8 @@ def callLabo1(self):
         window = self.C38)
 
     self.x42, self.y42 = 1117, 314
-    CheckVar39 = IntVar()
-    self.C39 = Checkbutton(self.can, text="Zonegran (zonisamid)", fg='navy', 
+    CheckVar39 = tk.IntVar()
+    self.C39 = tk.Checkbutton(self.can, text="Zonegran (zonisamid)", fg='navy', 
         bg='cyan', variable=CheckVar39, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -976,15 +1003,15 @@ def callLabo1(self):
 
     # ATD
     self.x43, self.y43 = 625, 409
-    self.labelresult3 = Label(self.can, text='--- Antidépresseurs ---',
+    self.labelresult3 = tk.Label(self.can, text='--- Antidépresseurs ---',
         font="Times 14 bold", width=135,
         height=1, bg='RoyalBlue3', fg='white')
     self.labelresult3 = self.can.create_window(self.x43, self.y43,
         window = self.labelresult3)
 
     self.x44, self.y44 = 134, 434
-    CheckVar40 = IntVar()
-    self.C40 = Checkbutton(self.can, text="Anafrani (clomipramin)", fg='navy', 
+    CheckVar40 = tk.IntVar()
+    self.C40 = tk.Checkbutton(self.can, text="Anafrani (clomipramin)", fg='navy', 
         bg='cyan', variable=CheckVar40, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -992,8 +1019,8 @@ def callLabo1(self):
         window = self.C40)
 
     self.x45, self.y45 = 134, 457
-    CheckVar41 = IntVar()
-    self.C41 = Checkbutton(self.can, text="Citalopram", fg='navy', 
+    CheckVar41 = tk.IntVar()
+    self.C41 = tk.Checkbutton(self.can, text="Citalopram", fg='navy', 
         bg='cyan', variable=CheckVar41, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -1001,8 +1028,8 @@ def callLabo1(self):
         window = self.C41)
 
     self.x46, self.y46 = 134, 480
-    CheckVar42 = IntVar()
-    self.C42 = Checkbutton(self.can, text="Cipralex (escitalopram)", fg='navy', 
+    CheckVar42 = tk.IntVar()
+    self.C42 = tk.Checkbutton(self.can, text="Cipralex (escitalopram)", fg='navy', 
         bg='cyan', variable=CheckVar42, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -1010,8 +1037,8 @@ def callLabo1(self):
         window = self.C42)
 
     self.x47, self.y47 = 134, 503
-    CheckVar43 = IntVar()
-    self.C43 = Checkbutton(self.can, text="Cymbalta (duloxetin)", fg='navy', 
+    CheckVar43 = tk.IntVar()
+    self.C43 = tk.Checkbutton(self.can, text="Cymbalta (duloxetin)", fg='navy', 
         bg='cyan', variable=CheckVar43, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -1019,8 +1046,8 @@ def callLabo1(self):
         window = self.C43)
 
     self.x48, self.y48 = 461, 434
-    CheckVar44 = IntVar()
-    self.C44 = Checkbutton(self.can, text="Deroxat (paroxetin)", fg='navy', 
+    CheckVar44 = tk.IntVar()
+    self.C44 = tk.Checkbutton(self.can, text="Deroxat (paroxetin)", fg='navy', 
         bg='cyan', variable=CheckVar44, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -1028,8 +1055,8 @@ def callLabo1(self):
         window = self.C44)
 
     self.x49, self.y49 = 461, 457
-    CheckVar45 = IntVar()
-    self.C45 = Checkbutton(self.can, text="Effexor (venlafaxin)", fg='navy', 
+    CheckVar45 = tk.IntVar()
+    self.C45 = tk.Checkbutton(self.can, text="Effexor (venlafaxin)", fg='navy', 
         bg='cyan', variable=CheckVar45, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -1037,8 +1064,8 @@ def callLabo1(self):
         window = self.C45)
 
     self.x50, self.y50 = 461, 480
-    CheckVar46 = IntVar()
-    self.C46 = Checkbutton(self.can, text="Floxifral (fluvoxamin)", fg='navy', 
+    CheckVar46 = tk.IntVar()
+    self.C46 = tk.Checkbutton(self.can, text="Floxifral (fluvoxamin)", fg='navy', 
         bg='cyan', variable=CheckVar46, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -1046,8 +1073,8 @@ def callLabo1(self):
         window = self.C46)
 
     self.x51, self.y51 = 461, 503
-    CheckVar47 = IntVar()
-    self.C47 = Checkbutton(self.can, text="Fluctine (fluoxetin)", fg='navy', 
+    CheckVar47 = tk.IntVar()
+    self.C47 = tk.Checkbutton(self.can, text="Fluctine (fluoxetin)", fg='navy', 
         bg='cyan', variable=CheckVar47, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -1055,8 +1082,8 @@ def callLabo1(self):
         window = self.C47)
 
     self.x52, self.y52 = 790, 434
-    CheckVar48 = IntVar()
-    self.C48 = Checkbutton(self.can, text="Ludiomil (maprotilin)", fg='navy', 
+    CheckVar48 = tk.IntVar()
+    self.C48 = tk.Checkbutton(self.can, text="Ludiomil (maprotilin)", fg='navy', 
         bg='cyan', variable=CheckVar48, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -1064,8 +1091,8 @@ def callLabo1(self):
         window = self.C48)
 
     self.x53, self.y53 = 790, 457
-    CheckVar49 = IntVar()
-    self.C49 = Checkbutton(self.can, text="Remeron (mirtazapin)", fg='navy', 
+    CheckVar49 = tk.IntVar()
+    self.C49 = tk.Checkbutton(self.can, text="Remeron (mirtazapin)", fg='navy', 
         bg='cyan', variable=CheckVar49, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -1073,8 +1100,8 @@ def callLabo1(self):
         window = self.C49)
 
     self.x54, self.y54 = 790, 480
-    CheckVar50 = IntVar()
-    self.C50 = Checkbutton(self.can, text="Saroten (amitriptylin)", fg='navy', 
+    CheckVar50 = tk.IntVar()
+    self.C50 = tk.Checkbutton(self.can, text="Saroten (amitriptylin)", fg='navy', 
         bg='cyan', variable=CheckVar50, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -1082,8 +1109,8 @@ def callLabo1(self):
         window = self.C50)
 
     self.x55, self.y55 = 790, 503
-    CheckVar51 = IntVar()
-    self.C51 = Checkbutton(self.can, text="Sertraline (zoloft)", fg='navy', 
+    CheckVar51 = tk.IntVar()
+    self.C51 = tk.Checkbutton(self.can, text="Sertraline (zoloft)", fg='navy', 
         bg='cyan', variable=CheckVar51, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -1091,8 +1118,8 @@ def callLabo1(self):
         window = self.C51)
 
     self.x56, self.y56 = 1117, 434
-    CheckVar52 = IntVar()
-    self.C52 = Checkbutton(self.can, text="Surmontil (trimipramin)", fg='navy', 
+    CheckVar52 = tk.IntVar()
+    self.C52 = tk.Checkbutton(self.can, text="Surmontil (trimipramin)", fg='navy', 
         bg='cyan', variable=CheckVar52, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -1100,8 +1127,8 @@ def callLabo1(self):
         window = self.C52)
 
     self.x57, self.y57 = 1117, 457
-    CheckVar53 = IntVar()
-    self.C53 = Checkbutton(self.can, text="Wellbutrin (bupropion)", fg='navy', 
+    CheckVar53 = tk.IntVar()
+    self.C53 = tk.Checkbutton(self.can, text="Wellbutrin (bupropion)", fg='navy', 
         bg='cyan', variable=CheckVar53, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -1109,7 +1136,7 @@ def callLabo1(self):
         window = self.C53)
 
     self.x58, self.y58 = 1117, 530
-    self.buttonstix = Button(self.can, text='Stix', width=10, bd=3,
+    self.buttonstix = tk.Button(self.can, text='Stix', width=10, bd=3,
         fg='cyan', bg='RoyalBlue3', activebackground='pale turquoise',
         highlightbackground='cyan', command=comburTips)
     self.buttonstix = self.can.create_window(self.x58, self.y58,
@@ -1117,7 +1144,7 @@ def callLabo1(self):
 
     # Printable
     self.x59, self.y59 = 298, 528
-    self.labelresult4 = Label(self.can, text='--- Printable ---', 
+    self.labelresult4 = tk.Label(self.can, text='--- Printable ---', 
         font="Times 14 bold", width=62,
         height=1, bg='RoyalBlue3', fg='white')
     self.labelresult4 = self.can.create_window(self.x59, self.y59,
@@ -1142,7 +1169,7 @@ def callLabo1(self):
 
     # Buttons printable sheet
     self.x60, self.y60 = 140, 620
-    self.buttonSheet = Button(self.can,
+    self.buttonSheet = tk.Button(self.can,
         text="Complete lab sheet", width=15,
         fg='cyan', bg='navy',
         activebackground='pale turquoise',
@@ -1168,7 +1195,7 @@ def callLabo1(self):
             os.startfile('./labo/microbio.pdf') # Windows
 
     self.x61, self.y61 = 460, 620
-    self.buttonMicro = Button(self.can,
+    self.buttonMicro = tk.Button(self.can,
         text="Microbiology sheet", width=15,
         fg='cyan', bg='navy',
         activebackground='pale turquoise',
@@ -1190,15 +1217,15 @@ def callLabo1(self):
 
     # Lithium
     self.x62, self.y62 = 790, 528
-    self.labelinfuri = Label(self.can, text='--- Lithium ---', 
+    self.labelinfuri = tk.Label(self.can, text='--- Lithium ---', 
         font="Times 14 bold", width=26,
         height=1, bg='RoyalBlue3', fg='white')
     self.labelinfuri = self.can.create_window(self.x62, self.y62,
         window = self.labelinfuri)
 
     self.x63, self.y63 = 790, 553
-    CheckVar54 = IntVar()
-    self.C54 = Checkbutton(self.can, text="Lithiofor (lithium)", fg='navy', 
+    CheckVar54 = tk.IntVar()
+    self.C54 = tk.Checkbutton(self.can, text="Lithiofor (lithium)", fg='navy', 
         bg='cyan', variable=CheckVar54, 
         onvalue=1, offvalue=0, height=1, 
         width=26, anchor="w")
@@ -1207,14 +1234,14 @@ def callLabo1(self):
 
     # Button save and quit
     self.x64, self.y64 = 790, 620
-    self.buttonsave = Button(self.can, text="Save", width=10, bd=3,
+    self.buttonsave = tk.Button(self.can, text="Save", width=10, bd=3,
         fg='yellow', bg='RoyalBlue3', activebackground='pale turquoise',
         highlightbackground='cyan', command=recordTofile)
     self.buttonsave = self.can.create_window(self.x64, self.y64,
         window = self.buttonsave)
 
     self.x65, self.y65 = 1110, 620
-    self.buttonquit = Button(self.can, text='Return to main menu', width=20, bd=3,
+    self.buttonquit = tk.Button(self.can, text='Return to main menu', width=20, bd=3,
         fg='white', bg='RoyalBlue3', activebackground='pale turquoise',
         highlightbackground='cyan', command=awayOut)
     self.buttonquit = self.can.create_window(self.x65, self.y65,

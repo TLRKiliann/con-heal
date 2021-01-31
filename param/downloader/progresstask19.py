@@ -35,7 +35,7 @@ def task(root):
         length = 200,
         mode = 'indeterminate')
     pb_hD.pack()
-    pb_hD.start(20)
+    pb_hD.start(10)
     root.mainloop()
 
 def process_of_unknown_duration(root):
@@ -44,7 +44,7 @@ def process_of_unknown_duration(root):
         with root as one of the input And once
         done, add root.quit() at the end.
     """
-    time.sleep(2)
+    time.sleep(1)
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt19/Files19/paramdata19.txt",
         "./param/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))

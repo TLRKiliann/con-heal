@@ -24,11 +24,11 @@ def task(root):
         length = 200,
         mode = 'determinate')
     pb.pack()
-    pb.start(20)
+    pb.start(10)
     root.mainloop()
 
 def process_of_unknown_duration(root):
-    time.sleep(2)
+    time.sleep(1)
     print('Upload done')
     root.quit()
 

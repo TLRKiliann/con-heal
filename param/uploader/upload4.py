@@ -26,11 +26,11 @@ def managetask(root):
         length = 200,
         mode = 'indeterminate')
     pb.pack()
-    pb.start(20)
+    pb.start(10)
     root.mainloop()
 
 def process_unknown_duration(root):
-    time.sleep(2)
+    time.sleep(1)
     proc = subprocess.run(["scp", "./param/paramdata4.txt",
         "pi@192.168.18.12:~/tt_doc/doc_txt4/Files4/paramdata4.txt"],
         stderr=subprocess.PIPE)

@@ -52,7 +52,7 @@ def recordOption():
             file.write(Erychoosen.get() + '\n')
             file.write("Hb :")
             file.write(Hbchoosen.get() + '\n')
-            file.write("\n***************************************************************************\n\n")
+            file.write("***************************************************************************\n\n")
             file_2.write("\n\n***************************************************************************\n")
             file_2.write("Date : ")
             file_2.write(time.strftime("%d/%m/%Y") + '\n')

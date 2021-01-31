@@ -19,6 +19,7 @@ def saveMyButt():
     if MsgBox == 1:
         print("Ok data saved")
         recordOption()
+        uploadata()
         confRec()
         app.destroy()
     else:
@@ -73,6 +74,32 @@ def recordOption():
             file_2.write(" Hb :")
             file_2.write(Hbchoosen.get())
             file_2.write("\n***************************************************************************\n\n")
+
+def uploadata():
+    """
+        To upload data on server after creating files
+    """
+    proc = subprocess.run(["scp", "./14besoins/doc_suivi22/patient22_14b.txt",
+        "pi@192.168.18.12:~/tt_doc/doc_txt22/Files22/patient22_14b.txt"],
+        stderr=subprocess.PIPE)
+    print("Result SCP transfert : %s" % repr(proc.stderr))
+    if proc.stderr == b'':
+        print("+ File patient22_14b.txt uploaded !")
+        messagebox.showinfo("INFO", "patient22_14b.txt uploaded...")
+    else:
+        print("+ No file to upload !")
+        messagebox.showerror("Error", "No patient22_14b.txt to upload...")
+
+    secproc = subprocess.run(["scp", "./labo/doc_labo/result22.txt",
+        "pi@192.168.18.12:~/tt_doc/doc_txt22/Files22/result22.txt"],
+        stderr=subprocess.PIPE)
+    print("Result SCP transfert : %s" % repr(secproc.stderr))
+    if secproc.stderr == b'':
+        print("+ File result22.txt uploaded !")
+        messagebox.showinfo("INFO", "result22.txt uploaded...")
+    else:
+        print("+ No file to upload !")
+        messagebox.showerror("Error", "No result22.txt to upload...")
 
 def confRec():
     messagebox.showinfo("Confirmation", "Record confirmed and finished !")

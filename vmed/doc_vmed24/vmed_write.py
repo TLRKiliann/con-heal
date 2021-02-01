@@ -109,8 +109,8 @@ def addText():
 
 def importationFile(fichier, encodage="Utf-8"):
     """
-    First display of txt file
-    when the user start app.
+        First display of txt file
+        when the user start app.
     """
     file = open(fichier, 'r', encoding=encodage)
     content=file.readlines()

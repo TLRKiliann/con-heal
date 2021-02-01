@@ -50,23 +50,39 @@ Entryaller.pack(padx=10, pady=5)
 
 def saveData():
     """
-    No need to test if file
-    exist or not. Already test
-    it before.
+        No need to test if file
+        exist or not. Already test
+        it before.
     """
     with open('./vmed/doc_vmed/resultvmed.txt', 'a+') as filerecord:
         filerecord.write(textBox.get("1.0", "end-1c"))
         filerecord.write(str('\n\n'))
 
+def uploadfile():
+    """
+        To upload file on server
+    """
+    proc = subprocess.run(["scp", "./vmed/doc_vmed/resultvmed.txt",
+        "pi@192.168.18.12:~/tt_doc/doc_txt1/Files1/resultvmed.txt"],
+        stderr=subprocess.PIPE)
+    print("Result SCP transfert : %s" % repr(proc.stderr))
+    if proc.stderr == b'':
+        print("+ File resultvmed.txt uploaded !")
+        #messagebox.showinfo("INFO", "resultvmed.txt uploaded...")
+    else:
+        print("+ No file to upload !")
+        messagebox.showerror("Error", "No resultvmed.txt to upload...")
+
 def messFromSafeButt():
     """
-    Message of confirmation
-    with messagebox.
+        Message of confirmation
+        with messagebox.
     """
     MsgBox = messagebox.askquestion("Confirm","Are you sure ?\n"
         "It will save all data !")
     if MsgBox == 'yes':
         saveData()
+        uploadfile()
         textBox.insert(tk.INSERT, "\n---Data saved !---")
         print("+ Data saved !")
     else:
@@ -75,7 +91,7 @@ def messFromSafeButt():
 
 def readerFile():
     """
-    To read into the txt file.
+        To read into the txt file.
     """
     with open('./vmed/doc_vmed/resultvmed.txt', 'r') as filereader:
         print(filereader.read())
@@ -83,8 +99,8 @@ def readerFile():
 
 def addText():
     """
-    Display text into widget Text
-    before to add comment.
+        Display text into widget Text
+        before to add comment.
     """
     textBox.delete('1.0', tk.END)
     textBox.insert(tk.INSERT, "En date du : ")
@@ -93,8 +109,8 @@ def addText():
 
 def importationFile(fichier, encodage="Utf-8"):
     """
-    First display of txt file
-    when the user start app.
+        First display of txt file
+        when the user start app.
     """
     file = open(fichier, 'r', encoding=encodage)
     content=file.readlines()

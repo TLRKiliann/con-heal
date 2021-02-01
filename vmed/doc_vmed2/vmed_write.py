@@ -58,6 +58,21 @@ def saveData():
         filerecord.write(textBox.get("1.0", "end-1c"))
         filerecord.write(str('\n\n'))
 
+def uploadfile():
+    """
+        To upload file on server
+    """
+    proc = subprocess.run(["scp", "./vmed/doc_vmed2/resultvmed2.txt",
+        "pi@192.168.18.12:~/tt_doc/doc_txt2/Files2/resultvmed2.txt"],
+        stderr=subprocess.PIPE)
+    print("Result SCP transfert : %s" % repr(proc.stderr))
+    if proc.stderr == b'':
+        print("+ File resultvmed2.txt uploaded !")
+        #messagebox.showinfo("INFO", "resultvmed2.txt uploaded...")
+    else:
+        print("+ No file to upload !")
+        messagebox.showerror("Error", "No resultvmed2.txt to upload...")
+
 def messFromSafeButt():
     """
     Message of confirmation
@@ -67,6 +82,7 @@ def messFromSafeButt():
         "It will save all data !")
     if MsgBox == 'yes':
         saveData()
+        uploadfile()
         textBox.insert(tk.INSERT, "\n---Data saved !---")
         print("+ Data saved !")
     else:

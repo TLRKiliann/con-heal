@@ -41,7 +41,7 @@ def process_launched(root):
     print('My pid is', os.getpid())
     root.quit() # To destroy threading
 
-def labodata():
+def medata():
     root = tk.Tk()
     t1 = threading.Thread(target=process_launched, args=(root,))
     #print(t1)

@@ -3,36 +3,37 @@
 
 
 from tkinter import *
+import tkinter as tk
 from tkinter import messagebox
 import time
 import os
 import subprocess
 
 
-root=Tk()
+root = tk.Tk()
 root.title("Results of Medical Visit")
 root.configure(background='DodgerBlue2')
 
 # To place side by side labelo + entrylab
-top = Frame(root, bg='DodgerBlue2')
-bottom = Frame(root, bg='DodgerBlue2')
-top.pack(side=TOP)
-bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
+top = tk.Frame(root, bg='DodgerBlue2')
+bottom = tk.Frame(root, bg='DodgerBlue2')
+top.pack(side=tk.TOP)
+bottom.pack(side=tk.BOTTOM, fill=BOTH, expand=YES)
 
-labelo=Label(root, text="Results of Medical Visit for : ",
+labelo = tk.Label(root, text="Results of Medical Visit for : ",
     font='Arial 18 bold', fg='white', bg='DodgerBlue2')
-labelo.pack(in_=top, side=LEFT, padx=5, pady=20)
+labelo.pack(in_=top, side=tk.LEFT, padx=5, pady=20)
 
 # To read name in Entry widget
 with open('./newpatient/entryfile23.txt', 'r') as filename:
     line1=filename.readline()
 
-text_name=StringVar()
-Entryname=Entry(root, textvariable=text_name)
+text_name = tk.StringVar()
+Entryname = tk.Entry(root, textvariable=text_name)
 text_name.set(line1[:-1])
-Entryname.pack(in_=top, side=LEFT, padx=10, pady=20)
+Entryname.pack(in_=top, side=tk.LEFT, padx=10, pady=20)
 
-labelallergy=Label(root, text="Allergy",
+labelallergy = tk.Label(root, text="Allergy",
     font='Arial 18 bold', fg='coral', bg='DodgerBlue2')
 labelallergy.pack(padx=5, pady=5)
 
@@ -42,9 +43,9 @@ with open('./newpatient/entryfile23.txt', 'r') as allerfile:
     lineA2=allerfile.readline()
     lineA3=allerfile.readline()
 
-text_all=StringVar()
+text_all = tk.StringVar()
 text_all.set(lineA3[:-1])
-Entryaller=Entry(root, textvariable=text_all, width=60)
+Entryaller = tk.Entry(root, textvariable=text_all, width=60)
 Entryaller.pack(padx=10, pady=5)
 
 def saveData():
@@ -57,6 +58,21 @@ def saveData():
         filerecord.write(textBox.get("1.0", "end-1c"))
         filerecord.write(str('\n\n'))
 
+def uploadfile():
+    """
+        To upload file on server
+    """
+    proc = subprocess.run(["scp", "./vmed/doc_vmed23/resultvmed23.txt",
+        "pi@192.168.18.12:~/tt_doc/doc_txt23/Files23/resultvmed23.txt"],
+        stderr=subprocess.PIPE)
+    print("Result SCP transfert : %s" % repr(proc.stderr))
+    if proc.stderr == b'':
+        print("+ File resultvmed23.txt uploaded !")
+        #messagebox.showinfo("INFO", "resultvmed23.txt uploaded...")
+    else:
+        print("+ No file to upload !")
+        messagebox.showerror("Error", "No resultvmed23.txt to upload...")
+
 def messFromSafeButt():
     """
     Message of confirmation
@@ -66,6 +82,7 @@ def messFromSafeButt():
         "It will save all data !")
     if MsgBox == 'yes':
         saveData()
+        uploadfile()
         textBox.insert(INSERT, "\n---Data saved !---")
         print("+ Data saved !")
     else:

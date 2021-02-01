@@ -22,7 +22,7 @@ class ScrollCanvas(tk.Frame):
         
         self.vsb.pack(side=tk.RIGHT, fill=Y)
         self.can.pack(side=tk.LEFT, fill=BOTH, expand=YES)
-        self.can.create_window((4, 4), window=self.frame, anchor=NW,
+        self.can.create_window((4, 4), window=self.frame, anchor=tk.NW,
             tags="self.frame")
         self.frame.bind("<Configure>", self.onFrameConfigure)
 
@@ -55,7 +55,7 @@ class Application(tk.Frame):
         self.can.create_text(300, 150, anchor=tk.CENTER,
             text="Medical Visit", font=('Times New Roman', 28),
             fill='aquamarine')
-        self.can.create_text(590, 375, anchor=NE, text="ko@l@tr33",
+        self.can.create_text(590, 375, anchor=tk.NE, text="ko@l@tr33",
             font=('Times', 12), fill='white') 
         self.can.pack(side=tk.LEFT, fill=BOTH, expand=1)
         # Configuration de la Scrollbar sur le Frame

@@ -50,9 +50,9 @@ Entryaller.pack(padx=10, pady=5)
 
 def saveData():
     """
-    No need to test if file
-    exist or not. Already test
-    it before.
+        No need to test if file
+        exist or not. Already test
+        it before.
     """
     with open('./vmed/doc_vmed4/resultvmed4.txt', 'a+') as filerecord:
         filerecord.write(textBox.get("1.0", "end-1c"))
@@ -75,8 +75,8 @@ def uploadfile():
 
 def messFromSafeButt():
     """
-    Message of confirmation
-    with messagebox.
+        Message of confirmation
+        with messagebox.
     """
     MsgBox = messagebox.askquestion("Confirm","Are you sure ?\n"
         "It will save all data !")
@@ -91,7 +91,7 @@ def messFromSafeButt():
 
 def readerFile():
     """
-    To read into the txt file.
+        To read into the txt file.
     """
     with open('./vmed/doc_vmed4/resultvmed4.txt', 'r') as filereader:
         print(filereader.read())
@@ -99,8 +99,8 @@ def readerFile():
 
 def addText():
     """
-    Display text into widget Text
-    before to add comment.
+        Display text into widget Text
+        before to add comment.
     """
     textBox.delete('1.0', tk.END)
     textBox.insert(tk.INSERT, "En date du : ")
@@ -109,8 +109,8 @@ def addText():
 
 def importationFile(fichier, encodage="Utf-8"):
     """
-    First display of txt file
-    when the user start app.
+        First display of txt file
+        when the user start app.
     """
     file = open(fichier, 'r', encoding=encodage)
     content=file.readlines()

@@ -15,8 +15,8 @@ import subprocess
 
 def medownload1():
     """
-        to download labo files from server before
-        to start with labo interface.
+        to download med files from server before
+        to start with med interface.
     """
     medata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt1/Files1/resultvmed.txt",
@@ -31,8 +31,8 @@ def medownload1():
 
 def medownload2():
     """
-        to download labo files from server before
-        to start with labo interface.
+        to download med files from server before
+        to start with med interface.
     """
     medata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt2/Files2/resultvmed2.txt",
@@ -47,8 +47,8 @@ def medownload2():
 
 def medownload3():
     """
-        to download labo files from server before
-        to start with labo interface.
+        to download med files from server before
+        to start with med interface.
     """
     medata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt3/Files3/resultvmed3.txt",
@@ -63,8 +63,8 @@ def medownload3():
 
 def medownload4():
     """
-        to download labo files from server before
-        to start with labo interface.
+        to download med files from server before
+        to start with med interface.
     """
     medata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt4/Files4/resultvmed4.txt",
@@ -79,8 +79,8 @@ def medownload4():
 
 def medownload5():
     """
-        to download labo files from server before
-        to start with labo interface.
+        to download med files from server before
+        to start with med interface.
     """
     medata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt5/Files5/resultvmed5.txt",
@@ -95,8 +95,8 @@ def medownload5():
 
 def medownload6():
     """
-        to download labo files from server before
-        to start with labo interface.
+        to download med files from server before
+        to start with med interface.
     """
     medata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt6/Files6/resultvmed6.txt",
@@ -111,8 +111,8 @@ def medownload6():
 
 def medownload7():
     """
-        to download labo files from server before
-        to start with labo interface.
+        to download med files from server before
+        to start with med interface.
     """
     medata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt7/Files7/resultvmed7.txt",
@@ -127,8 +127,8 @@ def medownload7():
 
 def medownload8():
     """
-        to download labo files from server before
-        to start with labo interface.
+        to download med files from server before
+        to start with med interface.
     """
     medata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt8/Files8/resultvmed8.txt",
@@ -143,8 +143,8 @@ def medownload8():
 
 def medownload9():
     """
-        to download labo files from server before
-        to start with labo interface.
+        to download med files from server before
+        to start with med interface.
     """
     medata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt9/Files9/resultvmed9.txt",
@@ -159,8 +159,8 @@ def medownload9():
 
 def medownload10():
     """
-        to download labo files from server before
-        to start with labo interface.
+        to download med files from server before
+        to start with med interface.
     """
     medata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt10/Files10/resultvmed10.txt",
@@ -175,8 +175,8 @@ def medownload10():
 
 def medownload11():
     """
-        to download labo files from server before
-        to start with labo interface.
+        to download med files from server before
+        to start with med interface.
     """
     medata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt11/Files11/resultvmed11.txt",
@@ -191,8 +191,8 @@ def medownload11():
 
 def medownload12():
     """
-        to download labo files from server before
-        to start with labo interface.
+        to download med files from server before
+        to start with med interface.
     """
     medata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt12/Files12/resultvmed12.txt",
@@ -207,8 +207,8 @@ def medownload12():
 
 def medownload13():
     """
-        to download labo files from server before
-        to start with labo interface.
+        to download med files from server before
+        to start with med interface.
     """
     medata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt13/Files13/resultvmed13.txt",
@@ -223,8 +223,8 @@ def medownload13():
 
 def medownload14():
     """
-        to download labo files from server before
-        to start with labo interface.
+        to download med files from server before
+        to start with med interface.
     """
     medata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt14/Files14/resultvmed14.txt",
@@ -239,8 +239,8 @@ def medownload14():
 
 def medownload15():
     """
-        to download labo files from server before
-        to start with labo interface.
+        to download med files from server before
+        to start with med interface.
     """
     medata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt15/Files15/resultvmed15.txt",
@@ -255,8 +255,8 @@ def medownload15():
 
 def medownload16():
     """
-        to download labo files from server before
-        to start with labo interface.
+        to download med files from server before
+        to start with med interface.
     """
     medata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt16/Files16/resultvmed16.txt",
@@ -271,8 +271,8 @@ def medownload16():
 
 def medownload17():
     """
-        to download labo files from server before
-        to start with labo interface.
+        to download med files from server before
+        to start with med interface.
     """
     medata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt17/Files17/resultvmed17.txt",
@@ -287,8 +287,8 @@ def medownload17():
 
 def medownload18():
     """
-        to download labo files from server before
-        to start with labo interface.
+        to download med files from server before
+        to start with med interface.
     """
     medata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt18/Files18/resultvmed18.txt",
@@ -303,8 +303,8 @@ def medownload18():
 
 def medownload19():
     """
-        to download labo files from server before
-        to start with labo interface.
+        to download med files from server before
+        to start with med interface.
     """
     medata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt19/Files19/resultvmed19.txt",
@@ -319,8 +319,8 @@ def medownload19():
 
 def medownload20():
     """
-        to download labo files from server before
-        to start with labo interface.
+        to download med files from server before
+        to start with med interface.
     """
     medata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt20/Files20/resultvmed20.txt",
@@ -335,8 +335,8 @@ def medownload20():
 
 def medownload21():
     """
-        to download labo files from server before
-        to start with labo interface.
+        to download med files from server before
+        to start with med interface.
     """
     medata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt21/Files21/resultvmed21.txt",
@@ -351,8 +351,8 @@ def medownload21():
 
 def medownload22():
     """
-        to download labo files from server before
-        to start with labo interface.
+        to download med files from server before
+        to start with med interface.
     """
     medata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt22/Files22/resultvmed22.txt",
@@ -367,8 +367,8 @@ def medownload22():
 
 def medownload23():
     """
-        to download labo files from server before
-        to start with labo interface.
+        to download med files from server before
+        to start with med interface.
     """
     medata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt23/Files23/resultvmed23.txt",
@@ -383,8 +383,8 @@ def medownload23():
 
 def medownload24():
     """
-        to download labo files from server before
-        to start with labo interface.
+        to download med files from server before
+        to start with med interface.
     """
     medata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt24/Files24/resultvmed24.txt",

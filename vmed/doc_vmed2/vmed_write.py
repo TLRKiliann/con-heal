@@ -3,36 +3,37 @@
 
 
 from tkinter import *
+import tkinter as tk
 from tkinter import messagebox
 import time
 import os
 import subprocess
 
 
-root=Tk()
+root = tk.Tk()
 root.title("Results of Medical Visit")
 root.configure(background='DodgerBlue2')
 
 # To place side by side labelo + entrylab
-top = Frame(root, bg='DodgerBlue2')
-bottom = Frame(root, bg='DodgerBlue2')
-top.pack(side=TOP)
-bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
+top = tk.Frame(root, bg='DodgerBlue2')
+bottom = tk.Frame(root, bg='DodgerBlue2')
+top.pack(side=tk.TOP)
+bottom.pack(side=tk.BOTTOM, fill=BOTH, expand=YES)
 
-labelo=Label(root, text="Results of Medical Visit for : ",
+labelo = tk.Label(root, text="Results of Medical Visit for : ",
     font='Arial 18 bold', fg='white', bg='DodgerBlue2')
-labelo.pack(in_=top, side=LEFT, padx=5, pady=20)
+labelo.pack(in_=top, side=tk.LEFT, padx=5, pady=20)
 
 # To read name in Entry widget
 with open('./newpatient/entryfile2.txt', 'r') as filename:
     line1=filename.readline()
 
-text_name=StringVar()
-Entryname=Entry(root, textvariable=text_name)
+text_name = tk.StringVar()
+Entryname = tk.Entry(root, textvariable=text_name)
 text_name.set(line1[:-1])
-Entryname.pack(in_=top, side=LEFT, padx=10, pady=20)
+Entryname.pack(in_=top, side=tk.LEFT, padx=10, pady=20)
 
-labelallergy=Label(root, text="Allergy",
+labelallergy = tk.Label(root, text="Allergy",
     font='Arial 18 bold', fg='coral', bg='DodgerBlue2')
 labelallergy.pack(padx=5, pady=5)
 
@@ -42,9 +43,9 @@ with open('./newpatient/entryfile2.txt', 'r') as allerfile:
     lineA2=allerfile.readline()
     lineA3=allerfile.readline()
 
-text_all=StringVar()
+text_all = tk.StringVar()
 text_all.set(lineA3[:-1])
-Entryaller=Entry(root, textvariable=text_all, width=60)
+Entryaller = tk.Entry(root, textvariable=text_all, width=60)
 Entryaller.pack(padx=10, pady=5)
 
 def saveData():
@@ -66,10 +67,10 @@ def messFromSafeButt():
         "It will save all data !")
     if MsgBox == 'yes':
         saveData()
-        textBox.insert(INSERT, "\n---Data saved !---")
+        textBox.insert(tk.INSERT, "\n---Data saved !---")
         print("+ Data saved !")
     else:
-        textBox.insert(INSERT, "Nothing has been saved !")
+        textBox.insert(tk.INSERT, "Nothing has been saved !")
         print("+ Nothing has been saved !")
 
 def readerFile():
@@ -85,9 +86,9 @@ def addText():
     Display text into widget Text
     before to add comment.
     """
-    textBox.delete('1.0', END)
-    textBox.insert(INSERT, "En date du : ")
-    textBox.insert(END, time.strftime("%d/%m/%Y à %H:%M:%S :") + '\n')
+    textBox.delete('1.0', tk.END)
+    textBox.insert(tk.INSERT, "En date du : ")
+    textBox.insert(tk.END, time.strftime("%d/%m/%Y à %H:%M:%S :") + '\n')
     textBox.update()
 
 def importationFile(fichier, encodage="Utf-8"):
@@ -99,33 +100,33 @@ def importationFile(fichier, encodage="Utf-8"):
     content=file.readlines()
     file.close()
     for li in content:
-        textBox.insert(END, li)
+        textBox.insert(tk.END, li)
 
-textBox=Text(root, height=15, width=60, font=18, relief=SUNKEN)
+textBox = tk.Text(root, height=15, width=60, font=18, relief=SUNKEN)
 #textBox.insert(INSERT, "\nEn date du : ")
 #textBox.insert(END, time.strftime("%d/%m/%Y à %H:%M:%S :\n"))
 textBox.pack(padx=30, pady=30)
 
-buttonLire=Button(root, text="Read", width=8, bd=3,
+buttonLire = tk.Button(root, text="Read", width=8, bd=3,
     fg='cyan', bg='RoyalBlue3', highlightbackground='cyan',
     activebackground='pale turquoise', command=readerFile)
-buttonLire.pack(side='left', padx=10, pady=10)
+buttonLire.pack(side=tk.LEFT, padx=10, pady=10)
 
-buttonEffacer=Button(root, text="1-Add", width=8, bd=3,
+buttonEffacer = tk.Button(root, text="1-Add", width=8, bd=3,
     fg='yellow', bg='RoyalBlue3', highlightbackground='cyan',
     activebackground='pale turquoise', command=addText)
-buttonEffacer.pack(side='left', padx=10, pady=10)
+buttonEffacer.pack(side=tk.LEFT, padx=10, pady=10)
 
-buttonEnter=Button(root, text="2-Save", width=8, bd=3,
+buttonEnter = tk.Button(root, text="2-Save", width=8, bd=3,
     fg='yellow', bg='RoyalBlue3', highlightbackground='cyan',
     activebackground='pale turquoise',
     command=messFromSafeButt)
-buttonEnter.pack(side='left', padx=10, pady=10)
+buttonEnter.pack(side=tk.LEFT, padx=10, pady=10)
 
-buttonQuitter=Button(root, text="Quit", width=8, bd=3,
+buttonQuitter = tk.Button(root, text="Quit", width=8, bd=3,
     fg='white', bg='RoyalBlue3', highlightbackground='cyan',
     activebackground='pale turquoise', command=quit)
-buttonQuitter.pack(side='right', padx=10, pady=10)
+buttonQuitter.pack(side=tk.RIGHT, padx=10, pady=10)
 
 try:
     if os.path.getsize('./vmed/doc_vmed2/resultvmed2.txt'):
@@ -136,4 +137,4 @@ except FileNotFoundError as err_file:
     messagebox.showwarning("WARNING", "File does not exist "
         "or not found !")
 
-mainloop()
+root.mainloop()

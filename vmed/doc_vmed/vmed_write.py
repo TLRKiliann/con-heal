@@ -67,10 +67,10 @@ def messFromSafeButt():
         "It will save all data !")
     if MsgBox == 'yes':
         saveData()
-        textBox.insert(INSERT, "\n---Data saved !---")
+        textBox.insert(tk.INSERT, "\n---Data saved !---")
         print("+ Data saved !")
     else:
-        textBox.insert(INSERT, "Nothing has been saved !")
+        textBox.insert(tk.INSERT, "Nothing has been saved !")
         print("+ Nothing has been saved !")
 
 def readerFile():
@@ -86,9 +86,9 @@ def addText():
     Display text into widget Text
     before to add comment.
     """
-    textBox.delete('1.0', END)
-    textBox.insert(INSERT, "En date du : ")
-    textBox.insert(END, time.strftime("%d/%m/%Y à %H:%M:%S :") + '\n')
+    textBox.delete('1.0', tk.END)
+    textBox.insert(tk.INSERT, "En date du : ")
+    textBox.insert(tk.END, time.strftime("%d/%m/%Y à %H:%M:%S :") + '\n')
     textBox.update()
 
 def importationFile(fichier, encodage="Utf-8"):
@@ -100,14 +100,14 @@ def importationFile(fichier, encodage="Utf-8"):
     content=file.readlines()
     file.close()
     for li in content:
-        textBox.insert(END, li)
+        textBox.insert(tk.END, li)
 
 textBox = tk.Text(root, height=15, width=60, font=18, relief=SUNKEN)
 #textBox.insert(INSERT, "\nEn date du : ")
 #textBox.insert(END, time.strftime("%d/%m/%Y à %H:%M:%S :\n"))
 textBox.pack(padx=30, pady=30)
 
-buttonLire= tk.Button(root, text="Read", width=8, bd=3,
+buttonLire = tk.Button(root, text="Read", width=8, bd=3,
     fg='cyan', bg='RoyalBlue3', highlightbackground='cyan',
     activebackground='pale turquoise', command=readerFile)
 buttonLire.pack(side=tk.LEFT, padx=10, pady=10)

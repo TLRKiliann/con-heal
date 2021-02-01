@@ -14,6 +14,7 @@ from backapp import *
 from Backup.backupfile import dataBackToSave
 from param.backup_month import paramBackToSave
 from calBmi.bmi_backup import bmiBackToSave
+from vmed.medload import *
 from contact.conpact.pat_contact1 import Window
 from contact.conpact.doc_contact1 import doctorWind
 from contact.conpact.family_contact1 import famWind
@@ -3276,121 +3277,145 @@ class Application(tk.Frame):
 
     # Func Visit MED
     def visitMed(self):
+        medownload1()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient1.py", check=True)
         self.master.deiconify()
 
     def visitMed2(self):
+        medownload2()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient2.py", check=True)
         self.master.deiconify()
 
     def visitMed3(self):
+        medownload3()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient3.py", check=True)
         self.master.deiconify()
 
     def visitMed4(self):
+        medownload4()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient4.py", check=True)
         self.master.deiconify()
 
     def visitMed5(self):
+        medownload5()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient5.py", check=True)
         self.master.deiconify()
 
     def visitMed6(self):
+        medownload6()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient6.py", check=True)
         self.master.deiconify()
 
     def visitMed7(self):
+        medownload7()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient7.py", check=True)
         self.master.deiconify()
 
     def visitMed8(self):
+        medownload8()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient8.py", check=True)
         self.master.deiconify()
 
     def visitMed9(self):
+        medownload9()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient9.py", check=True)
         self.master.deiconify()
 
     def visitMed10(self):
+        medownload10()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient10.py", check=True)
         self.master.deiconify()
 
     def visitMed11(self):
+        medownload11()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient11.py", check=True)
         self.master.deiconify()
 
     def visitMed12(self):
+        medownload12()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient12.py", check=True)
         self.master.deiconify()
 
     def visitMed13(self):
+        medownload13()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient13.py", check=True)
         self.master.deiconify()
 
     def visitMed14(self):
+        medownload14()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient14.py", check=True)
         self.master.deiconify()
 
     def visitMed15(self):
+        medownload15()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient15.py", check=True)
         self.master.deiconify()
 
     def visitMed16(self):
+        medownload16()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient16.py", check=True)
         self.master.deiconify()
 
     def visitMed17(self):
+        medownload17()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient17.py", check=True)
         self.master.deiconify()
 
     def visitMed18(self):
+        medownload18()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient18.py", check=True)
         self.master.deiconify()
 
     def visitMed19(self):
+        medownload19()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient19.py", check=True)
         self.master.deiconify()
 
     def visitMed20(self):
+        medownload20()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient20.py", check=True)
         self.master.deiconify()
 
     def visitMed21(self):
+        medownload21()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient21.py", check=True)
         self.master.deiconify()
 
     def visitMed22(self):
+        medownload22()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient22.py", check=True)
         self.master.deiconify()
 
     def visitMed23(self):
+        medownload23()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient23.py", check=True)
         self.master.deiconify()
 
     def visitMed24(self):
+        medownload24()
         self.master.withdraw()
         subprocess.run("./vmed/vm_patient24.py", check=True)
         self.master.deiconify()

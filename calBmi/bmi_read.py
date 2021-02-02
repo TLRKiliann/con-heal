@@ -2,26 +2,41 @@
 # -*- coding: utf-8 -*-
 
 
+"""
+    This main app introduce parameters
+    and send back graphical matplotlib
+    representations.
+"""
+
+
 from tkinter import *
+import tkinter as tk
 from tkinter import messagebox
-import sys
+import json
+import os
+import subprocess
+import time
+from bmi_download.progresstask1 import downloadata
+from bmi_upload.uploadbar import uploadmain
+from bmi_upload.upload1 import uploadata
+#import sys
 
 
-fen = Tk()
+fen = tk.Tk()
 fen.title("Reader BMI")
 fen.configure(background='DodgerBlue2')
 
 # To place side by side labelo + entrylab
-top = Frame(fen, bg='DodgerBlue2')
-bottom = Frame(fen, bg='DodgerBlue2')
-top.pack(side=TOP)
-bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
+top = tk.Frame(fen, bg='DodgerBlue2')
+bottom = tk.Frame(fen, bg='DodgerBlue2')
+top.pack(side=tk.TOP)
+bottom.pack(side=tk.BOTTOM, fill=BOTH, expand=YES)
 
-labelo = Label(fen, text="BMI results : ", width=15,
+labelo = tk.Label(fen, text="BMI results : ", width=15,
     font='Times 18 bold', fg='white', bg='DodgerBlue2')
-labelo.pack(in_=top, side=LEFT, pady=20)
+labelo.pack(in_=top, side=tk.LEFT, pady=20)
 
-labelallergy = Label(fen, text="Allergy",
+labelallergy = tk.Label(fen, text="Allergy",
     font='Arial 18 bold', fg='coral', bg='DodgerBlue2')
 labelallergy.pack(padx=5, pady=5)
 
@@ -31,14 +46,14 @@ with open('./newpatient/entryfile.txt', 'r') as filename:
     line_b = filename.readline()
     line_c = filename.readline()
 
-text_name = StringVar()
+text_name = tk.StringVar()
 text_name.set(line_a[:-1])
-Entryname = Entry(fen, textvariable=text_name)
-Entryname.pack(in_=top, side=LEFT, pady=20)
+Entryname = tk.Entry(fen, textvariable=text_name)
+Entryname.pack(in_=top, side=tk.LEFT, pady=20)
 
-text_all = StringVar()
+text_all = tk.StringVar()
 text_all.set(line_c[:-1])
-Entryall = Entry(fen, textvariable=text_all, width=60)
+Entryall = tk.Entry(fen, textvariable=text_all, width=60)
 Entryall.pack(padx=10, pady=5)
 
 def importationFile(fichier, encodage="Utf-8"):
@@ -51,14 +66,14 @@ def importationFile(fichier, encodage="Utf-8"):
 def msgBox():
     messagebox.showinfo('Info', 'File bmi.txt does not exist')
 
-textBox = Text(fen, height=15, width=60, font=18)
+textBox = tk.Text(fen, height=15, width=60, font=18)
 textBox.pack(padx=30, pady=30)
 
-buttonClose = Button(fen, text="Quit", width=10, bd=3,
+buttonClose = tk.Button(fen, text="Quit", width=10, bd=3,
     fg='cyan', bg='RoyalBlue3', activebackground='pale turquoise', 
     activeforeground='navy', highlightbackground='cyan',
     command=quit)
-buttonClose.pack(side='right', padx=10, pady=10)
+buttonClose.pack(side=tk.RIGHT, padx=10, pady=10)
 
 try:
     importationFile('./calBmi/bmi.txt', encodage="Utf-8")

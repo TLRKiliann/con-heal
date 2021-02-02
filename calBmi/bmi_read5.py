@@ -12,10 +12,6 @@
 from tkinter import *
 import tkinter as tk
 from tkinter import messagebox
-import json
-import os
-import subprocess
-import time
 
 
 fen = tk.Tk()

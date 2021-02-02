@@ -16,9 +16,6 @@ import json
 import os
 import subprocess
 import time
-from bmi_download.progresstask3 import downloadata
-from bmi_upload.uploadbar import uploadmain
-from bmi_upload.upload3 import uploadata
 
 
 fen = tk.Tk()

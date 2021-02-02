@@ -12,14 +12,24 @@
 
 
 from tkinter import *
-import tkinter
+import tkinter as tk
 from functools import partial
 from tkinter import messagebox
 import time
 import os
 import subprocess
 import json
+from bmi_download.progresstask3 import downloadata
+from bmi_upload.uploadbar import uploadmain
+from bmi_upload.upload3 import uploadata
 
+
+def tocallprogressbar():
+    """
+        To display progress bar with current download
+    """
+    downloadata()
+tocallprogressbar()
 
 gui = Tk()
 gui.title('Time-Track')
@@ -143,6 +153,10 @@ def buttRecord():
             json.dump(dataBmi, datafile, indent=4)
 
     messagebox.showinfo('Record', 'Data saved')
+    uploadfunc()
+
+def uploadfunc():
+    uploadata()
 
 def viewGraphicBmi():
     try:

@@ -31,104 +31,39 @@ def managetask(root):
 
 def process_unknown_duration(root):
     time.sleep(1)
-    proc = subprocess.run(["scp", "./param/paramdata15.txt",
-        "pi@192.168.18.12:~/tt_doc/doc_txt15/Files15/paramdata15.txt"],
+    proc = subprocess.run(["scp", "./calBmi/bmi15.txt",
+        "pi@192.168.18.12:~/tt_doc/doc_txt15/Files15/bmi15.txt"],
         stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
-        print("+ File paramdata15.txt uploaded !")
-        #messagebox.showinfo("INFO", "paramdata15.txt uploaded...")
+        print("+ File bmi15.txt uploaded !")
+        #messagebox.showinfo("INFO", "bmi15.txt uploaded...")
     else:
         print("+ No file to upload !")
-        messagebox.showerror("Error", "No paramdata15.txt to upload...")
+        messagebox.showerror("Error", "No bmi15.txt to upload...")
 
-    secproc = subprocess.run(["scp", "./param/aspifile15/diastol.json",
-        "pi@192.168.18.12:~/tt_doc/doc_txt15/Files15/diastol.json"],
+    secproc = subprocess.run(["scp", "./calBmi/doc_BMI15/file_kg.json",
+        "pi@192.168.18.12:~/tt_doc/doc_txt15/Files15/file_kg.json"],
         stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(secproc.stderr))
     if secproc.stderr == b'':
-        print("+ File diastol.json uploaded !")
-        #messagebox.showinfo("INFO", "diastol.json uploaded...")
+        print("+ File file_kg.json uploaded !")
+        #messagebox.showinfo("INFO", "file_kg.json uploaded...")
     else:
         print("+ No file to upload !")
-        messagebox.showerror("Error", "No diastol.json to upload...")
+        messagebox.showerror("Error", "No file_kg.json to upload...")
 
-    thirdproc = subprocess.run(["scp", "./param/aspifile15/systol.json",
-        "pi@192.168.18.12:~/tt_doc/doc_txt15/Files15/systol.json"],
+    thirdproc = subprocess.run(["scp", "./calBmi/doc_BMI15/file_bmi.json",
+        "pi@192.168.18.12:~/tt_doc/doc_txt15/Files15/file_bmi.json"],
         stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(thirdproc.stderr))
     if thirdproc.stderr == b'':
-        print("+ File systol.json uploaded !")
-        #messagebox.showinfo("INFO", "systol.json uploaded...")
+        print("+ File file_bmi.json uploaded !")
+        #messagebox.showinfo("INFO", "file_bmi.json uploaded...")
     else:
         print("+ No file to upload !")
-        messagebox.showerror("Error", "No systol.json to upload...")
+        messagebox.showerror("Error", "No file_bmi.json to upload...")
 
-    fourproc = subprocess.run(["scp", "./param/aspifile15/dlr.json",
-        "pi@192.168.18.12:~/tt_doc/doc_txt15/Files15/dlr.json"],
-        stderr=subprocess.PIPE)
-    print("Result SCP transfert : %s" % repr(fourproc.stderr))
-    if fourproc.stderr == b'':
-        print("+ File dlr.json uploaded !")
-        #messagebox.showinfo("INFO", "dlr.json uploaded...")
-    else:
-        print("+ No file to upload !")
-        messagebox.showerror("Error", "No dlr.json to upload...")
-
-    fiveproc = subprocess.run(["scp", "./param/aspifile15/freq.json",
-        "pi@192.168.18.12:~/tt_doc/doc_txt15/Files15/freq.json"],
-        stderr=subprocess.PIPE)
-    print("Result SCP transfert : %s" % repr(fiveproc.stderr))
-    if fiveproc.stderr == b'':
-        print("+ File freq.json uploaded !")
-        #messagebox.showinfo("INFO", "freq.json uploaded...")
-    else:
-        print("+ No file to upload !")
-        messagebox.showerror("Error", "No freq.json to upload...")
-
-    sixproc = subprocess.run(["scp", "./param/aspifile15/gly.json",
-        "pi@192.168.18.12:~/tt_doc/doc_txt15/Files15/gly.json"],
-        stderr=subprocess.PIPE)
-    print("Result SCP transfert : %s" % repr(sixproc.stderr))
-    if sixproc.stderr == b'':
-        print("+ File gly.json uploaded !")
-        #messagebox.showinfo("INFO", "gly.json uploaded...")
-    else:
-        print("+ No file to upload !")
-        messagebox.showerror("Error", "No gly.json to upload...")
-
-    sevenproc = subprocess.run(["scp", "./param/aspifile15/puls.json",
-        "pi@192.168.18.12:~/tt_doc/doc_txt15/Files15/puls.json"],
-        stderr=subprocess.PIPE)
-    print("Result SCP transfert : %s" % repr(sevenproc.stderr))
-    if sevenproc.stderr == b'':
-        print("+ File puls.json uploaded !")
-        #messagebox.showinfo("INFO", "puls.json uploaded...")
-    else:
-        print("+ No file to upload !")
-        messagebox.showerror("Error", "No puls.json to upload...")
-
-    eightproc = subprocess.run(["scp", "./param/aspifile15/sat.json",
-        "pi@192.168.18.12:~/tt_doc/doc_txt15/Files15/sat.json"],
-        stderr=subprocess.PIPE)
-    print("Result SCP transfert : %s" % repr(eightproc.stderr))
-    if eightproc.stderr == b'':
-        print("+ File sat.json uploaded !")
-        #messagebox.showinfo("INFO", "sat.json uploaded...")
-    else:
-        print("+ No file to upload !")
-        messagebox.showerror("Error", "No sat.json to upload...")
-
-    nineproc = subprocess.run(["scp", "./param/aspifile15/temp.json",
-        "pi@192.168.18.12:~/tt_doc/doc_txt15/Files15/temp.json"],
-        stderr=subprocess.PIPE)
-    print("Result SCP transfert : %s" % repr(nineproc.stderr))
-    if nineproc.stderr == b'':
-        print("+ File temp.json uploaded !")
-        #messagebox.showinfo("INFO", "temp.json uploaded...")
-    else:
-        print("+ No file to upload !")
-        messagebox.showerror("Error", "No temp.json to upload...")
     print('Upload done')
     root.quit()
 

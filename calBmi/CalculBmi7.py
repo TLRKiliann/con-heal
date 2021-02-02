@@ -19,7 +19,17 @@ import time
 import os
 import subprocess
 import json
+from bmi_download.progresstask7 import downloadata
+from bmi_upload.uploadbar import uploadmain
+from bmi_upload.upload7 import uploadata
 
+
+def tocallprogressbar():
+    """
+        To display progress bar with current download
+    """
+    downloadata()
+tocallprogressbar()
 
 gui = tk.Tk()
 gui.title('Time-Track')
@@ -53,29 +63,32 @@ def call_result(textBox, number1, number2):
     number1 = entryNum1.get()
     number2 = entryNum2.get()
     try:
-        textBox.delete("0.0", END)
+        textBox.delete("0.0", tk.END)
         num1 = float(entryNum1.get())
         num2 = float(entryNum2.get())
         result = (num1)/(num2*num2)
         if result <= 18.5:
-            textBox.insert(INSERT, "You are underweight !\n"
+            textBox.insert(tk.INSERT, "You are underweight !\n"
                                      "Your BMI (IMC) is : %d" % result)
             return
         elif result >= 18.5 and result <= 25:
-            textBox.insert(INSERT, "Your BMI is in the standards.\n"
+            textBox.insert(tk.INSERT, "Your BMI is in the standards.\n"
                                      "Your BMI (IMC) is : %d" % result)
             return
         elif result >= 18.5 and result <= 25:
-            textBox.insert(INSERT, "Your BMI is in the standards.\n"
+            textBox.insert(tk.INSERT, "Your BMI is in the standards.\n"
                                      "Your BMI (IMC) is : %d" % result)
             return
         else:
-            textBox.insert(INSERT, "You are overweight !\n"
+            textBox.insert(tk.INSERT, "You are overweight !\n"
                                      "Your BMI (IMC) is : %d" % result)  
             return
     except ValueError as val_err:
         print("+ An error has occured !", val_err)
         messagebox.showwarning("Warning", "Please, enter a valid number !")
+
+def uploadfunc():
+    uploadata()
 
 def buttRecord():
     """
@@ -143,6 +156,7 @@ def buttRecord():
             json.dump(dataBmi, datafile, indent=4)
 
     messagebox.showinfo('Record', 'Data saved')
+    uploadfunc()
 
 def viewGraphicBmi():
     try:

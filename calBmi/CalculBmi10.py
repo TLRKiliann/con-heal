@@ -12,40 +12,50 @@
 
 
 from tkinter import *
-import tkinter
+import tkinter as tk
 from functools import partial
 from tkinter import messagebox
 import time
 import os
 import subprocess
 import json
+from bmi_download.progresstask10 import downloadata
+from bmi_upload.uploadbar import uploadmain
+from bmi_upload.upload10 import uploadata
 
 
-gui = Tk()
+def tocallprogressbar():
+    """
+        To display progress bar with current download
+    """
+    downloadata()
+tocallprogressbar()
+
+gui = tk.Tk()
 gui.title('Time-Track')
 gui.configure(background='DodgerBlue2')
 
-labelTitle = Label(gui, text="BMI calculator", font=('Times', 18, 'bold'),
+labelTitle = tk.Label(gui, text="BMI calculator", font=('Times', 18, 'bold'),
     fg='white', bg='DodgerBlue2')
 labelTitle.grid(row=0, column=1, columnspan=2, pady=10)
 
-textDate = Label(gui, text="Date : ",
+textDate = tk.Label(gui, text="Date : ",
     font=18, width=20, fg='white', bg='DodgerBlue2', anchor='e')
 textDate.grid(row=1, column=1)
 
-textHour = Label(gui, text="Hour : ",
+textHour = tk.Label(gui, text="Hour : ",
     font=18, width=20, fg='white', bg='DodgerBlue2', anchor='e')
 textHour.grid(row=2, column=1)
 
-textName = Label(gui, text="Patient Name : ",
+textName = tk.Label(gui, text="Patient Name : ",
     font=18, width=20, fg='white', bg='DodgerBlue2', anchor='e')
 textName.grid(row=3, column=1)
 
-labelNum1 = Label(gui, text="Enter Weight (Kg) : ",
+labelNum1 = tk.Label(gui, text="Enter Weight (Kg) : ",
     font=14, width=20, fg='white', bg='DodgerBlue2', anchor='e')
 labelNum1.grid(row=4, column=1)
 
-labelNum2 = Label(gui, text="Enter Height (M) : ",
+labelNum2 = tk.Label(gui, text="Enter Height (M) : ",
     font=14, width=20, fg='white', bg='DodgerBlue2', anchor='e')
 labelNum2.grid(row=5, column=1)
 
@@ -53,29 +63,32 @@ def call_result(textBox, number1, number2):
     number1 = entryNum1.get()
     number2 = entryNum2.get()
     try:
-        textBox.delete("0.0", END)
+        textBox.delete("0.0", tk.END)
         num1 = float(entryNum1.get())
         num2 = float(entryNum2.get())
         result = (num1)/(num2*num2)
         if result <= 18.5:
-            textBox.insert(INSERT, "You are underweight !\n"
+            textBox.insert(tk.INSERT, "You are underweight !\n"
                                      "Your BMI (IMC) is : %d" % result)
             return
         elif result >= 18.5 and result <= 25:
-            textBox.insert(INSERT, "Your BMI is in the standards.\n"
+            textBox.insert(tk.INSERT, "Your BMI is in the standards.\n"
                                      "Your BMI (IMC) is : %d" % result)
             return
         elif result >= 18.5 and result <= 25:
-            textBox.insert(INSERT, "Your BMI is in the standards.\n"
+            textBox.insert(tk.INSERT, "Your BMI is in the standards.\n"
                                      "Your BMI (IMC) is : %d" % result)
             return
         else:
-            textBox.insert(INSERT, "You are overweight !\n"
+            textBox.insert(tk.INSERT, "You are overweight !\n"
                                      "Your BMI (IMC) is : %d" % result)  
             return
     except ValueError as val_err:
         print("+ An error has occured !", val_err)
         messagebox.showwarning("Warning", "Please, enter a valid number !")
+
+def uploadfunc():
+    uploadata()
 
 def buttRecord():
     """
@@ -143,6 +156,7 @@ def buttRecord():
             json.dump(dataBmi, datafile, indent=4)
 
     messagebox.showinfo('Record', 'Data saved')
+    uploadfunc()
 
 def viewGraphicBmi():
     try:
@@ -201,13 +215,13 @@ def buttdel():
     else:
         messagebox.showinfo('Info', 'Ok, no data was deleted.')
 
-time_string = IntVar() 
-textDate = Entry(gui, textvariable=time_string, highlightbackground='gray', bd=4)
+time_string = tk.IntVar() 
+textDate = tk.Entry(gui, textvariable=time_string, highlightbackground='gray', bd=4)
 time_string.set(time.strftime("%d-%m-%Y"))
 textDate.grid(row=1, column=2, padx=10)
 
-time_Htring = IntVar()
-textHour = Entry(gui, textvariable=time_Htring, highlightbackground='gray', bd=4)
+time_Htring = tk.IntVar()
+textHour = tk.Entry(gui, textvariable=time_Htring, highlightbackground='gray', bd=4)
 time_Htring.set(time.strftime("%H:%M:%S"))
 textHour.grid(row=2, column=2, padx=10)
 
@@ -215,66 +229,66 @@ textHour.grid(row=2, column=2, padx=10)
 with open('./newpatient/entryfile10.txt', 'r') as filename:
     line1=filename.readline()
 
-name_text = StringVar()
-textName = Entry(gui, textvariable=name_text,
+name_text = tk.StringVar()
+textName = tk.Entry(gui, textvariable=name_text,
     highlightbackground='gray', bd=4)
 name_text.set(line1[:-1])
 textName.grid(row=3, column=2, padx=10)
 
-number1 = StringVar()
-entryNum1 = Entry(gui, textvariable=number1,
+number1 = tk.StringVar()
+entryNum1 = tk.Entry(gui, textvariable=number1,
     width=6, bd=3, highlightbackground='gray')
 number1.set('ex : 75')
 entryNum1.grid(sticky='w', row=4, column=2, padx=10)
 
-number2 = StringVar()
-entryNum2 = Entry(gui, textvariable=number2,
+number2 = tk.StringVar()
+entryNum2 = tk.Entry(gui, textvariable=number2,
     width=6, bd=3, highlightbackground='gray')
 number2.set('1.00')
 entryNum2.grid(sticky='w', row=5, column=2, padx=10)
 
-textBox = Text(gui, height=2, width=25, font=12, relief=SUNKEN)
+textBox = tk.Text(gui, height=2, width=25, font=12, relief=SUNKEN)
 textBox.grid(row=6, column=1, columnspan=2, padx=10, pady=10)
 
 call_result = partial(call_result, textBox, number1, number2)
 
-buttonCal = Button(gui, text="Calculate", width=30, bd=3,
+buttonCal = tk.Button(gui, text="Calculate", width=30, bd=3,
     fg='white', bg='RoyalBlue3', activeforeground='gray40',
     activebackground='pale turquoise', highlightbackground='cyan',
     command=call_result)
 buttonCal.grid(row=7, column=1, columnspan=2, padx=10)
 
-buttonSave = Button(gui, text="Save", width=12, bd=3, 
+buttonSave = tk.Button(gui, text="Save", width=12, bd=3, 
     fg='yellow', bg='RoyalBlue3', activeforeground='gray40',
     activebackground='pale turquoise', highlightbackground='light sky blue',
     command=buttRecord)
 buttonSave.grid(sticky='w', row=10, column=1, padx=10, pady=10)
 
-buttonCancel = Button(gui, text="Cancel last check", width=12,
+buttonCancel = tk.Button(gui, text="Cancel last check", width=12,
     bd=3, fg='coral', bg='RoyalBlue3', activeforeground='white',
     activebackground='red', highlightbackground='light sky blue',
     command=buttdel)
 buttonCancel.grid(sticky='w', row=11, column=1, padx=10)
 
-buttonRead = Button(gui, text="Read", width=12, bd=3,
+buttonRead = tk.Button(gui, text="Read", width=12, bd=3,
     fg='cyan', bg='RoyalBlue3',
     activebackground='pale turquoise',
     highlightbackground='light sky blue', command=readBmi)
 buttonRead.grid(sticky='w', row=12, column=1, padx=10, pady=10)
 
-buttonBmi = Button(gui, text="Graph BMI", width=12, bd=3,
+buttonBmi = tk.Button(gui, text="Graph BMI", width=12, bd=3,
     fg='cyan', bg='RoyalBlue3', activeforeground='gray40',
     activebackground='pale turquoise', highlightbackground='light sky blue',
     command=viewGraphicBmi)
 buttonBmi.grid(sticky='e', row=10, column=2, padx=10, pady=10)
 
-buttonWeight = Button(gui, text="Graph Weight", width=12, bd=3,
+buttonWeight = tk.Button(gui, text="Graph Weight", width=12, bd=3,
     fg='cyan', bg='RoyalBlue3', activeforeground='gray40',
     activebackground='pale turquoise', highlightbackground='light sky blue',
     command=viewGraphicKilo)
 buttonWeight.grid(sticky='e', row=11, column=2, padx=10)
 
-buttonQuit = Button(gui, text="Quit", width=12, bd=3,
+buttonQuit = tk.Button(gui, text="Quit", width=12, bd=3,
     fg='white', bg='RoyalBlue3', activebackground='pale turquoise',
     highlightbackground='light sky blue', command=quit)
 buttonQuit.grid(sticky='e', row=12, column=2, padx=10, pady=10)

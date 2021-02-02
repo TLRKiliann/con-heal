@@ -1,0 +1,7 @@
+Date : 02-02-2021
+Heure : 19:00:32
+Prenom et Nom : Julia Roberts
+Poids : 76
+Taille : 1.88
+BMI : 21.503
+

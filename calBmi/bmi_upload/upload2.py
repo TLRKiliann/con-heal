@@ -31,7 +31,7 @@ def managetask(root):
 
 def process_unknown_duration(root):
     time.sleep(1)
-    proc = subprocess.run(["scp", "./param/bmi2.txt",
+    proc = subprocess.run(["scp", "./calBmi/bmi2.txt",
         "pi@192.168.18.12:~/tt_doc/doc_txt2/Files2/bmi2.txt"],
         stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -42,7 +42,7 @@ def process_unknown_duration(root):
         print("+ No file to upload !")
         messagebox.showerror("Error", "No bmi2.txt to upload...")
 
-    secproc = subprocess.run(["scp", "./param/aspifile2/file_kg.json",
+    secproc = subprocess.run(["scp", "./calBmi/doc_BMI2/file_kg.json",
         "pi@192.168.18.12:~/tt_doc/doc_txt2/Files2/file_kg.json"],
         stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(secproc.stderr))
@@ -53,7 +53,7 @@ def process_unknown_duration(root):
         print("+ No file to upload !")
         messagebox.showerror("Error", "No file_kg.json to upload...")
 
-    thirdproc = subprocess.run(["scp", "./param/aspifile2/file_bmi.json",
+    thirdproc = subprocess.run(["scp", "./calBmi/doc_BMI2/file_bmi.json",
         "pi@192.168.18.12:~/tt_doc/doc_txt2/Files2/file_bmi.json"],
         stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(thirdproc.stderr))

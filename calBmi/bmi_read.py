@@ -3,9 +3,9 @@
 
 
 """
-    This main app introduce parameters
+    This main app introduce weight
     and send back graphical matplotlib
-    representations.
+    representations of BMI and weight.
 """
 
 
@@ -20,6 +20,14 @@ from bmi_download.progresstask1 import downloadata
 from bmi_upload.uploadbar import uploadmain
 from bmi_upload.upload1 import uploadata
 #import sys
+
+
+def tocallprogressbar():
+    """
+        To display progress bar with current download
+    """
+    downloadata()
+tocallprogressbar()
 
 
 fen = tk.Tk()
@@ -61,7 +69,7 @@ def importationFile(fichier, encodage="Utf-8"):
     content = file.readlines()
     file.close()
     for li in content:
-        textBox.insert(END, li)
+        textBox.insert(tk.END, li)
 
 def msgBox():
     messagebox.showinfo('Info', 'File bmi.txt does not exist')

@@ -1,0 +1,9 @@
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
+
+En date du : 03/02/2021 à 13:09:07 :
+Patient name : Pablo Escobar
++ Stimulation ou aide pour la communication requise
+Un truc pour marquer un truc (sinon faire un truc)
+---
+
+

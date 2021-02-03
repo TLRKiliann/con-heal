@@ -32,7 +32,7 @@ def managetask(root):
 def process_unknown_duration(root):
     time.sleep(1)
     proc = subprocess.run(["scp", "./need/doc_suivi7/main_14b.txt",
-        "pi@192.168.18.12:~/tt_doc/doc_txt1/Files1/main_14b.txt"],
+        "pi@192.168.18.12:~/tt_doc/doc_txt7/Files7/main_14b.txt"],
         stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
@@ -43,7 +43,7 @@ def process_unknown_duration(root):
         messagebox.showerror("Error", "No main_14b.txt to upload...")
 
     secproc = subprocess.run(["scp", "./need/doc_suivi7/patient7_14b.txt",
-        "pi@192.168.18.12:~/tt_doc/doc_txt1/Files1/patient7_14b.txt"],
+        "pi@192.168.18.12:~/tt_doc/doc_txt7/Files7/patient7_14b.txt"],
         stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(secproc.stderr))
     if secproc.stderr == b'':

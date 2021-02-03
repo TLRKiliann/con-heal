@@ -112,7 +112,7 @@ from contact.conpact24.family_contact24 import famWind24
 from contact.conpact24.hcs_contact24 import homecsWind24
 from vmed.medload import *
 from need.needownload.download import *
-#from diag.diagdownload.download import *
+from diag.diagdownload import *
 from ttt.tttdownload import *
 from ttt.patienttt1 import callTreatment1
 from ttt.patienttt2 import callTreatment2

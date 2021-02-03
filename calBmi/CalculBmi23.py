@@ -12,7 +12,7 @@
 
 
 from tkinter import *
-import tkinter
+import tkinter as tk
 from functools import partial
 from tkinter import messagebox
 import time

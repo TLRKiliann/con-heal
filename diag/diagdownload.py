@@ -9,7 +9,7 @@
 
 
 from tkinter import messagebox
-from diagloadbar import needata
+from diagloadbar import diagdata
 import subprocess
 
 

@@ -80,9 +80,9 @@ class Application(Frame):
             if files exist.
         """
         try:
-            if os.path.getsize('./14besoins/doc_suivi4/patient4_14b.txt'):
+            if os.path.getsize('./need/doc_suivi4/patient4_14b.txt'):
                 print("+ File '14 needs' exist (add)!")
-                subprocess.run('./14besoins/doc_suivi4/patient4_write.py', check=True)
+                subprocess.run('./need/doc_suivi4/patient4_write.py', check=True)
         except FileNotFoundError as outmsg:
             print("+ Sorry, file '14 needs' not exist !")
             print(outmsg)
@@ -94,9 +94,9 @@ class Application(Frame):
             if files exist.
         """
         try:
-            if os.path.getsize('./14besoins/doc_suivi4/patient4_14b.txt'):
+            if os.path.getsize('./need/doc_suivi4/patient4_14b.txt'):
                 print("+ File '14 needs' exist (read)!")
-                subprocess.run('./14besoins/doc_suivi4/patient4_read.py', check=True)
+                subprocess.run('./need/doc_suivi4/patient4_read.py', check=True)
         except FileNotFoundError as outnote:
             print("+ Sorry, file '14 needs' not exist !")
             print(outnote)

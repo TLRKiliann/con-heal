@@ -60,7 +60,7 @@ def suiteBackup():
         To save data into file patienx_14b.txt
         'ajouterText()' function is called at the end.
     """
-    with open('./14besoins/doc_suivi/patient1_14b.txt', 'w') as namefile:
+    with open('./need/doc_suivi/patient1_14b.txt', 'w') as namefile:
         namefile.write("En date du : ")
         namefile.write(time.strftime("%d/%m/%Y à %H:%M:%S :\n"))
     messagebox.showinfo("INFO", "Data saved !")
@@ -78,14 +78,14 @@ def saveData():
         'suiteBackup()' function is called at the end.
     """
     try:        
-        if os.path.getsize('./14besoins/doc_suivi/main_14b.txt'):
+        if os.path.getsize('./need/doc_suivi/main_14b.txt'):
             print("+ File 'main_14b.txt' exist !")
-            with open('./14besoins/doc_suivi/main_14b.txt', 'a+') as namefile:
+            with open('./need/doc_suivi/main_14b.txt', 'a+') as namefile:
                 namefile.write(textBox.get("0.0", "end-1c") + '\n\n')
     except FileNotFoundError as outcom:
         print("+ Sorry, file 'main_14b.txt' not exist !", outcom)
         print("+ File 'main_14b.txt' created !")
-        with open('./14besoins/doc_suivi/main_14b.txt', 'a+') as namefile:
+        with open('./need/doc_suivi/main_14b.txt', 'a+') as namefile:
             namefile.write(textBox.get("0.0", "end-1c") + '\n\n')
     textBox.insert(tk.INSERT, "\n---Data saved !---")
     suiteBackup()
@@ -111,9 +111,9 @@ def lectureFic():
     """
         To read file.
     """
-    with open('./14besoins/doc_suivi/patient1_14b.txt', 'r') as f1read:
+    with open('./need/doc_suivi/patient1_14b.txt', 'r') as f1read:
         print(f1read.read())
-    subprocess.run('./14besoins/doc_suivi/patient1_read.py', check=True)
+    subprocess.run('./need/doc_suivi/patient1_read.py', check=True)
 
 def importationFile(fichier, encodage="Utf-8"):
     """
@@ -153,8 +153,8 @@ buttonQuitter = tk.Button(root, text="Quit", bd=3, width=10,
 buttonQuitter.pack(side=tk.RIGHT, padx=10, pady=10)
 
 try:
-    if os.path.getsize('./14besoins/doc_suivi/patient1_14b.txt'):
-        importationFile('./14besoins/doc_suivi/patient1_14b.txt',
+    if os.path.getsize('./need/doc_suivi/patient1_14b.txt'):
+        importationFile('./need/doc_suivi/patient1_14b.txt',
             encodage='Utf-8')
 except FileNotFoundError as err_nffile:
     print(err_nffile)

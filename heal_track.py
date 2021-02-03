@@ -15,6 +15,7 @@ from Backup.backupfile import dataBackToSave
 from param.backup_month import paramBackToSave
 from calBmi.bmi_backup import bmiBackToSave
 from vmed.medload import *
+from need.needownload import *
 from contact.conpact.pat_contact1 import Window
 from contact.conpact.doc_contact1 import doctorWind
 from contact.conpact.family_contact1 import famWind
@@ -2624,121 +2625,145 @@ class Application(tk.Frame):
 
     # Func 14 needs suivi OK
     def suiviSoins1(self):
+        needload1()
         self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_1.py", check=True)
         self.master.deiconify()
 
     def suiviSoins2(self):
+        needload2()
         self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_2.py", check=True)
         self.master.deiconify()
 
     def suiviSoins3(self):
+        needload3()
         self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_3.py", check=True)
         self.master.deiconify()
 
     def suiviSoins4(self):
+        needload4()
         self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_4.py", check=True)
         self.master.deiconify()
 
     def suiviSoins5(self):
+        needload5()
         self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_5.py", check=True)
         self.master.deiconify()
 
     def suiviSoins6(self):
+        needload6()
         self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_6.py", check=True)
         self.master.deiconify()
 
     def suiviSoins7(self):
+        needload7()
         self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_7.py", check=True)
         self.master.deiconify()
 
     def suiviSoins8(self):
+        needload8()
         self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_8.py", check=True)
         self.master.deiconify()
 
     def suiviSoins9(self):
+        needload9()
         self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_9.py", check=True)
         self.master.deiconify()
 
     def suiviSoins10(self):
+        needload10()
         self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_10.py", check=True)
         self.master.deiconify()
 
     def suiviSoins11(self):
+        needload11()
         self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_11.py", check=True)
         self.master.deiconify()
 
     def suiviSoins12(self):
+        needload12()
         self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_12.py", check=True)
         self.master.deiconify()
 
     def suiviSoins13(self):
+        needload13()
         self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_13.py", check=True)
         self.master.deiconify()
 
     def suiviSoins14(self):
+        needload14()
         self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_14.py", check=True)
         self.master.deiconify()
 
     def suiviSoins15(self):
+        needload15()
         self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_15.py", check=True)
         self.master.deiconify()
 
     def suiviSoins16(self):
+        needload16()
         self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_16.py", check=True)
         self.master.deiconify()
 
     def suiviSoins17(self):
+        needload17()
         self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_17.py", check=True)
         self.master.deiconify()
 
     def suiviSoins18(self):
+        needload18()
         self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_18.py", check=True)
         self.master.deiconify()
 
     def suiviSoins19(self):
+        needload19()
         self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_19.py", check=True)
         self.master.deiconify()
 
     def suiviSoins20(self):
+        needload20()
         self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_20.py", check=True)
         self.master.deiconify()
 
     def suiviSoins21(self):
+        needload21()
         self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_21.py", check=True)
         self.master.deiconify()
 
     def suiviSoins22(self):
+        needload22()
         self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_22.py", check=True)
         self.master.deiconify()
 
     def suiviSoins23(self):
+        needload23()
         self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_23.py", check=True)
         self.master.deiconify()
 
     def suiviSoins24(self):
+        needload24()
         self.master.withdraw()
         subprocess.run("./14besoins/suivi_patient_24.py", check=True)
         self.master.deiconify()

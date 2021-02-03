@@ -16,7 +16,7 @@ labeltite=Label(fen, text='14 NEEDS',
     height=3, bg='DodgerBlue2', fg='white')
 labeltite.grid(sticky='w', row=0, column=0, padx=20)
 
-with open('./newpatient/entryfile10.txt', 'r') as filename:
+with open('./newpatient/entryfile14.txt', 'r') as filename:
     line1=filename.readline()
 
 textname=StringVar()
@@ -27,7 +27,7 @@ entryName.grid(sticky='e', row=0, column=0, padx=30, pady=20)
 def recordOption():
     print("+ Date : " + time.strftime("%d/%m/%Y"))
     print("+ Nom du patient : ", entryName.get())
-    with open('./14besoins/doc_suivi10/patient10_14b.txt', 'a+') as file:
+    with open('./need/doc_suivi14/patient14_14b.txt', 'a+') as file:        
         file.write("---####-|--- Affichage des besoins du patient à surveiller ---|-####---\n")
         file.write("\nEn date du : ")
         file.write(time.strftime("%d/%m/%Y à %H:%M:%S :") + '\n')
@@ -37,7 +37,7 @@ def recordOption():
     print(CheckVar1.get())
     if CheckVar1.get()==1:
         print("Surveillance respiratoire requise en ajout")
-        with open('./14besoins/doc_suivi10/patient10_14b.txt', 'a+') as file:
+        with open('./need/doc_suivi14/patient14_14b.txt', 'a+') as file:
             file.write("+ Surveillance respiratoire requise\n")
     else:
         print("Nothing to do")
@@ -45,7 +45,7 @@ def recordOption():
     print(CheckVar2.get())
     if CheckVar2.get()==1:
         print("Surveillance de la température requise en ajout")
-        with open('./14besoins/doc_suivi10/patient10_14b.txt', 'a+') as file:
+        with open('./need/doc_suivi14/patient14_14b.txt', 'a+') as file:
             file.write("+ Surveillance de la température requise\n")
     else:
         print("Nothing to do")
@@ -53,7 +53,7 @@ def recordOption():
     print(CheckVar3.get())
     if CheckVar3.get()==1:
         print("Surveillance alimentaire et/ou hydratation requise en ajout")
-        with open('./14besoins/doc_suivi10/patient10_14b.txt', 'a+') as file:
+        with open('./need/doc_suivi14/patient14_14b.txt', 'a+') as file:
             file.write("+ Surveillance alimentaire et/ou hydratation requise\n")
     else:
         print("Nothing to do")
@@ -61,7 +61,7 @@ def recordOption():
     print(CheckVar4.get())
     if CheckVar4.get()==1:
         print("Surveillance urinaire et/ou fécale requise en ajout")
-        with open('./14besoins/doc_suivi10/patient10_14b.txt', 'a+') as file:
+        with open('./need/doc_suivi14/patient14_14b.txt', 'a+') as file:
             file.write("+ Surveillance urinaire et/ou fécale requise\n")
     else:
         print("Nothing to do")
@@ -69,7 +69,7 @@ def recordOption():
     print(CheckVar5.get())
     if CheckVar5.get()==1:
         print("Surveillance du sommeil requise en ajout")
-        with open('./14besoins/doc_suivi10/patient10_14b.txt', 'a+') as file:
+        with open('./need/doc_suivi14/patient14_14b.txt', 'a+') as file:
             file.write("+ Surveillance du sommeil requise\n")
     else:
         print("Nothing to do")
@@ -77,7 +77,7 @@ def recordOption():
     print(CheckVar6.get())
     if CheckVar6.get()==1:
         print("Surveillance posturale et/ou des déplacements requise en ajout")
-        with open('./14besoins/doc_suivi10/patient10_14b.txt', 'a+') as file:
+        with open('./need/doc_suivi14/patient14_14b.txt', 'a+') as file:
             file.write("+ Surveillance posturale et/ou des déplacements requise\n")
     else:
         print("Nothing to do")
@@ -85,7 +85,7 @@ def recordOption():
     print(CheckVar7.get())
     if CheckVar7.get()==1:
         print("Surveillance pour éviter les dangers requise en ajout")
-        with open('./14besoins/doc_suivi10/patient10_14b.txt', 'a+') as file:
+        with open('./need/doc_suivi14/patient14_14b.txt', 'a+') as file:
             file.write("+ Surveillance pour éviter les dangers requise\n")
     else:
         print("Nothing to do")
@@ -93,7 +93,7 @@ def recordOption():
     print(CheckVar8.get())
     if CheckVar8.get()==1:
         print("Surveillance propreté et/ou téguments requise en ajout")
-        with open('./14besoins/doc_suivi10/patient10_14b.txt', 'a+') as file:
+        with open('./need/doc_suivi14/patient14_14b.txt', 'a+') as file:
             file.write("+ Surveillance propreté et/ou téguments requise\n")
     else:
         print("Nothing to do")
@@ -101,7 +101,7 @@ def recordOption():
     print(CheckVar9.get())
     if CheckVar9.get()==1:
         print("Surveillance ou aide pour l'habillage/déshabillage requise en ajout")
-        with open('./14besoins/doc_suivi10/patient10_14b.txt', 'a+') as file:
+        with open('./need/doc_suivi14/patient14_14b.txt', 'a+') as file:
             file.write("+ Surveillance ou aide pour l'habillage/déshabillage requise\n")
     else:
         print("Nothing to do")
@@ -109,7 +109,7 @@ def recordOption():
     print(CheckVar10.get())
     if CheckVar10.get()==1:
         print("Stimulation ou aide pour la communication requise en ajout")
-        with open('./14besoins/doc_suivi10/patient10_14b.txt', 'a+') as file:
+        with open('./need/doc_suivi14/patient14_14b.txt', 'a+') as file:
             file.write("+ Stimulation ou aide pour la communication requise\n")
     else:
         print("Nothing to do")
@@ -117,7 +117,7 @@ def recordOption():
     print(CheckVar11.get())
     if CheckVar11.get()==1:
         print("Agir pour aider la personne dans ses valeurs et croyances en ajout")
-        with open('./14besoins/doc_suivi10/patient10_14b.txt', 'a+') as file:
+        with open('./need/doc_suivi14/patient14_14b.txt', 'a+') as file:
             file.write("+ Agir pour aider la personne dans ses valeurs et croyances\n")
     else:
         print("Nothing to do")
@@ -125,7 +125,7 @@ def recordOption():
     print(CheckVar12.get())
     if CheckVar12.get()==1:
         print("Accompagner ou aider la personne à se réaliser en ajout")
-        with open('./14besoins/doc_suivi10/patient10_14b.txt', 'a+') as file:
+        with open('./need/doc_suivi14/patient14_14b.txt', 'a+') as file:
             file.write("+ Accompagner ou aider la personne à se réaliser\n")
     else:
         print("Nothing to do")
@@ -133,7 +133,7 @@ def recordOption():
     print(CheckVar13.get())
     if CheckVar13.get()==1:
         print("Accompagnement ou aide dans se recréer requis en ajout")
-        with open('./14besoins/doc_suivi10/patient10_14b.txt', 'a+') as file:
+        with open('./need/doc_suivi14/patient14_14b.txt', 'a+') as file:
             file.write("+ Accompagnement ou aide dans se recréer requis\n")
     else:
         print("Nothing to do")
@@ -141,12 +141,12 @@ def recordOption():
     print(CheckVar14.get())
     if CheckVar14.get()==1:
         print("Accompagnement ou aide dans l'apprentissage requis en ajout")
-        with open('./14besoins/doc_suivi10/patient10_14b.txt', 'a+') as file:
+        with open('./need/doc_suivi14/patient14_14b.txt', 'a+') as file:
             file.write("+ Accompagnement ou aide dans l'apprentissage requis\n")
     else:
         print("Nothing to do")
 
-    with open('./14besoins/doc_suivi10/patient10_14b.txt', 'a+') as file:
+    with open('./need/doc_suivi14/patient14_14b.txt', 'a+') as file:
         file.write("---\n")
 
 def confRec():

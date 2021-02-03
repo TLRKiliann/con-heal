@@ -116,3 +116,28 @@ Patient name : Edward SnowdenpH : 9 Leuco : +3 Nit : + Pro : neg Glu : neg Ket :
 
 
 
+En date du : 09/01/2021 à 10:50:08 :
+
+***************************************************************************
+Date : 09/01/2021
+Patient name : Edward Snowden
+pH : 5 Leuco : 0 Nit : - Pro : neg Glu : neg Ket : neg Ery : neg Hb : neg
+***************************************************************************
+
+
+***************************************************************************
+Date : 09/01/2021
+Patient name : Edward Snowden
+pH : 5
+ Leuco : 0
+ Nit : -
+ Pro : neg
+ Glu : neg
+ Ket : neg
+ Ery : neg
+ Hb : neg
+
+***************************************************************************
+
+
+

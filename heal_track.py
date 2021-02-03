@@ -2771,7 +2771,7 @@ class Application(tk.Frame):
 
     # Func Diagnostic
     def diag1(self):
-        #diagloading1()
+        diagloading1()
         self.master.withdraw()
         subprocess.run("./diag/diag_patient1.py", check=True)
         self.master.deiconify()

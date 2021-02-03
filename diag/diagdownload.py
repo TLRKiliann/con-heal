@@ -13,7 +13,7 @@ from diagloadbar import diagdata
 import subprocess
 
 
-def needload1():
+def diagloading1():
     """
         to download med files from server before
         to start with med interface.
@@ -29,7 +29,7 @@ def needload1():
         print("+ No file to download !")
         messagebox.showerror("Error", "No diagrecap.txt to download !")
 
-def needload2():
+def diagloading2():
     """
         to download med files from server before
         to start with med interface.
@@ -45,7 +45,7 @@ def needload2():
         print("+ No file to download !")
         messagebox.showerror("Error", "No diagrecap2.txt to download !")
 
-def needload3():
+def diagloading3():
     """
         to download med files from server before
         to start with med interface.
@@ -61,7 +61,7 @@ def needload3():
         print("+ No file to download !")
         messagebox.showerror("Error", "No diagrecap3.txt to download !")
 
-def needload4():
+def diagloading4():
     """
         to download med files from server before
         to start with med interface.
@@ -77,7 +77,7 @@ def needload4():
         print("+ No file to download !")
         messagebox.showerror("Error", "No diagrecap4.txt to download !")
 
-def needload5():
+def diagloading5():
     """
         to download med files from server before
         to start with med interface.
@@ -93,7 +93,7 @@ def needload5():
         print("+ No file to download !")
         messagebox.showerror("Error", "No diagrecap5.txt to download !")
 
-def needload6():
+def diagloading6():
     """
         to download med files from server before
         to start with med interface.
@@ -109,7 +109,7 @@ def needload6():
         print("+ No file to download !")
         messagebox.showerror("Error", "No diagrecap6.txt to download !")
 
-def needload7():
+def diagloading7():
     """
         to download med files from server before
         to start with med interface.
@@ -125,7 +125,7 @@ def needload7():
         print("+ No file to download !")
         messagebox.showerror("Error", "No diagrecap7.txt to download !")
 
-def needload8():
+def diagloading8():
     """
         to download med files from server before
         to start with med interface.
@@ -141,7 +141,7 @@ def needload8():
         print("+ No file to download !")
         messagebox.showerror("Error", "No diagrecap8.txt to download !")
 
-def needload9():
+def diagloading9():
     """
         to download med files from server before
         to start with med interface.
@@ -157,7 +157,7 @@ def needload9():
         print("+ No file to download !")
         messagebox.showerror("Error", "No diagrecap9.txt to download !")
 
-def needload10():
+def diagloading10():
     """
         to download med files from server before
         to start with med interface.
@@ -173,7 +173,7 @@ def needload10():
         print("+ No file to download !")
         messagebox.showerror("Error", "No diagrecap10.txt to download !")
 
-def needload11():
+def diagloading11():
     """
         to download med files from server before
         to start with med interface.
@@ -189,7 +189,7 @@ def needload11():
         print("+ No file to download !")
         messagebox.showerror("Error", "No diagrecap11.txt to download !")
 
-def needload12():
+def diagloading12():
     """
         to download med files from server before
         to start with med interface.
@@ -205,7 +205,7 @@ def needload12():
         print("+ No file to download !")
         messagebox.showerror("Error", "No diagrecap12.txt to download !")
 
-def needload13():
+def diagloading13():
     """
         to download med files from server before
         to start with med interface.
@@ -221,7 +221,7 @@ def needload13():
         print("+ No file to download !")
         messagebox.showerror("Error", "No diagrecap13.txt to download !")
 
-def needload14():
+def diagloading14():
     """
         to download med files from server before
         to start with med interface.
@@ -237,7 +237,7 @@ def needload14():
         print("+ No file to download !")
         messagebox.showerror("Error", "No diagrecap14.txt to download !")
 
-def needload15():
+def diagloading15():
     """
         to download med files from server before
         to start with med interface.
@@ -253,7 +253,7 @@ def needload15():
         print("+ No file to download !")
         messagebox.showerror("Error", "No diagrecap15.txt to download !")
 
-def needload16():
+def diagloading16():
     """
         to download med files from server before
         to start with med interface.
@@ -269,7 +269,7 @@ def needload16():
         print("+ No file to download !")
         messagebox.showerror("Error", "No diagrecap16.txt to download !")
 
-def needload17():
+def diagloading17():
     """
         to download med files from server before
         to start with med interface.
@@ -285,7 +285,7 @@ def needload17():
         print("+ No file to download !")
         messagebox.showerror("Error", "No diagrecap17.txt to download !")
 
-def needload18():
+def diagloading18():
     """
         to download med files from server before
         to start with med interface.
@@ -301,7 +301,7 @@ def needload18():
         print("+ No file to download !")
         messagebox.showerror("Error", "No diagrecap18.txt to download !")
 
-def needload19():
+def diagloading19():
     """
         to download med files from server before
         to start with med interface.
@@ -317,7 +317,7 @@ def needload19():
         print("+ No file to download !")
         messagebox.showerror("Error", "No diagrecap19.txt to download !")
 
-def needload20():
+def diagloading20():
     """
         to download med files from server before
         to start with med interface.
@@ -333,7 +333,7 @@ def needload20():
         print("+ No file to download !")
         messagebox.showerror("Error", "No diagrecap20.txt to download !")
 
-def needload21():
+def diagloading21():
     """
         to download med files from server before
         to start with med interface.
@@ -349,7 +349,7 @@ def needload21():
         print("+ No file to download !")
         messagebox.showerror("Error", "No diagrecap21.txt to download !")
 
-def needload22():
+def diagloading22():
     """
         to download med files from server before
         to start with med interface.
@@ -365,7 +365,7 @@ def needload22():
         print("+ No file to download !")
         messagebox.showerror("Error", "No diagrecap22.txt to download !")
 
-def needload23():
+def diagloading23():
     """
         to download med files from server before
         to start with med interface.
@@ -381,7 +381,7 @@ def needload23():
         print("+ No file to download !")
         messagebox.showerror("Error", "No diagrecap23.txt to download !")
 
-def needload24():
+def diagloading24():
     """
         to download med files from server before
         to start with med interface.

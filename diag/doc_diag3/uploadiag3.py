@@ -31,19 +31,19 @@ def managetask(root):
 
 def process_unknown_duration(root):
     """
-        To upload file from doc_diag2 to server
+        To upload file from doc_diag3 to server
     """
     time.sleep(1)
-    proc = subprocess.run(["scp", "./diag/doc_diag2/diagrecap2.txt",
-        "pi@192.168.18.12:~/tt_doc/doc_txt2/Files2/diagrecap2.txt"],
+    proc = subprocess.run(["scp", "./diag/doc_diag3/diagrecap3.txt",
+        "pi@192.168.18.12:~/tt_doc/doc_txt3/Files3/diagrecap3.txt"],
         stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
-        print("+ File diagrecap2.txt uploaded !")
-        #messagebox.showinfo("INFO", "diagrecap2.txt uploaded...")
+        print("+ File diagrecap3.txt uploaded !")
+        #messagebox.showinfo("INFO", "diagrecap3.txt uploaded...")
     else:
         print("+ No file to upload !")
-        messagebox.showerror("Error", "No diagrecap2.txt to upload...")
+        messagebox.showerror("Error", "No diagrecap3.txt to upload...")
     root.quit()
 
 def diagupload():

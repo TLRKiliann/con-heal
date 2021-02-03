@@ -19,6 +19,9 @@ import time
 import os
 import subprocess
 import json
+from bmi_download.progresstask21 import downloadata
+from bmi_upload.uploadbar import uploadmain
+from bmi_upload.upload21 import uploadata
 
 
 gui = Tk()
@@ -143,6 +146,7 @@ def buttRecord():
             json.dump(dataBmi, datafile, indent=4)
 
     messagebox.showinfo('Record', 'Data saved')
+    uploadfunc()
 
 def viewGraphicBmi():
     try:

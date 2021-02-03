@@ -19,9 +19,19 @@ import time
 import os
 import subprocess
 import json
+from bmi_download.progresstask22 import downloadata
+from bmi_upload.uploadbar import uploadmain
+from bmi_upload.upload22 import uploadata
 
 
-gui = Tk()
+def tocallprogressbar():
+    """
+        To display progress bar with current download
+    """
+    downloadata()
+tocallprogressbar()
+
+gui = tk.Tk()
 gui.title('Time-Track')
 gui.configure(background='DodgerBlue2')
 
@@ -143,6 +153,7 @@ def buttRecord():
             json.dump(dataBmi, datafile, indent=4)
 
     messagebox.showinfo('Record', 'Data saved')
+    uploadfunc()
 
 def viewGraphicBmi():
     try:

@@ -14,8 +14,6 @@ from backapp import *
 from Backup.backupfile import dataBackToSave
 from param.backup_month import paramBackToSave
 from calBmi.bmi_backup import bmiBackToSave
-from vmed.medload import *
-from need.needownload.download import *
 from contact.conpact.pat_contact1 import Window
 from contact.conpact.doc_contact1 import doctorWind
 from contact.conpact.family_contact1 import famWind
@@ -112,31 +110,9 @@ from contact.conpact24.pat_contact24 import Window24
 from contact.conpact24.doc_contact24 import doctorWind24
 from contact.conpact24.family_contact24 import famWind24
 from contact.conpact24.hcs_contact24 import homecsWind24
-from labo.labodownload import *
-from labo.resultlabo1 import callLabo1
-from labo.resultlabo2 import callLabo2
-from labo.resultlabo3 import callLabo3
-from labo.resultlabo4 import callLabo4
-from labo.resultlabo5 import callLabo5
-from labo.resultlabo6 import callLabo6
-from labo.resultlabo7 import callLabo7
-from labo.resultlabo8 import callLabo8
-from labo.resultlabo9 import callLabo9
-from labo.resultlabo10 import callLabo10
-from labo.resultlabo11 import callLabo11
-from labo.resultlabo12 import callLabo12
-from labo.resultlabo13 import callLabo13
-from labo.resultlabo14 import callLabo14
-from labo.resultlabo15 import callLabo15
-from labo.resultlabo16 import callLabo16
-from labo.resultlabo17 import callLabo17
-from labo.resultlabo18 import callLabo18
-from labo.resultlabo19 import callLabo19
-from labo.resultlabo20 import callLabo20
-from labo.resultlabo21 import callLabo21
-from labo.resultlabo22 import callLabo22
-from labo.resultlabo23 import callLabo23
-from labo.resultlabo24 import callLabo24
+from vmed.medload import *
+from need.needownload.download import *
+#from diag.diagdownload.download import *
 from ttt.tttdownload import *
 from ttt.patienttt1 import callTreatment1
 from ttt.patienttt2 import callTreatment2
@@ -162,6 +138,31 @@ from ttt.patienttt21 import callTreatment21
 from ttt.patienttt22 import callTreatment22
 from ttt.patienttt23 import callTreatment23
 from ttt.patienttt24 import callTreatment24
+from labo.labodownload import *
+from labo.resultlabo1 import callLabo1
+from labo.resultlabo2 import callLabo2
+from labo.resultlabo3 import callLabo3
+from labo.resultlabo4 import callLabo4
+from labo.resultlabo5 import callLabo5
+from labo.resultlabo6 import callLabo6
+from labo.resultlabo7 import callLabo7
+from labo.resultlabo8 import callLabo8
+from labo.resultlabo9 import callLabo9
+from labo.resultlabo10 import callLabo10
+from labo.resultlabo11 import callLabo11
+from labo.resultlabo12 import callLabo12
+from labo.resultlabo13 import callLabo13
+from labo.resultlabo14 import callLabo14
+from labo.resultlabo15 import callLabo15
+from labo.resultlabo16 import callLabo16
+from labo.resultlabo17 import callLabo17
+from labo.resultlabo18 import callLabo18
+from labo.resultlabo19 import callLabo19
+from labo.resultlabo20 import callLabo20
+from labo.resultlabo21 import callLabo21
+from labo.resultlabo22 import callLabo22
+from labo.resultlabo23 import callLabo23
+from labo.resultlabo24 import callLabo24
 #import passw
 from shootransfert import loaderfile
 
@@ -2768,6 +2769,151 @@ class Application(tk.Frame):
         subprocess.run("./need/suivi_patient_24.py", check=True)
         self.master.deiconify()
 
+    # Func Diagnostic
+    def diag1(self):
+        #diagloading1()
+        self.master.withdraw()
+        subprocess.run("./diag/diag_patient1.py", check=True)
+        self.master.deiconify()
+
+    def diag2(self):
+        #diagloading2()
+        self.master.withdraw()
+        subprocess.run("./diag/diag_patient2.py", check=True)
+        self.master.deiconify()
+
+    def diag3(self):
+        #diagloading3()
+        self.master.withdraw()
+        subprocess.run("./diag/diag_patient3.py", check=True)
+        self.master.deiconify()
+
+    def diag4(self):
+        #diagloading4()
+        self.master.withdraw()
+        subprocess.run("./diag/diag_patient4.py", check=True)
+        self.master.deiconify()
+
+    def diag5(self):
+        #diagloading5()
+        self.master.withdraw()
+        subprocess.run("./diag/diag_patient5.py", check=True)
+        self.master.deiconify()
+
+    def diag6(self):
+        #diagloading6()
+        self.master.withdraw()
+        subprocess.run("./diag/diag_patient6.py", check=True)
+        self.master.deiconify()
+
+    def diag7(self):
+        #diagloading7()
+        self.master.withdraw()
+        subprocess.run("./diag/diag_patient7.py", check=True)
+        self.master.deiconify()
+
+    def diag8(self):
+        #diagloading8()
+        self.master.withdraw()
+        subprocess.run("./diag/diag_patient8.py", check=True)
+        self.master.deiconify()
+
+    def diag9(self):
+        #diagloading9()
+        self.master.withdraw()
+        subprocess.run("./diag/diag_patient9.py", check=True)
+        self.master.deiconify()
+
+    def diag10(self):
+        #diagloading10()
+        self.master.withdraw()
+        subprocess.run("./diag/diag_patient10.py", check=True)
+        self.master.deiconify()
+
+    def diag11(self):
+        #diagloading11()
+        self.master.withdraw()
+        subprocess.run("./diag/diag_patient11.py", check=True)
+        self.master.deiconify()
+
+    def diag12(self):
+        #diagloading12()
+        self.master.withdraw()
+        subprocess.run("./diag/diag_patient12.py", check=True)
+        self.master.deiconify()
+
+    def diag13(self):
+        #diagloading13()
+        self.master.withdraw()
+        subprocess.run("./diag/diag_patient13.py", check=True)
+        self.master.deiconify()
+
+    def diag14(self):
+        #diagloading14()
+        self.master.withdraw()
+        subprocess.run("./diag/diag_patient14.py", check=True)
+        self.master.deiconify()
+
+    def diag15(self):
+        #diagloading15()
+        self.master.withdraw()
+        subprocess.run("./diag/diag_patient15.py", check=True)
+        self.master.deiconify()
+
+    def diag16(self):
+        #diagloading16()
+        self.master.withdraw()
+        subprocess.run("./diag/diag_patient16.py", check=True)
+        self.master.deiconify()
+
+    def diag17(self):
+        #diagloading17()
+        self.master.withdraw()
+        subprocess.run("./diag/diag_patient17.py", check=True)
+        self.master.deiconify()
+
+    def diag18(self):
+        #diagloading18()
+        self.master.withdraw()
+        subprocess.run("./diag/diag_patient18.py", check=True)
+        self.master.deiconify()
+
+    def diag19(self):
+        #diagloading19()
+        self.master.withdraw()
+        subprocess.run("./diag/diag_patient19.py", check=True)
+        self.master.deiconify()
+
+    def diag20(self):
+        #diagloading20()
+        self.master.withdraw()
+        subprocess.run("./diag/diag_patient20.py", check=True)
+        self.master.deiconify()
+
+    def diag21(self):
+        #diagloading21()
+        self.master.withdraw()
+        subprocess.run("./diag/diag_patient21.py", check=True)
+        self.master.deiconify()
+
+    def diag22(self):
+        #diagloading22()
+        self.master.withdraw()
+        subprocess.run("./diag/diag_patient22.py", check=True)
+        self.master.deiconify()
+
+    def diag23(self):
+        #diagloading23()
+        self.master.withdraw()
+        subprocess.run("./diag/diag_patient23.py", check=True)
+        self.master.deiconify()
+
+    def diag24(self):
+        #diagloading24()
+        self.master.withdraw()
+        subprocess.run("./diag/diag_patient24.py", check=True)
+        self.master.deiconify()
+
     # treatments
     def tttMed1(self):
         downloadttt1()
@@ -3520,127 +3666,6 @@ class Application(tk.Frame):
 
     def updateLink24(self):
         subprocess.Popen('./update/updatepatient24.py', shell=True)
-
-    # Func Diagnostic
-    def diag1(self):
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient1.py", check=True)
-        self.master.deiconify()
-
-    def diag2(self):
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient2.py", check=True)
-        self.master.deiconify()
-
-    def diag3(self):
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient3.py", check=True)
-        self.master.deiconify()
-
-    def diag4(self):
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient4.py", check=True)
-        self.master.deiconify()
-
-    def diag5(self):
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient5.py", check=True)
-        self.master.deiconify()
-
-    def diag6(self):
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient6.py", check=True)
-        self.master.deiconify()
-
-    def diag7(self):
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient7.py", check=True)
-        self.master.deiconify()
-
-    def diag8(self):
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient8.py", check=True)
-        self.master.deiconify()
-
-    def diag9(self):
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient9.py", check=True)
-        self.master.deiconify()
-
-    def diag10(self):
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient10.py", check=True)
-        self.master.deiconify()
-
-    def diag11(self):
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient11.py", check=True)
-        self.master.deiconify()
-
-    def diag12(self):
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient12.py", check=True)
-        self.master.deiconify()
-
-    def diag13(self):
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient13.py", check=True)
-        self.master.deiconify()
-
-    def diag14(self):
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient14.py", check=True)
-        self.master.deiconify()
-
-    def diag15(self):
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient15.py", check=True)
-        self.master.deiconify()
-
-    def diag16(self):
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient16.py", check=True)
-        self.master.deiconify()
-
-    def diag17(self):
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient17.py", check=True)
-        self.master.deiconify()
-
-    def diag18(self):
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient18.py", check=True)
-        self.master.deiconify()
-
-    def diag19(self):
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient19.py", check=True)
-        self.master.deiconify()
-
-    def diag20(self):
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient20.py", check=True)
-        self.master.deiconify()
-
-    def diag21(self):
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient21.py", check=True)
-        self.master.deiconify()
-
-    def diag22(self):
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient22.py", check=True)
-        self.master.deiconify()
-
-    def diag23(self):
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient23.py", check=True)
-        self.master.deiconify()
-
-    def diag24(self):
-        self.master.withdraw()
-        subprocess.run("./diag/diag_patient24.py", check=True)
-        self.master.deiconify()
 
     # Menu print
     def nutritionMenu(self):

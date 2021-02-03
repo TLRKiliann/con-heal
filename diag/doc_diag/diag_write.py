@@ -3,44 +3,46 @@
 
 
 from tkinter import *
+import tkinter as tk
 from tkinter import messagebox
 import time
-import sys
 import os
 import subprocess
+from uploadiag1 import diagupload
+#import sys
 
 
-root=Tk()
+root = tk.Tk()
 root.title("Diagnostics and ATCD")
 root.configure(background='DodgerBlue2')
 
 # To place side by side labelo + entrylab
-top = Frame(root, bg='DodgerBlue2')
-bottom = Frame(root, bg='DodgerBlue2')
-top.pack(side=TOP)
-bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
+top = tk.Frame(root, bg='DodgerBlue2')
+bottom = tk.Frame(root, bg='DodgerBlue2')
+top.pack(side=tk.TOP)
+bottom.pack(side=tk.BOTTOM, fill=BOTH, expand=YES)
 
-labelo=Label(root, text="Diagnostics and ATCD for : ",
+labelo = tk.Label(root, text="Diagnostics and ATCD for : ",
     font='Arial 18 bold', fg='white', bg='DodgerBlue2')
-labelo.pack(in_=top, side=LEFT, padx=5, pady=20)
+labelo.pack(in_=top, side=tk.LEFT, padx=5, pady=20)
 
 with open('./newpatient/entryfile.txt', 'r') as filename:
     line_a=filename.readline()
     line_b=filename.readline()
     line_c=filename.readline()
 
-textname=StringVar()
-entryName=Entry(root, textvariable=textname)
+textname = tk.StringVar()
+entryName = tk.Entry(root, textvariable=textname)
 textname.set(line_a[:-1])
-entryName.pack(in_=top, side=LEFT, padx=10, pady=20)
+entryName.pack(in_=top, side=tk.LEFT, padx=10, pady=20)
 
-labelallergy=Label(root, text="Allergy",
+labelallergy = tk.Label(root, text="Allergy",
     font='Arial 18 bold', fg='coral', bg='DodgerBlue2')
 labelallergy.pack(padx=5, pady=10)
 
-entrytext=StringVar()
+entrytext = tk.StringVar()
 entrytext.set(line_c[:-1])
-entryName=Entry(root, textvariable=entrytext, width=60)
+entryName = tk.Entry(root, textvariable=entrytext, width=60)
 entryName.pack(padx=10, pady=10)
 
 def retrieve_input():
@@ -48,15 +50,19 @@ def retrieve_input():
     file.write(textBox.get("1.0","end-1c") + "\n\n")
     file.close()
 
+def retrieve_upload():
+    diagupload()
+
 def messFromSafeButt():
     MsgBox = messagebox.askquestion("Confirm","Are you sure ?\n"
         "It will save all data !")
     if MsgBox == 'yes':
         retrieve_input()
-        textBox.insert(INSERT, "\n---Data saved !---")
+        retrieve_upload()
+        textBox.insert(tk.INSERT, "\n---Data saved !---")
         print("+ Data saved !")
     else:
-        textBox.insert(INSERT, "Nothing has been saved !")
+        textBox.insert(tk.INSERT, "Nothing has been saved !")
         print("+ Nothing has been saved !")
 
 def lectureFic():
@@ -70,30 +76,30 @@ def importationFile(fichier, encodage="Utf-8"):
     content=file.readlines()
     file.close()
     for li in content:
-        textBox.insert(END, li)
+        textBox.insert(tk.END, li)
 
 textBox=Text(root, height=15, width=60, font=18, relief=SUNKEN)
-#textBox.insert(INSERT, "En date du : ")
-#textBox.insert(END, time.strftime("%d/%m/%Y à %H:%M:%S :\n"))
+#textBox.insert(tk.INSERT, "En date du : ")
+#textBox.insert(tk.END, time.strftime("%d/%m/%Y à %H:%M:%S :\n"))
 textBox.pack(padx=30, pady=30)
 
-buttonLire=Button(root, text="Read", width=10, bd=3,
+buttonLire = tk.Button(root, text="Read", width=10, bd=3,
     fg='cyan', bg='RoyalBlue3',
     activebackground='pale turquoise', activeforeground='navy',
     highlightbackground='light sky blue', command=lectureFic)
-buttonLire.pack(side='left', padx=10, pady=10)
+buttonLire.pack(side=tk.LEFT, padx=10, pady=10)
 
-buttonEnter=Button(root, text="Save", width=10, bd=3,
+buttonEnter = tk.Button(root, text="Save", width=10, bd=3,
     fg='yellow', bg='RoyalBlue3',
     activebackground='pale turquoise', activeforeground='navy',
     highlightbackground='light sky blue', command=messFromSafeButt)
-buttonEnter.pack(side='left', padx=10, pady=10)
+buttonEnter.pack(side=tk.LEFT, padx=10, pady=10)
 
-buttonQuitter=Button(root, text="Quit", width=10, bd=3,
+buttonQuitter = tk.Button(root, text="Quit", width=10, bd=3,
     fg='white', bg='RoyalBlue3',
     activebackground='pale turquoise', activeforeground='navy',
     highlightbackground='light sky blue', command=quit)
-buttonQuitter.pack(side='right', padx=10, pady=10)
+buttonQuitter.pack(side=tk.RIGHT, padx=10, pady=10)
 
 try:
     if os.path.getsize('./diag/doc_diag/diagrecap1.txt'):
@@ -104,4 +110,4 @@ except FileNotFoundError as err_file:
     messagebox.showwarning("WARNING", "File does not exist or " 
         "file not found !")
 
-mainloop()
+root.mainloop()

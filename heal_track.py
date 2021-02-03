@@ -2552,220 +2552,220 @@ class Application(tk.Frame):
 
     # CheckBox 14 needs OK
     def besoinsCoche(self):
-        subprocess.Popen('./14besoins/checkb.py', shell=True)
+        subprocess.Popen('./need/checkb.py', shell=True)
 
     def besoins2Coche(self):
-        subprocess.Popen('./14besoins/checkb2.py', shell=True)
+        subprocess.Popen('./need/checkb2.py', shell=True)
 
     def besoins3Coche(self):
-        subprocess.Popen('./14besoins/checkb3.py', shell=True)
+        subprocess.Popen('./need/checkb3.py', shell=True)
 
     def besoins4Coche(self):
-        subprocess.Popen('./14besoins/checkb4.py', shell=True)
+        subprocess.Popen('./need/checkb4.py', shell=True)
 
     def besoins5Coche(self):
-        subprocess.Popen('./14besoins/checkb5.py', shell=True)
+        subprocess.Popen('./need/checkb5.py', shell=True)
 
     def besoins6Coche(self):
-        subprocess.Popen('./14besoins/checkb6.py', shell=True)
+        subprocess.Popen('./need/checkb6.py', shell=True)
 
     def besoins7Coche(self):
-        subprocess.Popen('./14besoins/checkb7.py', shell=True)
+        subprocess.Popen('./need/checkb7.py', shell=True)
 
     def besoins8Coche(self):
-        subprocess.Popen('./14besoins/checkb8.py', shell=True)
+        subprocess.Popen('./need/checkb8.py', shell=True)
 
     def besoins9Coche(self):
-        subprocess.Popen('./14besoins/checkb9.py', shell=True)
+        subprocess.Popen('./need/checkb9.py', shell=True)
 
     def besoins10Coche(self):
-        subprocess.Popen('./14besoins/checkb10.py', shell=True)
+        subprocess.Popen('./need/checkb10.py', shell=True)
 
     def besoins11Coche(self):
-        subprocess.Popen('./14besoins/checkb11.py', shell=True)
+        subprocess.Popen('./need/checkb11.py', shell=True)
 
     def besoins12Coche(self):
-        subprocess.Popen('./14besoins/checkb12.py', shell=True)
+        subprocess.Popen('./need/checkb12.py', shell=True)
 
     def besoins13Coche(self):
-        subprocess.Popen('./14besoins/checkb13.py', shell=True)
+        subprocess.Popen('./need/checkb13.py', shell=True)
 
     def besoins14Coche(self):
-        subprocess.Popen('./14besoins/checkb14.py', shell=True)
+        subprocess.Popen('./need/checkb14.py', shell=True)
 
     def besoins15Coche(self):
-        subprocess.Popen('./14besoins/checkb15.py', shell=True)
+        subprocess.Popen('./need/checkb15.py', shell=True)
 
     def besoins16Coche(self):
-        subprocess.Popen('./14besoins/checkb16.py', shell=True)
+        subprocess.Popen('./need/checkb16.py', shell=True)
 
     def besoins17Coche(self):
-        subprocess.Popen('./14besoins/checkb17.py', shell=True)
+        subprocess.Popen('./need/checkb17.py', shell=True)
 
     def besoins18Coche(self):
-        subprocess.Popen('./14besoins/checkb18.py', shell=True)
+        subprocess.Popen('./need/checkb18.py', shell=True)
 
     def besoins19Coche(self):
-        subprocess.Popen('./14besoins/checkb19.py', shell=True)
+        subprocess.Popen('./need/checkb19.py', shell=True)
 
     def besoins20Coche(self):
-        subprocess.Popen('./14besoins/checkb20.py', shell=True)
+        subprocess.Popen('./need/checkb20.py', shell=True)
 
     def besoins21Coche(self):
-        subprocess.Popen('./14besoins/checkb21.py', shell=True)
+        subprocess.Popen('./need/checkb21.py', shell=True)
 
     def besoins22Coche(self):
-        subprocess.Popen('./14besoins/checkb22.py', shell=True)
+        subprocess.Popen('./need/checkb22.py', shell=True)
 
     def besoins23Coche(self):
-        subprocess.Popen('./14besoins/checkb23.py', shell=True)
+        subprocess.Popen('./need/checkb23.py', shell=True)
 
     def besoins24Coche(self):
-        subprocess.Popen('./14besoins/checkb24.py', shell=True)
+        subprocess.Popen('./need/checkb24.py', shell=True)
 
     # Func 14 needs suivi OK
     def suiviSoins1(self):
         needload1()
         self.master.withdraw()
-        subprocess.run("./14besoins/suivi_patient_1.py", check=True)
+        subprocess.run("./need/suivi_patient_1.py", check=True)
         self.master.deiconify()
 
     def suiviSoins2(self):
         needload2()
         self.master.withdraw()
-        subprocess.run("./14besoins/suivi_patient_2.py", check=True)
+        subprocess.run("./need/suivi_patient_2.py", check=True)
         self.master.deiconify()
 
     def suiviSoins3(self):
         needload3()
         self.master.withdraw()
-        subprocess.run("./14besoins/suivi_patient_3.py", check=True)
+        subprocess.run("./need/suivi_patient_3.py", check=True)
         self.master.deiconify()
 
     def suiviSoins4(self):
         needload4()
         self.master.withdraw()
-        subprocess.run("./14besoins/suivi_patient_4.py", check=True)
+        subprocess.run("./need/suivi_patient_4.py", check=True)
         self.master.deiconify()
 
     def suiviSoins5(self):
         needload5()
         self.master.withdraw()
-        subprocess.run("./14besoins/suivi_patient_5.py", check=True)
+        subprocess.run("./need/suivi_patient_5.py", check=True)
         self.master.deiconify()
 
     def suiviSoins6(self):
         needload6()
         self.master.withdraw()
-        subprocess.run("./14besoins/suivi_patient_6.py", check=True)
+        subprocess.run("./need/suivi_patient_6.py", check=True)
         self.master.deiconify()
 
     def suiviSoins7(self):
         needload7()
         self.master.withdraw()
-        subprocess.run("./14besoins/suivi_patient_7.py", check=True)
+        subprocess.run("./need/suivi_patient_7.py", check=True)
         self.master.deiconify()
 
     def suiviSoins8(self):
         needload8()
         self.master.withdraw()
-        subprocess.run("./14besoins/suivi_patient_8.py", check=True)
+        subprocess.run("./need/suivi_patient_8.py", check=True)
         self.master.deiconify()
 
     def suiviSoins9(self):
         needload9()
         self.master.withdraw()
-        subprocess.run("./14besoins/suivi_patient_9.py", check=True)
+        subprocess.run("./need/suivi_patient_9.py", check=True)
         self.master.deiconify()
 
     def suiviSoins10(self):
         needload10()
         self.master.withdraw()
-        subprocess.run("./14besoins/suivi_patient_10.py", check=True)
+        subprocess.run("./need/suivi_patient_10.py", check=True)
         self.master.deiconify()
 
     def suiviSoins11(self):
         needload11()
         self.master.withdraw()
-        subprocess.run("./14besoins/suivi_patient_11.py", check=True)
+        subprocess.run("./need/suivi_patient_11.py", check=True)
         self.master.deiconify()
 
     def suiviSoins12(self):
         needload12()
         self.master.withdraw()
-        subprocess.run("./14besoins/suivi_patient_12.py", check=True)
+        subprocess.run("./need/suivi_patient_12.py", check=True)
         self.master.deiconify()
 
     def suiviSoins13(self):
         needload13()
         self.master.withdraw()
-        subprocess.run("./14besoins/suivi_patient_13.py", check=True)
+        subprocess.run("./need/suivi_patient_13.py", check=True)
         self.master.deiconify()
 
     def suiviSoins14(self):
         needload14()
         self.master.withdraw()
-        subprocess.run("./14besoins/suivi_patient_14.py", check=True)
+        subprocess.run("./need/suivi_patient_14.py", check=True)
         self.master.deiconify()
 
     def suiviSoins15(self):
         needload15()
         self.master.withdraw()
-        subprocess.run("./14besoins/suivi_patient_15.py", check=True)
+        subprocess.run("./need/suivi_patient_15.py", check=True)
         self.master.deiconify()
 
     def suiviSoins16(self):
         needload16()
         self.master.withdraw()
-        subprocess.run("./14besoins/suivi_patient_16.py", check=True)
+        subprocess.run("./need/suivi_patient_16.py", check=True)
         self.master.deiconify()
 
     def suiviSoins17(self):
         needload17()
         self.master.withdraw()
-        subprocess.run("./14besoins/suivi_patient_17.py", check=True)
+        subprocess.run("./need/suivi_patient_17.py", check=True)
         self.master.deiconify()
 
     def suiviSoins18(self):
         needload18()
         self.master.withdraw()
-        subprocess.run("./14besoins/suivi_patient_18.py", check=True)
+        subprocess.run("./need/suivi_patient_18.py", check=True)
         self.master.deiconify()
 
     def suiviSoins19(self):
         needload19()
         self.master.withdraw()
-        subprocess.run("./14besoins/suivi_patient_19.py", check=True)
+        subprocess.run("./need/suivi_patient_19.py", check=True)
         self.master.deiconify()
 
     def suiviSoins20(self):
         needload20()
         self.master.withdraw()
-        subprocess.run("./14besoins/suivi_patient_20.py", check=True)
+        subprocess.run("./need/suivi_patient_20.py", check=True)
         self.master.deiconify()
 
     def suiviSoins21(self):
         needload21()
         self.master.withdraw()
-        subprocess.run("./14besoins/suivi_patient_21.py", check=True)
+        subprocess.run("./need/suivi_patient_21.py", check=True)
         self.master.deiconify()
 
     def suiviSoins22(self):
         needload22()
         self.master.withdraw()
-        subprocess.run("./14besoins/suivi_patient_22.py", check=True)
+        subprocess.run("./need/suivi_patient_22.py", check=True)
         self.master.deiconify()
 
     def suiviSoins23(self):
         needload23()
         self.master.withdraw()
-        subprocess.run("./14besoins/suivi_patient_23.py", check=True)
+        subprocess.run("./need/suivi_patient_23.py", check=True)
         self.master.deiconify()
 
     def suiviSoins24(self):
         needload24()
         self.master.withdraw()
-        subprocess.run("./14besoins/suivi_patient_24.py", check=True)
+        subprocess.run("./need/suivi_patient_24.py", check=True)
         self.master.deiconify()
 
     # treatments

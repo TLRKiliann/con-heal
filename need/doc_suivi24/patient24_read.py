@@ -58,8 +58,8 @@ buttonClose=Button(fen, text="Quit", width=10, bd=3,
 buttonClose.pack(side='right', padx=10, pady=10)
 
 try:
-    if os.path.getsize('./14besoins/doc_suivi24/main_14b.txt'):
-        importationFile('./14besoins/doc_suivi24/main_14b.txt', encodage="Utf-8")
+    if os.path.getsize('./need/doc_suivi24/main_14b.txt'):
+        importationFile('./need/doc_suivi24/main_14b.txt', encodage="Utf-8")
 except FileNotFoundError as file_reach:
     print("+ File not found !")
     print(str(file_reach))

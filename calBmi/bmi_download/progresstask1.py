@@ -51,7 +51,7 @@ def process_of_unknown_duration(root):
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File bmi.txt downloaded !")
-        #messagebox.showinfo("INFO", "paramdata7.txt downloaded")
+        #messagebox.showinfo("INFO", "paramdata7.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No bmi.txt to download")
@@ -61,7 +61,7 @@ def process_of_unknown_duration(root):
     print("Result SCP transfert : %s" % repr(secproc.stderr))
     if secproc.stderr == b'':
         print("+ File file_kg.json downloaded !")
-        #messagebox.showinfo("INFO", "file_kg.json downloaded")
+        #messagebox.showinfo("INFO", "file_kg.json downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No file_kg.json to download")
@@ -71,10 +71,10 @@ def process_of_unknown_duration(root):
     print("Result SCP transfert : %s" % repr(thirdproc.stderr))
     if thirdproc.stderr == b'':
         print("+ File file_bmi.json downloaded !")
-        #messagebox.showinfo("INFO", "file_bmi.json downloaded")
+        #messagebox.showinfo("INFO", "file_bmi.json downloaded !")
     else:
         print("+ No file to download !")
-        messagebox.showerror("Error", "No file_bmi.json to download")
+        messagebox.showerror("Error", "No file_bmi.json to download...")
     print("Done !")
     # linux, mac
     print('My pid is', os.getpid())

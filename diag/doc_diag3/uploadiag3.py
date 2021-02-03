@@ -40,7 +40,7 @@ def process_unknown_duration(root):
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File diagrecap3.txt uploaded !")
-        #messagebox.showinfo("INFO", "diagrecap3.txt uploaded...")
+        #messagebox.showinfo("INFO", "diagrecap3.txt uploaded !")
     else:
         print("+ No file to upload !")
         messagebox.showerror("Error", "No diagrecap3.txt to upload...")

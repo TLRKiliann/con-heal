@@ -24,7 +24,7 @@ def medownload1():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File resultvmed.txt downloaded !")
-        messagebox.showinfo("INFO", "resultvmed.txt downloaded")
+        #messagebox.showinfo("INFO", "resultvmed.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No resultvmed.txt to download !")
@@ -40,7 +40,7 @@ def medownload2():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File resultvmed2.txt downloaded !")
-        messagebox.showinfo("INFO", "resultvmed2.txt downloaded")
+        #messagebox.showinfo("INFO", "resultvmed2.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No resultvmed2.txt to download !")
@@ -56,7 +56,7 @@ def medownload3():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File resultvmed3.txt downloaded !")
-        messagebox.showinfo("INFO", "resultvmed3.txt downloaded")
+        #messagebox.showinfo("INFO", "resultvmed3.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No resultvmed3.txt to download !")
@@ -72,7 +72,7 @@ def medownload4():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File resultvmed4.txt downloaded !")
-        messagebox.showinfo("INFO", "resultvmed4.txt downloaded")
+        #messagebox.showinfo("INFO", "resultvmed4.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No resultvmed4.txt to download !")
@@ -88,7 +88,7 @@ def medownload5():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File resultvmed5.txt downloaded !")
-        messagebox.showinfo("INFO", "resultvmed5.txt downloaded")
+        #messagebox.showinfo("INFO", "resultvmed5.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No resultvmed5.txt to download !")
@@ -104,7 +104,7 @@ def medownload6():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File resultvmed6.txt downloaded !")
-        messagebox.showinfo("INFO", "resultvmed6.txt downloaded")
+        #messagebox.showinfo("INFO", "resultvmed6.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No resultvmed6.txt to download !")
@@ -120,7 +120,7 @@ def medownload7():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File resultvmed7.txt downloaded !")
-        messagebox.showinfo("INFO", "resultvmed7.txt downloaded")
+        #messagebox.showinfo("INFO", "resultvmed7.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No resultvmed7.txt to download !")
@@ -136,7 +136,7 @@ def medownload8():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File resultvmed8.txt downloaded !")
-        messagebox.showinfo("INFO", "resultvmed8.txt downloaded")
+        #messagebox.showinfo("INFO", "resultvmed8.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No resultvmed8.txt to download !")
@@ -152,7 +152,7 @@ def medownload9():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File resultvmed9.txt downloaded !")
-        messagebox.showinfo("INFO", "resultvmed9.txt downloaded")
+        #messagebox.showinfo("INFO", "resultvmed9.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No resultvmed9.txt to download !")
@@ -168,7 +168,7 @@ def medownload10():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File resultvmed10.txt downloaded !")
-        messagebox.showinfo("INFO", "resultvmed10.txt downloaded")
+        #messagebox.showinfo("INFO", "resultvmed10.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No resultvmed10.txt to download !")
@@ -184,7 +184,7 @@ def medownload11():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File resultvmed11.txt downloaded !")
-        messagebox.showinfo("INFO", "resultvmed11.txt downloaded")
+        #messagebox.showinfo("INFO", "resultvmed11.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No resultvmed11.txt to download !")
@@ -200,7 +200,7 @@ def medownload12():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File resultvmed12.txt downloaded !")
-        messagebox.showinfo("INFO", "resultvmed12.txt downloaded")
+        #messagebox.showinfo("INFO", "resultvmed12.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No resultvmed12.txt to download !")
@@ -216,7 +216,7 @@ def medownload13():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File resultvmed13.txt downloaded !")
-        messagebox.showinfo("INFO", "resultvmed13.txt downloaded")
+        #messagebox.showinfo("INFO", "resultvmed13.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No resultvmed13.txt to download !")
@@ -232,7 +232,7 @@ def medownload14():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File resultvmed14.txt downloaded !")
-        messagebox.showinfo("INFO", "resultvmed14.txt downloaded")
+        #messagebox.showinfo("INFO", "resultvmed14.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No resultvmed14.txt to download !")
@@ -248,7 +248,7 @@ def medownload15():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File resultvmed15.txt downloaded !")
-        messagebox.showinfo("INFO", "resultvmed15.txt downloaded")
+        #messagebox.showinfo("INFO", "resultvmed15.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No resultvmed15.txt to download !")
@@ -264,7 +264,7 @@ def medownload16():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File resultvmed16.txt downloaded !")
-        messagebox.showinfo("INFO", "resultvmed16.txt downloaded")
+        #messagebox.showinfo("INFO", "resultvmed16.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No resultvmed16.txt to download !")
@@ -280,7 +280,7 @@ def medownload17():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File resultvmed17.txt downloaded !")
-        messagebox.showinfo("INFO", "resultvmed17.txt downloaded")
+        #messagebox.showinfo("INFO", "resultvmed17.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No resultvmed17.txt to download !")
@@ -296,7 +296,7 @@ def medownload18():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File resultvmed18.txt downloaded !")
-        messagebox.showinfo("INFO", "resultvmed18.txt downloaded")
+        #messagebox.showinfo("INFO", "resultvmed18.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No resultvmed18.txt to download !")
@@ -312,7 +312,7 @@ def medownload19():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File resultvmed19.txt downloaded !")
-        messagebox.showinfo("INFO", "resultvmed19.txt downloaded")
+        #messagebox.showinfo("INFO", "resultvmed19.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No resultvmed19.txt to download !")
@@ -328,7 +328,7 @@ def medownload20():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File resultvmed20.txt downloaded !")
-        messagebox.showinfo("INFO", "resultvmed20.txt downloaded")
+        #messagebox.showinfo("INFO", "resultvmed20.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No resultvmed20.txt to download !")
@@ -344,7 +344,7 @@ def medownload21():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File resultvmed21.txt downloaded !")
-        messagebox.showinfo("INFO", "resultvmed21.txt downloaded")
+        #messagebox.showinfo("INFO", "resultvmed21.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No resultvmed21.txt to download !")
@@ -360,7 +360,7 @@ def medownload22():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File resultvmed22.txt downloaded !")
-        messagebox.showinfo("INFO", "resultvmed22.txt downloaded")
+        #messagebox.showinfo("INFO", "resultvmed22.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No resultvmed22.txt to download !")
@@ -376,7 +376,7 @@ def medownload23():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File resultvmed23.txt downloaded !")
-        messagebox.showinfo("INFO", "resultvmed23.txt downloaded")
+        #messagebox.showinfo("INFO", "resultvmed23.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No resultvmed23.txt to download !")
@@ -392,7 +392,7 @@ def medownload24():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File resultvmed24.txt downloaded !")
-        messagebox.showinfo("INFO", "resultvmed24.txt downloaded")
+        #messagebox.showinfo("INFO", "resultvmed24.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No resultvmed24.txt to download !")

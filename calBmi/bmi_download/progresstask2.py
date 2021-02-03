@@ -74,7 +74,7 @@ def process_of_unknown_duration(root):
         #messagebox.showinfo("INFO", "file_bmi.json downloaded")
     else:
         print("+ No file to download !")
-        messagebox.showerror("Error", "No file_bmi.json to download")
+        messagebox.showerror("Error", "No file_bmi.json to download...")
 
     print('Done')
     # linux, mac

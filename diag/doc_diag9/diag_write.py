@@ -3,10 +3,12 @@
 
 
 from tkinter import *
+import tkinter
 from tkinter import messagebox
 import time
 import os
 import subprocess
+from uploadiag9 import diagupload
 
 
 root=Tk()

@@ -3,10 +3,12 @@
 
 
 from tkinter import *
+import tkinter
 from tkinter import messagebox
 import time
 import os
 import subprocess
+from uploadiag11 import diagupload
 
 
 root=Tk()
@@ -47,11 +49,15 @@ def retrieve_input():
     file.write(textBox.get("1.0","end-1c") + "\n\n")
     file.close()
 
+def retrieve_upload():
+    diagupload()
+
 def messFromSafeButt():
     MsgBox = messagebox.askquestion("Confirm","Are you sure ?\n"
         "It will save all data !")
     if MsgBox == 'yes':
         retrieve_input()
+        retrieve_upload()
         textBox.insert(INSERT, "\n---Data saved !---")
         print("+ Data saved !")
     else:

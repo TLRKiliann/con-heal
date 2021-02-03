@@ -2,27 +2,27 @@
 # -*- coding: utf-8 -*-
 
 
-import tkinter
 from tkinter import *
+import tkinter as tk
 from tkinter import messagebox
 import time
 import os
 import subprocess
 
 
-root=Tk()
+root = tk.Tk()
 root.title("Time-Track")
 root.configure(background='DodgerBlue2')
 
 # To place side by side labelo + entrylab
-top = Frame(root, bg='DodgerBlue2')
-bottom = Frame(root, bg='DodgerBlue2')
-top.pack(side=TOP)
-bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
+top = tk.Frame(root, bg='DodgerBlue2')
+bottom = tk.Frame(root, bg='DodgerBlue2')
+top.pack(side=tk.TOP)
+bottom.pack(side=tk.BOTTOM, fill=BOTH, expand=YES)
 
-labelo=Label(root, text="Care and monitoring : ",
+labelo = tk.Label(root, text="Care and monitoring : ",
     font='Times 18 bold', fg='navy', bg='DodgerBlue2')
-labelo.pack(in_=top, side=LEFT, padx=5, pady=20)
+labelo.pack(in_=top, side=tk.LEFT, padx=5, pady=20)
 
 # To read name in Entry widget
 with open('./newpatient/entryfile3.txt', 'r') as filename:
@@ -30,18 +30,18 @@ with open('./newpatient/entryfile3.txt', 'r') as filename:
     line_b=filename.readline()
     line_c=filename.readline()
 
-text_name=StringVar()
-Entryname=Entry(root, textvariable=text_name)
+text_name = tk.StringVar()
+Entryname = tk.Entry(root, textvariable=text_name)
 text_name.set(line_a[:-1])
-Entryname.pack(in_=top, side=LEFT, padx=10, pady=20)
+Entryname.pack(in_=top, side=tk.LEFT, padx=10, pady=20)
 
-labelallergy=Label(root, text="Allergy",
+labelallergy = tk.Label(root, text="Allergy",
     font='Arial 18 bold', fg='coral', bg='DodgerBlue2')
 labelallergy.pack(padx=5, pady=5)
 
-text_aller=StringVar()
+text_aller = tk.StringVar()
 text_aller.set(line_c[:-1])
-Entryaller=Entry(root, textvariable=text_aller, width=60)
+Entryaller = tk.Entry(root, textvariable=text_aller, width=60)
 Entryaller.pack(padx=10, pady=5)
 
 def ajouterText():
@@ -124,26 +124,28 @@ def importationFile(fichier, encodage="Utf-8"):
     except FileNotFoundError as out_err:
         print("+ Sorry, file 'main_14b.txt' not exist !", out_err)
 
-textBox=Text(root, height=15, width=60, font=18, relief=SUNKEN)
+textBox = tk.Text(root, height=15, width=60, font=18, relief=SUNKEN)
+#textBox.insert(INSERT, "En date du : ")
+#textBox.insert(END, time.strftime("%d/%m/%Y à %H:%M:%S :"))
 textBox.pack(padx=30, pady=30)
 
-buttonLire=Button(root, text="Read", bd=3, width=10, 
+buttonLire = tk.Button(root, text="Read", bd=3, width=10, 
     fg='cyan', bg='RoyalBlue3', activebackground='pale turquoise',
     activeforeground='navy', highlightbackground='light sky blue',
     command=lectureFic)
-buttonLire.pack(side='left', padx=10, pady=10)
+buttonLire.pack(side=tk.LEFT, padx=10, pady=10)
 
-buttonEnter=Button(root, text="Save", bd=3, width=10,
+buttonEnter = tk.Button(root, text="Save", bd=3, width=10,
     fg='yellow', bg='RoyalBlue3', activebackground='pale turquoise',
     activeforeground='navy', highlightbackground='light sky blue',
     command=messFromSafeButt)
-buttonEnter.pack(side='left', padx=10, pady=10)
+buttonEnter.pack(side=tk.LEFT, padx=10, pady=10)
 
-buttonQuitter=Button(root, text="Quit", bd=3, width=10,
+buttonQuitter = tk.Button(root, text="Quit", bd=3, width=10,
     fg='white', bg='RoyalBlue3', activebackground='pale turquoise',
     activeforeground='navy', highlightbackground='light sky blue',
     command=quit)
-buttonQuitter.pack(side='right', padx=10, pady=10)
+buttonQuitter.pack(side=tk.RIGHT, padx=10, pady=10)
 
 try:
     if os.path.getsize('./14besoins/doc_suivi3/patient3_14b.txt'):
@@ -154,4 +156,4 @@ except FileNotFoundError as err_nffile:
     messagebox.showwarning("WARNING", "File does not exist or "
         "file not found !")
 
-mainloop()
+root.mainloop()

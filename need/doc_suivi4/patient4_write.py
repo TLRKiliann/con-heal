@@ -8,8 +8,8 @@ from tkinter import messagebox
 import time
 import os
 import subprocess
-from need_upload.uploadbar import uploadmain
-from need_upload.upload4 import needuploadata
+from uploadbar import uploadmain
+from upload4 import needuploadata
 
 
 root = tk.Tk()

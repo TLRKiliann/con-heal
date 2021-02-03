@@ -20,7 +20,7 @@ def labodownload1():
     """
     labodata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt1/Files1/patient1_14b.txt",
-        "./14besoins/doc_suivi/"], stderr=subprocess.PIPE)
+        "./need/doc_suivi/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File patient1_14b.txt downloaded !")
@@ -46,7 +46,7 @@ def labodownload2():
     """
     labodata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt2/Files2/patient2_14b.txt",
-        "./14besoins/doc_suivi2/"], stderr=subprocess.PIPE)
+        "./need/doc_suivi2/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File patient2_14b.txt downloaded !")
@@ -72,7 +72,7 @@ def labodownload3():
     """
     labodata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt3/Files3/patient3_14b.txt",
-        "./14besoins/doc_suivi3/"], stderr=subprocess.PIPE)
+        "./need/doc_suivi3/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File patient3_14b.txt downloaded !")
@@ -98,7 +98,7 @@ def labodownload4():
     """
     labodata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt4/Files4/patient4_14b.txt",
-        "./14besoins/doc_suivi4/"], stderr=subprocess.PIPE)
+        "./need/doc_suivi4/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File patient4_14b.txt downloaded !")
@@ -124,7 +124,7 @@ def labodownload5():
     """
     labodata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt5/Files5/patient5_14b.txt",
-        "./14besoins/doc_suivi5/"], stderr=subprocess.PIPE)
+        "./need/doc_suivi5/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File patient5_14b.txt downloaded !")
@@ -150,7 +150,7 @@ def labodownload6():
     """
     labodata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt6/Files6/patient6_14b.txt",
-        "./14besoins/doc_suivi6/"], stderr=subprocess.PIPE)
+        "./need/doc_suivi6/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File patient6_14b.txt downloaded !")
@@ -176,7 +176,7 @@ def labodownload7():
     """
     labodata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt7/Files7/patient7_14b.txt",
-        "./14besoins/doc_suivi7/"], stderr=subprocess.PIPE)
+        "./need/doc_suivi7/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File patient7_14b.txt downloaded !")
@@ -202,7 +202,7 @@ def labodownload8():
     """
     labodata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt8/Files8/patient8_14b.txt",
-        "./14besoins/doc_suivi8/"], stderr=subprocess.PIPE)
+        "./need/doc_suivi8/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File patient8_14b.txt downloaded !")
@@ -228,7 +228,7 @@ def labodownload9():
     """
     labodata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt9/Files9/patient9_14b.txt",
-        "./14besoins/doc_suivi9/"], stderr=subprocess.PIPE)
+        "./need/doc_suivi9/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File patient9_14b.txt downloaded !")
@@ -254,7 +254,7 @@ def labodownload10():
     """
     labodata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt10/Files10/patient10_14b.txt",
-        "./14besoins/doc_suivi10/"], stderr=subprocess.PIPE)
+        "./need/doc_suivi10/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File patient10_14b.txt downloaded !")
@@ -280,7 +280,7 @@ def labodownload11():
     """
     labodata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt11/Files11/patient11_14b.txt",
-        "./14besoins/doc_suivi11/"], stderr=subprocess.PIPE)
+        "./need/doc_suivi11/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File patient11_14b.txt downloaded !")
@@ -306,7 +306,7 @@ def labodownload12():
     """
     labodata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt12/Files12/patient12_14b.txt",
-        "./14besoins/doc_suivi12/"], stderr=subprocess.PIPE)
+        "./need/doc_suivi12/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File patient12_14b.txt downloaded !")
@@ -332,7 +332,7 @@ def labodownload13():
     """
     labodata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt13/Files13/patient13_14b.txt",
-        "./14besoins/doc_suivi13/"], stderr=subprocess.PIPE)
+        "./need/doc_suivi13/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File patient13_14b.txt downloaded !")
@@ -358,7 +358,7 @@ def labodownload14():
     """
     labodata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt14/Files14/patient14_14b.txt",
-        "./14besoins/doc_suivi14/"], stderr=subprocess.PIPE)
+        "./need/doc_suivi14/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File patient14_14b.txt downloaded !")
@@ -384,7 +384,7 @@ def labodownload15():
     """
     labodata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt15/Files15/patient15_14b.txt",
-        "./14besoins/doc_suivi15/"], stderr=subprocess.PIPE)
+        "./need/doc_suivi15/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File patient15_14b.txt downloaded !")
@@ -410,7 +410,7 @@ def labodownload16():
     """
     labodata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt16/Files16/patient16_14b.txt",
-        "./14besoins/doc_suivi16/"], stderr=subprocess.PIPE)
+        "./need/doc_suivi16/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File patient16_14b.txt downloaded !")
@@ -436,7 +436,7 @@ def labodownload17():
     """
     labodata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt17/Files17/patient17_14b.txt",
-        "./14besoins/doc_suivi17/"], stderr=subprocess.PIPE)
+        "./need/doc_suivi17/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File patient17_14b.txt downloaded !")
@@ -462,7 +462,7 @@ def labodownload18():
     """
     labodata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt18/Files18/patient18_14b.txt",
-        "./14besoins/doc_suivi18/"], stderr=subprocess.PIPE)
+        "./need/doc_suivi18/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File patient18_14b.txt downloaded !")
@@ -488,7 +488,7 @@ def labodownload19():
     """
     labodata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt19/Files19/patient19_14b.txt",
-        "./14besoins/doc_suivi19/"], stderr=subprocess.PIPE)
+        "./need/doc_suivi19/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File patient19_14b.txt downloaded !")
@@ -514,7 +514,7 @@ def labodownload20():
     """
     labodata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt20/Files20/patient20_14b.txt",
-        "./14besoins/doc_suivi20/"], stderr=subprocess.PIPE)
+        "./need/doc_suivi20/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File patient20_14b.txt downloaded !")
@@ -540,7 +540,7 @@ def labodownload21():
     """
     labodata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt21/Files21/patient21_14b.txt",
-        "./14besoins/doc_suivi21/"], stderr=subprocess.PIPE)
+        "./need/doc_suivi21/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File patient21_14b.txt downloaded !")
@@ -566,7 +566,7 @@ def labodownload22():
     """
     labodata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt22/Files22/patient22_14b.txt",
-        "./14besoins/doc_suivi22/"], stderr=subprocess.PIPE)
+        "./need/doc_suivi22/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File patient22_14b.txt downloaded !")
@@ -592,7 +592,7 @@ def labodownload23():
     """
     labodata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt23/Files23/patient23_14b.txt",
-        "./14besoins/doc_suivi23/"], stderr=subprocess.PIPE)
+        "./need/doc_suivi23/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File patient23_14b.txt downloaded !")
@@ -618,7 +618,7 @@ def labodownload24():
     """
     labodata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt24/Files24/patient24_14b.txt",
-        "./14besoins/doc_suivi24/"], stderr=subprocess.PIPE)
+        "./need/doc_suivi24/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File patient24_14b.txt downloaded !")

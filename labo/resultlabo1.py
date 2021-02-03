@@ -57,7 +57,7 @@ def callLabo1(self):
     def recordOption():
         print("Date : " + time.strftime("%d/%m/%Y"))
         print("Nom du patient : ", entrytext.get())
-        with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+        with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
             with open('./labo/doc_labo/result.txt', 'a+') as file2:
                 file.write("----------------------------------------------------------\n")
                 file.write("Date : ")
@@ -73,7 +73,7 @@ def callLabo1(self):
         print(CheckVar1.get())
         if CheckVar1.get()==1:
             print("+ Abilify was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Abilify : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Abilify : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -83,7 +83,7 @@ def callLabo1(self):
         print(CheckVar2.get())
         if CheckVar2.get()==1:
             print("+ Clopixol was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Clopixol : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Clopixol : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -93,7 +93,7 @@ def callLabo1(self):
         print(CheckVar3.get())
         if CheckVar3.get()==1:
             print("+ Clozapine was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Clozapine : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Clozapine : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -103,7 +103,7 @@ def callLabo1(self):
         print(CheckVar4.get())
         if CheckVar4.get()==1:
             print("+ Dogmatil was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Dogmatil : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Dogmatil : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -113,7 +113,7 @@ def callLabo1(self):
         print(CheckVar5.get())
         if CheckVar5.get()==1:
             print("+ Entumine was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Entumine : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Entumine : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -123,7 +123,7 @@ def callLabo1(self):
         print(CheckVar6.get())
         if CheckVar6.get()==1:
             print("+ Fluanxol was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Fluanxol : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Fluanxol : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -133,7 +133,7 @@ def callLabo1(self):
         print(CheckVar7.get())
         if CheckVar7.get()==1:
             print("+ Haldol was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Haldol : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Haldol : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -143,7 +143,7 @@ def callLabo1(self):
         print(CheckVar8.get())
         if CheckVar8.get()==1:
             print("+ Invega was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Invega : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Invega : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -153,7 +153,7 @@ def callLabo1(self):
         print(CheckVar9.get())
         if CheckVar9.get()==1:
             print("+ Nozinan was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Nozinan : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Nozinan : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -163,7 +163,7 @@ def callLabo1(self):
         print(CheckVar10.get())
         if CheckVar10.get()==1:
             print("+ Prazine was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Prazine : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Prazine : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -173,7 +173,7 @@ def callLabo1(self):
         print(CheckVar12.get())
         if CheckVar12.get()==1:
             print("+ Quetiapine was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Quetiapine : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Quetiapine : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -183,7 +183,7 @@ def callLabo1(self):
         print(CheckVar13.get())
         if CheckVar13.get()==1:
             print("+ Risperdal was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Risperdal : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Risperdal : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -193,7 +193,7 @@ def callLabo1(self):
         print(CheckVar14.get())
         if CheckVar14.get()==1:
             print("+ Serdolect was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Serdolect : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Serdolect : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -203,7 +203,7 @@ def callLabo1(self):
         print(CheckVar15.get())
         if CheckVar15.get()==1:
             print("+ Solian was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Solian : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Solian : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -213,7 +213,7 @@ def callLabo1(self):
         print(CheckVar16.get())
         if CheckVar16.get()==1:
             print("+ Tiapridal was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Tiapridal : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Tiapridal : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -223,7 +223,7 @@ def callLabo1(self):
         print(CheckVar17.get())
         if CheckVar17.get()==1:
             print("+ Truxal was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Truxal : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Truxal : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -233,7 +233,7 @@ def callLabo1(self):
         print(CheckVar18.get())
         if CheckVar18.get()==1:
             print("+ Zyprexa was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Zyprexa : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Zyprexa : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -243,7 +243,7 @@ def callLabo1(self):
         print(CheckVar19.get())
         if CheckVar19.get()==1:
             print("+ Briviact was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Briviact : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Briviact : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -253,7 +253,7 @@ def callLabo1(self):
         print(CheckVar20.get())
         if CheckVar20.get()==1:
             print("+ Carbamazepine was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Carbamazepine : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Carbamazepine : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -263,7 +263,7 @@ def callLabo1(self):
         print(CheckVar21.get())
         if CheckVar21.get()==1:
             print("+ Depakine was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Depakine : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Depakine : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -273,7 +273,7 @@ def callLabo1(self):
         print(CheckVar22.get())
         if CheckVar22.get()==1:
             print("+ Ethosuximide was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Ethosuximide : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Ethosuximide : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -283,7 +283,7 @@ def callLabo1(self):
         print(CheckVar23.get())
         if CheckVar23.get()==1:
             print("+ Fycompa was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Fycompa : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Fycompa : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -293,7 +293,7 @@ def callLabo1(self):
         print(CheckVar24.get())
         if CheckVar24.get()==1:
             print("+ Gabitril was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Gabitril : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Gabitril : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -303,7 +303,7 @@ def callLabo1(self):
         print(CheckVar25.get())
         if CheckVar25.get()==1:
             print("+ Inovelon was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Inovelon : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Inovelon : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -313,7 +313,7 @@ def callLabo1(self):
         print(CheckVar26.get())
         if CheckVar26.get()==1:
             print("+ Keppra was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Keppra : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Keppra : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -323,7 +323,7 @@ def callLabo1(self):
         print(CheckVar27.get())
         if CheckVar27.get()==1:
             print("+ Lamictal was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Lamictal : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Lamictal : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -333,7 +333,7 @@ def callLabo1(self):
         print(CheckVar28.get())
         if CheckVar28.get()==1:
             print("+ Lyrica was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Lyrica : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Lyrica : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -343,7 +343,7 @@ def callLabo1(self):
         print(CheckVar29.get())
         if CheckVar29.get()==1:
             print("+ Myzoline was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Myzoline : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Myzoline : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -353,7 +353,7 @@ def callLabo1(self):
         print(CheckVar30.get())
         if CheckVar30.get()==1:
             print("+ Neurontin was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Neurontin : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Neurontin : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -363,7 +363,7 @@ def callLabo1(self):
         print(CheckVar31.get())
         if CheckVar31.get()==1:
             print("+ Phenobarbital was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Phenobarbital : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Phenobarbital : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -373,7 +373,7 @@ def callLabo1(self):
         print(CheckVar32.get())
         if CheckVar32.get()==1:
             print("+ Phenytoine was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Phenytoine : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Phenytoine : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -383,7 +383,7 @@ def callLabo1(self):
         print(CheckVar33.get())
         if CheckVar33.get()==1:
             print("+ Sabril was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Sabril : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Sabril : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -393,7 +393,7 @@ def callLabo1(self):
         print(CheckVar34.get())
         if CheckVar34.get()==1:
             print("+ Taloxa was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Taloxa : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Taloxa : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -403,7 +403,7 @@ def callLabo1(self):
         print(CheckVar35.get())
         if CheckVar35.get()==1:
             print("+ Topamax was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Topamax : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Topamax : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -413,7 +413,7 @@ def callLabo1(self):
         print(CheckVar36.get())
         if CheckVar36.get()==1:
             print("+ Trileptal was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Trileptal : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Trileptal : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -423,7 +423,7 @@ def callLabo1(self):
         print(CheckVar37.get())
         if CheckVar37.get()==1:
             print("+ Trobalt was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Trobalt : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Trobalt : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -433,7 +433,7 @@ def callLabo1(self):
         print(CheckVar38.get())
         if CheckVar38.get()==1:
             print("+ Vimpat was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Vimpat : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Vimpat : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -443,7 +443,7 @@ def callLabo1(self):
         print(CheckVar39.get())
         if CheckVar39.get()==1:
             print("+ Zonegran was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Zonegran : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Zonegran : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -453,7 +453,7 @@ def callLabo1(self):
         print(CheckVar40.get())
         if CheckVar40.get()==1:
             print("+ Anafranil was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Anafranil : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Anafranil : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -463,7 +463,7 @@ def callLabo1(self):
         print(CheckVar41.get())
         if CheckVar41.get()==1:
             print("+ Citalopram was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Citalopram : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Citalopram : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -473,7 +473,7 @@ def callLabo1(self):
         print(CheckVar42.get())
         if CheckVar42.get()==1:
             print("+ Cipralex was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Cipralex : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Cipralex : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -483,7 +483,7 @@ def callLabo1(self):
         print(CheckVar43.get())
         if CheckVar43.get()==1:
             print("+ Cymbalta was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Cymbalta : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Cymbalta : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -493,7 +493,7 @@ def callLabo1(self):
         print(CheckVar44.get())
         if CheckVar44.get()==1:
             print("+ Deroxat was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Deroxat : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Deroxat : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -503,7 +503,7 @@ def callLabo1(self):
         print(CheckVar45.get())
         if CheckVar45.get()==1:
             print("+ Effexor was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Effexor : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Effexor : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -513,7 +513,7 @@ def callLabo1(self):
         print(CheckVar46.get())
         if CheckVar46.get()==1:
             print("+ Floxifral was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Floxifral : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Floxifral : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -523,7 +523,7 @@ def callLabo1(self):
         print(CheckVar47.get())
         if CheckVar47.get()==1:
             print("+ Fluctine was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Fluctine : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Fluctine : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -533,7 +533,7 @@ def callLabo1(self):
         print(CheckVar48.get())
         if CheckVar48.get()==1:
             print("+ Ludiomil was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Ludiomil : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Ludiomil : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -543,7 +543,7 @@ def callLabo1(self):
         print(CheckVar49.get())
         if CheckVar49.get()==1:
             print("+ Remeron was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Remeron : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Remeron : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -553,7 +553,7 @@ def callLabo1(self):
         print(CheckVar50.get())
         if CheckVar50.get()==1:
             print("+ Saroten was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Saroten : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Saroten : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -563,7 +563,7 @@ def callLabo1(self):
         print(CheckVar51.get())
         if CheckVar51.get()==1:
             print("+ Sertraline was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Sertraline : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Sertraline : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -573,7 +573,7 @@ def callLabo1(self):
         print(CheckVar52.get())
         if CheckVar52.get()==1:
             print("+ Surmontil was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Surmontil : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Surmontil : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -583,7 +583,7 @@ def callLabo1(self):
         print(CheckVar53.get())
         if CheckVar53.get()==1:
             print("+ Wellbutrin was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Wellbutrin : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Wellbutrin : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -593,14 +593,14 @@ def callLabo1(self):
         print(CheckVar54.get())
         if CheckVar54.get()==1:
             print("+ Lithium was checked !")
-            with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
+            with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
                 with open('./labo/doc_labo/result.txt', 'a+') as file2:
                     file.write("# Lithium : " + time.strftime("%d/%m/%Y") + " checked\n")
                     file2.write("# Lithium : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Lithium ok, nothing to do")
 
-        with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as endfile:
+        with open('./need/doc_suivi/patient1_14b.txt', 'a+') as endfile:
             with open('./labo/doc_labo/result.txt', 'a+') as endfile2:
                 endfile.write("---------------------------------------------------------\n\n")
                 endfile2.write("---------------------------------------------------------\n\n")
@@ -609,7 +609,7 @@ def callLabo1(self):
         """
             To upload data on server after creating files
         """
-        proc = subprocess.run(["scp", "./14besoins/doc_suivi/patient1_14b.txt",
+        proc = subprocess.run(["scp", "./need/doc_suivi/patient1_14b.txt",
             "pi@192.168.18.12:~/tt_doc/doc_txt1/Files1/patient1_14b.txt"],
             stderr=subprocess.PIPE)
         print("Result SCP transfert : %s" % repr(proc.stderr))

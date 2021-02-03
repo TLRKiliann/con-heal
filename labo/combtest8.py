@@ -28,7 +28,7 @@ def saveMyButt():
 def recordOption():
     print("+ Date : " + time.strftime("%d/%m/%Y"))
     print("+ Nom du patient : ", textName.get())
-    with open('./14besoins/doc_suivi8/patient8_14b.txt', 'a+') as file:
+    with open('./need/doc_suivi8/patient8_14b.txt', 'a+') as file:
         with open('./labo/doc_labo/result8.txt', 'a+') as file_2:
             file.write("\n***************************************************************************\n")
             file.write("Date : ")
@@ -79,7 +79,7 @@ def uploadata():
     """
         To upload data on server after creating files
     """
-    proc = subprocess.run(["scp", "./14besoins/doc_suivi8/patient8_14b.txt",
+    proc = subprocess.run(["scp", "./need/doc_suivi8/patient8_14b.txt",
         "pi@192.168.18.12:~/tt_doc/doc_txt8/Files8/patient8_14b.txt"],
         stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))

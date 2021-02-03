@@ -9,7 +9,7 @@
 
 
 from tkinter import messagebox
-from diagloadbar import diagdata
+from diag.diagloadbar import diagdata
 import subprocess
 
 
@@ -18,7 +18,7 @@ def diagloading1():
         to download med files from server before
         to start with med interface.
     """
-    needata()
+    diagdata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt1/Files1/diagrecap1.txt",
         "./diag/doc_diag/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -34,7 +34,7 @@ def diagloading2():
         to download med files from server before
         to start with med interface.
     """
-    needata()
+    diagdata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt2/Files2/diagrecap2.txt",
         "./diag/doc_diag2/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -50,7 +50,7 @@ def diagloading3():
         to download med files from server before
         to start with med interface.
     """
-    needata()
+    diagdata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt3/Files3/diagrecap3.txt",
         "./diag/doc_diag3/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -66,7 +66,7 @@ def diagloading4():
         to download med files from server before
         to start with med interface.
     """
-    needata()
+    diagdata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt4/Files4/diagrecap4.txt",
         "./diag/doc_diag4/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -82,7 +82,7 @@ def diagloading5():
         to download med files from server before
         to start with med interface.
     """
-    needata()
+    diagdata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt5/Files5/diagrecap5.txt",
         "./diag/doc_diag5/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -98,7 +98,7 @@ def diagloading6():
         to download med files from server before
         to start with med interface.
     """
-    needata()
+    diagdata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt6/Files6/diagrecap6.txt",
         "./diag/doc_diag6/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -114,7 +114,7 @@ def diagloading7():
         to download med files from server before
         to start with med interface.
     """
-    needata()
+    diagdata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt7/Files7/diagrecap7.txt",
         "./diag/doc_diag7/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -130,7 +130,7 @@ def diagloading8():
         to download med files from server before
         to start with med interface.
     """
-    needata()
+    diagdata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt8/Files8/diagrecap8.txt",
         "./diag/doc_diag8/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -146,7 +146,7 @@ def diagloading9():
         to download med files from server before
         to start with med interface.
     """
-    needata()
+    diagdata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt9/Files9/diagrecap9.txt",
         "./diag/doc_diag9/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -162,7 +162,7 @@ def diagloading10():
         to download med files from server before
         to start with med interface.
     """
-    needata()
+    diagdata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt10/Files10/diagrecap10.txt",
         "./diag/doc_diag10/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -178,7 +178,7 @@ def diagloading11():
         to download med files from server before
         to start with med interface.
     """
-    needata()
+    diagdata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt11/Files11/diagrecap11.txt",
         "./diag/doc_diag11/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -194,7 +194,7 @@ def diagloading12():
         to download med files from server before
         to start with med interface.
     """
-    needata()
+    diagdata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt12/Files12/diagrecap12.txt",
         "./diag/doc_diag12/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -210,7 +210,7 @@ def diagloading13():
         to download med files from server before
         to start with med interface.
     """
-    needata()
+    diagdata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt13/Files13/diagrecap13.txt",
         "./diag/doc_diag13/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -226,7 +226,7 @@ def diagloading14():
         to download med files from server before
         to start with med interface.
     """
-    needata()
+    diagdata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt14/Files14/diagrecap14.txt",
         "./diag/doc_diag14/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -242,7 +242,7 @@ def diagloading15():
         to download med files from server before
         to start with med interface.
     """
-    needata()
+    diagdata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt15/Files15/diagrecap15.txt",
         "./diag/doc_diag15/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -258,7 +258,7 @@ def diagloading16():
         to download med files from server before
         to start with med interface.
     """
-    needata()
+    diagdata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt16/Files16/diagrecap16.txt",
         "./diag/doc_diag16/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -274,7 +274,7 @@ def diagloading17():
         to download med files from server before
         to start with med interface.
     """
-    needata()
+    diagdata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt17/Files17/diagrecap17.txt",
         "./diag/doc_diag17/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -290,7 +290,7 @@ def diagloading18():
         to download med files from server before
         to start with med interface.
     """
-    needata()
+    diagdata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt18/Files18/diagrecap18.txt",
         "./diag/doc_diag18/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -306,7 +306,7 @@ def diagloading19():
         to download med files from server before
         to start with med interface.
     """
-    needata()
+    diagdata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt19/Files19/diagrecap19.txt",
         "./diag/doc_diag19/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -322,7 +322,7 @@ def diagloading20():
         to download med files from server before
         to start with med interface.
     """
-    needata()
+    diagdata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt20/Files20/diagrecap20.txt",
         "./diag/doc_diag20/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -338,7 +338,7 @@ def diagloading21():
         to download med files from server before
         to start with med interface.
     """
-    needata()
+    diagdata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt21/Files21/diagrecap21.txt",
         "./diag/doc_diag21/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -354,7 +354,7 @@ def diagloading22():
         to download med files from server before
         to start with med interface.
     """
-    needata()
+    diagdata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt22/Files22/diagrecap22.txt",
         "./diag/doc_diag22/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -370,7 +370,7 @@ def diagloading23():
         to download med files from server before
         to start with med interface.
     """
-    needata()
+    diagdata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt23/Files23/diagrecap23.txt",
         "./diag/doc_diag23/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
@@ -386,7 +386,7 @@ def diagloading24():
         to download med files from server before
         to start with med interface.
     """
-    needata()
+    diagdata()
     proc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt24/Files24/diagrecap24.txt",
         "./diag/doc_diag24/"], stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))

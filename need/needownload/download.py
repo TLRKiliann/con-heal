@@ -9,7 +9,7 @@
 
 
 from tkinter import messagebox
-from loadbar import needata
+from need.needownload.loadbar import needata
 import subprocess
 
 

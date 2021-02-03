@@ -8,6 +8,8 @@ from tkinter import messagebox
 import time
 import os
 import subprocess
+from need_upload.uploadbar import uploadmain
+from need_upload.upload18 import needuploadata
 
 
 root=Tk()
@@ -65,6 +67,9 @@ def suiteBackup():
     print("+ Data saved !")
     ajouterText()
 
+def uploadfunc():
+    needuploadata()
+
 def saveData():
     """
         Test if file main_14b.txt exist and write data.
@@ -84,6 +89,7 @@ def saveData():
             namefile.write(textBox.get("0.0", "end-1c") + '\n\n')
     textBox.insert(INSERT, "\n---Data saved !---")
     suiteBackup()
+    uploadfunc()
 
 def messFromSafeButt():
     """

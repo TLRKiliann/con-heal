@@ -49,9 +49,9 @@ def ajouterText():
         To retrieve data 
         from initial textBox() 
     """
-    textBox.delete('0.0', END)
-    textBox.insert(INSERT, "En date du : ")
-    textBox.insert(END, time.strftime("%d/%m/%Y à %H:%M:%S :\n"))
+    textBox.delete('0.0', tk.END)
+    textBox.insert(tk.INSERT, "En date du : ")
+    textBox.insert(tk.END, time.strftime("%d/%m/%Y à %H:%M:%S :\n"))
     textBox.update()
 
 def suiteBackup():
@@ -83,7 +83,7 @@ def saveData():
         print("+ File 'main_14b.txt' created !")
         with open('./14besoins/doc_suivi5/main_14b.txt', 'a+') as namefile:
             namefile.write(textBox.get("0.0", "end-1c") + '\n\n')
-    textBox.insert(INSERT, "\n---Data saved !---")
+    textBox.insert(tk.INSERT, "\n---Data saved !---")
     suiteBackup()
 
 def messFromSafeButt():
@@ -99,7 +99,7 @@ def messFromSafeButt():
     if MsgBox == 'yes':
         saveData()
     else:
-        textBox.insert(INSERT, "\n---Nothing has been saved !---")
+        textBox.insert(tk.INSERT, "\n---Nothing has been saved !---")
         print("+ Nothing has been saved !")
 
 def lectureFic():
@@ -120,12 +120,12 @@ def importationFile(fichier, encodage="Utf-8"):
             with open(fichier, 'r', encoding=encodage) as fileneeds:
                 content=fileneeds.readlines()
                 for li in content:
-                    textBox.insert(END, li)
+                    textBox.insert(tk.END, li)
     except FileNotFoundError as out_err:
         print("+ Sorry, file 'main_14b.txt' not exist !", out_err)
 
 textBox = tk.Text(root, height=15, width=60, font=18, relief=SUNKEN)
-#textBox.insert(INSERT, "En date du : ")
+#textBox.insert(tk.INSERT, "En date du : ")
 #textBox.insert(END, time.strftime("%d/%m/%Y à %H:%M:%S :"))
 textBox.pack(padx=30, pady=30)
 

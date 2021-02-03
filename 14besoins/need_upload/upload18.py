@@ -31,43 +31,32 @@ def managetask(root):
 
 def process_unknown_duration(root):
     time.sleep(1)
-    proc = subprocess.run(["scp", "./calBmi/bmi18.txt",
-        "pi@192.168.18.12:~/tt_doc/doc_txt18/Files18/bmi18.txt"],
+    proc = subprocess.run(["scp", "./14besoins/doc_suivi18/main_14b.txt",
+        "pi@192.168.18.12:~/tt_doc/doc_txt1/Files1/main_14b.txt"],
         stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
-        print("+ File bmi18.txt uploaded !")
-        #messagebox.showinfo("INFO", "bmi18.txt uploaded...")
+        print("+ File main_14b.txt uploaded !")
+        #messagebox.showinfo("INFO", "main_14b.txt uploaded...")
     else:
         print("+ No file to upload !")
-        messagebox.showerror("Error", "No bmi18.txt to upload...")
+        messagebox.showerror("Error", "No main_14b.txt to upload...")
 
-    secproc = subprocess.run(["scp", "./calBmi/doc_BMI18/file_kg.json",
-        "pi@192.168.18.12:~/tt_doc/doc_txt18/Files18/file_kg.json"],
+    secproc = subprocess.run(["scp", "./14besoins/doc_suivi18/patient18_14b.txt",
+        "pi@192.168.18.12:~/tt_doc/doc_txt1/Files1/patient18_14b.txt"],
         stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(secproc.stderr))
     if secproc.stderr == b'':
-        print("+ File file_kg.json uploaded !")
-        #messagebox.showinfo("INFO", "file_kg.json uploaded...")
+        print("+ File patient18_14b.txt uploaded !")
+        #messagebox.showinfo("INFO", "patient18_14b.txt uploaded...")
     else:
         print("+ No file to upload !")
-        messagebox.showerror("Error", "No file_kg.json to upload...")
+        messagebox.showerror("Error", "No patient18_14b.txt to upload...")
 
-    thirdproc = subprocess.run(["scp", "./calBmi/doc_BMI18/file_bmi.json",
-        "pi@192.168.18.12:~/tt_doc/doc_txt18/Files18/file_bmi.json"],
-        stderr=subprocess.PIPE)
-    print("Result SCP transfert : %s" % repr(thirdproc.stderr))
-    if thirdproc.stderr == b'':
-        print("+ File file_bmi.json uploaded !")
-        #messagebox.showinfo("INFO", "file_bmi.json uploaded...")
-    else:
-        print("+ No file to upload !")
-        messagebox.showerror("Error", "No file_bmi.json to upload...")
-
-    print('Upload done')
+    print('Upload done !')
     root.quit()
 
-def uploadata():
+def needuploadata():
     root = tk.Tk()
     treat = threading.Thread(target=process_unknown_duration, args=(root,))
     treat.start()

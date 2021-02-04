@@ -54,6 +54,7 @@ def diagRecapt(diagnosis):
                 "allergyfile.txt, diagrecap1.txt !")
     except FileNotFoundError as not_ffile:
         print("- diagrecap1.txt not found, plz create file clicking on diagnostic -")
+        print(not_ffile)
         messagebox.showwarning("WARNING", "File diagrecap1.txt not found ! " \
             "Please, create one by clicking on diagnostic 'add'.")
 
@@ -130,13 +131,11 @@ labelID.pack(pady=10)
 
 idpatient = StringVar()
 patient_num = Entry(gui, textvariable=idpatient,
-    highlightbackground='light sky blue',
-    bd=4)
+    highlightbackground='light sky blue', bd=4)
 idpatient.set('1')
 patient_num.pack()
 
-labelname = Label(gui, text='Name : ',
-    font="Times 14 bold",
+labelname = Label(gui, text='Name : ', font="Times 14 bold",
     fg='white', bg='DodgerBlue2')
 labelname.pack(pady=10)
 

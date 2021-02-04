@@ -54,7 +54,7 @@ def diagRecapt(diagnosis):
                 "allergyfile2.txt, diagrecap2.txt !")
     except FileNotFoundError as not_ffile:
         print("- diagrecap2.txt not found, plz create file clicking on diagnostic -")
-        print(str(not_ffile))
+        print(not_ffile)
         messagebox.showwarning("WARNING", "File diagrecap2.txt not found ! " \
             "Please, create one by clicking on diagnostic 'add'.")
 
@@ -64,6 +64,7 @@ def uptopat(idpatient, patient_num, firstpat, firstname_pat,
     """
         Update data for patients
         in function of their id
+        in database.
     """
     idpatient = patient_num.get()
     firstpat = firstname_pat.get()
@@ -77,8 +78,7 @@ def uptopat(idpatient, patient_num, firstpat, firstname_pat,
     if patient_num.get() == "" or firstname_pat.get() == "" or sur_pat.get() == "":
         messagebox.showerror("MySQL Connection", "Enter Correct Details.")
     else:
-        sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379',
-            database='timetrackconn')
+        sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='timetrackconn')
         cur = sqlCon.cursor()
         cur.execute("UPDATE timetrackconn set firstname=%s, surname=%s, birth=%s, " \
             "allergia=%s, disease=%s, maindiagnostic=%s where stdid=%s",(
@@ -92,8 +92,7 @@ def uptopat(idpatient, patient_num, firstpat, firstname_pat,
         ))
         sqlCon.commit()
         sqlCon.close()
-        messagebox.showinfo("Data Entry Form",
-            "Record Updated Successfully !")
+        messagebox.showinfo("Data Entry Form", "Record Updated Successfully !")
 
     if idpatient == '2':
         if os.path.getsize('./newpatient/entryfile2.txt'):
@@ -191,8 +190,7 @@ diagnos_pat.pack()
 
 buttonsearch = Button(gui, text="Search ID", width=8, bd=3,
     fg='yellow', bg='RoyalBlue3', highlightbackground='light sky blue',
-    activebackground='pale turquoise',
-    command = searchDB)
+    activebackground='pale turquoise', command = searchDB)
 buttonsearch.pack(side=LEFT, padx=10, pady=20)
 
 buttonupdate = Button(gui, text="Enter", width=8, bd=3,

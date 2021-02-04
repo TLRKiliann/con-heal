@@ -73,7 +73,7 @@ def callResident(self):
 
     # To go to resident page
     self.x6, self.y6 = 925, 160
-    self.b6 = tk.Button(self.can, text="TextBox", font=16,
+    self.b6 = tk.Button(self.can, text="EventBox", font=16,
         width=10, bd=3, bg='RoyalBlue3', fg='white',
         highlightbackground='pale turquoise',
         activebackground='pale turquoise',

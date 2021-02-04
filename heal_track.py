@@ -494,7 +494,7 @@ class MenuBar(tk.Frame):
             background='black',activebackground='aquamarine',
             foreground='aquamarine', activeforeground='black',
             command=boss.framShow)
-        me1.add_command(label="Textbox", underline=0, font=("Times 14 bold"),
+        me1.add_command(label="EventBox", underline=0, font=("Times 14 bold"),
             background='black', activebackground='cyan',
             foreground='aquamarine', activeforeground='black',
             command=boss.showSynopsis)
@@ -1911,7 +1911,7 @@ class Application(tk.Frame):
         self.button2_window = self.can.create_window(300, 450, anchor=CENTER,
             window=self.button2)
         # Synopsis button
-        self.button3 = tk.Button(self, text="TEXTBOX", font=('Times 18 bold'),
+        self.button3 = tk.Button(self, text="EVENTBOX", font=('Times 18 bold'),
             bg='RoyalBlue3', fg='white', command = self.showSynopsis)
         self.button3.configure(width=15, bd=3, highlightbackground='RoyalBlue4',
             activebackground='pale turquoise')

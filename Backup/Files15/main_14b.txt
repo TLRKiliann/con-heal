@@ -1,0 +1,14 @@
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
+
+En date du : 04/02/2021 à 00:58:08 :
+Patient name : Gerard Lenorman
++ Surveillance du sommeil requise
+truc 1
++ Surveillance posturale et/ou des déplacements requise
+truc 2
+---
+
+
+En date du : 03/02/2021 à 00:58:35 :
+truc 3
+

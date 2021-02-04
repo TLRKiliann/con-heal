@@ -20,3 +20,14 @@ Temperature : 36°C
 Glycemie : 5 mmol/l
 Douleurs (Pain) : 1/10
 
+Date : 04/02/2021
+Hour : 01:00:24
+Name and Surname : Edward Snowden
+TA : 115/80mmHg
+Puls : 83/min
+SaO2 : 98%
+FR : 16/min
+Temperature : 36.3°C
+Glycemie : 5.9 mmol/l
+Douleurs (Pain) : 1/10
+

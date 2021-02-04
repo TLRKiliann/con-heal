@@ -4,7 +4,6 @@
 
 from tkinter import *
 import tkinter as tk
-from tkinter import ttk
 import subprocess
 import os
 import time
@@ -26,9 +25,8 @@ def callBox(self):
     dispResFunc()
     # Display date
     self.x1, self.y1 = 1140, 40
-    self.Date_write = ttk.Entry(self.can)
-    self.data_time=tk.StringVar()
-    self.Date_write=tk.Entry(self.can, textvariable=self.data_time, 
+    self.data_time = tk.StringVar()
+    self.Date_write = tk.Entry(self.can, textvariable=self.data_time, 
         width=9, bd=3, highlightbackground='grey')
     self.data_time.set(time.strftime("%d/%m/%Y"))
     self.Date_write=self.can.create_window(self.x1, self.y1,
@@ -58,16 +56,16 @@ def callBox(self):
     try:
         datesearch = (datetime.datetime.now() - datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-        with open('./14besoins/doc_suivi/main_14b.txt', 'r') as filedate:
+        with open('./need/doc_suivi/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.t63.insert(END, "\n\n---> " + line1)
-                    self.t63.insert(INSERT, line)
-                    self.t63.insert(INSERT, lines[i+1])
-                    self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT,
+                    self.t63.insert(tk.END, "\n\n---> " + line1)
+                    self.t63.insert(tk.INSERT, line)
+                    self.t63.insert(tk.INSERT, lines[i+1])
+                    self.t63.insert(tk.INSERT, lines[i+2])
+                    self.t63.insert(tk.INSERT,
                         "Lire suite dans care and monitoring...")
                 else:
                     pass
@@ -88,16 +86,16 @@ def callBox(self):
     try:
         datesearch = (datetime.datetime.now() - datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-        with open('./14besoins/doc_suivi2/main_14b.txt', 'r') as filedate:
+        with open('./need/doc_suivi2/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.t63.insert(END, "\n\n---> " + line2)
-                    self.t63.insert(INSERT, line)
-                    self.t63.insert(INSERT, lines[i+1])
-                    self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT,
+                    self.t63.insert(tk.END, "\n\n---> " + line2)
+                    self.t63.insert(tk.INSERT, line)
+                    self.t63.insert(tk.INSERT, lines[i+1])
+                    self.t63.insert(tk.INSERT, lines[i+2])
+                    self.t63.insert(tk.INSERT,
                         "Lire suite dans care and monitoring...")
                 else:
                     pass
@@ -118,16 +116,16 @@ def callBox(self):
     try:
         datesearch = (datetime.datetime.now() - datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-        with open('./14besoins/doc_suivi3/main_14b.txt', 'r') as filedate:
+        with open('./need/doc_suivi3/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.t63.insert(END, "\n\n---> " + line3)
-                    self.t63.insert(INSERT, line)
-                    self.t63.insert(INSERT, lines[i+1])
-                    self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT,
+                    self.t63.insert(tk.END, "\n\n---> " + line3)
+                    self.t63.insert(tk.INSERT, line)
+                    self.t63.insert(tk.INSERT, lines[i+1])
+                    self.t63.insert(tk.INSERT, lines[i+2])
+                    self.t63.insert(tk.INSERT,
                         "Lire suite dans care and monitoring...")
                 else:
                     pass
@@ -148,16 +146,16 @@ def callBox(self):
     try:
         datesearch = (datetime.datetime.now() - datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-        with open('./14besoins/doc_suivi4/main_14b.txt', 'r') as filedate:
+        with open('./need/doc_suivi4/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.t63.insert(END, "\n\n---> " + line4)
-                    self.t63.insert(INSERT, line)
-                    self.t63.insert(INSERT, lines[i+1])
-                    self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT,
+                    self.t63.insert(tk.END, "\n\n---> " + line4)
+                    self.t63.insert(tk.INSERT, line)
+                    self.t63.insert(tk.INSERT, lines[i+1])
+                    self.t63.insert(tk.INSERT, lines[i+2])
+                    self.t63.insert(tk.INSERT,
                         "Lire suite dans care and monitoring...")
                 else:
                     pass
@@ -178,16 +176,16 @@ def callBox(self):
     try:
         datesearch = (datetime.datetime.now() - datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-        with open('./14besoins/doc_suivi5/main_14b.txt', 'r') as filedate:
+        with open('./need/doc_suivi5/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.t63.insert(END, "\n\n---> " + line5)
-                    self.t63.insert(INSERT, line)
-                    self.t63.insert(INSERT, lines[i+1])
-                    self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT,
+                    self.t63.insert(tk.END, "\n\n---> " + line5)
+                    self.t63.insert(tk.INSERT, line)
+                    self.t63.insert(tk.INSERT, lines[i+1])
+                    self.t63.insert(tk.INSERT, lines[i+2])
+                    self.t63.insert(tk.INSERT,
                         "Lire suite dans care and monitoring...")
                 else:
                     pass
@@ -208,16 +206,16 @@ def callBox(self):
     try:
         datesearch = (datetime.datetime.now() - datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-        with open('./14besoins/doc_suivi6/main_14b.txt', 'r') as filedate:
+        with open('./need/doc_suivi6/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.t63.insert(END, "\n\n---> " + line6)
-                    self.t63.insert(INSERT, line)
-                    self.t63.insert(INSERT, lines[i+1])
-                    self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT,
+                    self.t63.insert(tk.END, "\n\n---> " + line6)
+                    self.t63.insert(tk.INSERT, line)
+                    self.t63.insert(tk.INSERT, lines[i+1])
+                    self.t63.insert(tk.INSERT, lines[i+2])
+                    self.t63.insert(tk.INSERT,
                         "Lire suite dans care and monitoring...")
                 else:
                     pass
@@ -238,16 +236,16 @@ def callBox(self):
     try:
         datesearch = (datetime.datetime.now() - datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-        with open('./14besoins/doc_suivi7/main_14b.txt', 'r') as filedate:
+        with open('./need/doc_suivi7/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.t63.insert(END, "\n\n---> " + line7)
-                    self.t63.insert(INSERT, line)
-                    self.t63.insert(INSERT, lines[i+1])
-                    self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT,
+                    self.t63.insert(tk.END, "\n\n---> " + line7)
+                    self.t63.insert(tk.INSERT, line)
+                    self.t63.insert(tk.INSERT, lines[i+1])
+                    self.t63.insert(tk.INSERT, lines[i+2])
+                    self.t63.insert(tk.INSERT,
                         "Lire suite dans care and monitoring...")
                 else:
                     pass
@@ -268,16 +266,16 @@ def callBox(self):
     try:
         datesearch = (datetime.datetime.now() - datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-        with open('./14besoins/doc_suivi8/main_14b.txt', 'r') as filedate:
+        with open('./need/doc_suivi8/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.t63.insert(END, "\n\n---> " + line8)
-                    self.t63.insert(INSERT, line)
-                    self.t63.insert(INSERT, lines[i+1])
-                    self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT,
+                    self.t63.insert(tk.END, "\n\n---> " + line8)
+                    self.t63.insert(tk.INSERT, line)
+                    self.t63.insert(tk.INSERT, lines[i+1])
+                    self.t63.insert(tk.INSERT, lines[i+2])
+                    self.t63.insert(tk.INSERT,
                         "Lire suite dans care and monitoring...")
                 else:
                     pass
@@ -298,16 +296,16 @@ def callBox(self):
     try:
         datesearch = (datetime.datetime.now() - datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-        with open('./14besoins/doc_suivi9/main_14b.txt', 'r') as filedate:
+        with open('./need/doc_suivi9/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.t63.insert(END, "\n\n---> " + line9)
-                    self.t63.insert(INSERT, line)
-                    self.t63.insert(INSERT, lines[i+1])
-                    self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT,
+                    self.t63.insert(tk.END, "\n\n---> " + line9)
+                    self.t63.insert(tk.INSERT, line)
+                    self.t63.insert(tk.INSERT, lines[i+1])
+                    self.t63.insert(tk.INSERT, lines[i+2])
+                    self.t63.insert(tk.INSERT,
                         "Lire suite dans care and monitoring...")
                 else:
                     pass
@@ -328,16 +326,16 @@ def callBox(self):
     try:
         datesearch = (datetime.datetime.now() - datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-        with open('./14besoins/doc_suivi10/main_14b.txt', 'r') as filedate:
+        with open('./need/doc_suivi10/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.t63.insert(END, "\n\n---> " + line10)
-                    self.t63.insert(INSERT, line)
-                    self.t63.insert(INSERT, lines[i+1])
-                    self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT,
+                    self.t63.insert(tk.END, "\n\n---> " + line10)
+                    self.t63.insert(tk.INSERT, line)
+                    self.t63.insert(tk.INSERT, lines[i+1])
+                    self.t63.insert(tk.INSERT, lines[i+2])
+                    self.t63.insert(tk.INSERT,
                         "Lire suite dans care and monitoring...")
                 else:
                     pass
@@ -358,16 +356,16 @@ def callBox(self):
     try:
         datesearch = (datetime.datetime.now() - datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-        with open('./14besoins/doc_suivi11/main_14b.txt', 'r') as filedate:
+        with open('./need/doc_suivi11/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.t63.insert(END, "\n\n---> " + line11)
-                    self.t63.insert(INSERT, line)
-                    self.t63.insert(INSERT, lines[i+1])
-                    self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT,
+                    self.t63.insert(tk.END, "\n\n---> " + line11)
+                    self.t63.insert(tk.INSERT, line)
+                    self.t63.insert(tk.INSERT, lines[i+1])
+                    self.t63.insert(tk.INSERT, lines[i+2])
+                    self.t63.insert(tk.INSERT,
                         "Lire suite dans care and monitoring...")
                 else:
                     pass
@@ -388,16 +386,16 @@ def callBox(self):
     try:
         datesearch = (datetime.datetime.now() - datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-        with open('./14besoins/doc_suivi12/main_14b.txt', 'r') as filedate:
+        with open('./need/doc_suivi12/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.t63.insert(END, "\n\n---> " + line12)
-                    self.t63.insert(INSERT, line)
-                    self.t63.insert(INSERT, lines[i+1])
-                    self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT,
+                    self.t63.insert(tk.END, "\n\n---> " + line12)
+                    self.t63.insert(tk.INSERT, line)
+                    self.t63.insert(tk.INSERT, lines[i+1])
+                    self.t63.insert(tk.INSERT, lines[i+2])
+                    self.t63.insert(tk.INSERT,
                         "Lire suite dans care and monitoring...")
                 else:
                     pass
@@ -418,16 +416,16 @@ def callBox(self):
     try:
         datesearch = (datetime.datetime.now() - datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-        with open('./14besoins/doc_suivi13/main_14b.txt', 'r') as filedate:
+        with open('./need/doc_suivi13/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.t63.insert(END, "\n\n---> " + line13)
-                    self.t63.insert(INSERT, line)
-                    self.t63.insert(INSERT, lines[i+1])
-                    self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT,
+                    self.t63.insert(tk.END, "\n\n---> " + line13)
+                    self.t63.insert(tk.INSERT, line)
+                    self.t63.insert(tk.INSERT, lines[i+1])
+                    self.t63.insert(tk.INSERT, lines[i+2])
+                    self.t63.insert(tk.INSERT,
                         "Lire suite dans care and monitoring...")
                 else:
                     pass
@@ -448,16 +446,16 @@ def callBox(self):
     try:
         datesearch = (datetime.datetime.now() - datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-        with open('./14besoins/doc_suivi14/main_14b.txt', 'r') as filedate:
+        with open('./need/doc_suivi14/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.t63.insert(END, "\n\n---> " + line14)
-                    self.t63.insert(INSERT, line)
-                    self.t63.insert(INSERT, lines[i+1])
-                    self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT,
+                    self.t63.insert(tk.END, "\n\n---> " + line14)
+                    self.t63.insert(tk.INSERT, line)
+                    self.t63.insert(tk.INSERT, lines[i+1])
+                    self.t63.insert(tk.INSERT, lines[i+2])
+                    self.t63.insert(tk.INSERT,
                         "Lire suite dans care and monitoring...")
                 else:
                     pass
@@ -478,16 +476,16 @@ def callBox(self):
     try:
         datesearch = (datetime.datetime.now() - datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-        with open('./14besoins/doc_suivi15/main_14b.txt', 'r') as filedate:
+        with open('./need/doc_suivi15/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.t63.insert(END, "\n\n---> " + line15)
-                    self.t63.insert(INSERT, line)
-                    self.t63.insert(INSERT, lines[i+1])
-                    self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT,
+                    self.t63.insert(tk.END, "\n\n---> " + line15)
+                    self.t63.insert(tk.INSERT, line)
+                    self.t63.insert(tk.INSERT, lines[i+1])
+                    self.t63.insert(tk.INSERT, lines[i+2])
+                    self.t63.insert(tk.INSERT,
                         "Lire suite dans care and monitoring...")
                 else:
                     pass
@@ -508,16 +506,16 @@ def callBox(self):
     try:
         datesearch = (datetime.datetime.now() - datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-        with open('./14besoins/doc_suivi16/main_14b.txt', 'r') as filedate:
+        with open('./need/doc_suivi16/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.t63.insert(END, "\n\n---> " + line16)
-                    self.t63.insert(INSERT, line)
-                    self.t63.insert(INSERT, lines[i+1])
-                    self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT,
+                    self.t63.insert(tk.END, "\n\n---> " + line16)
+                    self.t63.insert(tk.INSERT, line)
+                    self.t63.insert(tk.INSERT, lines[i+1])
+                    self.t63.insert(tk.INSERT, lines[i+2])
+                    self.t63.insert(tk.INSERT,
                         "Lire suite dans care and monitoring...")
                 else:
                     pass
@@ -538,16 +536,16 @@ def callBox(self):
     try:
         datesearch = (datetime.datetime.now() - datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-        with open('./14besoins/doc_suivi17/main_14b.txt', 'r') as filedate:
+        with open('./need/doc_suivi17/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.t63.insert(END, "\n\n---> " + line17)
-                    self.t63.insert(INSERT, line)
-                    self.t63.insert(INSERT, lines[i+1])
-                    self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT,
+                    self.t63.insert(tk.END, "\n\n---> " + line17)
+                    self.t63.insert(tk.INSERT, line)
+                    self.t63.insert(tk.INSERT, lines[i+1])
+                    self.t63.insert(tk.INSERT, lines[i+2])
+                    self.t63.insert(tk.INSERT,
                         "Lire suite dans care and monitoring...")
                 else:
                     pass
@@ -568,16 +566,16 @@ def callBox(self):
     try:
         datesearch = (datetime.datetime.now() - datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-        with open('./14besoins/doc_suivi18/main_14b.txt', 'r') as filedate:
+        with open('./need/doc_suivi18/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.t63.insert(END, "\n\n---> " + line18)
-                    self.t63.insert(INSERT, line)
-                    self.t63.insert(INSERT, lines[i+1])
-                    self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT,
+                    self.t63.insert(tk.END, "\n\n---> " + line18)
+                    self.t63.insert(tk.INSERT, line)
+                    self.t63.insert(tk.INSERT, lines[i+1])
+                    self.t63.insert(tk.INSERT, lines[i+2])
+                    self.t63.insert(tk.INSERT,
                         "Lire suite dans care and monitoring...")
                 else:
                     pass
@@ -598,16 +596,16 @@ def callBox(self):
     try:
         datesearch = (datetime.datetime.now() - datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-        with open('./14besoins/doc_suivi19/main_14b.txt', 'r') as filedate:
+        with open('./need/doc_suivi19/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.t63.insert(END, "\n\n---> " + line19)
-                    self.t63.insert(INSERT, line)
-                    self.t63.insert(INSERT, lines[i+1])
-                    self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT,
+                    self.t63.insert(tk.END, "\n\n---> " + line19)
+                    self.t63.insert(tk.INSERT, line)
+                    self.t63.insert(tk.INSERT, lines[i+1])
+                    self.t63.insert(tk.INSERT, lines[i+2])
+                    self.t63.insert(tk.INSERT,
                         "Lire suite dans care and monitoring...")
                 else:
                     pass
@@ -628,16 +626,16 @@ def callBox(self):
     try:
         datesearch = (datetime.datetime.now() - datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-        with open('./14besoins/doc_suivi20/main_14b.txt', 'r') as filedate:
+        with open('./need/doc_suivi20/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.t63.insert(END, "\n\n---> " + line20)
-                    self.t63.insert(INSERT, line)
-                    self.t63.insert(INSERT, lines[i+1])
-                    self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT,
+                    self.t63.insert(tk.END, "\n\n---> " + line20)
+                    self.t63.insert(tk.INSERT, line)
+                    self.t63.insert(tk.INSERT, lines[i+1])
+                    self.t63.insert(tk.INSERT, lines[i+2])
+                    self.t63.insert(tk.INSERT,
                         "Lire suite dans care and monitoring...")
                 else:
                     pass
@@ -658,16 +656,16 @@ def callBox(self):
     try:
         datesearch = (datetime.datetime.now() - datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-        with open('./14besoins/doc_suivi21/main_14b.txt', 'r') as filedate:
+        with open('./need/doc_suivi21/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.t63.insert(END, "\n\n---> " + line21)
-                    self.t63.insert(INSERT, line)
-                    self.t63.insert(INSERT, lines[i+1])
-                    self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT,
+                    self.t63.insert(tk.END, "\n\n---> " + line21)
+                    self.t63.insert(tk.INSERT, line)
+                    self.t63.insert(tk.INSERT, lines[i+1])
+                    self.t63.insert(tk.INSERT, lines[i+2])
+                    self.t63.insert(tk.INSERT,
                         "Lire suite dans care and monitoring...")
                 else:
                     pass
@@ -688,16 +686,16 @@ def callBox(self):
     try:
         datesearch = (datetime.datetime.now() - datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-        with open('./14besoins/doc_suivi22/main_14b.txt', 'r') as filedate:
+        with open('./need/doc_suivi22/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.t63.insert(END, "\n\n---> " + line22)
-                    self.t63.insert(INSERT, line)
-                    self.t63.insert(INSERT, lines[i+1])
-                    self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT,
+                    self.t63.insert(tk.END, "\n\n---> " + line22)
+                    self.t63.insert(tk.INSERT, line)
+                    self.t63.insert(tk.INSERT, lines[i+1])
+                    self.t63.insert(tk.INSERT, lines[i+2])
+                    self.t63.insert(tk.INSERT,
                         "Lire suite dans care and monitoring...")
                 else:
                     pass
@@ -718,16 +716,16 @@ def callBox(self):
     try:
         datesearch = (datetime.datetime.now() - datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-        with open('./14besoins/doc_suivi23/main_14b.txt', 'r') as filedate:
+        with open('./need/doc_suivi23/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.t63.insert(END, "\n\n---> " + line23)
-                    self.t63.insert(INSERT, line)
-                    self.t63.insert(INSERT, lines[i+1])
-                    self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT,
+                    self.t63.insert(tk.END, "\n\n---> " + line23)
+                    self.t63.insert(tk.INSERT, line)
+                    self.t63.insert(tk.INSERT, lines[i+1])
+                    self.t63.insert(tk.INSERT, lines[i+2])
+                    self.t63.insert(tk.INSERT,
                         "Lire suite dans care and monitoring...")
                 else:
                     pass
@@ -748,16 +746,16 @@ def callBox(self):
     try:
         datesearch = (datetime.datetime.now() - datetime.timedelta(\
             days=1)).strftime('%d/%m/%Y')
-        with open('./14besoins/doc_suivi24/main_14b.txt', 'r') as filedate:
+        with open('./need/doc_suivi24/main_14b.txt', 'r') as filedate:
             lines=filedate.readlines()
             for i in range(0, len(lines)):
                 line = lines[i]
                 if datesearch in line:
-                    self.t63.insert(END, "\n\n---> " + line24)
-                    self.t63.insert(INSERT, line)
-                    self.t63.insert(INSERT, lines[i+1])
-                    self.t63.insert(INSERT, lines[i+2])
-                    self.t63.insert(INSERT,
+                    self.t63.insert(tk.END, "\n\n---> " + line24)
+                    self.t63.insert(tk.INSERT, line)
+                    self.t63.insert(tk.INSERT, lines[i+1])
+                    self.t63.insert(tk.INSERT, lines[i+2])
+                    self.t63.insert(tk.INSERT,
                         "Lire suite dans care and monitoring...")
                 else:
                     pass

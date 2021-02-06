@@ -1,0 +1,15 @@
+{
+    "data": [
+        {
+            "Date": "04/02/2021",
+            "Date of introduction": "03 July 2005",
+            "Date of end": "05/02/2021",
+            "Treatment": "Clopixol",
+            "Dosage": "10 mg",
+            "Reserve": 1,
+            "First-line": 1,
+            "Second-line": 0,
+            "Number/24h": "2"
+        }
+    ]
+}

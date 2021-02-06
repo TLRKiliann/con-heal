@@ -82,3 +82,31 @@ Hb : neg
 
 
 
+En date du : 04/02/2021 à 00:01:38 :
+
+***************************************************************************
+Date : 04/02/2021
+Patient name : Pierre Weck
+pH : 5
+Leuco : +3
+Nit : +
+Pro : neg
+Glu : neg
+Ket : neg
+Ery : +2
+Hb : +1
+***************************************************************************
+
+----------------------------------------------------------
+Date : 04/02/2021
+Patient name : Pierre Weck
+# Sabril : 04/02/2021 agendé pour le 05/02/21
+# Topamax : 04/02/2021 checked agendé pour le 05/02/21
+---------------------------------------------------------
+
+
+
+En date du : 04/02/2021 à 11:27:46 :
+Suite au stix le médecin préconise l'intro d'ATB...
+du au...  3x/j pdt 7j
+

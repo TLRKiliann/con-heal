@@ -1,11 +1,11 @@
 Patient name : Pierre Weck
 Birthdate : 03/04/1983
-Native : Ontario
-Phone : 077 339 65 45
-Street : Blvd Sun-Street 68
-City : Kansastate
-e-mail : merde@gmail.com
-Insurance : HealthCare
-Policy : 9767897583
-Civil status : Maried
-Confession : Christ
+Native : Slovaquie
+Phone : 0372576426
+Street : Dreadymore 24
+City : Lucena
+e-mail : prof@gmail.com
+Insurance : health-care
+Policy : 23416764672367
+Civil status : alone
+Confession : catholic

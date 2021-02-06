@@ -4,7 +4,7 @@
 
 from tkinter import *
 import tkinter as tk
-#from tkinter import ttk
+from tkinter import ttk
 from tkinter import messagebox
 import time
 import subprocess
@@ -163,7 +163,7 @@ from labo.resultlabo21 import callLabo21
 from labo.resultlabo22 import callLabo22
 from labo.resultlabo23 import callLabo23
 from labo.resultlabo24 import callLabo24
-import passw
+#import passw
 from shootransfert import loaderfile
 
 
@@ -1867,6 +1867,9 @@ class Application(tk.Frame):
         self.master.geometry("+%d+%d" % (x, y))
         self.master.deiconify()
         self.master.protocol("WM_DELETE_WINDOW", lambda arg=self.master: self.msgQuitapp(arg))
+        
+        #self.s = ttk.Style('default')
+        #self.s.theme_use('alt')
 
         self.mBar = MenuBar(self)
         self.mBar.pack(side=TOP, fill=X, expand=YES)

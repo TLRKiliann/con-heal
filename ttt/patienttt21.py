@@ -16,6 +16,9 @@ def callTreatment21(self):
     self.can.delete(ALL)
     self.can.configure(bg='DodgerBlue2')
 
+    s = ttk.Style()
+    s.theme_use('default')
+
     self.x1, self.y1 = 625, 30
     self.textLab = Label(self.can, text="Introduction of treatement (ttt)",
         font=('Times', 22, 'bold'), fg='white', bg='DodgerBlue2')

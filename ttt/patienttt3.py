@@ -20,12 +20,12 @@ def callTreatment3(self):
     s.theme_use('default')
 
     self.x1, self.y1 = 625, 30
-    self.textLab = Label(self.can, text="Introduction of treatement (ttt)",
+    self.textLab = tk.Label(self.can, text="Introduction of treatement (ttt)",
         font=('Times', 22, 'bold'), fg='white', bg='DodgerBlue2')
     self.textLab_window = self.can.create_window(self.x1, self.y1, window=self.textLab)
 
     self.x2, self.y2 = 410, 80
-    self.labelallergy = Label(self.can, text="Allergy : ",
+    self.labelallergy = tk.Label(self.can, text="Allergy : ",
         font=('Arial', 18, 'bold'), fg='coral', bg='DodgerBlue2')
     self.labelallergy_window = self.can.create_window(self.x2, self.y2, window=self.labelallergy)
 
@@ -36,46 +36,46 @@ def callTreatment3(self):
         line3 = filename2.readline()
 
     self.x3, self.y3 = 670, 80
-    self.entrytext = StringVar()
-    self.entryName = Entry(self.can, textvariable=self.entrytext, width=50)
+    self.entrytext = tk.StringVar()
+    self.entryName = tk.Entry(self.can, textvariable=self.entrytext, width=50)
     self.entrytext.set(line3[:-1])
     self.entryName_window = self.can.create_window(self.x3, self.y3, window=self.entryName)
 
     self.x4, self.y4 = 120, 180
-    self.LabDate = Label(self.can, text="Date : ", width=15, font=12,
+    self.LabDate = tk.Label(self.can, text="Date : ", width=15, font=12,
         fg='white', bg='DodgerBlue2', anchor='e')
     self.LabDate_window = self.can.create_window(self.x4, self.y4, window=self.LabDate)
 
     self.x5, self.y5 = 120, 210
-    self.LabHour = Label(self.can, text="Hour : ", width=15, font=12,
+    self.LabHour = tk.Label(self.can, text="Hour : ", width=15, font=12,
         fg='white', bg='DodgerBlue2', anchor='e')
     self.LabHour_window = self.can.create_window(self.x5, self.y5, window=self.LabHour)
 
     self.x6, self.y6 = 120, 240
-    self.LabName = Label(self.can, text="Patient name : ", width=15, font=12,
+    self.LabName = tk.Label(self.can, text="Patient name : ", width=15, font=12,
         fg='white', bg='DodgerBlue2', anchor='e')
     self.LabName_window = self.can.create_window(self.x6, self.y6, window=self.LabName)
 
     self.x7, self.y7 = 120, 270
-    self.LabTreat = Label(self.can, text='Name of drug : ', width=15, 
+    self.LabTreat = tk.Label(self.can, text='Name of drug : ', width=15, 
         font=12, fg='white', bg='DodgerBlue2', anchor='e')
     self.LabTreat_window = self.can.create_window(self.x7, self.y7, window=self.LabTreat)
 
     self.x8, self.y8 = 120, 300
-    self.LabDose = Label(self.can, text="Dose : ", width=15, font=12,
+    self.LabDose = tk.Label(self.can, text="Dose : ", width=15, font=12,
         fg='white', bg='DodgerBlue2', anchor='e')
     self.LabDose_window = self.can.create_window(self.x8, self.y8, window=self.LabDose)
 
     self.x9, self.y9 = 300, 180
-    self.time_string = IntVar()
-    self.textDate = Entry(self.can, textvariable=self.time_string,
+    self.time_string = tk.IntVar()
+    self.textDate = tk.Entry(self.can, textvariable=self.time_string,
         highlightbackground='grey', bd=4)
     self.time_string.set(time.strftime("%d/%m/%Y"))
     self.textDate_window = self.can.create_window(self.x9, self.y9, window=self.textDate)
 
     self.x10, self.y10 = 300, 210
-    self.time_Htring = IntVar()
-    self.textHour = Entry(self.can, textvariable=self.time_Htring,
+    self.time_Htring = tk.IntVar()
+    self.textHour = tk.Entry(self.can, textvariable=self.time_Htring,
         highlightbackground='grey', bd=4)
     self.time_Htring.set(time.strftime("%H:%M:%S"))
     self.textHour_window = self.can.create_window(self.x10, self.y10, window=self.textHour)
@@ -85,22 +85,22 @@ def callTreatment3(self):
         line1=filename.readline()
 
     self.x11, self.y11 = 300, 240
-    self.name_text = StringVar()
-    self.textName = Entry(self.can, textvariable=self.name_text,
+    self.name_text = tk.StringVar()
+    self.textName = tk.Entry(self.can, textvariable=self.name_text,
         highlightbackground='grey', bd=4)
     self.name_text.set(line1[:-1])
     self.textName_window = self.can.create_window(self.x11, self.y11, window=self.textName)
 
     self.x12, self.y12 = 300, 270
-    self.ttt_name = StringVar()
-    self.textTreat = Entry(self.can, textvariable=self.ttt_name,
+    self.ttt_name = tk.StringVar()
+    self.textTreat = tk.Entry(self.can, textvariable=self.ttt_name,
         highlightbackground='grey', bd=4)
     self.ttt_name.set("Drug")
     self.textTreat_window = self.can.create_window(self.x12, self.y12, window=self.textTreat)
 
     self.x13, self.y13 = 300, 300
-    self.tttDosage = StringVar()
-    self.textDosage = Entry(self.can, textvariable=self.tttDosage,
+    self.tttDosage = tk.StringVar()
+    self.textDosage = tk.Entry(self.can, textvariable=self.tttDosage,
         highlightbackground='grey', bd=4)
     self.tttDosage.set("mcg/ml/mg/UI/gttes")
     self.textDosage_window = self.can.create_window(self.x13, self.y13, window=self.textDosage)
@@ -588,25 +588,25 @@ def callTreatment3(self):
             "no ttt has been introduced !") 
 
     self.x14, self.y14 = 500, 180
-    self.buttShowttt = Button(self.can, text="Show ttt", width=10, fg='white',
+    self.buttShowttt = tk.Button(self.can, text="Show ttt", width=10, fg='white',
         bg='RoyalBlue3', bd=3, highlightbackground='cyan', 
         activebackground='pale turquoise', command=showTreat)
     self.buttShowttt_window = self.can.create_window(self.x14, self.y14, window=self.buttShowttt)
 
     self.x15, self.y15 = 500, 240
-    self.buttShowres = Button(self.can, text="Show R", width=10, fg='white',
+    self.buttShowres = tk.Button(self.can, text="Show R", width=10, fg='white',
         bg='RoyalBlue3', bd=3, highlightbackground='cyan', 
         activebackground='pale turquoise', command=showReserve)
     self.buttShowres_window = self.can.create_window(self.x15, self.y15, window=self.buttShowres)
 
     self.x16, self.y16 = 500, 300
-    self.buttStory = Button(self.can, text="Historic", width=10, fg='white',
+    self.buttStory = tk.Button(self.can, text="Historic", width=10, fg='white',
         bg='RoyalBlue3', bd=3, highlightbackground='cyan', 
         activebackground='pale turquoise', command=readFileStory)
     self.buttStory_window = self.can.create_window(self.x16, self.y16, window=self.buttStory)
 
     self.x20, self.y20 = 800, 140
-    self.textProcess = Label(self.can, text="Processing start date :", 
+    self.textProcess = tk.Label(self.can, text="Processing start date :", 
         font=('Arial 14 bold'), fg='aquamarine', bg='DodgerBlue2', width=40, anchor='w')
     self.textProcess_window = self.can.create_window(self.x20, self.y20, window=self.textProcess)
 
@@ -620,7 +620,7 @@ def callTreatment3(self):
                                 '25', '26', '27', '28',
                                 '29', '30', '31']
 
-    self.labelDay = Label(self.can,
+    self.labelDay = tk.Label(self.can,
         text = "Choose the day :", font=12, fg='white', bg='DodgerBlue2')
     self.labelDay_window = self.can.create_window(700, 180, window=self.labelDay)
 
@@ -655,7 +655,7 @@ def callTreatment3(self):
                                     ' December']
 
     self.x23, self.y23 = 900, 180
-    self.labelMonth = Label(self.can,
+    self.labelMonth = tk.Label(self.can,
         text = "Choose the month :", font=12, fg='white', bg='DodgerBlue2')
     self.labelMonth_window = self.can.create_window(self.x23, self.y23, window=self.labelMonth)
 
@@ -692,7 +692,7 @@ def callTreatment3(self):
                                     ' 2032', ' 2033', ' 2034', ' 2035']
 
     self.x25, self.y25 = 1100, 180
-    self.labelYear = Label(self.can,
+    self.labelYear = tk.Label(self.can,
         text = "Choose the year :", font=12, fg='white', bg='DodgerBlue2')
     self.labelYear_window = self.can.create_window(self.x25, self.y25, window=self.labelYear)
 
@@ -715,7 +715,7 @@ def callTreatment3(self):
 
     # Date of finish
     self.x27, self.y27 = 800, 270
-    self.txtfinishdate = Label(self.can, text="Processing end date :", 
+    self.txtfinishdate = tk.Label(self.can, text="Processing end date :", 
         font=('Arial 14 bold'), fg='aquamarine', bg='DodgerBlue2', width=40, anchor='w')
     self.txtfinishdate_window = self.can.create_window(self.x27, self.y27, window=self.txtfinishdate)
 
@@ -730,7 +730,7 @@ def callTreatment3(self):
                                         '29', '30', '31']
 
     self.x28, self.y28 = 700, 310
-    self.labelFinishDay = Label(self.can,
+    self.labelFinishDay = tk.Label(self.can,
         text = "Choose the day :", font=12, fg='white', bg='DodgerBlue2')
     self.labelFinishDay_window = self.can.create_window(self.x28, self.y28, window=self.labelFinishDay)
 
@@ -756,7 +756,7 @@ def callTreatment3(self):
                                             '09', '10', '11', '12']
     
     self.x30, self.y30 = 900, 310
-    self.labelMonth = Label(self.can,
+    self.labelMonth = tk.Label(self.can,
         text = "Choose the month :", font=12, fg='white', bg='DodgerBlue2')
     self.labelMonth_window = self.can.create_window(self.x30, self.y30, window=self.labelMonth)
 
@@ -788,7 +788,7 @@ def callTreatment3(self):
                                         '2032', '2033', '2034', '2035']
 
     self.x32, self.y32 = 1100, 310
-    self.labelFinishYear = Label(self.can,
+    self.labelFinishYear = tk.Label(self.can,
         text = "Choose the year :", font=12, fg='white', bg='DodgerBlue2')
     self.labelFinishYear_window = self.can.create_window(self.x32, self.y32, window=self.labelFinishYear)
 
@@ -805,168 +805,168 @@ def callTreatment3(self):
     self.comboFinishYear_window = self.can.create_window(self.x33, self.y33, window=self.comboFinishYear)
 
     self.x34, self.y34 = 100, 380
-    self.checkLab = Label(self.can, text="Doses :", font=('Arial 14 bold'), 
+    self.checkLab = tk.Label(self.can, text="Doses :", font=('Arial 14 bold'), 
         fg='aquamarine', bg='DodgerBlue2')
     self.checkLab_window = self.can.create_window(self.x34, self.y34, window=self.checkLab)
 
     self.x35, self.y35 = 100, 420
-    self.CheckVarMatin = IntVar()
-    self.Cma = Checkbutton(self.can, text="Morning --->", fg='navy', 
+    self.CheckVarMatin = tk.IntVar()
+    self.Cma = tk.Checkbutton(self.can, text="Morning --->", fg='navy', 
         bg='cyan', variable=self.CheckVarMatin, 
         onvalue=1, offvalue=0, height=1, 
         width=15, anchor='w')
     self.Cma_window = self.can.create_window(self.x35, self.y35, window=self.Cma)
 
     self.x36, self.y36 = 300, 420
-    self.LabDose = Label(self.can, text='Morning take : ', font=12,
+    self.LabDose = tk.Label(self.can, text='Morning take : ', font=12,
         width=20, fg='white', bg='DodgerBlue2')
     self.LabDose_window = self.can.create_window(self.x36, self.y36, window=self.LabDose)
 
     self.x37, self.y37 = 500, 380
-    self.DosaLab = Label(self.can, text="Unity :", font=('Arial 14 bold'), 
+    self.DosaLab = tk.Label(self.can, text="Unity :", font=('Arial 14 bold'), 
         fg='aquamarine', bg='DodgerBlue2')
     self.DosaLab_window = self.can.create_window(self.x37, self.y37, window=self.DosaLab)
 
     self.x38, self.y38 = 500, 420
-    self.Entmatin = Entry(self.can, highlightbackground='grey', bd=4)
+    self.Entmatin = tk.Entry(self.can, highlightbackground='grey', bd=4)
     self.Entmatin_window = self.can.create_window(self.x38, self.y38, window=self.Entmatin)
 
     self.x39, self.y39 = 100, 460
-    self.CheckVarMidi = IntVar()
-    self.Cmi = Checkbutton(self.can, text="Noon --->", fg='navy', 
+    self.CheckVarMidi = tk.IntVar()
+    self.Cmi = tk.Checkbutton(self.can, text="Noon --->", fg='navy', 
         bg='cyan', variable=self.CheckVarMidi, 
         onvalue=1, offvalue=0, height=1, 
         width=15, anchor='w')
     self.Cmi_window = self.can.create_window(self.x39, self.y39, window=self.Cmi)
 
     self.x40, self.y40 = 300, 460
-    self.Lunchtime = Label(self.can, text='Lunchtime take : ', font=12, 
+    self.Lunchtime = tk.Label(self.can, text='Lunchtime take : ', font=12, 
         width=20, fg='white', bg='DodgerBlue2')
     self.Lunchtime_window = self.can.create_window(self.x40, self.y40, window=self.Lunchtime)
 
     self.x41, self.y41 = 500, 460
-    self.Entmidi = Entry(self.can, highlightbackground='grey', bd=4)
+    self.Entmidi = tk.Entry(self.can, highlightbackground='grey', bd=4)
     self.Entmidi_window = self.can.create_window(self.x41, self.y41, window=self.Entmidi)
 
     self.x42, self.y42 = 100, 500
-    self.CheckVarSoir = IntVar()
-    self.Csoir = Checkbutton(self.can, text="Evening --->", fg='navy', 
+    self.CheckVarSoir = tk.IntVar()
+    self.Csoir = tk.Checkbutton(self.can, text="Evening --->", fg='navy', 
         bg='cyan', variable=self.CheckVarSoir, 
         onvalue=1, offvalue=0, height=1, 
         width=15, anchor='w')
     self.Csoir_window = self.can.create_window(self.x42, self.y42, window=self.Csoir)
 
     self.x43, self.y43 = 300, 500
-    self.Evetake = Label(self.can, text='Evening take : ', font=12,
+    self.Evetake = tk.Label(self.can, text='Evening take : ', font=12,
         width=20, fg='white', bg='DodgerBlue2')
     self.Evetake_window = self.can.create_window(self.x43, self.y43, window=self.Evetake)
 
     self.x44, self.y44 = 500, 500
-    self.Entsoir = Entry(self.can, highlightbackground='grey', bd=4)
+    self.Entsoir = tk.Entry(self.can, highlightbackground='grey', bd=4)
     self.Entsoir_window = self.can.create_window(self.x44, self.y44, window=self.Entsoir)
 
     self.x45, self.y45 = 100, 540
-    self.CheckVarNuit = IntVar()
-    self.Cnuit = Checkbutton(self.can, text="Night --->", fg='navy', 
+    self.CheckVarNuit = tk.IntVar()
+    self.Cnuit = tk.Checkbutton(self.can, text="Night --->", fg='navy', 
         bg='cyan', variable=self.CheckVarNuit, 
         onvalue=1, offvalue=0, height=1, 
         width=15, anchor='w')
     self.Cnuit_window = self.can.create_window(self.x45, self.y45, window=self.Cnuit)
 
     self.x46, self.y46 = 300, 540
-    self.Nightlab = Label(self.can, text='Night-time take : ', font=12,
+    self.Nightlab = tk.Label(self.can, text='Night-time take : ', font=12,
         width=20, fg='white', bg='DodgerBlue2')
     self.Nightlab_window = self.can.create_window(self.x46, self.y46, window=self.Nightlab)
 
     self.x47, self.y47 = 500, 540
-    self.Entnuit = Entry(self.can, highlightbackground='grey', bd=4)
+    self.Entnuit = tk.Entry(self.can, highlightbackground='grey', bd=4)
     self.Entnuit_window = self.can.create_window(self.x47, self.y47, window=self.Entnuit)
 
     self.x48, self.y48 = 500, 640
-    self.buttsavettt = Button(self.can, text="Save as ttt", width=10, fg='yellow',
+    self.buttsavettt = tk.Button(self.can, text="Save as ttt", width=10, fg='yellow',
         bg='RoyalBlue3', bd=3, highlightbackground='cyan',
         activebackground='pale turquoise', command=copyTttMess)
     self.buttsavettt_window = self.can.create_window(self.x48, self.y48, window=self.buttsavettt)
 
     self.x50, self.y50 = 873, 420
-    self.Labelifchoice = Label(self.can,
+    self.Labelifchoice = tk.Label(self.can,
         text="If medication is a RESERVE make your choice below :",
         font=('Times', 16, 'bold'),fg='white', bg='DodgerBlue2')
     self.Labelifchoice_window = self.can.create_window(self.x50, self.y50, window=self.Labelifchoice)
 
     self.x51, self.y51 = 700, 460
-    self.CheckVar1 = IntVar()
-    self.C1 = Checkbutton(self.can, text="Reserve", fg='navy', 
+    self.CheckVar1 = tk.IntVar()
+    self.C1 = tk.Checkbutton(self.can, text="Reserve", fg='navy', 
         bg='pale green', variable=self.CheckVar1, 
         onvalue=1, offvalue=0, height=1, 
         width=16, anchor='w')
     self.C1_window = self.can.create_window(self.x51, self.y51, window=self.C1)
 
     self.x52, self.y52 = 700, 500
-    self.CheckVar2 = IntVar()
-    self.C2 = Checkbutton(self.can, text="First-line", fg='navy', 
+    self.CheckVar2 = tk.IntVar()
+    self.C2 = tk.Checkbutton(self.can, text="First-line", fg='navy', 
         bg='pale green', variable=self.CheckVar2, 
         onvalue=1, offvalue=0, height=1, 
         width=16, anchor='w')
     self.C2_window = self.can.create_window(self.x52, self.y52, window=self.C2)
 
     self.x53, self.y53 = 700, 540
-    self.CheckVar3 = IntVar()
-    self.C3 = Checkbutton(self.can, text="Second-line", fg='navy', 
+    self.CheckVar3 = tk.IntVar()
+    self.C3 = tk.Checkbutton(self.can, text="Second-line", fg='navy', 
         bg='pale green', variable=self.CheckVar3, 
         onvalue=1, offvalue=0, height=1, 
         width=16, anchor='w')
     self.C3_window = self.can.create_window(self.x53, self.y53, window=self.C3)
 
     self.x54, self.y54 = 900, 540
-    self.labelresd = Label(self.can, text='Number of R/24h : ', font=12, 
+    self.labelresd = tk.Label(self.can, text='Number of R/24h : ', font=12, 
         width=15, fg='white', bg='DodgerBlue2')
     self.labelresd_window = self.can.create_window(self.x54, self.y54, window=self.labelresd)
 
     self.x55, self.y55 = 1100, 540
-    self.Rnbre = Entry(self.can, bd=4, highlightbackground='grey')
+    self.Rnbre = tk.Entry(self.can, bd=4, highlightbackground='grey')
     self.Rnbre_window = self.can.create_window(self.x55, self.y55, window=self.Rnbre)
 
     self.x56, self.y56 = 1100, 590
-    self.buttsaveres = Button(self.can, text="Save as R", width=10, fg='yellow',
+    self.buttsaveres = tk.Button(self.can, text="Save as R", width=10, fg='yellow',
         bg='RoyalBlue3', bd=3, highlightbackground='cyan',
         activebackground='pale turquoise', command=copyResMess)
     self.buttsaveres_window = self.can.create_window(self.x56, self.y56, window=self.buttsaveres)
 
     self.x57, self.y57 = 110, 620
-    self.delttt = StringVar()
-    self.deleteTreat = Entry(self.can, bd=4, textvariable=self.delttt,
+    self.delttt = tk.StringVar()
+    self.deleteTreat = tk.Entry(self.can, bd=4, textvariable=self.delttt,
         highlightbackground='red')
     self.delttt.set("Enter ttt to stop")
     self.deleteTreat_window = self.can.create_window(self.x57, self.y57, window=self.deleteTreat)
 
     self.x58, self.y58 = 280, 620
-    self.buttStopttt = Button(self.can, text="Stop ttt", width=10, fg='yellow',
+    self.buttStopttt = tk.Button(self.can, text="Stop ttt", width=10, fg='yellow',
         bg='red', bd=3, highlightbackground='cyan',
         activebackground='coral', command=deleteTreatment)
     self.buttStopttt_window = self.can.create_window(self.x58, self.y58, window=self.buttStopttt)
 
     self.x59, self.y59 = 110, 660
     self.deleteRes = Entry()
-    self.delete_res = StringVar()
+    self.delete_res = tk.StringVar()
     self.delete_res.set("Enter R to stop")
-    self.deleteRes = Entry(self.can, bd=4, textvariable=self.delete_res,
+    self.deleteRes = tk.Entry(self.can, bd=4, textvariable=self.delete_res,
         highlightbackground='red')
     self.deleteRes_window = self.can.create_window(self.x59, self.y59, window=self.deleteRes)
 
     self.x60, self.y60 = 280, 660
-    self.buttStopttt = Button(self.can, text="Stop R", width=10, fg='yellow',
+    self.buttStopttt = tk.Button(self.can, text="Stop R", width=10, fg='yellow',
         bg='red', bd=3, highlightbackground='cyan',
         activebackground='coral', command=deleteReserve, padx=10)
     self.buttStopttt_window = self.can.create_window(self.x60, self.y60, window=self.buttStopttt)
 
     self.x61, self.y61 = 500, 590
-    self.LabSign = Label(self.can, text='Signature :', font=12, 
+    self.LabSign = tk.Label(self.can, text='Signature :', font=12, 
         width=15, fg='red', bg='pale green')
     self.LabSign_window = self.can.create_window(self.x61, self.y61, window=self.LabSign)
 
     self.x62, self.y62 = 700, 590
-    self.textSign = Entry(self.can, highlightbackground='grey', bd=4)
+    self.textSign = tk.Entry(self.can, highlightbackground='grey', bd=4)
     self.textSign_window = self.can.create_window(self.x62, self.y62, window=self.textSign)
 
     def awayOut():
@@ -977,7 +977,7 @@ def callTreatment3(self):
             print("Error from labo to way out", p_out)
 
     self.x63, self.y63 = 1100, 660
-    self.buttQuit = Button(self.can, text="Return to main menu", width=20, fg='white',
+    self.buttQuit = tk.Button(self.can, text="Return to main menu", width=20, fg='white',
         bg='RoyalBlue3', bd=3, highlightbackground='cyan',
         activebackground='pale turquoise', command=awayOut)
     self.buttQuit_window = self.can.create_window(self.x63, self.y63, window=self.buttQuit)

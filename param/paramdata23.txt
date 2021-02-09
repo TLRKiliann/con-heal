@@ -1,0 +1,11 @@
+Date : 09/02/2021
+Hour : 22:58:07
+Name and Surname : Cyber Punk
+TA : 122/90mmHg
+Puls : 99/min
+SaO2 : 99%
+FR : 17/min
+Temperature : 36.4°C
+Glycemie : 4.7 mmol/l
+Douleurs (Pain) : 1/10
+

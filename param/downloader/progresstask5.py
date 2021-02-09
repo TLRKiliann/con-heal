@@ -54,7 +54,7 @@ def process_of_unknown_duration(root):
         #messagebox.showinfo("INFO", "paramdata5.txt downloaded")
     else:
         print("+ No file to download !")
-        messagebox.showerror("Error", "No paramdata5.txt to download")
+        messagebox.showerror("Error", "No paramdata5.txt to download !")
 
     secproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt5/Files5/diastol.json",
         "./param/aspifile5/"], stderr=subprocess.PIPE)
@@ -64,7 +64,7 @@ def process_of_unknown_duration(root):
         #messagebox.showinfo("INFO", "diastol.json downloaded")
     else:
         print("+ No file to download !")
-        messagebox.showerror("Error", "No diastol.json to download")
+        messagebox.showerror("Error", "No diastol.json to download !")
 
     thirdproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt5/Files5/dlr.json",
         "./param/aspifile5/"], stderr=subprocess.PIPE)
@@ -74,7 +74,7 @@ def process_of_unknown_duration(root):
         #messagebox.showinfo("INFO", "dlr.json downloaded")
     else:
         print("+ No file to download !")
-        messagebox.showerror("Error", "No dlr.json to download")
+        messagebox.showerror("Error", "No dlr.json to download !")
 
     forthproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt5/Files5/freq.json",
         "./param/aspifile5/"], stderr=subprocess.PIPE)
@@ -84,7 +84,7 @@ def process_of_unknown_duration(root):
         #messagebox.showinfo("INFO", "freq.json downloaded")
     else:
         print("+ No file to download !")
-        messagebox.showerror("Error", "No freq.json to download")
+        messagebox.showerror("Error", "No freq.json to download !")
 
     fivthproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt5/Files5/gly.json",
         "./param/aspifile5/"], stderr=subprocess.PIPE)
@@ -94,7 +94,7 @@ def process_of_unknown_duration(root):
         #messagebox.showinfo("INFO", "gly.json downloaded")
     else:
         print("+ No file to download !")
-        messagebox.showerror("Error", "No gly.json to download")
+        messagebox.showerror("Error", "No gly.json to download !")
 
     sixthproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt5/Files5/puls.json",
         "./param/aspifile5/"], stderr=subprocess.PIPE)
@@ -104,7 +104,7 @@ def process_of_unknown_duration(root):
         #messagebox.showinfo("INFO", "puls.json downloaded")
     else:
         print("+ No file to download !")
-        messagebox.showerror("Error", "No puls.json to download")
+        messagebox.showerror("Error", "No puls.json to download !")
 
     sevenproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt5/Files5/sat.json",
         "./param/aspifile5/"], stderr=subprocess.PIPE)
@@ -114,7 +114,7 @@ def process_of_unknown_duration(root):
         #messagebox.showinfo("INFO", "sat.json downloaded")
     else:
         print("+ No file to download !")
-        messagebox.showerror("Error", "No sat.json to download")
+        messagebox.showerror("Error", "No sat.json to download !")
 
     eightproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt5/Files5/systol.json",
         "./param/aspifile5/"], stderr=subprocess.PIPE)
@@ -124,7 +124,7 @@ def process_of_unknown_duration(root):
         #messagebox.showinfo("INFO", "systol.json downloaded")
     else:
         print("+ No file to download !")
-        messagebox.showerror("Error", "No systol.json to download")
+        messagebox.showerror("Error", "No systol.json to download !")
 
     ninethproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt5/Files5/temp.json",
         "./param/aspifile5/"], stderr=subprocess.PIPE)
@@ -134,7 +134,7 @@ def process_of_unknown_duration(root):
         #messagebox.showinfo("INFO", "temp.json downloaded")
     else:
         print("+ No file to download !")
-        messagebox.showerror("Error", "No temp.json to download")
+        messagebox.showerror("Error", "No temp.json to download !")
     print('Done')
     # linux, mac
     print('My pid is', os.getpid())

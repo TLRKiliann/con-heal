@@ -53,7 +53,7 @@ def process_of_unknown_duration(root):
         #messagebox.showinfo("INFO", "paramdata18.txt downloaded")
     else:
         print("+ No file to download !")
-        messagebox.showerror("Error", "No paramdata18.txt to download")
+        messagebox.showerror("Error", "No paramdata18.txt to download !")
 
     secproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt18/Files18/diastol.json",
         "./param/aspifile18/"], stderr=subprocess.PIPE)
@@ -63,7 +63,7 @@ def process_of_unknown_duration(root):
         #messagebox.showinfo("INFO", "diastol.json downloaded")
     else:
         print("+ No file to download !")
-        messagebox.showerror("Error", "No diastol.json to download")
+        messagebox.showerror("Error", "No diastol.json to download !")
 
     thirdproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt18/Files18/dlr.json",
         "./param/aspifile18/"], stderr=subprocess.PIPE)
@@ -73,7 +73,7 @@ def process_of_unknown_duration(root):
         #messagebox.showinfo("INFO", "dlr.json downloaded")
     else:
         print("+ No file to download !")
-        messagebox.showerror("Error", "No dlr.json to download")
+        messagebox.showerror("Error", "No dlr.json to download !")
 
     forthproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt18/Files18/freq.json",
         "./param/aspifile18/"], stderr=subprocess.PIPE)
@@ -83,7 +83,7 @@ def process_of_unknown_duration(root):
         #messagebox.showinfo("INFO", "freq.json downloaded")
     else:
         print("+ No file to download !")
-        messagebox.showerror("Error", "No freq.json to download")
+        messagebox.showerror("Error", "No freq.json to download !")
 
     fivthproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt18/Files18/gly.json",
         "./param/aspifile18/"], stderr=subprocess.PIPE)
@@ -93,7 +93,7 @@ def process_of_unknown_duration(root):
         #messagebox.showinfo("INFO", "gly.json downloaded")
     else:
         print("+ No file to download !")
-        messagebox.showerror("Error", "No gly.json to download")
+        messagebox.showerror("Error", "No gly.json to download !")
 
     sixthproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt18/Files18/puls.json",
         "./param/aspifile18/"], stderr=subprocess.PIPE)
@@ -103,7 +103,7 @@ def process_of_unknown_duration(root):
         #messagebox.showinfo("INFO", "puls.json downloaded")
     else:
         print("+ No file to download !")
-        messagebox.showerror("Error", "No puls.json to download")
+        messagebox.showerror("Error", "No puls.json to download !")
 
     sevenproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt18/Files18/sat.json",
         "./param/aspifile18/"], stderr=subprocess.PIPE)
@@ -113,7 +113,7 @@ def process_of_unknown_duration(root):
         #messagebox.showinfo("INFO", "sat.json downloaded")
     else:
         print("+ No file to download !")
-        messagebox.showerror("Error", "No sat.json to download")
+        messagebox.showerror("Error", "No sat.json to download !")
 
     eightproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt18/Files18/systol.json",
         "./param/aspifile18/"], stderr=subprocess.PIPE)
@@ -123,7 +123,7 @@ def process_of_unknown_duration(root):
         #messagebox.showinfo("INFO", "systol.json downloaded")
     else:
         print("+ No file to download !")
-        messagebox.showerror("Error", "No systol.json to download")
+        messagebox.showerror("Error", "No systol.json to download !")
 
     ninethproc = subprocess.run(["scp", "pi@192.168.18.12:~/tt_doc/doc_txt18/Files18/temp.json",
         "./param/aspifile18/"], stderr=subprocess.PIPE)
@@ -133,7 +133,7 @@ def process_of_unknown_duration(root):
         #messagebox.showinfo("INFO", "temp.json downloaded")
     else:
         print("+ No file to download !")
-        messagebox.showerror("Error", "No temp.json to download")
+        messagebox.showerror("Error", "No temp.json to download !")
     print('Done')
     # linux, mac
     print('My pid is', os.getpid())

@@ -52,7 +52,6 @@ def process_unknown_duration(root):
     else:
         print("+ No file to upload !")
         messagebox.showerror("Error", "No patient23_14b.txt to upload...")
-
     print('Upload done !')
     root.quit()
 

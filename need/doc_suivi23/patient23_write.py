@@ -8,7 +8,6 @@ from tkinter import messagebox
 import time
 import os
 import subprocess
-from uploadbar import uploadmain
 from upload23 import needuploadata
 
 

@@ -51,3 +51,13 @@ Patient name : Bruce Willis
 Prochain dosage agendé !
 
 
+En date du : 14/01/2021 à 19:26:53 :
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
+
+En date du : 10/02/2021 à 17:58:59 :
+Patient name : Bruce Willis
++ Surveillance propreté et/ou téguments requise
+truc 5
+---
+
+

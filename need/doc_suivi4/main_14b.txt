@@ -1,0 +1,11 @@
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
+
+En date du : 10/02/2021 à 17:57:52 :
+Patient name : Ip Sec
++ Surveillance du sommeil requise
++ Surveillance posturale et/ou des déplacements requise
+truc 3
+---
+
+
+

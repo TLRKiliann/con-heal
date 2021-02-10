@@ -133,7 +133,7 @@ def save_input():
         print("+ './Backup/Files2' uploaded !")
     else:
         print("+ No file to upload !")
-        messagebox.showerror("Error", "./Backup/Files2 not uploaded")
+        messagebox.showerror("Error", "./Backup/Files2 not uploaded...")
 
 def messFromSafeButt():
     MsgBox = messagebox.askquestion("Confirm","Are you sure ?\n"

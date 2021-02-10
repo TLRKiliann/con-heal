@@ -5,3 +5,10 @@ Poids : 76
 Taille : 1.79
 BMI : 23.72
 
+Date : 10-02-2021
+Heure : 23:43:39
+Prenom et Nom : Vincent La Paz
+Poids : 78
+Taille : 1.77
+BMI : 24.897
+

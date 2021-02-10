@@ -17,7 +17,7 @@ bottom = Frame(fen, bg='DodgerBlue2')
 top.pack(side=TOP)
 bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
 
-labelo=Label(fen, text="Care and monitoring : ",
+labelo = Label(fen, text="Care and monitoring : ",
     font='Times 18 bold', fg='navy', bg='DodgerBlue2')
 labelo.pack(in_=top, side=LEFT, padx=5, pady=20)
 
@@ -32,13 +32,13 @@ text_name.set(line_a[:-1])
 Entryname=Entry(fen, textvariable=text_name)
 Entryname.pack(in_=top, side=LEFT, padx=10, pady=20)
 
-labelallergy=Label(fen, text="Allergy",
+labelallergy = Label(fen, text="Allergy",
     font='Arial 18 bold', fg='coral', bg='DodgerBlue2')
 labelallergy.pack(padx=5, pady=5)
 
-text_all=StringVar()
+text_all = StringVar()
 text_all.set(line_c[:-1])
-Entryall=Entry(fen, textvariable=text_all, width=60)
+Entryall = Entry(fen, textvariable=text_all, width=60)
 Entryall.pack(padx=10, pady=5)
 
 def importationFile(fichier, encodage="Utf-8"):
@@ -48,10 +48,10 @@ def importationFile(fichier, encodage="Utf-8"):
     for li in content:
         textBox.insert(END, li)
 
-textBox=Text(fen, height=15, width=60, font=18, relief=SUNKEN)
+textBox = Text(fen, height=15, width=60, font=18, relief=SUNKEN)
 textBox.pack(padx=30, pady=30)
 
-buttonClose=Button(fen, text="Quit", width=10, bd=3,
+buttonClose = Button(fen, text="Quit", width=10, bd=3,
     fg='white', bg='RoyalBlue3',
     activebackground='pale turquoise', activeforeground='navy',
     highlightbackground='light sky blue', command=quit)

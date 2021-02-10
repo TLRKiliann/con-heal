@@ -152,7 +152,7 @@ def retrieve_input():
         print("+ './Backup/Files14' uploaded !")
     else:
         print("+ No file to upload !")
-        messagebox.showerror("Error", "./Backup/Files14 not uploaded")
+        messagebox.showerror("Error", "./Backup/Files14 not uploaded...")
 
 def messFromSafeButt():
     """

@@ -155,7 +155,7 @@ def buttRecord():
         with open('./calBmi/doc_BMI16/file_kg.json', 'w') as datafile:
             json.dump(dataBmi, datafile, indent=4)
 
-    messagebox.showinfo('Record', 'Data saved')
+    messagebox.showinfo('Record', 'Data saved !')
     uploadfunc()
 
 def viewGraphicBmi():

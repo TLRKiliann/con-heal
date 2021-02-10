@@ -63,7 +63,7 @@ def uploadfile():
         To upload file on server
     """
     proc = subprocess.run(["scp", "./vmed/doc_vmed24/resultvmed24.txt",
-        "pi@192.168.18.12:~/tt_doc/doc_txt19/Files24/resultvmed24.txt"],
+        "pi@192.168.18.12:~/tt_doc/doc_txt24/Files24/resultvmed24.txt"],
         stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':

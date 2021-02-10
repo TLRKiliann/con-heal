@@ -1,0 +1,11 @@
+Date : 10/02/2021
+Hour : 23:19:53
+Name and Surname : Jack Dutronc
+TA : 122/90mmHg
+Puls : 88/min
+SaO2 : 98%
+FR : 16/min
+Temperature : 36.9°C
+Glycemie : 5.4 mmol/l
+Douleurs (Pain) : 1/10
+

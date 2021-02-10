@@ -126,7 +126,7 @@ def save_input():
 
     secproc = subprocess.run(["scp", "-r",
         "./patient_agenda/events6/doc_events/fix_agenda/agenda_saved",
-        "pi@192.168.18.12:~/tt_doc/doc_txt6"],
+        "pi@192.168.18.12:~/tt_doc/doc_txt6/Files6"],
         stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(secproc.stderr))
     if secproc.stderr == b'':

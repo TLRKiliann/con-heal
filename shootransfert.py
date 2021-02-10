@@ -468,4 +468,6 @@ def agendafile24():
     # Don't need for labo
     # Don't need for VM, Diag, 14needs, contact
 
-    # Only needed for allergy and diag(to improved!!!)
+    # Only needed diag(to improved!!!)
+    # Test entry for allergy...
+    # Else try with allergy

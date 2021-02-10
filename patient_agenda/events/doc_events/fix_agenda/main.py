@@ -124,6 +124,17 @@ def save_input():
                         print("None file has been writted")
                         break
 
+    proc = subprocess.run(["scp", "-r",
+        "./patient_agenda/events/doc_events/fix_agenda/agenda_saved",
+        "pi@192.168.18.12:~/tt_doc/doc_txt1"],
+        stderr=subprocess.PIPE)
+    print("Result SCP transfert : %s" % repr(proc.stderr))
+    if proc.stderr == b'':
+        print("+ './Backup/Files1' uploaded !")
+    else:
+        print("+ No file to upload !")
+        messagebox.showerror("Error", "./Backup/Files1 not uploaded...")
+
 def messFromSafeButt():
     MsgBox = messagebox.askquestion("Confirm","Are you sure ?\n"
         "It will save all data !")

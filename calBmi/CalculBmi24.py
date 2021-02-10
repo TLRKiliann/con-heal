@@ -87,6 +87,9 @@ def call_result(textBox, number1, number2):
         print("+ An error has occured !", val_err)
         messagebox.showwarning("Warning", "Please, enter a valid number !")
 
+def uploadfunc():
+    uploadata()
+
 def buttRecord():
     """
         To enter BMI in an text zone entry

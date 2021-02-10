@@ -245,6 +245,222 @@ def backload():
     except FileNotFoundError as nf_file24:
         print("+ Not found or not created", nf_file24)
 
+def agendafile1():
+    try:
+        if os.path.exists('./Backup/Files1/agenda_saved'):
+            shutil.copy('./Backup/Files1/agenda_saved',
+                './patient_agenda/events/doc_events/fix_agenda/agenda_saved')
+            print("+ agenda_saved copied")
+    except FileNotFoundError as nf_agfil1:
+        print("+ Not found or not created", nf_agfil1)
+
+def agendafile2():
+    try:
+        if os.path.exists('./Backup/Files2/agenda_saved'):
+            shutil.copy('./Backup/Files2/agenda_saved',
+                './patient_agenda/events/doc_events/fix_agenda/agenda_saved')
+            print("+ agenda_saved copied")
+    except FileNotFoundError as nf_agfil2:
+        print("+ Not found or not created", nf_agfil2)
+
+def agendafile3():
+    try:
+        if os.path.exists('./Backup/Files3/agenda_saved'):
+            shutil.copy('./Backup/Files3/agenda_saved',
+                './patient_agenda/events/doc_events/fix_agenda/agenda_saved')
+            print("+ agenda_saved copied")
+    except FileNotFoundError as nf_agfil3:
+        print("+ Not found or not created", nf_agfil3)
+
+def agendafile4():
+    try:
+        if os.path.exists('./Backup/Files4/agenda_saved'):
+            shutil.copy('./Backup/Files4/agenda_saved',
+                './patient_agenda/events/doc_events/fix_agenda/agenda_saved')
+            print("+ agenda_saved copied")
+    except FileNotFoundError as nf_agfil4:
+        print("+ Not found or not created", nf_agfil4)
+
+def agendafile5():
+    try:
+        if os.path.exists('./Backup/Files5/agenda_saved'):
+            shutil.copy('./Backup/Files5/agenda_saved',
+                './patient_agenda/events/doc_events/fix_agenda/agenda_saved')
+            print("+ agenda_saved copied")
+    except FileNotFoundError as nf_agfil5:
+        print("+ Not found or not created", nf_agfil5)
+
+def agendafile6():
+    try:
+        if os.path.exists('./Backup/Files6/agenda_saved'):
+            shutil.copy('./Backup/Files6/agenda_saved',
+                './patient_agenda/events/doc_events/fix_agenda/agenda_saved')
+            print("+ agenda_saved copied")
+    except FileNotFoundError as nf_agfil6:
+        print("+ Not found or not created", nf_agfil6)
+
+def agendafile7():
+    try:
+        if os.path.exists('./Backup/Files7/agenda_saved'):
+            shutil.copy('./Backup/Files7/agenda_saved',
+                './patient_agenda/events/doc_events/fix_agenda/agenda_saved')
+            print("+ agenda_saved copied")
+    except FileNotFoundError as nf_agfil7:
+        print("+ Not found or not created", nf_agfil7)
+
+def agendafile8():
+    try:
+        if os.path.exists('./Backup/Files8/agenda_saved'):
+            shutil.copy('./Backup/Files8/agenda_saved',
+                './patient_agenda/events/doc_events/fix_agenda/agenda_saved')
+            print("+ agenda_saved copied")
+    except FileNotFoundError as nf_agfil8:
+        print("+ Not found or not created", nf_agfil8)
+
+def agendafile9():
+    try:
+        if os.path.exists('./Backup/Files9/agenda_saved'):
+            shutil.copy('./Backup/Files9/agenda_saved',
+                './patient_agenda/events/doc_events/fix_agenda/agenda_saved')
+            print("+ agenda_saved copied")
+    except FileNotFoundError as nf_agfil9:
+        print("+ Not found or not created", nf_agfil9)
+
+def agendafile10():
+    try:
+        if os.path.exists('./Backup/Files10/agenda_saved'):
+            shutil.copy('./Backup/Files10/agenda_saved',
+                './patient_agenda/events/doc_events/fix_agenda/agenda_saved')
+            print("+ agenda_saved copied")
+    except FileNotFoundError as nf_agfil10:
+        print("+ Not found or not created", nf_agfil10)
+
+def agendafile11():
+    try:
+        if os.path.exists('./Backup/Files11/agenda_saved'):
+            shutil.copy('./Backup/Files11/agenda_saved',
+                './patient_agenda/events/doc_events/fix_agenda/agenda_saved')
+            print("+ agenda_saved copied")
+    except FileNotFoundError as nf_agfil11:
+        print("+ Not found or not created", nf_agfil11)
+
+def agendafile12():
+    try:
+        if os.path.exists('./Backup/Files12/agenda_saved'):
+            shutil.copy('./Backup/Files12/agenda_saved',
+                './patient_agenda/events/doc_events/fix_agenda/agenda_saved')
+            print("+ agenda_saved copied")
+    except FileNotFoundError as nf_agfil12:
+        print("+ Not found or not created", nf_agfil12)
+
+def agendafile13():
+    try:
+        if os.path.exists('./Backup/Files13/agenda_saved'):
+            shutil.copy('./Backup/Files13/agenda_saved',
+                './patient_agenda/events/doc_events/fix_agenda/agenda_saved')
+            print("+ agenda_saved copied")
+    except FileNotFoundError as nf_agfil13:
+        print("+ Not found or not created", nf_agfil13)
+
+def agendafile14():
+    try:
+        if os.path.exists('./Backup/Files14/agenda_saved'):
+            shutil.copy('./Backup/Files14/agenda_saved',
+                './patient_agenda/events/doc_events/fix_agenda/agenda_saved')
+            print("+ agenda_saved copied")
+    except FileNotFoundError as nf_agfil14:
+        print("+ Not found or not created", nf_agfil14)
+
+def agendafile15():
+    try:
+        if os.path.exists('./Backup/Files15/agenda_saved'):
+            shutil.copy('./Backup/Files15/agenda_saved',
+                './patient_agenda/events/doc_events/fix_agenda/agenda_saved')
+            print("+ agenda_saved copied")
+    except FileNotFoundError as nf_agfil15:
+        print("+ Not found or not created", nf_agfil15)
+
+def agendafile16():
+    try:
+        if os.path.exists('./Backup/Files16/agenda_saved'):
+            shutil.copy('./Backup/Files16/agenda_saved',
+                './patient_agenda/events/doc_events/fix_agenda/agenda_saved')
+            print("+ agenda_saved copied")
+    except FileNotFoundError as nf_agfil16:
+        print("+ Not found or not created", nf_agfil16)
+
+def agendafile17():
+    try:
+        if os.path.exists('./Backup/Files17/agenda_saved'):
+            shutil.copy('./Backup/Files17/agenda_saved',
+                './patient_agenda/events/doc_events/fix_agenda/agenda_saved')
+            print("+ agenda_saved copied")
+    except FileNotFoundError as nf_agfil17:
+        print("+ Not found or not created", nf_agfil17)
+
+def agendafile18():
+    try:
+        if os.path.exists('./Backup/Files18/agenda_saved'):
+            shutil.copy('./Backup/Files18/agenda_saved',
+                './patient_agenda/events/doc_events/fix_agenda/agenda_saved')
+            print("+ agenda_saved copied")
+    except FileNotFoundError as nf_agfil18:
+        print("+ Not found or not created", nf_agfil18)
+
+def agendafile19():
+    try:
+        if os.path.exists('./Backup/Files19/agenda_saved'):
+            shutil.copy('./Backup/Files19/agenda_saved',
+                './patient_agenda/events/doc_events/fix_agenda/agenda_saved')
+            print("+ agenda_saved copied")
+    except FileNotFoundError as nf_agfil19:
+        print("+ Not found or not created", nf_agfil19)
+
+def agendafile20():
+    try:
+        if os.path.exists('./Backup/Files20/agenda_saved'):
+            shutil.copy('./Backup/Files20/agenda_saved',
+                './patient_agenda/events/doc_events/fix_agenda/agenda_saved')
+            print("+ agenda_saved copied")
+    except FileNotFoundError as nf_agfil20:
+        print("+ Not found or not created", nf_agfil20)
+
+def agendafile21():
+    try:
+        if os.path.exists('./Backup/Files21/agenda_saved'):
+            shutil.copy('./Backup/Files21/agenda_saved',
+                './patient_agenda/events/doc_events/fix_agenda/agenda_saved')
+            print("+ agenda_saved copied")
+    except FileNotFoundError as nf_agfil21:
+        print("+ Not found or not created", nf_agfil21)
+
+def agendafile22():
+    try:
+        if os.path.exists('./Backup/Files22/agenda_saved'):
+            shutil.copy('./Backup/Files22/agenda_saved',
+                './patient_agenda/events/doc_events/fix_agenda/agenda_saved')
+            print("+ agenda_saved copied")
+    except FileNotFoundError as nf_agfil22:
+        print("+ Not found or not created", nf_agfil22)
+
+def agendafile23():
+    try:
+        if os.path.exists('./Backup/Files23/agenda_saved'):
+            shutil.copy('./Backup/Files23/agenda_saved',
+                './patient_agenda/events/doc_events/fix_agenda/agenda_saved')
+            print("+ agenda_saved copied")
+    except FileNotFoundError as nf_agfil23:
+        print("+ Not found or not created", nf_agfil23)
+
+def agendafile24():
+    try:
+        if os.path.exists('./Backup/Files24/agenda_saved'):
+            shutil.copy('./Backup/Files24/agenda_saved',
+                './patient_agenda/events/doc_events/fix_agenda/agenda_saved')
+            print("+ agenda_saved copied")
+    except FileNotFoundError as nf_agfil24:
+        print("+ Not found or not created", nf_agfil24)
+
     # Don't need for Vital Parameters...
     # Don't need for BMI...
 

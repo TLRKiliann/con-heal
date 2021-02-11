@@ -133,7 +133,7 @@ def uptopat(idpatient, patient_num, firstpat, firstname_pat,
         messagebox.showinfo("Data Entry Form",
             "Record Updated Successfully !")
 
-    if idpatient == '10':
+    if idpatient == '11':
         if os.path.getsize('./newpatient/entryfile11.txt'):
             print("+ File 'entryfile11.txt' exist !")
             os.remove('./newpatient/entryfile11.txt')

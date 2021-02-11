@@ -8,6 +8,7 @@
 
 
 from tkinter import *
+import tkinter as tk
 from tkinter import messagebox
 import os
 from del_patient1 import *
@@ -304,39 +305,39 @@ def get(Nompatient, entree, PatientID, Num_pat):
 
     gui.destroy()
 
-gui = Tk()
+gui = tk.Tk()
 gui.title("Time-Track")
 gui.configure(bg='DodgerBlue2')
 #gui.geometry('300x200')
 
-labelID = Label(gui, text='ID Number : ',
+labelID = tk.Label(gui, text='ID Number : ',
     font="Times 14 bold", fg='white', bg='DodgerBlue2')
 labelID.pack(pady=10)
 
-Num_pat = StringVar()
-PatientID = Entry(gui, textvariable=Num_pat,
+Num_pat = tk.StringVar()
+PatientID = tk.Entry(gui, textvariable=Num_pat,
     highlightbackground='SteelBlue', bd=4)
 Num_pat.set('ID Number')
 PatientID.pack()
 
-labelName = Label(gui, text='Enter Name To Delete : ',
+labelName = tk.Label(gui, text='Enter Name To Delete : ',
     font="Times 14 bold", fg='white', bg='DodgerBlue2')
 labelName.pack(pady=10)
 
-Nompatient = StringVar()
-entree = Entry(gui, textvariable=Nompatient,
+Nompatient = tk.StringVar()
+entree = tk.Entry(gui, textvariable=Nompatient,
     highlightbackground='SteelBlue', bd=4)
 Nompatient.set('Firstname + Lastname')
 entree.pack()
 
-bouton1 = Button(gui, text="Delete", fg='yellow', bg='RoyalBlue3',
+bouton1 = tk.Button(gui, text="Delete", fg='yellow', bg='RoyalBlue3',
     width=8, bd=4, highlightbackground='SteelBlue', 
     command = lambda: get(Nompatient, entree, PatientID, Num_pat))
-bouton1.pack(side=LEFT, padx=10, pady=20)
+bouton1.pack(side=tk.LEFT, padx=10, pady=20)
 
-buttQuit = Button(gui, text="Quit", fg='cyan', bg='RoyalBlue3',
+buttQuit = tk.Button(gui, text="Quit", fg='cyan', bg='RoyalBlue3',
     width=8, bd=4, highlightbackground='SteelBlue',
     command = quit)
-buttQuit.pack(side=LEFT, padx=10, pady=20)
+buttQuit.pack(side=tk.LEFT, padx=10, pady=20)
 
 gui.mainloop()

@@ -139,7 +139,7 @@ def uptopat(idpatient, patient_num, firstpat, firstname_pat,
                 allergia, transdisval, diagnosis)
     else:
         pass
-    funcrecord():
+    funcrecord()
     gui.destroy()
 
 labelID = Label(gui, text='ID : ', font="Times 14 bold",

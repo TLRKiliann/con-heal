@@ -3,6 +3,7 @@
 
 
 from tkinter import *
+import tkinter as tk
 from tkinter import messagebox
 import os
 try:
@@ -13,7 +14,7 @@ except ImportError as err_report2:
     pass
 
 
-gui=Tk()
+gui = tk.Tk()
 gui.title("Time-Track")
 gui.configure(bg='DodgerBlue2')
 #gui.geometry('300x200')
@@ -417,78 +418,78 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
 
     #gui.destroy()
 
-labelID = Label(gui, text='ID Number : ',
+labelID = tk.Label(gui, text='ID Number : ',
     font="Times 14 bold",
     fg='white', bg='DodgerBlue2')
 labelID.pack(pady=10)
 
-IDpatient = StringVar()
-IDpatient.set('Patient ID')
-Patient_num = Entry(gui, textvariable=IDpatient,
+IDpatient = tk.StringVar()
+Patient_num = tk.Entry(gui, textvariable=IDpatient,
     highlightbackground='SteelBlue', bd=4)
+IDpatient.set('Patient ID')
 Patient_num.pack()
 
-labelName = Label(gui, text='Name : ',
+labelName = tk.Label(gui, text='Name : ',
     font="Times 14 bold",
     fg='white', bg='DodgerBlue2')
 labelName.pack(pady=10)
 
-Patientname = StringVar()
-Patientname.set('Firstname')
-Firstname_pat = Entry(gui, textvariable=Patientname,
+Patientname = tk.StringVar()
+Firstname_pat = tk.Entry(gui, textvariable=Patientname,
     highlightbackground='SteelBlue', bd=4)
+Patientname.set('Firstname')
 Firstname_pat.pack()
 
-Surname = StringVar()
-Surname.set("Lastname")
-Sur_pat = Entry(gui, textvariable=Surname,
+Surname = tk.StringVar()
+Sur_pat = tk.Entry(gui, textvariable=Surname,
     highlightbackground='SteelBlue', bd=4)
+Surname.set("Lastname")
 Sur_pat.pack()
 
-labelBirth = Label(gui, text='Birth Date : ', font="Times 14 bold",
+labelBirth = tk.Label(gui, text='Birth Date : ', font="Times 14 bold",
     fg='white', bg='DodgerBlue2')
 labelBirth.pack(pady=10)
 
-Birthvalue=StringVar()
-Birthvalue.set('Format: 00/00/0000')
-Birth_entree = Entry(gui, textvariable=Birthvalue,
+Birthvalue = tk.StringVar()
+Birth_entree = tk.Entry(gui, textvariable=Birthvalue,
     highlightbackground='SteelBlue', bd=4)
+Birthvalue.set('Format: 00/00/0000')
 Birth_entree.pack()
 
-labelAller = Label(gui, text='Allergy : ',
+labelAller = tk.Label(gui, text='Allergy : ',
     font="Times 14 bold",
     fg='white', bg='DodgerBlue2')
 labelAller.pack(pady=10)
 
-Allergia = StringVar()
-Allergia.set('None')
-Patient_allergy = Entry(gui, textvariable=Allergia,
+Allergia = tk.StringVar()
+Patient_allergy = tk.Entry(gui, textvariable=Allergia,
     highlightbackground='SteelBlue', bd=4)
+Allergia.set('None')
 Patient_allergy.pack()
 
-labelTrans = Label(gui, text='Transmissible Disease : ',
+labelTrans = tk.Label(gui, text='Transmissible Disease : ',
     font="Times 14 bold",
     fg='white', bg='DodgerBlue2')
 labelTrans.pack(pady=10)
 
-TransDisVal = StringVar()
-TransDisVal.set('None')
-TransDisease = Entry(gui, textvariable=TransDisVal,
+TransDisVal = tk.StringVar()
+TransDisease = tk.Entry(gui, textvariable=TransDisVal,
     highlightbackground='SteelBlue', bd=4)
+TransDisVal.set('None')
 TransDisease.pack()
 
-labelDiag = Label(gui, text='Diagnosis : ',
+labelDiag = tk.Label(gui, text='Diagnosis : ',
     font="Times 14 bold",
     fg='white', bg='DodgerBlue2')
 labelDiag.pack(pady=10)
 
-Diagnosis = StringVar()
-Diagnosis.set('Diagnostic (main)')
-Diagnos_pat = Entry(gui, textvariable=Diagnosis,
+Diagnosis = tk.StringVar()
+Diagnos_pat = tk.Entry(gui, textvariable=Diagnosis,
     highlightbackground='SteelBlue', bd=4)
+Diagnosis.set('Diagnostic (main)')
 Diagnos_pat.pack()
 
-bouton1 = Button(gui, text="Enter", width=8, bd=3,
+bouton1 = tk.Button(gui, text="Enter", width=8, bd=3,
     fg='yellow', bg='RoyalBlue3', highlightbackground='SteelBlue',
     activebackground='dark turquoise',
     command = lambda: get(IDpatient, Patient_num, Patientname, Firstname_pat,
@@ -496,9 +497,9 @@ bouton1 = Button(gui, text="Enter", width=8, bd=3,
         TransDisVal, TransDisease, Diagnosis, Diagnos_pat))
 bouton1.pack(side=LEFT, padx=10, pady=20)
 
-buttQuit=Button(gui, text="Quit", width=8, bd=3,
+buttQuit = tk.Button(gui, text="Quit", width=8, bd=3,
     fg='cyan', bg='RoyalBlue3', highlightbackground='SteelBlue',
     activebackground='dark turquoise', command=quit)
-buttQuit.pack(side=LEFT, padx=10, pady=20)
+buttQuit.pack(side=tk.LEFT, padx=10, pady=20)
 
 gui.mainloop()

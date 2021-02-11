@@ -90,7 +90,7 @@ def funcrecord():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File entryfile2.txt uploaded !")
-        #messagebox.showinfo("INFO", "main_14b.txt uploaded...")
+        #messagebox.showinfo("INFO", "entryfile2.txt uploaded...")
     else:
         print("+ No file to upload !")
         messagebox.showerror("Error", "No entryfile2.txt to upload...")

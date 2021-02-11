@@ -9,8 +9,10 @@
 
 
 from tkinter import *
+import tkinter as tk
 from tkinter import messagebox
 import os
+import subprocess
 try:
     import pymysql
     pymysql.install_as_MySQLdb()
@@ -353,20 +355,31 @@ def searchLine1(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosis
         To save new patient name
         by a msgbox and write the
         new name in an entryfile.txt
+        To upload data record to server !
     """
     MsgBox = messagebox.askyesno('Save data', 'Do you want to save ?')
     if MsgBox == 1:
-        file = open('./newpatient/entryfile.txt', 'w')
-        file.write(Firstname + " " + Surname + '\n')
-        file.write(Birthvalue + '\n')
-        file.write(Allergia + '\n')
-        file.write(TransDisVal + '\n')
-        file.write(Diagnosis + '\n')
-        file.close()
+        with open('./newpatient/entryfile.txt', 'w') as file:
+            file.write(Firstname + " " + Surname + '\n')
+            file.write(Birthvalue + '\n')
+            file.write(Allergia + '\n')
+            file.write(TransDisVal + '\n')
+            file.write(Diagnosis + '\n')
+
+        proc = subprocess.run(["scp", './newpatient/entryfile.txt',
+            "pi@192.168.18.12:~/tt_doc/doc_txt1/Files1/entryfile.txt"],
+            stderr=subprocess.PIPE)
+        print("Result SCP transfert : %s" % repr(proc.stderr))
+        if proc.stderr == b'':
+            print("+ File entryfile.txt uploaded !")
+            #messagebox.showinfo("INFO", "entryfile.txt uploaded...")
+        else:
+            print("+ No file to upload !")
+            messagebox.showerror("Error", "No entryfile.txt to upload...")
 
 def searchLine2(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosis):
-    MsgBox = messagebox.askyesno('Save data', 'Do you want to save for patient 2 ?')
-    if MsgBox == 1:
+    MsgBox2 = messagebox.askyesno('Save data', 'Do you want to save for patient 2 ?')
+    if MsgBox2 == 1:
         with open('./newpatient/entryfile2.txt', 'w') as file2:
             file2.write(Firstname + " " + Surname + '\n')
             file2.write(Birthvalue + '\n')
@@ -374,10 +387,20 @@ def searchLine2(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosis
             file2.write(TransDisVal + '\n')
             file2.write(Diagnosis + '\n')
 
+        proc = subprocess.run(["scp", './newpatient/entryfile2.txt',
+            "pi@192.168.18.12:~/tt_doc/doc_txt2/Files2/entryfile2.txt"],
+            stderr=subprocess.PIPE)
+        print("Result SCP transfert : %s" % repr(proc.stderr))
+        if proc.stderr == b'':
+            print("+ File entryfile2.txt uploaded !")
+            #messagebox.showinfo("INFO", "entryfile2.txt uploaded...")
+        else:
+            print("+ No file to upload !")
+            messagebox.showerror("Error", "No entryfile2.txt to upload...")
 
 def searchLine3(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosis):
-    MsgBox = messagebox.askyesno('Save data', 'Do you want to save for patient 3 ?')
-    if MsgBox == 1:
+    MsgBox3 = messagebox.askyesno('Save data', 'Do you want to save for patient 3 ?')
+    if MsgBox3 == 1:
         with open('./newpatient/entryfile3.txt', 'w') as file3:
             file3.write(Firstname + " " + Surname + '\n')
             file3.write(Birthvalue + '\n')
@@ -385,9 +408,20 @@ def searchLine3(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosis
             file3.write(TransDisVal + '\n')
             file3.write(Diagnosis + '\n')
 
+        proc = subprocess.run(["scp", './newpatient/entryfile3.txt',
+            "pi@192.168.18.12:~/tt_doc/doc_txt3/Files3/entryfile3.txt"],
+            stderr=subprocess.PIPE)
+        print("Result SCP transfert : %s" % repr(proc.stderr))
+        if proc.stderr == b'':
+            print("+ File entryfile3.txt uploaded !")
+            #messagebox.showinfo("INFO", "entryfile3.txt uploaded...")
+        else:
+            print("+ No file to upload !")
+            messagebox.showerror("Error", "No entryfile3.txt to upload...")
+
 def searchLine4(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosis):
-    MsgBox = messagebox.askyesno('Save data', 'Do you want to save for patient 4 ?')
-    if MsgBox == 1:
+    MsgBox4 = messagebox.askyesno('Save data', 'Do you want to save for patient 4 ?')
+    if MsgBox4 == 1:
         with open('./newpatient/entryfile4.txt', 'w') as file4:
             file4.write(Firstname + " " + Surname + '\n')
             file4.write(Birthvalue + '\n')
@@ -395,9 +429,20 @@ def searchLine4(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosis
             file4.write(TransDisVal + '\n')
             file4.write(Diagnosis + '\n')
 
+        proc = subprocess.run(["scp", './newpatient/entryfile4.txt',
+            "pi@192.168.18.12:~/tt_doc/doc_txt4/Files4/entryfile4.txt"],
+            stderr=subprocess.PIPE)
+        print("Result SCP transfert : %s" % repr(proc.stderr))
+        if proc.stderr == b'':
+            print("+ File entryfile4.txt uploaded !")
+            #messagebox.showinfo("INFO", "entryfile4.txt uploaded...")
+        else:
+            print("+ No file to upload !")
+            messagebox.showerror("Error", "No entryfile4.txt to upload...")
+
 def searchLine5(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosis):
-    MsgBox = messagebox.askyesno('Save data', 'Do you want to save for patient 5 ?')
-    if MsgBox == 1:
+    MsgBox5 = messagebox.askyesno('Save data', 'Do you want to save for patient 5 ?')
+    if MsgBox5 == 1:
         with open('./newpatient/entryfile5.txt', 'w') as file5:
             file5.write(Firstname + " " + Surname + '\n')
             file5.write(Birthvalue + '\n')
@@ -405,9 +450,20 @@ def searchLine5(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosis
             file5.write(TransDisVal + '\n')
             file5.write(Diagnosis + '\n')
 
+        proc = subprocess.run(["scp", './newpatient/entryfile5.txt',
+            "pi@192.168.18.12:~/tt_doc/doc_txt5/Files5/entryfile5.txt"],
+            stderr=subprocess.PIPE)
+        print("Result SCP transfert : %s" % repr(proc.stderr))
+        if proc.stderr == b'':
+            print("+ File entryfile5.txt uploaded !")
+            #messagebox.showinfo("INFO", "entryfile5.txt uploaded...")
+        else:
+            print("+ No file to upload !")
+            messagebox.showerror("Error", "No entryfile5.txt to upload...")
+
 def searchLine6(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosis):
-    MsgBox = messagebox.askyesno('Save data', 'Do you want to save for patient 6 ?')
-    if MsgBox == 1:
+    MsgBox6 = messagebox.askyesno('Save data', 'Do you want to save for patient 6 ?')
+    if MsgBox6 == 1:
         with open('./newpatient/entryfile6.txt', 'w') as file6:
             file6.write(Firstname + " " + Surname + '\n')
             file6.write(Birthvalue + '\n')
@@ -415,9 +471,20 @@ def searchLine6(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosis
             file6.write(TransDisVal + '\n')
             file6.write(Diagnosis + '\n')
 
+        proc = subprocess.run(["scp", './newpatient/entryfile6.txt',
+            "pi@192.168.18.12:~/tt_doc/doc_txt6/Files6/entryfile6.txt"],
+            stderr=subprocess.PIPE)
+        print("Result SCP transfert : %s" % repr(proc.stderr))
+        if proc.stderr == b'':
+            print("+ File entryfile6.txt uploaded !")
+            #messagebox.showinfo("INFO", "entryfile6.txt uploaded...")
+        else:
+            print("+ No file to upload !")
+            messagebox.showerror("Error", "No entryfile6.txt to upload...")
+
 def searchLine7(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosis):
-    MsgBox = messagebox.askyesno('Save data', 'Do you want to save for patient 7 ?')
-    if MsgBox == 1:
+    MsgBox7 = messagebox.askyesno('Save data', 'Do you want to save for patient 7 ?')
+    if MsgBox7 == 1:
         with open('./newpatient/entryfile7.txt', 'w') as file7:
             file7.write(Firstname + " " + Surname + '\n')
             file7.write(Birthvalue + '\n')
@@ -425,9 +492,20 @@ def searchLine7(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosis
             file7.write(TransDisVal + '\n')
             file7.write(Diagnosis + '\n')
 
+        proc = subprocess.run(["scp", './newpatient/entryfile7.txt',
+            "pi@192.168.18.12:~/tt_doc/doc_txt7/Files7/entryfile7.txt"],
+            stderr=subprocess.PIPE)
+        print("Result SCP transfert : %s" % repr(proc.stderr))
+        if proc.stderr == b'':
+            print("+ File entryfile7.txt uploaded !")
+            #messagebox.showinfo("INFO", "entryfile7.txt uploaded...")
+        else:
+            print("+ No file to upload !")
+            messagebox.showerror("Error", "No entryfile7.txt to upload...")
+
 def searchLine8(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosis):
-    MsgBox = messagebox.askyesno('Save data', 'Do you want to save for patient 8 ?')
-    if MsgBox == 1:
+    MsgBox8 = messagebox.askyesno('Save data', 'Do you want to save for patient 8 ?')
+    if MsgBox8 == 1:
         with open('./newpatient/entryfile8.txt', 'w') as file8:
             file8.write(Firstname + " " + Surname + '\n')
             file8.write(Birthvalue + '\n')
@@ -435,9 +513,20 @@ def searchLine8(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosis
             file8.write(TransDisVal + '\n')
             file8.write(Diagnosis + '\n')
 
+        proc = subprocess.run(["scp", './newpatient/entryfile8.txt',
+            "pi@192.168.18.12:~/tt_doc/doc_txt8/Files8/entryfile8.txt"],
+            stderr=subprocess.PIPE)
+        print("Result SCP transfert : %s" % repr(proc.stderr))
+        if proc.stderr == b'':
+            print("+ File entryfile8.txt uploaded !")
+            #messagebox.showinfo("INFO", "entryfile8.txt uploaded...")
+        else:
+            print("+ No file to upload !")
+            messagebox.showerror("Error", "No entryfile8.txt to upload...")
+
 def searchLine9(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosis):
-    MsgBox = messagebox.askyesno('Save data', 'Do you want to save for patient 9 ?')
-    if MsgBox == 1:
+    MsgBox9 = messagebox.askyesno('Save data', 'Do you want to save for patient 9 ?')
+    if MsgBox9 == 1:
         with open('./newpatient/entryfile9.txt', 'w') as file9:
             file9.write(Firstname + " " + Surname + '\n')
             file9.write(Birthvalue + '\n')
@@ -445,9 +534,20 @@ def searchLine9(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosis
             file9.write(TransDisVal + '\n')
             file9.write(Diagnosis + '\n')
 
+        proc = subprocess.run(["scp", './newpatient/entryfile9.txt',
+            "pi@192.168.18.12:~/tt_doc/doc_txt9/Files9/entryfile9.txt"],
+            stderr=subprocess.PIPE)
+        print("Result SCP transfert : %s" % repr(proc.stderr))
+        if proc.stderr == b'':
+            print("+ File entryfile9.txt uploaded !")
+            #messagebox.showinfo("INFO", "entryfile9.txt uploaded...")
+        else:
+            print("+ No file to upload !")
+            messagebox.showerror("Error", "No entryfile9.txt to upload...")
+
 def searchLine10(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosis):
-    MsgBox = messagebox.askyesno('Save data', 'Do you want to save for patient 10 ?')
-    if MsgBox == 1:
+    MsgBox10 = messagebox.askyesno('Save data', 'Do you want to save for patient 10 ?')
+    if MsgBox10 == 1:
         with open('./newpatient/entryfile10.txt', 'w') as file10:
             file10.write(Firstname + " " + Surname + '\n')
             file10.write(Birthvalue + '\n')
@@ -455,9 +555,20 @@ def searchLine10(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosi
             file10.write(TransDisVal + '\n')
             file10.write(Diagnosis + '\n')
 
+        proc = subprocess.run(["scp", './newpatient/entryfile10.txt',
+            "pi@192.168.18.12:~/tt_doc/doc_txt10/Files10/entryfile10.txt"],
+            stderr=subprocess.PIPE)
+        print("Result SCP transfert : %s" % repr(proc.stderr))
+        if proc.stderr == b'':
+            print("+ File entryfile10.txt uploaded !")
+            #messagebox.showinfo("INFO", "entryfile10.txt uploaded...")
+        else:
+            print("+ No file to upload !")
+            messagebox.showerror("Error", "No entryfile10.txt to upload...")
+
 def searchLine11(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosis):
-    MsgBox = messagebox.askyesno('Save data', 'Do you want to save for patient 11 ?')
-    if MsgBox == 1:
+    MsgBox11 = messagebox.askyesno('Save data', 'Do you want to save for patient 11 ?')
+    if MsgBox11 == 1:
         with open('./newpatient/entryfile11.txt', 'w') as file11:
             file11.write(Firstname + " " + Surname + '\n')
             file11.write(Birthvalue + '\n')
@@ -465,9 +576,20 @@ def searchLine11(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosi
             file11.write(TransDisVal + '\n')
             file11.write(Diagnosis + '\n')
 
+        proc = subprocess.run(["scp", './newpatient/entryfile11.txt',
+            "pi@192.168.18.12:~/tt_doc/doc_txt11/Files11/entryfile11.txt"],
+            stderr=subprocess.PIPE)
+        print("Result SCP transfert : %s" % repr(proc.stderr))
+        if proc.stderr == b'':
+            print("+ File entryfile11.txt uploaded !")
+            #messagebox.showinfo("INFO", "entryfile11.txt uploaded...")
+        else:
+            print("+ No file to upload !")
+            messagebox.showerror("Error", "No entryfile11.txt to upload...")
+
 def searchLine12(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosis):
-    MsgBox = messagebox.askyesno('Save data', 'Do you want to save for patient 12 ?')
-    if MsgBox == 1:
+    MsgBox12 = messagebox.askyesno('Save data', 'Do you want to save for patient 12 ?')
+    if MsgBox12 == 1:
         with open('./newpatient/entryfile12.txt', 'w') as file12:
             file12.write(Firstname + " " + Surname + '\n')
             file12.write(Birthvalue + '\n')
@@ -475,9 +597,20 @@ def searchLine12(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosi
             file12.write(TransDisVal + '\n')
             file12.write(Diagnosis + '\n')
 
+        proc = subprocess.run(["scp", './newpatient/entryfile12.txt',
+            "pi@192.168.18.12:~/tt_doc/doc_txt12/Files12/entryfile12.txt"],
+            stderr=subprocess.PIPE)
+        print("Result SCP transfert : %s" % repr(proc.stderr))
+        if proc.stderr == b'':
+            print("+ File entryfile12.txt uploaded !")
+            #messagebox.showinfo("INFO", "entryfile12.txt uploaded...")
+        else:
+            print("+ No file to upload !")
+            messagebox.showerror("Error", "No entryfile12.txt to upload...")
+
 def searchLine13(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosis):
-    MsgBox = messagebox.askyesno('Save data', 'Do you want to save for patient 13 ?')
-    if MsgBox == 1:
+    MsgBox13 = messagebox.askyesno('Save data', 'Do you want to save for patient 13 ?')
+    if MsgBox13 == 1:
         with open('./newpatient/entryfile13.txt', 'w') as file13:
             file13.write(Firstname + " " + Surname + '\n')
             file13.write(Birthvalue + '\n')
@@ -485,9 +618,20 @@ def searchLine13(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosi
             file13.write(TransDisVal + '\n')
             file13.write(Diagnosis + '\n')
 
+        proc = subprocess.run(["scp", './newpatient/entryfile13.txt',
+            "pi@192.168.18.12:~/tt_doc/doc_txt13/Files13/entryfile13.txt"],
+            stderr=subprocess.PIPE)
+        print("Result SCP transfert : %s" % repr(proc.stderr))
+        if proc.stderr == b'':
+            print("+ File entryfile13.txt uploaded !")
+            #messagebox.showinfo("INFO", "entryfile13.txt uploaded...")
+        else:
+            print("+ No file to upload !")
+            messagebox.showerror("Error", "No entryfile13.txt to upload...")
+
 def searchLine14(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosis):
-    MsgBox = messagebox.askyesno('Save data', 'Do you want to save for patient 14 ?')
-    if MsgBox == 1:
+    MsgBox14 = messagebox.askyesno('Save data', 'Do you want to save for patient 14 ?')
+    if MsgBox14 == 1:
         with open('./newpatient/entryfile14.txt', 'w') as file14:
             file14.write(Firstname + " " + Surname + '\n')
             file14.write(Birthvalue + '\n')
@@ -495,9 +639,20 @@ def searchLine14(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosi
             file14.write(TransDisVal + '\n')
             file14.write(Diagnosis + '\n')
 
+        proc = subprocess.run(["scp", './newpatient/entryfile14.txt',
+            "pi@192.168.18.12:~/tt_doc/doc_txt14/Files14/entryfile14.txt"],
+            stderr=subprocess.PIPE)
+        print("Result SCP transfert : %s" % repr(proc.stderr))
+        if proc.stderr == b'':
+            print("+ File entryfile14.txt uploaded !")
+            #messagebox.showinfo("INFO", "entryfile14.txt uploaded...")
+        else:
+            print("+ No file to upload !")
+            messagebox.showerror("Error", "No entryfile14.txt to upload...")
+
 def searchLine15(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosis):
-    MsgBox = messagebox.askyesno('Save data', 'Do you want to save for patient 15 ?')
-    if MsgBox == 1:
+    MsgBox15 = messagebox.askyesno('Save data', 'Do you want to save for patient 15 ?')
+    if MsgBox15 == 1:
         with open('./newpatient/entryfile15.txt', 'w') as file15:
             file15.write(Firstname + " " + Surname + '\n')
             file15.write(Birthvalue + '\n')
@@ -505,9 +660,20 @@ def searchLine15(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosi
             file15.write(TransDisVal + '\n')
             file15.write(Diagnosis + '\n')
 
+        proc = subprocess.run(["scp", './newpatient/entryfile15.txt',
+            "pi@192.168.18.12:~/tt_doc/doc_txt15/Files15/entryfile15.txt"],
+            stderr=subprocess.PIPE)
+        print("Result SCP transfert : %s" % repr(proc.stderr))
+        if proc.stderr == b'':
+            print("+ File entryfile15.txt uploaded !")
+            #messagebox.showinfo("INFO", "entryfile15.txt uploaded...")
+        else:
+            print("+ No file to upload !")
+            messagebox.showerror("Error", "No entryfile15.txt to upload...")
+
 def searchLine16(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosis):
-    MsgBox = messagebox.askyesno('Save data', 'Do you want to save for patient 16 ?')
-    if MsgBox == 1:
+    MsgBox16 = messagebox.askyesno('Save data', 'Do you want to save for patient 16 ?')
+    if MsgBox16 == 1:
         with open('./newpatient/entryfile16.txt', 'w') as file16:
             file16.write(Firstname + " " + Surname + '\n')
             file16.write(Birthvalue + '\n')
@@ -515,9 +681,20 @@ def searchLine16(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosi
             file16.write(TransDisVal + '\n')
             file16.write(Diagnosis + '\n')
 
+        proc = subprocess.run(["scp", './newpatient/entryfile16.txt',
+            "pi@192.168.18.12:~/tt_doc/doc_txt16/Files16/entryfile16.txt"],
+            stderr=subprocess.PIPE)
+        print("Result SCP transfert : %s" % repr(proc.stderr))
+        if proc.stderr == b'':
+            print("+ File entryfile16.txt uploaded !")
+            #messagebox.showinfo("INFO", "entryfile16.txt uploaded...")
+        else:
+            print("+ No file to upload !")
+            messagebox.showerror("Error", "No entryfile16.txt to upload...")
+
 def searchLine17(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosis):
-    MsgBox = messagebox.askyesno('Save data', 'Do you want to save for patient 17 ?')
-    if MsgBox == 1:
+    MsgBox17 = messagebox.askyesno('Save data', 'Do you want to save for patient 17 ?')
+    if MsgBox17 == 1:
         with open('./newpatient/entryfile17.txt', 'w') as file17:
             file17.write(Firstname + " " + Surname + '\n')
             file17.write(Birthvalue + '\n')
@@ -525,9 +702,20 @@ def searchLine17(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosi
             file17.write(TransDisVal + '\n')
             file17.write(Diagnosis + '\n')
 
+        proc = subprocess.run(["scp", './newpatient/entryfile17.txt',
+            "pi@192.168.18.12:~/tt_doc/doc_txt17/Files17/entryfile17.txt"],
+            stderr=subprocess.PIPE)
+        print("Result SCP transfert : %s" % repr(proc.stderr))
+        if proc.stderr == b'':
+            print("+ File entryfile17.txt uploaded !")
+            #messagebox.showinfo("INFO", "entryfile17.txt uploaded...")
+        else:
+            print("+ No file to upload !")
+            messagebox.showerror("Error", "No entryfile17.txt to upload...")
+
 def searchLine18(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosis):
-    MsgBox = messagebox.askyesno('Save data', 'Do you want to save for patient 18 ?')
-    if MsgBox == 1:
+    MsgBox18 = messagebox.askyesno('Save data', 'Do you want to save for patient 18 ?')
+    if MsgBox18 == 1:
         with open('./newpatient/entryfile18.txt', 'w') as file18:
             file18.write(Firstname + " " + Surname + '\n')
             file18.write(Birthvalue + '\n')
@@ -535,9 +723,20 @@ def searchLine18(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosi
             file18.write(TransDisVal + '\n')
             file18.write(Diagnosis + '\n')
 
+        proc = subprocess.run(["scp", './newpatient/entryfile18.txt',
+            "pi@192.168.18.12:~/tt_doc/doc_txt18/Files18/entryfile18.txt"],
+            stderr=subprocess.PIPE)
+        print("Result SCP transfert : %s" % repr(proc.stderr))
+        if proc.stderr == b'':
+            print("+ File entryfile18.txt uploaded !")
+            #messagebox.showinfo("INFO", "entryfile18.txt uploaded...")
+        else:
+            print("+ No file to upload !")
+            messagebox.showerror("Error", "No entryfile18.txt to upload...")
+
 def searchLine19(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosis):
-    MsgBox = messagebox.askyesno('Save data', 'Do you want to save for patient 19 ?')
-    if MsgBox == 1:
+    MsgBox19 = messagebox.askyesno('Save data', 'Do you want to save for patient 19 ?')
+    if MsgBox19 == 1:
         with open('./newpatient/entryfile19.txt', 'w') as file19:
             file19.write(Firstname + " " + Surname + '\n')
             file19.write(Birthvalue + '\n')
@@ -545,9 +744,20 @@ def searchLine19(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosi
             file19.write(TransDisVal + '\n')
             file19.write(Diagnosis + '\n')
 
+        proc = subprocess.run(["scp", './newpatient/entryfile19.txt',
+            "pi@192.168.18.12:~/tt_doc/doc_txt19/Files19/entryfile19.txt"],
+            stderr=subprocess.PIPE)
+        print("Result SCP transfert : %s" % repr(proc.stderr))
+        if proc.stderr == b'':
+            print("+ File entryfile19.txt uploaded !")
+            #messagebox.showinfo("INFO", "entryfile19.txt uploaded...")
+        else:
+            print("+ No file to upload !")
+            messagebox.showerror("Error", "No entryfile19.txt to upload...")
+
 def searchLine20(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosis):
-    MsgBox = messagebox.askyesno('Save data', 'Do you want to save for patient 20 ?')
-    if MsgBox == 1:
+    MsgBox20 = messagebox.askyesno('Save data', 'Do you want to save for patient 20 ?')
+    if MsgBox20 == 1:
         with open('./newpatient/entryfile20.txt', 'w') as file20:
             file20.write(Firstname + " " + Surname + '\n')
             file20.write(Birthvalue + '\n')
@@ -555,9 +765,20 @@ def searchLine20(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosi
             file20.write(TransDisVal + '\n')
             file20.write(Diagnosis + '\n')
 
+        proc = subprocess.run(["scp", './newpatient/entryfile20.txt',
+            "pi@192.168.18.12:~/tt_doc/doc_txt20/Files20/entryfile20.txt"],
+            stderr=subprocess.PIPE)
+        print("Result SCP transfert : %s" % repr(proc.stderr))
+        if proc.stderr == b'':
+            print("+ File entryfile20.txt uploaded !")
+            #messagebox.showinfo("INFO", "entryfile20.txt uploaded...")
+        else:
+            print("+ No file to upload !")
+            messagebox.showerror("Error", "No entryfile20.txt to upload...")
+
 def searchLine21(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosis):
-    MsgBox = messagebox.askyesno('Save data', 'Do you want to save for patient 21 ?')
-    if MsgBox == 1:
+    MsgBox21 = messagebox.askyesno('Save data', 'Do you want to save for patient 21 ?')
+    if MsgBox21 == 1:
         with open('./newpatient/entryfile21.txt', 'w') as file21:
             file21.write(Firstname + " " + Surname + '\n')
             file21.write(Birthvalue + '\n')
@@ -565,9 +786,20 @@ def searchLine21(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosi
             file21.write(TransDisVal + '\n')
             file21.write(Diagnosis + '\n')
 
+        proc = subprocess.run(["scp", './newpatient/entryfile21.txt',
+            "pi@192.168.18.12:~/tt_doc/doc_txt21/Files21/entryfile21.txt"],
+            stderr=subprocess.PIPE)
+        print("Result SCP transfert : %s" % repr(proc.stderr))
+        if proc.stderr == b'':
+            print("+ File entryfile21.txt uploaded !")
+            #messagebox.showinfo("INFO", "entryfile21.txt uploaded...")
+        else:
+            print("+ No file to upload !")
+            messagebox.showerror("Error", "No entryfile21.txt to upload...")
+
 def searchLine22(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosis):
-    MsgBox = messagebox.askyesno('Save data', 'Do you want to save for patient 22 ?')
-    if MsgBox == 1:
+    MsgBox22 = messagebox.askyesno('Save data', 'Do you want to save for patient 22 ?')
+    if MsgBox22 == 1:
         with open('./newpatient/entryfile22.txt', 'w') as file22:
             file22.write(Firstname + " " + Surname + '\n')
             file22.write(Birthvalue + '\n')
@@ -575,9 +807,20 @@ def searchLine22(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosi
             file22.write(TransDisVal + '\n')
             file22.write(Diagnosis + '\n')
 
+        proc = subprocess.run(["scp", './newpatient/entryfile22.txt',
+            "pi@192.168.18.12:~/tt_doc/doc_txt22/Files22/entryfile22.txt"],
+            stderr=subprocess.PIPE)
+        print("Result SCP transfert : %s" % repr(proc.stderr))
+        if proc.stderr == b'':
+            print("+ File entryfile22.txt uploaded !")
+            #messagebox.showinfo("INFO", "entryfile22.txt uploaded...")
+        else:
+            print("+ No file to upload !")
+            messagebox.showerror("Error", "No entryfile22.txt to upload...")
+
 def searchLine23(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosis):
-    MsgBox = messagebox.askyesno('Save data', 'Do you want to save for patient 23 ?')
-    if MsgBox == 1:
+    MsgBox23 = messagebox.askyesno('Save data', 'Do you want to save for patient 23 ?')
+    if MsgBox23 == 1:
         with open('./newpatient/entryfile23.txt', 'w') as file23:
             file23.write(Firstname + " " + Surname + '\n')
             file23.write(Birthvalue + '\n')
@@ -585,15 +828,37 @@ def searchLine23(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosi
             file23.write(TransDisVal + '\n')
             file23.write(Diagnosis + '\n')
 
+        proc = subprocess.run(["scp", './newpatient/entryfile23.txt',
+            "pi@192.168.18.12:~/tt_doc/doc_txt23/Files23/entryfile23.txt"],
+            stderr=subprocess.PIPE)
+        print("Result SCP transfert : %s" % repr(proc.stderr))
+        if proc.stderr == b'':
+            print("+ File entryfile23.txt uploaded !")
+            #messagebox.showinfo("INFO", "entryfile23.txt uploaded...")
+        else:
+            print("+ No file to upload !")
+            messagebox.showerror("Error", "No entryfile23.txt to upload...")
+
 def searchLine24(Firstname, Surname, Birthvalue, Allergia, TransDisVal, Diagnosis):
-    MsgBox = messagebox.askyesno('Save data', 'Do you want to save for patient 24 ?')
-    if MsgBox == 1:
+    MsgBox24 = messagebox.askyesno('Save data', 'Do you want to save for patient 24 ?')
+    if MsgBox24 == 1:
         with open('./newpatient/entryfile24.txt', 'w') as file24:
             file24.write(Firstname + " " + Surname + '\n')
             file24.write(Birthvalue + '\n')
             file24.write(Allergia + '\n')
             file24.write(TransDisVal + '\n')
             file24.write(Diagnosis + '\n')
+
+        proc = subprocess.run(["scp", './newpatient/entryfile24.txt',
+            "pi@192.168.18.12:~/tt_doc/doc_txt24/Files24/entryfile24.txt"],
+            stderr=subprocess.PIPE)
+        print("Result SCP transfert : %s" % repr(proc.stderr))
+        if proc.stderr == b'':
+            print("+ File entryfile24.txt uploaded !")
+            #messagebox.showinfo("INFO", "entryfile24.txt uploaded...")
+        else:
+            print("+ No file to upload !")
+            messagebox.showerror("Error", "No entryfile24.txt to upload...")
 
 labelID = Label(gui, text='ID Number: ',
     font="Times 14 bold",

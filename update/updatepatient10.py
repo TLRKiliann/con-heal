@@ -5,12 +5,12 @@
 from tkinter import *
 from tkinter import messagebox
 import os
+import subprocess
 try:
     import pymysql
     pymysql.install_as_MySQLdb()
 except ImportError as err_report:
-    print("+ An error occured about pymysql !")
-    print(str(err_report))
+    print("+ An error occured about pymysql !", err_report)
     pass
 
 
@@ -59,6 +59,43 @@ def diagRecapt(diagnosis):
         messagebox.showwarning("WARNING", "File diagrecap10.txt not found ! " \
             "Please, create one by clicking on diagnostic 'add'.")
 
+def searchLineName10(firstpat, surname, birthvalue,
+    allergia, transdisval, diagnosis):
+    """
+        To save changing data for 
+        entryfile10.txt and display
+        messagebox.
+    """
+    MsgBox = messagebox.askyesno('Save data', 'Do you want to save ?')
+    if MsgBox == 1:
+        with open('./newpatient/entryfile10.txt', 'w') as fullfile:
+            fullfile.write(firstpat + " " + surname + '\n')
+            fullfile.write(birthvalue + '\n')
+            fullfile.write(allergia + '\n')
+            fullfile.write(transdisval + '\n')
+            fullfile.write(diagnosis + '\n')
+
+        with open('./allergy/allergyfile10.txt', 'w') as filealler:
+            filealler.write(allergia + " ")
+    else:
+        messagebox.showinfo("INFO", "! Nothing has been saved !")
+    diagRecapt(diagnosis)
+
+def funcrecord():
+    """
+        To upload data record to server !
+    """
+    proc = subprocess.run(["scp", './newpatient/entryfile10.txt',
+        "pi@192.168.18.12:~/tt_doc/doc_txt10/Files10/entryfile10.txt"],
+        stderr=subprocess.PIPE)
+    print("Result SCP transfert : %s" % repr(proc.stderr))
+    if proc.stderr == b'':
+        print("+ File entryfile10.txt uploaded !")
+        #messagebox.showinfo("INFO", "entryfile10.txt uploaded...")
+    else:
+        print("+ No file to upload !")
+        messagebox.showerror("Error", "No entryfile10.txt to upload...")
+
 def uptopat(idpatient, patient_num, firstpat, firstname_pat,
     surname, sur_pat, birthvalue, birth_entree, allergia, allergy_pat,
     transdisval, diseasetrans, diagnosis, diagnos_pat):
@@ -104,30 +141,8 @@ def uptopat(idpatient, patient_num, firstpat, firstname_pat,
                 allergia, transdisval, diagnosis)
     else:
         pass
-
+    funcrecord()
     gui.destroy()
-
-def searchLineName10(firstpat, surname, birthvalue,
-    allergia, transdisval, diagnosis):
-    """
-        To save changing data for 
-        entryfile10.txt and display
-        messagebox.
-    """
-    MsgBox = messagebox.askyesno('Save data', 'Do you want to save ?')
-    if MsgBox == 1:
-        with open('./newpatient/entryfile10.txt', 'w') as fullfile:
-            fullfile.write(firstpat + " " + surname + '\n')
-            fullfile.write(birthvalue + '\n')
-            fullfile.write(allergia + '\n')
-            fullfile.write(transdisval + '\n')
-            fullfile.write(diagnosis + '\n')
-
-        with open('./allergy/allergyfile10.txt', 'w') as filealler:
-            filealler.write(allergia + " ")
-    else:
-        messagebox.showinfo("INFO", "! Nothing has been saved !")
-    diagRecapt(diagnosis)
 
 labelID = Label(gui, text='ID : ',
     font="Times 14 bold",
@@ -214,5 +229,4 @@ buttQuit = Button(gui, text="Quit", width=8, bd=3,
 buttQuit.pack(side=LEFT, padx=10, pady=20)
 
 searchDB()
-
 gui.mainloop()

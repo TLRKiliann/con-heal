@@ -39,7 +39,7 @@ def bmiBackToSave(self):
                         if os.path.exists('./calBmi/bmi1.txt'):
                             print("Backup of file bmi1.txt !")
                             shutil.copy('./calBmi/bmi1.txt',
-                                './Backup/Files1/Backup_Bmi1.txt')
+                                './Backup/Files1/bmi1.txt')
                     except FileNotFoundError as param1_err:
                         print("+ Error file not found !", param1_err)
 
@@ -47,7 +47,7 @@ def bmiBackToSave(self):
                         if os.path.exists('./calBmi/bmi2.txt'):
                             print("Backup of file bmi2.txt !")
                             shutil.copy('./calBmi/bmi2.txt',
-                                './Backup/Files2/Backup_Bmi2.txt')
+                                './Backup/Files2/bmi2.txt')
                     except FileNotFoundError as param2_err:
                         print("+ Error file not found !", param2_err)
 
@@ -55,7 +55,7 @@ def bmiBackToSave(self):
                         if os.path.exists('./calBmi/bmi3.txt'):
                             print("Backup of file bmi3.txt !")
                             shutil.copy('./calBmi/bmi3.txt',
-                                './Backup/Files3/Backup_Bmi3.txt')
+                                './Backup/Files3/bmi3.txt')
                     except FileNotFoundError as param3_err:
                         print("+ Error file not found !", param3_err)
 
@@ -63,7 +63,7 @@ def bmiBackToSave(self):
                         if os.path.exists('./calBmi/bmi4.txt'):
                             print("Backup of file bmi4.txt !")
                             shutil.copy('./calBmi/bmi4.txt',
-                                './Backup/Files4/Backup_Bmi4.txt')
+                                './Backup/Files4/bmi4.txt')
                     except FileNotFoundError as param4_err:
                         print("+ Error file not found !", param4_err)
 
@@ -71,7 +71,7 @@ def bmiBackToSave(self):
                         if os.path.exists('./calBmi/bmi5.txt'):
                             print("Backup of file bmi5.txt !")
                             shutil.copy('./calBmi/bmi5.txt',
-                                './Backup/Files5/Backup_Bmi5.txt')
+                                './Backup/Files5/bmi5.txt')
                     except FileNotFoundError as param5_err:
                         print("+ Error file not found !", param5_err)
 
@@ -79,7 +79,7 @@ def bmiBackToSave(self):
                         if os.path.exists('./calBmi/bmi6.txt'):
                             print("Backup of file bmi6.txt !")
                             shutil.copy('./calBmi/bmi6.txt',
-                                './Backup/Files6/Backup_Bmi6.txt')
+                                './Backup/Files6/bmi6.txt')
                     except FileNotFoundError as param6_err:
                         print("+ Error file not found !", param6_err)
 
@@ -87,7 +87,7 @@ def bmiBackToSave(self):
                         if os.path.exists('./calBmi/bmi7.txt'):
                             print("Backup of file bmi7.txt !")
                             shutil.copy('./calBmi/bmi7.txt',
-                                './Backup/Files7/Backup_Bmi7.txt')
+                                './Backup/Files7/bmi7.txt')
                     except FileNotFoundError as param7_err:
                         print("+ Error file not found !", param7_err)
 
@@ -95,7 +95,7 @@ def bmiBackToSave(self):
                         if os.path.exists('./calBmi/bmi8.txt'):
                             print("Backup of file bmi8.txt !")
                             shutil.copy('./calBmi/bmi8.txt',
-                                './Backup/Files8/Backup_Bmi8.txt')
+                                './Backup/Files8/bmi8.txt')
                     except FileNotFoundError as param8_err:
                         print("+ Error file not found !", param8_err)
 
@@ -103,7 +103,7 @@ def bmiBackToSave(self):
                         if os.path.exists('./calBmi/bmi9.txt'):
                             print("Backup of file bmi9.txt !")
                             shutil.copy('./calBmi/bmi9.txt',
-                                './Backup/Files9/Backup_Bmi9.txt')
+                                './Backup/Files9/bmi9.txt')
                     except FileNotFoundError as param9_err:
                         print("+ Error file not found !", param9_err)
 
@@ -111,7 +111,7 @@ def bmiBackToSave(self):
                         if os.path.exists('./calBmi/bmi10.txt'):
                             print("Backup of file bmi10.txt !")
                             shutil.copy('./calBmi/bmi10.txt',
-                                './Backup/Files10/Backup_Bmi10.txt')
+                                './Backup/Files10/bmi10.txt')
                     except FileNotFoundError as param10_err:
                         print("+ Error file not found !", param10_err)
 
@@ -119,7 +119,7 @@ def bmiBackToSave(self):
                         if os.path.exists('./calBmi/bmi11.txt'):
                             print("Backup of file bmi11.txt !")
                             shutil.copy('./calBmi/bmi11.txt',
-                                './Backup/Files11/Backup_Bmi11.txt')
+                                './Backup/Files11/bmi11.txt')
                     except FileNotFoundError as param11_err:
                         print("+ Error file not found !", param11_err)
 
@@ -127,7 +127,7 @@ def bmiBackToSave(self):
                         if os.path.exists('./calBmi/bmi12.txt'):
                             print("Backup of file bmi12.txt !")
                             shutil.copy('./calBmi/bmi12.txt',
-                                './Backup/Files12/Backup_Bmi12.txt')
+                                './Backup/Files12/bmi12.txt')
                     except FileNotFoundError as param12_err:
                         print("+ Error file not found !", param12_err)
 
@@ -135,7 +135,7 @@ def bmiBackToSave(self):
                         if os.path.exists('./calBmi/bmi13.txt'):
                             print("Backup of file bmi13.txt !")
                             shutil.copy('./calBmi/bmi13.txt',
-                                './Backup/Files13/Backup_Bmi13.txt')
+                                './Backup/Files13/bmi13.txt')
                     except FileNotFoundError as param13_err:
                         print("+ Error file not found !", param13_err)
 
@@ -143,7 +143,7 @@ def bmiBackToSave(self):
                         if os.path.exists('./calBmi/bmi14.txt'):
                             print("Backup of file bmi14.txt !")
                             shutil.copy('./calBmi/bmi14.txt',
-                                './Backup/Files14/Backup_Bmi14.txt')
+                                './Backup/Files14/bmi14.txt')
                     except FileNotFoundError as param14_err:
                         print("+ Error file not found !", param14_err)
 
@@ -151,7 +151,7 @@ def bmiBackToSave(self):
                         if os.path.exists('./calBmi/bmi15.txt'):
                             print("Backup of file bmi15.txt !")
                             shutil.copy('./calBmi/bmi15.txt',
-                                './Backup/Files15/Backup_Bmi15.txt')
+                                './Backup/Files15/bmi15.txt')
                     except FileNotFoundError as param15_err:
                         print("+ Error file not found !", param15_err)
 
@@ -159,7 +159,7 @@ def bmiBackToSave(self):
                         if os.path.exists('./calBmi/bmi16.txt'):
                             print("Backup of file bmi16.txt !")
                             shutil.copy('./calBmi/bmi16.txt',
-                                './Backup/Files16/Backup_Bmi16.txt')
+                                './Backup/Files16/bmi16.txt')
                     except FileNotFoundError as param16_err:
                         print("+ Error file not found !", param16_err)
 
@@ -167,7 +167,7 @@ def bmiBackToSave(self):
                         if os.path.exists('./calBmi/bmi17.txt'):
                             print("Backup of file bmi17.txt !")
                             shutil.copy('./calBmi/bmi17.txt',
-                                './Backup/Files17/Backup_Bmi17.txt')
+                                './Backup/Files17/bmi17.txt')
                     except FileNotFoundError as param17_err:
                         print("+ Error file not found !", param17_err)
 
@@ -175,7 +175,7 @@ def bmiBackToSave(self):
                         if os.path.exists('./calBmi/bmi18.txt'):
                             print("Backup of file bmi18.txt !")
                             shutil.copy('./calBmi/bmi18.txt',
-                                './Backup/Files18/Backup_Bmi18.txt')
+                                './Backup/Files18/bmi18.txt')
                     except FileNotFoundError as param18_err:
                         print("+ Error file not found !", param18_err)
 
@@ -183,7 +183,7 @@ def bmiBackToSave(self):
                         if os.path.exists('./calBmi/bmi19.txt'):
                             print("Backup of file bmi19.txt !")
                             shutil.copy('./calBmi/bmi19.txt',
-                                './Backup/Files19/Backup_Bmi19.txt')
+                                './Backup/Files19/bmi19.txt')
                     except FileNotFoundError as param19_err:
                         print("+ Error file not found !", param19_err)
 
@@ -191,7 +191,7 @@ def bmiBackToSave(self):
                         if os.path.exists('./calBmi/bmi20.txt'):
                             print("Backup of file bmi20.txt !")
                             shutil.copy('./calBmi/bmi20.txt',
-                                './Backup/Files20/Backup_Bmi20.txt')
+                                './Backup/Files20/bmi20.txt')
                     except FileNotFoundError as param20_err:
                         print("+ Error file not found !", param20_err)
 
@@ -199,7 +199,7 @@ def bmiBackToSave(self):
                         if os.path.exists('./calBmi/bmi21.txt'):
                             print("Backup of file bmi21.txt !")
                             shutil.copy('./calBmi/bmi21.txt',
-                                './Backup/Files21/Backup_Bmi21.txt')
+                                './Backup/Files21/bmi21.txt')
                     except FileNotFoundError as param21_err:
                         print("+ Error file not found !", param21_err)
 
@@ -207,7 +207,7 @@ def bmiBackToSave(self):
                         if os.path.exists('./calBmi/bmi22.txt'):
                             print("Backup of file bmi22.txt !")
                             shutil.copy('./calBmi/bmi22.txt',
-                                './Backup/Files22/Backup_Bmi22.txt')
+                                './Backup/Files22/bmi22.txt')
                     except FileNotFoundError as param22_err:
                         print("+ Error file not found !", param22_err)
 
@@ -215,7 +215,7 @@ def bmiBackToSave(self):
                         if os.path.exists('./calBmi/bmi23.txt'):
                             print("Backup of file bmi23.txt !")
                             shutil.copy('./calBmi/bmi23.txt',
-                                './Backup/Files23/Backup_Bmi23.txt')
+                                './Backup/Files23/bmi23.txt')
                     except FileNotFoundError as param23_err:
                         print("+ Error file not found !", param23_err)
 
@@ -223,7 +223,7 @@ def bmiBackToSave(self):
                         if os.path.exists('./calBmi/bmi24.txt'):
                             print("Backup of file bmi24.txt !")
                             shutil.copy('./calBmi/bmi24.txt',
-                                './Backup/Files24/Backup_Bmi24.txt')
+                                './Backup/Files24/bmi24.txt')
                     except FileNotFoundError as param24_err:
                         print("+ Error file not found !", param24_err)
 

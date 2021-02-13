@@ -42,3 +42,14 @@ Temperature : 36.2°C
 Glycemie : 7.0 mmol/l
 Douleurs (Pain) : 1/10
 
+Date : 14/02/2021
+Hour : 00:03:43
+Name and Surname : Beatrice Dalle
+TA : 122/89mmHg
+Puls : /min
+SaO2 : %
+FR : /min
+Temperature : °C
+Glycemie :  mmol/l
+Douleurs (Pain) : /10
+

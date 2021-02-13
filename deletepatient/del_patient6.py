@@ -61,6 +61,69 @@ def delFuncFile6():
         print("+ File intro_res.txt does not exist", filefunc6)
 
     try:
+        if os.path.getsize('./param/paramdata6.txt'):
+            os.remove('./param/paramdata6.txt')
+            print("+ File paramdata6.txt deleted")
+    except FileNotFoundError as filefunc61:
+        print("+ File paramdata6.txt does not exist", filefunc61)
+
+    try:
+        if os.path.getsize('./param/aspifile6/diastol.json'):
+            os.remove('./param/aspifile6/diastol.json')
+            print("+ File diastol.json deleted")
+    except FileNotFoundError as filefunc62:
+        print("+ File diastol.json does not exist", filefunc62)
+
+    try:
+        if os.path.getsize('./param/aspifile6/dlr.json'):
+            os.remove('./param/aspifile6/dlr.json')
+            print("+ File dlr.json deleted")
+    except FileNotFoundError as filefunc63:
+        print("+ File dlr.json does not exist", filefunc63)
+
+    try:
+        if os.path.getsize('./param/aspifile6/freq.json'):
+            os.remove('./param/aspifile6/freq.json')
+            print("+ File freq.json deleted")
+    except FileNotFoundError as filefunc64:
+        print("+ File freq.json does not exist", filefunc64)
+
+    try:
+        if os.path.getsize('./param/aspifile6/gly.json'):
+            os.remove('./param/aspifile6/gly.json')
+            print("+ File gly.json deleted")
+    except FileNotFoundError as filefunc65:
+        print("+ File gly.json does not exist", filefunc65)
+
+    try:
+        if os.path.getsize('./param/aspifile6/puls.json'):
+            os.remove('./param/aspifile6/puls.json')
+            print("+ File puls.json deleted")
+    except FileNotFoundError as filefunc66:
+        print("+ File puls.json does not exist", filefunc66)
+
+    try:
+        if os.path.getsize('./param/aspifile6/sat.json'):
+            os.remove('./param/aspifile6/sat.json')
+            print("+ File sat.json deleted")
+    except FileNotFoundError as filefunc67:
+        print("+ File sat.json does not exist", filefunc67)
+
+    try:
+        if os.path.getsize('./param/aspifile6/systol.json'):
+            os.remove('./param/aspifile6/systol.json')
+            print("+ File systol.json deleted")
+    except FileNotFoundError as filefunc68:
+        print("+ File systol.json does not exist", filefunc68)
+
+    try:
+        if os.path.getsize('./param/aspifile6/temp.json'):
+            os.remove('./param/aspifile6/temp.json')
+            print("+ File temp.json deleted")
+    except FileNotFoundError as filefunc69:
+        print("+ File temp.json does not exist", filefunc69)
+
+    try:
         if os.path.getsize('./calBmi/doc_BMI6/file_bmi.json'):
             os.remove('./calBmi/doc_BMI6/file_bmi.json')
             print("+ File file_bmi.json deleted")

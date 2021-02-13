@@ -1,28 +1,14 @@
-Date : 02-02-2021
-Heure : 17:01:15
-Prenom et Nom : Pierre Weck
-Poids : 55
-Taille : 1.33
-BMI : 31.093
+Date : 10-02-2021
+Heure : 23:27:31
+Prenom et Nom : Beatrice Dalle
+Poids : 73
+Taille : 1.86
+BMI : 21.101
 
-Date : 02-02-2021
-Heure : 18:40:59
-Prenom et Nom : Pierre Weck
+Date : 13-02-2021
+Heure : 23:28:05
+Prenom et Nom : Beatrice Dalle
 Poids : 75
 Taille : 1.86
 BMI : 21.679
-
-Date : 02-03-2021
-Heure : 18:44:49
-Prenom et Nom : Pierre Weck
-Poids : 89
-Taille : 1.87
-BMI : 25.451
-
-Date : 02-02-2021
-Heure : 18:58:21
-Prenom et Nom : Pierre Weck
-Poids : 78
-Taille : 1.88
-BMI : 22.069
 

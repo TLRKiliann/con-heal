@@ -1,0 +1,17 @@
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
+
+En date du : 12/02/2021 à 19:42:05 :
+Patient name : Erika Galadova
++ Surveillance du sommeil requise
+Assurer un passage aux heure durant la nuit
++ Surveillance pour éviter les dangers requise
+Rappeler à Me d'éviter de mélanger avec les ttt
++ Surveillance ou aide pour l'habillage/déshabillage requise
+Aide au déshabillage
+---
+
+
+En date du : 11/02/2021 à 19:44:00 :
+Discuté avec Me cette apm sur la drogue.
+Madame n'est pas contente de la qualité des sub acturl.
+

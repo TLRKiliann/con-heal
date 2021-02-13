@@ -8,8 +8,8 @@ import shutil
 
 def loaderfile():
     try:
-        if os.path.exists('./Backup/Files1/Backup_patient.txt'):
-            shutil.copy('./Backup/Files1/Backup_patient.txt',
+        if os.path.exists('./Backup/Files1/entryfile.txt'):
+            shutil.copy('./Backup/Files1/entryfile.txt',
                 './newpatient/entryfile.txt')
             print("+ entryfile 1 copied")
     except FileNotFoundError as nf_file:
@@ -18,8 +18,8 @@ def loaderfile():
 
 def loadernext():
     try:
-        if os.path.exists('./Backup/Files2/Backup_patient2.txt'):
-            shutil.copy('./Backup/Files2/Backup_patient2.txt',
+        if os.path.exists('./Backup/Files2/entryfile2.txt'):
+            shutil.copy('./Backup/Files2/entryfile2.txt',
                 './newpatient/entryfile2.txt')
             print("+ entryfile 2 copied")
     except FileNotFoundError as nf_file2:
@@ -28,8 +28,8 @@ def loadernext():
 
 def nextload():
     try:
-        if os.path.exists('./Backup/Files3/Backup_patient3.txt'):
-            shutil.copy('./Backup/Files3/Backup_patient3.txt',
+        if os.path.exists('./Backup/Files3/entryfile3.txt'):
+            shutil.copy('./Backup/Files3/entryfile3.txt',
                 './newpatient/entryfile3.txt')
             print("+ entryfile 3 copied")
     except FileNotFoundError as nf_file3:
@@ -38,8 +38,8 @@ def nextload():
 
 def secondload():
     try:
-        if os.path.exists('./Backup/Files4/Backup_patient4.txt'):
-            shutil.copy('./Backup/Files4/Backup_patient4.txt',
+        if os.path.exists('./Backup/Files4/entryfile4.txt'):
+            shutil.copy('./Backup/Files4/entryfile4.txt',
                 './newpatient/entryfile4.txt')
             print("+ entryfile 4 copied")
     except FileNotFoundError as nf_file4:
@@ -48,8 +48,8 @@ def secondload():
 
 def thirdnextload():
     try:
-        if os.path.exists('./Backup/Files5/Backup_patient5.txt'):
-            shutil.copy('./Backup/Files5/Backup_patient5.txt',
+        if os.path.exists('./Backup/Files5/entryfile5.txt'):
+            shutil.copy('./Backup/Files5/entryfile5.txt',
                 './newpatient/entryfile5.txt')
             print("+ entryfile 5 copied")
     except FileNotFoundError as nf_file5:
@@ -58,8 +58,8 @@ def thirdnextload():
 
 def fourthload():
     try:
-        if os.path.exists('./Backup/Files6/Backup_patient6.txt'):
-            shutil.copy('./Backup/Files6/Backup_patient6.txt',
+        if os.path.exists('./Backup/Files6/entryfile6.txt'):
+            shutil.copy('./Backup/Files6/entryfile6.txt',
                 './newpatient/entryfile6.txt')
             print("+ entryfile 6 copied")
     except FileNotFoundError as nf_file6:
@@ -68,8 +68,8 @@ def fourthload():
 
 def nextload5():
     try:
-        if os.path.exists('./Backup/Files7/Backup_patient7.txt'):
-            shutil.copy('./Backup/Files7/Backup_patient7.txt',
+        if os.path.exists('./Backup/Files7/entryfile7.txt'):
+            shutil.copy('./Backup/Files7/entryfile7.txt',
                 './newpatient/entryfile7.txt')
             print("+ entryfile 7 copied")
     except FileNotFoundError as nf_file7:
@@ -78,8 +78,8 @@ def nextload5():
 
 def nextload6():
     try:
-        if os.path.exists('./Backup/Files8/Backup_patient8.txt'):
-            shutil.copy('./Backup/Files8/Backup_patient8.txt',
+        if os.path.exists('./Backup/Files8/entryfile8.txt'):
+            shutil.copy('./Backup/Files8/entryfile8.txt',
                 './newpatient/entryfile8.txt')
             print("+ entryfile 8 copied")
     except FileNotFoundError as nf_file8:
@@ -88,8 +88,8 @@ def nextload6():
 
 def nextload7():
     try:
-        if os.path.exists('./Backup/Files9/Backup_patient9.txt'):
-            shutil.copy('./Backup/Files9/Backup_patient9.txt',
+        if os.path.exists('./Backup/Files9/entryfile9.txt'):
+            shutil.copy('./Backup/Files9/entryfile9.txt',
                 './newpatient/entryfile9.txt')
             print("+ entryfile 9 copied")
     except FileNotFoundError as nf_file9:
@@ -98,8 +98,8 @@ def nextload7():
 
 def nextload8():
     try:
-        if os.path.exists('./Backup/Files10/Backup_patient10.txt'):
-            shutil.copy('./Backup/Files10/Backup_patient10.txt',
+        if os.path.exists('./Backup/Files10/entryfile10.txt'):
+            shutil.copy('./Backup/Files10/entryfile10.txt',
                 './newpatient/entryfile10.txt')
             print("+ entryfile 10 copied")
     except FileNotFoundError as nf_file10:
@@ -108,8 +108,8 @@ def nextload8():
 
 def nextload9():
     try:
-        if os.path.exists('./Backup/Files11/Backup_patient11.txt'):
-            shutil.copy('./Backup/Files11/Backup_patient11.txt',
+        if os.path.exists('./Backup/Files11/entryfile11.txt'):
+            shutil.copy('./Backup/Files11/entryfile11.txt',
                 './newpatient/entryfile11.txt')
             print("+ entryfile 11 copied")
     except FileNotFoundError as nf_file11:
@@ -118,8 +118,8 @@ def nextload9():
 
 def nextload10():
     try:
-        if os.path.exists('./Backup/Files12/Backup_patient12.txt'):
-            shutil.copy('./Backup/Files12/Backup_patient12.txt',
+        if os.path.exists('./Backup/Files12/entryfile12.txt'):
+            shutil.copy('./Backup/Files12/entryfile12.txt',
                 './newpatient/entryfile12.txt')
             print("+ entryfile 12 copied")
     except FileNotFoundError as nf_file12:
@@ -128,8 +128,8 @@ def nextload10():
 
 def eleventhload():
     try:
-        if os.path.exists('./Backup/Files13/Backup_patient13.txt'):
-            shutil.copy('./Backup/Files13/Backup_patient13.txt',
+        if os.path.exists('./Backup/Files13/entryfile13.txt'):
+            shutil.copy('./Backup/Files13/entryfile13.txt',
                 './newpatient/entryfile13.txt')
             print("+ entryfile 13 copied")
     except FileNotFoundError as nf_file13:
@@ -138,8 +138,8 @@ def eleventhload():
 
 def twelvethload():
     try:
-        if os.path.exists('./Backup/Files14/Backup_patient14.txt'):
-            shutil.copy('./Backup/Files14/Backup_patient14.txt',
+        if os.path.exists('./Backup/Files14/entryfile14.txt'):
+            shutil.copy('./Backup/Files14/entryfile14.txt',
                 './newpatient/entryfile14.txt')
             print("+ entryfile 14 copied")
     except FileNotFoundError as nf_file14:
@@ -148,8 +148,8 @@ def twelvethload():
 
 def fourteenload():
     try:
-        if os.path.exists('./Backup/Files15/Backup_patient15.txt'):
-            shutil.copy('./Backup/Files15/Backup_patient15.txt',
+        if os.path.exists('./Backup/Files15/entryfile15.txt'):
+            shutil.copy('./Backup/Files15/entryfile15.txt',
                 './newpatient/entryfile15.txt')
             print("+ entryfile 15 copied")
     except FileNotFoundError as nf_file15:
@@ -158,8 +158,8 @@ def fourteenload():
 
 def fiveteenload():
     try:
-        if os.path.exists('./Backup/Files16/Backup_patient16.txt'):
-            shutil.copy('./Backup/Files16/Backup_patient16.txt',
+        if os.path.exists('./Backup/Files16/entryfile16.txt'):
+            shutil.copy('./Backup/Files16/entryfile16.txt',
                 './newpatient/entryfile16.txt')
             print("+ entryfile 16 copied")
     except FileNotFoundError as nf_file16:
@@ -168,8 +168,8 @@ def fiveteenload():
 
 def afterload():
     try:
-        if os.path.exists('./Backup/Files17/Backup_patient17.txt'):
-            shutil.copy('./Backup/Files17/Backup_patient17.txt',
+        if os.path.exists('./Backup/Files17/entryfile17.txt'):
+            shutil.copy('./Backup/Files17/entryfile17.txt',
                 './newpatient/entryfile17.txt')
             print("+ entryfile 17 copied")
     except FileNotFoundError as nf_file17:
@@ -178,8 +178,8 @@ def afterload():
 
 def loadingforever():
     try:
-        if os.path.exists('./Backup/Files18/Backup_patient18.txt'):
-            shutil.copy('./Backup/Files18/Backup_patient18.txt',
+        if os.path.exists('./Backup/Files18/entryfile18.txt'):
+            shutil.copy('./Backup/Files18/entryfile18.txt',
                 './newpatient/entryfile18.txt')
             print("+ entryfile 18 copied")
     except FileNotFoundError as nf_file18:
@@ -188,8 +188,8 @@ def loadingforever():
 
 def neverload():
     try:
-        if os.path.exists('./Backup/Files19/Backup_patient19.txt'):
-            shutil.copy('./Backup/Files19/Backup_patient19.txt',
+        if os.path.exists('./Backup/Files19/entryfile19.txt'):
+            shutil.copy('./Backup/Files19/entryfile19.txt',
                 './newpatient/entryfile19.txt')
             print("+ entryfile 19 copied")
     except FileNotFoundError as nf_file19:
@@ -198,8 +198,8 @@ def neverload():
 
 def twentyload():
     try:
-        if os.path.exists('./Backup/Files20/Backup_patient20.txt'):
-            shutil.copy('./Backup/Files20/Backup_patient20.txt',
+        if os.path.exists('./Backup/Files20/entryfile20.txt'):
+            shutil.copy('./Backup/Files20/entryfile20.txt',
                 './newpatient/entryfile20.txt')
             print("+ entryfile 20 copied")
     except FileNotFoundError as nf_file20:
@@ -208,8 +208,8 @@ def twentyload():
 
 def aftertwenty():
     try:
-        if os.path.exists('./Backup/Files21/Backup_patient21.txt'):
-            shutil.copy('./Backup/Files21/Backup_patient21.txt',
+        if os.path.exists('./Backup/Files21/entryfile21.txt'):
+            shutil.copy('./Backup/Files21/entryfile21.txt',
                 './newpatient/entryfile21.txt')
             print("+ entryfile 21 copied")
     except FileNotFoundError as nf_file21:
@@ -218,8 +218,8 @@ def aftertwenty():
 
 def twentytwoload():
     try:
-        if os.path.exists('./Backup/Files22/Backup_patient22.txt'):
-            shutil.copy('./Backup/Files22/Backup_patient22.txt',
+        if os.path.exists('./Backup/Files22/entryfile22.txt'):
+            shutil.copy('./Backup/Files22/entryfile22.txt',
                 './newpatient/entryfile22.txt')
             print("+ entryfile 22 copied")
     except FileNotFoundError as nf_file22:
@@ -228,8 +228,8 @@ def twentytwoload():
 
 def twentythreeload():
     try:
-        if os.path.exists('./Backup/Files23/Backup_patient23.txt'):
-            shutil.copy('./Backup/Files23/Backup_patient23.txt',
+        if os.path.exists('./Backup/Files23/entryfile23.txt'):
+            shutil.copy('./Backup/Files23/entryfile23.txt',
                 './newpatient/entryfile23.txt')
             print("+ entryfile 23 copied")
     except FileNotFoundError as nf_file23:
@@ -238,8 +238,8 @@ def twentythreeload():
 
 def backload():
     try:
-        if os.path.exists('./Backup/Files24/Backup_patient24.txt'):
-            shutil.copy('./Backup/Files24/Backup_patient24.txt',
+        if os.path.exists('./Backup/Files24/entryfile24.txt'):
+            shutil.copy('./Backup/Files24/entryfile24.txt',
                 './newpatient/entryfile24.txt')
             print("+ entryfile 24 copied")
     except FileNotFoundError as nf_file24:

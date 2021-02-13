@@ -1,5 +1,1 @@
-Pierre Weck
-07/09/1989
-Latex
-None
-Diagnostic (main)
+-

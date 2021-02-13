@@ -1,60 +1,19 @@
 ---####-|--- Affichage des besoins du patient à surveiller ---|-####---
 
-En date du : 03/02/2021 à 13:09:07 :
-Patient name : Pablo Escobar
-+ Stimulation ou aide pour la communication requise
-Un truc pour marquer un truc (sinon faire un truc)
+En date du : 13/02/2021 à 23:12:58 :
+Patient name : Beatrice Dalle
++ Surveillance du sommeil requise
+Truc 1
++ Surveillance pour éviter les dangers requise
+Truc 2
 ---
 
 
+En date du : 13/02/2021 à 23:13:21 :
 
 ***************************************************************************
-Date : 30/01/2021
-Patient name : Pierre Weck
-pH : 8
-Leuco : 0
-Nit : -
-Pro : neg
-Glu : neg
-Ket : neg
-Ery : neg
-Hb : neg
-
-***************************************************************************
-
-
-***************************************************************************
-Date : 30/01/2021
-Patient name : Pierre Weck
-pH : 6
-Leuco : 0
-Nit : -
-Pro : neg
-Glu : neg
-Ket : neg
-Ery : neg
-Hb : neg
-
-***************************************************************************
-
-----------------------------------------------------------
-Date : 30/01/2021
-Patient name : Pierre Weck
-# Risperdal : 30/01/2021 checked
-# Serdolect : 30/01/2021 checked
----------------------------------------------------------
-
-----------------------------------------------------------
-Date : 31/01/2021
-Patient name : Pierre Weck
-# Solian : 31/01/2021 checked
-# Tiapridal : 31/01/2021 checked
----------------------------------------------------------
-
-
-***************************************************************************
-Date : 31/01/2021
-Patient name : Pierre Weck
+Date : 13/02/2021
+Patient name : Beatrice Dalle
 pH : 5
 Leuco : +3
 Nit : +
@@ -62,51 +21,61 @@ Pro : neg
 Glu : neg
 Ket : neg
 Ery : neg
-Hb : +3
-
-***************************************************************************
-
-
-***************************************************************************
-Date : 31/01/2021
-Patient name : Pierre Weck
-pH : 5
-Leuco : 0
-Nit : -
-Pro : neg
-Glu : neg
-Ket : neg
-Ery : neg
-Hb : neg
-***************************************************************************
-
-
-
-En date du : 04/02/2021 à 00:01:38 :
-
-***************************************************************************
-Date : 04/02/2021
-Patient name : Pierre Weck
-pH : 5
-Leuco : +3
-Nit : +
-Pro : neg
-Glu : neg
-Ket : neg
-Ery : +2
 Hb : +1
+Appelé le Dr qui prescrit 1x/j ATB pdt 7 j
 ***************************************************************************
 
 ----------------------------------------------------------
-Date : 04/02/2021
-Patient name : Pierre Weck
-# Sabril : 04/02/2021 agendé pour le 05/02/21
-# Topamax : 04/02/2021 checked agendé pour le 05/02/21
+Date : 13/02/2021
+Patient name : Beatrice Dalle
+# Invega : 13/02/2021 agendé au ...
+# Tiapridal : 13/02/2021 agendé au ...
 ---------------------------------------------------------
 
 
 
-En date du : 04/02/2021 à 11:27:46 :
-Suite au stix le médecin préconise l'intro d'ATB...
-du au...  3x/j pdt 7j
+En date du : 13/02/2021 à 23:17:48 :
+Nous avons discuté de ce qui se passe en ce moment avec la patiente.
+Nous sommes tous d'avis à faire une hospitalisation en cas de récidive en cas de comportements inadaptés.
+
+En date du : 13/02/2021 à 23:19:23 :
+Voici le compte rendu de la Dr X que nous avons reçu par e-mail :
+jdklajDKLSAJLKDJlkJDKLJASKLJDKLJjfléajféej
+efiopwjeqpjfèpjkqèpfjkqpofpoqjkopkqfoekwqfèqkwfeèkqwf
+049350'1238945éqkjeékqjweàéerjkqàémfléaMKFÀW$ÀQWEKLÀÉ
+
+
+En date du : 13/02/2021 à 23:20:20 :
+----------------------------------------------------------
+Date : 13/02/2021
+Patient name : Beatrice Dalle
+# Sabril : 13/02/2021 checked
+# Taloxa : 13/02/2021 checked
+Dosage à faire le plus rapidement possible.
+---------------------------------------------------------
+
+
+
+En date du : 13/02/2021 à 23:21:33 :
+un truc ou 2 de plus....
+ça fait pas de mal ...
+
+
+En date du : 13/02/2021 à 23:22:05 :
+
+***************************************************************************
+Date : 13/02/2021
+Patient name : Beatrice Dalle
+pH : 5
+Leuco : +3
+Nit : +
+Pro : neg
+Glu : neg
+Ket : neg
+Ery : neg
+Hb : +1
+Voili, voilà....
+***************************************************************************
+
+
 

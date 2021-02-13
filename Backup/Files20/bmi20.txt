@@ -1,0 +1,21 @@
+Date : 10-02-2021
+Heure : 21:46:27
+Prenom et Nom : Vino Aglianico
+Poids : 66
+Taille : 1.67
+BMI : 23.665
+
+Date : 10-02-2021
+Heure : 23:17:26
+Prenom et Nom : Vino Aglianico
+Poids : 75.5
+Taille : 1.76
+BMI : 24.374
+
+Date : 11-02-2021
+Heure : 23:17:26
+Prenom et Nom : Vino Aglianico
+Poids : 74
+Taille : 1.76
+BMI : 23.889
+

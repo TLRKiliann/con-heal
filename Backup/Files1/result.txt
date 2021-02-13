@@ -1,59 +1,30 @@
 
 
 ***************************************************************************
-Date : 30/01/2021
-Patient name : Pierre WeckpH : 8 Leuco : 0 Nit : - Pro : neg Glu : neg Ket : neg Ery : neg Hb : neg
-***************************************************************************
-
-
-
-***************************************************************************
-Date : 30/01/2021
-Patient name : Pierre WeckpH : 6 Leuco : 0 Nit : - Pro : neg Glu : neg Ket : neg Ery : neg Hb : neg
+Date : 13/02/2021
+Patient name : Beatrice DallepH : 5 Leuco : +3 Nit : + Pro : neg Glu : neg Ket : neg Ery : neg Hb : +1
 ***************************************************************************
 
 
 ---------------------------------------------------------
-Date : 30/01/2021
-Patient name : Pierre Weck
-# Risperdal : 30/01/2021 checked
-# Serdolect : 30/01/2021 checked
+Date : 13/02/2021
+Patient name : Beatrice Dalle
+# Invega : 13/02/2021 checked
+# Tiapridal : 13/02/2021 checked
 ---------------------------------------------------------
 
 
 ---------------------------------------------------------
-Date : 31/01/2021
-Patient name : Pierre Weck
-# Solian : 31/01/2021 checked
-# Tiapridal : 31/01/2021 checked
+Date : 13/02/2021
+Patient name : Beatrice Dalle
+# Sabril : 13/02/2021 checked
+# Taloxa : 13/02/2021 checked
 ---------------------------------------------------------
 
 
 
 ***************************************************************************
-Date : 31/01/2021
-Patient name : Pierre WeckpH : 5 Leuco : +3 Nit : + Pro : neg Glu : neg Ket : neg Ery : neg Hb : +3
+Date : 13/02/2021
+Patient name : Beatrice DallepH : 5 Leuco : +3 Nit : + Pro : neg Glu : neg Ket : neg Ery : neg Hb : +1
 ***************************************************************************
-
-
-
-***************************************************************************
-Date : 31/01/2021
-Patient name : Pierre WeckpH : 5 Leuco : 0 Nit : - Pro : neg Glu : neg Ket : neg Ery : neg Hb : neg
-***************************************************************************
-
-
-
-***************************************************************************
-Date : 04/02/2021
-Patient name : Pierre WeckpH : 5 Leuco : +3 Nit : + Pro : neg Glu : neg Ket : neg Ery : +2 Hb : +1
-***************************************************************************
-
-
----------------------------------------------------------
-Date : 04/02/2021
-Patient name : Pierre Weck
-# Sabril : 04/02/2021 checked
-# Topamax : 04/02/2021 checked
----------------------------------------------------------
 

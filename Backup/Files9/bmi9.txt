@@ -1,0 +1,14 @@
+Date : 12-01-2021
+Heure : 19:27:43
+Prenom et Nom : Erika Galadova
+Poids : 55
+Taille : 1.71
+BMI : 18.809
+
+Date : 12-02-2021
+Heure : 19:29:34
+Prenom et Nom : Erika Galadova
+Poids : 53
+Taille : 1.71
+BMI : 18.125
+

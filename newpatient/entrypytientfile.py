@@ -6,6 +6,7 @@ from tkinter import *
 import tkinter as tk
 from tkinter import messagebox
 import os
+import subprocess
 try:
     import pymysql
     pymysql.install_as_MySQLdb()
@@ -68,6 +69,18 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Allergia + '\n')
                 namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
+
+            proc = subprocess.run(["scp", './newpatient/entryfile.txt',
+                "pi@192.168.18.12:~/tt_doc/doc_txt1/Files1/entryfile.txt"],
+                stderr=subprocess.PIPE)
+            print("Result SCP transfert : %s" % repr(proc.stderr))
+            if proc.stderr == b'':
+                print("+ File entryfile.txt uploaded !")
+                #messagebox.showinfo("INFO", "entryfile.txt uploaded...")
+            else:
+                print("+ No file to upload !")
+                messagebox.showerror("Error", "No entryfile.txt to upload...")
+
             if os.path.getsize('./newpatient/entryfile.txt'):
                 return
 
@@ -83,6 +96,18 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Allergia + '\n')
                 namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
+
+            proc = subprocess.run(["scp", './newpatient/entryfile2.txt',
+                "pi@192.168.18.12:~/tt_doc/doc_txt2/Files2/entryfile2.txt"],
+                stderr=subprocess.PIPE)
+            print("Result SCP transfert : %s" % repr(proc.stderr))
+            if proc.stderr == b'':
+                print("+ File entryfile2.txt uploaded !")
+                #messagebox.showinfo("INFO", "entryfile2.txt uploaded...")
+            else:
+                print("+ No file to upload !")
+                messagebox.showerror("Error", "No entryfile2.txt to upload...")
+
             if os.path.getsize('./newpatient/entryfile2.txt'):
                 return
 
@@ -98,6 +123,18 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Allergia + '\n')
                 namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
+
+            proc = subprocess.run(["scp", './newpatient/entryfile3.txt',
+                "pi@192.168.18.12:~/tt_doc/doc_txt3/Files3/entryfile3.txt"],
+                stderr=subprocess.PIPE)
+            print("Result SCP transfert : %s" % repr(proc.stderr))
+            if proc.stderr == b'':
+                print("+ File entryfile3.txt uploaded !")
+                #messagebox.showinfo("INFO", "entryfile3.txt uploaded...")
+            else:
+                print("+ No file to upload !")
+                messagebox.showerror("Error", "No entryfile3.txt to upload...")
+
             if os.path.getsize('./newpatient/entryfile3.txt'):
                 return
 
@@ -113,6 +150,18 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Allergia + '\n')
                 namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
+
+            proc = subprocess.run(["scp", './newpatient/entryfile4.txt',
+                "pi@192.168.18.12:~/tt_doc/doc_txt4/Files4/entryfile4.txt"],
+                stderr=subprocess.PIPE)
+            print("Result SCP transfert : %s" % repr(proc.stderr))
+            if proc.stderr == b'':
+                print("+ File entryfile4.txt uploaded !")
+                #messagebox.showinfo("INFO", "entryfile4.txt uploaded...")
+            else:
+                print("+ No file to upload !")
+                messagebox.showerror("Error", "No entryfile4.txt to upload...")
+
             if os.path.getsize('./newpatient/entryfile4.txt'):
                 return
 
@@ -128,6 +177,18 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Allergia + '\n')
                 namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
+
+            proc = subprocess.run(["scp", './newpatient/entryfile5.txt',
+                "pi@192.168.18.12:~/tt_doc/doc_txt5/Files5/entryfile5.txt"],
+                stderr=subprocess.PIPE)
+            print("Result SCP transfert : %s" % repr(proc.stderr))
+            if proc.stderr == b'':
+                print("+ File entryfile5.txt uploaded !")
+                #messagebox.showinfo("INFO", "entryfile5.txt uploaded...")
+            else:
+                print("+ No file to upload !")
+                messagebox.showerror("Error", "No entryfile5.txt to upload...")
+
             if os.path.getsize('./newpatient/entryfile5.txt'):
                 return
 
@@ -143,6 +204,18 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Allergia + '\n')
                 namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
+
+            proc = subprocess.run(["scp", './newpatient/entryfile6.txt',
+                "pi@192.168.18.12:~/tt_doc/doc_txt6/Files6/entryfile6.txt"],
+                stderr=subprocess.PIPE)
+            print("Result SCP transfert : %s" % repr(proc.stderr))
+            if proc.stderr == b'':
+                print("+ File entryfile6.txt uploaded !")
+                #messagebox.showinfo("INFO", "entryfile6.txt uploaded...")
+            else:
+                print("+ No file to upload !")
+                messagebox.showerror("Error", "No entryfile6.txt to upload...")
+
             if os.path.getsize('./newpatient/entryfile6.txt'):
                 return
 
@@ -158,6 +231,18 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Allergia + '\n')
                 namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
+
+            proc = subprocess.run(["scp", './newpatient/entryfile7.txt',
+                "pi@192.168.18.12:~/tt_doc/doc_txt7/Files7/entryfile7.txt"],
+                stderr=subprocess.PIPE)
+            print("Result SCP transfert : %s" % repr(proc.stderr))
+            if proc.stderr == b'':
+                print("+ File entryfile7.txt uploaded !")
+                #messagebox.showinfo("INFO", "entryfile7.txt uploaded...")
+            else:
+                print("+ No file to upload !")
+                messagebox.showerror("Error", "No entryfile7.txt to upload...")
+
             if os.path.getsize('./newpatient/entryfile7.txt'):
                 return
 
@@ -173,6 +258,18 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Allergia + '\n')
                 namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
+
+            proc = subprocess.run(["scp", './newpatient/entryfile8.txt',
+                "pi@192.168.18.12:~/tt_doc/doc_txt8/Files8/entryfile8.txt"],
+                stderr=subprocess.PIPE)
+            print("Result SCP transfert : %s" % repr(proc.stderr))
+            if proc.stderr == b'':
+                print("+ File entryfile8.txt uploaded !")
+                #messagebox.showinfo("INFO", "entryfile8.txt uploaded...")
+            else:
+                print("+ No file to upload !")
+                messagebox.showerror("Error", "No entryfile8.txt to upload...")
+
             if os.path.getsize('./newpatient/entryfile8.txt'):
                 return
 
@@ -188,6 +285,18 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Allergia + '\n')
                 namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
+
+            proc = subprocess.run(["scp", './newpatient/entryfile9.txt',
+                "pi@192.168.18.12:~/tt_doc/doc_txt9/Files9/entryfile9.txt"],
+                stderr=subprocess.PIPE)
+            print("Result SCP transfert : %s" % repr(proc.stderr))
+            if proc.stderr == b'':
+                print("+ File entryfile9.txt uploaded !")
+                #messagebox.showinfo("INFO", "entryfile9.txt uploaded...")
+            else:
+                print("+ No file to upload !")
+                messagebox.showerror("Error", "No entryfile9.txt to upload...")
+
             if os.path.getsize('./newpatient/entryfile9.txt'):
                 return
 
@@ -203,6 +312,18 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Allergia + '\n')
                 namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
+
+            proc = subprocess.run(["scp", './newpatient/entryfile10.txt',
+                "pi@192.168.18.12:~/tt_doc/doc_txt10/Files10/entryfile10.txt"],
+                stderr=subprocess.PIPE)
+            print("Result SCP transfert : %s" % repr(proc.stderr))
+            if proc.stderr == b'':
+                print("+ File entryfile10.txt uploaded !")
+                #messagebox.showinfo("INFO", "entryfile10.txt uploaded...")
+            else:
+                print("+ No file to upload !")
+                messagebox.showerror("Error", "No entryfile10.txt to upload...")
+
             if os.path.getsize('./newpatient/entryfile10.txt'):
                 return
 
@@ -218,6 +339,18 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Allergia + '\n')
                 namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
+
+            proc = subprocess.run(["scp", './newpatient/entryfile11.txt',
+                "pi@192.168.18.12:~/tt_doc/doc_txt11/Files11/entryfile11.txt"],
+                stderr=subprocess.PIPE)
+            print("Result SCP transfert : %s" % repr(proc.stderr))
+            if proc.stderr == b'':
+                print("+ File entryfile11.txt uploaded !")
+                #messagebox.showinfo("INFO", "entryfile11.txt uploaded...")
+            else:
+                print("+ No file to upload !")
+                messagebox.showerror("Error", "No entryfile11.txt to upload...")
+
             if os.path.getsize('./newpatient/entryfile11.txt'):
                 return
 
@@ -233,6 +366,18 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Allergia + '\n')
                 namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
+
+            proc = subprocess.run(["scp", './newpatient/entryfile12.txt',
+                "pi@192.168.18.12:~/tt_doc/doc_txt12/Files12/entryfile12.txt"],
+                stderr=subprocess.PIPE)
+            print("Result SCP transfert : %s" % repr(proc.stderr))
+            if proc.stderr == b'':
+                print("+ File entryfile12.txt uploaded !")
+                #messagebox.showinfo("INFO", "entryfile12.txt uploaded...")
+            else:
+                print("+ No file to upload !")
+                messagebox.showerror("Error", "No entryfile12.txt to upload...")
+
             if os.path.getsize('./newpatient/entryfile12.txt'):
                 return
 
@@ -248,6 +393,18 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Allergia + '\n')
                 namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
+
+            proc = subprocess.run(["scp", './newpatient/entryfile13.txt',
+                "pi@192.168.18.12:~/tt_doc/doc_txt13/Files13/entryfile13.txt"],
+                stderr=subprocess.PIPE)
+            print("Result SCP transfert : %s" % repr(proc.stderr))
+            if proc.stderr == b'':
+                print("+ File entryfile13.txt uploaded !")
+                #messagebox.showinfo("INFO", "entryfile13.txt uploaded...")
+            else:
+                print("+ No file to upload !")
+                messagebox.showerror("Error", "No entryfile13.txt to upload...")
+
             if os.path.getsize('./newpatient/entryfile13.txt'):
                 return
 
@@ -263,6 +420,18 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Allergia + '\n')
                 namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
+
+            proc = subprocess.run(["scp", './newpatient/entryfile14.txt',
+                "pi@192.168.18.12:~/tt_doc/doc_txt14/Files14/entryfile14.txt"],
+                stderr=subprocess.PIPE)
+            print("Result SCP transfert : %s" % repr(proc.stderr))
+            if proc.stderr == b'':
+                print("+ File entryfile14.txt uploaded !")
+                #messagebox.showinfo("INFO", "entryfile14.txt uploaded...")
+            else:
+                print("+ No file to upload !")
+                messagebox.showerror("Error", "No entryfile14.txt to upload...")
+
             if os.path.getsize('./newpatient/entryfile14.txt'):
                 return
 
@@ -278,6 +447,18 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Allergia + '\n')
                 namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
+
+            proc = subprocess.run(["scp", './newpatient/entryfile15.txt',
+                "pi@192.168.18.12:~/tt_doc/doc_txt15/Files15/entryfile15.txt"],
+                stderr=subprocess.PIPE)
+            print("Result SCP transfert : %s" % repr(proc.stderr))
+            if proc.stderr == b'':
+                print("+ File entryfile15.txt uploaded !")
+                #messagebox.showinfo("INFO", "entryfile15.txt uploaded...")
+            else:
+                print("+ No file to upload !")
+                messagebox.showerror("Error", "No entryfile15.txt to upload...")
+
             if os.path.getsize('./newpatient/entryfile15.txt'):
                 return
 
@@ -293,6 +474,18 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Allergia + '\n')
                 namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
+
+            proc = subprocess.run(["scp", './newpatient/entryfile16.txt',
+                "pi@192.168.18.12:~/tt_doc/doc_txt16/Files16/entryfile16.txt"],
+                stderr=subprocess.PIPE)
+            print("Result SCP transfert : %s" % repr(proc.stderr))
+            if proc.stderr == b'':
+                print("+ File entryfile16.txt uploaded !")
+                #messagebox.showinfo("INFO", "entryfile16.txt uploaded...")
+            else:
+                print("+ No file to upload !")
+                messagebox.showerror("Error", "No entryfile16.txt to upload...")
+
             if os.path.getsize('./newpatient/entryfile16.txt'):
                 return
 
@@ -308,6 +501,18 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Allergia + '\n')
                 namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
+
+            proc = subprocess.run(["scp", './newpatient/entryfile17.txt',
+                "pi@192.168.18.12:~/tt_doc/doc_txt17/Files17/entryfile17.txt"],
+                stderr=subprocess.PIPE)
+            print("Result SCP transfert : %s" % repr(proc.stderr))
+            if proc.stderr == b'':
+                print("+ File entryfile17.txt uploaded !")
+                #messagebox.showinfo("INFO", "entryfile17.txt uploaded...")
+            else:
+                print("+ No file to upload !")
+                messagebox.showerror("Error", "No entryfile17.txt to upload...")
+
             if os.path.getsize('./newpatient/entryfile17.txt'):
                 return
 
@@ -323,6 +528,18 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Allergia + '\n')
                 namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
+
+            proc = subprocess.run(["scp", './newpatient/entryfile18.txt',
+                "pi@192.168.18.12:~/tt_doc/doc_txt18/Files18/entryfile18.txt"],
+                stderr=subprocess.PIPE)
+            print("Result SCP transfert : %s" % repr(proc.stderr))
+            if proc.stderr == b'':
+                print("+ File entryfile18.txt uploaded !")
+                #messagebox.showinfo("INFO", "entryfile18.txt uploaded...")
+            else:
+                print("+ No file to upload !")
+                messagebox.showerror("Error", "No entryfile18.txt to upload...")
+
             if os.path.getsize('./newpatient/entryfile18.txt'):
                 return
 
@@ -338,6 +555,18 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Allergia + '\n')
                 namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
+
+            proc = subprocess.run(["scp", './newpatient/entryfile19.txt',
+                "pi@192.168.18.12:~/tt_doc/doc_txt19/Files19/entryfile19.txt"],
+                stderr=subprocess.PIPE)
+            print("Result SCP transfert : %s" % repr(proc.stderr))
+            if proc.stderr == b'':
+                print("+ File entryfile19.txt uploaded !")
+                #messagebox.showinfo("INFO", "entryfile19.txt uploaded...")
+            else:
+                print("+ No file to upload !")
+                messagebox.showerror("Error", "No entryfile19.txt to upload...")
+
             if os.path.getsize('./newpatient/entryfile19.txt'):
                 return
 
@@ -353,6 +582,18 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Allergia + '\n')
                 namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
+
+            proc = subprocess.run(["scp", './newpatient/entryfile20.txt',
+                "pi@192.168.18.12:~/tt_doc/doc_txt20/Files20/entryfile20.txt"],
+                stderr=subprocess.PIPE)
+            print("Result SCP transfert : %s" % repr(proc.stderr))
+            if proc.stderr == b'':
+                print("+ File entryfile20.txt uploaded !")
+                #messagebox.showinfo("INFO", "entryfile20.txt uploaded...")
+            else:
+                print("+ No file to upload !")
+                messagebox.showerror("Error", "No entryfile20.txt to upload...")
+
             if os.path.getsize('./newpatient/entryfile20.txt'):
                 return
 
@@ -368,6 +609,18 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Allergia + '\n')
                 namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
+
+            proc = subprocess.run(["scp", './newpatient/entryfile21.txt',
+                "pi@192.168.18.12:~/tt_doc/doc_txt21/Files21/entryfile21.txt"],
+                stderr=subprocess.PIPE)
+            print("Result SCP transfert : %s" % repr(proc.stderr))
+            if proc.stderr == b'':
+                print("+ File entryfile21.txt uploaded !")
+                #messagebox.showinfo("INFO", "entryfile21.txt uploaded...")
+            else:
+                print("+ No file to upload !")
+                messagebox.showerror("Error", "No entryfile21.txt to upload...")
+
             if os.path.getsize('./newpatient/entryfile21.txt'):
                 return
 
@@ -383,6 +636,18 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Allergia + '\n')
                 namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
+
+            proc = subprocess.run(["scp", './newpatient/entryfile22.txt',
+                "pi@192.168.18.12:~/tt_doc/doc_txt22/Files22/entryfile22.txt"],
+                stderr=subprocess.PIPE)
+            print("Result SCP transfert : %s" % repr(proc.stderr))
+            if proc.stderr == b'':
+                print("+ File entryfile22.txt uploaded !")
+                #messagebox.showinfo("INFO", "entryfile22.txt uploaded...")
+            else:
+                print("+ No file to upload !")
+                messagebox.showerror("Error", "No entryfile22.txt to upload...")
+
             if os.path.getsize('./newpatient/entryfile22.txt'):
                 return
 
@@ -398,6 +663,18 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Allergia + '\n')
                 namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
+
+            proc = subprocess.run(["scp", './newpatient/entryfile23.txt',
+                "pi@192.168.18.12:~/tt_doc/doc_txt23/Files23/entryfile23.txt"],
+                stderr=subprocess.PIPE)
+            print("Result SCP transfert : %s" % repr(proc.stderr))
+            if proc.stderr == b'':
+                print("+ File entryfile23.txt uploaded !")
+                #messagebox.showinfo("INFO", "entryfile23.txt uploaded...")
+            else:
+                print("+ No file to upload !")
+                messagebox.showerror("Error", "No entryfile23.txt to upload...")
+
             if os.path.getsize('./newpatient/entryfile23.txt'):
                 return
 
@@ -413,6 +690,18 @@ def get(IDpatient, Patient_num, Patientname, Firstname_pat, Surname, Sur_pat,
                 namefile.write(Allergia + '\n')
                 namefile.write(TransDisVal + '\n')
                 namefile.write(Diagnostic + '\n')
+
+            proc = subprocess.run(["scp", './newpatient/entryfile24.txt',
+                "pi@192.168.18.12:~/tt_doc/doc_txt24/Files24/entryfile24.txt"],
+                stderr=subprocess.PIPE)
+            print("Result SCP transfert : %s" % repr(proc.stderr))
+            if proc.stderr == b'':
+                print("+ File entryfile24.txt uploaded !")
+                #messagebox.showinfo("INFO", "entryfile24.txt uploaded...")
+            else:
+                print("+ No file to upload !")
+                messagebox.showerror("Error", "No entryfile24.txt to upload...")
+
             if os.path.getsize('./newpatient/entryfile24.txt'):
                 return
 

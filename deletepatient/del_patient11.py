@@ -19,15 +19,15 @@ def delFuncFile11():
         a test before removing files.
     """
     try:
-        if os.path.getsize('./14besoins/doc_suivi11/main_14b.txt'):
-            os.remove('./14besoins/doc_suivi11/main_14b.txt')
+        if os.path.getsize('./need/doc_suivi11/main_14b.txt'):
+            os.remove('./need/doc_suivi11/main_14b.txt')
             print("+ File main_14b.txt deleted")
     except FileNotFoundError as filefunc1:
         print("+ File main_14b.txt does not exist", filefunc1)
 
     try:
-        if os.path.getsize('./14besoins/doc_suivi11/patient11_14b.txt'):
-            os.remove('./14besoins/doc_suivi11/patient11_14b.txt')
+        if os.path.getsize('./need/doc_suivi11/patient11_14b.txt'):
+            os.remove('./need/doc_suivi11/patient11_14b.txt')
             print("+ File patient11_14b.txt deleted")
     except FileNotFoundError as filefunc2:
         print("+ File patient11_14b.txt does not exist", filefunc2)

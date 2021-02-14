@@ -10,6 +10,7 @@
 
 
 import os
+import subprocess
 import shutil
 
 
@@ -18,6 +19,17 @@ def delFuncFile14():
         This function delete all files with
         a test before removing files.
     """
+    backproc = subprocess.run(["scp", "-r", "./Backup/Files14",
+        "pi@192.168.18.12:~/tt_doc/doc_txt14/Backup14"],
+        stderr=subprocess.PIPE)
+    print("Result SCP transfert : %s" % repr(backproc.stderr))
+    if backproc.stderr == b'':
+        print("+ File Backup14 uploaded !")
+        #messagebox.showinfo("INFO", "entryfile8.txt uploaded...")
+    else:
+        print("+ No folder to upload !")
+        messagebox.showerror("Error", "No Backup14 to upload...")
+
     try:
         if os.path.getsize('./need/doc_suivi14/main_14b.txt'):
             os.remove('./need/doc_suivi14/main_14b.txt')

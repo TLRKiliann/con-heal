@@ -1,44 +1,22 @@
-Date : 13/02/2021
-Hour : 23:23:29
-Name and Surname : Beatrice Dalle
-TA : 120/90mmHg
-Puls : 88/min
+Date : 10/02/2021
+Hour : 00:36:46
+Name and Surname : Xavier Fonte
+TA : 125/98mmHg
+Puls : 78/min
 SaO2 : 99%
-FR : 17/min
-Temperature : 36.2°C
-Glycemie : 5.7 mmol/l
-Douleurs (Pain) : 0/10
-
-Date : 13/02/2021
-Hour : 23:23:29
-Name and Surname : Beatrice Dalle
-TA : 133/88mmHg
-Puls : 79/min
-SaO2 : 97%
-FR : 18/min
-Temperature : 36.6°C
-Glycemie : 6.3 mmol/l
-Douleurs (Pain) : 1/10
-
-Date : 14/02/2021
-Hour : 23:23:29
-Name and Surname : Beatrice Dalle
-TA : 125/97mmHg
-Puls : 88/min
-SaO2 : 99%
-FR : 15/min
-Temperature : 36.3°C
-Glycemie : 7.2 mmol/l
-Douleurs (Pain) : 0/10
-
-Date : 14/02/2021
-Hour : 23:30:29
-Name and Surname : Beatrice Dalle
-TA : 144/88mmHg
-Puls : 75/min
-SaO2 : 96%
 FR : 16/min
-Temperature : 36.2°C
-Glycemie : 7.0 mmol/l
+Temperature : 36.3°C
+Glycemie : 5.9 mmol/l
+Douleurs (Pain) : 0/10
+
+Date : 14/02/2021
+Hour : 00:37:29
+Name and Surname : Xavier Fonte
+TA : 133/77mmHg
+Puls : 89/min
+SaO2 : 97%
+FR : 17/min
+Temperature : 36.4°C
+Glycemie : 7.4 mmol/l
 Douleurs (Pain) : 1/10
 

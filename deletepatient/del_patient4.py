@@ -10,6 +10,7 @@
 
 
 import os
+import subprocess
 import shutil
 
 
@@ -18,6 +19,17 @@ def delFuncFile4():
         This function delete all files with
         a test before removing files.
     """
+    backproc = subprocess.run(["scp", "-r", "./Backup/Files4",
+        "pi@192.168.18.12:~/tt_doc/doc_txt4/Backup4"],
+        stderr=subprocess.PIPE)
+    print("Result SCP transfert : %s" % repr(backproc.stderr))
+    if backproc.stderr == b'':
+        print("+ File Backup4 uploaded !")
+        #messagebox.showinfo("INFO", "entryfile8.txt uploaded...")
+    else:
+        print("+ No folder to upload !")
+        messagebox.showerror("Error", "No Backup4 to upload...")
+
     try:
         if os.path.getsize('./need/doc_suivi4/main_14b.txt'):
             os.remove('./need/doc_suivi4/main_14b.txt')
@@ -221,6 +233,17 @@ def delFuncFile4():
             print("+ File entryfile4.txt reborn")
     except FileNotFoundError as filefunc19:
         print("+ File entryfile4.txt does not exist", filefunc19)
+
+    proc = subprocess.run(["scp", "./newpatient/entryfile4.txt",
+        "pi@192.168.18.12:~/tt_doc/doc_txt4/Files4/entryfile4.txt"],
+        stderr=subprocess.PIPE)
+    print("Result SCP transfert : %s" % repr(proc.stderr))
+    if proc.stderr == b'':
+        print("+ File entryfile4.txt uploaded !")
+        #messagebox.showinfo("INFO", "entryfile4.txt uploaded...")
+    else:
+        print("+ No file to upload !")
+        messagebox.showerror("Error", "No entryfile4.txt to upload...")
 
     try:
         if os.path.exists('./Backup/Files4/Backup_param4.txt'):

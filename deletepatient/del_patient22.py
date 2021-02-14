@@ -21,6 +21,28 @@ def delFuncFile22():
         This function delete all files with
         a test before removing files.
     """
+    backproc = subprocess.run(["scp", "-r", "./Backup/Files22",
+        "pi@192.168.18.12:~/tt_doc/doc_txt22/Backup22"],
+        stderr=subprocess.PIPE)
+    print("Result SCP transfert : %s" % repr(backproc.stderr))
+    if backproc.stderr == b'':
+        print("+ Backup22 done on server ! !")
+        messagebox.showinfo("INFO", "Backup22 done on server !")
+    else:
+        print("!!! No Backup22 done on server !!!")
+        messagebox.showerror("Error", "!!! No Backup22 done on server !!!")
+
+    delproc = subprocess.run(["ssh",
+        "pi@192.168.18.12", "rm -r ~/tt_doc/doc_txt22/Files22/*"],
+        stderr=subprocess.PIPE)
+    print("Result SCP transfert : %s" % repr(delproc.stderr))
+    if delproc.stderr == b'':
+        print("+ Files22 has been deleted on server !")
+        messagebox.showinfo("INFO", "Files22 has been deleted on server !")
+    else:
+        print("!!! Error", "Not deleted Files22 on server !!!")
+        messagebox.showerror("Error", "!!! Not deleted Files22 on server !!!")
+
     try:
         if os.path.getsize('./need/doc_suivi22/main_14b.txt'):
             os.remove('./need/doc_suivi22/main_14b.txt')

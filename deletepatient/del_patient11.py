@@ -26,11 +26,11 @@ def delFuncFile11():
         stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(backproc.stderr))
     if backproc.stderr == b'':
-        print("+ File Backup11 uploaded !")
-        #messagebox.showinfo("INFO", "entryfile8.txt uploaded...")
+        print("+ Backup11 done on server ! !")
+        messagebox.showinfo("INFO", "Backup11 done on server !")
     else:
-        print("+ No folder to upload !")
-        messagebox.showerror("Error", "No Backup11 to upload...")
+        print("!!! No Backup11 done on server !!!")
+        messagebox.showerror("Error", "!!! No Backup11 done on server !!!")
 
     delproc = subprocess.run(["ssh",
         "pi@192.168.18.12", "rm -r ~/tt_doc/doc_txt11/Files11/*"],

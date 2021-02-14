@@ -247,6 +247,17 @@ def delFuncFile20():
     except FileNotFoundError as filefunc19:
         print("+ File entryfile20.txt does not exist", filefunc19)
 
+    proc = subprocess.run(["scp", "./newpatient/entryfile20.txt",
+        "pi@192.168.18.12:~/tt_doc/doc_txt20/Files20/entryfile20.txt"],
+        stderr=subprocess.PIPE)
+    print("Result SCP transfert : %s" % repr(proc.stderr))
+    if proc.stderr == b'':
+        print("+ File entryfile20.txt uploaded !")
+        #messagebox.showinfo("INFO", "entryfile20.txt uploaded...")
+    else:
+        print("+ No file to upload !")
+        messagebox.showerror("Error", "No entryfile20.txt to upload...")
+
     try:
         if os.path.exists('./Backup/Files20/Backup_param20.txt'):
             print("+ Backup_param20.txt exist")

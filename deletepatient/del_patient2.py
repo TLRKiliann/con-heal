@@ -259,56 +259,74 @@ def delFuncFile2():
         messagebox.showerror("Error", "No entryfile2.txt to upload...")
 
     try:
-        if os.path.exists('./Backup/Files2/Backup_param2.txt'):
-            print("+ Backup_param2.txt exist")
-            shutil.copy('./Backup/Files2/Backup_param2.txt',
-                './Backup/old/oldfiles2/Backup_param2.txt')
-            os.remove('./Backup/Files2/Backup_param2.txt')
+        if os.path.exists('./Backup/Files2/paramdata2.txt'):
+            print("+ paramdata2.txt exist")
+            shutil.copy('./Backup/Files2/paramdata2.txt',
+                './Backup/old/oldfiles2/paramdata2.txt')
+            os.remove('./Backup/Files2/paramdata2.txt')
     except FileNotFoundError as nf_param:
         print("Not found", nf_param)
 
     try:
-        if os.path.exists('./Backup/Files2/Backup_patient2.txt'):
-            print("+ Backup_patient2.txt exist")
-            shutil.copy('./Backup/Files2/Backup_patient2.txt',
-                './Backup/old/oldfiles2/Backup_patient2.txt')
-            os.remove('./Backup/Files2/Backup_patient2.txt')
+        if os.path.exists('./Backup/Files2/patient2_14b.txt'):
+            print("+ patient2_14b.txt exist")
+            shutil.copy('./Backup/Files2/patient2_14b.txt',
+                './Backup/old/oldfiles2/patient2_14b.txt')
+            os.remove('./Backup/Files2/patient2_14b.txt')
     except FileNotFoundError as nf_oldfile:
         print("Not found", nf_oldfile)
 
     try:
-        if os.path.exists('./Backup/Files2/Backup_careneeds2.txt'):
-            print("+ Backup_careneeds2.txt exist")
-            shutil.copy('./Backup/Files2/Backup_careneeds2.txt',
-                './Backup/old/oldfiles2/Backup_careneeds2.txt')
-            os.remove('./Backup/Files2/Backup_careneeds2.txt')
+        if os.path.exists('./Backup/Files2/main_14b.txt'):
+            print("+ main_14b.txt exist")
+            shutil.copy('./Backup/Files2/main_14b.txt',
+                './Backup/old/oldfiles2/main_14b.txt')
+            os.remove('./Backup/Files2/main_14b.txt')
     except FileNotFoundError as nf_oldfile2:
         print("Not found", nf_oldfile2)
 
     try:
-        if os.path.exists('./Backup/Files2/Backup_diag2.txt'):
-            print("+ Backup_diag2.txt exist")
-            shutil.copy('./Backup/Files2/Backup_diag2.txt',
-                './Backup/old/oldfiles2/Backup_diag2.txt')
-            os.remove('./Backup/Files2/Backup_diag2.txt')
+        if os.path.exists('./Backup/Files2/diagrecap2.txt'):
+            print("+ diagrecap2.txt exist")
+            shutil.copy('./Backup/Files2/diagrecap2.txt',
+                './Backup/old/oldfiles2/diagrecap2.txt')
+            os.remove('./Backup/Files2/diagrecap2.txt')
     except FileNotFoundError as nf_oldfile3:
         print("Not found", nf_oldfile3)
 
     try:
-        if os.path.exists('./Backup/Files2/Backup_Bmi2.txt'):
-            print("+ Backup_Bmi2.txt exist")
-            shutil.copy('./Backup/Files2/Backup_Bmi2.txt',
-                './Backup/old/oldfiles2/Backup_Bmi2.txt')
-            os.remove('./Backup/Files2/Backup_Bmi2.txt')
-    except FileNotFoundError as nf_oldfile4:
-        print("Not found", nf_oldfile4)
+        if os.path.exists('./Backup/Files2/file_bmi.json'):
+            print("+ file_bmi.json exist")
+            shutil.copy('./Backup/Files2/file_bmi.json',
+                './Backup/old/oldfiles2/file_bmi.json')
+            os.remove('./Backup/Files2/file_bmi.json')
+    except FileNotFoundError as nf_oldfile41:
+        print("Not found", nf_oldfile41)
 
     try:
-        if os.path.exists('./Backup/Files2/Backup_resultvmed2.txt'):
-            print("+ Backup_resultvmed2.txt exist")
-            shutil.copy('./Backup/Files2/Backup_resultvmed2.txt',
-                './Backup/old/oldfiles2/Backup_resultvmed2.txt')
-            os.remove('./Backup/Files2/Backup_resultvmed2.txt')
+        if os.path.exists('./Backup/Files2/file_kg.json'):
+            print("+ file_kg.json exist")
+            shutil.copy('./Backup/Files2/file_kg.json',
+                './Backup/old/oldfiles2/file_kg.json')
+            os.remove('./Backup/Files2/file_kg.json')
+    except FileNotFoundError as nf_oldfile42:
+        print("Not found", nf_oldfile42)
+
+    try:
+        if os.path.exists('./Backup/Files2/bmi2.json'):
+            print("+ bmi2.json exist")
+            shutil.copy('./Backup/Files2/bmi2.json',
+                './Backup/old/oldfiles2/bmi2.json')
+            os.remove('./Backup/Files2/bmi2.json')
+    except FileNotFoundError as nf_oldfile43:
+        print("Not found", nf_oldfile43)
+
+    try:
+        if os.path.exists('./Backup/Files2/resultvmed2.txt'):
+            print("+ resultvmed2.txt exist")
+            shutil.copy('./Backup/Files2/resultvmed2.txt',
+                './Backup/old/oldfiles2/resultvmed2.txt')
+            os.remove('./Backup/Files2/resultvmed2.txt')
     except FileNotFoundError as nf_oldfile5:
         print("Not found", nf_oldfile5)
 

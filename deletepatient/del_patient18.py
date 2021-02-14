@@ -9,7 +9,10 @@
 """
 
 
+from tkinter import *
+from tkinter import messagebox
 import os
+import subprocess
 import shutil
 
 
@@ -18,6 +21,28 @@ def delFuncFile18():
         This function delete all files with
         a test before removing files.
     """
+    backproc = subprocess.run(["scp", "-r", "./Backup/Files18",
+        "pi@192.168.18.12:~/tt_doc/doc_txt18/Backup18"],
+        stderr=subprocess.PIPE)
+    print("Result SCP transfert : %s" % repr(backproc.stderr))
+    if backproc.stderr == b'':
+        print("+ File Backup18 uploaded !")
+        #messagebox.showinfo("INFO", "entryfile8.txt uploaded...")
+    else:
+        print("+ No folder to upload !")
+        messagebox.showerror("Error", "No Backup18 to upload...")
+
+    delproc = subprocess.run(["ssh",
+        "pi@192.168.18.12", "rm -r ~/tt_doc/doc_txt18/Files18/*"],
+        stderr=subprocess.PIPE)
+    print("Result SCP transfert : %s" % repr(delproc.stderr))
+    if delproc.stderr == b'':
+        print("+ Files18 has been deleted on server !")
+        messagebox.showinfo("INFO", "Files18 has been deleted on server !")
+    else:
+        print("!!! Error", "Not deleted Files18 on server !!!")
+        messagebox.showerror("Error", "!!! Not deleted Files18 on server !!!")
+
     try:
         if os.path.getsize('./need/doc_suivi18/main_14b.txt'):
             os.remove('./need/doc_suivi18/main_14b.txt')

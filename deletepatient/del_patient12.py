@@ -32,6 +32,17 @@ def delFuncFile12():
         print("+ No folder to upload !")
         messagebox.showerror("Error", "No Backup12 to upload...")
 
+    delproc = subprocess.run(["ssh",
+        "pi@192.168.18.12", "rm -r ~/tt_doc/doc_txt12/Files12/*"],
+        stderr=subprocess.PIPE)
+    print("Result SCP transfert : %s" % repr(delproc.stderr))
+    if delproc.stderr == b'':
+        print("+ Files12 has been deleted on server !")
+        messagebox.showinfo("INFO", "Files12 has been deleted on server !")
+    else:
+        print("!!! Error", "Not deleted Files12 on server !!!")
+        messagebox.showerror("Error", "!!! Not deleted Files12 on server !!!")
+
     try:
         if os.path.getsize('./need/doc_suivi12/main_14b.txt'):
             os.remove('./need/doc_suivi12/main_14b.txt')

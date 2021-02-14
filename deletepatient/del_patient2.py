@@ -9,6 +9,8 @@
 """
 
 
+from tkinter import *
+from tkinter import messagebox
 import os
 import subprocess
 import shutil
@@ -24,11 +26,22 @@ def delFuncFile2():
         stderr=subprocess.PIPE)
     print("Result SCP transfert : %s" % repr(backproc.stderr))
     if backproc.stderr == b'':
-        print("+ File Backup2 uploaded !")
-        #messagebox.showinfo("INFO", "entryfile8.txt uploaded...")
+        print("+ Backup2 done on server ! !")
+        messagebox.showinfo("INFO", "Backup2 done on server !")
     else:
-        print("+ No folder to upload !")
-        messagebox.showerror("Error", "No Backup2 to upload...")
+        print("!!! No Backup2 done on server !!!")
+        messagebox.showerror("Error", "!!! No Backup2 done on server !!!")
+
+    delproc = subprocess.run(["ssh",
+        "pi@192.168.18.12", "rm -r ~/tt_doc/doc_txt2/Files2/*"],
+        stderr=subprocess.PIPE)
+    print("Result SCP transfert : %s" % repr(delproc.stderr))
+    if delproc.stderr == b'':
+        print("+ Files2 has been deleted on server !")
+        messagebox.showinfo("INFO", "Files2 has been deleted on server !")
+    else:
+        print("!!! Error", "Not deleted Files2 on server !!!")
+        messagebox.showerror("Error", "!!! Not deleted Files2 on server !!!")
 
     try:
         if os.path.getsize('./need/doc_suivi2/main_14b.txt'):

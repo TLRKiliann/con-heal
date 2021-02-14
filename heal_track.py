@@ -163,7 +163,7 @@ from labo.resultlabo21 import callLabo21
 from labo.resultlabo22 import callLabo22
 from labo.resultlabo23 import callLabo23
 from labo.resultlabo24 import callLabo24
-import passw
+#import passw
 from shootransfert import loaderfile
 
 
@@ -1656,6 +1656,19 @@ class MenuBar(tk.Frame):
         # Integration of nutrition menu
         cmd_Print.configure(activeforeground='black', activebackground='cyan',
             menu=mePrint)
+
+        # Manuals Nurse
+        self.cmd_manu=Menubutton(self, text='Manuals', font=('Times 14'), fg='cyan',
+            bg='grey30', relief=GROOVE)
+        self.cmd_manu.pack(side=LEFT, padx=3)
+        # drop-down portion of Manuals Nurse
+        memanu = Menu(self.cmd_manu)
+        memanu.add_command(label='Click on it', font=('Times 16'), 
+            background='black', activebackground='cyan', foreground='cyan',
+            activeforeground='black', command=boss.manualFile)
+        # Integration of Manuals Nurse
+        self.cmd_manu.configure(activeforeground='black', activebackground='cyan',
+            menu=memanu)
 
         # Menu for showing all Graphs togather per patient
         cmd_backup = tk.Menubutton(self, text='Global', font=("Times 14"), fg='cyan',
@@ -3790,6 +3803,14 @@ class Application(tk.Frame):
         self.master.withdraw()
         subprocess.run('./nutrition/nutrit_patient24.py', check=True)
         self.master.deiconify()
+
+    # Manual nurse
+    def manualFile(self):
+        self.master.wm_attributes('-alpha', 0.8)
+        self.master.update()
+        subprocess.call('./manual/pdfopenmanual.py')
+        self.master.wm_attributes('-alpha', 1.0)
+        self.master.update()
 
     # To acces files into Backup folder
     def allFilesBackup(self):

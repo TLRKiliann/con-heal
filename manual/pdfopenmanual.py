@@ -3,6 +3,7 @@
 
 
 from tkinter import *
+import tkinter as tk
 from tkinter import messagebox
 import subprocess
 import os
@@ -10,172 +11,172 @@ import platform
 
 
 # La ScrollBar en class! Préparation pour l'application.
-class ScrollCanvas(Frame):
+class ScrollCanvas(tk.Frame):
     def __init__(self, boss=None):
-        Frame.__init__(self, borderwidth=borderwidth, relief=relief)
-        self.can=Canvas(self, width=width, height=height, bd=bd, bg=bg,
+        tk.Frame.__init__(self, borderwidth=borderwidth, relief=relief)
+        self.can = tk.Canvas(self, width=width, height=height, bd=bd, bg=bg,
             relief=relief)
-        self.frame = Frame(self.can)
+        self.frame = tk.Frame(self.can)
 
-        self.vsb = Scrollbar(self, orient=VERTICAL, command=self.can.yview)
+        self.vsb = tk.Scrollbar(self, orient=VERTICAL, command=self.can.yview)
         self.can.configure(yscrollcommand=self.vsb.set)
 
-        self.vsb.pack(side=RIGHT, fill=Y)
-        self.can.pack(side=LEFT, fill=BOTH, expand=YES)
-        self.can.create_window((4, 4), window=self.frame, anchor=NW,
+        self.vsb.pack(side=tk.RIGHT, fill=Y)
+        self.can.pack(side=tk.LEFT, fill=BOTH, expand=YES)
+        self.can.create_window((4, 4), window=self.frame, anchor=tk.NW,
             tags="self.frame")
         self.frame.bind("<Configure>", self.onFrameConfigure)
 
 # Class de la barre des menus
-class MenuBar(Frame):
+class MenuBar(tk.Frame):
     """Barre menu déroulant"""
     def __init__(self, boss=None):
-        Frame.__init__(self, borderwidth=5, bg='dim gray', padx=0)
-        But2=Button(self, text ="Close", fg='cyan', bg='navy', relief=GROOVE,
-            activebackground='cyan', command=boss.quit).pack(side=LEFT, padx=3)
+        tk.Frame.__init__(self, borderwidth=5, bg='RoyalBlue3', padx=0)
+        But2 = tk.Button(self, text ="Close", fg='cyan', bg='navy', relief=GROOVE,
+            activebackground='cyan', command=boss.quit).pack(side=tk.LEFT, padx=3)
 
 # Application principale
-class Application(Frame):
+class Application(tk.Frame):
     def __init__(self, boss=None):
-        Frame.__init__(self)
-        self.master.title('ANGEL-VISION - Developed by ko@l@tr33 - 2020')
-        mBar=MenuBar(self)
+        tk.Frame.__init__(self)
+        self.master.title('PDF MANUALS')
+        mBar = MenuBar(self)
         mBar.pack(side=TOP, fill=X, expand=1)
         # ScrollCanvas limite de la zone à parcourir avec la barre
-        self.can=Canvas(self, width=400, height=750, bg='#82193e')
-        self.frame = Frame(self.can)
-        self.vsb = Scrollbar(self, orient=VERTICAL, command=self.can.yview)
+        self.can = tk.Canvas(self, width=400, height=750, bg='DodgerBlue2')
+        self.frame = tk.Frame(self.can)
+        self.vsb = tk.Scrollbar(self, orient=VERTICAL, command=self.can.yview)
         self.can.configure(yscrollcommand=self.vsb.set)
-        self.vsb.pack(side=RIGHT, fill=Y)
-        self.can.pack(side=LEFT, fill=BOTH, expand=YES)
-        self.can.create_window((4,4), window=self.frame, anchor=NW,
+        self.vsb.pack(side=tk.RIGHT, fill=Y)
+        self.can.pack(side=tk.LEFT, fill=BOTH, expand=YES)
+        self.can.create_window((4,4), window=self.frame, anchor=tk.NW,
             tags="self.frame")
         # Insertion du texte
-        self.can.create_text(200, 50, anchor=CENTER, text="PDF Manuals",
-            font=('Times New Roman', 28), fill='aquamarine')
+        self.can.create_text(200, 65, anchor=tk.CENTER, text="PDF Manuals",
+            font=('Times New Roman', 28), fill='yellow')
 
         self.can.create_text(200, 150, anchor='w', text="Monovettes",
-            font=('Times New Roman', 18), fill='cyan')
+            font=('Times New Roman', 18), fill='white')
         self.can.create_text(200, 200, anchor='w', text="Urines 1er jet",
-            font=('Times New Roman', 18), fill='cyan')
+            font=('Times New Roman', 18), fill='white')
         self.can.create_text(200, 250, anchor='w', text="Urines 2ème jet",
-            font=('Times New Roman', 18), fill='cyan')
+            font=('Times New Roman', 18), fill='white')
         self.can.create_text(200, 300, anchor='w', text="Urines/24h",
-            font=('Times New Roman', 18), fill='cyan')
+            font=('Times New Roman', 18), fill='white')
         self.can.create_text(200, 350, anchor='w', text="Baby urines",
-            font=('Times New Roman', 18), fill='cyan')
+            font=('Times New Roman', 18), fill='white')
         self.can.create_text(200, 400, anchor='w', text="Urine pic ovulaire",
-            font=('Times New Roman', 18), fill='cyan')
+            font=('Times New Roman', 18), fill='white')
         self.can.create_text(200, 450, anchor='w', text="Hemocultures",
-            font=('Times New Roman', 18), fill='cyan')
+            font=('Times New Roman', 18), fill='white')
         self.can.create_text(200, 500, anchor='w', text="Frottis",
-            font=('Times New Roman', 18), fill='cyan')
+            font=('Times New Roman', 18), fill='white')
         self.can.create_text(200, 550, anchor='w', text="Helicobacter pylori",
-            font=('Times New Roman', 18), fill='cyan')
+            font=('Times New Roman', 18), fill='white')
         self.can.create_text(200, 600, anchor='w', text="Expectoration",
-            font=('Times New Roman', 18), fill='cyan')
+            font=('Times New Roman', 18), fill='white')
         self.can.create_text(200, 650, anchor='w', text="Coprocultures",
-            font=('Times New Roman', 18), fill='cyan')
+            font=('Times New Roman', 18), fill='white')
         self.can.create_text(200, 700, anchor='w', text="Research oxyures",
-            font=('Times New Roman', 18), fill='cyan')
-        self.can.pack(side=LEFT, fill=BOTH, expand=1)
+            font=('Times New Roman', 18), fill='white')
+        self.can.pack(side=tk.LEFT, fill=BOTH, expand=1)
 
         # Configuration de la Scrollbar sur le Frame
         self.frame.bind("<Configure>", self.onFrameConfigure)
         
         # Button to read Diabetologia
         self.x2, self.y2 = 100, 150
-        self.b2=Button(self.can, width=10, bd=3, font=16, bg='navy', fg='gold',
-            activebackground='dark turquoise', text="open",
-            highlightbackground='#82193e', command=self.openMonov)
+        self.b2 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
+            activebackground='pale turquoise', text="open",
+            highlightbackground='DodgerBlue2', command=self.openMonov)
         self.fb2=self.can.create_window(self.x2, self.y2, window=self.b2)
         self.pack()
         
         # Button2 to open2 Oncology
         self.x4, self.y4 = 100, 200
-        self.b4=Button(self.can, width=10, bd=3, font=16, bg='navy', fg='gold',
-            activebackground='dark turquoise', text="open",
-            highlightbackground='#82193e', command=self.openUrinalOne)
+        self.b4 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
+            activebackground='pale turquoise', text="open",
+            highlightbackground='DodgerBlue2', command=self.openUrinalOne)
         self.fb4=self.can.create_window(self.x4, self.y4, window=self.b4)
         self.pack()
         
         # Button3 to open3 Ophtalmology
         self.x6, self.y6 = 100, 250
-        self.b6=Button(self.can, width=10, bd=3, font=16, bg='navy', fg='gold',
-            activebackground='dark turquoise', text="open",
-            highlightbackground='#82193e', command=self.openUrinalSecond)
+        self.b6 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
+            activebackground='pale turquoise', text="open",
+            highlightbackground='DodgerBlue2', command=self.openUrinalSecond)
         self.fb6=self.can.create_window(self.x6, self.y6, window=self.b6)
         self.pack()
         
         # Button4 to open4 Dentist
         self.x8, self.y8 = 100, 300
-        self.b8=Button(self.can, width=10, bd=3, font=16, bg='navy', fg='gold',
-            activebackground='dark turquoise', text="open",
-            highlightbackground='#82193e', command=self.openUrin24h)
+        self.b8 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
+            activebackground='pale turquoise', text="open",
+            highlightbackground='DodgerBlue2', command=self.openUrin24h)
         self.fb8=self.can.create_window(self.x8, self.y8, window=self.b8)
         self.pack()
         
         # Button5 to open5 Stomatherapy
         self.x10, self.y10 = 100, 350
-        self.b10=Button(self.can, width=10, bd=3, font=16, bg='navy', fg='gold',
-            activebackground='dark turquoise', text="open",
-            highlightbackground='#82193e', command=self.openUrineBb)
+        self.b10 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
+            activebackground='pale turquoise', text="open",
+            highlightbackground='DodgerBlue2', command=self.openUrineBb)
         self.fb10=self.can.create_window(self.x10, self.y10, window=self.b10)
         self.pack()
         
         # Button6 to open6 Aromatherapy
         self.x12, self.y12 = 100, 400
-        self.b12=Button(self.can, width=10, bd=3, font=16, bg='navy', fg='gold',
-            activebackground='dark turquoise', text="open",
-            highlightbackground='#82193e', command=self.openUrinPicOv)
+        self.b12 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
+            activebackground='pale turquoise', text="open",
+            highlightbackground='DodgerBlue2', command=self.openUrinPicOv)
         self.fb12=self.can.create_window(self.x12, self.y12, window=self.b12)
         self.pack()
         
         # Button7 to open7 Physiotherapy
         self.x12, self.y12 = 100, 450
-        self.b12=Button(self.can, width=10, bd=3, font=16, bg='navy', fg='gold',
-            activebackground='dark turquoise', text="open",
-            highlightbackground='#82193e', command=self.openHemoc)
+        self.b12 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
+            activebackground='pale turquoise', text="open",
+            highlightbackground='DodgerBlue2', command=self.openHemoc)
         self.fb12=self.can.create_window(self.x12, self.y12, window=self.b12)
         self.pack()
         
         # Button8 to open8 Ergotherapy
         self.x14, self.y14 = 100, 500
-        self.b14=Button(self.can, width=10, bd=3, font=16, bg='navy', fg='gold',
-            activebackground='dark turquoise', text="open",
-            highlightbackground='#82193e', command=self.openFrottis)
+        self.b14 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
+            activebackground='pale turquoise', text="open",
+            highlightbackground='DodgerBlue2', command=self.openFrottis)
         self.fb14=self.can.create_window(self.x14, self.y14, window=self.b14)
         self.pack()
         
         # Button9 to open9 Podology
         self.x16, self.y16 = 100, 550
-        self.b16=Button(self.can, width=10, bd=3, font=16, bg='navy', fg='gold',
-            activebackground='dark turquoise', text="open",
-            highlightbackground='#82193e', command=self.openHelico)
+        self.b16 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
+            activebackground='pale turquoise', text="open",
+            highlightbackground='DodgerBlue2', command=self.openHelico)
         self.fb16=self.can.create_window(self.x16, self.y16, window=self.b16)
         self.pack()
 
         # Button9 to open9 Podology
         self.x17, self.y17 = 100, 600
-        self.b17=Button(self.can, width=10, bd=3, font=16, bg='navy', fg='gold',
-            activebackground='dark turquoise', text="open",
-            highlightbackground='#82193e', command=self.openExpecto)
+        self.b17 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
+            activebackground='pale turquoise', text="open",
+            highlightbackground='DodgerBlue2', command=self.openExpecto)
         self.fb17=self.can.create_window(self.x17, self.y17, window=self.b17)
         self.pack()
 
         # Button9 to open9 Podology
         self.x18, self.y18 = 100, 650
-        self.b18=Button(self.can, width=10, bd=3, font=16, bg='navy', fg='gold',
-            activebackground='dark turquoise', text="open",
-            highlightbackground='#82193e', command=self.openCopro)
+        self.b18 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
+            activebackground='pale turquoise', text="open",
+            highlightbackground='DodgerBlue2', command=self.openCopro)
         self.fb18=self.can.create_window(self.x18, self.y18, window=self.b18)
         self.pack()
 
         # Button9 to open9 Podology
         self.x19, self.y19 = 100, 700
-        self.b19=Button(self.can, width=10, bd=3, font=16, bg='navy', fg='gold',
-            activebackground='dark turquoise', text="open",
-            highlightbackground='#82193e', command=self.openScotchTest)
+        self.b19 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
+            activebackground='pale turquoise', text="open",
+            highlightbackground='DodgerBlue2', command=self.openScotchTest)
         self.fb19=self.can.create_window(self.x19, self.y19, window=self.b19)
         self.pack()
 

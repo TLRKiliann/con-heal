@@ -3806,9 +3806,9 @@ class Application(tk.Frame):
 
     # Manual nurse
     def manualFile(self):
-        self.master.wm_attributes('-alpha', 0.8)
+        self.master.wm_attributes('-alpha', 0.4)
         self.master.update()
-        subprocess.call('./manual/pdfopenmanual.py')
+        subprocess.run('./manual/pdfopenmanual.py', check=True)
         self.master.wm_attributes('-alpha', 1.0)
         self.master.update()
 

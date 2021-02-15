@@ -213,7 +213,7 @@ C4 = Checkbutton(gui, text="Fructose", fg='navy',
     width=40, anchor="w")
 C4.grid(row=5, column=0)
 
-#Les allergies d’origine animale :
+#Animal allergy
 animallabel = Label(gui, text="Animal allergy", font="Times 18 bold",
     fg='white', bg='DodgerBlue2')
 animallabel.grid(row=6, column=0, pady=10)
@@ -246,7 +246,7 @@ C8 = Checkbutton(gui, text="Molluscs", fg='navy',
     width=40, anchor="w")
 C8.grid(row=10, column=0)
 
-#Les allergies d’origine végétale :
+#Vegetable allergy
 vegetallabel = Label(gui, text="Vegetable allergy",
     font="Times 18 bold", fg='white', bg='DodgerBlue2')
 vegetallabel.grid(row=11, column=0, pady=10)

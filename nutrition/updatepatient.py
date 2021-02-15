@@ -98,6 +98,7 @@ def uptopat(idpatient, patient_num, firstpat, firstname_pat,
         if os.path.getsize('./newpatient/entryfile.txt'):
             print("+ File 'entryfile.txt' exist !")
             os.remove('./newpatient/entryfile.txt')
+            os.remove('./allergy/allergyfile.txt')
             searchLineName(firstpat, surname, birthvalue, allergia, transdisval, diagnosis)
     else:
         pass
@@ -131,14 +132,12 @@ labelname.pack(pady=10)
 
 firstpat = StringVar()
 firstname_pat = Entry(gui, textvariable=firstpat,
-    highlightbackground='light sky blue',
-    bd=4)
+    highlightbackground='light sky blue', bd=4)
 firstname_pat.pack()
 
 surname = StringVar()
 sur_pat = Entry(gui, textvariable=surname,
-    highlightbackground='light sky blue',
-    bd=4)
+    highlightbackground='light sky blue', bd=4)
 sur_pat.pack()
 
 labelbirth = Label(gui)
@@ -160,8 +159,7 @@ labelaller.pack(pady=10)
 
 allergia = StringVar()
 allergy_pat = Entry(gui, textvariable=allergia,
-    highlightbackground='light sky blue',
-    bd=4, width=40)
+    highlightbackground='light sky blue', bd=4, width=40)
 allergia.set(linea + c_line[:-1])
 allergy_pat.pack()
 
@@ -173,8 +171,7 @@ labeltrans.pack(pady=10)
 
 transdisval = StringVar()
 diseasetrans = Entry(gui, textvariable=transdisval,
-    highlightbackground='light sky blue',
-    bd=4)
+    highlightbackground='light sky blue', bd=4)
 diseasetrans.pack()
 
 labeldiag = Label(gui)
@@ -185,8 +182,7 @@ labeldiag.pack(pady=10)
 
 diagnosis = StringVar()
 diagnos_pat = Entry(gui, textvariable=diagnosis,
-    highlightbackground='light sky blue',
-    bd=4)
+    highlightbackground='light sky blue', bd=4)
 diagnos_pat.pack()
 
 buttonsearch = Button(gui, text="Search ID", width=8, bd=3,

@@ -140,8 +140,7 @@ firstname_pat.pack()
 surname = StringVar()
 #surname.set("Lastname")
 sur_pat = Entry(gui, textvariable=surname,
-    highlightbackground='light sky blue',
-    bd=4)
+    highlightbackground='light sky blue', bd=4)
 sur_pat.pack()
 
 labelbirth = Label(gui)
@@ -164,8 +163,7 @@ labelaller.pack(pady=10)
 
 allergia = StringVar()
 allergy_pat = Entry(gui, textvariable=allergia,
-    highlightbackground='light sky blue',
-    bd=4, width=40)
+    highlightbackground='light sky blue', bd=4, width=40)
 allergia.set(linea + c_line[:-1])
 allergy_pat.pack()
 
@@ -178,8 +176,7 @@ labeltrans.pack(pady=10)
 transdisval = StringVar()
 #transdisval.set('None')
 diseasetrans = Entry(gui, textvariable=transdisval,
-    highlightbackground='light sky blue',
-    bd=4)
+    highlightbackground='light sky blue', bd=4)
 diseasetrans.pack()
 
 labeldiag = Label(gui)

@@ -118,10 +118,9 @@ labelID = Label(text='ID : ',
 labelID.pack(pady=10)
 
 idpatient = StringVar()
-idpatient.set('1')
 patient_num = Entry(gui, textvariable=idpatient,
-    highlightbackground='light sky blue',
-    bd=4)
+    highlightbackground='light sky blue', bd=4)
+idpatient.set('1')
 patient_num.pack()
 
 labelname = Label(gui)

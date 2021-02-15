@@ -11,6 +11,7 @@
 
 from tkinter import *
 from tkinter import messagebox
+import os
 import subprocess
 
 
@@ -20,7 +21,7 @@ gui.configure(bg='DodgerBlue2')
 
 def recordOption():
     """
-    To save checkbox option
+        To save checkbox option
     """
     print(CheckVar1.get())
     if CheckVar1.get()==1:

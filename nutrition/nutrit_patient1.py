@@ -20,7 +20,7 @@ gui.configure(bg='DodgerBlue2')
 
 def recordOption():
     """
-    To save checkbox option
+        To save checkbox option
     """
     print(CheckVar1.get())
     if CheckVar1.get()==1:

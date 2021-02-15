@@ -80,6 +80,7 @@ def uptopat(idpatient, patient_num, firstpat, firstname_pat,
         if os.path.getsize('./newpatient/entryfile5.txt'):
             print("+ File 'entryfile5.txt' exist !")
             os.remove('./newpatient/entryfile5.txt')
+            os.remove('./allergy/allergyfile5.txt')
             searchLineName5(firstpat, surname, birthvalue, allergia, transdisval, diagnosis)
     else:
         pass
@@ -112,10 +113,9 @@ labelID = Label(text='ID : ',
 labelID.pack(pady=10)
 
 idpatient = StringVar()
-idpatient.set('5')
 patient_num = Entry(gui, textvariable=idpatient,
-    highlightbackground='light sky blue',
-    bd=4)
+    highlightbackground='light sky blue', bd=4)
+idpatient.set('5')
 patient_num.pack()
 
 labelname = Label(gui)

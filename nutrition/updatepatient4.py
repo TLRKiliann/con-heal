@@ -80,6 +80,7 @@ def uptopat(idpatient, patient_num, firstpat, firstname_pat,
         if os.path.getsize('./newpatient/entryfile4.txt'):
             print("+ File 'entryfile4.txt' exist !")
             os.remove('./newpatient/entryfile4.txt')
+            os.remove('./allergy/allergyfile4.txt')
             searchLineName4(firstpat, surname, birthvalue, allergia, transdisval, diagnosis)
     else:
         pass

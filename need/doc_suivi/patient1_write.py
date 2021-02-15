@@ -40,8 +40,8 @@ labelallergy = tk.Label(root, text="Allergy",
 labelallergy.pack(padx=5, pady=5)
 
 text_aller = tk.StringVar()
-text_aller.set(line_c[:-1])
 Entryaller = tk.Entry(root, textvariable=text_aller, width=60)
+text_aller.set(line_c[:-1])
 Entryaller.pack(padx=10, pady=5)
 
 def ajouterText():

@@ -539,8 +539,10 @@ def searchLineName24(firstpat, surname, birthvalue, allergia, transdisval, diagn
             file24.write(diagnosis + '\n')
     messagebox.showinfo("Info", "Data was updated for entryfile24.txt !")
 
-with open('./allergy/allergyfile.txt', 'r') as patfile:
-    linea = patfile.readline()
+with open('./newpatient/entryfile.txt', 'r') as filename:
+    line_a=filename.readline()
+    line_b=filename.readline()
+    line_c=filename.readline()
 
 labelID = Label(gui)
 labelID = Label(text='ID : ',
@@ -583,6 +585,7 @@ birth_entree = Entry(gui, textvariable=birthvalue,
     highlightbackground='light sky blue', bd=4)
 birth_entree.pack()
 
+# Allergia
 labelaller = Label(gui)
 labelaller = Label(text='Allergy : ',
     font="Times 14 bold",
@@ -590,10 +593,10 @@ labelaller = Label(text='Allergy : ',
 labelaller.pack(pady=10)
 
 allergia = StringVar()
-allergia.set(linea)
 allergy_pat = Entry(gui, textvariable=allergia,
     highlightbackground='light sky blue',
     bd=4, width=40)
+allergia.set(line_c[:-1])
 allergy_pat.pack()
 
 labeltrans = Label(gui)

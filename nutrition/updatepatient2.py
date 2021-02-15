@@ -102,8 +102,10 @@ def searchLineName2(firstpat, surname, birthvalue, allergia, transdisval, diagno
             file2.write(diagnosis + '\n')
     messagebox.showinfo("Info", "Data was updated for entryfile2.txt !")
 
-with open('./allergy/allergyfile2.txt', 'r') as patfile:
-    linea = patfile.readline()
+with open('./newpatient/entryfile.txt', 'r') as filename:
+    line_a=filename.readline()
+    line_b=filename.readline()
+    line_c=filename.readline()
 
 labelID = Label(gui)
 labelID = Label(text='ID : ',
@@ -155,11 +157,12 @@ labelaller = Label(text='Allergy : ',
     fg='RoyalBlue4', bg='DodgerBlue2')
 labelaller.pack(pady=10)
 
+# Allergia
 allergia = StringVar()
-allergia.set(linea)
 allergy_pat = Entry(gui, textvariable=allergia,
     highlightbackground='light sky blue',
     bd=4, width=40)
+allergia.set(line_c[:-1])
 allergy_pat.pack()
 
 labeltrans = Label(gui)

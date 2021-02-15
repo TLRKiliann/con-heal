@@ -18,19 +18,6 @@ gui = Tk()
 gui.title("Intolerances")
 gui.configure(bg='DodgerBlue2')
 
-def saveCheck():
-    """
-        To ask if user want save them choices
-    """
-    MSB = messagebox.askyesno('Save Data', 'Data saved !')
-    if MSB == 1:
-        print("Ok, data")
-        recordOption()
-        confRec()
-        gui.destroy()
-    else:
-        messagebox.showinfo('Return', 'Data not saved')
-
 def recordOption():
     """
     To save checkbox option
@@ -171,6 +158,19 @@ def confRec():
         To confirm that rec is finish
     """
     messagebox.showinfo("Confirmation", "Record confirmed and finished !")
+
+def saveCheck():
+    """
+        To ask if user want save them choices
+    """
+    MSB = messagebox.askyesno('Save Data', 'Data saved !')
+    if MSB == 1:
+        print("Ok, data saved !")
+        recordOption()
+        confRec()
+        gui.destroy()
+    else:
+        messagebox.showinfo('Return', 'Data not saved !')
 
 Intolabel = Label(gui, text="Intolerances : ", font="Times 18 bold",
     width=14, fg='white', bg='DodgerBlue2')

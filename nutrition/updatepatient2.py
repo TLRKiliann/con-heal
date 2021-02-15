@@ -42,6 +42,22 @@ def searchDB():
         messagebox.showinfo("Data Entry Form", "No Such Record Found !")
     sqlCon.close()
 
+def searchLineName2(firstpat, surname, birthvalue, allergia, transdisval, diagnosis):
+    """
+        To save changing data for 
+        entryfile.txt and display
+        messagebox.
+    """
+    MsgBox2 = messagebox.askyesno('Save data', 'Do you want to save ?')
+    if MsgBox2 == 1:
+        with open('./newpatient/entryfile2.txt', 'w') as file2:
+            file2.write(firstpat + " " + surname + '\n')
+            file2.write(birthvalue + '\n')
+            file2.write(allergia + '\n')
+            file2.write(transdisval + '\n')
+            file2.write(diagnosis + '\n')
+    messagebox.showinfo("Info", "Data was updated for entryfile2.txt !")
+
 def uptopat(idpatient, patient_num, firstpat, firstname_pat,
     surname, sur_pat, birthvalue, birth_entree, allergia, allergy_pat,
     transdisval, diseasetrans, diagnosis, diagnos_pat):
@@ -87,29 +103,13 @@ def uptopat(idpatient, patient_num, firstpat, firstname_pat,
         pass
     gui.destroy()
 
-def searchLineName2(firstpat, surname, birthvalue, allergia, transdisval, diagnosis):
-    """
-        To save changing data for 
-        entryfile.txt and display
-        messagebox.
-    """
-    MsgBox2 = messagebox.askyesno('Save data', 'Do you want to save ?')
-    if MsgBox2 == 1:
-        with open('./newpatient/entryfile2.txt', 'w') as file2:
-            file2.write(firstpat + " " + surname + '\n')
-            file2.write(birthvalue + '\n')
-            file2.write(allergia + '\n')
-            file2.write(transdisval + '\n')
-            file2.write(diagnosis + '\n')
-    messagebox.showinfo("Info", "Data was updated for entryfile2.txt !")
-
 with open('./allergy/allergyfile2.txt', 'r') as patfile:
     linea = patfile.readline()
 
 with open('./newpatient/entryfile2.txt', 'r') as filename:
-    line_a=filename.readline()
-    line_b=filename.readline()
-    line_c=filename.readline()
+    a_line = filename.readline()
+    b_line = filename.readline()
+    c_line = filename.readline()
 
 labelID = Label(gui)
 labelID = Label(text='ID : ',
@@ -149,23 +149,24 @@ labelbirth = Label(text='Birth Date : ', font="Times 14 bold",
     fg='RoyalBlue4', bg='DodgerBlue2')
 labelbirth.pack(pady=10)
 
-birthvalue=StringVar()
+birthvalue = StringVar()
 #birthvalue.set('Format: 00/00/0000')
 birth_entree = Entry(gui, textvariable=birthvalue,
     highlightbackground='light sky blue', bd=4)
 birth_entree.pack()
 
+# Allergia
 labelaller = Label(gui)
 labelaller = Label(text='Allergy : ',
     font="Times 14 bold",
     fg='RoyalBlue4', bg='DodgerBlue2')
 labelaller.pack(pady=10)
 
-# Allergia
 allergia = StringVar()
 allergy_pat = Entry(gui, textvariable=allergia,
     highlightbackground='light sky blue',
     bd=4, width=40)
+allergia.set(linea + c_line[:-1])
 allergy_pat.pack()
 
 labeltrans = Label(gui)

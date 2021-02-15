@@ -42,6 +42,22 @@ def searchDB():
         messagebox.showinfo("Data Entry Form", "No Such Record Found !")
     sqlCon.close()
 
+def searchLineName(firstpat, surname, birthvalue, allergia, transdisval, diagnosis):
+    """
+        To save changing data for 
+        entryfile.txt and display
+        messagebox.
+    """
+    MsgBox = messagebox.askyesno('Save data', 'Do you want to save ?')
+    if MsgBox == 1:
+        with open('./newpatient/entryfile.txt', 'w') as file:
+            file.write(firstpat + " " + surname + '\n')
+            file.write(birthvalue + '\n')
+            file.write(allergia + '\n')
+            file.write(transdisval + '\n')
+            file.write(diagnosis + '\n')
+    messagebox.showinfo("Info", "Data was updated for entryfile.txt !")
+
 def uptopat(idpatient, patient_num, firstpat, firstname_pat,
     surname, sur_pat, birthvalue, birth_entree, allergia, allergy_pat,
     transdisval, diseasetrans, diagnosis, diagnos_pat):
@@ -86,22 +102,6 @@ def uptopat(idpatient, patient_num, firstpat, firstname_pat,
     else:
         pass
     gui.destroy()
-
-def searchLineName(firstpat, surname, birthvalue, allergia, transdisval, diagnosis):
-    """
-        To save changing data for 
-        entryfile.txt and display
-        messagebox.
-    """
-    MsgBox = messagebox.askyesno('Save data', 'Do you want to save ?')
-    if MsgBox == 1:
-        with open('./newpatient/entryfile.txt', 'w') as file:
-            file.write(firstpat + " " + surname + '\n')
-            file.write(birthvalue + '\n')
-            file.write(allergia + '\n')
-            file.write(transdisval + '\n')
-            file.write(diagnosis + '\n')
-    messagebox.showinfo("Info", "Data was updated for entryfile.txt !")
 
 with open('./allergy/allergyfile.txt', 'r') as patfile:
     linea = patfile.readline()

@@ -163,14 +163,14 @@ def saveCheck():
     """
         To ask if user want save them choices
     """
-    MSB = messagebox.askyesno('Save Data', 'Data saved !')
+    MSB = messagebox.askyesno('ASK', 'Data saved !')
     if MSB == 1:
-        print("Ok, data")
+        print("Ok, data saved !")
         recordOption()
         confRec()
         gui.destroy()
     else:
-        messagebox.showinfo('Return', 'Data not saved !')
+        messagebox.showinfo('INFO', 'Data not saved !')
 
 Intolabel = Label(gui, text="Intolerances : ", font="Times 18 bold",
     width=14, fg='white', bg='DodgerBlue2')

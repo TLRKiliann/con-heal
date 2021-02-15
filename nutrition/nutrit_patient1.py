@@ -18,6 +18,147 @@ gui = Tk()
 gui.title("Intolerances")
 gui.configure(bg='DodgerBlue2')
 
+def recordOption():
+    """
+    To save checkbox option
+    """
+    print(CheckVar1.get())
+    if CheckVar1.get()==1:
+        print("Gluten intolerance")
+        with open('./allergy/allergyfile.txt', 'a+') as file:
+            file.write("Gluten, ")
+    else:
+        print("+ Nothing to do (intolerances)")
+
+    print(CheckVar2.get())
+    if CheckVar2.get()==1:
+        print("Lactose intolerance")
+        with open('./allergy/allergyfile.txt', 'a+') as file:
+            file.write("Lactose, ")
+    else:
+        print("+ Nothing to do (intolerances)")
+
+    print(CheckVar3.get())
+    if CheckVar3.get()==1:
+        print("Saccharose intolerance")
+        with open('./allergy/allergyfile.txt', 'a+') as file:
+            file.write("Saccharose, ")
+    else:
+        print("+ Nothing to do (intolerances)")
+
+    print(CheckVar4.get())
+    if CheckVar4.get()==1:
+        print("Fructose intolerance")
+        with open('./allergy/allergyfile.txt', 'a+') as file:
+            file.write("Fructose, ")
+    else:
+        print("+ Nothing to do (intolerances)")
+
+    print(CheckVar5.get())
+    if CheckVar5.get()==1:
+        print("Eggs")
+        with open('./allergy/allergyfile.txt', 'a+') as file:
+            file.write("Eggs, ")
+    else:
+        print("+ Nothing to do (intolerances)")
+
+    print(CheckVar6.get())
+    if CheckVar6.get()==1:
+        print("Fish")
+        with open('./allergy/allergyfile.txt', 'a+') as file:
+            file.write("Fish, ")
+    else:
+        print("+ Nothing to do (intolerances)")
+
+
+    print(CheckVar7.get())
+    if CheckVar7.get()==1:
+        print("Shellfish")
+        with open('./allergy/allergyfile.txt', 'a+') as file:
+            file.write("Shellfish, ")
+    else:
+        print("+ Nothing to do (intolerances)")
+
+    print(CheckVar8.get())
+    if CheckVar8.get()==1:
+        print("Molluscs")
+        with open('./allergy/allergyfile.txt', 'a+') as file:
+            file.write("Molluscs, ")
+    else:
+        print("+ Nothing to do (intolerances)")
+
+    print(CheckVar9.get())
+    if CheckVar9.get()==1:
+        print("Groundnut")
+        with open('./allergy/allergyfile.txt', 'a+') as file:
+            file.write("Groundnut, ")
+    else:
+        print("+ Nothing to do (intolerances)")
+
+    print(CheckVar10.get())
+    if CheckVar10.get()==1:
+        print("Oleaginous")
+        with open('./allergy/allergyfile.txt', 'a+') as file:
+            file.write("Oleaginous, ")
+    else:
+        print("+ Nothing to do (intolerances)")
+
+    print(CheckVar11.get())
+    if CheckVar11.get()==1:
+        print("Sesame")
+        with open('./allergy/allergyfile.txt', 'a+') as file:
+            file.write("Sesame, ")
+    else:
+        print("+ Nothing to do (intolerances)")
+
+    print(CheckVar12.get())
+    if CheckVar12.get()==1:
+        print("Soya")
+        with open('./allergy/allergyfile.txt', 'a+') as file:
+            file.write("Soya, ")
+    else:
+        print("+ Nothing to do (intolerances)")
+
+    print(CheckVar13.get())
+    if CheckVar13.get()==1:
+        print("Cereals")
+        with open('./allergy/allergyfile.txt', 'a+') as file:
+            file.write("Cereals, ")
+    else:
+        print("+ Nothing to do (intolerances)")
+
+    print(CheckVar14.get())
+    if CheckVar14.get()==1:
+        print("Latex")
+        with open('./allergy/allergyfile.txt', 'a+') as file:
+            file.write("Latex, ")
+    else:
+        print("+ Nothing to do (intolerances)")
+
+    print(CheckVar15.get())
+    if CheckVar15.get()==1:
+        print("Rosacea")
+        with open('./allergy/allergyfile.txt', 'a+') as file:
+            file.write("Rosacea, ")
+    else:
+        print("+ Nothing to do (intolerances)")
+
+    print(CheckVar16.get())
+    if CheckVar16.get()==1:
+        print("Umbellifers")
+        with open('./allergy/allergyfile.txt', 'a+') as file:
+            file.write("Umbellifers, ")
+    else:
+        print("+ Nothing to do (intolerances)")
+
+    subprocess.run('./nutrition/updatepatient.py', check=True)
+
+def confRec():
+    """
+        To confirm that rec is finish
+    """
+    messagebox.showinfo("Confirmation", "Record confirmed and finished !")
+
 def saveCheck():
     """
         To ask if user want save them choices
@@ -29,148 +170,7 @@ def saveCheck():
         confRec()
         gui.destroy()
     else:
-        messagebox.showinfo('Return', 'Data not saved')
-
-def recordOption():
-    """
-    To save checkbox option
-    """
-    print(CheckVar1.get())
-    if CheckVar1.get()==1:
-        print("Gluten intolerance")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
-            file.write("Gluten, ")
-    else:
-        print("Nothing to do")
-
-    print(CheckVar2.get())
-    if CheckVar2.get()==1:
-        print("Lactose intolerance")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
-            file.write("Lactose, ")
-    else:
-        print("Nothing to do")
-
-    print(CheckVar3.get())
-    if CheckVar3.get()==1:
-        print("Saccharose intolerance")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
-            file.write("Saccharose, ")
-    else:
-        print("Nothing to do")
-
-    print(CheckVar4.get())
-    if CheckVar4.get()==1:
-        print("Fructose intolerance")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
-            file.write("Fructose, ")
-    else:
-        print("Nothing to do")
-
-    print(CheckVar5.get())
-    if CheckVar5.get()==1:
-        print("Eggs")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
-            file.write("Eggs, ")
-    else:
-        print("Nothing to do")
-
-    print(CheckVar6.get())
-    if CheckVar6.get()==1:
-        print("Fish")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
-            file.write("Fish, ")
-    else:
-        print("Nothing to do")
-
-
-    print(CheckVar7.get())
-    if CheckVar7.get()==1:
-        print("Shellfish")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
-            file.write("Shellfish, ")
-    else:
-        print("Nothing to do")
-
-    print(CheckVar8.get())
-    if CheckVar8.get()==1:
-        print("Molluscs")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
-            file.write("Molluscs, ")
-    else:
-        print("Nothing to do")
-
-    print(CheckVar9.get())
-    if CheckVar9.get()==1:
-        print("Groundnut")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
-            file.write("Groundnut, ")
-    else:
-        print("Nothing to do")
-
-    print(CheckVar10.get())
-    if CheckVar10.get()==1:
-        print("Oleaginous")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
-            file.write("Oleaginous, ")
-    else:
-        print("Nothing to do")
-
-    print(CheckVar11.get())
-    if CheckVar11.get()==1:
-        print("Sesame")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
-            file.write("Sesame, ")
-    else:
-        print("Nothing to do")
-
-    print(CheckVar12.get())
-    if CheckVar12.get()==1:
-        print("Soya")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
-            file.write("Soya, ")
-    else:
-        print("Nothing to do")
-
-    print(CheckVar13.get())
-    if CheckVar13.get()==1:
-        print("Cereals")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
-            file.write("Cereals, ")
-    else:
-        print("Nothing to do")
-
-    print(CheckVar14.get())
-    if CheckVar14.get()==1:
-        print("Latex")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
-            file.write("Latex, ")
-    else:
-        print("Nothing to do")
-
-    print(CheckVar15.get())
-    if CheckVar15.get()==1:
-        print("Rosacea")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
-            file.write("Rosacea, ")
-    else:
-        print("Nothing to do")
-
-    print(CheckVar16.get())
-    if CheckVar16.get()==1:
-        print("Umbellifers")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
-            file.write("Umbellifers, ")
-    else:
-        print("Nothing to do")
-
-    subprocess.run('./nutrition/updatepatient.py', check=True)
-
-def confRec():
-    """
-        To confirm that rec is finish
-    """
-    messagebox.showinfo("Confirmation", "Record confirmed and finished !")
+        messagebox.showinfo('Return', 'Data not saved !')
 
 Intolabel = Label(gui, text="Intolerances : ", font="Times 18 bold",
     width=14, fg='white', bg='DodgerBlue2')

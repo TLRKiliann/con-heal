@@ -61,9 +61,11 @@ def uptopat(idpatient, patient_num, firstpat, firstname_pat,
     if patient_num.get() == "" or firstname_pat.get() == "" or sur_pat.get() == "":
         messagebox.showerror("MySQL Connection", "Enter Correct Details.")
     else:
-        sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='timetrackconn')
+        sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379',
+            database='timetrackconn')
         cur = sqlCon.cursor()
-        cur.execute("UPDATE timetrackconn set firstname=%s, surname=%s, birth=%s, allergia=%s, disease=%s, maindiagnostic=%s where stdid=%s",(
+        cur.execute("UPDATE timetrackconn set firstname=%s, surname=%s, birth=%s,"\
+            "allergia=%s, disease=%s, maindiagnostic=%s where stdid=%s",(
         firstname_pat.get(),
         sur_pat.get(),
         birth_entree.get(),
@@ -83,7 +85,6 @@ def uptopat(idpatient, patient_num, firstpat, firstname_pat,
             searchLineName2(firstpat, surname, birthvalue, allergia, transdisval, diagnosis)
     else:
         pass
-
     gui.destroy()
 
 def searchLineName2(firstpat, surname, birthvalue, allergia, transdisval, diagnosis):
@@ -102,7 +103,10 @@ def searchLineName2(firstpat, surname, birthvalue, allergia, transdisval, diagno
             file2.write(diagnosis + '\n')
     messagebox.showinfo("Info", "Data was updated for entryfile2.txt !")
 
-with open('./newpatient/entryfile.txt', 'r') as filename:
+with open('./allergy/allergyfile2.txt', 'r') as patfile:
+    linea = patfile.readline()
+
+with open('./newpatient/entryfile2.txt', 'r') as filename:
     line_a=filename.readline()
     line_b=filename.readline()
     line_c=filename.readline()
@@ -162,7 +166,6 @@ allergia = StringVar()
 allergy_pat = Entry(gui, textvariable=allergia,
     highlightbackground='light sky blue',
     bd=4, width=40)
-allergia.set(line_c[:-1])
 allergy_pat.pack()
 
 labeltrans = Label(gui)

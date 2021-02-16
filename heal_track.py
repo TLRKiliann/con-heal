@@ -163,6 +163,11 @@ from labo.resultlabo21 import callLabo21
 from labo.resultlabo22 import callLabo22
 from labo.resultlabo23 import callLabo23
 from labo.resultlabo24 import callLabo24
+
+from auxequip.auxi1 import auxi_equip1
+
+from medidoc.dmst1 import doc_medical1
+
 #import passw
 from shootransfert import loaderfile
 
@@ -3980,6 +3985,15 @@ class Application(tk.Frame):
         backupFuncPatient24(self)
         self.master.wm_attributes('-alpha', 1.0)
         self.master.update()
+
+
+    def auxi1(self):
+        auxi_equip1(self)
+
+
+    def dmst1(self):
+        doc_medical1(self)
+
 
     def updateFiletxt(self):
         """

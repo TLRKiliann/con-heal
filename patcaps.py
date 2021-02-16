@@ -156,18 +156,18 @@ def callResident(self):
         self.y15, window=self.b15)
 
     self.x16, self.y16 = 1001, 230
-    self.b16 = tk.Button(self.can, text="Intolerance",
+    self.b16 = tk.Button(self.can, text="Aux. Equip.",
         font=16, width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.nutritionMenu)
+        command=self.aux1)
     self.fb16_window = self.can.create_window(self.x16,
         self.y16, window=self.b16)
 
     self.x17, self.y17 = 1129, 230
-    self.b17 = tk.Button(self.can, text="BMI",
+    self.b17 = tk.Button(self.can, text="DMST",
         font=16, width=10, fg='navy', bg='SteelBlue2',
         activebackground='pale turquoise',
-        command=self.calculB)
+        command=self.dmst1)
     self.fb17_window = self.can.create_window(self.x17,
         self.y17, window=self.b17)
 

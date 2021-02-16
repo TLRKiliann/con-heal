@@ -42,6 +42,22 @@ def searchDB():
         messagebox.showinfo("Data Entry Form", "No Such Record Found !")
     sqlCon.close()
 
+def searchLineName13(firstpat, surname, birthvalue, allergia, transdisval, diagnosis):
+    """
+        To save changing data for 
+        entryfile.txt and display
+        messagebox.
+    """
+    MsgBox2 = messagebox.askyesno('Save data', 'Do you want to save ?')
+    if MsgBox2 == 1:
+        with open('./newpatient/entryfile13.txt', 'w') as file2:
+            file2.write(firstpat + " " + surname + '\n')
+            file2.write(birthvalue + '\n')
+            file2.write(allergia + '\n')
+            file2.write(transdisval + '\n')
+            file2.write(diagnosis + '\n')
+    messagebox.showinfo("Info", "Data was updated for entryfile13.txt !")
+
 def uptopat(idpatient, patient_num, firstpat, firstname_pat,
     surname, sur_pat, birthvalue, birth_entree, allergia, allergy_pat,
     transdisval, diseasetrans, diagnosis, diagnos_pat):
@@ -80,46 +96,32 @@ def uptopat(idpatient, patient_num, firstpat, firstname_pat,
         if os.path.getsize('./newpatient/entryfile13.txt'):
             print("+ File 'entryfile13.txt' exist !")
             os.remove('./newpatient/entryfile13.txt')
+            os.remove('./allergy/allergyfile13.txt')
             searchLineName13(firstpat, surname, birthvalue, allergia, transdisval, diagnosis)
     else:
         pass
-
     gui.destroy()
-
-def searchLineName13(firstpat, surname, birthvalue, allergia, transdisval, diagnosis):
-    """
-        To save changing data for 
-        entryfile.txt and display
-        messagebox.
-    """
-    MsgBox2 = messagebox.askyesno('Save data', 'Do you want to save ?')
-    if MsgBox2 == 1:
-        with open('./newpatient/entryfile13.txt', 'w') as file2:
-            file2.write(firstpat + " " + surname + '\n')
-            file2.write(birthvalue + '\n')
-            file2.write(allergia + '\n')
-            file2.write(transdisval + '\n')
-            file2.write(diagnosis + '\n')
-    messagebox.showinfo("Info", "Data was updated for entryfile13.txt !")
 
 with open('./allergy/allergyfile13.txt', 'r') as patfile:
     linea = patfile.readline()
 
-labelID = Label(gui)
-labelID = Label(text='ID : ',
+with open('./newpatient/entryfile13.txt', 'r') as filename:
+    a_line = filename.readline()
+    b_line = filename.readline()
+    c_line = filename.readline()
+
+labelID = Label(gui, text='ID : ',
     font="Times 14 bold",
     fg='RoyalBlue4', bg='DodgerBlue2')
 labelID.pack(pady=10)
 
 idpatient = StringVar()
-idpatient.set('13')
 patient_num = Entry(gui, textvariable=idpatient,
-    highlightbackground='light sky blue',
-    bd=4)
+    highlightbackground='light sky blue', bd=4)
+idpatient.set('13')
 patient_num.pack()
 
-labelname = Label(gui)
-labelname = Label(text='Name : ',
+labelname = Label(gui, text='Name : ',
     font="Times 14 bold",
     fg='RoyalBlue4', bg='DodgerBlue2')
 labelname.pack(pady=10)
@@ -138,8 +140,7 @@ sur_pat = Entry(gui, textvariable=surname,
     bd=4)
 sur_pat.pack()
 
-labelbirth = Label(gui)
-labelbirth = Label(text='Birth Date : ', font="Times 14 bold",
+labelbirth = Label(gui, text='Birth Date : ', font="Times 14 bold",
     fg='RoyalBlue4', bg='DodgerBlue2')
 labelbirth.pack(pady=10)
 
@@ -149,21 +150,18 @@ birth_entree = Entry(gui, textvariable=birthvalue,
     highlightbackground='light sky blue', bd=4)
 birth_entree.pack()
 
-labelaller = Label(gui)
-labelaller = Label(text='Allergy : ',
+labelaller = Label(gui, text='Allergy : ',
     font="Times 14 bold",
     fg='RoyalBlue4', bg='DodgerBlue2')
 labelaller.pack(pady=10)
 
 allergia = StringVar()
-allergia.set(linea)
 allergy_pat = Entry(gui, textvariable=allergia,
-    highlightbackground='light sky blue',
-    bd=4, width=40)
+    highlightbackground='light sky blue', bd=4, width=40)
+allergia.set(linea + c_line[:-1])
 allergy_pat.pack()
 
-labeltrans = Label(gui)
-labeltrans = Label(text='Transmissible Disease : ',
+labeltrans = Label(gui, text='Transmissible Disease : ',
     font="Times 14 bold",
     fg='RoyalBlue4', bg='DodgerBlue2')
 labeltrans.pack(pady=10)
@@ -175,8 +173,7 @@ diseasetrans = Entry(gui, textvariable=transdisval,
     bd=4)
 diseasetrans.pack()
 
-labeldiag = Label(gui)
-labeldiag = Label(text='Diagnosis : ',
+labeldiag = Label(gui, text='Diagnosis : ',
     font="Times 14 bold",
     fg='RoyalBlue4', bg='DodgerBlue2')
 labeldiag.pack(pady=10)

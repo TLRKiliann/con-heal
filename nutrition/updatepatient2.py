@@ -112,8 +112,7 @@ with open('./newpatient/entryfile2.txt', 'r') as filename:
     b_line = filename.readline()
     c_line = filename.readline()
 
-labelID = Label(gui)
-labelID = Label(text='ID : ',
+labelID = Label(gui, text='ID : ',
     font="Times 14 bold",
     fg='RoyalBlue4', bg='DodgerBlue2')
 labelID.pack(pady=10)
@@ -124,8 +123,7 @@ patient_num = Entry(gui, textvariable=idpatient,
 idpatient.set('2')
 patient_num.pack()
 
-labelname = Label(gui)
-labelname = Label(text='Name : ',
+labelname = Label(gui, text='Name : ',
     font="Times 14 bold",
     fg='RoyalBlue4', bg='DodgerBlue2')
 labelname.pack(pady=10)
@@ -133,8 +131,7 @@ labelname.pack(pady=10)
 firstpat = StringVar()
 #firstpat.set('Firstname')
 firstname_pat = Entry(gui, textvariable=firstpat,
-    highlightbackground='light sky blue',
-    bd=4)
+    highlightbackground='light sky blue', bd=4)
 firstname_pat.pack()
 
 surname = StringVar()
@@ -143,8 +140,7 @@ sur_pat = Entry(gui, textvariable=surname,
     highlightbackground='light sky blue', bd=4)
 sur_pat.pack()
 
-labelbirth = Label(gui)
-labelbirth = Label(text='Birth Date : ', font="Times 14 bold",
+labelbirth = Label(gui, text='Birth Date : ', font="Times 14 bold",
     fg='RoyalBlue4', bg='DodgerBlue2')
 labelbirth.pack(pady=10)
 
@@ -155,8 +151,7 @@ birth_entree = Entry(gui, textvariable=birthvalue,
 birth_entree.pack()
 
 # Allergia
-labelaller = Label(gui)
-labelaller = Label(text='Allergy : ',
+labelaller = Label(gui, text='Allergy : ',
     font="Times 14 bold",
     fg='RoyalBlue4', bg='DodgerBlue2')
 labelaller.pack(pady=10)
@@ -167,8 +162,7 @@ allergy_pat = Entry(gui, textvariable=allergia,
 allergia.set(linea + c_line[:-1])
 allergy_pat.pack()
 
-labeltrans = Label(gui)
-labeltrans = Label(text='Transmissible Disease : ',
+labeltrans = Label(gui, text='Transmissible Disease : ',
     font="Times 14 bold",
     fg='RoyalBlue4', bg='DodgerBlue2')
 labeltrans.pack(pady=10)
@@ -179,8 +173,7 @@ diseasetrans = Entry(gui, textvariable=transdisval,
     highlightbackground='light sky blue', bd=4)
 diseasetrans.pack()
 
-labeldiag = Label(gui)
-labeldiag = Label(text='Diagnosis : ',
+labeldiag = Label(gui, text='Diagnosis : ',
     font="Times 14 bold",
     fg='RoyalBlue4', bg='DodgerBlue2')
 labeldiag.pack(pady=10)
@@ -188,14 +181,12 @@ labeldiag.pack(pady=10)
 diagnosis = StringVar()
 #diagnosis.set('Diagnostic (main)')
 diagnos_pat = Entry(gui, textvariable=diagnosis,
-    highlightbackground='light sky blue',
-    bd=4)
+    highlightbackground='light sky blue', bd=4)
 diagnos_pat.pack()
 
 buttonsearch = Button(gui, text="Search ID", width=8, bd=3,
     fg='yellow', bg='RoyalBlue3', highlightbackground='light sky blue',
-    activebackground='pale turquoise',
-    command = searchDB)
+    activebackground='pale turquoise', command = searchDB)
 buttonsearch.pack(side=LEFT, padx=10, pady=20)
 
 buttonupdate = Button(gui, text="Enter", width=8, bd=3,

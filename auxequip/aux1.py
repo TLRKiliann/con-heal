@@ -5,6 +5,7 @@
 from tkinter import *
 import tkinter as tk
 from tkinter import messagebox
+import subprocess
 import time
 
 def auxi_equip1(self):
@@ -18,7 +19,7 @@ def auxi_equip1(self):
 
     self.x1, self.y1 = 540, 45
     self.labl_name = tk.Label(self.can, text="Auxiliary Equipement",
-        font=('helvetica', 18, 'bold'), width=10,
+        font=('helvetica', 18, 'bold'), width=20,
         height=2, bg='DodgerBlue2', fg='white')
     self.labl_name = self.can.create_window(self.x1, self.y1,
         window = self.labl_name)
@@ -49,7 +50,7 @@ def auxi_equip1(self):
         print(CheckVar1.get())
         if CheckVar1.get()==1:
             print("+ Canne was checked !")
-            with open('./auxequip/doc_equip/auxiliary1.txt.txt', 'a+') as file:
+            with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as file:
                 file.write("# Canne : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Canne ok, nothing to do")
@@ -57,7 +58,7 @@ def auxi_equip1(self):
         print(CheckVar2.get())
         if CheckVar2.get()==1:
             print("+ Tintebin (ttb) (FR) was checked !")
-            with open('./auxequip/doc_equip/auxiliary1.txt.txt', 'a+') as file:
+            with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as file:
                 file.write("# Tintebin (ttb) : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Tintebin (ttb) ok, nothing to do")
@@ -65,7 +66,7 @@ def auxi_equip1(self):
         print(CheckVar3.get())
         if CheckVar3.get()==1:
             print("+ Rollator was checked !")
-            with open('./auxequip/doc_equip/auxiliary1.txt.txt', 'a+') as file:
+            with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as file:
                 file.write("# Rollator : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Rollator ok, nothing to do")
@@ -73,7 +74,7 @@ def auxi_equip1(self):
         print(CheckVar4.get())
         if CheckVar4.get()==1:
             print("+ Fauteuil Roulant (FR) was checked !")
-            with open('./auxequip/doc_equip/auxiliary1.txt.txt', 'a+') as file:
+            with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as file:
                 file.write("# Fauteuil Roulant (FR) : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Fauteuil Roulant (FR) ok, nothing to do")
@@ -130,7 +131,7 @@ def auxi_equip1(self):
     self.C1 = self.can.create_window(self.x4, self.y4,
         window = self.C1)
 
-    self.x5, self.y5 = 134, 148
+    self.x5, self.y5 = 400, 125
     CheckVar2 = tk.IntVar()
     self.C2 = tk.Checkbutton(self.can, text="Tintebin", fg='navy',
         bg='cyan', variable=CheckVar2,
@@ -139,7 +140,7 @@ def auxi_equip1(self):
     self.C2 = self.can.create_window(self.x5, self.y5,
         window = self.C2)
 
-    self.x6, self.y6 = 134, 171
+    self.x6, self.y6 = 696, 125
     CheckVar3 = tk.IntVar()
     self.C3 = tk.Checkbutton(self.can, text="Rollator", fg='navy',
         bg='cyan', variable=CheckVar3,
@@ -148,7 +149,7 @@ def auxi_equip1(self):
     self.C3 = self.can.create_window(self.x6, self.y6,
         window = self.C3)
 
-    self.x7, self.y7 = 134, 194
+    self.x7, self.y7 = 992, 125
     CheckVar4 = tk.IntVar()
     self.C4 = tk.Checkbutton(self.can, text="Fauteuil Roulant", fg='navy',
         bg='cyan', variable=CheckVar4,

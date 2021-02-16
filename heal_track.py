@@ -164,7 +164,7 @@ from labo.resultlabo22 import callLabo22
 from labo.resultlabo23 import callLabo23
 from labo.resultlabo24 import callLabo24
 
-from auxequip.auxi1 import auxi_equip1
+from auxequip.aux1 import auxi_equip1
 
 from medidoc.dmst1 import doc_medical1
 
@@ -3987,7 +3987,7 @@ class Application(tk.Frame):
         self.master.update()
 
 
-    def auxi1(self):
+    def aux1(self):
         auxi_equip1(self)
 
 

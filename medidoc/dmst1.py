@@ -17,7 +17,7 @@ def doc_medical1(self):
 
     self.x1, self.y1 = 540, 45
     self.labl_name = tk.Label(self.can, text="DMST",
-        font=('helvetica', 18, 'bold'), width=10,
+        font=('helvetica', 18, 'bold'), width=8,
         height=2, bg='DodgerBlue2', fg='white')
     self.labl_name = self.can.create_window(self.x1, self.y1,
         window = self.labl_name)
@@ -31,7 +31,7 @@ def doc_medical1(self):
     ntry_txt.set(line1[:-1])
     self.entryname = self.can.create_window(self.x2, self.y2,
         window = self.entryname)
-
+    """
     # Button save and quit
     self.x64, self.y64 = 790, 620
     self.buttonsave = tk.Button(self.can, text="Save", width=10, bd=3,
@@ -46,5 +46,5 @@ def doc_medical1(self):
         highlightbackground='cyan', command=awayOut)
     self.buttonquit = self.can.create_window(self.x65, self.y65,
         window = self.buttonquit)
-
+    """
     self.can.configure(scrollregion=self.can.bbox(ALL))

@@ -110,20 +110,34 @@ def doc_medical1(self):
     self.wallername_window = self.can.create_window(self.x14, self.y14, window=self.allername)
 
     #Textbox for diag 1
-    self.x15, self.y15 = 300, 500
-    self.t15 = tk.Text(self.can, height=20, width=50, font=18, relief=SUNKEN)
+    self.x15, self.y15 = 300, 410
+    self.t15 = tk.Text(self.can, height=10, width=50, font=18, relief=SUNKEN)
     self.wt15_window = self.can.create_window(self.x15, self.y15, window=self.t15)
 
     # Display text in textbox from 14 Needs files
     try:
         with open('./diag/doc_diag/diagrecap1.txt', 'r') as filedate:
             linesdiag = filedate.readlines()
-            self.t15.insert(tk.INSERT, linesdiag)
-            self.t15.insert(tk.INSERT,
-                "All diagnostics done...")
+            for i in range(0, len(linesdiag)):
+                for line in linesdiag:
+                    line.replace('{', '')
+                    line.replace('}', '')
+                    line = linesdiag[i]
+                    self.t15.insert(tk.INSERT, linesdiag[i])
+                    self.t15.insert(tk.INSERT, linesdiag[i+1])
+                    self.t15.insert(tk.INSERT, linesdiag[i+2])
+                    self.t15.insert(tk.INSERT, linesdiag[i+3])
+                    self.t15.insert(tk.INSERT, linesdiag[i+4])
+                    self.t15.insert(tk.INSERT, linesdiag[i+5])
+                    self.t15.insert(tk.INSERT, linesdiag[i+6])
+                    break
+                self.t15.insert(tk.INSERT,
+                    "All diagnostics done...")
+                break
     except FileNotFoundError as infofileout:
         print("File 1 has not been found", infofileout)
     except IndexError as inforange:
+        self.t15.insert(tk.INSERT, "All diagnostics done...")
         print("List 1 got less than 6 lines", inforange)
     else:
         ("Error unknow 1")

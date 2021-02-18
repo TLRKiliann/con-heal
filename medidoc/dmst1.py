@@ -69,40 +69,64 @@ def doc_medical1(self):
         fg='white', bg='DodgerBlue2', anchor='e')
     self.wallerlab_window = self.can.create_window(self.x8, self.y8, window=self.allerlab)
 
-    self.x9, self.y9 = 290, 140
+    self.x9, self.y9 = 120, 290
+    self.diaglab = tk.Label(self.can, text="Diagnostics : ", width=15, font=12,
+        fg='white', bg='DodgerBlue2', anchor='e')
+    self.wdiaglab_window = self.can.create_window(self.x9, self.y9, window=self.diaglab)
+
+    self.x10, self.y10 = 290, 140
     self.time_string = tk.IntVar()
     self.textDate = tk.Entry(self.can, textvariable=self.time_string,
         highlightbackground='grey', bd=3)
     self.time_string.set(time.strftime("%d:%m:%Y"))
-    self.wtextDate_window = self.can.create_window(self.x9, self.y9, window=self.textDate)
+    self.wtextDate_window = self.can.create_window(self.x10, self.y10, window=self.textDate)
 
-    self.x10, self.y10 = 290, 170
+    self.x11, self.y11 = 290, 170
     time_Htring = tk.IntVar()
     self.textHour = tk.Entry(self.can, textvariable=time_Htring,
         highlightbackground='grey', bd=3)
     time_Htring.set(time.strftime("%H:%M:%S"))
-    self.wtextHour_window = self.can.create_window(self.x10, self.y10, window=self.textHour)
+    self.wtextHour_window = self.can.create_window(self.x11, self.y11, window=self.textHour)
 
-    self.x11, self.y11 = 290, 200
+    self.x12, self.y12 = 290, 200
     ent_name = tk.StringVar()
     self.txt_name = tk.Entry(self.can, textvariable=ent_name,
         highlightbackground='grey', bd=3)
     ent_name.set(a_linedmst[:-1])
-    self.wtxt_name_window = self.can.create_window(self.x11, self.y11, window=self.txt_name)
+    self.wtxt_name_window = self.can.create_window(self.x12, self.y12, window=self.txt_name)
 
-    self.x12, self.y12 = 290, 230
+    self.x13, self.y13 = 290, 230
     nt_birth = tk.StringVar()
     self.s_birth = tk.Entry(self.can, textvariable=nt_birth,
         highlightbackground='grey', bd=3)
     nt_birth.set(b_linedmst[:-1])
-    self.ws_birth_window = self.can.create_window(self.x12, self.y12, window=self.s_birth)
+    self.ws_birth_window = self.can.create_window(self.x13, self.y13, window=self.s_birth)
 
-    self.x13, self.y13 = 290, 260
+    self.x14, self.y14 = 290, 260
     allertxt = tk.StringVar()
     self.allername = tk.Entry(self.can, textvariable=allertxt,
         highlightbackground='grey', bd=3)
     allertxt.set(c_linedmst[:-1])
-    self.wallername_window = self.can.create_window(self.x13, self.y13, window=self.allername)
+    self.wallername_window = self.can.create_window(self.x14, self.y14, window=self.allername)
+
+    #Textbox for diag 1
+    self.x15, self.y15 = 300, 500
+    self.t15 = tk.Text(self.can, height=20, width=50, font=18, relief=SUNKEN)
+    self.wt15_window = self.can.create_window(self.x15, self.y15, window=self.t15)
+
+    # Display text in textbox from 14 Needs files
+    try:
+        with open('./diag/doc_diag/diagrecap1.txt', 'r') as filedate:
+            linesdiag = filedate.readlines()
+            self.t15.insert(tk.INSERT, linesdiag)
+            self.t15.insert(tk.INSERT,
+                "All diagnostics done...")
+    except FileNotFoundError as infofileout:
+        print("File 1 has not been found", infofileout)
+    except IndexError as inforange:
+        print("List 1 got less than 6 lines", inforange)
+    else:
+        ("Error unknow 1")
 
     def recordata():
         print("Date : " + time.strftime("%d/%m/%Y"))
@@ -119,6 +143,7 @@ def doc_medical1(self):
             file.write(nt_birth.get() + '\n')
             file.write("Allergy : ")
             file.write(allertxt.get() + '\n')
+            file.write("----------------------------------------------------------\n")
 
     def uptoserv():
         """
@@ -154,7 +179,7 @@ def doc_medical1(self):
             self.can.delete(ALL)
             self.showPatients()
         except (OSError, ValueError) as p_out:
-            print("Error from labo to way out", p_out)
+            print("Error from dmst to way out", p_out)
 
     # Button save and quit
     self.x64, self.y64 = 790, 620

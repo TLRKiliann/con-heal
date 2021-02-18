@@ -1,0 +1,28 @@
+----------------------------------------------------------
+Date : 18/02/2021
+Hour : 19:59:27
+Patient name : Firstname Lastname
+Birthday : ----------------------------------------------------------
+Date : 18/02/2021
+Hour : 20:00:05
+Patient name : Firstname Lastname
+Birthday : ----------------------------------------------------------
+Date : 18.02.2021
+Hour : 20:01:37
+Patient name : Firstname Lastname
+Birthday : ----------------------------------------------------------
+Date : 18.02.2021
+Hour : 20:03:13
+Patient name : Firstname Lastname
+Birthday : ----------------------------------------------------------
+Date : 18.02.2021
+Hour : 20:06:20
+Patient name : Firstname Lastname
+Birthday : 00/00/0000
+Allergy : Pollen
+----------------------------------------------------------
+Date : 18.02.2021
+Hour : 20:07:18
+Patient name : Firstname Lastname
+Birthday : 00/00/0000
+Allergy : Pollen

@@ -73,52 +73,52 @@ def doc_medical1(self):
     self.time_string = tk.IntVar()
     self.textDate = tk.Entry(self.can, textvariable=self.time_string,
         highlightbackground='grey', bd=3)
-    self.time_string.set(time.strftime("%d/%m/%Y"))
+    self.time_string.set(time.strftime("%d:%m:%Y"))
     self.wtextDate_window = self.can.create_window(self.x9, self.y9, window=self.textDate)
 
     self.x10, self.y10 = 290, 170
-    self.time_Htring = tk.IntVar()
-    self.textHour = tk.Entry(self.can, textvariable=self.time_Htring,
+    time_Htring = tk.IntVar()
+    self.textHour = tk.Entry(self.can, textvariable=time_Htring,
         highlightbackground='grey', bd=3)
-    self.time_Htring.set(time.strftime("%H:%M:%S"))
+    time_Htring.set(time.strftime("%H:%M:%S"))
     self.wtextHour_window = self.can.create_window(self.x10, self.y10, window=self.textHour)
 
     self.x11, self.y11 = 290, 200
-    self.ent_name = tk.IntVar()
-    self.txt_name = tk.Entry(self.can, textvariable=self.ent_name,
+    ent_name = tk.StringVar()
+    self.txt_name = tk.Entry(self.can, textvariable=ent_name,
         highlightbackground='grey', bd=3)
-    self.ent_name.set(a_linedmst[:-1])
+    ent_name.set(a_linedmst[:-1])
     self.wtxt_name_window = self.can.create_window(self.x11, self.y11, window=self.txt_name)
 
     self.x12, self.y12 = 290, 230
-    self.nt_birth = tk.IntVar()
-    self.s_birth = tk.Entry(self.can, textvariable=self.nt_birth,
+    nt_birth = tk.StringVar()
+    self.s_birth = tk.Entry(self.can, textvariable=nt_birth,
         highlightbackground='grey', bd=3)
-    self.nt_birth.set(b_linedmst[:-1])
+    nt_birth.set(b_linedmst[:-1])
     self.ws_birth_window = self.can.create_window(self.x12, self.y12, window=self.s_birth)
 
     self.x13, self.y13 = 290, 260
-    self.allertxt = tk.StringVar()
-    self.allername = tk.Entry(self.can, textvariable=self.allertxt,
+    allertxt = tk.StringVar()
+    self.allername = tk.Entry(self.can, textvariable=allertxt,
         highlightbackground='grey', bd=3)
-    self.allertxt.set(c_linedmst[:-1])
+    allertxt.set(c_linedmst[:-1])
     self.wallername_window = self.can.create_window(self.x13, self.y13, window=self.allername)
 
     def recordata():
         print("Date : " + time.strftime("%d/%m/%Y"))
-        print("Nom du patient : ", txt_name.get())
-        with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as file:
+        print("Nom du patient : ", ent_name.get())
+        with open('./medidoc/rslt_dmst1.txt', 'a+') as file:
             file.write("----------------------------------------------------------\n")
             file.write("Date : ")
-            file.write(time.strftime("%d/%m/%Y")+ '\n')
+            file.write(time.strftime("%d.%m.%Y") + '\n')
             file.write("Hour : ")
-            file.write(time.strftime("%H:%M:%S")+ '\n')
+            file.write(time.strftime("%H:%M:%S") + '\n')
             file.write("Patient name : ")
-            file.write(txt_name.get() + '\n')
+            file.write(ent_name.get() + '\n')
             file.write("Birthday : ")
             file.write(nt_birth.get() + '\n')
             file.write("Allergy : ")
-            file.write(allername.get() + '\n')
+            file.write(allertxt.get() + '\n')
 
     def uptoserv():
         """
@@ -160,14 +160,14 @@ def doc_medical1(self):
     self.x64, self.y64 = 790, 620
     self.buttonsave = tk.Button(self.can, text="Save", width=10, bd=3,
         fg='yellow', bg='RoyalBlue3', activebackground='pale turquoise',
-        highlightbackground='cyan', command=record_alldata)
+        highlightbackground='cyan', command = record_alldata)
     self.buttonsave = self.can.create_window(self.x64, self.y64,
         window = self.buttonsave)
 
     self.x65, self.y65 = 1110, 620
     self.buttonquit = tk.Button(self.can, text='Return to main menu', width=20, bd=3,
         fg='white', bg='RoyalBlue3', activebackground='pale turquoise',
-        highlightbackground='cyan', command=way_back)
+        highlightbackground='cyan', command = way_back)
     self.buttonquit = self.can.create_window(self.x65, self.y65,
         window = self.buttonquit)
 

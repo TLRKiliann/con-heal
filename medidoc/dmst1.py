@@ -47,7 +47,7 @@ def doc_medical1(self):
         window = self.labl_title)
 
     self.x33, self.y33 = 870, 100
-    self.labl_title = tk.Label(self.can, text='--- Contact Data ---',
+    self.labl_title = tk.Label(self.can, text='--- Admin Data ---',
         font="Times 14 bold", width=60,
         height=1, bg='RoyalBlue3', fg='white')
     self.wlabl_title = self.can.create_window(self.x33, self.y33,
@@ -57,6 +57,89 @@ def doc_medical1(self):
     self.LabDate = tk.Label(self.can, text="Date : ", width=15, font=12,
         fg='white', bg='DodgerBlue2', anchor='e')
     self.wLabDate_window = self.can.create_window(self.x4, self.y4, window=self.LabDate)
+
+    # Admin from contact col 2
+    self.x44, self.y44 = 870, 240
+    self.t44 = tk.Text(self.can, height=11, width=50, font=18, relief=SUNKEN)
+    self.wt44_window = self.can.create_window(self.x44, self.y44, window=self.t44)
+
+    def importationAdmin(fichier, encodage="Utf-8"):
+        filecontact = open(fichier, 'r', encoding=encodage)
+        content = filecontact.readlines()
+        filecontact.close()
+        for li in content:
+            self.t44.insert(END, li)
+
+    try:
+        if os.path.getsize('./contact/conpact/finalfile1.txt'):
+            importationAdmin('./contact/conpact/finalfile1.txt', encodage="Utf-8")
+    except FileNotFoundError as no_file:
+        print("+ File finalfile1 not found !")
+        messagebox.showinfo('INFO', 'File finalfile1 not found !')
+
+    self.x45, self.y45 = 870, 380
+    self.lbl_doc = tk.Label(self.can, text='--- Doctor Data ---',
+        font="Times 14 bold", width=60,
+        height=1, bg='RoyalBlue3', fg='white')
+    self.wlbl_doc = self.can.create_window(self.x45, self.y45,
+        window = self.lbl_doc)
+
+    # Doctor from contact col 2
+    self.x47, self.y47 = 870, 490
+    self.t47 = tk.Text(self.can, height=8, width=50, font=18, relief=SUNKEN)
+    self.wt47_window = self.can.create_window(self.x47, self.y47, window=self.t47)
+
+    def importationDoc1(fichier, encodage="Utf-8"):
+        filecontdoc = open(fichier, 'r', encoding=encodage)
+        content = filecontdoc.readlines()
+        filecontdoc.close()
+        for li in content:
+            self.t47.insert(END, li)
+
+    try:
+        if os.path.getsize('./contact/conpact/finaldoc1.txt'):
+            importationDoc1('./contact/conpact/finaldoc1.txt', encodage="Utf-8")
+    except FileNotFoundError as no_file:
+        print("+ File finaldoc1 not found !")
+        messagebox.showinfo('INFO', 'File finaldoc1 not found !')
+
+    # Doctor2 from contact col 2
+    self.x48, self.y48 = 870, 670
+    self.t48 = tk.Text(self.can, height=8, width=50, font=18, relief=SUNKEN)
+    self.wt48_window = self.can.create_window(self.x48, self.y48, window=self.t48)
+
+    def importationDoc2(fichier, encodage="Utf-8"):
+        filedoc2 = open(fichier, 'r', encoding=encodage)
+        content = filedoc2.readlines()
+        filedoc2.close()
+        for li in content:
+            self.t48.insert(END, li)
+
+    try:
+        if os.path.getsize('./contact/conpact/finaldoc2.txt'):
+            importationDoc2('./contact/conpact/finaldoc2.txt', encodage="Utf-8")
+    except FileNotFoundError as no_file:
+        print("+ File finaldoc2 not found !")
+        messagebox.showinfo('INFO', 'File finaldoc2 not found !')
+
+    # Doctor2 from contact col 2
+    self.x49, self.y49 = 870, 850
+    self.t49 = tk.Text(self.can, height=8, width=50, font=18, relief=SUNKEN)
+    self.wt49_window = self.can.create_window(self.x49, self.y49, window=self.t49)
+
+    def importationDoc3(fichier, encodage="Utf-8"):
+        filedoc3 = open(fichier, 'r', encoding=encodage)
+        content = filedoc3.readlines()
+        filedoc3.close()
+        for li in content:
+            self.t49.insert(END, li)
+
+    try:
+        if os.path.getsize('./contact/conpact/finaldoc3.txt'):
+            importationDoc3('./contact/conpact/finaldoc3.txt', encodage="Utf-8")
+    except FileNotFoundError as no_file:
+        print("+ File finaldoc3 not found !")
+        messagebox.showinfo('INFO', 'File finaldoc3 not found !')
 
     self.x5, self.y5 = 90, 170
     self.LabHour = tk.Label(self.can, text="Hour : ", width=15, font=12,
@@ -124,11 +207,11 @@ def doc_medical1(self):
     self.wallername_window = self.can.create_window(self.x14, self.y14, window=self.allername)
 
     self.x14, self.y14 = 260, 290
-    allertxt = tk.StringVar()
-    self.allername = tk.Entry(self.can, textvariable=allertxt,
+    transdis = tk.StringVar()
+    self.transmission = tk.Entry(self.can, textvariable=transdis,
         highlightbackground='grey', bd=3)
-    allertxt.set(d_linedmst[:-1])
-    self.wallername_window = self.can.create_window(self.x14, self.y14, window=self.allername)
+    transdis.set(d_linedmst[:-1])
+    self.wtransmission_window = self.can.create_window(self.x14, self.y14, window=self.transmission)
 
     #Textbox for diag 1
     self.x15, self.y15 = 250, 440
@@ -294,6 +377,10 @@ def doc_medical1(self):
             file.write(nt_birth.get() + '\n')
             file.write("Allergy : ")
             file.write(allertxt.get() + '\n')
+            file.write("Transmissible disease : ")
+            file.write(transdis.get() + '\n')
+            file.write("Phone number : ")
+            file.write(phone_num.get() + '\n')
             file.write("----------------------------------------------------------\n")
 
     def uptoserv():

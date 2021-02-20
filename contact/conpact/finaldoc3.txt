@@ -1,0 +1,8 @@
+Doctor : Ruby
+Specialization : psychiatria
+Phone : 978987378
+Mobile : 2189387812
+Street : Rookridge 87
+City : Peckin
+e-mail : Rub.bi@gmail.com
+Fax : 732891738912

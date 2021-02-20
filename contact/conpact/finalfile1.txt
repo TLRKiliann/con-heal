@@ -1,0 +1,11 @@
+Patient name : Firstname Lastname
+Birthdate : 00/00/0000
+Native : Lyss
+Phone : 077 888 44 55
+Street : Alouera 23
+City : Kansan
+e-mail : sjkhs@jdas.com
+Insurance : Assura
+Policy : 9873899123812983
+Civil status : Alone
+Confession : Catoloic

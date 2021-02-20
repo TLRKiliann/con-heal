@@ -46,7 +46,7 @@ def doc_medical1(self):
     self.wlabl_title = self.can.create_window(self.x3, self.y3,
         window = self.labl_title)
 
-    self.x33, self.y33 = 850, 100
+    self.x33, self.y33 = 870, 100
     self.labl_title = tk.Label(self.can, text='--- Contact Data ---',
         font="Times 14 bold", width=60,
         height=1, bg='RoyalBlue3', fg='white')
@@ -78,8 +78,8 @@ def doc_medical1(self):
         fg='white', bg='DodgerBlue2', anchor='e')
     self.wallerlab_window = self.can.create_window(self.x8, self.y8, window=self.allerlab)
 
-    self.x8, self.y8 = 90, 290
-    self.allerlab = tk.Label(self.can, text="MST : ", width=15, font=12,
+    self.x8, self.y8 = 65, 290
+    self.allerlab = tk.Label(self.can, text="Transmi. disease : ", width=20, font=12,
         fg='white', bg='DodgerBlue2', anchor='e')
     self.wallerlab_window = self.can.create_window(self.x8, self.y8, window=self.allerlab)
 
@@ -202,8 +202,8 @@ def doc_medical1(self):
         messagebox.showinfo('INFO', 'File intro_res not found !')
 
     # Lbl for VP
-    self.x18, self.y18 = 30, 800
-    self.paramlab = tk.Label(self.can, text="Vitals Parameters : ", width=25, font=12,
+    self.x18, self.y18 = 60, 800
+    self.paramlab = tk.Label(self.can, text="Vitals Parameters : ", width=20, font=12,
         fg='white', bg='DodgerBlue2', anchor='e')
     self.wparamlab_window = self.can.create_window(self.x18, self.y18, window=self.paramlab)
 
@@ -333,14 +333,14 @@ def doc_medical1(self):
             print("Error from dmst to way out", p_out)
 
     # Button save and quit
-    self.x64, self.y64 = 780, 620
+    self.x64, self.y64 = 780, 2000
     self.buttonsave = tk.Button(self.can, text="Save", width=10, bd=3,
         fg='yellow', bg='RoyalBlue3', activebackground='pale turquoise',
         highlightbackground='cyan', command = record_alldata)
     self.buttonsave = self.can.create_window(self.x64, self.y64,
         window = self.buttonsave)
 
-    self.x65, self.y65 = 1050, 620
+    self.x65, self.y65 = 1050, 2000
     self.buttonquit = tk.Button(self.can, text='Return to main menu', width=20, bd=3,
         fg='white', bg='RoyalBlue3', activebackground='pale turquoise',
         highlightbackground='cyan', command = way_back)

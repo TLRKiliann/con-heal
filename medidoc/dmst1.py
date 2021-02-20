@@ -117,8 +117,8 @@ def doc_medical1(self):
 
     # Display text in textbox from diag file
     try:
-        with open('./diag/doc_diag/diagrecap1.txt', 'r') as filedate:
-            linesdiag = filedate.readlines()
+        with open('./diag/doc_diag/diagrecap1.txt', 'r') as filediag:
+            linesdiag = filediag.readlines()
             for i in range(0, len(linesdiag)):
                 for line in linesdiag:
                     line.replace('{', '')
@@ -194,20 +194,20 @@ def doc_medical1(self):
 
     # Display text in textbox from param files
     try:
-        with open('./param/paramdata1.txt', 'r') as filedate:
-            linesdiag = filedate.readlines()
-            for i in range(0, len(linesdiag)):
-                for line in linesdiag:
+        with open('./param/paramdata1.txt', 'r') as fileparam:
+            linesparam = fileparam.readlines()
+            for i in range(0, len(linesparam)):
+                for line in linesparam:
                     line.replace('{', '')
                     line.replace('}', '')
-                    line = linesdiag[i]
-                    self.t19.insert(tk.INSERT, linesdiag[i])
-                    self.t19.insert(tk.INSERT, linesdiag[i+1])
-                    self.t19.insert(tk.INSERT, linesdiag[i+2])
-                    self.t19.insert(tk.INSERT, linesdiag[i+3])
-                    self.t19.insert(tk.INSERT, linesdiag[i+4])
-                    self.t19.insert(tk.INSERT, linesdiag[i+5])
-                    self.t19.insert(tk.INSERT, linesdiag[i+6])
+                    line = linesparam[i]
+                    self.t19.insert(tk.INSERT, linesparam[i])
+                    self.t19.insert(tk.INSERT, linesparam[i+1])
+                    self.t19.insert(tk.INSERT, linesparam[i+2])
+                    self.t19.insert(tk.INSERT, linesparam[i+3])
+                    self.t19.insert(tk.INSERT, linesparam[i+4])
+                    self.t19.insert(tk.INSERT, linesparam[i+5])
+                    self.t19.insert(tk.INSERT, linesparam[i+6])
                     break
                 self.t19.insert(tk.INSERT,
                     "All vitals parameters done...")
@@ -218,7 +218,46 @@ def doc_medical1(self):
         self.t19.insert(tk.INSERT, "All vitals parameters done...")
         print("List 3 got less than 6 lines", inforange)
     else:
-        ("Error unknow 3 (for diag)")
+        ("Error unknow 3 (for param)")
+
+    # Lbl for BMI
+    self.x18, self.y18 = 20, 1010
+    self.paramlab = tk.Label(self.can, text="BMI : ", width=15, font=12,
+        fg='white', bg='DodgerBlue2', anchor='e')
+    self.wparamlab_window = self.can.create_window(self.x18, self.y18, window=self.paramlab)
+
+    #Textbox for bmi
+    self.x19, self.y19 = 300, 1130
+    self.t19 = tk.Text(self.can, height=10, width=50, font=18, relief=SUNKEN)
+    self.wt19_window = self.can.create_window(self.x19, self.y19, window=self.t19)
+
+    # Display text in textbox from bmi files
+    try:
+        with open('./calBmi/bmi.txt', 'r') as filebmi:
+            linesbmi = filebmi.readlines()
+            for i in range(0, len(linesbmi)):
+                for line in linesbmi:
+                    line.replace('{', '')
+                    line.replace('}', '')
+                    line = linesbmi[i]
+                    self.t19.insert(tk.INSERT, linesbmi[i])
+                    self.t19.insert(tk.INSERT, linesbmi[i+1])
+                    self.t19.insert(tk.INSERT, linesbmi[i+2])
+                    self.t19.insert(tk.INSERT, linesbmi[i+3])
+                    self.t19.insert(tk.INSERT, linesbmi[i+4])
+                    self.t19.insert(tk.INSERT, linesbmi[i+5])
+                    self.t19.insert(tk.INSERT, linesbmi[i+6])
+                    break
+                self.t19.insert(tk.INSERT,
+                    "All bmi done...")
+                break
+    except FileNotFoundError as infofileout:
+        print("File 4 has not been found", infofileout)
+    except IndexError as inforange:
+        self.t19.insert(tk.INSERT, "All bmi done...")
+        print("List 4 got less than 6 lines", inforange)
+    else:
+        ("Error unknow 4 (for BMI)")
 
     def recordata():
         print("Date : " + time.strftime("%d/%m/%Y"))

@@ -1,0 +1,13 @@
+Date : 20/02/2021
+Heure : 11:31:35
+Name : Firstname Lastname
+Date of introduction : 
+Nom du ttt : Drug
+Dosage du ttt : mcg/ml/mg/UI/gttes
+
+
+
+
+Date of end : //
+Signature : 
+

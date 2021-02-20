@@ -6,6 +6,7 @@ from tkinter import *
 import tkinter as tk
 from tkinter import messagebox
 import time
+import os
 import subprocess
 
 
@@ -69,7 +70,7 @@ def doc_medical1(self):
         fg='white', bg='DodgerBlue2', anchor='e')
     self.wallerlab_window = self.can.create_window(self.x8, self.y8, window=self.allerlab)
 
-    self.x9, self.y9 = 120, 290
+    self.x9, self.y9 = 80, 290
     self.diaglab = tk.Label(self.can, text="Diagnostics : ", width=15, font=12,
         fg='white', bg='DodgerBlue2', anchor='e')
     self.wdiaglab_window = self.can.create_window(self.x9, self.y9, window=self.diaglab)
@@ -114,7 +115,7 @@ def doc_medical1(self):
     self.t15 = tk.Text(self.can, height=10, width=50, font=18, relief=SUNKEN)
     self.wt15_window = self.can.create_window(self.x15, self.y15, window=self.t15)
 
-    # Display text in textbox from 14 Needs files
+    # Display text in textbox from diag file
     try:
         with open('./diag/doc_diag/diagrecap1.txt', 'r') as filedate:
             linesdiag = filedate.readlines()
@@ -140,7 +141,84 @@ def doc_medical1(self):
         self.t15.insert(tk.INSERT, "All diagnostics done...")
         print("List 1 got less than 6 lines", inforange)
     else:
-        ("Error unknow 1")
+        ("Error unknow 1 (for diag)")
+
+    # Labl + Textbox + func to read in ttt files
+    self.x16, self.y16 = 130, 530
+    self.tttlab = tk.Label(self.can, text="Treatments + Reserves : ", width=25, font=12,
+        fg='white', bg='DodgerBlue2', anchor='e')
+    self.wtttlab_window = self.can.create_window(self.x16, self.y16, window=self.tttlab)
+
+    self.x17, self.y17 = 300, 650
+    self.t17 = tk.Text(self.can, height=10, width=50, font=18, relief=SUNKEN)
+    self.wt17_window = self.can.create_window(self.x17, self.y17, window=self.t17)
+
+    def importationFile(fichier, encodage="Utf-8"):
+        file = open(fichier, 'r', encoding=encodage)
+        content=file.readlines()
+        file.close()
+        for li in content:
+            self.t17.insert(END, li)
+
+    def importationFile2(fichier2, encodage="Utf-8"):
+        file2 = open(fichier2, 'r', encoding=encodage)
+        content=file2.readlines()
+        file2.close()
+        for li2 in content:
+            self.t17.insert(END, li2)
+
+    try:
+        if os.path.getsize('./ttt/doc_ttt/intro_ttt.txt'):
+            importationFile('./ttt/doc_ttt/intro_ttt.txt', encodage="Utf-8")
+    except FileNotFoundError as no_file:
+        print("+ File intro_ttt not found !")
+        messagebox.showinfo('INFO', 'File intro_ttt not found !')
+
+    try:
+        if os.path.getsize('./ttt/doc_ttt/intro_res.txt'):
+            importationFile2('./ttt/doc_ttt/intro_res.txt', encodage="Utf-8")
+    except FileNotFoundError as no_file:
+        print("+ File intro_res not found !")
+        messagebox.showinfo('INFO', 'File intro_res not found !')
+
+    # Lbl for VP
+    self.x18, self.y18 = 80, 770
+    self.paramlab = tk.Label(self.can, text="Vitals Parameters : ", width=25, font=12,
+        fg='white', bg='DodgerBlue2', anchor='e')
+    self.wparamlab_window = self.can.create_window(self.x18, self.y18, window=self.paramlab)
+
+    #Textbox for param
+    self.x19, self.y19 = 300, 890
+    self.t19 = tk.Text(self.can, height=10, width=50, font=18, relief=SUNKEN)
+    self.wt19_window = self.can.create_window(self.x19, self.y19, window=self.t19)
+
+    # Display text in textbox from param files
+    try:
+        with open('./param/paramdata1.txt', 'r') as filedate:
+            linesdiag = filedate.readlines()
+            for i in range(0, len(linesdiag)):
+                for line in linesdiag:
+                    line.replace('{', '')
+                    line.replace('}', '')
+                    line = linesdiag[i]
+                    self.t19.insert(tk.INSERT, linesdiag[i])
+                    self.t19.insert(tk.INSERT, linesdiag[i+1])
+                    self.t19.insert(tk.INSERT, linesdiag[i+2])
+                    self.t19.insert(tk.INSERT, linesdiag[i+3])
+                    self.t19.insert(tk.INSERT, linesdiag[i+4])
+                    self.t19.insert(tk.INSERT, linesdiag[i+5])
+                    self.t19.insert(tk.INSERT, linesdiag[i+6])
+                    break
+                self.t19.insert(tk.INSERT,
+                    "All vitals parameters done...")
+                break
+    except FileNotFoundError as infofileout:
+        print("File 3 has not been found", infofileout)
+    except IndexError as inforange:
+        self.t19.insert(tk.INSERT, "All vitals parameters done...")
+        print("List 3 got less than 6 lines", inforange)
+    else:
+        ("Error unknow 3 (for diag)")
 
     def recordata():
         print("Date : " + time.strftime("%d/%m/%Y"))

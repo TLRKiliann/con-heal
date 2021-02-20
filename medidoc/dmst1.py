@@ -19,7 +19,7 @@ def doc_medical1(self):
     self.can.delete(ALL)
     self.can.configure(background='DodgerBlue2')
 
-    self.x1, self.y1 = 530, 45
+    self.x1, self.y1 = 500, 45
     self.labl_name = tk.Label(self.can, text="DMST",
         font=('helvetica', 18, 'bold'), width=8,
         height=2, bg='DodgerBlue2', fg='white')
@@ -30,88 +30,108 @@ def doc_medical1(self):
         a_linedmst = filename2.readline()
         b_linedmst = filename2.readline()
         c_linedmst = filename2.readline()
+        d_linedmst = filename2.readline()
 
-    self.x2, self.y2 = 670, 45
+    self.x2, self.y2 = 640, 45
     ntry_txt = StringVar()
     self.entryname = Entry(self.can, textvariable=ntry_txt)
     ntry_txt.set(a_linedmst[:-1])
     self.wentryname = self.can.create_window(self.x2, self.y2,
         window = self.entryname)
 
-    self.x3, self.y3 = 300, 100
+    self.x3, self.y3 = 250, 100
     self.labl_title = tk.Label(self.can, text='--- Personal Data ---',
         font="Times 14 bold", width=60,
         height=1, bg='RoyalBlue3', fg='white')
     self.wlabl_title = self.can.create_window(self.x3, self.y3,
         window = self.labl_title)
 
-    self.x4, self.y4 = 120, 140
+    self.x33, self.y33 = 850, 100
+    self.labl_title = tk.Label(self.can, text='--- Contact Data ---',
+        font="Times 14 bold", width=60,
+        height=1, bg='RoyalBlue3', fg='white')
+    self.wlabl_title = self.can.create_window(self.x33, self.y33,
+        window = self.labl_title)
+
+    self.x4, self.y4 = 90, 140
     self.LabDate = tk.Label(self.can, text="Date : ", width=15, font=12,
         fg='white', bg='DodgerBlue2', anchor='e')
     self.wLabDate_window = self.can.create_window(self.x4, self.y4, window=self.LabDate)
 
-    self.x5, self.y5 = 120, 170
+    self.x5, self.y5 = 90, 170
     self.LabHour = tk.Label(self.can, text="Hour : ", width=15, font=12,
         fg='white', bg='DodgerBlue2', anchor='e')
     self.wLabHour_window = self.can.create_window(self.x5, self.y5, window=self.LabHour)
 
-    self.x6, self.y6 = 120, 200
+    self.x6, self.y6 = 90, 200
     self.LabName = tk.Label(self.can, text="Patient name : ", width=15, font=12,
         fg='white', bg='DodgerBlue2', anchor='e')
     self.wLabName_window = self.can.create_window(self.x6, self.y6, window=self.LabName)
 
-    self.x7, self.y7 = 120, 230
+    self.x7, self.y7 = 90, 230
     self.birth_lab = tk.Label(self.can, text="Birthday : ", width=15, font=12,
         fg='white', bg='DodgerBlue2', anchor='e')
     self.wbirth_lab_window = self.can.create_window(self.x7, self.y7, window=self.birth_lab)
 
-    self.x8, self.y8 = 120, 260
+    self.x8, self.y8 = 90, 260
     self.allerlab = tk.Label(self.can, text="Allergy : ", width=15, font=12,
         fg='white', bg='DodgerBlue2', anchor='e')
     self.wallerlab_window = self.can.create_window(self.x8, self.y8, window=self.allerlab)
 
-    self.x9, self.y9 = 80, 290
+    self.x8, self.y8 = 90, 290
+    self.allerlab = tk.Label(self.can, text="MST : ", width=15, font=12,
+        fg='white', bg='DodgerBlue2', anchor='e')
+    self.wallerlab_window = self.can.create_window(self.x8, self.y8, window=self.allerlab)
+
+    self.x9, self.y9 = 30, 320 # +30
     self.diaglab = tk.Label(self.can, text="Diagnostics : ", width=15, font=12,
         fg='white', bg='DodgerBlue2', anchor='e')
     self.wdiaglab_window = self.can.create_window(self.x9, self.y9, window=self.diaglab)
 
-    self.x10, self.y10 = 290, 140
+    self.x10, self.y10 = 260, 140
     self.time_string = tk.IntVar()
     self.textDate = tk.Entry(self.can, textvariable=self.time_string,
         highlightbackground='grey', bd=3)
     self.time_string.set(time.strftime("%d:%m:%Y"))
     self.wtextDate_window = self.can.create_window(self.x10, self.y10, window=self.textDate)
 
-    self.x11, self.y11 = 290, 170
+    self.x11, self.y11 = 260, 170
     time_Htring = tk.IntVar()
     self.textHour = tk.Entry(self.can, textvariable=time_Htring,
         highlightbackground='grey', bd=3)
     time_Htring.set(time.strftime("%H:%M:%S"))
     self.wtextHour_window = self.can.create_window(self.x11, self.y11, window=self.textHour)
 
-    self.x12, self.y12 = 290, 200
+    self.x12, self.y12 = 260, 200
     ent_name = tk.StringVar()
     self.txt_name = tk.Entry(self.can, textvariable=ent_name,
         highlightbackground='grey', bd=3)
     ent_name.set(a_linedmst[:-1])
     self.wtxt_name_window = self.can.create_window(self.x12, self.y12, window=self.txt_name)
 
-    self.x13, self.y13 = 290, 230
+    self.x13, self.y13 = 260, 230
     nt_birth = tk.StringVar()
     self.s_birth = tk.Entry(self.can, textvariable=nt_birth,
         highlightbackground='grey', bd=3)
     nt_birth.set(b_linedmst[:-1])
     self.ws_birth_window = self.can.create_window(self.x13, self.y13, window=self.s_birth)
 
-    self.x14, self.y14 = 290, 260
+    self.x14, self.y14 = 260, 260
     allertxt = tk.StringVar()
     self.allername = tk.Entry(self.can, textvariable=allertxt,
         highlightbackground='grey', bd=3)
     allertxt.set(c_linedmst[:-1])
     self.wallername_window = self.can.create_window(self.x14, self.y14, window=self.allername)
 
+    self.x14, self.y14 = 260, 290
+    allertxt = tk.StringVar()
+    self.allername = tk.Entry(self.can, textvariable=allertxt,
+        highlightbackground='grey', bd=3)
+    allertxt.set(d_linedmst[:-1])
+    self.wallername_window = self.can.create_window(self.x14, self.y14, window=self.allername)
+
     #Textbox for diag 1
-    self.x15, self.y15 = 300, 410
+    self.x15, self.y15 = 250, 440
     self.t15 = tk.Text(self.can, height=10, width=50, font=18, relief=SUNKEN)
     self.wt15_window = self.can.create_window(self.x15, self.y15, window=self.t15)
 
@@ -144,12 +164,12 @@ def doc_medical1(self):
         ("Error unknow 1 (for diag)")
 
     # Labl + Textbox + func to read in ttt files
-    self.x16, self.y16 = 130, 530
+    self.x16, self.y16 = 80, 560
     self.tttlab = tk.Label(self.can, text="Treatments + Reserves : ", width=25, font=12,
         fg='white', bg='DodgerBlue2', anchor='e')
     self.wtttlab_window = self.can.create_window(self.x16, self.y16, window=self.tttlab)
 
-    self.x17, self.y17 = 300, 650
+    self.x17, self.y17 = 250, 680
     self.t17 = tk.Text(self.can, height=10, width=50, font=18, relief=SUNKEN)
     self.wt17_window = self.can.create_window(self.x17, self.y17, window=self.t17)
 
@@ -182,13 +202,13 @@ def doc_medical1(self):
         messagebox.showinfo('INFO', 'File intro_res not found !')
 
     # Lbl for VP
-    self.x18, self.y18 = 80, 770
+    self.x18, self.y18 = 30, 800
     self.paramlab = tk.Label(self.can, text="Vitals Parameters : ", width=25, font=12,
         fg='white', bg='DodgerBlue2', anchor='e')
     self.wparamlab_window = self.can.create_window(self.x18, self.y18, window=self.paramlab)
 
     #Textbox for param
-    self.x19, self.y19 = 300, 890
+    self.x19, self.y19 = 250, 920
     self.t19 = tk.Text(self.can, height=10, width=50, font=18, relief=SUNKEN)
     self.wt19_window = self.can.create_window(self.x19, self.y19, window=self.t19)
 
@@ -221,13 +241,13 @@ def doc_medical1(self):
         ("Error unknow 3 (for param)")
 
     # Lbl for BMI
-    self.x18, self.y18 = 20, 1010
-    self.paramlab = tk.Label(self.can, text="BMI : ", width=15, font=12,
+    self.x18, self.y18 = 40, 1040
+    self.paramlab = tk.Label(self.can, text="Weight and BMI : ", width=20, font=12,
         fg='white', bg='DodgerBlue2', anchor='e')
     self.wparamlab_window = self.can.create_window(self.x18, self.y18, window=self.paramlab)
 
     #Textbox for bmi
-    self.x19, self.y19 = 300, 1130
+    self.x19, self.y19 = 250, 1160
     self.t19 = tk.Text(self.can, height=10, width=50, font=18, relief=SUNKEN)
     self.wt19_window = self.can.create_window(self.x19, self.y19, window=self.t19)
 
@@ -313,14 +333,14 @@ def doc_medical1(self):
             print("Error from dmst to way out", p_out)
 
     # Button save and quit
-    self.x64, self.y64 = 790, 620
+    self.x64, self.y64 = 780, 620
     self.buttonsave = tk.Button(self.can, text="Save", width=10, bd=3,
         fg='yellow', bg='RoyalBlue3', activebackground='pale turquoise',
         highlightbackground='cyan', command = record_alldata)
     self.buttonsave = self.can.create_window(self.x64, self.y64,
         window = self.buttonsave)
 
-    self.x65, self.y65 = 1110, 620
+    self.x65, self.y65 = 1050, 620
     self.buttonquit = tk.Button(self.can, text='Return to main menu', width=20, bd=3,
         fg='white', bg='RoyalBlue3', activebackground='pale turquoise',
         highlightbackground='cyan', command = way_back)

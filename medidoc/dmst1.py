@@ -384,32 +384,19 @@ def doc_medical1(self):
     self.wt19_window = self.can.create_window(self.x19, self.y19, window=self.t19)
 
     # Display text in textbox from param files
+    def importationParam(fichier, encodage="Utf-8"):
+        fileparam = open(fichier, 'r', encoding=encodage)
+        content = fileparam.readlines()
+        fileparam.close()
+        for li in content:
+            self.t19.insert(END, li)
+
     try:
-        with open('./param/paramdata1.txt', 'r') as fileparam:
-            linesparam = fileparam.readlines()
-            for i in range(0, len(linesparam)):
-                for line in linesparam:
-                    line.replace('{', '')
-                    line.replace('}', '')
-                    line = linesparam[i]
-                    self.t19.insert(tk.INSERT, linesparam[i])
-                    self.t19.insert(tk.INSERT, linesparam[i+1])
-                    self.t19.insert(tk.INSERT, linesparam[i+2])
-                    self.t19.insert(tk.INSERT, linesparam[i+3])
-                    self.t19.insert(tk.INSERT, linesparam[i+4])
-                    self.t19.insert(tk.INSERT, linesparam[i+5])
-                    self.t19.insert(tk.INSERT, linesparam[i+6])
-                    break
-                self.t19.insert(tk.INSERT,
-                    "All vitals parameters done...")
-                break
-    except FileNotFoundError as infofileout:
-        print("File 3 has not been found", infofileout)
-    except IndexError as inforange:
-        self.t19.insert(tk.INSERT, "All vitals parameters done...")
-        print("List 3 got less than 6 lines", inforange)
-    else:
-        ("Error unknow 3 (for param)")
+        if os.path.getsize('./param/paramdata1.txt'):
+            importationParam('./param/paramdata1.txt', encodage="Utf-8")
+    except FileNotFoundError as no_file:
+        print("+ File paramdata1.txt not found !")
+        messagebox.showinfo('INFO', 'File paramdata1.txt not found !')
 
     # Lbl for BMI
     self.x18, self.y18 = 40, 1040
@@ -418,37 +405,23 @@ def doc_medical1(self):
     self.wparamlab_window = self.can.create_window(self.x18, self.y18, window=self.paramlab)
 
     #Textbox for bmi
-    self.x19, self.y19 = 250, 1160
-    self.t19 = tk.Text(self.can, height=10, width=50, font=18, relief=SUNKEN)
-    self.wt19_window = self.can.create_window(self.x19, self.y19, window=self.t19)
+    self.x20, self.y20 = 250, 1160
+    self.t20 = tk.Text(self.can, height=10, width=50, font=18, relief=SUNKEN)
+    self.wt20_window = self.can.create_window(self.x20, self.y20, window=self.t20)
 
     # Display text in textbox from bmi files
+    def importationBmi(fichier, encodage="Utf-8"):
+        filebmi = open(fichier, 'r', encoding=encodage)
+        content = filebmi.readlines()
+        filebmi.close()
+        for li in content:
+            self.t20.insert(END, li)
     try:
-        with open('./calBmi/bmi.txt', 'r') as filebmi:
-            linesbmi = filebmi.readlines()
-            for i in range(0, len(linesbmi)):
-                for line in linesbmi:
-                    line.replace('{', '')
-                    line.replace('}', '')
-                    line = linesbmi[i]
-                    self.t19.insert(tk.INSERT, linesbmi[i])
-                    self.t19.insert(tk.INSERT, linesbmi[i+1])
-                    self.t19.insert(tk.INSERT, linesbmi[i+2])
-                    self.t19.insert(tk.INSERT, linesbmi[i+3])
-                    self.t19.insert(tk.INSERT, linesbmi[i+4])
-                    self.t19.insert(tk.INSERT, linesbmi[i+5])
-                    self.t19.insert(tk.INSERT, linesbmi[i+6])
-                    break
-                self.t19.insert(tk.INSERT,
-                    "All bmi done...")
-                break
-    except FileNotFoundError as infofileout:
-        print("File 4 has not been found", infofileout)
-    except IndexError as inforange:
-        self.t19.insert(tk.INSERT, "All bmi done...")
-        print("List 4 got less than 6 lines", inforange)
-    else:
-        ("Error unknow 4 (for BMI)")
+        if os.path.getsize('./calBmi/bmi.txt'):
+            importationBmi('./calBmi/bmi.txt', encodage="Utf-8")
+    except FileNotFoundError as no_file:
+        print("+ File bmi.txt not found !")
+        messagebox.showinfo('INFO', 'File bmi.txt not found !')
 
     self.x58, self.y58 = 250, 1290 
     self.lbl_need = tk.Label(self.can, text='--- 14 needs and depedencies ---',

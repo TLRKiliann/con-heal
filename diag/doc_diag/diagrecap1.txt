@@ -1,4 +1,10 @@
 --- DIAGNOSTICS ---
 Schizo
+trb schizo-affectif
+trb bi-polaire
+trb phobique
+psychose continue
+hallucinations
+
 
 

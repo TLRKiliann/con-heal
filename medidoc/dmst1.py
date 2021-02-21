@@ -450,6 +450,30 @@ def doc_medical1(self):
     else:
         ("Error unknow 4 (for BMI)")
 
+    self.x58, self.y58 = 250, 1290 
+    self.lbl_need = tk.Label(self.can, text='--- 14 needs and depedencies ---',
+        font="Times 14 bold", width=60,
+        height=1, bg='RoyalBlue3', fg='white')
+    self.wlbl_need = self.can.create_window(self.x58, self.y58,
+        window = self.lbl_need)
+
+    """
+    Boire et manger
+    Respirer
+    Dormir, se reposer
+    Etre propre, protéger ses téguments
+    Elimination
+    Se recréer
+    Apprendre
+    Température
+    S'occuper en vue de se réaliser
+    Agir selon ses valeurs et croyances
+    Se vêtir et se dévêtir
+    Eviter les dangers
+    Se mouvoir, maintenir une bonne posture
+    Communiquer avec ses semblables
+    """
+
     def recordata():
         print("Date : " + time.strftime("%d/%m/%Y"))
         print("Nom du patient : ", ent_name.get())

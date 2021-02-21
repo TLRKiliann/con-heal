@@ -457,6 +457,14 @@ def doc_medical1(self):
     self.wlbl_need = self.can.create_window(self.x58, self.y58,
         window = self.lbl_need)
 
+    self.x59, self.y59 = 250, 1320
+    self.lbl_exneeds = tk.Label(self.can, text="1 = supervision only /"\
+        " 2 = passive help / 3 = active help / 4 = show and tell",
+        font="Times 11", width=70,
+        height=1, bg='DodgerBlue2', fg='white')
+    self.wlbl_exneeds = self.can.create_window(self.x59, self.y59,
+        window = self.lbl_exneeds)
+
     """
     Boire et manger
     Respirer

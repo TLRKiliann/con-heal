@@ -138,8 +138,34 @@ def doc_medical1(self):
         if os.path.getsize('./contact/conpact/finaldoc3.txt'):
             importationDoc3('./contact/conpact/finaldoc3.txt', encodage="Utf-8")
     except FileNotFoundError as no_file:
-        print("+ File finaldoc3 not found !")
-        messagebox.showinfo('INFO', 'File finaldoc3 not found !')
+        print("+ File finaldoc3.txt not found !")
+        messagebox.showinfo('INFO', 'File finaldoc3.txt not found !')
+
+    # Family contact from contact col 2
+    self.x50, self.y50 = 870, 960
+    self.lbl_fam = tk.Label(self.can, text='--- Family Data ---',
+        font="Times 14 bold", width=60,
+        height=1, bg='RoyalBlue3', fg='white')
+    self.wlbl_fam = self.can.create_window(self.x50, self.y50,
+        window = self.lbl_fam)
+
+    self.x51, self.y51 = 870, 1050
+    self.t51 = tk.Text(self.can, height=6, width=50, font=18, relief=SUNKEN)
+    self.wt51_window = self.can.create_window(self.x51, self.y51, window=self.t51)
+
+    def importationFam(fichier, encodage="Utf-8"):
+        filedoc3 = open(fichier, 'r', encoding=encodage)
+        content = filedoc3.readlines()
+        filedoc3.close()
+        for li in content:
+            self.t51.insert(END, li)
+
+    try:
+        if os.path.getsize('./contact/conpact/finalfam1.txt'):
+            importationFam('./contact/conpact/finalfam1.txt', encodage="Utf-8")
+    except FileNotFoundError as no_file:
+        print("+ File finalfam1.txt not found !")
+        messagebox.showinfo('INFO', 'File finalfam1.txt not found !')
 
     self.x5, self.y5 = 90, 170
     self.LabHour = tk.Label(self.can, text="Hour : ", width=15, font=12,
@@ -379,8 +405,6 @@ def doc_medical1(self):
             file.write(allertxt.get() + '\n')
             file.write("Transmissible disease : ")
             file.write(transdis.get() + '\n')
-            file.write("Phone number : ")
-            file.write(phone_num.get() + '\n')
             file.write("----------------------------------------------------------\n")
 
     def uptoserv():

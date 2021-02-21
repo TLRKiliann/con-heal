@@ -167,6 +167,68 @@ def doc_medical1(self):
         print("+ File finalfam1.txt not found !")
         messagebox.showinfo('INFO', 'File finalfam1.txt not found !')
 
+    # Home Care System contact from contact col 2
+    self.x52, self.y52 = 870, 1140
+    self.lbl_heal = tk.Label(self.can, text='--- Home Care System Data ---',
+        font="Times 14 bold", width=60,
+        height=1, bg='RoyalBlue3', fg='white')
+    self.wlbl_heal = self.can.create_window(self.x52, self.y52,
+        window = self.lbl_heal)
+
+    self.x53, self.y53 = 870, 1230
+    self.t53 = tk.Text(self.can, height=6, width=50, font=18, relief=SUNKEN)
+    self.wt53_window = self.can.create_window(self.x53, self.y53, window=self.t53)
+
+    def importationHealOne(fichier, encodage="Utf-8"):
+        filehcs = open(fichier, 'r', encoding=encodage)
+        content = filehcs.readlines()
+        filehcs.close()
+        for li in content:
+            self.t53.insert(END, li)
+
+    try:
+        if os.path.getsize('./contact/conpact/finalhcs1.txt'):
+            importationHealOne('./contact/conpact/finalhcs1.txt', encodage="Utf-8")
+    except FileNotFoundError as no_file:
+        print("+ File finalhcs1.txt not found !")
+        messagebox.showinfo('INFO', 'File finalhcs1.txt not found !')
+
+    self.x54, self.y54 = 870, 1370
+    self.t54 = tk.Text(self.can, height=6, width=50, font=18, relief=SUNKEN)
+    self.wt54_window = self.can.create_window(self.x54, self.y54, window=self.t54)
+
+    def importationHealTwo(fichier, encodage="Utf-8"):
+        filehcs2 = open(fichier, 'r', encoding=encodage)
+        content = filehcs2.readlines()
+        filehcs2.close()
+        for li in content:
+            self.t54.insert(END, li)
+
+    try:
+        if os.path.getsize('./contact/conpact/finalhcs2.txt'):
+            importationHealTwo('./contact/conpact/finalhcs2.txt', encodage="Utf-8")
+    except FileNotFoundError as no_file:
+        print("+ File finalhcs2.txt not found !")
+        messagebox.showinfo('INFO', 'File finalhcs2.txt not found !')
+
+    self.x55, self.y55 = 870, 1510
+    self.t55 = tk.Text(self.can, height=6, width=50, font=18, relief=SUNKEN)
+    self.wt55_window = self.can.create_window(self.x55, self.y55, window=self.t55)
+
+    def importationHealThree(fichier, encodage="Utf-8"):
+        filehcs3 = open(fichier, 'r', encoding=encodage)
+        content = filehcs3.readlines()
+        filehcs3.close()
+        for li in content:
+            self.t55.insert(END, li)
+
+    try:
+        if os.path.getsize('./contact/conpact/finalhcs3.txt'):
+            importationHealThree('./contact/conpact/finalhcs3.txt', encodage="Utf-8")
+    except FileNotFoundError as no_file:
+        print("+ File finalhcs3.txt not found !")
+        messagebox.showinfo('INFO', 'File finalhcs3.txt not found !')
+
     self.x5, self.y5 = 90, 170
     self.LabHour = tk.Label(self.can, text="Hour : ", width=15, font=12,
         fg='white', bg='DodgerBlue2', anchor='e')

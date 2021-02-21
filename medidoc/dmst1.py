@@ -431,29 +431,15 @@ def doc_medical1(self):
         window = self.lbl_need)
 
     self.x59, self.y59 = 250, 1320
-    self.lbl_exneeds = tk.Label(self.can, text="1 = supervision only /"\
+    self.lbl_exneeds = tk.Label(self.can, text="0 = None / 1 = supervision only /"\
         " 2 = passive help / 3 = active help / 4 = show and tell",
-        font="Times 11", width=70,
+        font="Times 11", width=80,
         height=1, bg='DodgerBlue2', fg='white')
     self.wlbl_exneeds = self.can.create_window(self.x59, self.y59,
         window = self.lbl_exneeds)
 
-    """
-    Boire et manger
-    Respirer
-    Dormir, se reposer
-    Etre propre, protéger ses téguments
-    Elimination
-    Se recréer
-    Apprendre
-    Température
-    S'occuper en vue de se réaliser
-    Agir selon ses valeurs et croyances
-    Se vêtir et se dévêtir
-    Eviter les dangers
-    Se mouvoir, maintenir une bonne posture
-    Communiquer avec ses semblables
-    """
+    def varvalidate():
+        print(CheckVar1.get())
 
     def recordata():
         print("Date : " + time.strftime("%d/%m/%Y"))
@@ -473,6 +459,13 @@ def doc_medical1(self):
             file.write("Transmissible disease : ")
             file.write(transdis.get() + '\n')
             file.write("----------------------------------------------------------\n")
+            print(CheckVar1.get())
+            if CheckVar1.get()==1:
+                print("Surveillance respiratoire requise en ajout")
+                with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
+                    file.write("+ Surveillance respiratoire requise\n")
+            else:
+                print("Nothing to do")
 
     def uptoserv():
         """
@@ -509,6 +502,66 @@ def doc_medical1(self):
             self.showPatients()
         except (OSError, ValueError) as p_out:
             print("Error from dmst to way out", p_out)
+
+    self.x600, self.y600 = 20, 1360
+    self.lbl_eat = tk.Label(self.can, text='- EAT :',
+        font="Times 14 bold", width=10, height=1,
+        bg='DodgerBlue2', fg='cyan')
+    self.wlbl_eat = self.can.create_window(self.x600, self.y600,
+        window = self.lbl_eat)
+
+    CheckVar1 = tk.IntVar()
+    self.x69, self.y69 = 240, 1360
+    self.C0 = tk.Radiobutton(self.can, text="0", highlightbackground='cyan', fg='black',
+        bg='DodgerBlue2', variable=CheckVar1,
+        value=1, height=1, width=3, anchor='w', command=varvalidate)
+    self.wC0 = self.can.create_window(self.x69, self.y69,
+        window = self.C0)
+
+    self.x60, self.y60 = 295, 1360
+    self.C1 = tk.Radiobutton(self.can, text="1", highlightbackground='cyan', fg='black',
+        bg='DodgerBlue2', variable=CheckVar1,
+        value=2, height=1, width=3, anchor='w', command=varvalidate)
+    self.wC1 = self.can.create_window(self.x60, self.y60,
+        window = self.C1)
+
+    self.x61, self.y61 = 350, 1360
+    self.C2 = tk.Radiobutton(self.can, text="2", highlightbackground='cyan', fg='black',
+        bg='DodgerBlue2', variable=CheckVar1,
+        value=3, height=1, width=3, anchor='w', command=varvalidate)
+    self.wC2 = self.can.create_window(self.x61, self.y61,
+        window = self.C2)
+
+    self.x62, self.y62 = 405, 1360
+    self.C3 = tk.Radiobutton(self.can, text="3", highlightbackground='cyan', fg='black', 
+        bg='DodgerBlue2', variable=CheckVar1, 
+        value=4, height=1, width=3, anchor='w', command=varvalidate)
+    self.wC3 = self.can.create_window(self.x62, self.y62,
+        window = self.C3)
+
+    self.x63, self.y63 = 460, 1360
+    self.C4 = tk.Radiobutton(self.can, text="4", highlightbackground='cyan', fg='black', 
+        bg='DodgerBlue2', variable=CheckVar1, 
+        value=5, height=1, width=3, anchor='w', command=varvalidate)
+    self.wC4 = self.can.create_window(self.x63, self.y63,
+        window = self.C4)
+    """
+    Boire et manger
+    Respirer
+    Dormir, se reposer
+    Etre propre, protéger ses téguments
+    Elimination
+    Se recréer
+    Apprendre
+    Température
+    S'occuper en vue de se réaliser
+    Agir selon ses valeurs et croyances
+    Se vêtir et se dévêtir
+    Eviter les dangers
+    Se mouvoir, maintenir une bonne posture
+    Communiquer avec ses semblables
+    Auxiliary...
+    """
 
     # Button save and quit
     self.x64, self.y64 = 780, 2000

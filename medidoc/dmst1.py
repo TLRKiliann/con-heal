@@ -426,6 +426,7 @@ def doc_medical1(self):
     def recordata():
         """
             To record all data in GUI to txt file.
+            I need a try here !!!
         """
         with open('./medidoc/rslt_dmst1.txt', 'a+') as file:
             file.write("----------------------------------------------------------\n")
@@ -442,6 +443,83 @@ def doc_medical1(self):
             file.write("Transmissible disease : ")
             file.write(transdis.get() + '\n')
             file.write("----------------------------------------------------------\n")
+
+        with open('./diag/doc_diag/diagrecap1.txt', 'r') as file_di:
+            with open('./medidoc/rslt_dmst1.txt', '+a') as file_dm:
+                diag_content = file_di.readlines()
+                for li in diag_content:
+                    file_dm.writelines(diag_content)
+                    break
+
+        with open('./ttt/doc_ttt/intro_ttt.txt', 'r') as file_ttt:
+            with open('./medidoc/rslt_dmst1.txt', '+a') as file_dm:
+                ttt_content = file_ttt.readlines()
+                for li in ttt_content:
+                    file_dm.writelines(ttt_content)
+                    break
+
+        with open('./ttt/doc_ttt/intro_res.txt', 'r') as file_res:
+            with open('./medidoc/rslt_dmst1.txt', '+a') as file_dm:
+                res_content = file_res.readlines()
+                for li in res_content:
+                    file_dm.writelines(res_content)
+                    break
+
+        with open('./contact/conpact/finalfile1.txt', 'r') as file_contf1:
+            with open('./medidoc/rslt_dmst1.txt', '+a') as file_dm:
+                fcf1_content = file_contf1.readlines()
+                for li in fcf1_content:
+                    file_dm.writelines(fcf1_content)
+                    break
+
+        with open('./contact/conpact/finaldoc1.txt', 'r') as file_do1:
+            with open('./medidoc/rslt_dmst1.txt', '+a') as file_dm:
+                fcd1_content = file_do1.readlines()
+                for li in fcd1_content:
+                    file_dm.writelines(fcd1_content)
+                    break
+
+        with open('./contact/conpact/finaldoc2.txt', 'r') as file_do2:
+            with open('./medidoc/rslt_dmst1.txt', '+a') as file_dm:
+                fcd2_content = file_do2.readlines()
+                for li in fcd2_content:
+                    file_dm.writelines(fcd2_content)
+                    break
+
+        with open('./contact/conpact/finaldoc3.txt', 'r') as file_do3:
+            with open('./medidoc/rslt_dmst1.txt', '+a') as file_dm:
+                fcd3_content = file_do3.readlines()
+                for li in fcd3_content:
+                    file_dm.writelines(fcd3_content)
+                    break
+
+        with open('./contact/conpact/finalfam1.txt', 'r') as file_fam:
+            with open('./medidoc/rslt_dmst1.txt', '+a') as file_dm:
+                ff_content = file_fam.readlines()
+                for li in ff_content:
+                    file_dm.writelines(ff_content)
+                    break
+
+        with open('./contact/conpact/finalhcs1.txt', 'r') as file_hcs1:
+            with open('./medidoc/rslt_dmst1.txt', '+a') as file_dm:
+                hcs1_content = file_hcs1.readlines()
+                for li in hcs1_content:
+                    file_dm.writelines(hcs1_content)
+                    break
+
+        with open('./contact/conpact/finalhcs2.txt', 'r') as file_hcs2:
+            with open('./medidoc/rslt_dmst1.txt', '+a') as file_dm:
+                hcs2_content = file_hcs2.readlines()
+                for li in hcs2_content:
+                    file_dm.writelines(hcs2_content)
+                    break
+
+        with open('./contact/conpact/finalhcs3.txt', 'r') as file_hcs3:
+            with open('./medidoc/rslt_dmst1.txt', '+a') as file_dm:
+                hcs3_content = file_hcs3.readlines()
+                for li in hcs3_content:
+                    file_dm.writelines(hcs3_content)
+                    break
 
         print(CheckVar1.get())
         if CheckVar1.get() == 1:

@@ -444,6 +444,9 @@ def doc_medical1(self):
     def varvalidatesec():
         print(CheckVar2.get())
 
+    def varvalidatethird():
+        print(CheckVar3.get())
+
     def recordata():
         print("Date : " + time.strftime("%d/%m/%Y"))
         print("Nom du patient : ", ent_name.get())
@@ -593,6 +596,49 @@ def doc_medical1(self):
     self.wC14 = self.can.create_window(self.x84, self.y84,
         window = self.C14)
 
+    # third need
+    self.x602, self.y602 = 20, 1410
+    self.lbl_third = tk.Label(self.can, text='- Third need :',
+        font="Times 14 bold", width=20, height=1,
+        bg='DodgerBlue2', fg='white')
+    self.wlbl_third = self.can.create_window(self.x602, self.y602,
+        window = self.lbl_third)
+
+    CheckVar3 = tk.IntVar()
+    self.x90, self.y90 = 240, 1410
+    self.C20 = tk.Radiobutton(self.can, text="0", highlightbackground='cyan', fg='black',
+        bg='DodgerBlue2', variable=CheckVar3,
+        value=0, height=1, width=3, anchor='w', command=varvalidatethird)
+    self.wC20 = self.can.create_window(self.x90, self.y90,
+        window = self.C20)
+
+    self.x91, self.y91 = 295, 1410
+    self.C21 = tk.Radiobutton(self.can, text="1", highlightbackground='cyan', fg='black',
+        bg='DodgerBlue2', variable=CheckVar3,
+        value=1, height=1, width=3, anchor='w', command=varvalidatethird)
+    self.wC21 = self.can.create_window(self.x91, self.y91,
+        window = self.C21)
+
+    self.x92, self.y92 = 350, 1410
+    self.C22 = tk.Radiobutton(self.can, text="2", highlightbackground='cyan', fg='black',
+        bg='DodgerBlue2', variable=CheckVar3,
+        value=2, height=1, width=3, anchor='w', command=varvalidatethird)
+    self.wC22 = self.can.create_window(self.x92, self.y92,
+        window = self.C22)
+
+    self.x93, self.y93 = 405, 1410
+    self.C23 = tk.Radiobutton(self.can, text="3", highlightbackground='cyan', fg='black', 
+        bg='DodgerBlue2', variable=CheckVar3, 
+        value=3, height=1, width=3, anchor='w', command=varvalidatethird)
+    self.wC23 = self.can.create_window(self.x93, self.y93,
+        window = self.C23)
+
+    self.x94, self.y94 = 460, 1410
+    self.C24 = tk.Radiobutton(self.can, text="4", highlightbackground='cyan', fg='black', 
+        bg='DodgerBlue2', variable=CheckVar3, 
+        value=4, height=1, width=3, anchor='w', command=varvalidatethird)
+    self.wC24 = self.can.create_window(self.x94, self.y94,
+        window = self.C24)
 
     """
     Boire et manger

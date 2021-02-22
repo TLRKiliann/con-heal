@@ -458,6 +458,8 @@ def doc_medical1(self):
             file.write(transdis.get() + '\n')
             file.write("----------------------------------------------------------\n")
 
+    recordata()
+
     def varvalidate():
         print(CheckVar1.get())
         if CheckVar1.get() == 1:
@@ -627,10 +629,8 @@ def doc_medical1(self):
         """
             That the main function to save all data by calling other functions.
         """
-        MsgBox = messagebox.askyesno('Record', 'Results will be saved, ok ?')
+        MsgBox = messagebox.askyesno('Record', 'Data will be saved, ok ?')
         if MsgBox == 1:
-            print("Ok, data saved !")
-            recordata()
             uptoserv()
             msgvalidate()
             self.showPatients()
@@ -638,6 +638,9 @@ def doc_medical1(self):
             messagebox.showinfo('Return', 'Ok, nothing has changed...')
 
     def way_back():
+        """
+            To return back to main page.
+        """
         try:
             self.can.delete(ALL)
             self.showPatients()

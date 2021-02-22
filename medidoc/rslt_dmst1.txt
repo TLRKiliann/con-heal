@@ -1,15 +1,16 @@
-+ Orientation = 1
-+ Cohérence = 2
-+ Toilette = 3
-+ Habillage = 4
-+ Alimentation = 3
-+ Elimination = 2
-+ Déplacement = 1
 ----------------------------------------------------------
 Date : 22.02.2021
-Hour : 17:33:52
+Hour : 18:22:34
 Patient name : Firstname Lastname
 Birthday : 00/00/0000
 Allergy : Pollen
 Transmissible disease : None
 ----------------------------------------------------------
++ Orientation = 0
++ Cohérence = 1
++ Toilette = 2
++ Habillage = 3
++ Alimentation = 4
++ Elimination = 3
++ Déplacement = 2
++ Communication = 1

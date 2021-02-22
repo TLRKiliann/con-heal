@@ -1,0 +1,132 @@
+----------------------------------------------------------
+Date : 22.02.2021
+Hour : 20:50:27
+Patient name : Firstname Lastname
+Birthday : 00/00/0000
+Allergy : Pollen
+Transmissible disease : None
+----------------------------------------------------------
+--- DIAGNOSTICS ---
+Schizo
+trb schizo-affectif
+trb bi-polaire
+trb phobique
+psychose continue
+hallucinations
+
+
+
+--- Treatments ---
+Date : 20/02/2021
+Heure : 11:31:35
+Name : Firstname Lastname
+Date of introduction : 
+Nom du ttt : Drug
+Dosage du ttt : mcg/ml/mg/UI/gttes
+
+
+
+
+Date of end : //
+Signature : 
+
+--- Reserves ---
+Date : 20/02/2021
+Heure : 11:41:56
+Name : Firstname Lastname
+Date of introduction : 
+Nom du ttt : Drug
+Dosage du ttt : mcg/ml/mg/UI/gttes
+
+Date of end : //
+Signature : 
+
+--- Vitals Parameters ---
+Date : 20/02/2021
+Hour : 11:55:23
+Name and Surname : Firstname Lastname
+TA : 120/90mmHg
+Puls : 88/min
+SaO2 : 78%
+FR : 16/min
+Temperature : 34.7°C
+Glycemie : 8.5 mmol/l
+Douleurs (Pain) : 1/10
+
+--- BMI ---
+Date : 20-02-2021
+Heure : 12:22:29
+Prenom et Nom : Firstname Lastname
+Poids : 75
+Taille : 1.89
+BMI : 20.996
+
+--- Patient data ---
+Patient name : Firstname Lastname
+Birthdate : 00/00/0000
+Native : Lyss
+Phone : 077 888 44 55
+Street : Alouera 23
+City : Kansan
+e-mail : sjkhs@jdas.com
+Insurance : Assura
+Policy : 9873899123812983
+Civil status : Alone
+Confession : Catoloic--- Docotor1 data ---
+Doctor : Hell
+Specialization : Neuro
+Phone : 39871832891
+Mobile : 27839829173
+Street : Aligan St 25
+City : Lsne
+e-mail : hell@gmail.com
+Fax : 347893892749--- Docotor2 data ---
+Doctor : Favlo
+Specialization : General
+Phone : 9782897329
+Mobile : 9812738912983
+Street : Matheus 77
+City : Birmingam
+e-mail : fav.ji@inco.org
+Fax : 9783987398--- Docotor3 data ---
+Doctor : Ruby
+Specialization : psychiatria
+Phone : 978987378
+Mobile : 2189387812
+Street : Rookridge 87
+City : Peckin
+e-mail : Rub.bi@gmail.com
+Fax : 732891738912--- Family data ---
+Name : Magui McFerson
+Phone : 982738943284
+Phone : 982378973329
+Street : Baley-St 34
+City : Hill-Valley
+e-mail : ut@hotmail.com--- Home Care System1 ---
+Name : David Saint (Physio)
+Phone : 893274892
+Phone : 182738971293
+Street : TZ St
+City : Kranken
+e-mail : hjdksf@hto.org--- Home Care System2 ---
+Name : Zara Malai (Ergo)
+Phone : 3247892
+Phone : 2893781
+Street : hhd
+City : jaj
+e-mail : ajds@hhh.tt--- Home Care System3 ---
+Name : Oli Baga (Curatrice)
+Phone : 238904890
+Phone : 2918393412
+Street : ut
+City : tz
+e-mail : gf@gmail.com+ Orientation = 0
++ Cohérence = 0
++ Toilette = 4
++ Habillage = 3
++ Alimentation = 0
++ Elimination = 0
++ Déplacement = 1
++ Communication = 0
++ Directives anticipées = Non
++ PLAFA = Oui

@@ -423,21 +423,6 @@ def doc_medical1(self):
         print("+ File bmi.txt not found !")
         messagebox.showinfo('INFO', 'File bmi.txt not found !')
 
-    self.x36, self.y36 = 250, 1290 
-    self.lbl_need = tk.Label(self.can, text='--- AGGIR (grid) and depedencies ---',
-        font="Times 14 bold", width=60,
-        height=1, bg='RoyalBlue3', fg='white')
-    self.wlbl_need = self.can.create_window(self.x36, self.y36,
-        window = self.lbl_need)
-
-    self.x37, self.y37 = 250, 1320
-    self.lbl_exneeds = tk.Label(self.can, text="0 = None / 1 = supervision only /"\
-        " 2 = passive help / 3 = active help / 4 = show and tell",
-        font="Times 11", width=80,
-        height=1, bg='DodgerBlue2', fg='white')
-    self.wlbl_exneeds = self.can.create_window(self.x37, self.y37,
-        window = self.lbl_exneeds)
-
     def recordata():
         """
             To record all data in GUI to txt file.
@@ -458,9 +443,6 @@ def doc_medical1(self):
             file.write(transdis.get() + '\n')
             file.write("----------------------------------------------------------\n")
 
-    recordata()
-
-    def varvalidate():
         print(CheckVar1.get())
         if CheckVar1.get() == 1:
             with open('./medidoc/rslt_dmst1.txt', 'a+') as file1:
@@ -478,7 +460,6 @@ def doc_medical1(self):
             with open('./medidoc/rslt_dmst1.txt', 'a+') as file0:
                 file0.write("+ Orientation = 0\n")
 
-    def varvalidatesec():
         print(CheckVar2.get())
         if CheckVar2.get() == 1:
             with open('./medidoc/rslt_dmst1.txt', 'a+') as file1:
@@ -496,7 +477,6 @@ def doc_medical1(self):
             with open('./medidoc/rslt_dmst1.txt', 'a+') as file0:
                 file0.write("+ Cohérence = 0\n")
 
-    def varvalidatethird():
         print(CheckVar3.get())
         if CheckVar3.get() == 1:
             with open('./medidoc/rslt_dmst1.txt', 'a+') as file1:
@@ -514,7 +494,6 @@ def doc_medical1(self):
             with open('./medidoc/rslt_dmst1.txt', 'a+') as file0:
                 file0.write("+ Toilette = 0\n")
 
-    def varvalforth():
         print(CheckVar4.get())
         if CheckVar4.get() == 1:
             with open('./medidoc/rslt_dmst1.txt', 'a+') as file1:
@@ -532,7 +511,6 @@ def doc_medical1(self):
             with open('./medidoc/rslt_dmst1.txt', 'a+') as file0:
                 file0.write("+ Habillage = 0\n")
 
-    def varvalfivth():
         print(CheckVar5.get())
         if CheckVar5.get() == 1:
             with open('./medidoc/rslt_dmst1.txt', 'a+') as file1:
@@ -550,7 +528,6 @@ def doc_medical1(self):
             with open('./medidoc/rslt_dmst1.txt', 'a+') as file0:
                 file0.write("+ Alimentation = 0\n")
 
-    def varvalsixth():
         print(CheckVar6.get())
         if CheckVar6.get() == 1:
             with open('./medidoc/rslt_dmst1.txt', 'a+') as file1:
@@ -568,7 +545,6 @@ def doc_medical1(self):
             with open('./medidoc/rslt_dmst1.txt', 'a+') as file0:
                 file0.write("+ Elimination = 0\n")
 
-    def varvalseventh():
         print(CheckVar7.get())
         if CheckVar7.get() == 1:
             with open('./medidoc/rslt_dmst1.txt', 'a+') as file1:
@@ -586,7 +562,6 @@ def doc_medical1(self):
             with open('./medidoc/rslt_dmst1.txt', 'a+') as file0:
                 file0.write("+ Déplacement = 0\n")
 
-    def varvalheight():
         print(CheckVar8.get())
         if CheckVar8.get() == 1:
             with open('./medidoc/rslt_dmst1.txt', 'a+') as file1:
@@ -603,6 +578,450 @@ def doc_medical1(self):
         else:
             with open('./medidoc/rslt_dmst1.txt', 'a+') as file0:
                 file0.write("+ Communication = 0\n")
+
+    self.x36, self.y36 = 250, 1290 
+    self.lbl_need = tk.Label(self.can, text='--- AGGIR (grid) and depedencies ---',
+        font="Times 14 bold", width=60,
+        height=1, bg='RoyalBlue3', fg='white')
+    self.wlbl_need = self.can.create_window(self.x36, self.y36,
+        window = self.lbl_need)
+
+    self.x37, self.y37 = 250, 1320
+    self.lbl_exneeds = tk.Label(self.can, text="0 = None / 1 = supervision only /"\
+        " 2 = passive help / 3 = active help / 4 = show and tell",
+        font="Times 11", width=80,
+        height=1, bg='DodgerBlue2', fg='white')
+    self.wlbl_exneeds = self.can.create_window(self.x37, self.y37,
+        window = self.lbl_exneeds)
+
+    self.x38, self.y38 = 80, 1360
+    self.lbl_eat = tk.Label(self.can, text='- Orientation :',
+        font="Times 14 bold", width=20, height=1,
+        bg='DodgerBlue2', fg='white', anchor='w')
+    self.wlbl_eat = self.can.create_window(self.x38, self.y38,
+        window = self.lbl_eat)
+
+    CheckVar1 = tk.IntVar()
+    self.x39, self.y39 = 240, 1360
+    self.C0 = tk.Radiobutton(self.can, text="0", highlightbackground='cyan', fg='black',
+        bg='DodgerBlue2', variable=CheckVar1,
+        value=0, height=1, width=3, anchor='w')
+    self.wC0 = self.can.create_window(self.x39, self.y39,
+        window = self.C0)
+
+    self.x40, self.y40 = 295, 1360
+    self.C1 = tk.Radiobutton(self.can, text="1", highlightbackground='cyan', fg='black',
+        bg='DodgerBlue2', variable=CheckVar1,
+        value=1, height=1, width=3, anchor='w')
+    self.wC1 = self.can.create_window(self.x40, self.y40,
+        window = self.C1)
+
+    self.x41, self.y41 = 350, 1360
+    self.C2 = tk.Radiobutton(self.can, text="2", highlightbackground='cyan', fg='black',
+        bg='DodgerBlue2', variable=CheckVar1,
+        value=2, height=1, width=3, anchor='w')
+    self.wC2 = self.can.create_window(self.x41, self.y41,
+        window = self.C2)
+
+    self.x42, self.y42 = 405, 1360
+    self.C3 = tk.Radiobutton(self.can, text="3", highlightbackground='cyan', fg='black', 
+        bg='DodgerBlue2', variable=CheckVar1, 
+        value=3, height=1, width=3, anchor='w')
+    self.wC3 = self.can.create_window(self.x42, self.y42,
+        window = self.C3)
+
+    self.x43, self.y43 = 460, 1360
+    self.C4 = tk.Radiobutton(self.can, text="4", highlightbackground='cyan', fg='black', 
+        bg='DodgerBlue2', variable=CheckVar1, 
+        value=4, height=1, width=3, anchor='w')
+    self.wC4 = self.can.create_window(self.x43, self.y43,
+        window = self.C4)
+
+    # second need
+    self.x44, self.y44 = 80, 1385
+    self.lbl_sec = tk.Label(self.can, text='- Cohérence :',
+        font="Times 14 bold", width=20, height=1,
+        bg='DodgerBlue2', fg='white', anchor='w')
+    self.wlbl_sec = self.can.create_window(self.x44, self.y44,
+        window = self.lbl_sec)
+
+    CheckVar2 = tk.IntVar()
+    self.x45, self.y45 = 240, 1385
+    self.C10 = tk.Radiobutton(self.can, text="0", highlightbackground='cyan', fg='black',
+        bg='DodgerBlue2', variable=CheckVar2,
+        value=0, height=1, width=3, anchor='w')
+    self.wC10 = self.can.create_window(self.x45, self.y45,
+        window = self.C10)
+
+    self.x46, self.y46 = 295, 1385
+    self.C11 = tk.Radiobutton(self.can, text="1", highlightbackground='cyan', fg='black',
+        bg='DodgerBlue2', variable=CheckVar2,
+        value=1, height=1, width=3, anchor='w')
+    self.wC11 = self.can.create_window(self.x46, self.y46,
+        window = self.C11)
+
+    self.x47, self.y47 = 350, 1385
+    self.C12 = tk.Radiobutton(self.can, text="2", highlightbackground='cyan', fg='black',
+        bg='DodgerBlue2', variable=CheckVar2,
+        value=2, height=1, width=3, anchor='w')
+    self.wC12 = self.can.create_window(self.x47, self.y47,
+        window = self.C12)
+
+    self.x48, self.y48 = 405, 1385
+    self.C13 = tk.Radiobutton(self.can, text="3", highlightbackground='cyan', fg='black', 
+        bg='DodgerBlue2', variable=CheckVar2, 
+        value=3, height=1, width=3, anchor='w')
+    self.wC13 = self.can.create_window(self.x48, self.y48,
+        window = self.C13)
+
+    self.x49, self.y49 = 460, 1385
+    self.C14 = tk.Radiobutton(self.can, text="4", highlightbackground='cyan', fg='black', 
+        bg='DodgerBlue2', variable=CheckVar2, 
+        value=4, height=1, width=3, anchor='w')
+    self.wC14 = self.can.create_window(self.x49, self.y49,
+        window = self.C14)
+
+    # third need
+    self.x50, self.y50 = 80, 1410
+    self.lbl_third = tk.Label(self.can, text='- Toilette :',
+        font="Times 14 bold", width=20, height=1,
+        bg='DodgerBlue2', fg='white', anchor='w')
+    self.wlbl_third = self.can.create_window(self.x50, self.y50,
+        window = self.lbl_third)
+
+    CheckVar3 = tk.IntVar()
+    self.x51, self.y51 = 240, 1410
+    self.C20 = tk.Radiobutton(self.can, text="0", highlightbackground='cyan', fg='black',
+        bg='DodgerBlue2', variable=CheckVar3,
+        value=0, height=1, width=3, anchor='w')
+    self.wC20 = self.can.create_window(self.x51, self.y51,
+        window = self.C20)
+
+    self.x52, self.y52 = 295, 1410
+    self.C21 = tk.Radiobutton(self.can, text="1", highlightbackground='cyan', fg='black',
+        bg='DodgerBlue2', variable=CheckVar3,
+        value=1, height=1, width=3, anchor='w')
+    self.wC21 = self.can.create_window(self.x52, self.y52,
+        window = self.C21)
+
+    self.x53, self.y53 = 350, 1410
+    self.C22 = tk.Radiobutton(self.can, text="2", highlightbackground='cyan', fg='black',
+        bg='DodgerBlue2', variable=CheckVar3,
+        value=2, height=1, width=3, anchor='w')
+    self.wC22 = self.can.create_window(self.x53, self.y53,
+        window = self.C22)
+
+    self.x54, self.y54 = 405, 1410
+    self.C23 = tk.Radiobutton(self.can, text="3", highlightbackground='cyan', fg='black', 
+        bg='DodgerBlue2', variable=CheckVar3, 
+        value=3, height=1, width=3, anchor='w')
+    self.wC23 = self.can.create_window(self.x54, self.y54,
+        window = self.C23)
+
+    self.x55, self.y55 = 460, 1410
+    self.C24 = tk.Radiobutton(self.can, text="4", highlightbackground='cyan', fg='black', 
+        bg='DodgerBlue2', variable=CheckVar3, 
+        value=4, height=1, width=3, anchor='w')
+    self.wC24 = self.can.create_window(self.x55, self.y55,
+        window = self.C24)
+
+    # Forth need
+    self.x56, self.y56 = 80, 1435
+    self.lbl_forth = tk.Label(self.can, text='- Habillage :',
+        font="Times 14 bold", width=20, height=1,
+        bg='DodgerBlue2', fg='white', anchor='w')
+    self.wlbl_forth = self.can.create_window(self.x56, self.y56,
+        window = self.lbl_forth)
+
+    CheckVar4 = tk.IntVar()
+    self.x57, self.y57 = 240, 1435
+    self.C30 = tk.Radiobutton(self.can, text="0", highlightbackground='cyan', fg='black',
+        bg='DodgerBlue2', variable=CheckVar4,
+        value=0, height=1, width=3, anchor='w')
+    self.wC30 = self.can.create_window(self.x57, self.y57,
+        window = self.C30)
+
+    self.x58, self.y58 = 295, 1435
+    self.C31 = tk.Radiobutton(self.can, text="1", highlightbackground='cyan', fg='black',
+        bg='DodgerBlue2', variable=CheckVar4,
+        value=1, height=1, width=3, anchor='w')
+    self.wC31 = self.can.create_window(self.x58, self.y58,
+        window = self.C31)
+
+    self.x59, self.y59 = 350, 1435
+    self.C32 = tk.Radiobutton(self.can, text="2", highlightbackground='cyan', fg='black',
+        bg='DodgerBlue2', variable=CheckVar4,
+        value=2, height=1, width=3, anchor='w')
+    self.wC32 = self.can.create_window(self.x59, self.y59,
+        window = self.C32)
+
+    self.x60, self.y60 = 405, 1435
+    self.C33 = tk.Radiobutton(self.can, text="3", highlightbackground='cyan', fg='black', 
+        bg='DodgerBlue2', variable=CheckVar4, 
+        value=3, height=1, width=3, anchor='w')
+    self.wC33 = self.can.create_window(self.x60, self.y60,
+        window = self.C33)
+
+    self.x61, self.y61 = 460, 1435
+    self.C34 = tk.Radiobutton(self.can, text="4", highlightbackground='cyan', fg='black', 
+        bg='DodgerBlue2', variable=CheckVar4, 
+        value=4, height=1, width=3, anchor='w')
+    self.wC34 = self.can.create_window(self.x61, self.y61,
+        window = self.C34)
+
+    # fivth need
+    self.x62, self.y62 = 80, 1460
+    self.lbl_fivth = tk.Label(self.can, text='- Alimentation :',
+        font="Times 14 bold", width=20, height=1,
+        bg='DodgerBlue2', fg='white', anchor='w')
+    self.wlbl_fivth = self.can.create_window(self.x62, self.y62,
+        window = self.lbl_fivth)
+
+    CheckVar5 = tk.IntVar()
+    self.x63, self.y63 = 240, 1460
+    self.C40 = tk.Radiobutton(self.can, text="0", highlightbackground='cyan', fg='black',
+        bg='DodgerBlue2', variable=CheckVar5,
+        value=0, height=1, width=3, anchor='w')
+    self.wC40 = self.can.create_window(self.x63, self.y63,
+        window = self.C40)
+
+    self.x64, self.y64 = 295, 1460
+    self.C41 = tk.Radiobutton(self.can, text="1", highlightbackground='cyan', fg='black',
+        bg='DodgerBlue2', variable=CheckVar5,
+        value=1, height=1, width=3, anchor='w')
+    self.wC41 = self.can.create_window(self.x64, self.y64,
+        window = self.C41)
+
+    self.x65, self.y65 = 350, 1460
+    self.C42 = tk.Radiobutton(self.can, text="2", highlightbackground='cyan', fg='black',
+        bg='DodgerBlue2', variable=CheckVar5,
+        value=2, height=1, width=3, anchor='w')
+    self.wC42 = self.can.create_window(self.x65, self.y65,
+        window = self.C42)
+
+    self.x66, self.y66 = 405, 1460
+    self.C43 = tk.Radiobutton(self.can, text="3", highlightbackground='cyan', fg='black', 
+        bg='DodgerBlue2', variable=CheckVar5, 
+        value=3, height=1, width=3, anchor='w')
+    self.wC43 = self.can.create_window(self.x66, self.y66,
+        window = self.C43)
+
+    self.x67, self.y67 = 460, 1460
+    self.C44 = tk.Radiobutton(self.can, text="4", highlightbackground='cyan', fg='black', 
+        bg='DodgerBlue2', variable=CheckVar5, 
+        value=4, height=1, width=3, anchor='w')
+    self.wC44 = self.can.create_window(self.x67, self.y67,
+        window = self.C44)
+
+    # Sixth need
+    self.x68, self.y68 = 80, 1485
+    self.lbl_sixth = tk.Label(self.can, text='- Elimination :',
+        font="Times 14 bold", width=20, height=1,
+        bg='DodgerBlue2', fg='white', anchor='w')
+    self.wlbl_sixth = self.can.create_window(self.x68, self.y68,
+        window = self.lbl_sixth)
+
+    CheckVar6 = tk.IntVar()
+    self.x69, self.y69 = 240, 1485
+    self.C50 = tk.Radiobutton(self.can, text="0", highlightbackground='cyan', fg='black',
+        bg='DodgerBlue2', variable=CheckVar6,
+        value=0, height=1, width=3, anchor='w')
+    self.wC50 = self.can.create_window(self.x69, self.y69,
+        window = self.C50)
+
+    self.x70, self.y70 = 295, 1485
+    self.C51 = tk.Radiobutton(self.can, text="1", highlightbackground='cyan', fg='black',
+        bg='DodgerBlue2', variable=CheckVar6,
+        value=1, height=1, width=3, anchor='w')
+    self.wC51 = self.can.create_window(self.x70, self.y70,
+        window = self.C51)
+
+    self.x71, self.y71 = 350, 1485
+    self.C52 = tk.Radiobutton(self.can, text="2", highlightbackground='cyan', fg='black',
+        bg='DodgerBlue2', variable=CheckVar6,
+        value=2, height=1, width=3, anchor='w')
+    self.wC52 = self.can.create_window(self.x71, self.y71,
+        window = self.C52)
+
+    self.x72, self.y72 = 405, 1485
+    self.C53 = tk.Radiobutton(self.can, text="3", highlightbackground='cyan', fg='black', 
+        bg='DodgerBlue2', variable=CheckVar6, 
+        value=3, height=1, width=3, anchor='w')
+    self.wC53 = self.can.create_window(self.x72, self.y72,
+        window = self.C53)
+
+    self.x73, self.y73 = 460, 1485
+    self.C54 = tk.Radiobutton(self.can, text="4", highlightbackground='cyan', fg='black', 
+        bg='DodgerBlue2', variable=CheckVar6, 
+        value=4, height=1, width=3, anchor='w')
+    self.wC54 = self.can.create_window(self.x73, self.y73,
+        window = self.C54)
+
+    # Seventh need
+    self.x74, self.y74 = 80, 1510
+    self.lbl_seven = tk.Label(self.can, text='- Déplacement :',
+        font="Times 14 bold", width=20, height=1,
+        bg='DodgerBlue2', fg='white', anchor='w')
+    self.wlbl_seven = self.can.create_window(self.x74, self.y74,
+        window = self.lbl_seven)
+
+    CheckVar7 = tk.IntVar()
+    self.x75, self.y75 = 240, 1510
+    self.C60 = tk.Radiobutton(self.can, text="0", highlightbackground='cyan', fg='black',
+        bg='DodgerBlue2', variable=CheckVar7,
+        value=0, height=1, width=3, anchor='w')
+    self.wC60 = self.can.create_window(self.x75, self.y75,
+        window = self.C60)
+
+    self.x76, self.y76 = 295, 1510
+    self.C61 = tk.Radiobutton(self.can, text="1", highlightbackground='cyan', fg='black',
+        bg='DodgerBlue2', variable=CheckVar7,
+        value=1, height=1, width=3, anchor='w')
+    self.wC61 = self.can.create_window(self.x76, self.y76,
+        window = self.C61)
+
+    self.x77, self.y77 = 350, 1510
+    self.C62 = tk.Radiobutton(self.can, text="2", highlightbackground='cyan', fg='black',
+        bg='DodgerBlue2', variable=CheckVar7,
+        value=2, height=1, width=3, anchor='w')
+    self.wC62 = self.can.create_window(self.x77, self.y77,
+        window = self.C62)
+
+    self.x78, self.y78 = 405, 1510
+    self.C63 = tk.Radiobutton(self.can, text="3", highlightbackground='cyan', fg='black', 
+        bg='DodgerBlue2', variable=CheckVar7, 
+        value=3, height=1, width=3, anchor='w')
+    self.wC63 = self.can.create_window(self.x78, self.y78,
+        window = self.C63)
+
+    self.x79, self.y79 = 460, 1510
+    self.C64 = tk.Radiobutton(self.can, text="4", highlightbackground='cyan', fg='black', 
+        bg='DodgerBlue2', variable=CheckVar7, 
+        value=4, height=1, width=3, anchor='w')
+    self.wC64 = self.can.create_window(self.x79, self.y79,
+        window = self.C64)
+
+    # Heighth need
+    self.x80, self.y80 = 80, 1535
+    self.lbl_height = tk.Label(self.can, text='- Communication :',
+        font="Times 14 bold", width=20, height=1,
+        bg='DodgerBlue2', fg='white', anchor='w')
+    self.wlbl_height = self.can.create_window(self.x80, self.y80,
+        window = self.lbl_height)
+
+    CheckVar8 = tk.IntVar()
+    self.x81, self.y81 = 240, 1535
+    self.C70 = tk.Radiobutton(self.can, text="0", highlightbackground='cyan', fg='black',
+        bg='DodgerBlue2', variable=CheckVar8,
+        value=0, height=1, width=3, anchor='w')
+    self.wC70 = self.can.create_window(self.x81, self.y81,
+        window = self.C70)
+
+    self.x82, self.y82 = 295, 1535
+    self.C71 = tk.Radiobutton(self.can, text="1", highlightbackground='cyan', fg='black',
+        bg='DodgerBlue2', variable=CheckVar8,
+        value=1, height=1, width=3, anchor='w')
+    self.wC71 = self.can.create_window(self.x82, self.y82,
+        window = self.C71)
+
+    self.x83, self.y83 = 350, 1535
+    self.C72 = tk.Radiobutton(self.can, text="2", highlightbackground='cyan', fg='black',
+        bg='DodgerBlue2', variable=CheckVar8,
+        value=2, height=1, width=3, anchor='w')
+    self.wC72 = self.can.create_window(self.x83, self.y83,
+        window = self.C72)
+
+    self.x84, self.y84 = 405, 1535
+    self.C73 = tk.Radiobutton(self.can, text="3", highlightbackground='cyan', fg='black', 
+        bg='DodgerBlue2', variable=CheckVar8, 
+        value=3, height=1, width=3, anchor='w')
+    self.wC73 = self.can.create_window(self.x84, self.y84,
+        window = self.C73)
+
+    self.x85, self.y85 = 460, 1535
+    self.C74 = tk.Radiobutton(self.can, text="4", highlightbackground='cyan', fg='black', 
+        bg='DodgerBlue2', variable=CheckVar8, 
+        value=4, height=1, width=3, anchor='w')
+    self.wC74 = self.can.create_window(self.x85, self.y85,
+        window = self.C74)
+
+    # Auxiliary
+    self.x86, self.y86 = 250, 1580
+    self.lbl_aux = tk.Label(self.can, text='--- Auxiliary Equipement ---',
+        font="Times 14 bold", width=60,
+        height=1, bg='RoyalBlue3', fg='white')
+    self.wlbl_aux = self.can.create_window(self.x86, self.y86,
+        window = self.lbl_aux)
+
+    self.x87, self.y87 = 250, 1670
+    self.t87 = tk.Text(self.can, height=6, width=50, font=18, relief=SUNKEN)
+    self.wt87_window = self.can.create_window(self.x87, self.y87, window=self.t87)
+
+    def importationHealTwo(fichier, encodage="Utf-8"):
+        filehcs2 = open(fichier, 'r', encoding=encodage)
+        content = filehcs2.readlines()
+        filehcs2.close()
+        for li in content:
+            self.t87.insert(END, li)
+
+    try:
+        if os.path.getsize('./auxequip/doc_equip/auxiliary1.txt'):
+            importationHealTwo('./auxequip/doc_equip/auxiliary1.txt', encodage="Utf-8")
+    except FileNotFoundError as no_file:
+        print("+ File auxiliary1.txt not found !")
+        messagebox.showinfo('INFO', 'File auxiliary1.txt not found !')
+
+    # PLAFA
+    self.x88, self.y88 = 80, 1800
+    self.lbl_plafa = tk.Label(self.can, text='PLAFA :',
+        font="Times 14 bold", width=20, height=1,
+        bg='DodgerBlue2', fg='white', anchor='w')
+    self.wlbl_plafa = self.can.create_window(self.x88, self.y88,
+        window = self.lbl_plafa)
+
+    CheckVar9 = tk.IntVar()
+    self.x89, self.y89 = 250, 1800
+    self.C75 = Checkbutton(self.can, text=" Oui", fg='black', 
+        bg='DodgerBlue2', variable=CheckVar9, 
+        onvalue=1, offvalue=0, height=1, 
+        width=6, anchor="w")
+    self.wC75 = self.can.create_window(self.x89, self.y89,
+        window = self.C75)
+
+    CheckVar10 = tk.IntVar()
+    self.x90, self.y90 = 324, 1800
+    self.C76 = Checkbutton(self.can, text=" Non", fg='black', 
+        bg='DodgerBlue2', variable=CheckVar10, 
+        onvalue=1, offvalue=0, height=1, 
+        width=6, anchor="w")
+    self.wC76 = self.can.create_window(self.x90, self.y90,
+        window = self.C76)
+
+    # DA
+    self.x91, self.y91 = 80, 1825
+    self.lbl_plafa = tk.Label(self.can, text='Directives anticipées :',
+        font="Times 14 bold", width=20, height=1,
+        bg='DodgerBlue2', fg='white', anchor='w')
+    self.wlbl_plafa = self.can.create_window(self.x91, self.y91,
+        window = self.lbl_plafa)
+
+    CheckVar11 = tk.IntVar()
+    self.x92, self.y92 = 250, 1825
+    self.C77 = Checkbutton(self.can, text=" Oui", fg='black', 
+        bg='DodgerBlue2', variable=CheckVar11, 
+        onvalue=1, offvalue=0, height=1, 
+        width=6, anchor="w")
+    self.wC77 = self.can.create_window(self.x92, self.y92,
+        window = self.C77)
+
+    CheckVar12 = tk.IntVar()
+    self.x93, self.y93 = 324, 1825
+    self.C78 = Checkbutton(self.can, text=" Non", fg='black', 
+        bg='DodgerBlue2', variable=CheckVar12, 
+        onvalue=1, offvalue=0, height=1, 
+        width=6, anchor="w")
+    self.wC78 = self.can.create_window(self.x93, self.y93,
+        window = self.C78)
 
     def uptoserv():
         """
@@ -632,6 +1051,7 @@ def doc_medical1(self):
         MsgBox = messagebox.askyesno('Record', 'Data will be saved, ok ?')
         if MsgBox == 1:
             uptoserv()
+            recordata()
             msgvalidate()
             self.showPatients()
         else:
@@ -646,361 +1066,6 @@ def doc_medical1(self):
             self.showPatients()
         except (OSError, ValueError) as p_out:
             print("Error from dmst to way out", p_out)
-
-    self.x38, self.y38 = 80, 1360
-    self.lbl_eat = tk.Label(self.can, text='- Orientation :',
-        font="Times 14 bold", width=20, height=1,
-        bg='DodgerBlue2', fg='white', anchor='w')
-    self.wlbl_eat = self.can.create_window(self.x38, self.y38,
-        window = self.lbl_eat)
-
-    CheckVar1 = tk.IntVar()
-    self.x39, self.y39 = 240, 1360
-    self.C0 = tk.Radiobutton(self.can, text="0", highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar1,
-        value=0, height=1, width=3, anchor='w', command=varvalidate)
-    self.wC0 = self.can.create_window(self.x39, self.y39,
-        window = self.C0)
-
-    self.x40, self.y40 = 295, 1360
-    self.C1 = tk.Radiobutton(self.can, text="1", highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar1,
-        value=1, height=1, width=3, anchor='w', command=varvalidate)
-    self.wC1 = self.can.create_window(self.x40, self.y40,
-        window = self.C1)
-
-    self.x41, self.y41 = 350, 1360
-    self.C2 = tk.Radiobutton(self.can, text="2", highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar1,
-        value=2, height=1, width=3, anchor='w', command=varvalidate)
-    self.wC2 = self.can.create_window(self.x41, self.y41,
-        window = self.C2)
-
-    self.x42, self.y42 = 405, 1360
-    self.C3 = tk.Radiobutton(self.can, text="3", highlightbackground='cyan', fg='black', 
-        bg='DodgerBlue2', variable=CheckVar1, 
-        value=3, height=1, width=3, anchor='w', command=varvalidate)
-    self.wC3 = self.can.create_window(self.x42, self.y42,
-        window = self.C3)
-
-    self.x43, self.y43 = 460, 1360
-    self.C4 = tk.Radiobutton(self.can, text="4", highlightbackground='cyan', fg='black', 
-        bg='DodgerBlue2', variable=CheckVar1, 
-        value=4, height=1, width=3, anchor='w', command=varvalidate)
-    self.wC4 = self.can.create_window(self.x43, self.y43,
-        window = self.C4)
-
-    # second need
-    self.x44, self.y44 = 80, 1385
-    self.lbl_sec = tk.Label(self.can, text='- Cohérence :',
-        font="Times 14 bold", width=20, height=1,
-        bg='DodgerBlue2', fg='white', anchor='w')
-    self.wlbl_sec = self.can.create_window(self.x44, self.y44,
-        window = self.lbl_sec)
-
-    CheckVar2 = tk.IntVar()
-    self.x45, self.y45 = 240, 1385
-    self.C10 = tk.Radiobutton(self.can, text="0", highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar2,
-        value=0, height=1, width=3, anchor='w', command=varvalidatesec)
-    self.wC10 = self.can.create_window(self.x45, self.y45,
-        window = self.C10)
-
-    self.x46, self.y46 = 295, 1385
-    self.C11 = tk.Radiobutton(self.can, text="1", highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar2,
-        value=1, height=1, width=3, anchor='w', command=varvalidatesec)
-    self.wC11 = self.can.create_window(self.x46, self.y46,
-        window = self.C11)
-
-    self.x47, self.y47 = 350, 1385
-    self.C12 = tk.Radiobutton(self.can, text="2", highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar2,
-        value=2, height=1, width=3, anchor='w', command=varvalidatesec)
-    self.wC12 = self.can.create_window(self.x47, self.y47,
-        window = self.C12)
-
-    self.x48, self.y48 = 405, 1385
-    self.C13 = tk.Radiobutton(self.can, text="3", highlightbackground='cyan', fg='black', 
-        bg='DodgerBlue2', variable=CheckVar2, 
-        value=3, height=1, width=3, anchor='w', command=varvalidatesec)
-    self.wC13 = self.can.create_window(self.x48, self.y48,
-        window = self.C13)
-
-    self.x49, self.y49 = 460, 1385
-    self.C14 = tk.Radiobutton(self.can, text="4", highlightbackground='cyan', fg='black', 
-        bg='DodgerBlue2', variable=CheckVar2, 
-        value=4, height=1, width=3, anchor='w', command=varvalidatesec)
-    self.wC14 = self.can.create_window(self.x49, self.y49,
-        window = self.C14)
-
-    # third need
-    self.x50, self.y50 = 80, 1410
-    self.lbl_third = tk.Label(self.can, text='- Toilette :',
-        font="Times 14 bold", width=20, height=1,
-        bg='DodgerBlue2', fg='white', anchor='w')
-    self.wlbl_third = self.can.create_window(self.x50, self.y50,
-        window = self.lbl_third)
-
-    CheckVar3 = tk.IntVar()
-    self.x51, self.y51 = 240, 1410
-    self.C20 = tk.Radiobutton(self.can, text="0", highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar3,
-        value=0, height=1, width=3, anchor='w', command=varvalidatethird)
-    self.wC20 = self.can.create_window(self.x51, self.y51,
-        window = self.C20)
-
-    self.x52, self.y52 = 295, 1410
-    self.C21 = tk.Radiobutton(self.can, text="1", highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar3,
-        value=1, height=1, width=3, anchor='w', command=varvalidatethird)
-    self.wC21 = self.can.create_window(self.x52, self.y52,
-        window = self.C21)
-
-    self.x53, self.y53 = 350, 1410
-    self.C22 = tk.Radiobutton(self.can, text="2", highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar3,
-        value=2, height=1, width=3, anchor='w', command=varvalidatethird)
-    self.wC22 = self.can.create_window(self.x53, self.y53,
-        window = self.C22)
-
-    self.x54, self.y54 = 405, 1410
-    self.C23 = tk.Radiobutton(self.can, text="3", highlightbackground='cyan', fg='black', 
-        bg='DodgerBlue2', variable=CheckVar3, 
-        value=3, height=1, width=3, anchor='w', command=varvalidatethird)
-    self.wC23 = self.can.create_window(self.x54, self.y54,
-        window = self.C23)
-
-    self.x55, self.y55 = 460, 1410
-    self.C24 = tk.Radiobutton(self.can, text="4", highlightbackground='cyan', fg='black', 
-        bg='DodgerBlue2', variable=CheckVar3, 
-        value=4, height=1, width=3, anchor='w', command=varvalidatethird)
-    self.wC24 = self.can.create_window(self.x55, self.y55,
-        window = self.C24)
-
-    # Forth need
-    self.x56, self.y56 = 80, 1435
-    self.lbl_forth = tk.Label(self.can, text='- Habillage :',
-        font="Times 14 bold", width=20, height=1,
-        bg='DodgerBlue2', fg='white', anchor='w')
-    self.wlbl_forth = self.can.create_window(self.x56, self.y56,
-        window = self.lbl_forth)
-
-    CheckVar4 = tk.IntVar()
-    self.x57, self.y57 = 240, 1435
-    self.C30 = tk.Radiobutton(self.can, text="0", highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar4,
-        value=0, height=1, width=3, anchor='w', command=varvalforth)
-    self.wC30 = self.can.create_window(self.x57, self.y57,
-        window = self.C30)
-
-    self.x58, self.y58 = 295, 1435
-    self.C31 = tk.Radiobutton(self.can, text="1", highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar4,
-        value=1, height=1, width=3, anchor='w', command=varvalforth)
-    self.wC31 = self.can.create_window(self.x58, self.y58,
-        window = self.C31)
-
-    self.x59, self.y59 = 350, 1435
-    self.C32 = tk.Radiobutton(self.can, text="2", highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar4,
-        value=2, height=1, width=3, anchor='w', command=varvalforth)
-    self.wC32 = self.can.create_window(self.x59, self.y59,
-        window = self.C32)
-
-    self.x60, self.y60 = 405, 1435
-    self.C33 = tk.Radiobutton(self.can, text="3", highlightbackground='cyan', fg='black', 
-        bg='DodgerBlue2', variable=CheckVar4, 
-        value=3, height=1, width=3, anchor='w', command=varvalforth)
-    self.wC33 = self.can.create_window(self.x60, self.y60,
-        window = self.C33)
-
-    self.x61, self.y61 = 460, 1435
-    self.C34 = tk.Radiobutton(self.can, text="4", highlightbackground='cyan', fg='black', 
-        bg='DodgerBlue2', variable=CheckVar4, 
-        value=4, height=1, width=3, anchor='w', command=varvalforth)
-    self.wC34 = self.can.create_window(self.x61, self.y61,
-        window = self.C34)
-
-    # fivth need
-    self.x62, self.y62 = 80, 1460
-    self.lbl_fivth = tk.Label(self.can, text='- Alimentation :',
-        font="Times 14 bold", width=20, height=1,
-        bg='DodgerBlue2', fg='white', anchor='w')
-    self.wlbl_fivth = self.can.create_window(self.x62, self.y62,
-        window = self.lbl_fivth)
-
-    CheckVar5 = tk.IntVar()
-    self.x63, self.y63 = 240, 1460
-    self.C40 = tk.Radiobutton(self.can, text="0", highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar5,
-        value=0, height=1, width=3, anchor='w', command=varvalfivth)
-    self.wC40 = self.can.create_window(self.x63, self.y63,
-        window = self.C40)
-
-    self.x64, self.y64 = 295, 1460
-    self.C41 = tk.Radiobutton(self.can, text="1", highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar5,
-        value=1, height=1, width=3, anchor='w', command=varvalfivth)
-    self.wC41 = self.can.create_window(self.x64, self.y64,
-        window = self.C41)
-
-    self.x65, self.y65 = 350, 1460
-    self.C42 = tk.Radiobutton(self.can, text="2", highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar5,
-        value=2, height=1, width=3, anchor='w', command=varvalfivth)
-    self.wC42 = self.can.create_window(self.x65, self.y65,
-        window = self.C42)
-
-    self.x66, self.y66 = 405, 1460
-    self.C43 = tk.Radiobutton(self.can, text="3", highlightbackground='cyan', fg='black', 
-        bg='DodgerBlue2', variable=CheckVar5, 
-        value=3, height=1, width=3, anchor='w', command=varvalfivth)
-    self.wC43 = self.can.create_window(self.x66, self.y66,
-        window = self.C43)
-
-    self.x67, self.y67 = 460, 1460
-    self.C44 = tk.Radiobutton(self.can, text="4", highlightbackground='cyan', fg='black', 
-        bg='DodgerBlue2', variable=CheckVar5, 
-        value=4, height=1, width=3, anchor='w', command=varvalfivth)
-    self.wC44 = self.can.create_window(self.x67, self.y67,
-        window = self.C44)
-
-    # Sixth need
-    self.x68, self.y68 = 80, 1485
-    self.lbl_sixth = tk.Label(self.can, text='- Elimination :',
-        font="Times 14 bold", width=20, height=1,
-        bg='DodgerBlue2', fg='white', anchor='w')
-    self.wlbl_sixth = self.can.create_window(self.x68, self.y68,
-        window = self.lbl_sixth)
-
-    CheckVar6 = tk.IntVar()
-    self.x69, self.y69 = 240, 1485
-    self.C50 = tk.Radiobutton(self.can, text="0", highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar6,
-        value=0, height=1, width=3, anchor='w', command=varvalsixth)
-    self.wC50 = self.can.create_window(self.x69, self.y69,
-        window = self.C50)
-
-    self.x70, self.y70 = 295, 1485
-    self.C51 = tk.Radiobutton(self.can, text="1", highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar6,
-        value=1, height=1, width=3, anchor='w', command=varvalsixth)
-    self.wC51 = self.can.create_window(self.x70, self.y70,
-        window = self.C51)
-
-    self.x71, self.y71 = 350, 1485
-    self.C52 = tk.Radiobutton(self.can, text="2", highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar6,
-        value=2, height=1, width=3, anchor='w', command=varvalsixth)
-    self.wC52 = self.can.create_window(self.x71, self.y71,
-        window = self.C52)
-
-    self.x72, self.y72 = 405, 1485
-    self.C53 = tk.Radiobutton(self.can, text="3", highlightbackground='cyan', fg='black', 
-        bg='DodgerBlue2', variable=CheckVar6, 
-        value=3, height=1, width=3, anchor='w', command=varvalsixth)
-    self.wC53 = self.can.create_window(self.x72, self.y72,
-        window = self.C53)
-
-    self.x73, self.y73 = 460, 1485
-    self.C54 = tk.Radiobutton(self.can, text="4", highlightbackground='cyan', fg='black', 
-        bg='DodgerBlue2', variable=CheckVar6, 
-        value=4, height=1, width=3, anchor='w', command=varvalsixth)
-    self.wC54 = self.can.create_window(self.x73, self.y73,
-        window = self.C54)
-
-    # Seventh need
-    self.x74, self.y74 = 80, 1510
-    self.lbl_seven = tk.Label(self.can, text='- Déplacement :',
-        font="Times 14 bold", width=20, height=1,
-        bg='DodgerBlue2', fg='white', anchor='w')
-    self.wlbl_seven = self.can.create_window(self.x74, self.y74,
-        window = self.lbl_seven)
-
-    CheckVar7 = tk.IntVar()
-    self.x75, self.y75 = 240, 1510
-    self.C60 = tk.Radiobutton(self.can, text="0", highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar7,
-        value=0, height=1, width=3, anchor='w', command=varvalseventh)
-    self.wC60 = self.can.create_window(self.x75, self.y75,
-        window = self.C60)
-
-    self.x76, self.y76 = 295, 1510
-    self.C61 = tk.Radiobutton(self.can, text="1", highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar7,
-        value=1, height=1, width=3, anchor='w', command=varvalseventh)
-    self.wC61 = self.can.create_window(self.x76, self.y76,
-        window = self.C61)
-
-    self.x77, self.y77 = 350, 1510
-    self.C62 = tk.Radiobutton(self.can, text="2", highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar7,
-        value=2, height=1, width=3, anchor='w', command=varvalseventh)
-    self.wC62 = self.can.create_window(self.x77, self.y77,
-        window = self.C62)
-
-    self.x78, self.y78 = 405, 1510
-    self.C63 = tk.Radiobutton(self.can, text="3", highlightbackground='cyan', fg='black', 
-        bg='DodgerBlue2', variable=CheckVar7, 
-        value=3, height=1, width=3, anchor='w', command=varvalseventh)
-    self.wC63 = self.can.create_window(self.x78, self.y78,
-        window = self.C63)
-
-    self.x79, self.y79 = 460, 1510
-    self.C64 = tk.Radiobutton(self.can, text="4", highlightbackground='cyan', fg='black', 
-        bg='DodgerBlue2', variable=CheckVar7, 
-        value=4, height=1, width=3, anchor='w', command=varvalseventh)
-    self.wC64 = self.can.create_window(self.x79, self.y79,
-        window = self.C64)
-
-    # Heighth need
-    self.x80, self.y80 = 80, 1535
-    self.lbl_height = tk.Label(self.can, text='- Communication :',
-        font="Times 14 bold", width=20, height=1,
-        bg='DodgerBlue2', fg='white', anchor='w')
-    self.wlbl_height = self.can.create_window(self.x80, self.y80,
-        window = self.lbl_height)
-
-    CheckVar8 = tk.IntVar()
-    self.x81, self.y81 = 240, 1535
-    self.C70 = tk.Radiobutton(self.can, text="0", highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar8,
-        value=0, height=1, width=3, anchor='w', command=varvalheight)
-    self.wC70 = self.can.create_window(self.x81, self.y81,
-        window = self.C70)
-
-    self.x82, self.y82 = 295, 1535
-    self.C71 = tk.Radiobutton(self.can, text="1", highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar8,
-        value=1, height=1, width=3, anchor='w', command=varvalheight)
-    self.wC71 = self.can.create_window(self.x82, self.y82,
-        window = self.C71)
-
-    self.x83, self.y83 = 350, 1535
-    self.C72 = tk.Radiobutton(self.can, text="2", highlightbackground='cyan', fg='black',
-        bg='DodgerBlue2', variable=CheckVar8,
-        value=2, height=1, width=3, anchor='w', command=varvalheight)
-    self.wC72 = self.can.create_window(self.x83, self.y83,
-        window = self.C72)
-
-    self.x84, self.y84 = 405, 1535
-    self.C73 = tk.Radiobutton(self.can, text="3", highlightbackground='cyan', fg='black', 
-        bg='DodgerBlue2', variable=CheckVar8, 
-        value=3, height=1, width=3, anchor='w', command=varvalheight)
-    self.wC73 = self.can.create_window(self.x84, self.y84,
-        window = self.C73)
-
-    self.x85, self.y85 = 460, 1535
-    self.C74 = tk.Radiobutton(self.can, text="4", highlightbackground='cyan', fg='black', 
-        bg='DodgerBlue2', variable=CheckVar8, 
-        value=4, height=1, width=3, anchor='w', command=varvalheight)
-    self.wC74 = self.can.create_window(self.x85, self.y85,
-        window = self.C74)
-
-    """
-    Auxiliary...
-    """
 
     # Button save and quit
     self.x99, self.y99 = 800, 1700

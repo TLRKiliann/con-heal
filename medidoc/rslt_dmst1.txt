@@ -1,6 +1,6 @@
 ----------------------------------------------------------
 Date : 22.02.2021
-Hour : 18:22:34
+Hour : 19:21:23
 Patient name : Firstname Lastname
 Birthday : 00/00/0000
 Allergy : Pollen
@@ -13,4 +13,4 @@ Transmissible disease : None
 + Alimentation = 4
 + Elimination = 3
 + Déplacement = 2
-+ Communication = 1
++ Communication = 0

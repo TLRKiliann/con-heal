@@ -486,7 +486,7 @@ def doc_medical1(self):
             with open('./medidoc/rslt_dmst1.txt', '+a') as file_dm:
                 fcf1_content = file_contf1.readlines()
                 for li in fcf1_content:
-                    file_dm.writelines("--- Patient data ---\n")
+                    file_dm.writelines("\n--- Patient data ---\n")
                     file_dm.writelines(fcf1_content)
                     break
 
@@ -494,7 +494,7 @@ def doc_medical1(self):
             with open('./medidoc/rslt_dmst1.txt', '+a') as file_dm:
                 fcd1_content = file_do1.readlines()
                 for li in fcd1_content:
-                    file_dm.writelines("--- Docotor1 data ---\n")
+                    file_dm.writelines("\n\n--- Docotor1 data ---\n")
                     file_dm.writelines(fcd1_content)
                     break
 
@@ -502,7 +502,7 @@ def doc_medical1(self):
             with open('./medidoc/rslt_dmst1.txt', '+a') as file_dm:
                 fcd2_content = file_do2.readlines()
                 for li in fcd2_content:
-                    file_dm.writelines("--- Docotor2 data ---\n")
+                    file_dm.writelines("\n\n--- Docotor2 data ---\n")
                     file_dm.writelines(fcd2_content)
                     break
 
@@ -510,7 +510,7 @@ def doc_medical1(self):
             with open('./medidoc/rslt_dmst1.txt', '+a') as file_dm:
                 fcd3_content = file_do3.readlines()
                 for li in fcd3_content:
-                    file_dm.writelines("--- Docotor3 data ---\n")
+                    file_dm.writelines("\n\n--- Docotor3 data ---\n")
                     file_dm.writelines(fcd3_content)
                     break
 
@@ -518,7 +518,7 @@ def doc_medical1(self):
             with open('./medidoc/rslt_dmst1.txt', '+a') as file_dm:
                 ff_content = file_fam.readlines()
                 for li in ff_content:
-                    file_dm.writelines("--- Family data ---\n")
+                    file_dm.writelines("\n\n--- Family data ---\n")
                     file_dm.writelines(ff_content)
                     break
 
@@ -526,7 +526,7 @@ def doc_medical1(self):
             with open('./medidoc/rslt_dmst1.txt', '+a') as file_dm:
                 hcs1_content = file_hcs1.readlines()
                 for li in hcs1_content:
-                    file_dm.writelines("--- Home Care System1 ---\n")
+                    file_dm.writelines("\n\n--- Home Care System1 ---\n")
                     file_dm.writelines(hcs1_content)
                     break
 
@@ -534,7 +534,7 @@ def doc_medical1(self):
             with open('./medidoc/rslt_dmst1.txt', '+a') as file_dm:
                 hcs2_content = file_hcs2.readlines()
                 for li in hcs2_content:
-                    file_dm.writelines("--- Home Care System2 ---\n")
+                    file_dm.writelines("\n\n--- Home Care System2 ---\n")
                     file_dm.writelines(hcs2_content)
                     break
 
@@ -542,25 +542,30 @@ def doc_medical1(self):
             with open('./medidoc/rslt_dmst1.txt', '+a') as file_dm:
                 hcs3_content = file_hcs3.readlines()
                 for li in hcs3_content:
-                    file_dm.writelines("--- Home Care System3 ---\n")
+                    file_dm.writelines("\n\n--- Home Care System3 ---\n")
                     file_dm.writelines(hcs3_content)
                     break
 
         print(CheckVar1.get())
         if CheckVar1.get() == 1:
             with open('./medidoc/rslt_dmst1.txt', 'a+') as file1:
+                file1.write("\n\n--- AGGIR grid : ---\n")
                 file1.write("+ Orientation = 1\n")
         elif CheckVar1.get() == 2:
             with open('./medidoc/rslt_dmst1.txt', 'a+') as file2:
+                file2.write("\n\n--- AGGIR grid : ---\n")
                 file2.write("+ Orientation = 2\n")
         elif CheckVar1.get() == 3:
             with open('./medidoc/rslt_dmst1.txt', 'a+') as file3:
+                file3.write("\n\n--- AGGIR grid : ---\n")
                 file3.write("+ Orientation = 3\n")
         elif CheckVar1.get() == 4:
             with open('./medidoc/rslt_dmst1.txt', 'a+') as file4:
+                file4.write("\n\n--- AGGIR grid : ---\n")
                 file4.write("+ Orientation = 4\n")
         else:
             with open('./medidoc/rslt_dmst1.txt', 'a+') as file0:
+                file0.write("\n\n--- AGGIR grid : ---\n")
                 file0.write("+ Orientation = 0\n")
 
         print(CheckVar2.get())

@@ -453,6 +453,9 @@ def doc_medical1(self):
     def varvalfivth():
         print(CheckVar5.get())
 
+    def varvalsixth():
+        print(CheckVar6.get())
+
     def recordata():
         print("Date : " + time.strftime("%d/%m/%Y"))
         print("Nom du patient : ", ent_name.get())
@@ -515,8 +518,8 @@ def doc_medical1(self):
         except (OSError, ValueError) as p_out:
             print("Error from dmst to way out", p_out)
 
-    self.x38, self.y38 = 20, 1360
-    self.lbl_eat = tk.Label(self.can, text='- EAT :',
+    self.x38, self.y38 = 40, 1360
+    self.lbl_eat = tk.Label(self.can, text='- Orientation :',
         font="Times 14 bold", width=20, height=1,
         bg='DodgerBlue2', fg='white')
     self.wlbl_eat = self.can.create_window(self.x38, self.y38,
@@ -560,7 +563,7 @@ def doc_medical1(self):
 
     # second need
     self.x44, self.y44 = 40, 1385
-    self.lbl_sec = tk.Label(self.can, text='- Second need :',
+    self.lbl_sec = tk.Label(self.can, text='- Cohérence :',
         font="Times 14 bold", width=20, height=1,
         bg='DodgerBlue2', fg='white')
     self.wlbl_sec = self.can.create_window(self.x44, self.y44,
@@ -604,7 +607,7 @@ def doc_medical1(self):
 
     # third need
     self.x50, self.y50 = 40, 1410
-    self.lbl_third = tk.Label(self.can, text='- Third need :',
+    self.lbl_third = tk.Label(self.can, text='- Toilette :',
         font="Times 14 bold", width=20, height=1,
         bg='DodgerBlue2', fg='white')
     self.wlbl_third = self.can.create_window(self.x50, self.y50,
@@ -648,7 +651,7 @@ def doc_medical1(self):
 
     # Forth need
     self.x56, self.y56 = 40, 1435
-    self.lbl_forth = tk.Label(self.can, text='- Forth need :',
+    self.lbl_forth = tk.Label(self.can, text='- Habillage :',
         font="Times 14 bold", width=20, height=1,
         bg='DodgerBlue2', fg='white')
     self.wlbl_forth = self.can.create_window(self.x56, self.y56,
@@ -692,7 +695,7 @@ def doc_medical1(self):
 
     # fivth need
     self.x62, self.y62 = 40, 1460
-    self.lbl_fivth = tk.Label(self.can, text='- Fivth need :',
+    self.lbl_fivth = tk.Label(self.can, text='- Alimentation :',
         font="Times 14 bold", width=20, height=1,
         bg='DodgerBlue2', fg='white')
     self.wlbl_fivth = self.can.create_window(self.x62, self.y62,
@@ -734,21 +737,54 @@ def doc_medical1(self):
     self.wC44 = self.can.create_window(self.x67, self.y67,
         window = self.C44)
 
+    # Sixth need
+    self.x68, self.y68 = 40, 1485
+    self.lbl_fivth = tk.Label(self.can, text='- Elimination :',
+        font="Times 14 bold", width=20, height=1,
+        bg='DodgerBlue2', fg='white')
+    self.wlbl_fivth = self.can.create_window(self.x68, self.y68,
+        window = self.lbl_fivth)
+
+    CheckVar6 = tk.IntVar()
+    self.x69, self.y69 = 240, 1485
+    self.C50 = tk.Radiobutton(self.can, text="0", highlightbackground='cyan', fg='black',
+        bg='DodgerBlue2', variable=CheckVar6,
+        value=0, height=1, width=3, anchor='w', command=varvalsixth)
+    self.wC50 = self.can.create_window(self.x69, self.y69,
+        window = self.C50)
+
+    self.x70, self.y70 = 295, 1485
+    self.C51 = tk.Radiobutton(self.can, text="1", highlightbackground='cyan', fg='black',
+        bg='DodgerBlue2', variable=CheckVar6,
+        value=1, height=1, width=3, anchor='w', command=varvalsixth)
+    self.wC51 = self.can.create_window(self.x70, self.y70,
+        window = self.C51)
+
+    self.x71, self.y71 = 350, 1485
+    self.C52 = tk.Radiobutton(self.can, text="2", highlightbackground='cyan', fg='black',
+        bg='DodgerBlue2', variable=CheckVar6,
+        value=2, height=1, width=3, anchor='w', command=varvalsixth)
+    self.wC52 = self.can.create_window(self.x71, self.y71,
+        window = self.C52)
+
+    self.x72, self.y72 = 405, 1485
+    self.C53 = tk.Radiobutton(self.can, text="3", highlightbackground='cyan', fg='black', 
+        bg='DodgerBlue2', variable=CheckVar6, 
+        value=3, height=1, width=3, anchor='w', command=varvalsixth)
+    self.wC53 = self.can.create_window(self.x72, self.y72,
+        window = self.C53)
+
+    self.x73, self.y73 = 460, 1485
+    self.C54 = tk.Radiobutton(self.can, text="4", highlightbackground='cyan', fg='black', 
+        bg='DodgerBlue2', variable=CheckVar6, 
+        value=4, height=1, width=3, anchor='w', command=varvalsixth)
+    self.wC54 = self.can.create_window(self.x73, self.y73,
+        window = self.C54)
+
     """
-    Boire et manger
-    Respirer
-    Dormir, se reposer
-    Etre propre, protéger ses téguments
     Elimination
-    Se recréer
-    Apprendre
-    Température
-    S'occuper en vue de se réaliser
-    Agir selon ses valeurs et croyances
-    Se vêtir et se dévêtir
-    Eviter les dangers
-    Se mouvoir, maintenir une bonne posture
-    Communiquer avec ses semblables
+    Déplacement
+    Communication
     Auxiliary...
     """
 

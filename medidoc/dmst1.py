@@ -579,6 +579,34 @@ def doc_medical1(self):
             with open('./medidoc/rslt_dmst1.txt', 'a+') as file0:
                 file0.write("+ Communication = 0\n")
 
+        print(CheckVar9.get())
+        if CheckVar9.get() == 1:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file1:
+                file1.write("+ Directives anticipées = Oui\n")
+        else:
+            print("+ None (DA)")
+
+        print(CheckVar10.get())
+        if CheckVar10.get() == 1:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file1:
+                file1.write("+ Directives anticipées = Non\n")
+        else:
+            print("+ None (DA)")
+
+        print(CheckVar11.get())
+        if CheckVar11.get() == 1:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file1:
+                file1.write("+ PLAFA = Oui\n")
+        else:
+            print("+ None (PLAFA)")
+
+        print(CheckVar12.get())
+        if CheckVar12.get() == 1:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file1:
+                file1.write("+ PLAFA = Non\n")
+        else:
+            print("+ None (PLAFA)")
+
     self.x36, self.y36 = 250, 1290 
     self.lbl_need = tk.Label(self.can, text='--- AGGIR (grid) and depedencies ---',
         font="Times 14 bold", width=60,

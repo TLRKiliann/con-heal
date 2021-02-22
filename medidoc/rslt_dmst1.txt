@@ -14,3 +14,23 @@ Transmissible disease : None
 + Elimination = 3
 + Déplacement = 2
 + Communication = 0
+----------------------------------------------------------
+Date : 22.02.2021
+Hour : 19:40:41
+Patient name : Firstname Lastname
+Birthday : 00/00/0000
+Allergy : Pollen
+Transmissible disease : None
+----------------------------------------------------------
++ Orientation = 0
++ Cohérence = 1
++ Toilette = 2
++ Habillage = 3
++ Alimentation = 4
++ Elimination = 3
++ Déplacement = 2
++ Communication = 0
++ Directives anticipées = Oui
++ Directives anticipées = None
++ PLAFA = None
++ PLAFA = Non

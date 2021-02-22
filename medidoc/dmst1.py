@@ -424,7 +424,7 @@ def doc_medical1(self):
         messagebox.showinfo('INFO', 'File bmi.txt not found !')
 
     self.x36, self.y36 = 250, 1290 
-    self.lbl_need = tk.Label(self.can, text='--- 14 needs and depedencies ---',
+    self.lbl_need = tk.Label(self.can, text='--- AGGIR (grid) and depedencies ---',
         font="Times 14 bold", width=60,
         height=1, bg='RoyalBlue3', fg='white')
     self.wlbl_need = self.can.create_window(self.x36, self.y36,
@@ -438,33 +438,10 @@ def doc_medical1(self):
     self.wlbl_exneeds = self.can.create_window(self.x37, self.y37,
         window = self.lbl_exneeds)
 
-    def varvalidate():
-        print(CheckVar1.get())
-
-    def varvalidatesec():
-        print(CheckVar2.get())
-
-    def varvalidatethird():
-        print(CheckVar3.get())
-
-    def varvalforth():
-        print(CheckVar4.get())
-
-    def varvalfivth():
-        print(CheckVar5.get())
-
-    def varvalsixth():
-        print(CheckVar6.get())
-
-    def varvalseventh():
-        print(CheckVar7.get())
-
-    def varvalheight():
-        print(CheckVar8.get())
-
     def recordata():
-        print("Date : " + time.strftime("%d/%m/%Y"))
-        print("Nom du patient : ", ent_name.get())
+        """
+            To record all data in GUI to txt file.
+        """
         with open('./medidoc/rslt_dmst1.txt', 'a+') as file:
             file.write("----------------------------------------------------------\n")
             file.write("Date : ")
@@ -480,17 +457,154 @@ def doc_medical1(self):
             file.write("Transmissible disease : ")
             file.write(transdis.get() + '\n')
             file.write("----------------------------------------------------------\n")
-            print(CheckVar1.get())
-            if CheckVar1.get()==1:
-                print("Surveillance respiratoire requise en ajout")
-                with open('./need/doc_suivi/patient1_14b.txt', 'a+') as file:
-                    file.write("+ Surveillance respiratoire requise\n")
-            else:
-                print("Nothing to do")
+
+    def varvalidate():
+        print(CheckVar1.get())
+        if CheckVar1.get() == 1:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file1:
+                file1.write("+ Orientation = 1\n")
+        elif CheckVar1.get() == 2:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file2:
+                file2.write("+ Orientation = 2\n")
+        elif CheckVar1.get() == 3:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file3:
+                file3.write("+ Orientation = 3\n")
+        elif CheckVar1.get() == 4:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file4:
+                file4.write("+ Orientation = 4\n")
+        else:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file0:
+                file0.write("+ Orientation = 0\n")
+
+    def varvalidatesec():
+        print(CheckVar2.get())
+        if CheckVar2.get() == 1:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file1:
+                file1.write("+ Cohérence = 1\n")
+        elif CheckVar2.get() == 2:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file2:
+                file2.write("+ Cohérence = 2\n")
+        elif CheckVar2.get() == 3:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file3:
+                file3.write("+ Cohérence = 3\n")
+        elif CheckVar2.get() == 4:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file4:
+                file4.write("+ Cohérence = 4\n")
+        else:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file0:
+                file0.write("+ Cohérence = 0\n")
+
+    def varvalidatethird():
+        print(CheckVar3.get())
+        if CheckVar3.get() == 1:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file1:
+                file1.write("+ Toilette = 1\n")
+        elif CheckVar3.get() == 2:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file2:
+                file2.write("+ Toilette = 2\n")
+        elif CheckVar3.get() == 3:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file3:
+                file3.write("+ Toilette = 3\n")
+        elif CheckVar3.get() == 4:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file4:
+                file4.write("+ Toilette = 4\n")
+        else:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file0:
+                file0.write("+ Toilette = 0\n")
+
+    def varvalforth():
+        print(CheckVar4.get())
+        if CheckVar4.get() == 1:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file1:
+                file1.write("+ Habillage = 1\n")
+        elif CheckVar4.get() == 2:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file2:
+                file2.write("+ Habillage = 2\n")
+        elif CheckVar4.get() == 3:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file3:
+                file3.write("+ Habillage = 3\n")
+        elif CheckVar4.get() == 4:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file4:
+                file4.write("+ Habillage = 4\n")
+        else:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file0:
+                file0.write("+ Habillage = 0\n")
+
+    def varvalfivth():
+        print(CheckVar5.get())
+        if CheckVar5.get() == 1:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file1:
+                file1.write("+ Alimentation = 1\n")
+        elif CheckVar5.get() == 2:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file2:
+                file2.write("+ Alimentation = 2\n")
+        elif CheckVar5.get() == 3:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file3:
+                file3.write("+ Alimentation = 3\n")
+        elif CheckVar5.get() == 4:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file4:
+                file4.write("+ Alimentation = 4\n")
+        else:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file0:
+                file0.write("+ Alimentation = 0\n")
+
+    def varvalsixth():
+        print(CheckVar6.get())
+        if CheckVar6.get() == 1:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file1:
+                file1.write("+ Elimination = 1\n")
+        elif CheckVar6.get() == 2:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file2:
+                file2.write("+ Elimination = 2\n")
+        elif CheckVar6.get() == 3:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file3:
+                file3.write("+ Elimination = 3\n")
+        elif CheckVar6.get() == 4:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file4:
+                file4.write("+ Elimination = 4\n")
+        else:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file0:
+                file0.write("+ Elimination = 0\n")
+
+    def varvalseventh():
+        print(CheckVar7.get())
+        if CheckVar7.get() == 1:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file1:
+                file1.write("+ Déplacement = 1\n")
+        elif CheckVar7.get() == 2:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file2:
+                file2.write("+ Déplacement = 2\n")
+        elif CheckVar7.get() == 3:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file3:
+                file3.write("+ Déplacement = 3\n")
+        elif CheckVar7.get() == 4:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file4:
+                file4.write("+ Déplacement = 4\n")
+        else:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file0:
+                file0.write("+ Déplacement = 0\n")
+
+    def varvalheight():
+        print(CheckVar8.get())
+        if CheckVar8.get() == 1:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file1:
+                file1.write("+ Communication = 1\n")
+        elif CheckVar8.get() == 2:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file2:
+                file2.write("+ Communication = 2\n")
+        elif CheckVar8.get() == 3:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file3:
+                file3.write("+ Communication = 3\n")
+        elif CheckVar8.get() == 4:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file4:
+                file4.write("+ Communication = 4\n")
+        else:
+            with open('./medidoc/rslt_dmst1.txt', 'a+') as file0:
+                file0.write("+ Communication = 0\n")
 
     def uptoserv():
         """
-            To upload data on server after creating files
+            To upload data on server after creating files.
         """
         proc = subprocess.run(["scp", "./medidoc/rslt_dmst1.txt",
             "pi@192.168.18.12:~/tt_doc/doc_txt1/Files1/rslt_dmst1.txt"],
@@ -504,9 +618,15 @@ def doc_medical1(self):
             messagebox.showerror("Error", "No rslt_dmst1.txt to upload...")
 
     def msgvalidate():
+        """
+            To display a msg to confirm that all data have been saved.
+        """
         messagebox.showinfo("Confirmation", "Record confirmed and finished !")
 
     def record_alldata():
+        """
+            That the main function to save all data by calling other functions.
+        """
         MsgBox = messagebox.askyesno('Record', 'Results will be saved, ok ?')
         if MsgBox == 1:
             print("Ok, data saved !")
@@ -524,10 +644,10 @@ def doc_medical1(self):
         except (OSError, ValueError) as p_out:
             print("Error from dmst to way out", p_out)
 
-    self.x38, self.y38 = 40, 1360
+    self.x38, self.y38 = 80, 1360
     self.lbl_eat = tk.Label(self.can, text='- Orientation :',
         font="Times 14 bold", width=20, height=1,
-        bg='DodgerBlue2', fg='white')
+        bg='DodgerBlue2', fg='white', anchor='w')
     self.wlbl_eat = self.can.create_window(self.x38, self.y38,
         window = self.lbl_eat)
 
@@ -568,10 +688,10 @@ def doc_medical1(self):
         window = self.C4)
 
     # second need
-    self.x44, self.y44 = 40, 1385
+    self.x44, self.y44 = 80, 1385
     self.lbl_sec = tk.Label(self.can, text='- Cohérence :',
         font="Times 14 bold", width=20, height=1,
-        bg='DodgerBlue2', fg='white')
+        bg='DodgerBlue2', fg='white', anchor='w')
     self.wlbl_sec = self.can.create_window(self.x44, self.y44,
         window = self.lbl_sec)
 
@@ -612,10 +732,10 @@ def doc_medical1(self):
         window = self.C14)
 
     # third need
-    self.x50, self.y50 = 40, 1410
+    self.x50, self.y50 = 80, 1410
     self.lbl_third = tk.Label(self.can, text='- Toilette :',
         font="Times 14 bold", width=20, height=1,
-        bg='DodgerBlue2', fg='white')
+        bg='DodgerBlue2', fg='white', anchor='w')
     self.wlbl_third = self.can.create_window(self.x50, self.y50,
         window = self.lbl_third)
 
@@ -656,10 +776,10 @@ def doc_medical1(self):
         window = self.C24)
 
     # Forth need
-    self.x56, self.y56 = 40, 1435
+    self.x56, self.y56 = 80, 1435
     self.lbl_forth = tk.Label(self.can, text='- Habillage :',
         font="Times 14 bold", width=20, height=1,
-        bg='DodgerBlue2', fg='white')
+        bg='DodgerBlue2', fg='white', anchor='w')
     self.wlbl_forth = self.can.create_window(self.x56, self.y56,
         window = self.lbl_forth)
 
@@ -700,10 +820,10 @@ def doc_medical1(self):
         window = self.C34)
 
     # fivth need
-    self.x62, self.y62 = 40, 1460
+    self.x62, self.y62 = 80, 1460
     self.lbl_fivth = tk.Label(self.can, text='- Alimentation :',
         font="Times 14 bold", width=20, height=1,
-        bg='DodgerBlue2', fg='white')
+        bg='DodgerBlue2', fg='white', anchor='w')
     self.wlbl_fivth = self.can.create_window(self.x62, self.y62,
         window = self.lbl_fivth)
 
@@ -744,10 +864,10 @@ def doc_medical1(self):
         window = self.C44)
 
     # Sixth need
-    self.x68, self.y68 = 40, 1485
+    self.x68, self.y68 = 80, 1485
     self.lbl_sixth = tk.Label(self.can, text='- Elimination :',
         font="Times 14 bold", width=20, height=1,
-        bg='DodgerBlue2', fg='white')
+        bg='DodgerBlue2', fg='white', anchor='w')
     self.wlbl_sixth = self.can.create_window(self.x68, self.y68,
         window = self.lbl_sixth)
 
@@ -788,7 +908,7 @@ def doc_medical1(self):
         window = self.C54)
 
     # Seventh need
-    self.x74, self.y74 = 40, 1510
+    self.x74, self.y74 = 80, 1510
     self.lbl_seven = tk.Label(self.can, text='- Déplacement :',
         font="Times 14 bold", width=20, height=1,
         bg='DodgerBlue2', fg='white', anchor='w')
@@ -832,7 +952,7 @@ def doc_medical1(self):
         window = self.C64)
 
     # Heighth need
-    self.x80, self.y80 = 40, 1535
+    self.x80, self.y80 = 80, 1535
     self.lbl_height = tk.Label(self.can, text='- Communication :',
         font="Times 14 bold", width=20, height=1,
         bg='DodgerBlue2', fg='white', anchor='w')
@@ -880,18 +1000,18 @@ def doc_medical1(self):
     """
 
     # Button save and quit
-    self.x64, self.y64 = 780, 2000
+    self.x99, self.y99 = 800, 1700
     self.buttonsave = tk.Button(self.can, text="Save", width=10, bd=3,
         fg='yellow', bg='RoyalBlue3', activebackground='pale turquoise',
         highlightbackground='cyan', command = record_alldata)
-    self.buttonsave = self.can.create_window(self.x64, self.y64,
+    self.buttonsave = self.can.create_window(self.x99, self.y99,
         window = self.buttonsave)
 
-    self.x65, self.y65 = 1050, 2000
+    self.x100, self.y100 = 1000, 1700
     self.buttonquit = tk.Button(self.can, text='Return to main menu', width=20, bd=3,
         fg='white', bg='RoyalBlue3', activebackground='pale turquoise',
         highlightbackground='cyan', command = way_back)
-    self.buttonquit = self.can.create_window(self.x65, self.y65,
+    self.buttonquit = self.can.create_window(self.x100, self.y100,
         window = self.buttonquit)
 
     self.can.configure(scrollregion=self.can.bbox(ALL))

@@ -310,7 +310,7 @@ def auxi_equip1(self):
     self.C19 = self.can.create_window(self.x37, self.y37,
         window = self.C19)
 
-    self.x38, self.y38 = 600, 329
+    self.x38, self.y38 = 1000, 175
     CheckVar20 = tk.IntVar()
     self.C20 = tk.Checkbutton(self.can, text="DVP (ventri.-peri.)", fg='navy',
         bg='cyan', variable=CheckVar20,
@@ -318,6 +318,15 @@ def auxi_equip1(self):
         width=20, anchor="w")
     self.C20 = self.can.create_window(self.x38, self.y38,
         window = self.C20)
+
+    self.x39, self.y39 = 1000, 197
+    CheckVar120 = tk.IntVar()
+    self.C120 = tk.Checkbutton(self.can, text="DVP (ventri.-peri.)", fg='navy',
+        bg='cyan', variable=CheckVar120,
+        onvalue=1, offvalue=0, height=1,
+        width=120, anchor="w")
+    self.C120 = self.can.create_window(self.x39, self.y39,
+        window = self.C120)
 
     self.x50, self.y50 = 800, 400
     self.labl_proth = tk.Label(self.can, text='--- Prothesis ---',

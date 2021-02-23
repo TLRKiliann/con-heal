@@ -427,7 +427,7 @@ def doc_medical1(self):
         """
             To record data after warning !
         """
-        with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file:
+        with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file:
             file.write("----------------------------------------------------------\n")
             file.write("Date : ")
             file.write(time.strftime("%d.%m.%Y") + '\n')
@@ -444,14 +444,14 @@ def doc_medical1(self):
             file.write("----------------------------------------------------------\n")
 
         with open('./diag/doc_diag/diagrecap1.txt', 'r') as file_di:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', '+a') as file_dm:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
                 diag_content = file_di.readlines()
                 for li in diag_content:
                     file_dm.writelines(diag_content)
                     break
 
         with open('./ttt/doc_ttt/intro_ttt.txt', 'r') as file_ttt:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', '+a') as file_dm:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
                 ttt_content = file_ttt.readlines()
                 for li in ttt_content:
                     file_dm.writelines("--- Treatments ---\n")
@@ -459,7 +459,7 @@ def doc_medical1(self):
                     break
 
         with open('./ttt/doc_ttt/intro_res.txt', 'r') as file_res:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', '+a') as file_dm:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
                 res_content = file_res.readlines()
                 for li in res_content:
                     file_dm.writelines("--- Reserves ---\n")
@@ -467,7 +467,7 @@ def doc_medical1(self):
                     break
 
         with open('./param/paramdata1.txt', 'r') as file_pa:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', '+a') as file_dm:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
                 pa_content = file_pa.readlines()
                 for li in pa_content:
                     file_dm.writelines("--- Vitals Parameters ---\n")
@@ -475,7 +475,7 @@ def doc_medical1(self):
                     break
 
         with open('./calBmi/bmi.txt', 'r') as file_b:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', '+a') as file_dm:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
                 bmi_content = file_b.readlines()
                 for li in bmi_content:
                     file_dm.writelines("--- BMI ---\n")
@@ -483,7 +483,7 @@ def doc_medical1(self):
                     break
 
         with open('./contact/conpact/finalfile1.txt', 'r') as file_contf1:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', '+a') as file_dm:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
                 fcf1_content = file_contf1.readlines()
                 for li in fcf1_content:
                     file_dm.writelines("\n--- Patient data ---\n")
@@ -491,7 +491,7 @@ def doc_medical1(self):
                     break
 
         with open('./contact/conpact/finaldoc1.txt', 'r') as file_do1:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', '+a') as file_dm:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
                 fcd1_content = file_do1.readlines()
                 for li in fcd1_content:
                     file_dm.writelines("\n\n--- Docotor1 data ---\n")
@@ -499,7 +499,7 @@ def doc_medical1(self):
                     break
 
         with open('./contact/conpact/finaldoc2.txt', 'r') as file_do2:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', '+a') as file_dm:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
                 fcd2_content = file_do2.readlines()
                 for li in fcd2_content:
                     file_dm.writelines("\n\n--- Docotor2 data ---\n")
@@ -507,7 +507,7 @@ def doc_medical1(self):
                     break
 
         with open('./contact/conpact/finaldoc3.txt', 'r') as file_do3:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', '+a') as file_dm:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
                 fcd3_content = file_do3.readlines()
                 for li in fcd3_content:
                     file_dm.writelines("\n\n--- Docotor3 data ---\n")
@@ -515,7 +515,7 @@ def doc_medical1(self):
                     break
 
         with open('./contact/conpact/finalfam1.txt', 'r') as file_fam:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', '+a') as file_dm:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
                 ff_content = file_fam.readlines()
                 for li in ff_content:
                     file_dm.writelines("\n\n--- Family data ---\n")
@@ -523,7 +523,7 @@ def doc_medical1(self):
                     break
 
         with open('./contact/conpact/finalhcs1.txt', 'r') as file_hcs1:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', '+a') as file_dm:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
                 hcs1_content = file_hcs1.readlines()
                 for li in hcs1_content:
                     file_dm.writelines("\n\n--- Home Care System1 ---\n")
@@ -531,7 +531,7 @@ def doc_medical1(self):
                     break
 
         with open('./contact/conpact/finalhcs2.txt', 'r') as file_hcs2:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', '+a') as file_dm:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
                 hcs2_content = file_hcs2.readlines()
                 for li in hcs2_content:
                     file_dm.writelines("\n\n--- Home Care System2 ---\n")
@@ -539,7 +539,7 @@ def doc_medical1(self):
                     break
 
         with open('./contact/conpact/finalhcs3.txt', 'r') as file_hcs3:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', '+a') as file_dm:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
                 hcs3_content = file_hcs3.readlines()
                 for li in hcs3_content:
                     file_dm.writelines("\n\n--- Home Care System3 ---\n")
@@ -548,169 +548,169 @@ def doc_medical1(self):
 
         print(CheckVar1.get())
         if CheckVar1.get() == 1:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file1:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file1:
                 file1.write("\n\n--- AGGIR grid : ---\n")
                 file1.write("+ Orientation = 1\n")
         elif CheckVar1.get() == 2:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file2:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file2:
                 file2.write("\n\n--- AGGIR grid : ---\n")
                 file2.write("+ Orientation = 2\n")
         elif CheckVar1.get() == 3:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file3:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file3:
                 file3.write("\n\n--- AGGIR grid : ---\n")
                 file3.write("+ Orientation = 3\n")
         elif CheckVar1.get() == 4:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file4:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file4:
                 file4.write("\n\n--- AGGIR grid : ---\n")
                 file4.write("+ Orientation = 4\n")
         else:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file0:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file0:
                 file0.write("\n\n--- AGGIR grid : ---\n")
                 file0.write("+ Orientation = 0\n")
 
         print(CheckVar2.get())
         if CheckVar2.get() == 1:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file1:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file1:
                 file1.write("+ Cohérence = 1\n")
         elif CheckVar2.get() == 2:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file2:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file2:
                 file2.write("+ Cohérence = 2\n")
         elif CheckVar2.get() == 3:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file3:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file3:
                 file3.write("+ Cohérence = 3\n")
         elif CheckVar2.get() == 4:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file4:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file4:
                 file4.write("+ Cohérence = 4\n")
         else:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file0:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file0:
                 file0.write("+ Cohérence = 0\n")
 
         print(CheckVar3.get())
         if CheckVar3.get() == 1:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file1:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file1:
                 file1.write("+ Toilette = 1\n")
         elif CheckVar3.get() == 2:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file2:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file2:
                 file2.write("+ Toilette = 2\n")
         elif CheckVar3.get() == 3:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file3:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file3:
                 file3.write("+ Toilette = 3\n")
         elif CheckVar3.get() == 4:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file4:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file4:
                 file4.write("+ Toilette = 4\n")
         else:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file0:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file0:
                 file0.write("+ Toilette = 0\n")
 
         print(CheckVar4.get())
         if CheckVar4.get() == 1:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file1:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file1:
                 file1.write("+ Habillage = 1\n")
         elif CheckVar4.get() == 2:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file2:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file2:
                 file2.write("+ Habillage = 2\n")
         elif CheckVar4.get() == 3:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file3:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file3:
                 file3.write("+ Habillage = 3\n")
         elif CheckVar4.get() == 4:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file4:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file4:
                 file4.write("+ Habillage = 4\n")
         else:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file0:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file0:
                 file0.write("+ Habillage = 0\n")
 
         print(CheckVar5.get())
         if CheckVar5.get() == 1:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file1:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file1:
                 file1.write("+ Alimentation = 1\n")
         elif CheckVar5.get() == 2:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file2:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file2:
                 file2.write("+ Alimentation = 2\n")
         elif CheckVar5.get() == 3:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file3:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file3:
                 file3.write("+ Alimentation = 3\n")
         elif CheckVar5.get() == 4:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file4:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file4:
                 file4.write("+ Alimentation = 4\n")
         else:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file0:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file0:
                 file0.write("+ Alimentation = 0\n")
 
         print(CheckVar6.get())
         if CheckVar6.get() == 1:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file1:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file1:
                 file1.write("+ Elimination = 1\n")
         elif CheckVar6.get() == 2:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file2:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file2:
                 file2.write("+ Elimination = 2\n")
         elif CheckVar6.get() == 3:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file3:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file3:
                 file3.write("+ Elimination = 3\n")
         elif CheckVar6.get() == 4:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file4:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file4:
                 file4.write("+ Elimination = 4\n")
         else:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file0:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file0:
                 file0.write("+ Elimination = 0\n")
 
         print(CheckVar7.get())
         if CheckVar7.get() == 1:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file1:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file1:
                 file1.write("+ Déplacement = 1\n")
         elif CheckVar7.get() == 2:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file2:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file2:
                 file2.write("+ Déplacement = 2\n")
         elif CheckVar7.get() == 3:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file3:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file3:
                 file3.write("+ Déplacement = 3\n")
         elif CheckVar7.get() == 4:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file4:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file4:
                 file4.write("+ Déplacement = 4\n")
         else:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file0:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file0:
                 file0.write("+ Déplacement = 0\n")
 
         print(CheckVar8.get())
         if CheckVar8.get() == 1:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file1:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file1:
                 file1.write("+ Communication = 1\n")
         elif CheckVar8.get() == 2:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file2:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file2:
                 file2.write("+ Communication = 2\n")
         elif CheckVar8.get() == 3:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file3:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file3:
                 file3.write("+ Communication = 3\n")
         elif CheckVar8.get() == 4:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file4:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file4:
                 file4.write("+ Communication = 4\n")
         else:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file0:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file0:
                 file0.write("+ Communication = 0\n")
 
         print(CheckVar9.get())
         if CheckVar9.get() == 1:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file1:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file1:
                 file1.write("+ Directives anticipées = Oui\n")
         else:
             print("+ None (DA)")
 
         print(CheckVar10.get())
         if CheckVar10.get() == 1:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file1:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file1:
                 file1.write("+ Directives anticipées = Non\n")
         else:
             print("+ None (DA)")
 
         print(CheckVar11.get())
         if CheckVar11.get() == 1:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file1:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file1:
                 file1.write("+ PLAFA = Oui\n")
         else:
             print("+ None (PLAFA)")
 
         print(CheckVar12.get())
         if CheckVar12.get() == 1:
-            with open('./medidoc/doc_dmst/rslt_dmst1.txt', 'a+') as file1:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file1:
                 file1.write("+ PLAFA = Non\n")
         else:
             print("+ None (PLAFA)")
@@ -721,11 +721,12 @@ def doc_medical1(self):
             I need a try here !!!
         """
         try:
-            if os.path.getsize('./medidoc/doc_dmst/rslt_dmst1.txt'):
+            if os.path.getsize('./medidoc/doc_dmst1/rslt_dmst1.txt'):
                 messagebox.showwarning('Warning',
                     '!!! Warning, saving new data will erased old file !!!')
                 msgayn = messagebox.askyesno('Look', 'Would you like to continue ?')
                 if msgayn == 1:
+                    os.remove('./medidoc/doc_dmst1/rslt_dmst1.txt')
                     launchfunc()
                 else:
                     messagebox.showinfo("INFO", "Nothing has changed !")
@@ -1137,7 +1138,7 @@ def doc_medical1(self):
     CheckVar9 = tk.IntVar()
     self.x89, self.y89 = 250, 1800
     self.C75 = Checkbutton(self.can, text=" Oui", fg='black', 
-        bg='DodgerBlue2', variable=CheckVar9, 
+        bg='cyan', variable=CheckVar9, 
         onvalue=1, offvalue=0, height=1, 
         width=6, anchor="w")
     self.wC75 = self.can.create_window(self.x89, self.y89,
@@ -1146,7 +1147,7 @@ def doc_medical1(self):
     CheckVar10 = tk.IntVar()
     self.x90, self.y90 = 324, 1800
     self.C76 = Checkbutton(self.can, text=" Non", fg='black', 
-        bg='DodgerBlue2', variable=CheckVar10, 
+        bg='cyan', variable=CheckVar10, 
         onvalue=1, offvalue=0, height=1, 
         width=6, anchor="w")
     self.wC76 = self.can.create_window(self.x90, self.y90,
@@ -1163,7 +1164,7 @@ def doc_medical1(self):
     CheckVar11 = tk.IntVar()
     self.x92, self.y92 = 250, 1825
     self.C77 = Checkbutton(self.can, text=" Oui", fg='black', 
-        bg='DodgerBlue2', variable=CheckVar11, 
+        bg='cyan', variable=CheckVar11, 
         onvalue=1, offvalue=0, height=1, 
         width=6, anchor="w")
     self.wC77 = self.can.create_window(self.x92, self.y92,
@@ -1172,7 +1173,7 @@ def doc_medical1(self):
     CheckVar12 = tk.IntVar()
     self.x93, self.y93 = 324, 1825
     self.C78 = Checkbutton(self.can, text=" Non", fg='black', 
-        bg='DodgerBlue2', variable=CheckVar12, 
+        bg='cyan', variable=CheckVar12, 
         onvalue=1, offvalue=0, height=1, 
         width=6, anchor="w")
     self.wC78 = self.can.create_window(self.x93, self.y93,
@@ -1182,7 +1183,7 @@ def doc_medical1(self):
         """
             To upload data on server after creating files.
         """
-        proc = subprocess.run(["scp", "./medidoc/doc_dmst/rslt_dmst1.txt",
+        proc = subprocess.run(["scp", "./medidoc/doc_dmst1/rslt_dmst1.txt",
             "pi@192.168.18.12:~/tt_doc/doc_txt1/Files1/rslt_dmst1.txt"],
             stderr=subprocess.PIPE)
         print("Result SCP transfert : %s" % repr(proc.stderr))

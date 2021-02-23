@@ -215,7 +215,7 @@ def auxi_equip1(self):
 
     self.x16, self.y16 = 200, 535
     CheckVar10 = tk.IntVar()
-    self.C10 = tk.Checkbutton(self.can, text="Lunettes", fg='navy',
+    self.C10 = tk.Checkbutton(self.can, text="Lunettes à O²", fg='navy',
         bg='cyan', variable=CheckVar10,
         onvalue=1, offvalue=0, height=1,
         width=20, anchor="w")
@@ -224,7 +224,7 @@ def auxi_equip1(self):
 
     self.x17, self.y17 = 200, 557
     CheckVar11 = tk.IntVar()
-    self.C11 = tk.Checkbutton(self.can, text="Lunettes à O²", fg='navy',
+    self.C11 = tk.Checkbutton(self.can, text="Lunettes", fg='navy',
         bg='cyan', variable=CheckVar11,
         onvalue=1, offvalue=0, height=1,
         width=20, anchor="w")
@@ -321,10 +321,10 @@ def auxi_equip1(self):
 
     self.x39, self.y39 = 1000, 197
     CheckVar120 = tk.IntVar()
-    self.C120 = tk.Checkbutton(self.can, text="DVP (ventri.-peri.)", fg='navy',
+    self.C120 = tk.Checkbutton(self.can, text="DVA (ventri.-atriale)", fg='navy',
         bg='cyan', variable=CheckVar120,
         onvalue=1, offvalue=0, height=1,
-        width=120, anchor="w")
+        width=20, anchor="w")
     self.C120 = self.can.create_window(self.x39, self.y39,
         window = self.C120)
 

@@ -8,6 +8,7 @@ from tkinter import messagebox
 import subprocess
 import time
 
+
 def auxi_equip1(self):
     """
         Main function called since main app
@@ -103,7 +104,6 @@ def auxi_equip1(self):
     def transwritedata():
         MsgBox = messagebox.askyesno('Record', 'Results will be saved, ok ?')
         if MsgBox == 1:
-            print("Ok, data saved !")
             recordaux()
             uploadaux()
             msgrec()
@@ -120,7 +120,7 @@ def auxi_equip1(self):
 
     self.x3, self.y3 = 200, 150
     self.labl_mob = tk.Label(self.can, text='--- Mobilisation ---',
-        font="Times 14 bold", width=24,
+        font="Times 14 bold", width=21,
         height=1, bg='RoyalBlue3', fg='white')
     self.labl_mob = self.can.create_window(self.x3, self.y3,
         window = self.labl_mob)
@@ -163,7 +163,7 @@ def auxi_equip1(self):
 
     self.x10, self.y10 = 200, 400
     self.labl_appa = tk.Label(self.can, text='--- Appareillage ---',
-        font="Times 14 bold", width=24,
+        font="Times 14 bold", width=21,
         height=1, bg='RoyalBlue3', fg='white')
     self.labl_appa = self.can.create_window(self.x10, self.y10,
         window = self.labl_appa)
@@ -249,7 +249,7 @@ def auxi_equip1(self):
 
     self.x31, self.y31 = 600, 175
     CheckVar13 = tk.IntVar()
-    self.C13 = tk.Checkbutton(self.can, text="Mêche", fg='navy',
+    self.C13 = tk.Checkbutton(self.can, text="Mèche", fg='navy',
         bg='cyan', variable=CheckVar13,
         onvalue=1, offvalue=0, height=1,
         width=20, anchor="w")
@@ -398,7 +398,50 @@ def auxi_equip1(self):
     self.C28 = self.can.create_window(self.x58, self.y58,
         window = self.C28)
 
-    # Prothèse occulaire, dentaire, nasale, maxilaire... et coude
+    self.x59, self.y59 = 1000, 425
+    CheckVar29 = tk.IntVar()
+    self.C29 = tk.Checkbutton(self.can, text="Prothèse oculaire", fg='navy',
+        bg='cyan', variable=CheckVar29,
+        onvalue=1, offvalue=0, height=1,
+        width=20, anchor="w")
+    self.C29 = self.can.create_window(self.x59, self.y59,
+        window = self.C29)
+
+    self.x60, self.y60 = 1000, 447
+    CheckVar30 = tk.IntVar()
+    self.C30 = tk.Checkbutton(self.can, text="Prothèse(s) dentaire(s)", fg='navy',
+        bg='cyan', variable=CheckVar30,
+        onvalue=1, offvalue=0, height=1,
+        width=20, anchor="w")
+    self.C30 = self.can.create_window(self.x60, self.y60,
+        window = self.C30)
+
+    self.x61, self.y61 = 1000, 469
+    CheckVar31 = tk.IntVar()
+    self.C31 = tk.Checkbutton(self.can, text="Prothèse(s) dentaire(s)", fg='navy',
+        bg='cyan', variable=CheckVar31,
+        onvalue=1, offvalue=0, height=1,
+        width=20, anchor="w")
+    self.C31 = self.can.create_window(self.x61, self.y61,
+        window = self.C31)
+
+    self.x62, self.y62 = 1000, 491
+    CheckVar32 = tk.IntVar()
+    self.C32 = tk.Checkbutton(self.can, text="Prothèse(s) maxilaire", fg='navy',
+        bg='cyan', variable=CheckVar32,
+        onvalue=1, offvalue=0, height=1,
+        width=20, anchor="w")
+    self.C32 = self.can.create_window(self.x62, self.y62,
+        window = self.C32)
+
+    self.x63, self.y63 = 1000, 513
+    CheckVar33 = tk.IntVar()
+    self.C33 = tk.Checkbutton(self.can, text="Prothèse(s) nasale", fg='navy',
+        bg='cyan', variable=CheckVar33,
+        onvalue=1, offvalue=0, height=1,
+        width=20, anchor="w")
+    self.C33 = self.can.create_window(self.x63, self.y63,
+        window = self.C33)
 
     # Button save and quit
     self.x64, self.y64 = 850, 620

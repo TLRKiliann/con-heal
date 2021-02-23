@@ -13,6 +13,9 @@ def auxi_equip1(self):
         Main function called since main app
         heal_track.py for displaying auxiliary
         equipement.
+        Lunettes, dentier, prothèse aud, pompe à insu,
+        PTH D G, PTG D G, PTE(I) D G, pace maker,
+        
     """
     self.can.delete(ALL)
     self.can.configure(background='DodgerBlue2')
@@ -45,7 +48,7 @@ def auxi_equip1(self):
             file.write(ntry_txt.get() + '\n')
 
         with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as endfile:
-            endfile.write("---------------------------------------------------------\n\n")
+            endfile.write("---------------------------------------------------------\n")
 
         print(CheckVar1.get())
         if CheckVar1.get()==1:

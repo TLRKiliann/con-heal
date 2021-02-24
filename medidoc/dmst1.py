@@ -1200,41 +1200,48 @@ def doc_medical1(self):
     self.wlbl_parcvita = self.can.create_window(self.x96, self.y96,
         window = self.lbl_parcvita)
 
-
     def saveData():
         """
             Test if file parcours.txt exist and write data.
             A msg into textbox appear to informate user that
             data have been saved.
         """
-        try:        
+        try:
             if os.path.getsize('./medidoc/doc_dmst1/parcours.txt'):
                 print("+ File 'parcours.txt' exist !")
-                with open('./medidoc/doc_dmst1/parcours.txt', 'a+') as namefile:
-                    namefile.write(self.t97.get("0.0", "end-1c") + '\n\n')
+                with open('./medidoc/doc_dmst1/parcours.txt', 'a+') as parc_file:
+                    parc_file.write(self.t97.get("0.0", "end-1c") + '\n\n')
         except FileNotFoundError as outcom:
             print("+ Sorry, file 'parcours.txt' not exist !", outcom)
             print("+ File 'parcours.txt' created !")
-            with open('./medidoc/doc_dmst1/parcours.txt', 'a+') as namefile:
-                namefile.write(self.t97.get("0.0", "end-1c") + '\n\n')
+            with open('./medidoc/doc_dmst1/parcours.txt', 'a+') as noparc_file:
+                noparc_file.write(self.t97.get("0.0", "end-1c") + '\n\n')
         self.t97.insert(tk.INSERT, "\n---Data saved !---")
-        #uploadfunc()
 
-    def messFromSafeButt():
-        """
-            To save data with button 'save'
-            and to get function 'saveData()'
-            if user wish to save. Else, user
-            will be informed that data aren't 
-            saved.
-        """
-        MsgBox = messagebox.askquestion("Confirm","Are you sure ?\n"
-            "It will save all data !")
-        if MsgBox == 'yes':
-            saveData()
-        else:
-            self.t97.insert(tk.INSERT, "\n---Nothing has been saved !---")
-            print("+ Nothing has been saved !")
+        try:
+            if os.path.getsize('./medidoc/doc_dmst1/pbm.txt'):
+                print("+ File 'pbm.txt' exist !")
+                with open('./medidoc/doc_dmst1/pbm.txt', 'a+') as pbmfile:
+                    pbmfile.write(self.t99.get("0.0", "end-1c") + '\n\n')
+        except FileNotFoundError as outcom:
+            print("+ Sorry, file 'pbm.txt' not exist !", outcom)
+            print("+ File 'pbm.txt' created !")
+            with open('./medidoc/doc_dmst1/pbm.txt', 'a+') as no_pbmfile:
+                no_pbmfile.write(self.t99.get("0.0", "end-1c") + '\n\n')
+        self.t99.insert(tk.INSERT, "\n---Data saved !---")
+
+        try:
+            if os.path.getsize('./medidoc/doc_dmst1/project.txt'):
+                print("+ File 'project.txt' exist !")
+                with open('./medidoc/doc_dmst1/project.txt', 'a+') as projectfile:
+                    projectfile.write(self.t101.get("0.0", "end-1c") + '\n\n')
+        except FileNotFoundError as outcom:
+            print("+ Sorry, file 'project.txt' not exist !", outcom)
+            print("+ File 'project.txt' created !")
+            with open('./medidoc/doc_dmst1/project.txt', 'a+') as no_projectfile:
+                no_projectfile.write(self.t101.get("0.0", "end-1c") + '\n\n')
+        self.t101.insert(tk.INSERT, "\n---Data saved !---")
+        #uploadfunc()
 
     def importationFile(fichier):
         file = open(fichier, 'r')
@@ -1262,9 +1269,24 @@ def doc_medical1(self):
     self.wlbl_pbm = self.can.create_window(self.x98, self.y98,
         window = self.lbl_pbm)
 
+    def pbmimport(fichier):
+        secfile = open(fichier, 'r')
+        seccontent = secfile.readlines()
+        secfile.close()
+        for li in seccontent:
+            self.t99.insert(END, li)
+
     self.x99, self.y99 = 600, 2110
     self.t99 = tk.Text(self.can, height=10, width=80, font=18, relief=SUNKEN)
     self.wt99_window = self.can.create_window(self.x99, self.y99, window=self.t99)
+
+    try:
+        if os.path.getsize('./medidoc/doc_dmst1/pbm.txt'):
+            print("+ File 'pbm.txt' exist !")
+            pbmimport('./medidoc/doc_dmst1/pbm.txt')
+    except FileNotFoundError as pbm_f:
+        print("+ File 'pbm.txt' does not exist !")
+        print(pbm_f)
 
     self.x100, self.y100 = 80, 2240
     self.lbl_project = tk.Label(self.can, text="Projet de la personne : ",
@@ -1273,11 +1295,24 @@ def doc_medical1(self):
     self.wlbl_project = self.can.create_window(self.x100, self.y100,
         window = self.lbl_project)
 
+    def projectimport(fichier):
+        thirdfile = open(fichier, 'r')
+        thirdcontent = thirdfile.readlines()
+        thirdfile.close()
+        for li in thirdcontent:
+            self.t101.insert(END, li)
+
     self.x101, self.y101 = 600, 2330
     self.t101 = tk.Text(self.can, height=10, width=80, font=18, relief=SUNKEN)
     self.wt101_window = self.can.create_window(self.x101, self.y101, window=self.t101)
 
-
+    try:
+        if os.path.getsize('./medidoc/doc_dmst1/project.txt'):
+            print("+ File 'project.txt' exist !")
+            projectimport('./medidoc/doc_dmst1/project.txt')
+    except FileNotFoundError as project_f:
+        print("+ File 'project.txt' does not exist !")
+        print(project_f)
 
     def uptoserv():
         """
@@ -1294,6 +1329,39 @@ def doc_medical1(self):
             print("+ No file to upload !")
             messagebox.showerror("Error", "No rslt_dmst1.txt to upload...")
 
+        secproc = subprocess.run(["scp", "./medidoc/doc_dmst1/parcours.txt",
+            "pi@192.168.18.12:~/tt_doc/doc_txt1/Files1/parcours.txt"],
+            stderr=subprocess.PIPE)
+        print("Result SCP transfert : %s" % repr(secproc.stderr))
+        if secproc.stderr == b'':
+            print("+ File parcours.txt uploaded !")
+            messagebox.showinfo("INFO", "parcours.txt uploaded...")
+        else:
+            print("+ No file to upload !")
+            messagebox.showerror("Error", "No parcours.txt to upload...")
+
+        thirdproc = subprocess.run(["scp", "./medidoc/doc_dmst1/pbm.txt",
+            "pi@192.168.18.12:~/tt_doc/doc_txt1/Files1/pbm.txt"],
+            stderr=subprocess.PIPE)
+        print("Result SCP transfert : %s" % repr(thirdproc.stderr))
+        if thirdproc.stderr == b'':
+            print("+ File pbm.txt uploaded !")
+            messagebox.showinfo("INFO", "pbm.txt uploaded...")
+        else:
+            print("+ No file to upload !")
+            messagebox.showerror("Error", "No pbm.txt to upload...")
+
+        forthproc = subprocess.run(["scp", "./medidoc/doc_dmst1/project.txt",
+            "pi@192.168.18.12:~/tt_doc/doc_txt1/Files1/project.txt"],
+            stderr=subprocess.PIPE)
+        print("Result SCP transfert : %s" % repr(forthproc.stderr))
+        if forthproc.stderr == b'':
+            print("+ File project.txt uploaded !")
+            messagebox.showinfo("INFO", "project.txt uploaded...")
+        else:
+            print("+ No file to upload !")
+            messagebox.showerror("Error", "No project.txt to upload...")
+
     def msgvalidate():
         """
             To display a msg to confirm that all data have been saved.
@@ -1307,7 +1375,7 @@ def doc_medical1(self):
         MsgBox = messagebox.askyesno('Record', 'Data will be saved, ok ?')
         if MsgBox == 1:
             recordata()
-            messFromSafeButt()
+            saveData()
             uptoserv()
             msgvalidate()
             self.showPatients()

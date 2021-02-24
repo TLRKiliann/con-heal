@@ -14,9 +14,6 @@ def auxi_equip1(self):
         Main function called since main app
         heal_track.py for displaying auxiliary
         equipement.
-        Lunettes, dentier, prothèse aud,
-        PTH D G, PTG D G, PTE(I) D G
-        
     """
     self.can.delete(ALL)
     self.can.configure(background='DodgerBlue2')
@@ -52,7 +49,7 @@ def auxi_equip1(self):
             endfile.write("---------------------------------------------------------\n")
 
         print(CheckVar1.get())
-        if CheckVar1.get()==1:
+        if CheckVar1.get() == 1:
             print("+ Canne was checked !")
             with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as file:
                 file.write("# Canne : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -60,7 +57,7 @@ def auxi_equip1(self):
             print("+ Canne ok, nothing to do")
             
         print(CheckVar2.get())
-        if CheckVar2.get()==1:
+        if CheckVar2.get() == 1:
             print("+ Tintebin (ttb) (FR) was checked !")
             with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as file:
                 file.write("# Tintebin (ttb) : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -68,7 +65,7 @@ def auxi_equip1(self):
             print("+ Tintebin (ttb) ok, nothing to do")
 
         print(CheckVar3.get())
-        if CheckVar3.get()==1:
+        if CheckVar3.get() == 1:
             print("+ Rollator was checked !")
             with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as file:
                 file.write("# Rollator : " + time.strftime("%d/%m/%Y") + " checked\n")
@@ -76,12 +73,169 @@ def auxi_equip1(self):
             print("+ Rollator ok, nothing to do")
             
         print(CheckVar4.get())
-        if CheckVar4.get()==1:
+        if CheckVar4.get() == 1:
             print("+ Fauteuil Roulant (FR) was checked !")
             with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as file:
                 file.write("# Fauteuil Roulant (FR) : " + time.strftime("%d/%m/%Y") + " checked\n")
         else:
             print("+ Fauteuil Roulant (FR) ok, nothing to do")
+
+        print(CheckVar5.get())
+        if CheckVar5.get() == 1:
+            print("+ Veine-flon was checked !")
+            with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as file:
+                file.write("# Veine-flon : " + time.strftime("%d/%m/%Y") + " checked\n")
+        else:
+            print("+ Veine-flon ok, nothing to do")
+
+        print(CheckVar6.get())
+        if CheckVar6.get() == 1:
+            print("+ Pace-maker was checked !")
+            with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as file:
+                file.write("# Pace-maker : " + time.strftime("%d/%m/%Y") + " checked\n")
+        else:
+            print("+ Pace-maker ok, nothing to do")
+
+        print(CheckVar7.get())
+        if CheckVar7.get() == 1:
+            print("+ Pompe à insuline was checked !")
+            with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as file:
+                file.write("# Pompe à insuline : " + time.strftime("%d/%m/%Y") + " checked\n")
+        else:
+            print("+ Pompe à insuline ok, nothing to do")
+
+        print(CheckVar8.get())
+        if CheckVar8.get() == 1:
+            print("+ PCA (antalgie) was checked !")
+            with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as file:
+                file.write("# PCA (antalgie) : " + time.strftime("%d/%m/%Y") + " checked\n")
+        else:
+            print("+ PCA (antalgie) ok, nothing to do")
+
+        print(CheckVar9.get())
+        if CheckVar9.get() == 1:
+            print("+ VAC (escarre) was checked !")
+            with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as file:
+                file.write("# VAC (escarre) : " + time.strftime("%d/%m/%Y") + " checked\n")
+        else:
+            print("+ VAC (escarre) ok, nothing to do")
+
+        print(CheckVar10.get())
+        if CheckVar10.get() == 1:
+            print("+ Lunettes à O² was checked !")
+            with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as file:
+                file.write("# Lunettes à O² : " + time.strftime("%d/%m/%Y") + " checked\n")
+        else:
+            print("+ Lunettes à O² ok, nothing to do")
+
+        print(CheckVar11.get())
+        if CheckVar11.get() == 1:
+            print("+ Lunettes was checked !")
+            with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as file:
+                file.write("# Lunettes : " + time.strftime("%d/%m/%Y") + " checked\n")
+        else:
+            print("+ Lunettes ok, nothing to do")
+
+        print(CheckVar12.get())
+        if CheckVar12.get() == 1:
+            print("+ Appareils auditifs was checked !")
+            with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as file:
+                file.write("# Appareils auditifs : " + time.strftime("%d/%m/%Y") + " checked\n")
+        else:
+            print("+ Appareils auditifs ok, nothing to do")
+
+        print(CheckVar13.get())
+        if CheckVar13.get() == 1:
+            print("+ Mèche was checked !")
+            with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as file:
+                file.write("# Mèche : " + time.strftime("%d/%m/%Y") + " checked\n")
+        else:
+            print("+ Mèche ok, nothing to do")
+
+        print(CheckVar14.get())
+        if CheckVar14.get() == 1:
+            print("+ Drain thoracique was checked !")
+            with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as file:
+                file.write("# Drain thoracique : " + time.strftime("%d/%m/%Y") + " checked\n")
+        else:
+            print("+ Drain thoracique ok, nothing to do")
+
+        print(CheckVar15.get())
+        if CheckVar15.get() == 1:
+            print("+ Drain de Redon was checked !")
+            with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as file:
+                file.write("# Drain de Redon : " + time.strftime("%d/%m/%Y") + " checked\n")
+        else:
+            print("+ Drain de Redon ok, nothing to do")
+
+        print(CheckVar16.get())
+        if CheckVar16.get() == 1:
+            print("+ Drain de Kher was checked !")
+            with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as file:
+                file.write("# Drain de Kher : " + time.strftime("%d/%m/%Y") + " checked\n")
+        else:
+            print("+ Drain de Kher ok, nothing to do")
+
+        print(CheckVar17.get())
+        if CheckVar17.get() == 1:
+            print("+ Drain de Blake was checked !")
+            with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as file:
+                file.write("# Drain de Blake : " + time.strftime("%d/%m/%Y") + " checked\n")
+        else:
+            print("+ Drain de Blake ok, nothing to do")
+
+        print(CheckVar18.get())
+        if CheckVar18.get() == 1:
+            print("+ Drain de Penrose was checked !")
+            with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as file:
+                file.write("# Drain de Penrose : " + time.strftime("%d/%m/%Y") + " checked\n")
+        else:
+            print("+ Drain de Penrose ok, nothing to do")
+
+        print(CheckVar19.get())
+        if CheckVar19.get() == 1:
+            print("+ Drain de Mikulicz was checked !")
+            with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as file:
+                file.write("# Drain de Mikulicz : " + time.strftime("%d/%m/%Y") + " checked\n")
+        else:
+            print("+ Drain de Mikulicz ok, nothing to do")
+
+        print(CheckVar20.get())
+        if CheckVar20.get() == 1:
+            print("+ DVP (Dérivation ventriculo-péritonéale) was checked !")
+            with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as file:
+                file.write("# DVP (Dérivation ventriculo-péritonéale) : " + \
+                    time.strftime("%d/%m/%Y") + " checked\n")
+        else:
+            print("+ DVP (Dérivation ventriculo-péritonéale) ok, nothing to do")
+
+        print(CheckVar21.get())
+        if CheckVar21.get() == 1:
+            print("+ DVA (Dérivation ventriculo-atriale) was checked !")
+            with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as file:
+                file.write("# DVA (Dérivation ventriculo-atriale) : " + \
+                    time.strftime("%d/%m/%Y") + " checked\n")
+        else:
+            print("+ DVA (Dérivation ventriculo-atriale) ok, nothing to do")
+
+        print(CheckVar22.get())
+        if CheckVar22.get() == 1 and CheckVar23.get()==1:
+            print("+ PTH G was checked !")
+            with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as file:
+                file.write("# PTH G : " + \
+                    time.strftime("%d/%m/%Y") + " checked\n")
+        elif CheckVar22.get() == 1 and CheckVar24.get()==1:
+            print("+ PTH D was checked !")
+            with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as file:
+                file.write("# PTH D : " + \
+                    time.strftime("%d/%m/%Y") + " checked\n")
+        elif CheckVar22.get() == 1:
+            print("+ PTH was checked !")
+            with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as file:
+                file.write("# PTH : " + \
+                    time.strftime("%d/%m/%Y") + " checked\n")
+        else:
+            print("+ PTH ok, nothing to do")
 
     def uploadaux():
         """
@@ -197,7 +351,7 @@ def auxi_equip1(self):
 
     self.x14, self.y14 = 200, 491
     CheckVar8 = tk.IntVar()
-    self.C8 = tk.Checkbutton(self.can, text="PCA (anthalgie)", fg='navy',
+    self.C8 = tk.Checkbutton(self.can, text="PCA (antalgie)", fg='navy',
         bg='cyan', variable=CheckVar8,
         onvalue=1, offvalue=0, height=1,
         width=20, anchor="w")
@@ -320,13 +474,13 @@ def auxi_equip1(self):
         window = self.C20)
 
     self.x39, self.y39 = 1000, 197
-    CheckVar120 = tk.IntVar()
-    self.C120 = tk.Checkbutton(self.can, text="DVA (ventri.-atriale)", fg='navy',
-        bg='cyan', variable=CheckVar120,
+    CheckVar21 = tk.IntVar()
+    self.C21 = tk.Checkbutton(self.can, text="DVA (ventri.-atriale)", fg='navy',
+        bg='cyan', variable=CheckVar21,
         onvalue=1, offvalue=0, height=1,
         width=20, anchor="w")
-    self.C120 = self.can.create_window(self.x39, self.y39,
-        window = self.C120)
+    self.C21 = self.can.create_window(self.x39, self.y39,
+        window = self.C21)
 
     self.x50, self.y50 = 800, 400
     self.labl_proth = tk.Label(self.can, text='--- Prothesis ---',
@@ -335,32 +489,59 @@ def auxi_equip1(self):
     self.labl_proth = self.can.create_window(self.x50, self.y50,
         window = self.labl_proth)
 
-    self.x51, self.y51 = 600, 425
-    CheckVar21 = tk.IntVar()
-    self.C21 = tk.Checkbutton(self.can, text="PTH G", fg='navy',
-        bg='cyan', variable=CheckVar21,
-        onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
-    self.C21 = self.can.create_window(self.x51, self.y51,
-        window = self.C21)
-
-    self.x52, self.y52 = 600, 447
+    self.x51, self.y51 = 546, 425
     CheckVar22 = tk.IntVar()
-    self.C22 = tk.Checkbutton(self.can, text="PTH D", fg='navy',
+    self.C22 = tk.Checkbutton(self.can, text="PTH", fg='navy',
         bg='cyan', variable=CheckVar22,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
-    self.C22 = self.can.create_window(self.x52, self.y52,
+        width=6, anchor="w")
+    self.C22 = self.can.create_window(self.x51, self.y51,
         window = self.C22)
 
-    self.x53, self.y53 = 600, 469
+    self.x52, self.y52 = 600, 425
     CheckVar23 = tk.IntVar()
-    self.C23 = tk.Checkbutton(self.can, text="PTG G", fg='navy',
+    self.C23 = tk.Checkbutton(self.can, text="G", fg='navy',
         bg='cyan', variable=CheckVar23,
         onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
-    self.C23 = self.can.create_window(self.x53, self.y53,
+        width=3, anchor="w")
+    self.C23 = self.can.create_window(self.x52, self.y52,
         window = self.C23)
+
+    self.x53, self.y53 = 640, 425
+    CheckVar24 = tk.IntVar()
+    self.C24 = tk.Checkbutton(self.can, text="D", fg='navy',
+        bg='cyan', variable=CheckVar24,
+        onvalue=1, offvalue=0, height=1,
+        width=3, anchor="w")
+    self.C24 = self.can.create_window(self.x53, self.y53,
+        window = self.C24)
+
+    self.x54, self.y54 = 600, 469
+    CheckVar25 = tk.IntVar()
+    self.C25 = tk.Checkbutton(self.can, text="PTG", fg='navy',
+        bg='cyan', variable=CheckVar25,
+        onvalue=1, offvalue=0, height=1,
+        width=20, anchor="w")
+    self.C25 = self.can.create_window(self.x54, self.y54,
+        window = self.C25)
+
+    self.x55, self.y55 = 680, 469
+    CheckVar26 = tk.IntVar()
+    self.C26 = tk.Checkbutton(self.can, text="G", fg='navy',
+        bg='cyan', variable=CheckVar26,
+        onvalue=1, offvalue=0, height=1,
+        width=3, anchor="w")
+    self.C26 = self.can.create_window(self.x55, self.y55,
+        window = self.C26)
+
+    self.x56, self.y56 = 760, 469
+    CheckVar27 = tk.IntVar()
+    self.C27 = tk.Checkbutton(self.can, text="D", fg='navy',
+        bg='cyan', variable=CheckVar27,
+        onvalue=1, offvalue=0, height=1,
+        width=3, anchor="w")
+    self.C27 = self.can.create_window(self.x56, self.y56,
+        window = self.C27)
 
     self.x54, self.y54 = 600, 491
     CheckVar24 = tk.IntVar()

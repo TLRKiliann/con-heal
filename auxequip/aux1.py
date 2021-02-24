@@ -254,6 +254,42 @@ def auxi_equip1(self):
         else:
             print("+ PTG D ok, nothing to do")
 
+        print(CheckVar26.get())
+        if CheckVar26.get() == 1:
+            print("+ PTE(I) G was checked !")
+            with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as file:
+                file.write("# PTE(I) G : " + \
+                    time.strftime("%d/%m/%Y") + " checked\n")
+        else:
+            print("+ PTE(I) G ok, nothing to do")
+
+        print(CheckVar27.get())
+        if CheckVar27.get() == 1:
+            print("+ PTE(I) D was checked !")
+            with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as file:
+                file.write("# PTE(I) D : " + \
+                    time.strftime("%d/%m/%Y") + " checked\n")
+        else:
+            print("+ PTE(I) D ok, nothing to do")
+
+        print(CheckVar28.get())
+        if CheckVar28.get() == 1:
+            print("+ PTC G was checked !")
+            with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as file:
+                file.write("# PTC G : " + \
+                    time.strftime("%d/%m/%Y") + " checked\n")
+        else:
+            print("+ PTC G ok, nothing to do")
+
+        print(CheckVar29.get())
+        if CheckVar29.get() == 1:
+            print("+ PTC D was checked !")
+            with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as file:
+                file.write("# PTC D : " + \
+                    time.strftime("%d/%m/%Y") + " checked\n")
+        else:
+            print("+ PTC D ok, nothing to do")
+
     def uploadaux():
         """
             To upload data on server after creating files
@@ -580,7 +616,7 @@ def auxi_equip1(self):
 
     self.x59, self.y59 = 1000, 425
     CheckVar30 = tk.IntVar()
-    self.C30 = tk.Checkbutton(self.can, text="Prothèse oculaire", fg='navy',
+    self.C30 = tk.Checkbutton(self.can, text="Prothèse pieds G", fg='navy',
         bg='cyan', variable=CheckVar30,
         onvalue=1, offvalue=0, height=1,
         width=20, anchor="w")
@@ -589,7 +625,7 @@ def auxi_equip1(self):
 
     self.x60, self.y60 = 1000, 447
     CheckVar31 = tk.IntVar()
-    self.C31 = tk.Checkbutton(self.can, text="Prothèse(s) dentaire(s)", fg='navy',
+    self.C31 = tk.Checkbutton(self.can, text="Prothèse pieds D", fg='navy',
         bg='cyan', variable=CheckVar31,
         onvalue=1, offvalue=0, height=1,
         width=20, anchor="w")
@@ -598,7 +634,7 @@ def auxi_equip1(self):
 
     self.x61, self.y61 = 1000, 469
     CheckVar32 = tk.IntVar()
-    self.C32 = tk.Checkbutton(self.can, text="Prothèse(s) dentaire(s)", fg='navy',
+    self.C32 = tk.Checkbutton(self.can, text="Prothèse MIG", fg='navy',
         bg='cyan', variable=CheckVar32,
         onvalue=1, offvalue=0, height=1,
         width=20, anchor="w")
@@ -607,7 +643,7 @@ def auxi_equip1(self):
 
     self.x62, self.y62 = 1000, 491
     CheckVar33 = tk.IntVar()
-    self.C33 = tk.Checkbutton(self.can, text="Prothèse(s) maxilaire", fg='navy',
+    self.C33 = tk.Checkbutton(self.can, text="Prothèse MID", fg='navy',
         bg='cyan', variable=CheckVar33,
         onvalue=1, offvalue=0, height=1,
         width=20, anchor="w")
@@ -616,26 +652,55 @@ def auxi_equip1(self):
 
     self.x63, self.y63 = 1000, 513
     CheckVar34 = tk.IntVar()
-    self.C34 = tk.Checkbutton(self.can, text="Prothèse(s) nasale", fg='navy',
+    self.C34 = tk.Checkbutton(self.can, text="Prothèse MSG", fg='navy',
         bg='cyan', variable=CheckVar34,
         onvalue=1, offvalue=0, height=1,
         width=20, anchor="w")
     self.C34 = self.can.create_window(self.x63, self.y63,
         window = self.C34)
 
+    self.x64, self.y64 = 1000, 535
+    CheckVar35 = tk.IntVar()
+    self.C35 = tk.Checkbutton(self.can, text="Prothèse MSD", fg='navy',
+        bg='cyan', variable=CheckVar35,
+        onvalue=1, offvalue=0, height=1,
+        width=20, anchor="w")
+    self.C35 = self.can.create_window(self.x64, self.y64,
+        window = self.C35)
+
+    self.x65, self.y65 = 1000, 557
+    CheckVar36 = tk.IntVar()
+    self.C36 = tk.Checkbutton(self.can, text="Prothèse main G", fg='navy',
+        bg='cyan', variable=CheckVar36,
+        onvalue=1, offvalue=0, height=1,
+        width=20, anchor="w")
+    self.C36 = self.can.create_window(self.x65, self.y65,
+        window = self.C36)
+
+    self.x66, self.y66 = 1000, 557
+    CheckVar37 = tk.IntVar()
+    self.C37 = tk.Checkbutton(self.can, text="Prothèse main D", fg='navy',
+        bg='cyan', variable=CheckVar37,
+        onvalue=1, offvalue=0, height=1,
+        width=20, anchor="w")
+    self.C37 = self.can.create_window(self.x66, self.y66,
+        window = self.C37)
+
     # Button save and quit
-    self.x64, self.y64 = 850, 620
+    # Prothèse oculaire D + G/Prothèse(s) semelle D G/Prothèse(s) dentaire(s) H B
+    # Prothèse maxillo-faciale / Prothèse(s) nasal
+    self.x100, self.y100 = 800, 670
     self.buttonsave = tk.Button(self.can, text="Save", width=10, bd=3,
         fg='yellow', bg='RoyalBlue3', activebackground='pale turquoise',
         highlightbackground='cyan', command=transwritedata)
-    self.buttonsave = self.can.create_window(self.x64, self.y64,
+    self.buttonsave = self.can.create_window(self.x100, self.y100,
         window = self.buttonsave)
 
-    self.x65, self.y65 = 1100, 620
+    self.x101, self.y101 = 1020, 670
     self.buttonquit = tk.Button(self.can, text='Return to main menu', width=20, bd=3,
         fg='white', bg='RoyalBlue3', activebackground='pale turquoise',
         highlightbackground='cyan', command=wayout)
-    self.buttonquit = self.can.create_window(self.x65, self.y65,
+    self.buttonquit = self.can.create_window(self.x101, self.y101,
         window = self.buttonquit)
 
     self.can.configure(scrollregion=self.can.bbox(ALL))

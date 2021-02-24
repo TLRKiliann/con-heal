@@ -1,8 +1,8 @@
-Doctor : Hell
+Doctor : Truc
 Specialization : Neuro
 Phone : 39871832891
 Mobile : 27839829173
 Street : Aligan St 25
-City : Lsne
-e-mail : hell@gmail.com
+City : Belfast
+e-mail : truc@gmail.com
 Fax : 347893892749

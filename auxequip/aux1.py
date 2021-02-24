@@ -652,7 +652,7 @@ def auxi_equip1(self):
 
     self.x63, self.y63 = 1000, 513
     CheckVar34 = tk.IntVar()
-    self.C34 = tk.Checkbutton(self.can, text="Prothèse MSG", fg='navy',
+    self.C34 = tk.Checkbutton(self.can, text="Prothèse main G", fg='navy',
         bg='cyan', variable=CheckVar34,
         onvalue=1, offvalue=0, height=1,
         width=20, anchor="w")
@@ -661,7 +661,7 @@ def auxi_equip1(self):
 
     self.x64, self.y64 = 1000, 535
     CheckVar35 = tk.IntVar()
-    self.C35 = tk.Checkbutton(self.can, text="Prothèse MSD", fg='navy',
+    self.C35 = tk.Checkbutton(self.can, text="Prothèse main D", fg='navy',
         bg='cyan', variable=CheckVar35,
         onvalue=1, offvalue=0, height=1,
         width=20, anchor="w")
@@ -670,33 +670,103 @@ def auxi_equip1(self):
 
     self.x65, self.y65 = 1000, 557
     CheckVar36 = tk.IntVar()
-    self.C36 = tk.Checkbutton(self.can, text="Prothèse main G", fg='navy',
+    self.C36 = tk.Checkbutton(self.can, text="Prothèse MSG", fg='navy',
         bg='cyan', variable=CheckVar36,
         onvalue=1, offvalue=0, height=1,
         width=20, anchor="w")
     self.C36 = self.can.create_window(self.x65, self.y65,
         window = self.C36)
 
-    self.x66, self.y66 = 1000, 557
+    self.x66, self.y66 = 1000, 579
     CheckVar37 = tk.IntVar()
-    self.C37 = tk.Checkbutton(self.can, text="Prothèse main D", fg='navy',
+    self.C37 = tk.Checkbutton(self.can, text="Prothèse MSD", fg='navy',
         bg='cyan', variable=CheckVar37,
         onvalue=1, offvalue=0, height=1,
         width=20, anchor="w")
     self.C37 = self.can.create_window(self.x66, self.y66,
         window = self.C37)
 
+    self.x67, self.y67 = 800, 425
+    CheckVar38 = tk.IntVar()
+    self.C38 = tk.Checkbutton(self.can, text="Prothèse oculaire G", fg='navy',
+        bg='cyan', variable=CheckVar38,
+        onvalue=1, offvalue=0, height=1,
+        width=20, anchor="w")
+    self.C38 = self.can.create_window(self.x67, self.y67,
+        window = self.C38)
+
+    self.x68, self.y68 = 800, 447
+    CheckVar39 = tk.IntVar()
+    self.C39 = tk.Checkbutton(self.can, text="Prothèse oculaire D", fg='navy',
+        bg='cyan', variable=CheckVar39,
+        onvalue=1, offvalue=0, height=1,
+        width=20, anchor="w")
+    self.C39 = self.can.create_window(self.x68, self.y68,
+        window = self.C39)
+
+    self.x69, self.y69 = 800, 469
+    CheckVar40 = tk.IntVar()
+    self.C40 = tk.Checkbutton(self.can, text="Prothèse semelle G", fg='navy',
+        bg='cyan', variable=CheckVar40,
+        onvalue=1, offvalue=0, height=1,
+        width=20, anchor="w")
+    self.C40 = self.can.create_window(self.x69, self.y69,
+        window = self.C40)
+
+    self.x70, self.y70 = 800, 491
+    CheckVar41 = tk.IntVar()
+    self.C41 = tk.Checkbutton(self.can, text="Prothèse semelle D", fg='navy',
+        bg='cyan', variable=CheckVar41,
+        onvalue=1, offvalue=0, height=1,
+        width=20, anchor="w")
+    self.C41 = self.can.create_window(self.x70, self.y70,
+        window = self.C41)
+
+    self.x71, self.y71 = 800, 513
+    CheckVar42 = tk.IntVar()
+    self.C42 = tk.Checkbutton(self.can, text="Prothèse dentaire UP", fg='navy',
+        bg='cyan', variable=CheckVar42,
+        onvalue=1, offvalue=0, height=1,
+        width=20, anchor="w")
+    self.C42 = self.can.create_window(self.x71, self.y71,
+        window = self.C42)
+
+    self.x72, self.y72 = 800, 535
+    CheckVar43 = tk.IntVar()
+    self.C43 = tk.Checkbutton(self.can, text="Prothèse dentaire Down", fg='navy',
+        bg='cyan', variable=CheckVar43,
+        onvalue=1, offvalue=0, height=1,
+        width=20, anchor="w")
+    self.C43 = self.can.create_window(self.x72, self.y72,
+        window = self.C43)
+
+    self.x73, self.y73 = 800, 557
+    CheckVar44 = tk.IntVar()
+    self.C44 = tk.Checkbutton(self.can, text="Proth. maxillo-faciale", fg='navy',
+        bg='cyan', variable=CheckVar44,
+        onvalue=1, offvalue=0, height=1,
+        width=20, anchor="w")
+    self.C44 = self.can.create_window(self.x73, self.y73,
+        window = self.C44)
+
+    self.x74, self.y74 = 800, 579
+    CheckVar45 = tk.IntVar()
+    self.C45 = tk.Checkbutton(self.can, text="Prothèse nasale", fg='navy',
+        bg='cyan', variable=CheckVar45,
+        onvalue=1, offvalue=0, height=1,
+        width=20, anchor="w")
+    self.C45 = self.can.create_window(self.x74, self.y74,
+        window = self.C45)
+
     # Button save and quit
-    # Prothèse oculaire D + G/Prothèse(s) semelle D G/Prothèse(s) dentaire(s) H B
-    # Prothèse maxillo-faciale / Prothèse(s) nasal
-    self.x100, self.y100 = 800, 670
+    self.x100, self.y100 = 800, 650
     self.buttonsave = tk.Button(self.can, text="Save", width=10, bd=3,
         fg='yellow', bg='RoyalBlue3', activebackground='pale turquoise',
         highlightbackground='cyan', command=transwritedata)
     self.buttonsave = self.can.create_window(self.x100, self.y100,
         window = self.buttonsave)
 
-    self.x101, self.y101 = 1020, 670
+    self.x101, self.y101 = 1050, 650
     self.buttonquit = tk.Button(self.can, text='Return to main menu', width=20, bd=3,
         fg='white', bg='RoyalBlue3', activebackground='pale turquoise',
         highlightbackground='cyan', command=wayout)

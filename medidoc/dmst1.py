@@ -1200,9 +1200,60 @@ def doc_medical1(self):
     self.wlbl_parcvita = self.can.create_window(self.x96, self.y96,
         window = self.lbl_parcvita)
 
+
+    def saveData():
+        """
+            Test if file parcours.txt exist and write data.
+            A msg into textbox appear to informate user that
+            data have been saved.
+        """
+        try:        
+            if os.path.getsize('./medidoc/doc_dmst1/parcours.txt'):
+                print("+ File 'parcours.txt' exist !")
+                with open('./medidoc/doc_dmst1/parcours.txt', 'a+') as namefile:
+                    namefile.write(self.t97.get("0.0", "end-1c") + '\n\n')
+        except FileNotFoundError as outcom:
+            print("+ Sorry, file 'parcours.txt' not exist !", outcom)
+            print("+ File 'parcours.txt' created !")
+            with open('./medidoc/doc_dmst1/parcours.txt', 'a+') as namefile:
+                namefile.write(self.t97.get("0.0", "end-1c") + '\n\n')
+        self.t97.insert(tk.INSERT, "\n---Data saved !---")
+        #uploadfunc()
+
+    def messFromSafeButt():
+        """
+            To save data with button 'save'
+            and to get function 'saveData()'
+            if user wish to save. Else, user
+            will be informed that data aren't 
+            saved.
+        """
+        MsgBox = messagebox.askquestion("Confirm","Are you sure ?\n"
+            "It will save all data !")
+        if MsgBox == 'yes':
+            saveData()
+        else:
+            self.t97.insert(tk.INSERT, "\n---Nothing has been saved !---")
+            print("+ Nothing has been saved !")
+
+    def importationFile(fichier):
+        file = open(fichier, 'r')
+        content = file.readlines()
+        file.close()
+        for li in content:
+            self.t97.insert(END, li)
+
     self.x97, self.y97 = 600, 1890
     self.t97 = tk.Text(self.can, height=10, width=80, font=18, relief=SUNKEN)
     self.wt97_window = self.can.create_window(self.x97, self.y97, window=self.t97)
+
+    try:
+        if os.path.getsize('./medidoc/doc_dmst1/parcours.txt'):
+            print("+ File 'parcours.txt' exist !")
+            importationFile('./medidoc/doc_dmst1/parcours.txt')
+    except FileNotFoundError as nf_file:
+        print("+ File 'parcours.txt' does not exist !")
+        print(nf_file)
 
     self.x98, self.y98 = 80, 2020
     self.lbl_pbm = tk.Label(self.can, text="Problématique(s) : ",
@@ -1225,6 +1276,8 @@ def doc_medical1(self):
     self.x101, self.y101 = 600, 2330
     self.t101 = tk.Text(self.can, height=10, width=80, font=18, relief=SUNKEN)
     self.wt101_window = self.can.create_window(self.x101, self.y101, window=self.t101)
+
+
 
     def uptoserv():
         """
@@ -1254,6 +1307,7 @@ def doc_medical1(self):
         MsgBox = messagebox.askyesno('Record', 'Data will be saved, ok ?')
         if MsgBox == 1:
             recordata()
+            messFromSafeButt()
             uptoserv()
             msgvalidate()
             self.showPatients()

@@ -1,6 +1,6 @@
 ----------------------------------------------------------
-Date : 23.02.2021
-Hour : 11:26:20
+Date : 24.02.2021
+Hour : 23:58:33
 Patient name : Firstname Lastname
 Birthday : 00/00/0000
 Allergy : Pollen
@@ -69,20 +69,20 @@ Native : Lyss
 Phone : 077 888 44 55
 Street : Alouera 23
 City : Kansan
-e-mail : sjkhs@jdas.com
+e-mail : fl@gmail.com
 Insurance : Assura
-Policy : 9873899123812983
+Policy : 9873.899.1238.12983
 Civil status : Alone
-Confession : Catoloic
+Confession : Catolic
 
 --- Docotor1 data ---
-Doctor : Hell
+Doctor : Truc
 Specialization : Neuro
 Phone : 39871832891
 Mobile : 27839829173
 Street : Aligan St 25
-City : Lsne
-e-mail : hell@gmail.com
+City : Belfast
+e-mail : truc@gmail.com
 Fax : 347893892749
 
 --- Docotor2 data ---
@@ -96,13 +96,13 @@ e-mail : fav.ji@inco.org
 Fax : 9783987398
 
 --- Docotor3 data ---
-Doctor : Ruby
+Doctor : Diam
 Specialization : psychiatria
 Phone : 978987378
 Mobile : 2189387812
 Street : Rookridge 87
 City : Peckin
-e-mail : Rub.bi@gmail.com
+e-mail : diam@gmail.com
 Fax : 732891738912
 
 --- Family data ---
@@ -111,40 +111,38 @@ Phone : 982738943284
 Phone : 982378973329
 Street : Baley-St 34
 City : Hill-Valley
-e-mail : ut@hotmail.com
+e-mail : magui.mcferson@hotmail.com
 
 --- Home Care System1 ---
 Name : David Saint (Physio)
 Phone : 893274892
 Phone : 182738971293
-Street : TZ St
-City : Kranken
-e-mail : hjdksf@hto.org
+Street : Paradise 99
+City : Berlin
+e-mail : david@hotmail.org
 
 --- Home Care System2 ---
 Name : Zara Malai (Ergo)
 Phone : 3247892
 Phone : 2893781
-Street : hhd
-City : jaj
-e-mail : ajds@hhh.tt
+Street : Montain-Hill 33
+City : Jefferson
+e-mail : zm@proton.com
 
 --- Home Care System3 ---
 Name : Oli Baga (Curatrice)
 Phone : 238904890
 Phone : 2918393412
-Street : ut
-City : tz
-e-mail : gf@gmail.com
+Street : Beach 14
+City : Tracy
+e-mail : oli.baga@gmail.com
 
 --- AGGIR grid : ---
 + Orientation = 0
 + Cohérence = 0
-+ Toilette = 1
++ Toilette = 0
 + Habillage = 0
-+ Alimentation = 3
-+ Elimination = 3
-+ Déplacement = 4
-+ Communication = 2
-+ Directives anticipées = Oui
-+ PLAFA = Non
++ Alimentation = 0
++ Elimination = 0
++ Déplacement = 0
++ Communication = 0

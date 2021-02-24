@@ -1209,7 +1209,7 @@ def doc_medical1(self):
         try:
             if os.path.getsize('./medidoc/doc_dmst1/parcours.txt'):
                 print("+ File 'parcours.txt' exist !")
-                with open('./medidoc/doc_dmst1/parcours.txt', 'a+') as parc_file:
+                with open('./medidoc/doc_dmst1/parcours.txt', 'w') as parc_file:
                     parc_file.write(self.t97.get("0.0", "end-1c") + '\n\n')
         except FileNotFoundError as outcom:
             print("+ Sorry, file 'parcours.txt' not exist !", outcom)
@@ -1221,7 +1221,7 @@ def doc_medical1(self):
         try:
             if os.path.getsize('./medidoc/doc_dmst1/pbm.txt'):
                 print("+ File 'pbm.txt' exist !")
-                with open('./medidoc/doc_dmst1/pbm.txt', 'a+') as pbmfile:
+                with open('./medidoc/doc_dmst1/pbm.txt', 'w') as pbmfile:
                     pbmfile.write(self.t99.get("0.0", "end-1c") + '\n\n')
         except FileNotFoundError as outcom:
             print("+ Sorry, file 'pbm.txt' not exist !", outcom)
@@ -1233,7 +1233,7 @@ def doc_medical1(self):
         try:
             if os.path.getsize('./medidoc/doc_dmst1/project.txt'):
                 print("+ File 'project.txt' exist !")
-                with open('./medidoc/doc_dmst1/project.txt', 'a+') as projectfile:
+                with open('./medidoc/doc_dmst1/project.txt', 'w') as projectfile:
                     projectfile.write(self.t101.get("0.0", "end-1c") + '\n\n')
         except FileNotFoundError as outcom:
             print("+ Sorry, file 'project.txt' not exist !", outcom)

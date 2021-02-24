@@ -219,23 +219,40 @@ def auxi_equip1(self):
             print("+ DVA (Dérivation ventriculo-atriale) ok, nothing to do")
 
         print(CheckVar22.get())
-        if CheckVar22.get() == 1 and CheckVar23.get()==1:
+        if CheckVar22.get() == 1:
             print("+ PTH G was checked !")
             with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as file:
                 file.write("# PTH G : " + \
                     time.strftime("%d/%m/%Y") + " checked\n")
-        elif CheckVar22.get() == 1 and CheckVar24.get()==1:
+        else:
+            print("+ PTH G ok, nothing to do")
+
+        print(CheckVar23.get())
+        if CheckVar23.get() == 1:
             print("+ PTH D was checked !")
             with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as file:
                 file.write("# PTH D : " + \
                     time.strftime("%d/%m/%Y") + " checked\n")
-        elif CheckVar22.get() == 1:
-            print("+ PTH was checked !")
+        else:
+            print("+ PTH D ok, nothing to do")
+
+        print(CheckVar24.get())
+        if CheckVar24.get() == 1:
+            print("+ PTG G was checked !")
             with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as file:
-                file.write("# PTH : " + \
+                file.write("# PTG G : " + \
                     time.strftime("%d/%m/%Y") + " checked\n")
         else:
-            print("+ PTH ok, nothing to do")
+            print("+ PTG G ok, nothing to do")
+
+        print(CheckVar25.get())
+        if CheckVar25.get() == 1:
+            print("+ PTG D was checked !")
+            with open('./auxequip/doc_equip/auxiliary1.txt', 'a+') as file:
+                file.write("# PTG D : " + \
+                    time.strftime("%d/%m/%Y") + " checked\n")
+        else:
+            print("+ PTG D ok, nothing to do")
 
     def uploadaux():
         """
@@ -489,149 +506,122 @@ def auxi_equip1(self):
     self.labl_proth = self.can.create_window(self.x50, self.y50,
         window = self.labl_proth)
 
-    self.x51, self.y51 = 546, 425
+    self.x51, self.y51 = 600, 425
     CheckVar22 = tk.IntVar()
-    self.C22 = tk.Checkbutton(self.can, text="PTH", fg='navy',
+    self.C22 = tk.Checkbutton(self.can, text="PTH G", fg='navy',
         bg='cyan', variable=CheckVar22,
         onvalue=1, offvalue=0, height=1,
         width=6, anchor="w")
     self.C22 = self.can.create_window(self.x51, self.y51,
         window = self.C22)
 
-    self.x52, self.y52 = 600, 425
+    self.x52, self.y52 = 600, 447
     CheckVar23 = tk.IntVar()
-    self.C23 = tk.Checkbutton(self.can, text="G", fg='navy',
+    self.C23 = tk.Checkbutton(self.can, text="PTH D", fg='navy',
         bg='cyan', variable=CheckVar23,
         onvalue=1, offvalue=0, height=1,
-        width=3, anchor="w")
+        width=6, anchor="w")
     self.C23 = self.can.create_window(self.x52, self.y52,
         window = self.C23)
 
-    self.x53, self.y53 = 640, 425
+    self.x53, self.y53 = 600, 469
     CheckVar24 = tk.IntVar()
-    self.C24 = tk.Checkbutton(self.can, text="D", fg='navy',
+    self.C24 = tk.Checkbutton(self.can, text="PTG G", fg='navy',
         bg='cyan', variable=CheckVar24,
         onvalue=1, offvalue=0, height=1,
-        width=3, anchor="w")
+        width=20, anchor="w")
     self.C24 = self.can.create_window(self.x53, self.y53,
         window = self.C24)
 
-    self.x54, self.y54 = 600, 469
+    self.x54, self.y54 = 600, 491
     CheckVar25 = tk.IntVar()
-    self.C25 = tk.Checkbutton(self.can, text="PTG", fg='navy',
+    self.C25 = tk.Checkbutton(self.can, text="PTG D", fg='navy',
         bg='cyan', variable=CheckVar25,
         onvalue=1, offvalue=0, height=1,
         width=20, anchor="w")
     self.C25 = self.can.create_window(self.x54, self.y54,
         window = self.C25)
 
-    self.x55, self.y55 = 680, 469
+    self.x55, self.y55 = 600, 513
     CheckVar26 = tk.IntVar()
-    self.C26 = tk.Checkbutton(self.can, text="G", fg='navy',
+    self.C26 = tk.Checkbutton(self.can, text="PTE(I) G", fg='navy',
         bg='cyan', variable=CheckVar26,
         onvalue=1, offvalue=0, height=1,
-        width=3, anchor="w")
+        width=20, anchor="w")
     self.C26 = self.can.create_window(self.x55, self.y55,
         window = self.C26)
 
-    self.x56, self.y56 = 760, 469
+    self.x56, self.y56 = 600, 535
     CheckVar27 = tk.IntVar()
-    self.C27 = tk.Checkbutton(self.can, text="D", fg='navy',
+    self.C27 = tk.Checkbutton(self.can, text="PTE(I) D", fg='navy',
         bg='cyan', variable=CheckVar27,
         onvalue=1, offvalue=0, height=1,
-        width=3, anchor="w")
+        width=20, anchor="w")
     self.C27 = self.can.create_window(self.x56, self.y56,
         window = self.C27)
 
-    self.x54, self.y54 = 600, 491
-    CheckVar24 = tk.IntVar()
-    self.C24 = tk.Checkbutton(self.can, text="PTG D", fg='navy',
-        bg='cyan', variable=CheckVar24,
-        onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
-    self.C24 = self.can.create_window(self.x54, self.y54,
-        window = self.C24)
-
-    self.x55, self.y55 = 600, 513
-    CheckVar25 = tk.IntVar()
-    self.C25 = tk.Checkbutton(self.can, text="PTE(I) G", fg='navy',
-        bg='cyan', variable=CheckVar25,
-        onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
-    self.C25 = self.can.create_window(self.x55, self.y55,
-        window = self.C25)
-
-    self.x56, self.y56 = 600, 535
-    CheckVar26 = tk.IntVar()
-    self.C26 = tk.Checkbutton(self.can, text="PTE(I) D", fg='navy',
-        bg='cyan', variable=CheckVar26,
-        onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
-    self.C26 = self.can.create_window(self.x56, self.y56,
-        window = self.C26)
-
     self.x57, self.y57 = 600, 557
-    CheckVar27 = tk.IntVar()
-    self.C27 = tk.Checkbutton(self.can, text="PTC G", fg='navy',
-        bg='cyan', variable=CheckVar27,
-        onvalue=1, offvalue=0, height=1,
-        width=20, anchor="w")
-    self.C27 = self.can.create_window(self.x57, self.y57,
-        window = self.C27)
-
-    self.x58, self.y58 = 600, 579
     CheckVar28 = tk.IntVar()
-    self.C28 = tk.Checkbutton(self.can, text="PTC D", fg='navy',
+    self.C28 = tk.Checkbutton(self.can, text="PTC G", fg='navy',
         bg='cyan', variable=CheckVar28,
         onvalue=1, offvalue=0, height=1,
         width=20, anchor="w")
-    self.C28 = self.can.create_window(self.x58, self.y58,
+    self.C28 = self.can.create_window(self.x57, self.y57,
         window = self.C28)
 
-    self.x59, self.y59 = 1000, 425
+    self.x58, self.y58 = 600, 579
     CheckVar29 = tk.IntVar()
-    self.C29 = tk.Checkbutton(self.can, text="Prothèse oculaire", fg='navy',
+    self.C29 = tk.Checkbutton(self.can, text="PTC D", fg='navy',
         bg='cyan', variable=CheckVar29,
         onvalue=1, offvalue=0, height=1,
         width=20, anchor="w")
-    self.C29 = self.can.create_window(self.x59, self.y59,
+    self.C29 = self.can.create_window(self.x58, self.y58,
         window = self.C29)
 
-    self.x60, self.y60 = 1000, 447
+    self.x59, self.y59 = 1000, 425
     CheckVar30 = tk.IntVar()
-    self.C30 = tk.Checkbutton(self.can, text="Prothèse(s) dentaire(s)", fg='navy',
+    self.C30 = tk.Checkbutton(self.can, text="Prothèse oculaire", fg='navy',
         bg='cyan', variable=CheckVar30,
         onvalue=1, offvalue=0, height=1,
         width=20, anchor="w")
-    self.C30 = self.can.create_window(self.x60, self.y60,
+    self.C30 = self.can.create_window(self.x59, self.y59,
         window = self.C30)
 
-    self.x61, self.y61 = 1000, 469
+    self.x60, self.y60 = 1000, 447
     CheckVar31 = tk.IntVar()
     self.C31 = tk.Checkbutton(self.can, text="Prothèse(s) dentaire(s)", fg='navy',
         bg='cyan', variable=CheckVar31,
         onvalue=1, offvalue=0, height=1,
         width=20, anchor="w")
-    self.C31 = self.can.create_window(self.x61, self.y61,
+    self.C31 = self.can.create_window(self.x60, self.y60,
         window = self.C31)
 
-    self.x62, self.y62 = 1000, 491
+    self.x61, self.y61 = 1000, 469
     CheckVar32 = tk.IntVar()
-    self.C32 = tk.Checkbutton(self.can, text="Prothèse(s) maxilaire", fg='navy',
+    self.C32 = tk.Checkbutton(self.can, text="Prothèse(s) dentaire(s)", fg='navy',
         bg='cyan', variable=CheckVar32,
         onvalue=1, offvalue=0, height=1,
         width=20, anchor="w")
-    self.C32 = self.can.create_window(self.x62, self.y62,
+    self.C32 = self.can.create_window(self.x61, self.y61,
         window = self.C32)
 
-    self.x63, self.y63 = 1000, 513
+    self.x62, self.y62 = 1000, 491
     CheckVar33 = tk.IntVar()
-    self.C33 = tk.Checkbutton(self.can, text="Prothèse(s) nasale", fg='navy',
+    self.C33 = tk.Checkbutton(self.can, text="Prothèse(s) maxilaire", fg='navy',
         bg='cyan', variable=CheckVar33,
         onvalue=1, offvalue=0, height=1,
         width=20, anchor="w")
-    self.C33 = self.can.create_window(self.x63, self.y63,
+    self.C33 = self.can.create_window(self.x62, self.y62,
         window = self.C33)
+
+    self.x63, self.y63 = 1000, 513
+    CheckVar34 = tk.IntVar()
+    self.C34 = tk.Checkbutton(self.can, text="Prothèse(s) nasale", fg='navy',
+        bg='cyan', variable=CheckVar34,
+        onvalue=1, offvalue=0, height=1,
+        width=20, anchor="w")
+    self.C34 = self.can.create_window(self.x63, self.y63,
+        window = self.C34)
 
     # Button save and quit
     self.x64, self.y64 = 850, 620

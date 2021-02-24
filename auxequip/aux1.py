@@ -511,7 +511,7 @@ def auxi_equip1(self):
     self.C22 = tk.Checkbutton(self.can, text="PTH G", fg='navy',
         bg='cyan', variable=CheckVar22,
         onvalue=1, offvalue=0, height=1,
-        width=6, anchor="w")
+        width=20, anchor="w")
     self.C22 = self.can.create_window(self.x51, self.y51,
         window = self.C22)
 
@@ -520,7 +520,7 @@ def auxi_equip1(self):
     self.C23 = tk.Checkbutton(self.can, text="PTH D", fg='navy',
         bg='cyan', variable=CheckVar23,
         onvalue=1, offvalue=0, height=1,
-        width=6, anchor="w")
+        width=20, anchor="w")
     self.C23 = self.can.create_window(self.x52, self.y52,
         window = self.C23)
 

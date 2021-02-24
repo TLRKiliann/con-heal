@@ -780,14 +780,14 @@ def doc_medical1(self):
         window = self.C2)
 
     self.x42, self.y42 = 405, 1360
-    self.C3 = tk.Radiobutton(self.can, text="3", highlightbackground='cyan', fg='black', 
+    self.C3 = tk.Radiobutton(self.can, text="3", highlightbackground='cyan', fg='black',
         bg='DodgerBlue2', variable=CheckVar1, 
         value=3, height=1, width=3, anchor='w')
     self.wC3 = self.can.create_window(self.x42, self.y42,
         window = self.C3)
 
     self.x43, self.y43 = 460, 1360
-    self.C4 = tk.Radiobutton(self.can, text="4", highlightbackground='cyan', fg='black', 
+    self.C4 = tk.Radiobutton(self.can, text="4", highlightbackground='cyan', fg='black',
         bg='DodgerBlue2', variable=CheckVar1, 
         value=4, height=1, width=3, anchor='w')
     self.wC4 = self.can.create_window(self.x43, self.y43,
@@ -868,14 +868,14 @@ def doc_medical1(self):
         window = self.C22)
 
     self.x54, self.y54 = 405, 1410
-    self.C23 = tk.Radiobutton(self.can, text="3", highlightbackground='cyan', fg='black', 
+    self.C23 = tk.Radiobutton(self.can, text="3", highlightbackground='cyan', fg='black',
         bg='DodgerBlue2', variable=CheckVar3, 
         value=3, height=1, width=3, anchor='w')
     self.wC23 = self.can.create_window(self.x54, self.y54,
         window = self.C23)
 
     self.x55, self.y55 = 460, 1410
-    self.C24 = tk.Radiobutton(self.can, text="4", highlightbackground='cyan', fg='black', 
+    self.C24 = tk.Radiobutton(self.can, text="4", highlightbackground='cyan', fg='black',
         bg='DodgerBlue2', variable=CheckVar3, 
         value=4, height=1, width=3, anchor='w')
     self.wC24 = self.can.create_window(self.x55, self.y55,
@@ -912,14 +912,14 @@ def doc_medical1(self):
         window = self.C32)
 
     self.x60, self.y60 = 405, 1435
-    self.C33 = tk.Radiobutton(self.can, text="3", highlightbackground='cyan', fg='black', 
+    self.C33 = tk.Radiobutton(self.can, text="3", highlightbackground='cyan', fg='black',
         bg='DodgerBlue2', variable=CheckVar4, 
         value=3, height=1, width=3, anchor='w')
     self.wC33 = self.can.create_window(self.x60, self.y60,
         window = self.C33)
 
     self.x61, self.y61 = 460, 1435
-    self.C34 = tk.Radiobutton(self.can, text="4", highlightbackground='cyan', fg='black', 
+    self.C34 = tk.Radiobutton(self.can, text="4", highlightbackground='cyan', fg='black',
         bg='DodgerBlue2', variable=CheckVar4, 
         value=4, height=1, width=3, anchor='w')
     self.wC34 = self.can.create_window(self.x61, self.y61,
@@ -956,14 +956,14 @@ def doc_medical1(self):
         window = self.C42)
 
     self.x66, self.y66 = 405, 1460
-    self.C43 = tk.Radiobutton(self.can, text="3", highlightbackground='cyan', fg='black', 
+    self.C43 = tk.Radiobutton(self.can, text="3", highlightbackground='cyan', fg='black',
         bg='DodgerBlue2', variable=CheckVar5, 
         value=3, height=1, width=3, anchor='w')
     self.wC43 = self.can.create_window(self.x66, self.y66,
         window = self.C43)
 
     self.x67, self.y67 = 460, 1460
-    self.C44 = tk.Radiobutton(self.can, text="4", highlightbackground='cyan', fg='black', 
+    self.C44 = tk.Radiobutton(self.can, text="4", highlightbackground='cyan', fg='black',
         bg='DodgerBlue2', variable=CheckVar5, 
         value=4, height=1, width=3, anchor='w')
     self.wC44 = self.can.create_window(self.x67, self.y67,
@@ -1000,14 +1000,14 @@ def doc_medical1(self):
         window = self.C52)
 
     self.x72, self.y72 = 405, 1485
-    self.C53 = tk.Radiobutton(self.can, text="3", highlightbackground='cyan', fg='black', 
+    self.C53 = tk.Radiobutton(self.can, text="3", highlightbackground='cyan', fg='black',
         bg='DodgerBlue2', variable=CheckVar6, 
         value=3, height=1, width=3, anchor='w')
     self.wC53 = self.can.create_window(self.x72, self.y72,
         window = self.C53)
 
     self.x73, self.y73 = 460, 1485
-    self.C54 = tk.Radiobutton(self.can, text="4", highlightbackground='cyan', fg='black', 
+    self.C54 = tk.Radiobutton(self.can, text="4", highlightbackground='cyan', fg='black',
         bg='DodgerBlue2', variable=CheckVar6, 
         value=4, height=1, width=3, anchor='w')
     self.wC54 = self.can.create_window(self.x73, self.y73,
@@ -1128,7 +1128,7 @@ def doc_medical1(self):
         messagebox.showinfo('INFO', 'File auxiliary1.txt not found !')
 
     # PLAFA
-    self.x88, self.y88 = 80, 1800
+    self.x88, self.y88 = 750, 1655
     self.lbl_plafa = tk.Label(self.can, text='PLAFA :',
         font="Times 14 bold", width=20, height=1,
         bg='DodgerBlue2', fg='white', anchor='w')
@@ -1136,16 +1136,16 @@ def doc_medical1(self):
         window = self.lbl_plafa)
 
     CheckVar9 = tk.IntVar()
-    self.x89, self.y89 = 250, 1800
+    self.x89, self.y89 = 920, 1655
     self.C75 = Checkbutton(self.can, text=" Oui", fg='black', 
-        bg='cyan', variable=CheckVar9, 
+        bg='cyan', variable=CheckVar9,
         onvalue=1, offvalue=0, height=1, 
         width=6, anchor="w")
     self.wC75 = self.can.create_window(self.x89, self.y89,
         window = self.C75)
 
     CheckVar10 = tk.IntVar()
-    self.x90, self.y90 = 324, 1800
+    self.x90, self.y90 = 994, 1655
     self.C76 = Checkbutton(self.can, text=" Non", fg='black', 
         bg='cyan', variable=CheckVar10, 
         onvalue=1, offvalue=0, height=1, 
@@ -1154,7 +1154,7 @@ def doc_medical1(self):
         window = self.C76)
 
     # DA
-    self.x91, self.y91 = 80, 1825
+    self.x91, self.y91 = 750, 1700
     self.lbl_plafa = tk.Label(self.can, text='Directives anticipées :',
         font="Times 14 bold", width=20, height=1,
         bg='DodgerBlue2', fg='white', anchor='w')
@@ -1162,8 +1162,8 @@ def doc_medical1(self):
         window = self.lbl_plafa)
 
     CheckVar11 = tk.IntVar()
-    self.x92, self.y92 = 250, 1825
-    self.C77 = Checkbutton(self.can, text=" Oui", fg='black', 
+    self.x92, self.y92 = 920, 1700
+    self.C77 = Checkbutton(self.can, text=" Oui", fg='black',
         bg='cyan', variable=CheckVar11, 
         onvalue=1, offvalue=0, height=1, 
         width=6, anchor="w")
@@ -1171,13 +1171,60 @@ def doc_medical1(self):
         window = self.C77)
 
     CheckVar12 = tk.IntVar()
-    self.x93, self.y93 = 324, 1825
-    self.C78 = Checkbutton(self.can, text=" Non", fg='black', 
+    self.x93, self.y93 = 994, 1700
+    self.C78 = Checkbutton(self.can, text=" Non", fg='black',
         bg='cyan', variable=CheckVar12, 
         onvalue=1, offvalue=0, height=1, 
         width=6, anchor="w")
     self.wC78 = self.can.create_window(self.x93, self.y93,
         window = self.C78)
+
+    self.x94, self.y94 = 80, 1760#80, 1860
+    self.lbl_evadate = tk.Label(self.can, text="Date de l'évaluation : ",
+        font="Times 14 bold", width=20, height=1,
+        bg='DodgerBlue2', fg='white', anchor='w')
+    self.wlbl_evadate = self.can.create_window(self.x94, self.y94,
+        window = self.lbl_evadate)
+
+    self.x95, self.y95 = 240, 1760#240, 1860
+    ntry_eva = tk.StringVar()
+    self.entryname = tk.Entry(self.can, textvariable=ntry_eva, width=10)
+    ntry_eva.set(time.strftime("%d/%m/%Y"))
+    self.wentryname = self.can.create_window(self.x95, self.y95,
+        window = self.entryname)    
+
+    self.x96, self.y96 = 80, 1800
+    self.lbl_parcvita = tk.Label(self.can, text="Parcours de vie : ",
+        font="Times 14 bold", width=20, height=1,
+        bg='DodgerBlue2', fg='white', anchor='w')
+    self.wlbl_parcvita = self.can.create_window(self.x96, self.y96,
+        window = self.lbl_parcvita)
+
+    self.x97, self.y97 = 600, 1890
+    self.t97 = tk.Text(self.can, height=10, width=80, font=18, relief=SUNKEN)
+    self.wt97_window = self.can.create_window(self.x97, self.y97, window=self.t97)
+
+    self.x98, self.y98 = 80, 2020
+    self.lbl_pbm = tk.Label(self.can, text="Problématique(s) : ",
+        font="Times 14 bold", width=20, height=1,
+        bg='DodgerBlue2', fg='white', anchor='w')
+    self.wlbl_pbm = self.can.create_window(self.x98, self.y98,
+        window = self.lbl_pbm)
+
+    self.x99, self.y99 = 600, 2110
+    self.t99 = tk.Text(self.can, height=10, width=80, font=18, relief=SUNKEN)
+    self.wt99_window = self.can.create_window(self.x99, self.y99, window=self.t99)
+
+    self.x100, self.y100 = 80, 2240
+    self.lbl_project = tk.Label(self.can, text="Projet de la personne : ",
+        font="Times 14 bold", width=20, height=1,
+        bg='DodgerBlue2', fg='white', anchor='w')
+    self.wlbl_project = self.can.create_window(self.x100, self.y100,
+        window = self.lbl_project)
+
+    self.x101, self.y101 = 600, 2330
+    self.t101 = tk.Text(self.can, height=10, width=80, font=18, relief=SUNKEN)
+    self.wt101_window = self.can.create_window(self.x101, self.y101, window=self.t101)
 
     def uptoserv():
         """
@@ -1224,18 +1271,25 @@ def doc_medical1(self):
             print("Error from dmst to way out", p_out)
 
     # Button save and quit
-    self.x99, self.y99 = 800, 1700
+    self.x110, self.y110 = 800, 2500
     self.buttonsave = tk.Button(self.can, text="Save", width=10, bd=3,
         fg='yellow', bg='RoyalBlue3', activebackground='pale turquoise',
         highlightbackground='cyan', command = record_alldata)
-    self.buttonsave = self.can.create_window(self.x99, self.y99,
+    self.buttonsave = self.can.create_window(self.x110, self.y110,
         window = self.buttonsave)
 
-    self.x100, self.y100 = 1000, 1700
+    self.x111, self.y111 = 1020, 2500
     self.buttonquit = tk.Button(self.can, text='Return to main menu', width=20, bd=3,
         fg='white', bg='RoyalBlue3', activebackground='pale turquoise',
         highlightbackground='cyan', command = way_back)
-    self.buttonquit = self.can.create_window(self.x100, self.y100,
+    self.buttonquit = self.can.create_window(self.x111, self.y111,
         window = self.buttonquit)
+
+    self.x112, self.y112 = 80, 2550
+    self.lbl_ghost = tk.Label(self.can, text="",
+        font="Times 14 bold", width=20, height=1,
+        bg='DodgerBlue2', fg='white')
+    self.wlbl_ghost = self.can.create_window(self.x112, self.y112,
+        window = self.lbl_ghost)
 
     self.can.configure(scrollregion=self.can.bbox(ALL))

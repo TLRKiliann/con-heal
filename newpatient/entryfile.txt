@@ -1,5 +1,5 @@
 Firstname Lastname
-09/09/1980
-Groundnut, Soya, Latex, Pollen
+00/00/0000
+Pollen
 None
 Diagnostic (main)

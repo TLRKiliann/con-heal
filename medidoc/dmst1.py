@@ -546,6 +546,14 @@ def doc_medical1(self):
                     file_dm.writelines(hcs3_content)
                     break
 
+        with open('./auxequip/doc_equip/auxiliary1.txt', 'r') as file_hcs3:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
+                ox_equip = file_hcs3.readlines()
+                for li in ox_equip:
+                    file_dm.writelines("\n\n--- Auxiliary Equipement ---\n")
+                    file_dm.writelines(ox_equip)
+                    break
+
         print(CheckVar1.get())
         if CheckVar1.get() == 1:
             with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file1:
@@ -1109,16 +1117,16 @@ def doc_medical1(self):
     self.wlbl_aux = self.can.create_window(self.x86, self.y86,
         window = self.lbl_aux)
 
-    self.x87, self.y87 = 250, 1670
-    self.t87 = tk.Text(self.can, height=6, width=50, font=18, relief=SUNKEN)
-    self.wt87_window = self.can.create_window(self.x87, self.y87, window=self.t87)
-
     def importationHealTwo(fichier, encodage="Utf-8"):
         filehcs2 = open(fichier, 'r', encoding=encodage)
         content = filehcs2.readlines()
         filehcs2.close()
         for li in content:
             self.t87.insert(END, li)
+
+    self.x87, self.y87 = 250, 1670
+    self.t87 = tk.Text(self.can, height=6, width=50, font=18, relief=SUNKEN)
+    self.wt87_window = self.can.create_window(self.x87, self.y87, window=self.t87)
 
     try:
         if os.path.getsize('./auxequip/doc_equip/auxiliary1.txt'):

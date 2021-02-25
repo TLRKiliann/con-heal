@@ -3,7 +3,7 @@
 
 
 from tkinter import *
-import tkinter
+import tkinter as tk
 from tkinter import messagebox
 import os
 import subprocess

@@ -1990,4 +1990,11 @@ def callResident(self):
     self.fb247_window = self.can.create_window(self.x247,
         self.y247, window=self.b247)
 
+    self.x248, self.y248 = 80, 1000
+    self.lbl_ghost = tk.Label(self.can, text="",
+        font="Times 14 bold", width=20, height=1,
+        bg='DodgerBlue2', fg='white')
+    self.wlbl_ghost = self.can.create_window(self.x248, self.y248,
+        window = self.lbl_ghost)
+
     self.can.configure(scrollregion=self.can.bbox(ALL))

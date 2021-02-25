@@ -934,7 +934,7 @@ Diagnos_pat.pack()
 
 bouton1 = tk.Button(gui, text="Enter", width=8, bd=4,
     fg='yellow', bg='RoyalBlue3', highlightbackground='SteelBlue',
-    activebackground='dark turquoise',
+    activebackground='pale turquoise',
     command = lambda: get(PatientID, patientnum, Firstname, labelfirst,
         Surname, lblsurname, Birthvalue, Birth_entree, Allergia,
         Patient_allergy, TransDisVal, TransDisease, Diagnosis, Diagnos_pat))
@@ -942,7 +942,7 @@ bouton1.pack(side=LEFT, padx=10, pady=20)
 
 buttQuit = tk.Button(gui, text="Quit", width=8, bd=4,
     fg='cyan', bg='RoyalBlue3', highlightbackground='SteelBlue',
-    activebackground='dark turquoise', command=quit)
+    activebackground='pale turquoise', command=quit)
 buttQuit.pack(side=tk.LEFT, padx=10, pady=20)
 
 gui.mainloop()

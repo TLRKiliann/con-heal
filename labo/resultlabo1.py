@@ -1203,6 +1203,20 @@ def callLabo1(self):
     self.buttonMicro = self.can.create_window(self.x61,
         self.y61, window = self.buttonMicro)
 
+    def read_file():
+        """
+            To read laborslt.txt   
+        """
+        callplatform = platform.system()
+        print(platform.system())
+        
+        if callplatform == 'Linux':
+            os.system('gio open "./labo/doc_labo/result.txt"') # Linux
+        elif callplatform =='Darwin':
+            subprocess.call('open', './labo/doc_labo/result.txt' ) # Mac
+        else:
+            os.startfile('./labo/doc_labo/result.txt') # Windows
+
     def printLabo():
         """
             Need to be modified in 
@@ -1232,19 +1246,26 @@ def callLabo1(self):
     self.C54 = self.can.create_window(self.x63, self.y63,
         window = self.C54)
 
-    # Button save and quit
-    self.x64, self.y64 = 790, 620
+    # Button save, read and quit
+    self.x64, self.y64 = 710, 620
     self.buttonsave = tk.Button(self.can, text="Save", width=10, bd=3,
         fg='yellow', bg='RoyalBlue3', activebackground='pale turquoise',
         highlightbackground='cyan', command=recordTofile)
-    self.buttonsave = self.can.create_window(self.x64, self.y64,
+    self.fbuttonsave_window = self.can.create_window(self.x64, self.y64,
         window = self.buttonsave)
 
-    self.x65, self.y65 = 1110, 620
+    self.x65, self.y65 = 870, 620
+    self.buttread = tk.Button(self.can, text="Read", width=10, bd=3,
+        fg='cyan', bg='RoyalBlue3', activebackground='pale turquoise',
+        highlightbackground='cyan', command=read_file)
+    self.fbuttread_window = self.can.create_window(self.x65, self.y65,
+        window = self.buttread)
+
+    self.x66, self.y66 = 1110, 620
     self.buttonquit = tk.Button(self.can, text='Return to main menu', width=20, bd=3,
         fg='white', bg='RoyalBlue3', activebackground='pale turquoise',
         highlightbackground='cyan', command=awayOut)
-    self.buttonquit = self.can.create_window(self.x65, self.y65,
+    self.fbuttonquit_window = self.can.create_window(self.x66, self.y66,
         window = self.buttonquit)
 
     self.can.configure(scrollregion=self.can.bbox(ALL))

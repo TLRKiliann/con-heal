@@ -1,9 +1,9 @@
 ----------------------------------------------------------
 Date : 25.02.2021
-Hour : 00:25:55
+Hour : 05:23:08
 Patient name : Firstname Lastname
-Birthday : 00/00/0000
-Allergy : Pollen
+Birthday : 09/09/1980
+Allergy : Groundnut, Soya, Latex, Pollen
 Transmissible disease : None
 ----------------------------------------------------------
 --- DIAGNOSTICS ---
@@ -16,6 +16,7 @@ hallucinations
 
 
 
+Diagnostic (main)
 --- Treatments ---
 Date : 20/02/2021
 Heure : 11:31:35
@@ -64,7 +65,7 @@ BMI : 20.996
 
 --- Patient data ---
 Patient name : Firstname Lastname
-Birthdate : 00/00/0000
+Birthdate : 09/09/1980
 Native : Lyss
 Phone : 077 888 44 55
 Street : Alouera 23
@@ -139,10 +140,12 @@ e-mail : oli.baga@gmail.com
 
 --- AGGIR grid : ---
 + Orientation = 0
-+ Cohérence = 0
-+ Toilette = 0
-+ Habillage = 0
-+ Alimentation = 0
-+ Elimination = 0
-+ Déplacement = 0
++ Cohérence = 1
++ Toilette = 2
++ Habillage = 3
++ Alimentation = 4
++ Elimination = 3
++ Déplacement = 2
 + Communication = 0
++ Directives anticipées = Oui
++ PLAFA = Non

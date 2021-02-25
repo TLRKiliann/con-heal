@@ -690,28 +690,28 @@ def doc_medical1(self):
         print(CheckVar9.get())
         if CheckVar9.get() == 1:
             with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file1:
-                file1.write("+ Directives anticipées = Oui\n")
+                file1.write("\n+ Directives anticipées = Oui\n")
         else:
             print("+ None (DA)")
 
         print(CheckVar10.get())
         if CheckVar10.get() == 1:
             with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file1:
-                file1.write("+ Directives anticipées = Non\n")
+                file1.write("\n+ Directives anticipées = Non\n")
         else:
             print("+ None (DA)")
 
         print(CheckVar11.get())
         if CheckVar11.get() == 1:
             with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file1:
-                file1.write("+ PLAFA = Oui\n")
+                file1.write("\n+ PLAFA = Oui\n")
         else:
             print("+ None (PLAFA)")
 
         print(CheckVar12.get())
         if CheckVar12.get() == 1:
             with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file1:
-                file1.write("+ PLAFA = Non\n")
+                file1.write("\n+ PLAFA = Non\n")
         else:
             print("+ None (PLAFA)")
 
@@ -1319,7 +1319,7 @@ def doc_medical1(self):
             To upload data on server after creating files.
         """
         proc = subprocess.run(["scp", "./medidoc/doc_dmst1/rslt_dmst1.txt",
-            "pi@192.168.18.12:~/tt_doc/doc_txt1/Files1/rslt_dmst1.txt"],
+            "pi@192.168.18.12:~/tt_doc/doc_txt1/dmst1/rslt_dmst1.txt"],
             stderr=subprocess.PIPE)
         print("Result SCP transfert : %s" % repr(proc.stderr))
         if proc.stderr == b'':
@@ -1330,7 +1330,7 @@ def doc_medical1(self):
             messagebox.showerror("Error", "No rslt_dmst1.txt to upload...")
 
         secproc = subprocess.run(["scp", "./medidoc/doc_dmst1/parcours.txt",
-            "pi@192.168.18.12:~/tt_doc/doc_txt1/Files1/parcours.txt"],
+            "pi@192.168.18.12:~/tt_doc/doc_txt1/dmst1/parcours.txt"],
             stderr=subprocess.PIPE)
         print("Result SCP transfert : %s" % repr(secproc.stderr))
         if secproc.stderr == b'':
@@ -1341,7 +1341,7 @@ def doc_medical1(self):
             messagebox.showerror("Error", "No parcours.txt to upload...")
 
         thirdproc = subprocess.run(["scp", "./medidoc/doc_dmst1/pbm.txt",
-            "pi@192.168.18.12:~/tt_doc/doc_txt1/Files1/pbm.txt"],
+            "pi@192.168.18.12:~/tt_doc/doc_txt1/dmst1/pbm.txt"],
             stderr=subprocess.PIPE)
         print("Result SCP transfert : %s" % repr(thirdproc.stderr))
         if thirdproc.stderr == b'':
@@ -1352,7 +1352,7 @@ def doc_medical1(self):
             messagebox.showerror("Error", "No pbm.txt to upload...")
 
         forthproc = subprocess.run(["scp", "./medidoc/doc_dmst1/project.txt",
-            "pi@192.168.18.12:~/tt_doc/doc_txt1/Files1/project.txt"],
+            "pi@192.168.18.12:~/tt_doc/doc_txt1/dmst1/project.txt"],
             stderr=subprocess.PIPE)
         print("Result SCP transfert : %s" % repr(forthproc.stderr))
         if forthproc.stderr == b'':

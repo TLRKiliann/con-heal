@@ -1,5 +1,5 @@
 Patient name : Firstname Lastname
-Birthdate : 00/00/0000
+Birthdate : 09/09/1980
 Native : Lyss
 Phone : 077 888 44 55
 Street : Alouera 23

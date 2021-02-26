@@ -42,17 +42,6 @@ def callLabo7(self):
     self.labelresult = self.can.create_window(self.x3, self.y3,
         window = self.labelresult)
 
-    def recordTofile():
-        MsgBox = messagebox.askyesno('Record', 'Results will be saved into Care and Monitoring, ok ?')
-        if MsgBox == 1:
-            print("Ok, data saved")
-            recordOption()
-            confRec()
-            #self.can.delete(ALL) # ---
-            self.showPatients()
-        else:
-            messagebox.showinfo('Return', 'Ok, nothing changed')
-
     def recordOption():
         print("Date : " + time.strftime("%d/%m/%Y"))
         print("Nom du patient : ", entrytext.get())
@@ -604,8 +593,46 @@ def callLabo7(self):
                 endfile.write("---------------------------------------------------------\n\n")
                 endfile2.write("---------------------------------------------------------\n\n")
 
+    def uploadata():
+        """
+            To upload data on server after creating files
+        """
+        proc = subprocess.run(["scp", "./need/doc_suivi7/patient7_14b.txt",
+            "pi@192.168.18.12:~/tt_doc/doc_txt7/Files7/patient7_14b.txt"],
+            stderr=subprocess.PIPE)
+        print("Result SCP transfert : %s" % repr(proc.stderr))
+        if proc.stderr == b'':
+            print("+ File patient7_14b.txt uploaded !")
+            messagebox.showinfo("INFO", "patient7_14b.txt uploaded...")
+        else:
+            print("+ No file to upload !")
+            messagebox.showerror("Error", "No patient7_14b.txt to upload...")
+
+        secproc = subprocess.run(["scp", "./labo/doc_labo/result7.txt",
+            "pi@192.168.18.12:~/tt_doc/doc_txt7/Files7/result7.txt"],
+            stderr=subprocess.PIPE)
+        print("Result SCP transfert : %s" % repr(secproc.stderr))
+        if secproc.stderr == b'':
+            print("+ File result7.txt uploaded !")
+            messagebox.showinfo("INFO", "result7.txt uploaded...")
+        else:
+            print("+ No file to upload !")
+            messagebox.showerror("Error", "No result7.txt to upload...")
+
     def confRec():
         messagebox.showinfo("Confirmation", "Record confirmed and finished !")
+
+    def recordTofile():
+        MsgBox = messagebox.askyesno('Record', 'Results will be saved into Care and Monitoring, ok ?')
+        if MsgBox == 1:
+            print("Ok, data saved")
+            recordOption()
+            uploadata()
+            confRec()
+            #self.can.delete(ALL) # ---
+            self.showPatients()
+        else:
+            messagebox.showinfo('Return', 'Ok, nothing changed')
 
     def comburTips():
         self.master.wm_attributes('-alpha', 0.8)

@@ -42,18 +42,6 @@ def callLabo2(self):
     self.labelresult = self.can.create_window(self.x3, self.y3,
         window = self.labelresult)
 
-    def recordTofile():
-        MsgBox = messagebox.askyesno('Record', 'Results will be saved into Care and Monitoring, ok ?')
-        if MsgBox == 1:
-            print("Ok, data saved")
-            recordOption()
-            uploadata()
-            confRec()
-            #self.can.delete(ALL) # ---
-            self.showPatients()
-        else:
-            messagebox.showinfo('Return', 'Ok, nothing changed')
-
     def recordOption():
         print("Date : " + time.strftime("%d/%m/%Y"))
         print("Nom du patient : ", entrytext.get())
@@ -633,6 +621,18 @@ def callLabo2(self):
 
     def confRec():
         messagebox.showinfo("Confirmation", "Record confirmed and finished !")
+
+    def recordTofile():
+        MsgBox = messagebox.askyesno('Record', 'Results will be saved into Care and Monitoring, ok ?')
+        if MsgBox == 1:
+            print("Ok, data saved")
+            recordOption()
+            uploadata()
+            confRec()
+            #self.can.delete(ALL) # ---
+            self.showPatients()
+        else:
+            messagebox.showinfo('Return', 'Ok, nothing changed')
 
     def comburTips():
         self.master.wm_attributes('-alpha', 0.8)

@@ -1156,7 +1156,6 @@ def callLabo15(self):
             format with a bit prog-sys code.
             For Linux, Windows and MAC.
         """
-
         becall = platform.system()
         print(platform.system())
         
@@ -1183,7 +1182,6 @@ def callLabo15(self):
             format with a bit prog-sys code.
             For Linux, Windows and MAC.
         """
-
         callplatform = platform.system()
         print(platform.system())
         
@@ -1224,7 +1222,6 @@ def callLabo15(self):
             user !!! Here, it's 
             for linux ! ;)
         """
-
         #lpr = subprocess.Popen("/usr/bin/lpr", stdin=subprocess.PIPE)
         #lpr.stdin.write('4.15.0-96-generic')
         pass

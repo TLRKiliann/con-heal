@@ -1156,7 +1156,6 @@ def callLabo16(self):
             format with a bit prog-sys code.
             For Linux, Windows and MAC.
         """
-
         becall = platform.system()
         print(platform.system())
         

@@ -321,5 +321,14 @@ def delFuncFile8():
     except FileNotFoundError as nf_oldfile6:
         print("Not found", nf_oldfile6)
 
+    try:
+        if os.path.exists('./Backup/Files8'):
+            print("+ Files8 doc exist !")
+            shutil.rmtree('./Backup/Files8')
+            print("+ Files8 doc deleted !")
+    except OSError as doc_nf:
+        print("Not found", doc_nf)
+
     print("!!! All files have been deleted !!!")
+    print("Backup in old was made !")
     

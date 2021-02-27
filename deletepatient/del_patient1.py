@@ -13,7 +13,6 @@ from tkinter import *
 from tkinter import messagebox
 import os
 import subprocess
-import sys
 import shutil
 
 
@@ -331,3 +330,4 @@ def delFuncFile1():
         print("Not found", doc_nf)
 
     print("!!! All files have been deleted !!!")
+    print("Backup in old was made !")

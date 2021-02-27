@@ -609,7 +609,7 @@ def callLabo13(self):
             messagebox.showerror("Error", "No patient13_14b.txt to upload...")
 
         secproc = subprocess.run(["scp", "./labo/doc_labo/result13.txt",
-            "pi@192.168.18.12:~/tt_doc/doc_txt13/Files12/result13.txt"],
+            "pi@192.168.18.12:~/tt_doc/doc_txt13/Files13/result13.txt"],
             stderr=subprocess.PIPE)
         print("Result SCP transfert : %s" % repr(secproc.stderr))
         if secproc.stderr == b'':

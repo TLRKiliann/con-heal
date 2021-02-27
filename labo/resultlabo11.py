@@ -1211,11 +1211,11 @@ def callLabo11(self):
         print(platform.system())
         
         if callplatform == 'Linux':
-            os.system('gio open "./labo/doc_labo/result.txt"') # Linux
+            os.system('gio open "./labo/doc_labo/result11.txt"') # Linux
         elif callplatform =='Darwin':
-            subprocess.call('open', './labo/doc_labo/result.txt' ) # Mac
+            subprocess.call('open', './labo/doc_labo/result11.txt' ) # Mac
         else:
-            os.startfile('./labo/doc_labo/result.txt') # Windows
+            os.startfile('./labo/doc_labo/result11.txt') # Windows
 
     def printLabo():
         """

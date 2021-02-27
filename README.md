@@ -1,5 +1,6 @@
 # con-heal
-A medical app (time-track) to connect pymysql with MySQL (localhost connection!)
+A medical app (time-track) to connect pymysql with MySQL (localhost connection) and with a ssh server (LAN connection).
+I chose an intranet infrastructure for security reasons. Of course, it's possible to extend internet connection with forwarding on server.
 
 # How to use MySQL
 

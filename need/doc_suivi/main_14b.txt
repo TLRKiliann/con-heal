@@ -1,9 +1,0 @@
----####-|--- Affichage des besoins du patient à surveiller ---|-####---
-
-En date du : 21/02/2021 à 22:36:59 :
-Patient name : Firstname Lastname
-+ Surveillance alimentaire et/ou hydratation requise
-Truc à faire
----
-
-

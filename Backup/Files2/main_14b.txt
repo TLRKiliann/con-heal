@@ -1,9 +1,0 @@
----####-|--- Affichage des besoins du patient à surveiller ---|-####---
-
-En date du : 15/02/2021 à 03:34:17 :
-Patient name : Rod Max
-+ Surveillance pour éviter les dangers requise
-+ Surveillance ou aide pour l'habillage/déshabillage requise
----
-
-

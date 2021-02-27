@@ -1,9 +1,9 @@
 ----------------------------------------------------------
-Date : 25.02.2021
-Hour : 05:34:44
+Date : 27.02.2021
+Hour : 10:33:15
 Patient name : Firstname Lastname
-Birthday : 00/00/0000
-Allergy : Pollen
+Birthday : 09/09/1980
+Allergy : Groundnut, Soya, Latex, Pollen
 Transmissible disease : None
 ----------------------------------------------------------
 --- DIAGNOSTICS ---
@@ -16,6 +16,7 @@ hallucinations
 
 
 
+Diagnostic (main)
 Diagnostic (main)
 --- Treatments ---
 Date : 20/02/2021
@@ -159,15 +160,11 @@ Patient name : Firstname Lastname
 
 
 --- AGGIR grid : ---
-+ Orientation = 2
-+ Cohérence = 2
-+ Toilette = 2
-+ Habillage = 2
-+ Alimentation = 2
-+ Elimination = 2
-+ Déplacement = 2
-+ Communication = 2
-
-+ Directives anticipées = Oui
-
-+ PLAFA = Oui
++ Orientation = 0
++ Cohérence = 0
++ Toilette = 0
++ Habillage = 0
++ Alimentation = 0
++ Elimination = 0
++ Déplacement = 0
++ Communication = 0

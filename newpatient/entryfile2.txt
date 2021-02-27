@@ -1,5 +1,1 @@
-Rod Max
-00/00/0000
-Gel
-None
-Diagnostic (main)
+--

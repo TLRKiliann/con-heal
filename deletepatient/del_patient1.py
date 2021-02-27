@@ -13,6 +13,7 @@ from tkinter import *
 from tkinter import messagebox
 import os
 import subprocess
+import sys
 import shutil
 
 
@@ -320,5 +321,13 @@ def delFuncFile1():
             os.remove('./Backup/Files1/Backup_ttt.txt')
     except FileNotFoundError as nf_oldfile6:
         print("Not found", nf_oldfile6)
+
+    try:
+        if os.path.exists('./Backup/Files1'):
+            print("+ Files1 doc exist !")
+            shutil.rmtree('./Backup/Files1')
+            print("+ Files1 doc deleted !")
+    except OSError as doc_nf:
+        print("Not found", doc_nf)
 
     print("!!! All files have been deleted !!!")

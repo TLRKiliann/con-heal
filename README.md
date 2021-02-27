@@ -31,10 +31,15 @@ Install pymysql in virtualenv :
 
 # Prepares to launch app :
 To start ssh connection :
-> ssh -i ~/publickeyshared server@192.168.XX.XX \
+
+> ssh -i ~/publickeyshared server@192.168.XX.XX
+
 To start mysql :
-> sudo systemctl start mysql \
-or \
+
+> sudo systemctl start mysql
+
+or
+
 > sudo /etc/init.d/mysql start
 
 Already done... (look at requirements.txt)

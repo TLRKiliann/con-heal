@@ -29,7 +29,7 @@ Install pymysql in virtualenv :
 > pip3 install pymysql (or PyMySQL)
 
 # Prepares to launch app :
-> ssh -i ~/namesharekeys server@192.168.XX.XX
+> ssh -i ~/publickeyshared server@192.168.XX.XX \
 > sudo systemctl start mysql \
 or \
 > sudo /etc/init.d/mysql start
@@ -40,5 +40,6 @@ Already done... (look at requirements.txt)
 > python3 heal_track.py
 
 # Still under development !
+(It should be finished by june 2021)
 
 ko@l@tr33

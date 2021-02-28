@@ -1,0 +1,9 @@
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
+
+En date du : 28/02/2021 à 11:34:57 :
+Patient name : 
++ Surveillance de la température requise
++ Surveillance du sommeil requise
+---
+
+

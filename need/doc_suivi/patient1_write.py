@@ -4,6 +4,7 @@
 
 from tkinter import *
 import tkinter as tk
+from tkinter import ttk
 from tkinter import messagebox
 import time
 import os
@@ -17,8 +18,12 @@ root.configure(background='DodgerBlue2')
 
 # To place side by side labelo + entrylab
 top = tk.Frame(root, bg='DodgerBlue2')
+top2 = tk.Frame(root, bg='DodgerBlue2')
+top3 = tk.Frame(root, bg='DodgerBlue2')
 bottom = tk.Frame(root, bg='DodgerBlue2')
 top.pack(side=tk.TOP)
+top2.pack(side=tk.TOP)
+top3.pack(side=tk.TOP)
 bottom.pack(side=tk.BOTTOM, fill=BOTH, expand=YES)
 
 labelo = tk.Label(root, text="Care and monitoring : ",
@@ -37,12 +42,59 @@ Entryname.pack(in_=top, side=tk.LEFT, padx=10, pady=20)
 
 labelallergy = tk.Label(root, text="Allergy",
     font='Arial 18 bold', fg='coral', bg='DodgerBlue2')
-labelallergy.pack(padx=5, pady=5)
+labelallergy.pack(in_=top2, padx=5, pady=5)
 
 text_aller = tk.StringVar()
 Entryaller = tk.Entry(root, textvariable=text_aller, width=60)
 text_aller.set(line_c[:-1])
-Entryaller.pack(padx=10, pady=5)
+Entryaller.pack(in_=top2, padx=10, pady=5)
+
+
+
+def callbackItem(event):
+    print(itemsoins.get())
+
+def changeItemso():
+    itemsoins["values"] = ["",
+                            " Pose de PSMT",
+                            " Chamgement de sonde",
+                            " Changement de venflon",
+                            " Pose de vein-flon",
+                            " Pose de sonde",
+                            " Examen",
+                            " Stix",
+                            " Coproculture",
+                            " Appareillage",
+                            " Soins de sonde",
+                            " Soins d'hygiène",
+                            " Réfection de PSMT"]
+
+labelMonth = tk.Label(root,
+    text = "Choose the care :", font=12, fg='white', bg='DodgerBlue2')
+labelMonth.pack(in_=top3, side=tk.LEFT, padx=5, pady=20)
+
+mystring2 = tk.StringVar()
+itemsoins = ttk.Combobox(root, textvariable=mystring2,
+    values=["",
+            " PSMT",
+            " Chamgement de sonde",
+            " Changement de venflon",
+            " Pose de vein-flon",
+            " Pose de sonde",
+            " Examen",
+            " Stix",
+            " Coproculture",
+            " Appareillage",
+            " Soins de sonde",
+            " Soins d'hygiène",
+            " Réfection de PSMT"], postcommand=changeItemso)
+
+itemsoins.bind("<<ComboboxSelected>>", callbackItem)
+itemsoins.current(0)
+itemsoins.pack(in_=top3, side=tk.LEFT, padx=10, pady=20)
+
+
+
 
 def ajouterText():
     """
@@ -62,6 +114,7 @@ def suiteBackup():
     with open('./need/doc_suivi/patient1_14b.txt', 'w') as namefile:
         namefile.write("En date du : ")
         namefile.write(time.strftime("%d/%m/%Y à %H:%M:%S :\n"))
+        namefile.write(textName.get() + '\n')
     messagebox.showinfo("INFO", "Data saved !")
     print("+ Data saved !")
     ajouterText()
@@ -122,7 +175,7 @@ def importationFile(fichier, encodage="Utf-8"):
         if os.path.getsize(fichier):
             print("+ File 'patient1_14b.txt' exist !")
             with open(fichier, 'r', encoding=encodage) as fileneeds:
-                content=fileneeds.readlines()
+                content = fileneeds.readlines()
                 for li in content:
                     textBox.insert(tk.END, li)
     except FileNotFoundError as out_err:

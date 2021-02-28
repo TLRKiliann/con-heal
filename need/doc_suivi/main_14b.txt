@@ -7,3 +7,11 @@ Patient name :
 ---
 
 
+En date du : 28/02/2021 à 11:49:24 :
+Chamgement de sonde :
+Appareillage :
+Soins de sonde :
+Soins d'hygiène :
+Réfection de PSMT :
+
+

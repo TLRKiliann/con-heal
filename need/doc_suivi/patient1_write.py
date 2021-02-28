@@ -50,24 +50,33 @@ text_aller.set(line_c[:-1])
 Entryaller.pack(in_=top2, padx=10, pady=5)
 
 
-
 def callbackItem(event):
+    """
+        To verify if value was caught
+        and to write it into texbox.
+    """
     print(itemsoins.get())
+    textBox.insert(tk.END, itemsoins.get() + " :\n")
 
 def changeItemso():
+    """
+        To permit user to choose a care with
+        a ttk.Combobox() !
+    """
     itemsoins["values"] = ["",
-                            " Pose de PSMT",
-                            " Chamgement de sonde",
-                            " Changement de venflon",
-                            " Pose de vein-flon",
-                            " Pose de sonde",
-                            " Examen",
-                            " Stix",
-                            " Coproculture",
-                            " Appareillage",
-                            " Soins de sonde",
-                            " Soins d'hygiène",
-                            " Réfection de PSMT"]
+                            "Pansement (PSMT)",
+                            "Réfection de PSMT",
+                            "Pose de vein-flon",
+                            "Changement de venflon",
+                            "Pose de sonde",
+                            "Soins de sonde",
+                            "Chamgement de sonde",
+                            "Examen",
+                            "Stix urinaire",
+                            "Coproculture",
+                            "Appareillage",
+                            "Soins de sonde",
+                            "Soins d'hygiène"]
 
 labelMonth = tk.Label(root,
     text = "Choose the care :", font=12, fg='white', bg='DodgerBlue2')
@@ -76,24 +85,23 @@ labelMonth.pack(in_=top3, side=tk.LEFT, padx=5, pady=20)
 mystring2 = tk.StringVar()
 itemsoins = ttk.Combobox(root, textvariable=mystring2,
     values=["",
-            " PSMT",
-            " Chamgement de sonde",
-            " Changement de venflon",
-            " Pose de vein-flon",
-            " Pose de sonde",
-            " Examen",
-            " Stix",
-            " Coproculture",
-            " Appareillage",
-            " Soins de sonde",
-            " Soins d'hygiène",
-            " Réfection de PSMT"], postcommand=changeItemso)
+            "Pansement (PSMT)",
+            "Réfection de PSMT",
+            "Pose de vein-flon",
+            "Changement de venflon",
+            "Pose de sonde",
+            "Soins de sonde",
+            "Chamgement de sonde",
+            "Examen",
+            "Stix urinaire",
+            "Coproculture",
+            "Appareillage",
+            "Soins de sonde",
+            "Soins d'hygiène"], postcommand=changeItemso)
 
 itemsoins.bind("<<ComboboxSelected>>", callbackItem)
 itemsoins.current(0)
 itemsoins.pack(in_=top3, side=tk.LEFT, padx=10, pady=20)
-
-
 
 
 def ajouterText():

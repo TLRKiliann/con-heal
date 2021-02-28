@@ -259,6 +259,97 @@ def delFuncFile16():
         messagebox.showerror("Error", "No entryfile16.txt to upload...")
 
     try:
+        if os.path.getsize('./auxequip/doc_equip16/auxiliary1.txt'):
+            os.remove('./auxequip/doc_equip16/auxiliary1.txt')
+            print("+ File auxiliary1.txt deleted")
+    except FileNotFoundError as filefunc20:
+        print("+ File auxiliary1.txt does not exist", filefunc20)
+
+    try:
+        if os.path.getsize('./contact/conpact16/finalfile1.txt'):
+            os.remove('./contact/conpact16/finalfile1.txt')
+            print("+ File finalfile1.txt deleted")
+    except FileNotFoundError as filefunc21:
+        print("+ File finalfile1.txt does not exist", filefunc21)
+
+    try:
+        if os.path.getsize('./contact/conpact16/finaldoc1.txt'):
+            os.remove('./contact/conpact16/finaldoc1.txt')
+            print("+ File finaldoc1.txt deleted")
+    except FileNotFoundError as filefunc22:
+        print("+ File finaldoc1.txt does not exist", filefunc22)
+
+    try:
+        if os.path.getsize('./contact/conpact16/finaldoc2.txt'):
+            os.remove('./contact/conpact16/finaldoc2.txt')
+            print("+ File finaldoc2.txt deleted")
+    except FileNotFoundError as filefunc23:
+        print("+ File finaldoc2.txt does not exist", filefunc23)
+
+    try:
+        if os.path.getsize('./contact/conpact16/finaldoc3.txt'):
+            os.remove('./contact/conpact16/finaldoc3.txt')
+            print("+ File finaldoc3.txt deleted")
+    except FileNotFoundError as filefunc24:
+        print("+ File finaldoc3.txt does not exist", filefunc24)
+
+    try:
+        if os.path.getsize('./contact/conpact16/finalfam1.txt'):
+            os.remove('./contact/conpact16/finalfam1.txt')
+            print("+ File finalfam1.txt deleted")
+    except FileNotFoundError as filefunc25:
+        print("+ File finalfam1.txt does not exist", filefunc25)
+
+    try:
+        if os.path.getsize('./contact/conpact16/finalhcs1.txt'):
+            os.remove('./contact/conpact16/finalhcs1.txt')
+            print("+ File finalhcs1.txt deleted")
+    except FileNotFoundError as filefunc26:
+        print("+ File finalhcs1.txt does not exist", filefunc26)
+
+    try:
+        if os.path.getsize('./contact/conpact16/finalhcs2.txt'):
+            os.remove('./contact/conpact16/finalhcs2.txt')
+            print("+ File finalhcs2.txt deleted")
+    except FileNotFoundError as filefunc27:
+        print("+ File finalhcs2.txt does not exist", filefunc27)
+
+    try:
+        if os.path.getsize('./contact/conpact16/finalhcs3.txt'):
+            os.remove('./contact/conpact16/finalhcs3.txt')
+            print("+ File finalhcs3.txt deleted")
+    except FileNotFoundError as filefunc28:
+        print("+ File finalhcs3.txt does not exist", filefunc28)
+
+    try:
+        if os.path.getsize('./medidoc/doc_dmst16/parcours.txt'):
+            os.remove('./medidoc/doc_dmst16/parcours.txt')
+            print("+ File parcours.txt deleted")
+    except FileNotFoundError as filefunc29:
+        print("+ File parcours.txt does not exist", filefunc29)
+
+    try:
+        if os.path.getsize('./medidoc/doc_dmst16/pbm.txt'):
+            os.remove('./medidoc/doc_dmst16/pbm.txt')
+            print("+ File pbm.txt deleted")
+    except FileNotFoundError as filefunc30:
+        print("+ File pbm.txt does not exist", filefunc30)
+
+    try:
+        if os.path.getsize('./medidoc/doc_dmst16/project.txt'):
+            os.remove('./medidoc/doc_dmst16/project.txt')
+            print("+ File project.txt deleted")
+    except FileNotFoundError as filefunc31:
+        print("+ File project.txt does not exist", filefunc31)
+
+    try:
+        if os.path.getsize('./medidoc/doc_dmst16/rslt_dmst1.txt'):
+            os.remove('./medidoc/doc_dmst16/rslt_dmst1.txt')
+            print("+ File rslt_dmst1.txt deleted")
+    except FileNotFoundError as filefunc32:
+        print("+ File rslt_dmst1.txt does not exist", filefunc32)
+
+    try:
         if os.path.exists('./Backup/Files16/Backup_param16.txt'):
             print("+ Backup_param16.txt exist")
             shutil.copy('./Backup/Files16/Backup_param16.txt',

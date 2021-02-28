@@ -49,7 +49,6 @@ Entryaller = tk.Entry(root, textvariable=text_aller, width=60)
 text_aller.set(line_c[:-1])
 Entryaller.pack(in_=top2, padx=10, pady=5)
 
-
 def callbackItem(event):
     """
         To verify if value was caught
@@ -65,7 +64,9 @@ def changeItemso():
     """
     itemsoins["values"] = ["",
                             "Pansement (PSMT)",
+                            "Protocol de PSMT",
                             "Réfection de PSMT",
+                            "Appareillage",
                             "Pose de vein-flon",
                             "Changement de venflon",
                             "Pose de sonde",
@@ -75,18 +76,20 @@ def changeItemso():
                             "Stix urinaire",
                             "Coproculture",
                             "Appareillage",
-                            "Soins de sonde",
-                            "Soins d'hygiène"]
+                            "Soins d'hygiène",
+                            "Soins + Surveillances"]
 
 labelMonth = tk.Label(root,
     text = "Choose the care :", font=12, fg='white', bg='DodgerBlue2')
 labelMonth.pack(in_=top3, side=tk.LEFT, padx=5, pady=20)
 
 mystring2 = tk.StringVar()
-itemsoins = ttk.Combobox(root, textvariable=mystring2,
+itemsoins = ttk.Combobox(root, textvariable=mystring2, width=20,
     values=["",
             "Pansement (PSMT)",
+            "Protocol de PSMT",
             "Réfection de PSMT",
+            "Appareillage",
             "Pose de vein-flon",
             "Changement de venflon",
             "Pose de sonde",
@@ -95,14 +98,12 @@ itemsoins = ttk.Combobox(root, textvariable=mystring2,
             "Examen",
             "Stix urinaire",
             "Coproculture",
-            "Appareillage",
-            "Soins de sonde",
-            "Soins d'hygiène"], postcommand=changeItemso)
+            "Soins d'hygiène",
+            "Soins + Surveillances"], postcommand=changeItemso)
 
 itemsoins.bind("<<ComboboxSelected>>", callbackItem)
 itemsoins.current(0)
 itemsoins.pack(in_=top3, side=tk.LEFT, padx=10, pady=20)
-
 
 def ajouterText():
     """

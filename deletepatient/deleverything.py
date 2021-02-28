@@ -331,12 +331,14 @@ Nompatient.set('Firstname + Lastname')
 entree.pack()
 
 bouton1 = tk.Button(gui, text="Delete", fg='yellow', bg='RoyalBlue3',
-    width=8, bd=4, highlightbackground='SteelBlue', 
+    width=8, bd=4, highlightbackground='SteelBlue',
+    activebackground="pale turquoise",
     command = lambda: get(Nompatient, entree, PatientID, Num_pat))
 bouton1.pack(side=tk.LEFT, padx=10, pady=20)
 
 buttQuit = tk.Button(gui, text="Quit", fg='cyan', bg='RoyalBlue3',
     width=8, bd=4, highlightbackground='SteelBlue',
+    activebackground="pale turquoise",
     command = quit)
 buttQuit.pack(side=tk.LEFT, padx=10, pady=20)
 

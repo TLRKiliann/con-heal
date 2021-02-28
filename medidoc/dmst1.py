@@ -327,12 +327,12 @@ def doc_medical1(self):
                     "All diagnostics done...")
                 break
     except FileNotFoundError as infofileout:
-        print("File 1 has not been found", infofileout)
+        print("+ File 1 has not been found", infofileout)
     except IndexError as inforange:
         self.t29.insert(tk.INSERT, "All diagnostics done...")
-        print("List 1 got less than 6 lines", inforange)
+        print("+ List 1 got less than 6 lines", inforange)
     else:
-        ("Error unknow 1 (for diag)")
+        ("+ Error unknow 1 (for diag)")
 
     # Labl + Textbox + func to read in ttt files
     self.x30, self.y30 = 80, 560
@@ -427,132 +427,177 @@ def doc_medical1(self):
         """
             To record data after warning !
         """
-        with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file:
-            file.write("----------------------------------------------------------\n")
-            file.write("Date : ")
-            file.write(time.strftime("%d.%m.%Y") + '\n')
-            file.write("Hour : ")
-            file.write(time.strftime("%H:%M:%S") + '\n')
-            file.write("Patient name : ")
-            file.write(ent_name.get() + '\n')
-            file.write("Birthday : ")
-            file.write(nt_birth.get() + '\n')
-            file.write("Allergy : ")
-            file.write(allertxt.get() + '\n')
-            file.write("Transmissible disease : ")
-            file.write(transdis.get() + '\n')
-            file.write("----------------------------------------------------------\n")
+        try:
+            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', 'a+') as file:
+                file.write("----------------------------------------------------------\n")
+                file.write("Date : ")
+                file.write(time.strftime("%d.%m.%Y") + '\n')
+                file.write("Hour : ")
+                file.write(time.strftime("%H:%M:%S") + '\n')
+                file.write("Patient name : ")
+                file.write(ent_name.get() + '\n')
+                file.write("Birthday : ")
+                file.write(nt_birth.get() + '\n')
+                file.write("Allergy : ")
+                file.write(allertxt.get() + '\n')
+                file.write("Transmissible disease : ")
+                file.write(transdis.get() + '\n')
+                file.write("----------------------------------------------------------\n")
+        except FileNotFoundError as nf_rsltdm:
+            print("+ File rslt_dmst1.txt not found !", nf_rsltdm)
+        
+        try:
+            with open('./diag/doc_diag/diagrecap1.txt', 'r') as file_di:
+                with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
+                    diag_content = file_di.readlines()
+                    for li in diag_content:
+                        file_dm.writelines(diag_content)
+                        break
+        except FileNotFoundError as diag_nf:
+            print("+ File diagrecap1.txt not found !", diag_nf)
 
-        with open('./diag/doc_diag/diagrecap1.txt', 'r') as file_di:
-            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
-                diag_content = file_di.readlines()
-                for li in diag_content:
-                    file_dm.writelines(diag_content)
-                    break
+        try:
+            with open('./ttt/doc_ttt/intro_ttt.txt', 'r') as file_ttt:
+                with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
+                    ttt_content = file_ttt.readlines()
+                    for li in ttt_content:
+                        file_dm.writelines("--- Treatments ---\n")
+                        file_dm.writelines(ttt_content)
+                        break
+        except FileNotFoundError as intro_nf:
+            print("+ File intro_ttt.txt not found !", intro_nf)
 
-        with open('./ttt/doc_ttt/intro_ttt.txt', 'r') as file_ttt:
-            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
-                ttt_content = file_ttt.readlines()
-                for li in ttt_content:
-                    file_dm.writelines("--- Treatments ---\n")
-                    file_dm.writelines(ttt_content)
-                    break
+        try:
+            with open('./ttt/doc_ttt/intro_res.txt', 'r') as file_res:
+                with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
+                    res_content = file_res.readlines()
+                    for li in res_content:
+                        file_dm.writelines("--- Reserves ---\n")
+                        file_dm.writelines(res_content)
+                        break
+        except FileNotFoundError as res_nf:
+            print("+ File intro_res.txt not found !", res_nf)
 
-        with open('./ttt/doc_ttt/intro_res.txt', 'r') as file_res:
-            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
-                res_content = file_res.readlines()
-                for li in res_content:
-                    file_dm.writelines("--- Reserves ---\n")
-                    file_dm.writelines(res_content)
-                    break
+        try:
+            with open('./param/paramdata1.txt', 'r') as file_pa:
+                with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
+                    pa_content = file_pa.readlines()
+                    for li in pa_content:
+                        file_dm.writelines("--- Vitals Parameters ---\n")
+                        file_dm.writelines(pa_content)
+                        break
+        except FileNotFoundError as param_nf:
+            print("+ File paramdata1.txt not found !", param_nf)
 
-        with open('./param/paramdata1.txt', 'r') as file_pa:
-            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
-                pa_content = file_pa.readlines()
-                for li in pa_content:
-                    file_dm.writelines("--- Vitals Parameters ---\n")
-                    file_dm.writelines(pa_content)
-                    break
+        try:
+            with open('./calBmi/bmi.txt', 'r') as file_b:
+                with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
+                    bmi_content = file_b.readlines()
+                    for li in bmi_content:
+                        file_dm.writelines("--- BMI ---\n")
+                        file_dm.writelines(bmi_content)
+                        break
+        except FileNotFoundError as bmi_nf:
+            print("+ File bmi.txt not found !", bmi_nf)
 
-        with open('./calBmi/bmi.txt', 'r') as file_b:
-            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
-                bmi_content = file_b.readlines()
-                for li in bmi_content:
-                    file_dm.writelines("--- BMI ---\n")
-                    file_dm.writelines(bmi_content)
-                    break
+        try:
+            with open('./contact/conpact/finalfile1.txt', 'r') as file_contf1:
+                with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
+                    fcf1_content = file_contf1.readlines()
+                    for li in fcf1_content:
+                        file_dm.writelines("\n--- Patient data ---\n")
+                        file_dm.writelines(fcf1_content)
+                        break
+        except FileNotFoundError as ff1_nf:
+            print("+ File finalfile1.txt not found !", ff1_nf)
 
-        with open('./contact/conpact/finalfile1.txt', 'r') as file_contf1:
-            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
-                fcf1_content = file_contf1.readlines()
-                for li in fcf1_content:
-                    file_dm.writelines("\n--- Patient data ---\n")
-                    file_dm.writelines(fcf1_content)
-                    break
+        try:
+            with open('./contact/conpact/finaldoc1.txt', 'r') as file_do1:
+                with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
+                    fcd1_content = file_do1.readlines()
+                    for li in fcd1_content:
+                        file_dm.writelines("\n\n--- Docotor1 data ---\n")
+                        file_dm.writelines(fcd1_content)
+                        break
+        except FileNotFoundError as fd1_nf:
+            print("+ File finaldoc1.txt not found !", fd1_nf)
 
-        with open('./contact/conpact/finaldoc1.txt', 'r') as file_do1:
-            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
-                fcd1_content = file_do1.readlines()
-                for li in fcd1_content:
-                    file_dm.writelines("\n\n--- Docotor1 data ---\n")
-                    file_dm.writelines(fcd1_content)
-                    break
+        try:
+            with open('./contact/conpact/finaldoc2.txt', 'r') as file_do2:
+                with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
+                    fcd2_content = file_do2.readlines()
+                    for li in fcd2_content:
+                        file_dm.writelines("\n\n--- Docotor2 data ---\n")
+                        file_dm.writelines(fcd2_content)
+                        break
+        except FileNotFoundError as fd2_nf:
+            print("+ File finaldoc2.txt not found !", fd2_nf)
 
-        with open('./contact/conpact/finaldoc2.txt', 'r') as file_do2:
-            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
-                fcd2_content = file_do2.readlines()
-                for li in fcd2_content:
-                    file_dm.writelines("\n\n--- Docotor2 data ---\n")
-                    file_dm.writelines(fcd2_content)
-                    break
+        try:
+            with open('./contact/conpact/finaldoc3.txt', 'r') as file_do3:
+                with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
+                    fcd3_content = file_do3.readlines()
+                    for li in fcd3_content:
+                        file_dm.writelines("\n\n--- Docotor3 data ---\n")
+                        file_dm.writelines(fcd3_content)
+                        break
+        except FileNotFoundError as fd3_nf:
+            print("+ File finaldoc3.txt not found !", fd3_nf)
+        
+        try:
+            with open('./contact/conpact/finalfam1.txt', 'r') as file_fam:
+                with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
+                    ff_content = file_fam.readlines()
+                    for li in ff_content:
+                        file_dm.writelines("\n\n--- Family data ---\n")
+                        file_dm.writelines(ff_content)
+                        break
+        except FileNotFoundError as ffam_nf:
+            print("+ File finalfam1.txt not found !", ffam_nf)
 
-        with open('./contact/conpact/finaldoc3.txt', 'r') as file_do3:
-            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
-                fcd3_content = file_do3.readlines()
-                for li in fcd3_content:
-                    file_dm.writelines("\n\n--- Docotor3 data ---\n")
-                    file_dm.writelines(fcd3_content)
-                    break
+        try:
+            with open('./contact/conpact/finalhcs1.txt', 'r') as file_hcs1:
+                with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
+                    hcs1_content = file_hcs1.readlines()
+                    for li in hcs1_content:
+                        file_dm.writelines("\n\n--- Home Care System1 ---\n")
+                        file_dm.writelines(hcs1_content)
+                        break
+        except FileNotFoundError as hcs1_nf:
+            print("+ File finalhcs1.txt not found !", hcs1_nf)
 
-        with open('./contact/conpact/finalfam1.txt', 'r') as file_fam:
-            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
-                ff_content = file_fam.readlines()
-                for li in ff_content:
-                    file_dm.writelines("\n\n--- Family data ---\n")
-                    file_dm.writelines(ff_content)
-                    break
+        try:
+            with open('./contact/conpact/finalhcs2.txt', 'r') as file_hcs2:
+                with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
+                    hcs2_content = file_hcs2.readlines()
+                    for li in hcs2_content:
+                        file_dm.writelines("\n\n--- Home Care System2 ---\n")
+                        file_dm.writelines(hcs2_content)
+                        break
+        except FileNotFoundError as hcs2_nf:
+            print("+ File finalhcs2.txt not found !", hcs2_nf)
 
-        with open('./contact/conpact/finalhcs1.txt', 'r') as file_hcs1:
-            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
-                hcs1_content = file_hcs1.readlines()
-                for li in hcs1_content:
-                    file_dm.writelines("\n\n--- Home Care System1 ---\n")
-                    file_dm.writelines(hcs1_content)
-                    break
+        try:
+            with open('./contact/conpact/finalhcs3.txt', 'r') as file_hcs3:
+                with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
+                    hcs3_content = file_hcs3.readlines()
+                    for li in hcs3_content:
+                        file_dm.writelines("\n\n--- Home Care System3 ---\n")
+                        file_dm.writelines(hcs3_content)
+                        break
+        except FileNotFoundError as hcs3_nf:
+            print("+ File finalhcs3.txt not found !", hcs3_nf)
 
-        with open('./contact/conpact/finalhcs2.txt', 'r') as file_hcs2:
-            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
-                hcs2_content = file_hcs2.readlines()
-                for li in hcs2_content:
-                    file_dm.writelines("\n\n--- Home Care System2 ---\n")
-                    file_dm.writelines(hcs2_content)
-                    break
-
-        with open('./contact/conpact/finalhcs3.txt', 'r') as file_hcs3:
-            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
-                hcs3_content = file_hcs3.readlines()
-                for li in hcs3_content:
-                    file_dm.writelines("\n\n--- Home Care System3 ---\n")
-                    file_dm.writelines(hcs3_content)
-                    break
-
-        with open('./auxequip/doc_equip/auxiliary1.txt', 'r') as file_hcs3:
-            with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
-                ox_equip = file_hcs3.readlines()
-                for li in ox_equip:
-                    file_dm.writelines("\n\n--- Auxiliary Equipement ---\n")
-                    file_dm.writelines(ox_equip)
-                    break
+        try:
+            with open('./auxequip/doc_equip/auxiliary1.txt', 'r') as file_aux:
+                with open('./medidoc/doc_dmst1/rslt_dmst1.txt', '+a') as file_dm:
+                    ox_equip = file_aux.readlines()
+                    for li in ox_equip:
+                        file_dm.writelines("\n\n--- Auxiliary Equipement ---\n")
+                        file_dm.writelines(ox_equip)
+                        break
+        except FileNotFoundError as aux_nf:
+            print("+ File auxiliary1.txt not found !", aux_nf)
 
         print(CheckVar1.get())
         if CheckVar1.get() == 1:
@@ -1202,9 +1247,9 @@ def doc_medical1(self):
         for li in seccontent:
             self.t898.insert(END, li)
 
-    self.x898, self.y898 = 550, 1995
-    self.t898 = tk.Text(self.can, height=20, width=100, font=18, relief=SUNKEN)
-    self.wt898_window = self.can.create_window(self.x898, self.y898, window=self.t898)
+    self.x95, self.y95 = 550, 1995
+    self.t95 = tk.Text(self.can, height=20, width=100, font=18, relief=SUNKEN)
+    self.wt95_window = self.can.create_window(self.x95, self.y95, window=self.t95)
 
     try:
         if os.path.getsize('./need/doc_suivi/main_14b.txt'):
@@ -1215,32 +1260,25 @@ def doc_medical1(self):
         print(need_f)
 
     # Line
-    self.x94, self.y94 = 550, 2225
+    self.x96, self.y96 = 550, 2225
     self.lbl_need = tk.Label(self.can, font="Times 14 bold",
         width=128, height=1, bg='RoyalBlue3', fg='white')
-    self.wlbl_need = self.can.create_window(self.x94, self.y94,
+    self.wlbl_need = self.can.create_window(self.x96, self.y96,
         window = self.lbl_need)
 
-    self.x95, self.y95 = 80, 2270 #80, 1760
+    self.x97, self.y97 = 80, 2270 #80, 1760
     self.lbl_evadate = tk.Label(self.can, text="Date de l'évaluation : ",
         font="Times 14 bold", width=20, height=1,
         bg='DodgerBlue2', fg='white', anchor='w')
-    self.wlbl_evadate = self.can.create_window(self.x95, self.y95,
+    self.wlbl_evadate = self.can.create_window(self.x97, self.y97,
         window = self.lbl_evadate)
 
-    self.x96, self.y96 = 240, 2270 #240, 1760
+    self.x98, self.y98 = 240, 2270 #240, 1760
     ntry_eva = tk.StringVar()
     self.entryname = tk.Entry(self.can, textvariable=ntry_eva, width=10)
     ntry_eva.set(time.strftime("%d/%m/%Y"))
-    self.wentryname = self.can.create_window(self.x96, self.y96,
+    self.wentryname = self.can.create_window(self.x98, self.y98,
         window = self.entryname)    
-
-    self.x97, self.y97 = 80, 2315 #80, 1800
-    self.lbl_parcvita = tk.Label(self.can, text="Parcours de vie : ",
-        font="Times 14 bold", width=20, height=1,
-        bg='DodgerBlue2', fg='white', anchor='w')
-    self.wlbl_parcvita = self.can.create_window(self.x97, self.y97,
-        window = self.lbl_parcvita)
 
     def saveData():
         """
@@ -1252,49 +1290,55 @@ def doc_medical1(self):
             if os.path.getsize('./medidoc/doc_dmst1/parcours.txt'):
                 print("+ File 'parcours.txt' exist !")
                 with open('./medidoc/doc_dmst1/parcours.txt', 'w') as parc_file:
-                    parc_file.write(self.t98.get("0.0", "end-1c") + '\n\n')
+                    parc_file.write(self.t100.get("0.0", "end-1c") + '\n\n')
         except FileNotFoundError as outcom:
             print("+ Sorry, file 'parcours.txt' not exist !", outcom)
             print("+ File 'parcours.txt' created !")
             with open('./medidoc/doc_dmst1/parcours.txt', 'a+') as noparc_file:
-                noparc_file.write(self.t98.get("0.0", "end-1c") + '\n\n')
-        self.t98.insert(tk.INSERT, "\n---Data saved !---")
+                noparc_file.write(self.t100.get("0.0", "end-1c") + '\n\n')
+        self.t100.insert(tk.INSERT, "\n---Data saved !---")
 
         try:
             if os.path.getsize('./medidoc/doc_dmst1/pbm.txt'):
                 print("+ File 'pbm.txt' exist !")
                 with open('./medidoc/doc_dmst1/pbm.txt', 'w') as pbmfile:
-                    pbmfile.write(self.t100.get("0.0", "end-1c") + '\n\n')
+                    pbmfile.write(self.t102.get("0.0", "end-1c") + '\n\n')
         except FileNotFoundError as outcom:
             print("+ Sorry, file 'pbm.txt' not exist !", outcom)
             print("+ File 'pbm.txt' created !")
             with open('./medidoc/doc_dmst1/pbm.txt', 'a+') as no_pbmfile:
-                no_pbmfile.write(self.t100.get("0.0", "end-1c") + '\n\n')
-        self.t100.insert(tk.INSERT, "\n---Data saved !---")
+                no_pbmfile.write(self.t102.get("0.0", "end-1c") + '\n\n')
+        self.t102.insert(tk.INSERT, "\n---Data saved !---")
 
         try:
             if os.path.getsize('./medidoc/doc_dmst1/project.txt'):
                 print("+ File 'project.txt' exist !")
                 with open('./medidoc/doc_dmst1/project.txt', 'w') as projectfile:
-                    projectfile.write(self.t102.get("0.0", "end-1c") + '\n\n')
+                    projectfile.write(self.t104.get("0.0", "end-1c") + '\n\n')
         except FileNotFoundError as outcom:
             print("+ Sorry, file 'project.txt' not exist !", outcom)
             print("+ File 'project.txt' created !")
             with open('./medidoc/doc_dmst1/project.txt', 'a+') as no_projectfile:
-                no_projectfile.write(self.t102.get("0.0", "end-1c") + '\n\n')
-        self.t102.insert(tk.INSERT, "\n---Data saved !---")
-        #uploadfunc()
+                no_projectfile.write(self.t104.get("0.0", "end-1c") + '\n\n')
+        self.t104.insert(tk.INSERT, "\n---Data saved !---")
+
+    self.x99, self.y99 = 80, 2315 #80, 1800
+    self.lbl_parcvita = tk.Label(self.can, text="Parcours de vie : ",
+        font="Times 14 bold", width=20, height=1,
+        bg='DodgerBlue2', fg='white', anchor='w')
+    self.wlbl_parcvita = self.can.create_window(self.x99, self.y99,
+        window = self.lbl_parcvita)
 
     def importationFile(fichier):
         file = open(fichier, 'r')
         content = file.readlines()
         file.close()
         for li in content:
-            self.t98.insert(END, li)
+            self.t100.insert(END, li)
 
-    self.x98, self.y98 = 600, 2405 #600, 1890
-    self.t98 = tk.Text(self.can, height=10, width=80, font=18, relief=SUNKEN)
-    self.wt98_window = self.can.create_window(self.x98, self.y98, window=self.t98)
+    self.x100, self.y100 = 600, 2405 #600, 1890
+    self.t100 = tk.Text(self.can, height=10, width=80, font=18, relief=SUNKEN)
+    self.wt100_window = self.can.create_window(self.x100, self.y100, window=self.t100)
 
     try:
         if os.path.getsize('./medidoc/doc_dmst1/parcours.txt'):
@@ -1304,11 +1348,11 @@ def doc_medical1(self):
         print("+ File 'parcours.txt' does not exist !")
         print(nf_file)
 
-    self.x99, self.y99 = 80, 2540 # 80, 2020
+    self.x101, self.y101 = 80, 2540 # 80, 2020
     self.lbl_pbm = tk.Label(self.can, text="Problématique(s) : ",
         font="Times 14 bold", width=20, height=1,
         bg='DodgerBlue2', fg='white', anchor='w')
-    self.wlbl_pbm = self.can.create_window(self.x99, self.y99,
+    self.wlbl_pbm = self.can.create_window(self.x101, self.y101,
         window = self.lbl_pbm)
 
     def pbmimport(fichier):
@@ -1316,11 +1360,11 @@ def doc_medical1(self):
         seccontent = secfile.readlines()
         secfile.close()
         for li in seccontent:
-            self.t100.insert(END, li)
+            self.t102.insert(END, li)
 
-    self.x100, self.y100 = 600, 2625 #600, 2110
-    self.t100 = tk.Text(self.can, height=10, width=80, font=18, relief=SUNKEN)
-    self.wt100_window = self.can.create_window(self.x100, self.y100, window=self.t100)
+    self.x102, self.y102 = 600, 2625 #600, 2110
+    self.t102 = tk.Text(self.can, height=10, width=80, font=18, relief=SUNKEN)
+    self.wt102_window = self.can.create_window(self.x102, self.y102, window=self.t102)
 
     try:
         if os.path.getsize('./medidoc/doc_dmst1/pbm.txt'):
@@ -1330,11 +1374,11 @@ def doc_medical1(self):
         print("+ File 'pbm.txt' does not exist !")
         print(pbm_f)
 
-    self.x101, self.y101 = 80, 2760 #80, 2240
+    self.x103, self.y103 = 80, 2760 #80, 2240
     self.lbl_project = tk.Label(self.can, text="Projet de la personne : ",
         font="Times 14 bold", width=20, height=1,
         bg='DodgerBlue2', fg='white', anchor='w')
-    self.wlbl_project = self.can.create_window(self.x101, self.y101,
+    self.wlbl_project = self.can.create_window(self.x103, self.y103,
         window = self.lbl_project)
 
     def projectimport(fichier):
@@ -1342,11 +1386,11 @@ def doc_medical1(self):
         thirdcontent = thirdfile.readlines()
         thirdfile.close()
         for li in thirdcontent:
-            self.t102.insert(END, li)
+            self.t104.insert(END, li)
 
-    self.x102, self.y102 = 600, 2845 #600, 2330
-    self.t102 = tk.Text(self.can, height=10, width=80, font=18, relief=SUNKEN)
-    self.wt102_window = self.can.create_window(self.x102, self.y102, window=self.t102)
+    self.x104, self.y104 = 600, 2845 #600, 2330
+    self.t104 = tk.Text(self.can, height=10, width=80, font=18, relief=SUNKEN)
+    self.wt104_window = self.can.create_window(self.x104, self.y104, window=self.t104)
 
     try:
         if os.path.getsize('./medidoc/doc_dmst1/project.txt'):
@@ -1403,6 +1447,17 @@ def doc_medical1(self):
         else:
             print("+ No file to upload !")
             messagebox.showerror("Error", "No project.txt to upload...")
+
+        fivth = subprocess.run(["scp", "./need/doc_suivi/main_14b.txt",
+            "pi@192.168.18.12:~/tt_doc/doc_txt1/dmst1/main_14b.txt"],
+            stderr=subprocess.PIPE)
+        print("Result SCP transfert : %s" % repr(fivth.stderr))
+        if fivth.stderr == b'':
+            print("+ File main_14b.txt uploaded !")
+            messagebox.showinfo("INFO", "main_14b.txt uploaded...")
+        else:
+            print("+ No file to upload !")
+            messagebox.showerror("Error", "No main_14b.txt to upload...")
 
     def msgvalidate():
         """

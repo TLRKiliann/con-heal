@@ -1187,25 +1187,59 @@ def doc_medical1(self):
     self.wC78 = self.can.create_window(self.x93, self.y93,
         window = self.C78)
 
-    self.x94, self.y94 = 80, 1760#80, 1860
+    # 14 needs
+    self.x94, self.y94 = 550, 1765
+    self.lbl_need = tk.Label(self.can, text='--- 14 Needs ---',
+        font="Times 14 bold", width=128,
+        height=1, bg='RoyalBlue3', fg='white')
+    self.wlbl_need = self.can.create_window(self.x94, self.y94,
+        window = self.lbl_need)
+
+    def needimport(fichier):
+        secfile = open(fichier, 'r')
+        seccontent = secfile.readlines()
+        secfile.close()
+        for li in seccontent:
+            self.t898.insert(END, li)
+
+    self.x898, self.y898 = 550, 1995
+    self.t898 = tk.Text(self.can, height=20, width=100, font=18, relief=SUNKEN)
+    self.wt898_window = self.can.create_window(self.x898, self.y898, window=self.t898)
+
+    try:
+        if os.path.getsize('./need/doc_suivi/main_14b.txt'):
+            print("+ File 'main_14b.txt' exist !")
+            needimport('./need/doc_suivi/main_14b.txt')
+    except FileNotFoundError as need_f:
+        print("+ File 'main_14b.txt' does not exist !")
+        print(need_f)
+
+    # Line
+    self.x94, self.y94 = 550, 2225
+    self.lbl_need = tk.Label(self.can, font="Times 14 bold",
+        width=128, height=1, bg='RoyalBlue3', fg='white')
+    self.wlbl_need = self.can.create_window(self.x94, self.y94,
+        window = self.lbl_need)
+
+    self.x95, self.y95 = 80, 2270 #80, 1760
     self.lbl_evadate = tk.Label(self.can, text="Date de l'évaluation : ",
         font="Times 14 bold", width=20, height=1,
         bg='DodgerBlue2', fg='white', anchor='w')
-    self.wlbl_evadate = self.can.create_window(self.x94, self.y94,
+    self.wlbl_evadate = self.can.create_window(self.x95, self.y95,
         window = self.lbl_evadate)
 
-    self.x95, self.y95 = 240, 1760#240, 1860
+    self.x96, self.y96 = 240, 2270 #240, 1760
     ntry_eva = tk.StringVar()
     self.entryname = tk.Entry(self.can, textvariable=ntry_eva, width=10)
     ntry_eva.set(time.strftime("%d/%m/%Y"))
-    self.wentryname = self.can.create_window(self.x95, self.y95,
+    self.wentryname = self.can.create_window(self.x96, self.y96,
         window = self.entryname)    
 
-    self.x96, self.y96 = 80, 1800
+    self.x97, self.y97 = 80, 2315 #80, 1800
     self.lbl_parcvita = tk.Label(self.can, text="Parcours de vie : ",
         font="Times 14 bold", width=20, height=1,
         bg='DodgerBlue2', fg='white', anchor='w')
-    self.wlbl_parcvita = self.can.create_window(self.x96, self.y96,
+    self.wlbl_parcvita = self.can.create_window(self.x97, self.y97,
         window = self.lbl_parcvita)
 
     def saveData():
@@ -1218,37 +1252,37 @@ def doc_medical1(self):
             if os.path.getsize('./medidoc/doc_dmst1/parcours.txt'):
                 print("+ File 'parcours.txt' exist !")
                 with open('./medidoc/doc_dmst1/parcours.txt', 'w') as parc_file:
-                    parc_file.write(self.t97.get("0.0", "end-1c") + '\n\n')
+                    parc_file.write(self.t98.get("0.0", "end-1c") + '\n\n')
         except FileNotFoundError as outcom:
             print("+ Sorry, file 'parcours.txt' not exist !", outcom)
             print("+ File 'parcours.txt' created !")
             with open('./medidoc/doc_dmst1/parcours.txt', 'a+') as noparc_file:
-                noparc_file.write(self.t97.get("0.0", "end-1c") + '\n\n')
-        self.t97.insert(tk.INSERT, "\n---Data saved !---")
+                noparc_file.write(self.t98.get("0.0", "end-1c") + '\n\n')
+        self.t98.insert(tk.INSERT, "\n---Data saved !---")
 
         try:
             if os.path.getsize('./medidoc/doc_dmst1/pbm.txt'):
                 print("+ File 'pbm.txt' exist !")
                 with open('./medidoc/doc_dmst1/pbm.txt', 'w') as pbmfile:
-                    pbmfile.write(self.t99.get("0.0", "end-1c") + '\n\n')
+                    pbmfile.write(self.t100.get("0.0", "end-1c") + '\n\n')
         except FileNotFoundError as outcom:
             print("+ Sorry, file 'pbm.txt' not exist !", outcom)
             print("+ File 'pbm.txt' created !")
             with open('./medidoc/doc_dmst1/pbm.txt', 'a+') as no_pbmfile:
-                no_pbmfile.write(self.t99.get("0.0", "end-1c") + '\n\n')
-        self.t99.insert(tk.INSERT, "\n---Data saved !---")
+                no_pbmfile.write(self.t100.get("0.0", "end-1c") + '\n\n')
+        self.t100.insert(tk.INSERT, "\n---Data saved !---")
 
         try:
             if os.path.getsize('./medidoc/doc_dmst1/project.txt'):
                 print("+ File 'project.txt' exist !")
                 with open('./medidoc/doc_dmst1/project.txt', 'w') as projectfile:
-                    projectfile.write(self.t101.get("0.0", "end-1c") + '\n\n')
+                    projectfile.write(self.t102.get("0.0", "end-1c") + '\n\n')
         except FileNotFoundError as outcom:
             print("+ Sorry, file 'project.txt' not exist !", outcom)
             print("+ File 'project.txt' created !")
             with open('./medidoc/doc_dmst1/project.txt', 'a+') as no_projectfile:
-                no_projectfile.write(self.t101.get("0.0", "end-1c") + '\n\n')
-        self.t101.insert(tk.INSERT, "\n---Data saved !---")
+                no_projectfile.write(self.t102.get("0.0", "end-1c") + '\n\n')
+        self.t102.insert(tk.INSERT, "\n---Data saved !---")
         #uploadfunc()
 
     def importationFile(fichier):
@@ -1256,11 +1290,11 @@ def doc_medical1(self):
         content = file.readlines()
         file.close()
         for li in content:
-            self.t97.insert(END, li)
+            self.t98.insert(END, li)
 
-    self.x97, self.y97 = 600, 1890
-    self.t97 = tk.Text(self.can, height=10, width=80, font=18, relief=SUNKEN)
-    self.wt97_window = self.can.create_window(self.x97, self.y97, window=self.t97)
+    self.x98, self.y98 = 600, 2405 #600, 1890
+    self.t98 = tk.Text(self.can, height=10, width=80, font=18, relief=SUNKEN)
+    self.wt98_window = self.can.create_window(self.x98, self.y98, window=self.t98)
 
     try:
         if os.path.getsize('./medidoc/doc_dmst1/parcours.txt'):
@@ -1270,11 +1304,11 @@ def doc_medical1(self):
         print("+ File 'parcours.txt' does not exist !")
         print(nf_file)
 
-    self.x98, self.y98 = 80, 2020
+    self.x99, self.y99 = 80, 2540 # 80, 2020
     self.lbl_pbm = tk.Label(self.can, text="Problématique(s) : ",
         font="Times 14 bold", width=20, height=1,
         bg='DodgerBlue2', fg='white', anchor='w')
-    self.wlbl_pbm = self.can.create_window(self.x98, self.y98,
+    self.wlbl_pbm = self.can.create_window(self.x99, self.y99,
         window = self.lbl_pbm)
 
     def pbmimport(fichier):
@@ -1282,11 +1316,11 @@ def doc_medical1(self):
         seccontent = secfile.readlines()
         secfile.close()
         for li in seccontent:
-            self.t99.insert(END, li)
+            self.t100.insert(END, li)
 
-    self.x99, self.y99 = 600, 2110
-    self.t99 = tk.Text(self.can, height=10, width=80, font=18, relief=SUNKEN)
-    self.wt99_window = self.can.create_window(self.x99, self.y99, window=self.t99)
+    self.x100, self.y100 = 600, 2625 #600, 2110
+    self.t100 = tk.Text(self.can, height=10, width=80, font=18, relief=SUNKEN)
+    self.wt100_window = self.can.create_window(self.x100, self.y100, window=self.t100)
 
     try:
         if os.path.getsize('./medidoc/doc_dmst1/pbm.txt'):
@@ -1296,11 +1330,11 @@ def doc_medical1(self):
         print("+ File 'pbm.txt' does not exist !")
         print(pbm_f)
 
-    self.x100, self.y100 = 80, 2240
+    self.x101, self.y101 = 80, 2760 #80, 2240
     self.lbl_project = tk.Label(self.can, text="Projet de la personne : ",
         font="Times 14 bold", width=20, height=1,
         bg='DodgerBlue2', fg='white', anchor='w')
-    self.wlbl_project = self.can.create_window(self.x100, self.y100,
+    self.wlbl_project = self.can.create_window(self.x101, self.y101,
         window = self.lbl_project)
 
     def projectimport(fichier):
@@ -1308,11 +1342,11 @@ def doc_medical1(self):
         thirdcontent = thirdfile.readlines()
         thirdfile.close()
         for li in thirdcontent:
-            self.t101.insert(END, li)
+            self.t102.insert(END, li)
 
-    self.x101, self.y101 = 600, 2330
-    self.t101 = tk.Text(self.can, height=10, width=80, font=18, relief=SUNKEN)
-    self.wt101_window = self.can.create_window(self.x101, self.y101, window=self.t101)
+    self.x102, self.y102 = 600, 2845 #600, 2330
+    self.t102 = tk.Text(self.can, height=10, width=80, font=18, relief=SUNKEN)
+    self.wt102_window = self.can.create_window(self.x102, self.y102, window=self.t102)
 
     try:
         if os.path.getsize('./medidoc/doc_dmst1/project.txt'):
@@ -1401,21 +1435,21 @@ def doc_medical1(self):
             print("Error from dmst to way out", p_out)
 
     # Button save and quit
-    self.x110, self.y110 = 800, 2500
+    self.x110, self.y110 = 800, 3020
     self.buttonsave = tk.Button(self.can, text="Save", width=10, bd=3,
         fg='yellow', bg='RoyalBlue3', activebackground='pale turquoise',
         highlightbackground='cyan', command = record_alldata)
     self.buttonsave = self.can.create_window(self.x110, self.y110,
         window = self.buttonsave)
 
-    self.x111, self.y111 = 1020, 2500
+    self.x111, self.y111 = 1020, 3020
     self.buttonquit = tk.Button(self.can, text='Return to main menu', width=20, bd=3,
         fg='white', bg='RoyalBlue3', activebackground='pale turquoise',
         highlightbackground='cyan', command = way_back)
     self.buttonquit = self.can.create_window(self.x111, self.y111,
         window = self.buttonquit)
 
-    self.x112, self.y112 = 80, 2550
+    self.x112, self.y112 = 80, 3070
     self.lbl_ghost = tk.Label(self.can, text="",
         font="Times 14 bold", width=20, height=1,
         bg='DodgerBlue2', fg='white')

@@ -1,7 +1,7 @@
 Patient name : Firstname Lastname
-Birthdate : 09/09/1980
-Native : Lyss
-Phone : 077 888 44 55
+Birthdate : 00/00/0000
+Native : Edora
+Phone : 0800 866 877
 Street : Alouera 23
 City : Kansan
 e-mail : fl@gmail.com

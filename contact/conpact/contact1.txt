@@ -1,7 +1,7 @@
 Firstname Lastname
-09/09/1980
-Lyss
-077 888 44 55
+00/00/0000
+Edora
+0800 866 877
 Alouera 23
 Kansan
 fl@gmail.com

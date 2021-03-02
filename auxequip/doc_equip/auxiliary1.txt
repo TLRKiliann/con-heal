@@ -1,23 +1,7 @@
 ----------------------------------------------------------
-Date : 23/02/2021
+Date : 02/03/2021
 Patient name : Firstname Lastname
 ---------------------------------------------------------
-# Fauteuil Roulant (FR) : 23/02/2021 checked
-----------------------------------------------------------
-Date : 24/02/2021
-Patient name : Firstname Lastname
----------------------------------------------------------
-# DVA (Dérivation ventriculo-atriale) : 24/02/2021 checked
-# PTH G : 24/02/2021 checked
-----------------------------------------------------------
-Date : 24/02/2021
-Patient name : Firstname Lastname
----------------------------------------------------------
-# DVA (Dérivation ventriculo-atriale) : 24/02/2021 checked
-# PTH : 24/02/2021 checked
-----------------------------------------------------------
-Date : 27/02/2021
-Patient name : Firstname Lastname
----------------------------------------------------------
-# Drain thoracique : 27/02/2021 checked
-# Drain de Mikulicz : 27/02/2021 checked
+# Mèche : 02/03/2021 checked
+# Drain de Mikulicz : 02/03/2021 checked
+# DVA (Dérivation ventriculo-atriale) : 02/03/2021 checked

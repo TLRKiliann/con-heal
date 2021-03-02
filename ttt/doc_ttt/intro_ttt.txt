@@ -1,0 +1,13 @@
+Date : 02/03/2021
+Heure : 12:19:54
+Name : Firstname Lastname
+Date of introduction : 22 February 2021
+Nom du ttt : Clopin
+Dosage du ttt : 10 mg
+Matin : 2
+
+Soir : 3
+
+Date of end : //
+Signature : etc
+

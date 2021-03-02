@@ -1,0 +1,11 @@
+Date : 02/03/2021
+Hour : 12:24:54
+Name and Surname : Firstname Lastname
+TA : 120/90mmHg
+Puls : 80/min
+SaO2 : 99%
+FR : 17/min
+Temperature : 36.4°C
+Glycemie : 5.6 mmol/l
+Douleurs (Pain) : 1/10
+

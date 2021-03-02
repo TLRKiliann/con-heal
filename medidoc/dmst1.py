@@ -1245,7 +1245,7 @@ def doc_medical1(self):
         seccontent = secfile.readlines()
         secfile.close()
         for li in seccontent:
-            self.t898.insert(END, li)
+            self.t95.insert(END, li)
 
     self.x95, self.y95 = 550, 1995
     self.t95 = tk.Text(self.can, height=20, width=100, font=18, relief=SUNKEN)

@@ -43,7 +43,7 @@ class Application(tk.Frame):
         mBar = MenuBar(self)
         mBar.pack(side=TOP, fill=X, expand=1)
         # ScrollCanvas limite de la zone à parcourir avec la barre
-        self.can = tk.Canvas(self, width=400, height=750, bg='DodgerBlue2')
+        self.can = tk.Canvas(self, width=900, height=750, bg='DodgerBlue2')
         self.frame = tk.Frame(self.can)
         self.vsb = tk.Scrollbar(self, orient=VERTICAL, command=self.can.yview)
         self.can.configure(yscrollcommand=self.vsb.set)
@@ -79,6 +79,35 @@ class Application(tk.Frame):
             font=('Times New Roman', 18), fill='white')
         self.can.create_text(200, 700, anchor='w', text="Research oxyures",
             font=('Times New Roman', 18), fill='white')
+
+        self.can.create_text(600, 65, anchor=tk.CENTER, text="Monitoring",
+            font=('Times New Roman', 28), fill='yellow')
+
+        self.can.create_text(600, 150, anchor='w', text="Id Suicidaires",
+            font=('Times New Roman', 18), fill='white')
+        self.can.create_text(600, 200, anchor='w', text="Angoisses",
+            font=('Times New Roman', 18), fill='white')
+        self.can.create_text(600, 250, anchor='w', text="Evaluation de l'Humeur",
+            font=('Times New Roman', 18), fill='white')
+        self.can.create_text(600, 300, anchor='w', text="Démence - Délirium",
+            font=('Times New Roman', 18), fill='white')
+        self.can.create_text(600, 350, anchor='w', text="Orientation (3 modes)",
+            font=('Times New Roman', 18), fill='white')
+        self.can.create_text(600, 400, anchor='w', text="Hallucinations Visuelles",
+            font=('Times New Roman', 18), fill='white')
+        self.can.create_text(600, 450, anchor='w', text="Hallucinations Auditives",
+            font=('Times New Roman', 18), fill='white')
+        self.can.create_text(600, 500, anchor='w', text="",
+            font=('Times New Roman', 18), fill='white')
+        self.can.create_text(600, 550, anchor='w', text="",
+            font=('Times New Roman', 18), fill='white')
+        self.can.create_text(600, 600, anchor='w', text="",
+            font=('Times New Roman', 18), fill='white')
+        self.can.create_text(600, 650, anchor='w', text="",
+            font=('Times New Roman', 18), fill='white')
+        self.can.create_text(600, 700, anchor='w', text="Crise d'Epilepsie (obs.)",
+            font=('Times New Roman', 18), fill='white')
+
         self.can.pack(side=tk.LEFT, fill=BOTH, expand=1)
 
         # Configuration de la Scrollbar sur le Frame
@@ -178,6 +207,102 @@ class Application(tk.Frame):
             activebackground='pale turquoise', text="open",
             highlightbackground='DodgerBlue2', command=self.openScotchTest)
         self.fb19=self.can.create_window(self.x19, self.y19, window=self.b19)
+
+
+
+        self.x20, self.y20 = 500, 150
+        self.b20 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
+            activebackground='pale turquoise', text="open",
+            highlightbackground='DodgerBlue2', command=self.openMonov)
+        self.fb20=self.can.create_window(self.x20, self.y20, window=self.b20)
+        self.pack()
+        
+
+        self.x21, self.y21 = 500, 200
+        self.b21 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue21', fg='gold',
+            activebackground='pale turquoise', text="open",
+            highlightbackground='DodgerBlue2', command=self.openUrinalOne)
+        self.fb21=self.can.create_window(self.x21, self.y21, window=self.b21)
+        self.pack()
+        
+
+        self.x22, self.y22 = 500, 250
+        self.b22 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
+            activebackground='pale turquoise', text="open",
+            highlightbackground='DodgerBlue2', command=self.openUrinalSecond)
+        self.fb22=self.can.create_window(self.x22, self.y22, window=self.b22)
+        self.pack()
+        
+
+        self.x23, self.y23 = 500, 300
+        self.b23 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
+            activebackground='pale turquoise', text="open",
+            highlightbackground='DodgerBlue2', command=self.openUrin24h)
+        self.fb23=self.can.create_window(self.x23, self.y23, window=self.b23)
+        self.pack()
+        
+
+        self.x24, self.y24 = 500, 350
+        self.b24 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
+            activebackground='pale turquoise', text="open",
+            highlightbackground='DodgerBlue2', command=self.openUrineBb)
+        self.fb24=self.can.create_window(self.x24, self.y24, window=self.b24)
+        self.pack()
+        
+
+        self.x25, self.y25 = 500, 400
+        self.b25 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
+            activebackground='pale turquoise', text="open",
+            highlightbackground='DodgerBlue2', command=self.openUrinPicOv)
+        self.fb25=self.can.create_window(self.x25, self.y25, window=self.b25)
+        self.pack()
+        
+
+        self.x26, self.y26 = 500, 450
+        self.b26 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
+            activebackground='pale turquoise', text="open",
+            highlightbackground='DodgerBlue2', command=self.openHemoc)
+        self.fb26=self.can.create_window(self.x26, self.y26, window=self.b26)
+        self.pack()
+        
+
+        self.x27, self.y27 = 500, 500
+        self.b27 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
+            activebackground='pale turquoise', text="open",
+            highlightbackground='DodgerBlue2', command=self.openFrottis)
+        self.fb27=self.can.create_window(self.x27, self.y27, window=self.b27)
+        self.pack()
+        
+
+        self.x28, self.y28 = 500, 550
+        self.b28 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
+            activebackground='pale turquoise', text="open",
+            highlightbackground='DodgerBlue2', command=self.openHelico)
+        self.fb28=self.can.create_window(self.x28, self.y28, window=self.b28)
+        self.pack()
+
+
+        self.x29, self.y29 = 500, 600
+        self.b29 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
+            activebackground='pale turquoise', text="open",
+            highlightbackground='DodgerBlue2', command=self.openExpecto)
+        self.fb29=self.can.create_window(self.x29, self.y29, window=self.b29)
+        self.pack()
+
+
+        self.x30, self.y30 = 500, 650
+        self.b30 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
+            activebackground='pale turquoise', text="open",
+            highlightbackground='DodgerBlue2', command=self.openCopro)
+        self.fb30=self.can.create_window(self.x30, self.y30, window=self.b30)
+        self.pack()
+
+
+        self.x31, self.y31 = 500, 700
+        self.b31 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
+            activebackground='pale turquoise', text="open",
+            highlightbackground='DodgerBlue2', command=self.openScotchTest)
+        self.fb31=self.can.create_window(self.x31, self.y31, window=self.b31)
         self.pack()
 
     # Méthode pour reconfigurer la scrollbar à chaque fois

@@ -556,22 +556,87 @@ class Application(tk.Frame):
         pass
 
     def confusion(self):
-        pass
+        try:
+            becall = platform.system()
+            print(platform.system())
+            if os.path.exists('./manual/orientation.txt'):
+                print("+ File 'orientation.txt' exist (read)!")
+                if becall == 'Linux':
+                    os.system('gio open "./manual/orientation.txt"') # Linux
+                elif becall =='Darwin':
+                    subprocess.call('open', './manual/orientation.txt' ) # Mac
+                else:
+                    os.startfile('./manual/orientation.txt') # Windows
+        except FileNotFoundError as outputcom11:
+                print("+ Sorry, file 'orientation.txt' don't exist !", outputcom11)
+                self.confRec()
 
     def visual(self):
-        pass
+        try:
+            becall = platform.system()
+            print(platform.system())
+            if os.path.exists('./manual/hallu_visual.txt'):
+                print("+ File 'hallu_visual.txt' exist (read)!")
+                if becall == 'Linux':
+                    os.system('gio open "./manual/hallu_visual.txt"') # Linux
+                elif becall =='Darwin':
+                    subprocess.call('open', './manual/hallu_visual.txt' ) # Mac
+                else:
+                    os.startfile('./manual/hallu_visual.txt') # Windows
+        except FileNotFoundError as outputcom11:
+                print("+ Sorry, file 'hallu_visual.txt' don't exist !", outputcom11)
+                self.confRec()
 
     def auditive(self):
-        pass
+        try:
+            becall = platform.system()
+            print(platform.system())
+            if os.path.exists('./manual/hallu_audit.txt'):
+                print("+ File 'hallu_audit.txt' exist (read)!")
+                if becall == 'Linux':
+                    os.system('gio open "./manual/hallu_audit.txt"') # Linux
+                elif becall =='Darwin':
+                    subprocess.call('open', './manual/hallu_audit.txt' ) # Mac
+                else:
+                    os.startfile('./manual/hallu_audit.txt') # Windows
+        except FileNotFoundError as outputcom11:
+                print("+ Sorry, file 'hallu_audit.txt' don't exist !", outputcom11)
+                self.confRec()
 
     def suicid(self):
         pass
 
     def heteroagress(self):
-        pass
+        try:
+            becall = platform.system()
+            print(platform.system())
+            if os.path.exists('./manual/hetero_agress.txt'):
+                print("+ File 'hetero_agress.txt' exist (read)!")
+                if becall == 'Linux':
+                    os.system('gio open "./manual/hetero_agress.txt"') # Linux
+                elif becall =='Darwin':
+                    subprocess.call('open', './manual/hetero_agress.txt' ) # Mac
+                else:
+                    os.startfile('./manual/hetero_agress.txt') # Windows
+        except FileNotFoundError as outputcom11:
+                print("+ Sorry, file 'hetero_agress.txt' don't exist !", outputcom11)
+                self.confRec()
 
     def autoagress(self):
-        pass
+        try:
+            becall = platform.system()
+            print(platform.system())
+            if os.path.exists('./manual/auto_agress.txt'):
+                print("+ File 'auto_agress.txt' exist (read)!")
+                if becall == 'Linux':
+                    os.system('gio open "./manual/auto_agress.txt"') # Linux
+                elif becall =='Darwin':
+                    subprocess.call('open', './manual/auto_agress.txt' ) # Mac
+                else:
+                    os.startfile('./manual/auto_agress.txt') # Windows
+        except FileNotFoundError as outputcom11:
+                print("+ Sorry, file 'auto_agress.txt' don't exist !", outputcom11)
+                self.confRec()
 
     def syndrome(self):
         pass

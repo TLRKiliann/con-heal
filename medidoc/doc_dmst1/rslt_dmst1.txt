@@ -1,0 +1,175 @@
+----------------------------------------------------------
+Date : 03.03.2021
+Hour : 12:28:44
+Patient name : Firstname Lastname
+Birthday : 00/00/0000
+Allergy : Shellfish, Sesame, Chips
+Transmissible disease : None
+----------------------------------------------------------
+--- DIAGNOSTICS ---
+Schizophrénie
+
+Trb bl
+--- Treatments ---
+Date : 02/03/2021
+Heure : 12:19:54
+Name : Firstname Lastname
+Date of introduction : 22 February 2021
+Nom du ttt : Clopin
+Dosage du ttt : 10 mg
+Matin : 2
+
+Soir : 3
+
+Date of end : //
+Signature : etc
+
+--- Reserves ---
+Date : 02/03/2021
+Heure : 12:19:54
+Name : Firstname Lastname
+Date of introduction : 22 February 2021
+Nom du ttt : Clopin
+Dosage du ttt : 10 mg
+Réserve : Oui
+1ère intention : Oui
+Date of end : //
+Signature : etc
+
+--- Vitals Parameters ---
+Date : 02/03/2021
+Hour : 12:24:54
+Name and Surname : Firstname Lastname
+TA : 120/90mmHg
+Puls : 80/min
+SaO2 : 99%
+FR : 17/min
+Temperature : 36.4°C
+Glycemie : 5.6 mmol/l
+Douleurs (Pain) : 1/10
+
+Date : 03/03/2021
+Hour : 11:59:24
+Name and Surname : Firstname Lastname
+TA : 133/77mmHg
+Puls : 78/min
+SaO2 : 98%
+FR : 16/min
+Temperature : 36.6°C
+Glycemie : 7.1 mmol/l
+Douleurs (Pain) : 0/10
+
+--- BMI ---
+Date : 02-03-2021
+Heure : 12:31:13
+Prenom et Nom : Firstname Lastname
+Poids : 76
+Taille : 1.83
+BMI : 22.694
+
+Date : 03-03-2021
+Heure : 12:00:51
+Prenom et Nom : Firstname Lastname
+Poids : 76
+Taille : 1.83
+BMI : 22.694
+
+
+--- Patient data ---
+Patient name : Firstname Lastname
+Birthdate : 00/00/0000
+Native : Edora
+Phone : 0800 866 877
+Street : Alouera 23
+City : Kansan
+e-mail : fl@gmail.com
+Insurance : Assura
+Policy : 9873.899.1238.12983
+Civil status : Alone
+Confession : Catolic
+
+--- Docotor1 data ---
+Doctor : Truc
+Specialization : Neuro
+Phone : 98 896 67 45
+Mobile : 65 679 76 43
+Street : Aligan St 25
+City : Belfast
+e-mail : truc@gmail.com
+Fax : 347893892749
+
+--- Docotor2 data ---
+Doctor : Favlo
+Specialization : General
+Phone : 97 828 97 32
+Mobile : 65 768 08 67
+Street : Matheus 77
+City : Birmingam
+e-mail : fav.ji@inco.org
+Fax : 9783987398
+
+--- Docotor3 data ---
+Doctor : Diam
+Specialization : psychiatria
+Phone : 97 898 73 78
+Mobile : 21 938 78 12
+Street : Rookridge 87
+City : Peckin
+e-mail : diam@gmail.com
+Fax : 732891738912
+
+--- Family data ---
+Name : Magui McFerson
+Phone : 98 273 89 43
+Phone : 98 237 89 73
+Street : Baley-St 34
+City : Hill-Valley
+e-mail : magui.mcferson@hotmail.com
+
+--- Home Care System1 ---
+Name : David Saint (Physio)
+Phone : 893274892
+Phone : 182738971293
+Street : Paradise 99
+City : Berlin
+e-mail : david@hotmail.org
+
+--- Home Care System2 ---
+Name : Zara Malai (Ergo)
+Phone : 3247892
+Phone : 2893781
+Street : Montain-Hill 33
+City : Jefferson
+e-mail : zm@proton.com
+
+--- Home Care System3 ---
+Name : Oli Baga (Curatrice)
+Phone : 238904890
+Phone : 2918393412
+Street : Beach 14
+City : Tracy
+e-mail : oli.baga@gmail.com
+
+--- Auxiliary Equipement ---
+----------------------------------------------------------
+Date : 02/03/2021
+Patient name : Firstname Lastname
+---------------------------------------------------------
+# Mèche : 02/03/2021 checked
+# Drain de Mikulicz : 02/03/2021 checked
+# DVA (Dérivation ventriculo-atriale) : 02/03/2021 checked
+
+
+--- AGGIR grid : ---
++ Orientation = 0
++ Cohérence = 2
++ Toilette = 0
++ Habillage = 0
++ Alimentation = 1
++ Elimination = 1
++ Déplacement = 0
++ Communication = 3
+
++ Directives anticipées = Non
+
++ PLAFA = Non

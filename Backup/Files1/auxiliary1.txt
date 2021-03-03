@@ -1,0 +1,7 @@
+----------------------------------------------------------
+Date : 02/03/2021
+Patient name : Firstname Lastname
+---------------------------------------------------------
+# Mèche : 02/03/2021 checked
+# Drain de Mikulicz : 02/03/2021 checked
+# DVA (Dérivation ventriculo-atriale) : 02/03/2021 checked

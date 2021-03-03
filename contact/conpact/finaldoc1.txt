@@ -1,7 +1,7 @@
 Doctor : Truc
 Specialization : Neuro
-Phone : 39871832891
-Mobile : 27839829173
+Phone : 98 896 67 45
+Mobile : 65 679 76 43
 Street : Aligan St 25
 City : Belfast
 e-mail : truc@gmail.com

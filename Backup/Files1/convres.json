@@ -1,0 +1,15 @@
+{
+    "data": [
+        {
+            "Date": "02/03/2021",
+            "Date of introduction": "22 February 2021",
+            "Date of end": "//",
+            "Treatment": "Clopin",
+            "Dosage": "10 mg",
+            "Reserve": 1,
+            "First-line": 1,
+            "Second-line": 0,
+            "Number/24h": "1"
+        }
+    ]
+}

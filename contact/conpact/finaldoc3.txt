@@ -1,7 +1,7 @@
 Doctor : Diam
 Specialization : psychiatria
-Phone : 978987378
-Mobile : 2189387812
+Phone : 97 898 73 78
+Mobile : 21 938 78 12
 Street : Rookridge 87
 City : Peckin
 e-mail : diam@gmail.com

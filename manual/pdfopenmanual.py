@@ -83,7 +83,7 @@ class Application(tk.Frame):
         self.can.create_text(600, 65, anchor=tk.CENTER, text="Monitoring",
             font=('Times New Roman', 28), fill='yellow')
 
-        self.can.create_text(600, 150, anchor='w', text="Id Suicidaires",
+        self.can.create_text(600, 150, anchor='w', text="Etat Mental Général",
             font=('Times New Roman', 18), fill='white')
         self.can.create_text(600, 200, anchor='w', text="Angoisses",
             font=('Times New Roman', 18), fill='white')
@@ -97,17 +97,16 @@ class Application(tk.Frame):
             font=('Times New Roman', 18), fill='white')
         self.can.create_text(600, 450, anchor='w', text="Hallucinations Auditives",
             font=('Times New Roman', 18), fill='white')
-        self.can.create_text(600, 500, anchor='w', text="",
+        self.can.create_text(600, 500, anchor='w', text="Id Suicidaires",
             font=('Times New Roman', 18), fill='white')
-        self.can.create_text(600, 550, anchor='w', text="",
+        self.can.create_text(600, 550, anchor='w', text="Auto-agressivité",
             font=('Times New Roman', 18), fill='white')
-        self.can.create_text(600, 600, anchor='w', text="",
+        self.can.create_text(600, 600, anchor='w', text="Hétéro-agressivité",
             font=('Times New Roman', 18), fill='white')
-        self.can.create_text(600, 650, anchor='w', text="",
+        self.can.create_text(600, 650, anchor='w', text="SNM, SSero, ",
             font=('Times New Roman', 18), fill='white')
         self.can.create_text(600, 700, anchor='w', text="Crise d'Epilepsie (obs.)",
             font=('Times New Roman', 18), fill='white')
-
         self.can.pack(side=tk.LEFT, fill=BOTH, expand=1)
 
         # Configuration de la Scrollbar sur le Frame
@@ -208,23 +207,20 @@ class Application(tk.Frame):
             highlightbackground='DodgerBlue2', command=self.openScotchTest)
         self.fb19=self.can.create_window(self.x19, self.y19, window=self.b19)
 
-
-
+        # Eva mental
         self.x20, self.y20 = 500, 150
         self.b20 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
-            highlightbackground='DodgerBlue2', command=self.openMonov)
+            highlightbackground='DodgerBlue2', command=self.examental)
         self.fb20=self.can.create_window(self.x20, self.y20, window=self.b20)
         self.pack()
-        
 
         self.x21, self.y21 = 500, 200
-        self.b21 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue21', fg='gold',
+        self.b21 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
             highlightbackground='DodgerBlue2', command=self.openUrinalOne)
         self.fb21=self.can.create_window(self.x21, self.y21, window=self.b21)
         self.pack()
-        
 
         self.x22, self.y22 = 500, 250
         self.b22 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
@@ -232,7 +228,6 @@ class Application(tk.Frame):
             highlightbackground='DodgerBlue2', command=self.openUrinalSecond)
         self.fb22=self.can.create_window(self.x22, self.y22, window=self.b22)
         self.pack()
-        
 
         self.x23, self.y23 = 500, 300
         self.b23 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
@@ -240,7 +235,6 @@ class Application(tk.Frame):
             highlightbackground='DodgerBlue2', command=self.openUrin24h)
         self.fb23=self.can.create_window(self.x23, self.y23, window=self.b23)
         self.pack()
-        
 
         self.x24, self.y24 = 500, 350
         self.b24 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
@@ -248,7 +242,6 @@ class Application(tk.Frame):
             highlightbackground='DodgerBlue2', command=self.openUrineBb)
         self.fb24=self.can.create_window(self.x24, self.y24, window=self.b24)
         self.pack()
-        
 
         self.x25, self.y25 = 500, 400
         self.b25 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
@@ -256,7 +249,6 @@ class Application(tk.Frame):
             highlightbackground='DodgerBlue2', command=self.openUrinPicOv)
         self.fb25=self.can.create_window(self.x25, self.y25, window=self.b25)
         self.pack()
-        
 
         self.x26, self.y26 = 500, 450
         self.b26 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
@@ -264,7 +256,6 @@ class Application(tk.Frame):
             highlightbackground='DodgerBlue2', command=self.openHemoc)
         self.fb26=self.can.create_window(self.x26, self.y26, window=self.b26)
         self.pack()
-        
 
         self.x27, self.y27 = 500, 500
         self.b27 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
@@ -272,7 +263,6 @@ class Application(tk.Frame):
             highlightbackground='DodgerBlue2', command=self.openFrottis)
         self.fb27=self.can.create_window(self.x27, self.y27, window=self.b27)
         self.pack()
-        
 
         self.x28, self.y28 = 500, 550
         self.b28 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
@@ -281,7 +271,6 @@ class Application(tk.Frame):
         self.fb28=self.can.create_window(self.x28, self.y28, window=self.b28)
         self.pack()
 
-
         self.x29, self.y29 = 500, 600
         self.b29 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
@@ -289,14 +278,12 @@ class Application(tk.Frame):
         self.fb29=self.can.create_window(self.x29, self.y29, window=self.b29)
         self.pack()
 
-
         self.x30, self.y30 = 500, 650
         self.b30 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
             highlightbackground='DodgerBlue2', command=self.openCopro)
         self.fb30=self.can.create_window(self.x30, self.y30, window=self.b30)
         self.pack()
-
 
         self.x31, self.y31 = 500, 700
         self.b31 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
@@ -311,8 +298,8 @@ class Application(tk.Frame):
         self.can.configure(scrollregion=self.can.bbox(ALL))
 
     def confRec(self):
-        self.MsgBox2msg = messagebox.showinfo("Warning", "File 'VMED'"
-            "was not created. No Medical Visit has been checked !")
+        self.MsgBox2msg = messagebox.showinfo("Warning", "File don't exist"
+            "please sent an e-mail to : cat.3st3ban@gmail.com !")
 
     def openMonov(self):
         try:
@@ -327,7 +314,7 @@ class Application(tk.Frame):
                 else:
                     os.startfile('./manual/monovet.pdf') # Windows
         except FileNotFoundError as outputcom:
-                print("+ Sorry, file 'monovet.pdf' not exist !", outputcom)
+                print("+ Sorry, file 'monovet.pdf' don't exist !", outputcom)
                 self.confRec()
 
     def openUrinalOne(self):
@@ -343,7 +330,7 @@ class Application(tk.Frame):
                 else:
                     os.startfile('./manual/premierjet.pdf') # Windows
         except FileNotFoundError as outputcom:
-                print("+ Sorry, file 'premierjet.pdf' not exist !", outputcom)
+                print("+ Sorry, file 'premierjet.pdf' don't exist !", outputcom)
                 self.confRec()
 
     def openUrinalSecond(self):
@@ -359,7 +346,7 @@ class Application(tk.Frame):
                 else:
                     os.startfile('./manual/secondjet.pdf') # Windows
         except FileNotFoundError as outputcom2:
-                print("+ Sorry, file 'secondjet.pdf' not exist !", outputcom2)
+                print("+ Sorry, file 'secondjet.pdf' don't exist !", outputcom2)
                 self.confRec()
 
     def openUrin24h(self):
@@ -375,7 +362,7 @@ class Application(tk.Frame):
                 else:
                     os.startfile('./manual/urine24h.pdf') # Windows
         except FileNotFoundError as outputcom3:
-                print("+ Sorry, file 'urine24h.pdf' not exist !", outputcom3)
+                print("+ Sorry, file 'urine24h.pdf' don't exist !", outputcom3)
                 self.confRec()
 
     def openUrineBb(self):
@@ -391,7 +378,7 @@ class Application(tk.Frame):
                 else:
                     os.startfile('./manual/urinebaby.pdf') # Windows
         except FileNotFoundError as outputcom4:
-                print("+ Sorry, file 'urinebaby.pdf' not exist !", outputcom4)
+                print("+ Sorry, file 'urinebaby.pdf' don't exist !", outputcom4)
                 self.confRec()
 
     def openUrinPicOv(self):
@@ -407,7 +394,7 @@ class Application(tk.Frame):
                 else:
                     os.startfile('./manual/urinepicovulr.pdf') # Windows
         except FileNotFoundError as outputcom5:
-                print("+ Sorry, file 'urinepicovulr.pdf' not exist !", outputcom5)
+                print("+ Sorry, file 'urinepicovulr.pdf' don't exist !", outputcom5)
                 self.confRec()
 
     def openHemoc(self):
@@ -423,7 +410,7 @@ class Application(tk.Frame):
                 else:
                     os.startfile('./manual/hemoc.pdf') # Windows
         except FileNotFoundError as outputcom6:
-                print("+ Sorry, file 'hemoc.pdf' not exist !", outputcom6)
+                print("+ Sorry, file 'hemoc.pdf' don't exist !", outputcom6)
                 self.confRec()
 
     def openFrottis(self):
@@ -439,7 +426,7 @@ class Application(tk.Frame):
                 else:
                     os.startfile('./manual/frottis.pdf') # Windows
         except FileNotFoundError as outputcom7:
-                print("+ Sorry, file 'frottis.pdf' not exist !", outputcom7)
+                print("+ Sorry, file 'frottis.pdf' don't exist !", outputcom7)
                 self.confRec()
 
     def openHelico(self):
@@ -455,7 +442,7 @@ class Application(tk.Frame):
                 else:
                     os.startfile('./manual/helicobacter.pdf') # Windows
         except FileNotFoundError as outputcom8:
-                print("+ Sorry, file 'helicobacter.pdf' not exist !", outputcom8)
+                print("+ Sorry, file 'helicobacter.pdf' don't exist !", outputcom8)
                 self.confRec()
 
     def openExpecto(self):
@@ -471,7 +458,7 @@ class Application(tk.Frame):
                 else:
                     os.startfile('./manual/expecto.pdf') # Windows
         except FileNotFoundError as outputcom9:
-                print("+ Sorry, file 'expecto.pdf' not exist !", outputcom9)
+                print("+ Sorry, file 'expecto.pdf' don't exist !", outputcom9)
                 self.confRec()
 
     def openCopro(self):
@@ -487,7 +474,7 @@ class Application(tk.Frame):
                 else:
                     os.startfile('./manual/copro.pdf') # Windows
         except FileNotFoundError as outputcom10:
-                print("+ Sorry, file 'copro.pdf' not exist !", outputcom10)
+                print("+ Sorry, file 'copro.pdf' don't exist !", outputcom10)
                 self.confRec()
 
     def openScotchTest(self):
@@ -503,7 +490,23 @@ class Application(tk.Frame):
                 else:
                     os.startfile('./manual/scotchtest.pdf') # Windows
         except FileNotFoundError as outputcom11:
-                print("+ Sorry, file 'scotchtest.pdf' not exist !", outputcom11)
+                print("+ Sorry, file 'scotchtest.pdf' don't exist !", outputcom11)
+                self.confRec()
+
+    def examental(self):
+        try:
+            becall = platform.system()
+            print(platform.system())
+            if os.path.exists('./manual/examental.txt'):
+                print("+ File 'examental.txt' exist (read)!")
+                if becall == 'Linux':
+                    os.system('gio open "./manual/examental.txt"') # Linux
+                elif becall =='Darwin':
+                    subprocess.call('open', './manual/examental.txt' ) # Mac
+                else:
+                    os.startfile('./manual/examental.txt') # Windows
+        except FileNotFoundError as outputcom11:
+                print("+ Sorry, file 'examental.txt' don't exist !", outputcom11)
                 self.confRec()
 
 if __name__=='__main__':

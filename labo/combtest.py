@@ -57,7 +57,7 @@ def recordOption():
             file_2.write("Date : ")
             file_2.write(time.strftime("%d/%m/%Y") + '\n')
             file_2.write("Patient name : ")
-            file_2.write(textName.get())
+            file_2.write(textName.get() + '\n')
             file_2.write("pH :")
             file_2.write(phchoosen.get())
             file_2.write(" Leuco :")

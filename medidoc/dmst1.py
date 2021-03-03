@@ -8,6 +8,7 @@ from tkinter import messagebox
 import time
 import os
 import subprocess
+import shutil
 
 
 def doc_medical1(self):
@@ -771,10 +772,9 @@ def doc_medical1(self):
     def recordata():
         """
             To record all data in GUI to txt file.
-            I need a try here !!!
         """
         try:
-            if os.path.getsize('./medidoc/doc_dmst1/rslt_dmst1.txt'):
+            if os.path.exists('./medidoc/doc_dmst1/rslt_dmst1.txt'):
                 messagebox.showwarning('Warning',
                     '!!! Warning, saving new data will erased old file !!!')
                 msgayn = messagebox.askyesno('Look', 'Would you like to continue ?')
@@ -1400,6 +1400,43 @@ def doc_medical1(self):
         print("+ File 'project.txt' does not exist !")
         print(project_f)
 
+    def copytobackup():
+        """
+            To copy file below to ./Backup/Files1
+        """
+
+        try:
+            if os.path.exists('./medidoc/doc_dmst1/rslt_dmst1.txt'):
+                shutil.copy('./medidoc/doc_dmst1/rslt_dmst1.txt',
+                    './Backup/Files1/rslt_dmst1.txt')
+                print("+ rslt_dmst1.txt copied into ./Backup/Files1")
+        except FileNotFoundError as nf_rltd:
+            print("Not found", nf_rltd)
+
+        try:
+            if os.path.exists('./medidoc/doc_dmst1/parcours.txt'):
+                shutil.copy('./medidoc/doc_dmst1/parcours.txt',
+                    './Backup/Files1/parcours.txt')
+                print("+ parcours.txt copied into ./Backup/Files1")
+        except FileNotFoundError as nf_parco:
+            print("Not found", nf_parco)
+
+        try:
+            if os.path.exists('./medidoc/doc_dmst1/pbm.txt'):
+                shutil.copy('./medidoc/doc_dmst1/pbm.txt',
+                    './Backup/Files1/pbm.txt')
+                print("+ pbm.txt copied into ./Backup/Files1")
+        except FileNotFoundError as nf_prob:
+            print("Not found", nf_prob)
+
+        try:
+            if os.path.exists('./medidoc/doc_dmst1/project.txt'):
+                shutil.copy('./medidoc/doc_dmst1/project.txt',
+                    './Backup/Files1/project.txt')
+                print("+ project.txt copied into ./Backup/Files1")
+        except FileNotFoundError as nf_projex:
+            print("Not found", nf_projex)
+
     def uptoserv():
         """
             To upload data on server after creating files.
@@ -1410,7 +1447,7 @@ def doc_medical1(self):
         print("Result SCP transfert : %s" % repr(proc.stderr))
         if proc.stderr == b'':
             print("+ File rslt_dmst1.txt uploaded !")
-            messagebox.showinfo("INFO", "rslt_dmst1.txt uploaded...")
+            #messagebox.showinfo("INFO", "rslt_dmst1.txt uploaded...")
         else:
             print("+ No file to upload !")
             messagebox.showerror("Error", "No rslt_dmst1.txt to upload...")
@@ -1421,7 +1458,7 @@ def doc_medical1(self):
         print("Result SCP transfert : %s" % repr(secproc.stderr))
         if secproc.stderr == b'':
             print("+ File parcours.txt uploaded !")
-            messagebox.showinfo("INFO", "parcours.txt uploaded...")
+            #messagebox.showinfo("INFO", "parcours.txt uploaded...")
         else:
             print("+ No file to upload !")
             messagebox.showerror("Error", "No parcours.txt to upload...")
@@ -1432,7 +1469,7 @@ def doc_medical1(self):
         print("Result SCP transfert : %s" % repr(thirdproc.stderr))
         if thirdproc.stderr == b'':
             print("+ File pbm.txt uploaded !")
-            messagebox.showinfo("INFO", "pbm.txt uploaded...")
+            #messagebox.showinfo("INFO", "pbm.txt uploaded...")
         else:
             print("+ No file to upload !")
             messagebox.showerror("Error", "No pbm.txt to upload...")
@@ -1443,7 +1480,7 @@ def doc_medical1(self):
         print("Result SCP transfert : %s" % repr(forthproc.stderr))
         if forthproc.stderr == b'':
             print("+ File project.txt uploaded !")
-            messagebox.showinfo("INFO", "project.txt uploaded...")
+            #messagebox.showinfo("INFO", "project.txt uploaded...")
         else:
             print("+ No file to upload !")
             messagebox.showerror("Error", "No project.txt to upload...")
@@ -1454,7 +1491,7 @@ def doc_medical1(self):
         print("Result SCP transfert : %s" % repr(fivth.stderr))
         if fivth.stderr == b'':
             print("+ File main_14b.txt uploaded !")
-            messagebox.showinfo("INFO", "main_14b.txt uploaded...")
+            #messagebox.showinfo("INFO", "main_14b.txt uploaded...")
         else:
             print("+ No file to upload !")
             messagebox.showerror("Error", "No main_14b.txt to upload...")
@@ -1474,6 +1511,7 @@ def doc_medical1(self):
             recordata()
             saveData()
             uptoserv()
+            copytobackup()
             msgvalidate()
             self.showPatients()
         else:

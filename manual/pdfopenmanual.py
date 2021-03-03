@@ -85,7 +85,7 @@ class Application(tk.Frame):
 
         self.can.create_text(600, 150, anchor='w', text="Etat Mental Général",
             font=('Times New Roman', 18), fill='white')
-        self.can.create_text(600, 200, anchor='w', text="Angoisses",
+        self.can.create_text(600, 200, anchor='w', text="Echelle Anxiété",
             font=('Times New Roman', 18), fill='white')
         self.can.create_text(600, 250, anchor='w', text="Evaluation de l'Humeur",
             font=('Times New Roman', 18), fill='white')
@@ -218,7 +218,7 @@ class Application(tk.Frame):
         self.x21, self.y21 = 500, 200
         self.b21 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
-            highlightbackground='DodgerBlue2', command=self.openUrinalOne)
+            highlightbackground='DodgerBlue2', command=self.anxious)
         self.fb21=self.can.create_window(self.x21, self.y21, window=self.b21)
         self.pack()
 
@@ -507,6 +507,22 @@ class Application(tk.Frame):
                     os.startfile('./manual/examental.txt') # Windows
         except FileNotFoundError as outputcom11:
                 print("+ Sorry, file 'examental.txt' don't exist !", outputcom11)
+                self.confRec()
+
+    def anxious(self):
+        try:
+            becall = platform.system()
+            print(platform.system())
+            if os.path.exists('./manual/anxious.txt'):
+                print("+ File 'anxious.txt' exist (read)!")
+                if becall == 'Linux':
+                    os.system('gio open "./manual/anxious.txt"') # Linux
+                elif becall =='Darwin':
+                    subprocess.call('open', './manual/anxious.txt' ) # Mac
+                else:
+                    os.startfile('./manual/anxious.txt') # Windows
+        except FileNotFoundError as outputcom11:
+                print("+ Sorry, file 'anxious.txt' don't exist !", outputcom11)
                 self.confRec()
 
 if __name__=='__main__':

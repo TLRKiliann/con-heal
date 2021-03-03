@@ -215,6 +215,7 @@ class Application(tk.Frame):
         self.fb20=self.can.create_window(self.x20, self.y20, window=self.b20)
         self.pack()
 
+        # Anxious scale
         self.x21, self.y21 = 500, 200
         self.b21 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
@@ -222,73 +223,83 @@ class Application(tk.Frame):
         self.fb21=self.can.create_window(self.x21, self.y21, window=self.b21)
         self.pack()
 
+        # Humeur
         self.x22, self.y22 = 500, 250
         self.b22 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
-            highlightbackground='DodgerBlue2', command=self.openUrinalSecond)
+            highlightbackground='DodgerBlue2', command=self.thymia)
         self.fb22=self.can.create_window(self.x22, self.y22, window=self.b22)
         self.pack()
 
+        # Démence
         self.x23, self.y23 = 500, 300
         self.b23 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
-            highlightbackground='DodgerBlue2', command=self.openUrin24h)
+            highlightbackground='DodgerBlue2', command=self.demence)
         self.fb23=self.can.create_window(self.x23, self.y23, window=self.b23)
         self.pack()
 
+        # Désorientation
         self.x24, self.y24 = 500, 350
         self.b24 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
-            highlightbackground='DodgerBlue2', command=self.openUrineBb)
+            highlightbackground='DodgerBlue2', command=self.confusion)
         self.fb24=self.can.create_window(self.x24, self.y24, window=self.b24)
         self.pack()
 
+        # Visual hallucinations
         self.x25, self.y25 = 500, 400
         self.b25 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
-            highlightbackground='DodgerBlue2', command=self.openUrinPicOv)
+            highlightbackground='DodgerBlue2', command=self.visual)
         self.fb25=self.can.create_window(self.x25, self.y25, window=self.b25)
         self.pack()
 
+        # Hallu auditives
         self.x26, self.y26 = 500, 450
         self.b26 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
-            highlightbackground='DodgerBlue2', command=self.openHemoc)
+            highlightbackground='DodgerBlue2', command=self.auditive)
         self.fb26=self.can.create_window(self.x26, self.y26, window=self.b26)
         self.pack()
 
+        # Id suicid
         self.x27, self.y27 = 500, 500
         self.b27 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
-            highlightbackground='DodgerBlue2', command=self.openFrottis)
+            highlightbackground='DodgerBlue2', command=self.suicid)
         self.fb27=self.can.create_window(self.x27, self.y27, window=self.b27)
         self.pack()
 
+        # Auto-agressif
         self.x28, self.y28 = 500, 550
         self.b28 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
-            highlightbackground='DodgerBlue2', command=self.openHelico)
+            highlightbackground='DodgerBlue2', command=self.autoagress)
         self.fb28=self.can.create_window(self.x28, self.y28, window=self.b28)
         self.pack()
 
+        # Hetero-agressif
         self.x29, self.y29 = 500, 600
         self.b29 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
-            highlightbackground='DodgerBlue2', command=self.openExpecto)
+            highlightbackground='DodgerBlue2', command=self.heteroagress)
         self.fb29=self.can.create_window(self.x29, self.y29, window=self.b29)
         self.pack()
 
+        # SNM
         self.x30, self.y30 = 500, 650
         self.b30 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
-            highlightbackground='DodgerBlue2', command=self.openCopro)
+            highlightbackground='DodgerBlue2', command=self.syndrome)
         self.fb30=self.can.create_window(self.x30, self.y30, window=self.b30)
         self.pack()
 
+        # Crise épilepsie
         self.x31, self.y31 = 500, 700
         self.b31 = tk.Button(self.can, width=10, bd=3, font=16, bg='RoyalBlue4', fg='gold',
             activebackground='pale turquoise', text="open",
-            highlightbackground='DodgerBlue2', command=self.openScotchTest)
+            highlightbackground='DodgerBlue2', command=self.epilepsia)
         self.fb31=self.can.create_window(self.x31, self.y31, window=self.b31)
         self.pack()
 
@@ -524,6 +535,49 @@ class Application(tk.Frame):
         except FileNotFoundError as outputcom11:
                 print("+ Sorry, file 'anxious.txt' don't exist !", outputcom11)
                 self.confRec()
+
+    def thymia(self):
+        try:
+            becall = platform.system()
+            print(platform.system())
+            if os.path.exists('./manual/humeur.png'):
+                print("+ File 'humeur.png' exist (read)!")
+                if becall == 'Linux':
+                    os.system('gio open "./manual/humeur.png"') # Linux
+                elif becall =='Darwin':
+                    subprocess.call('open', './manual/humeur.png' ) # Mac
+                else:
+                    os.startfile('./manual/humeur.png') # Windows
+        except FileNotFoundError as outputcom11:
+                print("+ Sorry, file 'humeur.png' don't exist !", outputcom11)
+                self.confRec()
+
+    def demence(self):
+        pass
+
+    def confusion(self):
+        pass
+
+    def visual(self):
+        pass
+
+    def auditive(self):
+        pass
+
+    def suicid(self):
+        pass
+
+    def heteroagress(self):
+        pass
+
+    def autoagress(self):
+        pass
+
+    def syndrome(self):
+        pass
+
+    def epilepsia(self):
+        pass
 
 if __name__=='__main__':
     app = Application()

@@ -36,18 +36,18 @@ with open('./newpatient/entryfile5.txt', 'r') as filename:
     line_c=filename.readline()
 
 text_name = tk.StringVar()
-Entryname = tk.Entry(root, textvariable=text_name)
+entryname = tk.Entry(root, textvariable=text_name)
 text_name.set(line_a[:-1])
-Entryname.pack(in_=top, side=tk.LEFT, padx=10, pady=20)
+entryname.pack(in_=top, side=tk.LEFT, padx=10, pady=20)
 
 labelallergy = tk.Label(root, text="Allergy :",
     font='Arial 18 bold', fg='coral', bg='DodgerBlue2')
 labelallergy.pack(in_=top2, side=tk.LEFT, padx=5)
 
 text_aller = tk.StringVar()
-Entryaller = tk.Entry(root, textvariable=text_aller, width=60)
+entryaller = tk.Entry(root, textvariable=text_aller, width=60)
 text_aller.set(line_c[:-1])
-Entryaller.pack(in_=top2, side=tk.LEFT, padx=10)
+entryaller.pack(in_=top2, side=tk.LEFT, padx=10)
 
 def callbackItem(event):
     """
@@ -196,7 +196,7 @@ def suiteBackup():
     with open('./need/doc_suivi5/patient5_14b.txt', 'w') as namefile:
         namefile.write("En date du : ")
         namefile.write(time.strftime("%d/%m/%Y à %H:%M:%S :\n"))
-        namefile.write(textName.get() + '\n')
+        namefile.write(entryname.get() + '\n')
     messagebox.showinfo("INFO", "Data saved !")
     print("+ Data saved !")
     ajouterText()

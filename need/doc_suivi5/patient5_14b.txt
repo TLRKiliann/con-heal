@@ -1,1 +1,8 @@
 En date du : 10/02/2021 à 17:59:27 :
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
+
+En date du : 04/03/2021 à 15:07:14 :
+Patient name : Michael Jordan
++ Surveillance respiratoire requise
++ Surveillance de la température requise
+---

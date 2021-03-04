@@ -28,7 +28,7 @@ bottom.pack(side=tk.BOTTOM, fill=BOTH, expand=YES)
 
 labelo = tk.Label(root, text="Care and monitoring : ",
     font='Times 18 bold', fg='navy', bg='DodgerBlue2')
-labelo.pack(in_=top, side=tk.LEFT, padx=5, pady=10)
+labelo.pack(in_=top, side=tk.LEFT, padx=5, pady=20)
 
 with open('./newpatient/entryfile.txt', 'r') as filename:
     line_a=filename.readline()
@@ -38,9 +38,9 @@ with open('./newpatient/entryfile.txt', 'r') as filename:
 text_name = tk.StringVar()
 Entryname = tk.Entry(root, textvariable=text_name)
 text_name.set(line_a[:-1])
-Entryname.pack(in_=top, side=tk.LEFT, padx=10, pady=10)
+Entryname.pack(in_=top, side=tk.LEFT, padx=10, pady=20)
 
-labelallergy = tk.Label(root, text="Allergy",
+labelallergy = tk.Label(root, text="Allergy :",
     font='Arial 18 bold', fg='coral', bg='DodgerBlue2')
 labelallergy.pack(in_=top2, side=tk.LEFT, padx=5)
 
@@ -86,7 +86,7 @@ itempsmt = ttk.Combobox(root, textvariable=mystring, width=20,
 
 itempsmt.bind("<<ComboboxSelected>>", callbackItem)
 itempsmt.current(0)
-itempsmt.pack(in_=top3, side=tk.LEFT, padx=10, pady=10)
+itempsmt.pack(in_=top3, side=tk.LEFT, padx=10, pady=20)
 
 def changeitemapp():
     """
@@ -147,7 +147,7 @@ itemapp = ttk.Combobox(root, textvariable=mystring2, width=20,
 
 itemapp.bind("<<ComboboxSelected>>", callbackapp)
 itemapp.current(0)
-itemapp.pack(in_=top3, side=tk.LEFT, padx=10, pady=10)
+itemapp.pack(in_=top3, side=tk.LEFT, padx=10, pady=20)
 
 def changeitemsoins():
     """
@@ -176,7 +176,7 @@ itemsoins = ttk.Combobox(root, textvariable=mystring3, width=20,
 
 itemsoins.bind("<<ComboboxSelected>>", callbacksoins)
 itemsoins.current(0)
-itemsoins.pack(in_=top3, side=tk.LEFT, padx=10, pady=10)
+itemsoins.pack(in_=top3, side=tk.LEFT, padx=10, pady=20)
 
 def ajouterText():
     """

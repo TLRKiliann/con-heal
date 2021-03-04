@@ -165,7 +165,7 @@ from labo.resultlabo23 import callLabo23
 from labo.resultlabo24 import callLabo24
 from auxequip.aux1 import auxi_equip1
 from medidoc.dmst1 import doc_medical1
-#import passw
+import passw
 from shootransfert import loaderfile
 
 

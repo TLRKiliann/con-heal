@@ -1,6 +1,6 @@
 ----------------------------------------------------------
-Date : 03.03.2021
-Hour : 12:50:36
+Date : 04.03.2021
+Hour : 15:47:27
 Patient name : Firstname Lastname
 Birthday : 00/00/0000
 Allergy : Shellfish, Sesame, Chips
@@ -169,7 +169,3 @@ Patient name : Firstname Lastname
 + Elimination = 0
 + Déplacement = 0
 + Communication = 0
-
-+ Directives anticipées = Non
-
-+ PLAFA = Non

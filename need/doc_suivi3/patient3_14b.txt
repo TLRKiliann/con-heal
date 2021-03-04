@@ -1,0 +1,7 @@
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
+
+En date du : 04/03/2021 à 14:56:31 :
+Patient name : Oxen Furt
++ Surveillance alimentaire et/ou hydratation requise
++ Surveillance urinaire et/ou fécale requise
+---

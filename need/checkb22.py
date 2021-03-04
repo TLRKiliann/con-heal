@@ -5,6 +5,7 @@
 from tkinter import *
 from tkinter import messagebox
 import time
+import subprocess
 
 
 fen = Tk()
@@ -148,6 +149,17 @@ def recordOption():
 
     with open('./need/doc_suivi22/patient22_14b.txt', 'a+') as file:
         file.write("---\n")
+
+    proc = subprocess.run(["scp", "./need/doc_suivi22/patient22_14b.txt",
+        "pi@192.168.18.12:~/tt_doc/doc_txt22/Files22/patient22_14b.txt"],
+        stderr=subprocess.PIPE)
+    print("Result SCP transfert : %s" % repr(proc.stderr))
+    if proc.stderr == b'':
+        print("+ File patient22_14b.txt uploaded !")
+        messagebox.showinfo("INFO", "patient22_14b.txt uploaded...")
+    else:
+        print("+ No file to upload !")
+        messagebox.showerror("Error", "No patient22_14b.txt to upload...")
 
 def confRec():
     messagebox.showinfo("Confirmation", "Record confirmed and finished !")

@@ -61,3 +61,13 @@ truc 5
 ---
 
 
+En date du : 10/02/2021 à 18:00:03 :
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
+
+En date du : 04/03/2021 à 15:10:27 :
+Patient name : Bruce Willis
++ Surveillance du sommeil requise
++ Agir pour aider la personne dans ses valeurs et croyances
+---
+
+

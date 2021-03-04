@@ -28,7 +28,7 @@ bottom.pack(side=tk.BOTTOM, fill=BOTH, expand=YES)
 
 labelo = tk.Label(root, text="Care and monitoring : ",
     font='Times 18 bold', fg='navy', bg='DodgerBlue2')
-labelo.pack(in_=top, side=tk.LEFT, padx=5, pady=20)
+labelo.pack(in_=top, side=tk.LEFT, padx=5, pady=10)
 
 with open('./newpatient/entryfile.txt', 'r') as filename:
     line_a=filename.readline()
@@ -38,36 +38,62 @@ with open('./newpatient/entryfile.txt', 'r') as filename:
 text_name = tk.StringVar()
 Entryname = tk.Entry(root, textvariable=text_name)
 text_name.set(line_a[:-1])
-Entryname.pack(in_=top, side=tk.LEFT, padx=10, pady=20)
+Entryname.pack(in_=top, side=tk.LEFT, padx=10, pady=10)
 
 labelallergy = tk.Label(root, text="Allergy",
     font='Arial 18 bold', fg='coral', bg='DodgerBlue2')
-labelallergy.pack(in_=top2, padx=5, pady=5)
+labelallergy.pack(in_=top2, side=tk.LEFT, padx=5)
 
 text_aller = tk.StringVar()
 Entryaller = tk.Entry(root, textvariable=text_aller, width=60)
 text_aller.set(line_c[:-1])
-Entryaller.pack(in_=top2, padx=10, pady=5)
+Entryaller.pack(in_=top2, side=tk.LEFT, padx=10)
 
 def callbackItem(event):
     """
         To verify if value was caught
         and to write it into texbox.
     """
-    print(itemsoins.get())
+    print(itempsmt.get())
+    textBox.insert(tk.END, itempsmt.get() + " :\n")
+
+def callbackapp(event):
+    textBox.insert(tk.END, itemapp.get() + " :\n")
+
+def callbacksoins(event):
     textBox.insert(tk.END, itemsoins.get() + " :\n")
 
-def changeItemso():
+def changeitempsmt():
     """
         To permit user to choose a care with
         a ttk.Combobox() !
     """
-    itemsoins["values"] = ["",
+    itempsmt["values"] = ["",
                             "Pansement (PSMT)",
                             "Protocol de PSMT",
                             "Réfection de PSMT",
                             "Méchage",
-                            "Points de suture",
+                            "Points de suture"]
+
+mystring = tk.StringVar()
+itempsmt = ttk.Combobox(root, textvariable=mystring, width=20,
+    values=["Pansement",
+            "Pansement (PSMT)",
+            "Protocol de PSMT",
+            "Réfection de PSMT",
+            "Méchage",
+            "Points de suture"], postcommand=changeitempsmt)
+
+itempsmt.bind("<<ComboboxSelected>>", callbackItem)
+itempsmt.current(0)
+itempsmt.pack(in_=top3, side=tk.LEFT, padx=10, pady=10)
+
+def changeitemapp():
+    """
+        To permit user to choose a care with
+        a ttk.Combobox() !
+    """
+    itemapp["values"] = ["",
                             "Appareillage",
                             "Pose de veinflon",
                             "Changement de venflon",
@@ -90,27 +116,11 @@ def changeItemso():
                             "PCA (pompe antalgie)",
                             "VAC (escarre)",
                             "Pacemaker",
-                            "Holter",
-                            "Examen",
-                            "Bilan hydrique",
-                            "Diurèse",
-                            "Stix (combo)",
-                            "Coproculture",
-                            "Soins d'hygiène",
-                            "Soins + Surveillances"]
-
-labelMonth = tk.Label(root,
-    text = "Choose the care :", font=12, fg='white', bg='DodgerBlue2')
-labelMonth.pack(in_=top3, side=tk.LEFT, padx=5, pady=20)
+                            "Holter"]
 
 mystring2 = tk.StringVar()
-itemsoins = ttk.Combobox(root, textvariable=mystring2, width=20,
-    values=["",
-            "Pansement (PSMT)",
-            "Protocol de PSMT",
-            "Réfection de PSMT",
-            "Méchage",
-            "Points de suture",
+itemapp = ttk.Combobox(root, textvariable=mystring2, width=20,
+    values=["Appareillage/Sondes",
             "Appareillage",
             "Pose de veinflon",
             "Changement de venflon",
@@ -133,18 +143,40 @@ itemsoins = ttk.Combobox(root, textvariable=mystring2, width=20,
             "PCA (pompe antalgie)",
             "VAC (escarre)",
             "Pacemaker",
-            "Holter",
-            "Examen",
+            "Holter"], postcommand=changeitemapp)
+
+itemapp.bind("<<ComboboxSelected>>", callbackapp)
+itemapp.current(0)
+itemapp.pack(in_=top3, side=tk.LEFT, padx=10, pady=10)
+
+def changeitemsoins():
+    """
+        To permit user to choose a care with
+        a ttk.Combobox() !
+    """
+    itemsoins["values"] = ["",
+                            "Examens",
+                            "Bilan hydrique",
+                            "Diurèse",
+                            "Stix (combo)",
+                            "Coproculture",
+                            "Soins d'hygiène",
+                            "Soins + Surveillances"]
+
+mystring3 = tk.StringVar()
+itemsoins = ttk.Combobox(root, textvariable=mystring3, width=20,
+    values=["Examens",
+            "Examens",
             "Bilan hydrique",
             "Diurèse",
             "Stix (combo)",
             "Coproculture",
             "Soins d'hygiène",
-            "Soins + Surveillances"], postcommand=changeItemso)
+            "Soins + Surveillances"], postcommand=changeitemsoins)
 
-itemsoins.bind("<<ComboboxSelected>>", callbackItem)
+itemsoins.bind("<<ComboboxSelected>>", callbacksoins)
 itemsoins.current(0)
-itemsoins.pack(in_=top3, side=tk.LEFT, padx=10, pady=20)
+itemsoins.pack(in_=top3, side=tk.LEFT, padx=10, pady=10)
 
 def ajouterText():
     """
@@ -231,10 +263,10 @@ def importationFile(fichier, encodage="Utf-8"):
     except FileNotFoundError as out_err:
         print("+ Sorry, file 'main_14b.txt' not exist !", out_err)
 
-textBox = tk.Text(root, height=15, width=60, font=18, relief=SUNKEN)
+textBox = tk.Text(root, height=15, width=80, font=18, relief=SUNKEN)
 #textBox.insert(INSERT, "En date du : ")
 #textBox.insert(END, time.strftime("%d/%m/%Y à %H:%M:%S :"))
-textBox.pack(padx=30, pady=30)
+textBox.pack(padx=30, pady=10)
 
 buttonLire = tk.Button(root, text="Read", bd=3, width=10, 
     fg='cyan', bg='RoyalBlue3', activebackground='pale turquoise',

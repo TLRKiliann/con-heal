@@ -1,0 +1,8 @@
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
+
+En date du : 04/03/2021 à 14:49:16 :
+Patient name : Amber Screen
++ Surveillance du sommeil requise
++ Surveillance posturale et/ou des déplacements requise
++ Surveillance propreté et/ou téguments requise
+---

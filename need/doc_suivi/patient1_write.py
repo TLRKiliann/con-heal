@@ -196,7 +196,6 @@ def suiteBackup():
     with open('./need/doc_suivi/patient1_14b.txt', 'w') as namefile:
         namefile.write("En date du : ")
         namefile.write(time.strftime("%d/%m/%Y à %H:%M:%S :\n"))
-        namefile.write(entryname.get() + '\n')
     messagebox.showinfo("INFO", "Data saved !")
     print("+ Data saved !")
     ajouterText()

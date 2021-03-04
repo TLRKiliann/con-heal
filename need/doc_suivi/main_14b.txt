@@ -222,3 +222,44 @@ Patient name : Firstname Lastname
 ---
 
 
+En date du : 04/03/2021 à 15:46:21 :
+Firstname Lastname
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
+
+En date du : 04/03/2021 à 15:48:04 :
+Patient name : Firstname Lastname
++ Surveillance posturale et/ou des déplacements requise
++ Surveillance pour éviter les dangers requise
++ Surveillance propreté et/ou téguments requise
+---
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
+
+En date du : 04/03/2021 à 16:08:47 :
+Patient name : Firstname Lastname
++ Surveillance respiratoire requise
++ Surveillance posturale et/ou des déplacements requise
++ Surveillance ou aide pour l'habillage/déshabillage requise
+---
+
+
+En date du : 04/03/2021 à 16:09:06 :
+Réfection de PSMT :
+ok on le refait ....
+
+En date du : 04/03/2021 à 16:10:01 :
+Firstname Lastname
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
+
+En date du : 04/03/2021 à 16:10:47 :
+Patient name : Firstname Lastname
++ Surveillance propreté et/ou téguments requise
++ Agir pour aider la personne dans ses valeurs et croyances
++ Accompagner ou aider la personne à se réaliser
+---
+
+
+En date du : 04/03/2021 à 16:11:12 :
+Firstname Lastname
+Chamgement de sonde :
+rinçage etc ...
+

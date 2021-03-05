@@ -1,10 +1,1 @@
-En date du : 04/03/2021 à 15:46:21 :
-Firstname Lastname
----####-|--- Affichage des besoins du patient à surveiller ---|-####---
-
-En date du : 04/03/2021 à 15:48:04 :
-Patient name : Firstname Lastname
-+ Surveillance posturale et/ou des déplacements requise
-+ Surveillance pour éviter les dangers requise
-+ Surveillance propreté et/ou téguments requise
----
+En date du : 04/03/2021 à 16:24:03 :

@@ -1,0 +1,13 @@
+---####-|--- Affichage des besoins du patient à surveiller ---|-####---
+
+En date du : 05/03/2021 à 12:56:32 :
+Patient name : Vincent La Paz
++ Surveillance du sommeil requise
++ Surveillance propreté et/ou téguments requise
+---
+
+
+En date du : 05/03/2021 à 12:56:53 :
+Pansement (PSMT) :
+un truc
+

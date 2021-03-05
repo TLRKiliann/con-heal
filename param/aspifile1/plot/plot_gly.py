@@ -69,7 +69,7 @@ try:
     show_grid = True
     with plt.style.context('seaborn-darkgrid'):
         fig = plt.figure()
-        fig.set_facecolor('aqua')
+        fig.set_facecolor('lightsteelblue')
         lab = fig.suptitle('Hgt(mmol/l) by Day',
             fontsize=18)
         lab.set_color('navy')

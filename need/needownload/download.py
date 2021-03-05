@@ -24,7 +24,7 @@ def needload1():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File main_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "main_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "main_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No main_14b.txt to download !")
@@ -34,7 +34,7 @@ def needload1():
     print("Result SCP transfert : %s" % repr(secproc.stderr))
     if secproc.stderr == b'':
         print("+ File patient1_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "patient1_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "patient1_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No patient1_14b.txt to download !")
@@ -50,7 +50,7 @@ def needload2():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File main_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "main_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "main_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No main_14b.txt to download !")
@@ -60,7 +60,7 @@ def needload2():
     print("Result SCP transfert : %s" % repr(secproc.stderr))
     if secproc.stderr == b'':
         print("+ File patient2_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "patient2_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "patient2_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No patient2_14b.txt to download !")
@@ -76,7 +76,7 @@ def needload3():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File main_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "main_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "main_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No main_14b.txt to download !")
@@ -86,7 +86,7 @@ def needload3():
     print("Result SCP transfert : %s" % repr(secproc.stderr))
     if secproc.stderr == b'':
         print("+ File patient3_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "patient3_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "patient3_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No patient3_14b.txt to download !")
@@ -102,7 +102,7 @@ def needload4():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File main_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "main_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "main_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No main_14b.txt to download !")
@@ -112,7 +112,7 @@ def needload4():
     print("Result SCP transfert : %s" % repr(secproc.stderr))
     if secproc.stderr == b'':
         print("+ File patient4_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "patient4_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "patient4_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No patient4_14b.txt to download !")
@@ -128,7 +128,7 @@ def needload5():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File main_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "main_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "main_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No main_14b.txt to download !")
@@ -138,7 +138,7 @@ def needload5():
     print("Result SCP transfert : %s" % repr(secproc.stderr))
     if secproc.stderr == b'':
         print("+ File patient5_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "patient5_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "patient5_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No patient5_14b.txt to download !")
@@ -154,7 +154,7 @@ def needload6():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File main_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "main_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "main_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No main_14b.txt to download !")
@@ -164,7 +164,7 @@ def needload6():
     print("Result SCP transfert : %s" % repr(secproc.stderr))
     if secproc.stderr == b'':
         print("+ File patient6_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "patient6_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "patient6_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No patient6_14b.txt to download !")
@@ -180,7 +180,7 @@ def needload7():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File main_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "main_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "main_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No main_14b.txt to download !")
@@ -190,7 +190,7 @@ def needload7():
     print("Result SCP transfert : %s" % repr(secproc.stderr))
     if secproc.stderr == b'':
         print("+ File patient7_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "patient7_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "patient7_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No patient7_14b.txt to download !")
@@ -206,7 +206,7 @@ def needload8():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File main_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "main_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "main_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No main_14b.txt to download !")
@@ -216,7 +216,7 @@ def needload8():
     print("Result SCP transfert : %s" % repr(secproc.stderr))
     if secproc.stderr == b'':
         print("+ File patient8_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "patient8_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "patient8_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No patient8_14b.txt to download !")
@@ -232,7 +232,7 @@ def needload9():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File main_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "main_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "main_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No main_14b.txt to download !")
@@ -242,7 +242,7 @@ def needload9():
     print("Result SCP transfert : %s" % repr(secproc.stderr))
     if secproc.stderr == b'':
         print("+ File patient9_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "patient9_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "patient9_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No patient9_14b.txt to download !")
@@ -258,7 +258,7 @@ def needload10():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File main_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "main_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "main_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No main_14b.txt to download !")
@@ -268,7 +268,7 @@ def needload10():
     print("Result SCP transfert : %s" % repr(secproc.stderr))
     if secproc.stderr == b'':
         print("+ File patient10_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "patient10_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "patient10_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No patient10_14b.txt to download !")
@@ -284,7 +284,7 @@ def needload11():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File main_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "main_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "main_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No main_14b.txt to download !")
@@ -294,7 +294,7 @@ def needload11():
     print("Result SCP transfert : %s" % repr(secproc.stderr))
     if secproc.stderr == b'':
         print("+ File patient11_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "patient11_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "patient11_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No patient11_14b.txt to download !")
@@ -310,7 +310,7 @@ def needload12():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File main_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "main_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "main_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No main_14b.txt to download !")
@@ -320,7 +320,7 @@ def needload12():
     print("Result SCP transfert : %s" % repr(secproc.stderr))
     if secproc.stderr == b'':
         print("+ File patient12_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "patient12_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "patient12_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No patient12_14b.txt to download !")
@@ -336,7 +336,7 @@ def needload13():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File main_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "main_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "main_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No main_14b.txt to download !")
@@ -346,7 +346,7 @@ def needload13():
     print("Result SCP transfert : %s" % repr(secproc.stderr))
     if secproc.stderr == b'':
         print("+ File patient13_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "patient13_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "patient13_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No patient13_14b.txt to download !")
@@ -362,7 +362,7 @@ def needload14():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File main_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "main_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "main_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No main_14b.txt to download !")
@@ -372,7 +372,7 @@ def needload14():
     print("Result SCP transfert : %s" % repr(secproc.stderr))
     if secproc.stderr == b'':
         print("+ File patient14_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "patient14_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "patient14_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No patient14_14b.txt to download !")
@@ -388,7 +388,7 @@ def needload15():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File main_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "main_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "main_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No main_14b.txt to download !")
@@ -398,7 +398,7 @@ def needload15():
     print("Result SCP transfert : %s" % repr(secproc.stderr))
     if secproc.stderr == b'':
         print("+ File patient15_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "patient15_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "patient15_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No patient15_14b.txt to download !")
@@ -414,7 +414,7 @@ def needload16():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File main_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "main_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "main_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No main_14b.txt to download !")
@@ -424,7 +424,7 @@ def needload16():
     print("Result SCP transfert : %s" % repr(secproc.stderr))
     if secproc.stderr == b'':
         print("+ File patient16_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "patient16_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "patient16_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No patient16_14b.txt to download !")
@@ -440,7 +440,7 @@ def needload17():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File main_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "main_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "main_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No main_14b.txt to download !")
@@ -450,7 +450,7 @@ def needload17():
     print("Result SCP transfert : %s" % repr(secproc.stderr))
     if secproc.stderr == b'':
         print("+ File patient17_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "patient17_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "patient17_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No patient17_14b.txt to download !")
@@ -466,7 +466,7 @@ def needload18():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File main_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "main_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "main_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No main_14b.txt to download !")
@@ -476,7 +476,7 @@ def needload18():
     print("Result SCP transfert : %s" % repr(secproc.stderr))
     if secproc.stderr == b'':
         print("+ File patient18_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "patient18_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "patient18_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No patient18_14b.txt to download !")
@@ -492,7 +492,7 @@ def needload19():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File main_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "main_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "main_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No main_14b.txt to download !")
@@ -502,7 +502,7 @@ def needload19():
     print("Result SCP transfert : %s" % repr(secproc.stderr))
     if secproc.stderr == b'':
         print("+ File patient19_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "patient19_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "patient19_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No patient19_14b.txt to download !")
@@ -518,7 +518,7 @@ def needload20():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File main_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "main_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "main_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No main_14b.txt to download !")
@@ -528,7 +528,7 @@ def needload20():
     print("Result SCP transfert : %s" % repr(secproc.stderr))
     if secproc.stderr == b'':
         print("+ File patient20_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "patient20_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "patient20_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No patient20_14b.txt to download !")
@@ -544,7 +544,7 @@ def needload21():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File main_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "main_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "main_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No main_14b.txt to download !")
@@ -554,7 +554,7 @@ def needload21():
     print("Result SCP transfert : %s" % repr(secproc.stderr))
     if secproc.stderr == b'':
         print("+ File patient21_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "patient21_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "patient21_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No patient21_14b.txt to download !")
@@ -570,7 +570,7 @@ def needload22():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File main_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "main_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "main_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No main_14b.txt to download !")
@@ -580,7 +580,7 @@ def needload22():
     print("Result SCP transfert : %s" % repr(secproc.stderr))
     if secproc.stderr == b'':
         print("+ File patient22_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "patient22_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "patient22_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No patient22_14b.txt to download !")
@@ -596,7 +596,7 @@ def needload23():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File main_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "main_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "main_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No main_14b.txt to download !")
@@ -606,7 +606,7 @@ def needload23():
     print("Result SCP transfert : %s" % repr(secproc.stderr))
     if secproc.stderr == b'':
         print("+ File patient23_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "patient23_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "patient23_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No patient23_14b.txt to download !")
@@ -622,7 +622,7 @@ def needload24():
     print("Result SCP transfert : %s" % repr(proc.stderr))
     if proc.stderr == b'':
         print("+ File main_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "main_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "main_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No main_14b.txt to download !")
@@ -632,7 +632,7 @@ def needload24():
     print("Result SCP transfert : %s" % repr(secproc.stderr))
     if secproc.stderr == b'':
         print("+ File patient24_14b.txt downloaded !")
-        messagebox.showinfo("INFO", "patient24_14b.txt downloaded !")
+        #messagebox.showinfo("INFO", "patient24_14b.txt downloaded !")
     else:
         print("+ No file to download !")
         messagebox.showerror("Error", "No patient24_14b.txt to download !")

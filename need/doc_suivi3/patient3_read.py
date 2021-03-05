@@ -48,7 +48,7 @@ def importationFile(fichier, encodage="Utf-8"):
     for li in content:
         textBox.insert(END, li)
 
-textBox = Text(fen, height=15, width=60, font=18, relief=SUNKEN)
+textBox = Text(fen, height=15, width=80, font=18, relief=SUNKEN)
 textBox.pack(padx=30, pady=30)
 
 buttonClose = Button(fen, text="Quit", width=10, bd=3,

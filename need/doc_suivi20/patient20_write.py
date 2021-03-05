@@ -95,7 +95,7 @@ def changeitemapp():
     """
     itemapp["values"] = ["",
                             "Appareillage",
-                            "Pose de veinflon",
+                            "Pose de venflon",
                             "Changement de venflon",
                             "Pose de sonde",
                             "Soins de sonde",
@@ -122,7 +122,7 @@ mystring2 = tk.StringVar()
 itemapp = ttk.Combobox(root, textvariable=mystring2, width=20,
     values=["Appareillage/Sondes",
             "Appareillage",
-            "Pose de veinflon",
+            "Pose de venflon",
             "Changement de venflon",
             "Pose de sonde",
             "Soins de sonde",

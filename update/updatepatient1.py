@@ -51,7 +51,7 @@ def diagRecapt(diagnosis):
                 filediag.write(diagnosis + '\n')
 
             messagebox.showinfo("Info", "Data was updated for entryfile.txt, " \
-                "allergyfile.txt, diagrecap1.txt !")
+                "allergyfile.txt !")
     except FileNotFoundError as not_ffile:
         print("- diagrecap1.txt not found, plz create file clicking on diagnostic -")
         print(not_ffile)

@@ -8,3 +8,7 @@ Patient name : Firstname Lastname
 ---
 
 
+En date du : 04/03/2021 à 16:24:03 :
+Changement de venflon :
+Fait à changer dans 72 heures.
+

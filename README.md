@@ -1,6 +1,7 @@
 # con-heal
 A medical app (time-track) to connect pymysql with MySQL (localhost connection) and with a ssh server (LAN connection).
 I chose an intranet infrastructure for security reasons. Of course, it's possible to extend internet connection with forwarding on server.
+You should install MySQL on the server too. Otherwise, every user will have an independant DB and it's not the goal, if something change, others users wouldn't see what has changed in the DB. So, one for everyone.
 
 # How to use MySQL
 

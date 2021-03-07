@@ -49,7 +49,7 @@ def dispAgBox():
                             if MSGREM1 == 1:
                                 mwrename = magicword.replace("/", ".")
                                 write_f = open(os.path.join(path, file), 'w')
-                                write_f.write(" Rdv past--> " + mwrename + "\n" +
+                                write_f.write("* Rdv past--> " + mwrename + "\n" +
                                     lines[i+1] + lines[i+2] + "\n")
                                 print("+ Modification finish")
                                 break
@@ -92,7 +92,7 @@ def dispAgBox():
                             if MSGREM2 == 1:
                                 mwrename2 = magicword2.replace("/", ".")
                                 write_f = open(os.path.join(path, file), 'w')
-                                write_f.write(" Rdv past--> " + mwrename2 + "\n" +
+                                write_f.write("* Rdv past--> " + mwrename2 + "\n" +
                                     lines[i+1] + lines[i+2] + "\n")
                                 print("+ Modification finish")
                                 break
@@ -135,7 +135,7 @@ def dispAgBox():
                             if MSGREM3 == 1:
                                 mwrename3 = magicword3.replace("/", ".")
                                 write_f = open(os.path.join(path, file), 'w')
-                                write_f.write(" Rdv past--> " + mwrename3 + "\n" +
+                                write_f.write("* Rdv past--> " + mwrename3 + "\n" +
                                     lines[i+1] + lines[i+2] + "\n")
                                 print("+ Modification finish")
                                 break
@@ -178,7 +178,7 @@ def dispAgBox():
                             if MSGREM4 == 1:
                                 mwrename4 = magicword4.replace("/", ".")
                                 write_f = open(os.path.join(path, file), 'w')
-                                write_f.write(" Rdv past--> " + mwrename4 + "\n" +
+                                write_f.write("* Rdv past--> " + mwrename4 + "\n" +
                                     lines[i+1] + lines[i+2] + "\n")
                                 print("+ Modification finish")
                                 break
@@ -221,7 +221,7 @@ def dispAgBox():
                             if MSGREM5 == 1:
                                 mwrename5 = magicword5.replace("/", ".")
                                 write_f = open(os.path.join(path, file), 'w')
-                                write_f.write(" Rdv past--> " + mwrename5 + "\n" +
+                                write_f.write("* Rdv past--> " + mwrename5 + "\n" +
                                     lines[i+1] + lines[i+2] + "\n")
                                 print("+ Modification finish")
                                 break
@@ -264,7 +264,7 @@ def dispAgBox():
                             if MSGREM6 == 1:
                                 mwrename6 = magicword6.replace("/", ".")
                                 write_f = open(os.path.join(path, file), 'w')
-                                write_f.write(" Rdv past--> " + mwrename6 + "\n" +
+                                write_f.write("* Rdv past--> " + mwrename6 + "\n" +
                                     lines[i+1] + lines[i+2] + "\n")
                                 print("+ Modification finish")
                                 break
@@ -307,7 +307,7 @@ def dispAgBox():
                             if MSGREM7 == 1:
                                 mwrename7 = magicword7.replace("/", ".")
                                 write_f = open(os.path.join(path, file), 'w')
-                                write_f.write(" Rdv past--> " + mwrename7 + "\n" +
+                                write_f.write("* Rdv past--> " + mwrename7 + "\n" +
                                     lines[i+1] + lines[i+2] + "\n")
                                 print("+ Modification finish")
                                 break
@@ -350,7 +350,7 @@ def dispAgBox():
                             if MSGREM8 == 1:
                                 mwrename8 = magicword8.replace("/", ".")
                                 write_f = open(os.path.join(path, file), 'w')
-                                write_f.write(" Rdv past--> " + mwrename8 + "\n" +
+                                write_f.write("* Rdv past--> " + mwrename8 + "\n" +
                                     lines[i+1] + lines[i+2] + "\n")
                                 print("+ Modification finish")
                                 break
@@ -393,7 +393,7 @@ def dispAgBox():
                             if MSGREM9 == 1:
                                 mwrename9 = magicword9.replace("/", ".")
                                 write_f = open(os.path.join(path, file), 'w')
-                                write_f.write(" Rdv past--> " + mwrename9 + "\n" +
+                                write_f.write("* Rdv past--> " + mwrename9 + "\n" +
                                     lines[i+1] + lines[i+2] + "\n")
                                 print("+ Modification finish")
                                 break
@@ -436,7 +436,7 @@ def dispAgBox():
                             if MSGREM10 == 1:
                                 mwrename10 = magicword10.replace("/", ".")
                                 write_f = open(os.path.join(path, file), 'w')
-                                write_f.write(" Rdv past--> " + mwrename10 + "\n" +
+                                write_f.write("* Rdv past--> " + mwrename10 + "\n" +
                                     lines[i+1] + lines[i+2] + "\n")
                                 print("+ Modification finish")
                                 break
@@ -479,7 +479,7 @@ def dispAgBox():
                             if MSGREM11 == 1:
                                 mwrename11 = magicword11.replace("/", ".")
                                 write_f = open(os.path.join(path, file), 'w')
-                                write_f.write(" Rdv past--> " + mwrename11 + "\n" +
+                                write_f.write("* Rdv past--> " + mwrename11 + "\n" +
                                     lines[i+1] + lines[i+2] + "\n")
                                 print("+ Modification finish")
                                 break
@@ -522,7 +522,7 @@ def dispAgBox():
                             if MSGREM12 == 1:
                                 mwrename12 = magicword12.replace("/", ".")
                                 write_f = open(os.path.join(path, file), 'w')
-                                write_f.write(" Rdv past--> " + mwrename12 + "\n" +
+                                write_f.write("* Rdv past--> " + mwrename12 + "\n" +
                                     lines[i+1] + lines[i+2] + "\n")
                                 print("+ Modification finish")
                                 break
@@ -565,7 +565,7 @@ def dispAgBox():
                             if MSGREM13 == 1:
                                 mwrename13 = magicword13.replace("/", ".")
                                 write_f = open(os.path.join(path, file), 'w')
-                                write_f.write(" Rdv past--> " + mwrename13 + "\n" +
+                                write_f.write("* Rdv past--> " + mwrename13 + "\n" +
                                     lines[i+1] + lines[i+2] + "\n")
                                 print("+ Modification finish")
                                 break
@@ -608,7 +608,7 @@ def dispAgBox():
                             if MSGREM14 == 1:
                                 mwrename14 = magicword14.replace("/", ".")
                                 write_f = open(os.path.join(path, file), 'w')
-                                write_f.write(" Rdv past--> " + mwrename14 + "\n" +
+                                write_f.write("* Rdv past--> " + mwrename14 + "\n" +
                                     lines[i+1] + lines[i+2] + "\n")
                                 print("+ Modification finish")
                                 break
@@ -651,7 +651,7 @@ def dispAgBox():
                             if MSGREM15 == 1:
                                 mwrename15 = magicword15.replace("/", ".")
                                 write_f = open(os.path.join(path, file), 'w')
-                                write_f.write(" Rdv past--> " + mwrename15 + "\n" +
+                                write_f.write("* Rdv past--> " + mwrename15 + "\n" +
                                     lines[i+1] + lines[i+2] + "\n")
                                 print("+ Modification finish")
                                 break
@@ -694,7 +694,7 @@ def dispAgBox():
                             if MSGREM16 == 1:
                                 mwrename16 = magicword16.replace("/", ".")
                                 write_f = open(os.path.join(path, file), 'w')
-                                write_f.write(" Rdv past--> " + mwrename16 + "\n" +
+                                write_f.write("* Rdv past--> " + mwrename16 + "\n" +
                                     lines[i+1] + lines[i+2] + "\n")
                                 print("+ Modification finish")
                                 break
@@ -737,7 +737,7 @@ def dispAgBox():
                             if MSGREM17 == 1:
                                 mwrename17 = magicword17.replace("/", ".")
                                 write_f = open(os.path.join(path, file), 'w')
-                                write_f.write(" Rdv past--> " + mwrename17 + "\n" +
+                                write_f.write("* Rdv past--> " + mwrename17 + "\n" +
                                     lines[i+1] + lines[i+2] + "\n")
                                 print("+ Modification finish")
                                 break
@@ -780,7 +780,7 @@ def dispAgBox():
                             if MSGREM18 == 1:
                                 mwrename18 = magicword18.replace("/", ".")
                                 write_f = open(os.path.join(path, file), 'w')
-                                write_f.write(" Rdv past--> " + mwrename18 + "\n" +
+                                write_f.write("* Rdv past--> " + mwrename18 + "\n" +
                                     lines[i+1] + lines[i+2] + "\n")
                                 print("+ Modification finish")
                                 break
@@ -823,7 +823,7 @@ def dispAgBox():
                             if MSGREM19 == 1:
                                 mwrename19 = magicword19.replace("/", ".")
                                 write_f = open(os.path.join(path, file), 'w')
-                                write_f.write(" Rdv past--> " + mwrename19 + "\n" +
+                                write_f.write("* Rdv past--> " + mwrename19 + "\n" +
                                     lines[i+1] + lines[i+2] + "\n")
                                 print("+ Modification finish")
                                 break
@@ -866,7 +866,7 @@ def dispAgBox():
                             if MSGREM20 == 1:
                                 mwrename20 = magicword20.replace("/", ".")
                                 write_f = open(os.path.join(path, file), 'w')
-                                write_f.write(" Rdv past--> " + mwrename20 + "\n" +
+                                write_f.write("* Rdv past--> " + mwrename20 + "\n" +
                                     lines[i+1] + lines[i+2] + "\n")
                                 print("+ Modification finish")
                                 break
@@ -909,7 +909,7 @@ def dispAgBox():
                             if MSGREM21 == 1:
                                 mwrename21 = magicword21.replace("/", ".")
                                 write_f = open(os.path.join(path, file), 'w')
-                                write_f.write(" Rdv past--> " + mwrename21 + "\n" +
+                                write_f.write("* Rdv past--> " + mwrename21 + "\n" +
                                     lines[i+1] + lines[i+2] + "\n")
                                 print("+ Modification finish")
                                 break
@@ -952,7 +952,7 @@ def dispAgBox():
                             if MSGREM22 == 1:
                                 mwrename22 = magicword22.replace("/", ".")
                                 write_f = open(os.path.join(path, file), 'w')
-                                write_f.write(" Rdv past--> " + mwrename22 + "\n" +
+                                write_f.write("* Rdv past--> " + mwrename22 + "\n" +
                                     lines[i+1] + lines[i+2] + "\n")
                                 print("+ Modification finish")
                                 break
@@ -995,7 +995,7 @@ def dispAgBox():
                             if MSGREM23 == 1:
                                 mwrename23 = magicword23.replace("/", ".")
                                 write_f = open(os.path.join(path, file), 'w')
-                                write_f.write(" Rdv past--> " + mwrename23 + "\n" +
+                                write_f.write("* Rdv past--> " + mwrename23 + "\n" +
                                     lines[i+1] + lines[i+2] + "\n")
                                 print("+ Modification finish")
                                 break
@@ -1038,7 +1038,7 @@ def dispAgBox():
                             if MSGREM24 == 1:
                                 mwrename24 = magicword24.replace("/", ".")
                                 write_f = open(os.path.join(path, file), 'w')
-                                write_f.write(" Rdv past--> " + mwrename24 + "\n" +
+                                write_f.write("* Rdv past--> " + mwrename24 + "\n" +
                                     lines[i+1] + lines[i+2] + "\n")
                                 print("+ Modification finish")
                                 break

@@ -25,7 +25,7 @@ def recordOption():
     print(CheckVar1.get())
     if CheckVar1.get()==1:
         print("Gluten intolerance")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
+        with open('./allergy/aller_drop.txt', 'a+') as file:
             file.write("Gluten, ")
     else:
         print("+ Nothing to do (intolerances)")
@@ -33,7 +33,7 @@ def recordOption():
     print(CheckVar2.get())
     if CheckVar2.get()==1:
         print("Lactose intolerance")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
+        with open('./allergy/aller_drop.txt', 'a+') as file:
             file.write("Lactose, ")
     else:
         print("+ Nothing to do (intolerances)")
@@ -41,7 +41,7 @@ def recordOption():
     print(CheckVar3.get())
     if CheckVar3.get()==1:
         print("Saccharose intolerance")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
+        with open('./allergy/aller_drop.txt', 'a+') as file:
             file.write("Saccharose, ")
     else:
         print("+ Nothing to do (intolerances)")
@@ -49,7 +49,7 @@ def recordOption():
     print(CheckVar4.get())
     if CheckVar4.get()==1:
         print("Fructose intolerance")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
+        with open('./allergy/aller_drop.txt', 'a+') as file:
             file.write("Fructose, ")
     else:
         print("+ Nothing to do (intolerances)")
@@ -57,7 +57,7 @@ def recordOption():
     print(CheckVar5.get())
     if CheckVar5.get()==1:
         print("Eggs")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
+        with open('./allergy/aller_drop.txt', 'a+') as file:
             file.write("Eggs, ")
     else:
         print("+ Nothing to do (intolerances)")
@@ -65,7 +65,7 @@ def recordOption():
     print(CheckVar6.get())
     if CheckVar6.get()==1:
         print("Fish")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
+        with open('./allergy/aller_drop.txt', 'a+') as file:
             file.write("Fish, ")
     else:
         print("+ Nothing to do (intolerances)")
@@ -74,7 +74,7 @@ def recordOption():
     print(CheckVar7.get())
     if CheckVar7.get()==1:
         print("Shellfish")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
+        with open('./allergy/aller_drop.txt', 'a+') as file:
             file.write("Shellfish, ")
     else:
         print("+ Nothing to do (intolerances)")
@@ -82,7 +82,7 @@ def recordOption():
     print(CheckVar8.get())
     if CheckVar8.get()==1:
         print("Molluscs")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
+        with open('./allergy/aller_drop.txt', 'a+') as file:
             file.write("Molluscs, ")
     else:
         print("+ Nothing to do (intolerances)")
@@ -90,7 +90,7 @@ def recordOption():
     print(CheckVar9.get())
     if CheckVar9.get()==1:
         print("Groundnut")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
+        with open('./allergy/aller_drop.txt', 'a+') as file:
             file.write("Groundnut, ")
     else:
         print("+ Nothing to do (intolerances)")
@@ -98,7 +98,7 @@ def recordOption():
     print(CheckVar10.get())
     if CheckVar10.get()==1:
         print("Oleaginous")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
+        with open('./allergy/aller_drop.txt', 'a+') as file:
             file.write("Oleaginous, ")
     else:
         print("+ Nothing to do (intolerances)")
@@ -106,7 +106,7 @@ def recordOption():
     print(CheckVar11.get())
     if CheckVar11.get()==1:
         print("Sesame")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
+        with open('./allergy/aller_drop.txt', 'a+') as file:
             file.write("Sesame, ")
     else:
         print("+ Nothing to do (intolerances)")
@@ -114,7 +114,7 @@ def recordOption():
     print(CheckVar12.get())
     if CheckVar12.get()==1:
         print("Soya")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
+        with open('./allergy/aller_drop.txt', 'a+') as file:
             file.write("Soya, ")
     else:
         print("+ Nothing to do (intolerances)")
@@ -122,7 +122,7 @@ def recordOption():
     print(CheckVar13.get())
     if CheckVar13.get()==1:
         print("Cereals")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
+        with open('./allergy/aller_drop.txt', 'a+') as file:
             file.write("Cereals, ")
     else:
         print("+ Nothing to do (intolerances)")
@@ -130,7 +130,7 @@ def recordOption():
     print(CheckVar14.get())
     if CheckVar14.get()==1:
         print("Latex")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
+        with open('./allergy/aller_drop.txt', 'a+') as file:
             file.write("Latex, ")
     else:
         print("+ Nothing to do (intolerances)")
@@ -138,7 +138,7 @@ def recordOption():
     print(CheckVar15.get())
     if CheckVar15.get()==1:
         print("Rosacea")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
+        with open('./allergy/aller_drop.txt', 'a+') as file:
             file.write("Rosacea, ")
     else:
         print("+ Nothing to do (intolerances)")
@@ -146,11 +146,10 @@ def recordOption():
     print(CheckVar16.get())
     if CheckVar16.get()==1:
         print("Umbellifers")
-        with open('./allergy/allergyfile.txt', 'a+') as file:
+        with open('./allergy/aller_drop.txt', 'a+') as file:
             file.write("Umbellifers, ")
     else:
         print("+ Nothing to do (intolerances)")
-
     subprocess.run('./nutrition/updatepatient.py', check=True)
 
 def confRec():

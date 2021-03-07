@@ -98,19 +98,19 @@ def uptopat(idpatient, patient_num, firstpat, firstname_pat,
         if os.path.getsize('./newpatient/entryfile.txt'):
             print("+ File 'entryfile.txt' exist !")
             os.remove('./newpatient/entryfile.txt')
-            os.remove('./allergy/allergyfile.txt')
+            os.remove('./allergy/aller_drop.txt')
             searchLineName(firstpat, surname, birthvalue, allergia, transdisval, diagnosis)
     else:
         pass
     gui.destroy()
 
-with open('./allergy/allergyfile.txt', 'r') as patfile:
+with open('./allergy/aller_drop.txt', 'r') as patfile:
     linea = patfile.readline()
 
 with open('./newpatient/entryfile.txt', 'r') as filename:
-    a_line=filename.readline()
-    b_line=filename.readline()
-    c_line=filename.readline()
+    a_line = filename.readline()
+    b_line = filename.readline()
+    c_line = filename.readline()
 
 labelID = Label(gui, text='ID : ',
     font="Times 14 bold",

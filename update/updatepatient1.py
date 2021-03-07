@@ -114,9 +114,11 @@ def uptopat(idpatient, patient_num, firstpat, firstname_pat,
     if patient_num.get() == "" or firstname_pat.get() == "" or sur_pat.get() == "":
         messagebox.showerror("MySQL Connection", "Enter Correct Details.")
     else:
-        sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='timetrackconn')
+        sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379',
+            database='timetrackconn')
         cur = sqlCon.cursor()
-        cur.execute("UPDATE timetrackconn set firstname=%s, surname=%s, birth=%s, allergia=%s, disease=%s, maindiagnostic=%s where stdid=%s",(
+        cur.execute("UPDATE timetrackconn set firstname=%s, surname=%s, birth=%s, allergia=%s,"\
+            "disease=%s, maindiagnostic=%s where stdid=%s",(
         firstname_pat.get(),
         sur_pat.get(),
         birth_entree.get(),

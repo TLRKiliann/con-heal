@@ -162,7 +162,7 @@ def saveCheck():
     """
         To ask if user want save them choices
     """
-    MSB = messagebox.askyesno('ASK', 'Data saved !')
+    MSB = messagebox.askyesno('Save Data', 'Data saved !')
     if MSB == 1:
         print("Ok, data saved !")
         recordOption()

@@ -25,7 +25,8 @@ def searchDB():
         each GUI entree.
     """
     try:
-        sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='timetrackconn')
+        sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379',
+            database='timetrackconn')
         cur = sqlCon.cursor()
         cur.execute("SELECT * from timetrackconn where stdid=%s", patient_num.get())
         row = cur.fetchone()
@@ -56,7 +57,11 @@ def searchLineName3(firstpat, surname, birthvalue, allergia, transdisval, diagno
             file2.write(allergia + '\n')
             file2.write(transdisval + '\n')
             file2.write(diagnosis + '\n')
-    messagebox.showinfo("Info", "Data was updated for entryfile3.txt !")
+
+        with open('./allergy/allergyfile3.txt', 'w') as al_file:
+            al_file.write(allergia + '\n')
+    messagebox.showinfo("Info", "Data was updated for entryfile3.txt and "\
+        "allergyfile3.txt !")
 
 def uptopat(idpatient, patient_num, firstpat, firstname_pat,
     surname, sur_pat, birthvalue, birth_entree, allergia, allergy_pat,
@@ -77,9 +82,11 @@ def uptopat(idpatient, patient_num, firstpat, firstname_pat,
     if patient_num.get() == "" or firstname_pat.get() == "" or sur_pat.get() == "":
         messagebox.showerror("MySQL Connection", "Enter Correct Details.")
     else:
-        sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='timetrackconn')
+        sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379',
+            database='timetrackconn')
         cur = sqlCon.cursor()
-        cur.execute("UPDATE timetrackconn set firstname=%s, surname=%s, birth=%s, allergia=%s, disease=%s, maindiagnostic=%s where stdid=%s",(
+        cur.execute("UPDATE timetrackconn set firstname=%s, surname=%s, birth=%s,"\
+            "allergia=%s, disease=%s, maindiagnostic=%s where stdid=%s",(
         firstname_pat.get(),
         sur_pat.get(),
         birth_entree.get(),
@@ -96,13 +103,15 @@ def uptopat(idpatient, patient_num, firstpat, firstname_pat,
         if os.path.getsize('./newpatient/entryfile3.txt'):
             print("+ File 'entryfile3.txt' exist !")
             os.remove('./newpatient/entryfile3.txt')
+            os.remove('./allergy/aller_drop3.txt')
             os.remove('./allergy/allergyfile3.txt')
-            searchLineName3(firstpat, surname, birthvalue, allergia, transdisval, diagnosis)
+            searchLineName3(firstpat, surname, birthvalue,
+                allergia, transdisval, diagnosis)
     else:
         pass
     gui.destroy()
 
-with open('./allergy/allergyfile3.txt', 'r') as patfile:
+with open('./allergy/aller_drop3.txt', 'r') as patfile:
     linea = patfile.readline()
 
 with open('./newpatient/entryfile3.txt', 'r') as filename:

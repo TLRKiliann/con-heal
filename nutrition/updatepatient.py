@@ -25,7 +25,8 @@ def searchDB():
         each GUI entree.
     """
     try:
-        sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379', database='timetrackconn')
+        sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379',
+            database='timetrackconn')
         cur = sqlCon.cursor()
         cur.execute("SELECT * from timetrackconn where stdid=%s", patient_num.get())
         row = cur.fetchone()
@@ -56,7 +57,11 @@ def searchLineName(firstpat, surname, birthvalue, allergia, transdisval, diagnos
             file.write(allergia + '\n')
             file.write(transdisval + '\n')
             file.write(diagnosis + '\n')
-    messagebox.showinfo("Info", "Data was updated for entryfile.txt !")
+
+        with open('./allergy/allergyfile.txt', 'w') as file:
+            file.write(allergia + '\n')
+    messagebox.showinfo("Info", "Data was updated for entryfile.txt and "\
+        "allergyfile.txt !")
 
 def uptopat(idpatient, patient_num, firstpat, firstname_pat,
     surname, sur_pat, birthvalue, birth_entree, allergia, allergy_pat,
@@ -99,7 +104,9 @@ def uptopat(idpatient, patient_num, firstpat, firstname_pat,
             print("+ File 'entryfile.txt' exist !")
             os.remove('./newpatient/entryfile.txt')
             os.remove('./allergy/aller_drop.txt')
-            searchLineName(firstpat, surname, birthvalue, allergia, transdisval, diagnosis)
+            os.remove('./allergy/allergyfile.txt')
+            searchLineName(firstpat, surname, birthvalue, allergia,
+                transdisval, diagnosis)
     else:
         pass
     gui.destroy()

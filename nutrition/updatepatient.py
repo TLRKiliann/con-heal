@@ -58,8 +58,8 @@ def searchLineName(firstpat, surname, birthvalue, allergia, transdisval, diagnos
             file.write(transdisval + '\n')
             file.write(diagnosis + '\n')
 
-        with open('./allergy/allergyfile.txt', 'w') as file:
-            file.write(allergia + '\n')
+        with open('./allergy/allergyfile.txt', 'w') as al_file:
+            al_file.write(allergia + '\n')
     messagebox.showinfo("Info", "Data was updated for entryfile.txt and "\
         "allergyfile.txt !")
 

@@ -58,7 +58,8 @@ def diagRecapt(diagnosis):
         messagebox.showwarning("WARNING", "File diagrecap1.txt not found ! " \
             "Please, create one by clicking on diagnostic 'add'.")
 
-def searchLineName(firstpat, surname, birthvalue, allergia, transdisval, diagnosis):
+def searchLineName(firstpat, surname, birthvalue,
+    allergia, transdisval, diagnosis):
     """
         To save changing data for 
         entryfile.txt and display
@@ -117,8 +118,8 @@ def uptopat(idpatient, patient_num, firstpat, firstname_pat,
         sqlCon = pymysql.connect(host='127.0.0.1', user='root', password='Ko@l@tr3379',
             database='timetrackconn')
         cur = sqlCon.cursor()
-        cur.execute("UPDATE timetrackconn set firstname=%s, surname=%s, birth=%s, allergia=%s,"\
-            "disease=%s, maindiagnostic=%s where stdid=%s",(
+        cur.execute("UPDATE timetrackconn set firstname=%s, surname=%s, birth=%s, "\
+            "allergia=%s, disease=%s, maindiagnostic=%s where stdid=%s",(
         firstname_pat.get(),
         sur_pat.get(),
         birth_entree.get(),
@@ -135,15 +136,15 @@ def uptopat(idpatient, patient_num, firstpat, firstname_pat,
         if os.path.getsize('./newpatient/entryfile.txt'):
             print("+ File 'entryfile.txt' deleted !")
             os.remove('./newpatient/entryfile.txt')
-            searchLineName(firstpat, surname, birthvalue, allergia, transdisval, diagnosis)
+            searchLineName(firstpat, surname, birthvalue,
+                allergia, transdisval, diagnosis)
     else:
         pass
     funcrecord()
     gui.destroy()
 
 labelID = Label(gui, text='ID : ',
-    font="Times 14 bold",
-    fg='white', bg='DodgerBlue2')
+    font="Times 14 bold", fg='white', bg='DodgerBlue2')
 labelID.pack(pady=10)
 
 idpatient = StringVar()
